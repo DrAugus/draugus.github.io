@@ -35,13 +35,14 @@ export const main: SidebarConfig = {
       ],
     },
   ],
+
   '/i18n/zh/': [
     {
       text: '开始使用',
       collapsible: false,
       children: [
-        '/documents/',
-        '/documents/features-overview',
+        '/i18n/zh/documents/',
+        '/i18n/zh/documents/features-overview',
       ]
     },
 
@@ -49,7 +50,7 @@ export const main: SidebarConfig = {
       text: '功能指南',
       collapsible: false,
       children: [
-        '/documents/features/feat-temp',
+        '/i18n/zh/documents/features/feat-temp',
       ],
     },
 
@@ -57,7 +58,7 @@ export const main: SidebarConfig = {
       text: '常见问题',
       collapsible: false,
       children: [
-        "/documents/FAQ/wrong-temp",
+        "/i18n/zh/documents/FAQ/wrong-temp",
       ],
     },
 
@@ -65,7 +66,7 @@ export const main: SidebarConfig = {
       text: '编程指南',
       collapsible: false,
       children: [
-        "/code",
+        "/i18n/zh/code",
       ],
     },
   ],
@@ -97,6 +98,37 @@ export const main: SidebarConfig = {
         '/code/audition/front_end',
         '/code/audition/sys_design',
         '/code/audition/non_tech',
+      ]
+    }
+  ],
+
+  '/i18n/zh/development': [
+    {
+      text: "开发指南",
+      collapsible: false,
+      children: [
+        '/i18n/zh/development/struct',
+      ]
+    }
+  ],
+
+  '/i18n/zh/code': [
+    {
+      text: "编程指南",
+      collapsible: false,
+      children: [
+        '/i18n/zh/code/',
+        '/i18n/zh/code/audition/',
+        '/i18n/zh/code/audition/problems',
+        '/i18n/zh/code/audition/cpp',
+        '/i18n/zh/code/audition/algorithm',
+        '/i18n/zh/code/audition/os',
+        '/i18n/zh/code/audition/network_protocol',
+        '/i18n/zh/code/audition/database',
+        '/i18n/zh/code/audition/java',
+        '/i18n/zh/code/audition/front_end',
+        '/i18n/zh/code/audition/sys_design',
+        '/i18n/zh/code/audition/non_tech',
       ]
     }
   ],

@@ -122,11 +122,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         navbar: [
           {
             text: '主页',
-            link: '/home/'
+            link: '/i18n/zh/home/'
           },
           {
             text: "帮助文档",
-            link: '/documents'
+            link: '/i18n/zh/documents'
           },
           {
             text: "编程",
@@ -136,7 +136,7 @@ export default defineUserConfig<DefaultThemeOptions>({
                 children: [
                   {
                     text: '面试题解',
-                    link: '/code/audition/'
+                    link: '/i18n/zh/code/audition/'
                   },
                 ]
               },
@@ -171,7 +171,7 @@ export default defineUserConfig<DefaultThemeOptions>({
           },
           {
             text: '赞助',
-            link: '/documents/statement/sponsor.md'
+            link: '/i18n/zh/documents/statement/sponsor.md'
           },
         ],
         selectText: '选择语言',
