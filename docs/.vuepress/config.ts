@@ -2,6 +2,8 @@ import {defineUserConfig} from 'vuepress'
 import type {DefaultThemeOptions} from 'vuepress'
 import {sidebar} from './configs'
 
+const site_url = "https://augusmeow.cn/"
+
 export default defineUserConfig<DefaultThemeOptions>({
   // 站点配置
   head: [
@@ -26,6 +28,20 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: '/documents'
       },
       {
+        text: "编程",
+        children: [
+          {
+            text: '面试',
+            children: [
+              {
+                text: '面试题解',
+                link: '/code/audition/'
+              },
+            ]
+          },
+        ]
+      },
+      {
         text: '外链',
         children: [
           {
@@ -33,7 +49,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             children: [
               {
                 text: 'House of Windsor Family',
-                link: 'https://augusmeow.cn/RoyalFamily/'
+                link: site_url + 'RoyalFamily/'
               },
             ]
           },
@@ -42,11 +58,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             children: [
               {
                 text: 'bolg',
-                link: 'https://augusmeow.cn/'
+                link: site_url + ''
               },
               {
                 text: 'genshin',
-                link: 'https://augusmeow.cn/list/genshin'
+                link: site_url + 'list/genshin'
               },
             ]
           },
@@ -64,8 +80,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     docsRepo: 'DrAugus/docs_base',
     docsBranch: 'main',
     docsDir: 'docs',
-    contributors: false,
-    lastUpdated: false,
+    contributors: true,
+    lastUpdated: true,
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
     tip: 'tip',
