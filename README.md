@@ -1,0 +1,29 @@
+# DOCS base
+
+## develop
+
+prerequisites：
+
+- nodejs(Version >= 16)
+- yarn(Version >= 1)
+
+git clone：
+
+```git
+git clone https://github.com/DrAugus/docs_base.git
+```
+
+run：
+
+```yarn
+yarn install
+yarn docs:dev
+```
+
+## Thanks
+
+[JetBrains](https://www.jetbrains.com/zh-cn/community/opensource/#support)
+
+## Reference
+
+[Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
