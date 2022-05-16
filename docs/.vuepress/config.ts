@@ -187,8 +187,8 @@ export default defineUserConfig<DefaultThemeOptions>({
         backToHome: '返回主页',
       }
     },
-    repo: 'DrAugus/docs_base',
-    docsRepo: 'DrAugus/docs_base',
+    repo: 'DrAugus/Augus',
+    docsRepo: 'DrAugus/Augus',
     docsBranch: 'main',
     docsDir: 'docs',
     sidebar: sidebar.main,

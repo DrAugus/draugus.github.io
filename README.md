@@ -1,4 +1,4 @@
-# DOCS base
+# Augus
 
 ## develop
 
@@ -10,7 +10,7 @@ prerequisites：
 git clone：
 
 ```git
-git clone https://github.com/DrAugus/docs_base.git
+git clone https://github.com/DrAugus/Augus.git
 ```
 
 run：
