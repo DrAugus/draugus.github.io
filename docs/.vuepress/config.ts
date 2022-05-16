@@ -9,6 +9,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     ["link", {rel: "icon", href: "/logo/favicon.ico"}],
     ["script", {src: "https://cdn.jsdelivr.net/npm/cfga@1.0.3", async: true}],
   ],
+  base:"/Augus/",
   lang: 'en-US',
   title: 'AUGUS',
   description: 'Record Everything',
