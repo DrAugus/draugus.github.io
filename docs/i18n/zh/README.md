@@ -3,7 +3,7 @@ title: 首页
 home: true
 heroImage: image/i18n/zh/home.png
 heroText: Augus
-tagline: 文档练习
+tagline: One More Thing
 actions:
   - text: 进一步了解  >
     link: /home/

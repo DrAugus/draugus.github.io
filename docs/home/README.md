@@ -2,13 +2,13 @@
 title: Home
 home: true
 heroImage: image/apple.jpg
-heroText: DOCS HOME
+heroText: Augus
 tagline: null
 actions:
-  - text: this page
-    link: /home/
+  - text: Home
+    link: /
     type: secondary
-  - text: help docs
+  - text: Pages
     link: /documents/
     type: primary
 features:

@@ -2,14 +2,14 @@
 title: 首页
 home: true
 heroImage: image/i18n/zh/apple.jpg
-heroText: DOCS HOME
+heroText: Augus
 tagline: null
 actions:
-  - text: this page
-    link: /home/
+  - text: 主页
+    link: /i18n/zh/
     type: secondary
-  - text: help docs
-    link: /documents/
+  - text: 其他页面
+    link: /i18n/zh/documents/
     type: primary
 features:
   - title: 日历
