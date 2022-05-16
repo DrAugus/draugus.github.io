@@ -1,8 +1,8 @@
 ---
 title: 首页
 home: true
-heroImage: image/zh/home.png
-heroText: DOCS BASE
+heroImage: image/i18n/zh/home.png
+heroText: Augus
 tagline: 文档练习
 actions:
   - text: 进一步了解  >

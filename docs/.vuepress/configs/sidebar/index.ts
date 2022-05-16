@@ -35,7 +35,7 @@ export const main: SidebarConfig = {
       ],
     },
   ],
-  '/zh/': [
+  '/i18n/zh/': [
     {
       text: '开始使用',
       collapsible: false,

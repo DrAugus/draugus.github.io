@@ -10,20 +10,40 @@ export default defineUserConfig<DefaultThemeOptions>({
     ["script", {src: "https://cdn.jsdelivr.net/npm/cfga@1.0.3", async: true}],
   ],
   lang: 'en-US',
-  title: 'Docs',
-  description: 'only docs base',
+  title: 'AUGUS',
+  description: 'Record Everything',
   locales: {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
-      lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-      title: 'Docs',
-      description: 'only docs base'
+      lang: 'en-US',
+      title: 'AUGUS',
+      description: 'Record Everything'
     },
-    '/zh/': {
+    '/i18n/fr/': {
+      lang: 'fr-FR',
+      title: 'AUGUS',
+      description: 'Tout enregistrer'
+    },
+    '/i18n/de/': {
+      lang: 'de-DE',
+      title: 'AUGUS',
+      description: 'Alles aufzeichnen'
+    },
+    '/i18n/it/': {
+      lang: 'it-IT',
+      title: 'AUGUS',
+      description: 'Registra tutto'
+    },
+    '/i18n/kr/': {
+      lang: 'kr-KR',
+      title: 'AUGUS',
+      description: '모든 것을 기록'
+    },
+    '/i18n/zh/': {
       lang: 'zh-CN',
-      title: '文档',
-      description: '基础文档生成'
+      title: 'AUGUS',
+      description: '记录一切'
     }
   },
   theme: '@vuepress/theme-default',
@@ -98,7 +118,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         notFound: ["NOT FOUND"],
         backToHome: 'back to home',
       },
-      '/zh/': {
+      '/i18n/zh/': {
         navbar: [
           {
             text: '主页',
