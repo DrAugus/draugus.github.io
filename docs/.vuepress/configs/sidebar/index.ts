@@ -3,6 +3,40 @@ import type {SidebarConfig} from '@vuepress/theme-default'
 export const main: SidebarConfig = {
   '/': [
     {
+      text: 'Guide',
+      collapsible: false,
+      children: [
+        '/documents/',
+        '/documents/features-overview',
+      ]
+    },
+
+    {
+      text: 'Feature',
+      collapsible: false,
+      children: [
+        '/documents/features/feat-temp',
+      ],
+    },
+
+    {
+      text: 'FAQ',
+      collapsible: false,
+      children: [
+        "/documents/FAQ/wrong-temp",
+      ],
+    },
+
+    {
+      text: 'Code',
+      collapsible: false,
+      children: [
+        "/code",
+      ],
+    },
+  ],
+  '/zh/': [
+    {
       text: '开始使用',
       collapsible: false,
       children: [
