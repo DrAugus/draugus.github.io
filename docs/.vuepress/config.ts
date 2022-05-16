@@ -77,13 +77,13 @@ export default defineUserConfig<DefaultThemeOptions>({
             ]
           },
           {
-            text: 'links',
+            text: 'Links',
             children: [
               {
                 text: 'Royal Family',
                 children: [
                   {
-                    text: 'House of Windsor Family',
+                    text: 'Windsor Family',
                     link: site_url + 'RoyalFamily/'
                   },
                 ]
@@ -104,7 +104,7 @@ export default defineUserConfig<DefaultThemeOptions>({
             ]
           },
           {
-            text: 'sponsor',
+            text: 'Sponsor',
             link: '/documents/statement/sponsor.md'
           },
         ],
