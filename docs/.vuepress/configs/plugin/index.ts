@@ -21,5 +21,14 @@ export const main: PluginConfig[] = [
     {
       align: "top"
     }
-  ]
+  ],
+  [
+    "vuepress-plugin-giscus",
+    {
+      repo: "DrAugus/Augus",
+      repoId: "R_kgDOHV19bA",
+      category: "Announcements",
+      categoryId: "DIC_kwDOHV19bM4CPJQy"
+    }
+  ],
 ]
