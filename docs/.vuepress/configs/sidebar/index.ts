@@ -6,8 +6,8 @@ export const main: SidebarConfig = {
       text: 'Guide',
       collapsible: false,
       children: [
-        '/documents/',
-        '/documents/features-overview',
+        '/life/',
+        '/life/features-overview',
       ]
     },
 
@@ -15,7 +15,7 @@ export const main: SidebarConfig = {
       text: 'Feature',
       collapsible: false,
       children: [
-        '/documents/features/feat-temp',
+        '/life/features/feat-temp',
       ],
     },
 
@@ -23,7 +23,7 @@ export const main: SidebarConfig = {
       text: 'FAQ',
       collapsible: false,
       children: [
-        "/documents/FAQ/wrong-temp",
+        "/life/FAQ/wrong-temp",
       ],
     },
 
@@ -41,8 +41,8 @@ export const main: SidebarConfig = {
       text: '开始使用',
       collapsible: false,
       children: [
-        '/i18n/zh/documents/',
-        '/i18n/zh/documents/features-overview',
+        '/i18n/zh/life/',
+        '/i18n/zh/life/features-overview',
       ]
     },
 
@@ -50,7 +50,7 @@ export const main: SidebarConfig = {
       text: '功能指南',
       collapsible: false,
       children: [
-        '/i18n/zh/documents/features/feat-temp',
+        '/i18n/zh/life/features/feat-temp',
       ],
     },
 
@@ -58,7 +58,7 @@ export const main: SidebarConfig = {
       text: '常见问题',
       collapsible: false,
       children: [
-        "/i18n/zh/documents/FAQ/wrong-temp",
+        "/i18n/zh/life/FAQ/wrong-temp",
       ],
     },
 

@@ -9,7 +9,7 @@ actions:
     link: /i18n/zh/
     type: secondary
   - text: 其他页面
-    link: /i18n/zh/documents/
+    link: /i18n/zh/life/
     type: primary
 features:
   - title: 日历

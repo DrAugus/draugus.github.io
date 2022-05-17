@@ -9,7 +9,7 @@ actions:
     link: /i18n/fr/
     type: secondary
   - text: Pages
-    link: /documents/
+    link: /life/
     type: primary
 features:
   - title: Calendar
