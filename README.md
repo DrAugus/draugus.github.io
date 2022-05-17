@@ -1,4 +1,4 @@
-# DOCS base
+# Augus
 
 ## develop
 
@@ -10,7 +10,7 @@ prerequisites：
 git clone：
 
 ```git
-git clone https://github.com/DrAugus/docs_base.git
+git clone https://github.com/DrAugus/Augus.git
 ```
 
 run：
@@ -26,4 +26,5 @@ yarn docs:dev
 
 ## Reference
 
-[Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
+* [Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
+* [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)

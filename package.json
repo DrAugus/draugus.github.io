@@ -1,13 +1,13 @@
 {
-  "name": "docs_base",
+  "name": "augus",
   "version": "0.1.0",
-  "description": "docs base",
+  "description": "record everything",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "repository": "https://github.com/DrAugus/docs_base.git",
+  "repository": "https://github.com/DrAugus/Augus.git",
   "author": "DrAugus",
   "license": "MIT",
   "devDependencies": {
