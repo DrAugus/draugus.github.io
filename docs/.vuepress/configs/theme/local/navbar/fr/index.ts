@@ -1,11 +1,13 @@
+const url_prefix = '/i18n/fr';
+
 export const navbar_fr: Partial<any> = [
   {
-    text: 'Home',
-    link: '/home/'
+    text: 'Domicile',
+    link: url_prefix + '/home/'
   },
   {
-    text: 'Life',
-    link: '/life'
+    text: 'La vie',
+    link: url_prefix + '/life'
   },
   {
     text: "Code",
@@ -14,21 +16,21 @@ export const navbar_fr: Partial<any> = [
         text: 'audition',
         children: [
           {
-            text: 'code audition',
-            link: '/code/audition/'
+            text: 'Entretien du programmeur',
+            link: url_prefix + '/code/audition/'
           },
         ]
       },
     ]
   },
   {
-    text: 'Links',
+    text: 'Liens',
     children: [
       {
-        text: 'Royal Family',
+        text: 'Famille royale',
         children: [
           {
-            text: 'Windsor Family',
+            text: 'Famille Windsor',
             link: 'https://augusmeow.cn/RoyalFamily/'
           },
         ]
@@ -41,7 +43,7 @@ export const navbar_fr: Partial<any> = [
             link: 'https://augusmeow.cn/'
           },
           {
-            text: 'genshin',
+            text: 'Jeu',
             link: 'https://augusmeow.cn/list/genshin'
           },
         ]
@@ -49,7 +51,7 @@ export const navbar_fr: Partial<any> = [
     ]
   },
   {
-    text: 'Sponsor',
-    link: '/life/statement/sponsor'
+    text: 'Parrainer',
+    link: url_prefix + '/life/statement/sponsor'
   },
 ]

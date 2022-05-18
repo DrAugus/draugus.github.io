@@ -1,11 +1,12 @@
+const url_prefix = '';
 export const navbar_en: Partial<any> = [
   {
     text: 'Home',
-    link: '/home/'
+    link: url_prefix + '/home/'
   },
   {
     text: "Life",
-    link: '/life'
+    link: url_prefix + '/life'
   },
   {
     text: "Code",
@@ -15,11 +16,11 @@ export const navbar_en: Partial<any> = [
         children: [
           {
             text: 'Code Everything',
-            link: '/code/'
+            link: url_prefix + '/code/'
           },
           {
             text: 'Code Audition',
-            link: '/code/audition/'
+            link: url_prefix + '/code/audition/'
           },
         ]
       },
@@ -54,6 +55,6 @@ export const navbar_en: Partial<any> = [
   },
   {
     text: 'Sponsor',
-    link: '/sponsor'
+    link: url_prefix + '/sponsor'
   },
 ]

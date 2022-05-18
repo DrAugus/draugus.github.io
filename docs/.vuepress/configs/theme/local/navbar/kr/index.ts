@@ -1,47 +1,48 @@
+const url_prefix = '/i18n/kr';
 export const navbar_kr: Partial<any> = [
   {
-    text: 'Home',
-    link: '/home/'
+    text: '집',
+    link: url_prefix + '/home/'
   },
   {
-    text: 'Life',
-    link: '/life'
+    text: '삶',
+    link: url_prefix + '/life'
   },
   {
-    text: "Code",
+    text: "암호",
     children: [
       {
-        text: 'audition',
+        text: '오디션',
         children: [
           {
-            text: 'code audition',
-            link: '/code/audition/'
+            text: '프로그래머 인터뷰',
+            link: url_prefix + '/code/audition/'
           },
         ]
       },
     ]
   },
   {
-    text: 'Links',
+    text: '연결',
     children: [
       {
-        text: 'Royal Family',
+        text: '왕실',
         children: [
           {
-            text: 'Windsor Family',
+            text: '윈저 가족',
             link: 'https://augusmeow.cn/RoyalFamily/'
           },
         ]
       },
       {
-        text: 'Blog',
+        text: '블로그',
         children: [
           {
-            text: 'bolg',
+            text: '블로그',
             link: 'https://augusmeow.cn/'
           },
           {
-            text: 'genshin',
+            text: '게임',
             link: 'https://augusmeow.cn/list/genshin'
           },
         ]
@@ -49,7 +50,7 @@ export const navbar_kr: Partial<any> = [
     ]
   },
   {
-    text: 'Sponsor',
-    link: '/life/statement/sponsor'
+    text: '스폰서',
+    link: url_prefix + '/life/statement/sponsor'
   },
 ]

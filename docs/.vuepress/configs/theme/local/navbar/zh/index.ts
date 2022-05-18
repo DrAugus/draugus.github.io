@@ -1,27 +1,27 @@
-const link_prefix = '/i18n/zh'
+const url_prefix = '/i18n/zh';
 
 export const navbar_zh: Partial<any> = [
   {
     text: '主页',
-    link: link_prefix + '/home/'
+    link: url_prefix + '/home/'
   },
   {
     text: "生活",
-    link: link_prefix + '/life'
+    link: url_prefix + '/life'
   },
   {
     text: "编程",
     children: [
       {
         text: '面试题解',
-        link: link_prefix + '/code/audition/'
+        link: url_prefix + '/code/audition/'
       },
       {
         text: '开发',
         children: [
           {
             text: '开发此项目',
-            link: link_prefix + '/development/'
+            link: url_prefix + '/development/'
           },
         ]
       },
@@ -56,7 +56,7 @@ export const navbar_zh: Partial<any> = [
   },
   {
     text: '赞助',
-    link: link_prefix + '/sponsor'
+    link: url_prefix + '/sponsor'
   },
 
 ]
