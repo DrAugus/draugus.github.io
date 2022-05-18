@@ -4,7 +4,7 @@ export const navbar_it: Partial<any> = [
     link: '/home/'
   },
   {
-    text: "Docs",
+    text: 'Life',
     link: '/life'
   },
   {
@@ -50,6 +50,6 @@ export const navbar_it: Partial<any> = [
   },
   {
     text: 'Sponsor',
-    link: '/life/statement/sponsor.md'
+    link: '/life/statement/sponsor'
   },
 ]

@@ -10,8 +10,24 @@ export const main: PluginConfig[] = [
           hotKeys: ['/']
         },
         '/i18n/zh/': {
-          placeholder: 'search',
+          placeholder: '搜索',
           hotKeys: ['/i18n/zh/']
+        },
+        '/i18n/de/': {
+          placeholder: 'Suche',
+          hotKeys: ['/i18n/de/']
+        },
+        '/i18n/fr/': {
+          placeholder: 'chercher',
+          hotKeys: ['/i18n/fr/']
+        },
+        '/i18n/it/': {
+          placeholder: 'ricerca',
+          hotKeys: ['/i18n/it/']
+        },
+        '/i18n/kr/': {
+          placeholder: '검색',
+          hotKeys: ['/i18n/kr/']
         },
       }
     }

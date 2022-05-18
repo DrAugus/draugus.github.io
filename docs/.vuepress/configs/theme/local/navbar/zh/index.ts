@@ -56,7 +56,7 @@ export const navbar_zh: Partial<any> = [
   },
   {
     text: '赞助',
-    link: link_prefix + '/sponsor.md'
+    link: link_prefix + '/sponsor'
   },
 
 ]

@@ -54,6 +54,6 @@ export const navbar_en: Partial<any> = [
   },
   {
     text: 'Sponsor',
-    link: '/sponsor.md'
+    link: '/sponsor'
   },
 ]
