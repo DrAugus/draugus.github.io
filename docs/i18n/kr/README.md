@@ -1,7 +1,7 @@
 ---
 title: 집
 home: true
-heroImage: image/home.png
+heroImage: image/home.jpg
 heroText: Augus
 tagline: 하나 더
 actions:

@@ -1,7 +1,7 @@
 ---
 title: Domicile
 home: true
-heroImage: image/home.png
+heroImage: image/home.jpg
 heroText: Tout enregistrer
 tagline: encore une chose
 actions:

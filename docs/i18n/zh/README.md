@@ -1,7 +1,7 @@
 ---
 title: 首页
 home: true
-heroImage: image/i18n/zh/home.png
+heroImage: image/i18n/zh/home.jpg
 heroText: Augus
 tagline: One More Thing
 actions:
