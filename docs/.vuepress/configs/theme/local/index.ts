@@ -10,8 +10,8 @@ export const theme_local: LocaleConfig = {
 
   '/': {
     navbar: navbar_en,
-    selectLanguageName: 'Languages',
-    selectLanguageText: 'English',
+    selectLanguageText: 'Languages',
+    selectLanguageName: 'English',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -23,8 +23,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/zh/': {
     navbar: navbar_zh,
-    selectLanguageName: '语言',
-    selectLanguageText: '中文-简体',
+    selectLanguageText: '语言',
+    selectLanguageName: '中文-简体',
     editLinkText: '编辑此页',
     contributorsText: '贡献者',
     lastUpdatedText: '上次更新',
@@ -36,8 +36,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/de/': {
     navbar: navbar_de,
-    selectLanguageName: 'Sprache',
-    selectLanguageText: 'Deutsch',
+    selectLanguageText: 'Sprache',
+    selectLanguageName: 'Deutsch',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -49,8 +49,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/fr/': {
     navbar: navbar_fr,
-    selectLanguageName: 'Langue',
-    selectLanguageText: 'Français',
+    selectLanguageText: 'Langue',
+    selectLanguageName: 'Français',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -62,8 +62,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/it/': {
     navbar: navbar_it,
-    selectLanguageName: 'linguaggio',
-    selectLanguageText: 'Italiano',
+    selectLanguageText: 'linguaggio',
+    selectLanguageName: 'Italiano',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -75,8 +75,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/kr/': {
     navbar: navbar_kr,
-    selectLanguageName: '언어',
-    selectLanguageText: '한국어',
+    selectLanguageText: '언어',
+    selectLanguageName: '한국어',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
