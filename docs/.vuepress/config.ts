@@ -17,6 +17,7 @@ export default defineUserConfig<DefaultThemeOptions>({
     logo: '/logo/ico.jpg',
     locales: themeInfo.theme_local,
     repo: 'DrAugus/Augus',
+    editLinkPattern: ':repo/edit/master/docs/:path',
     sidebar: sidebar.main,
     editLink: true,
     contributors: true,
