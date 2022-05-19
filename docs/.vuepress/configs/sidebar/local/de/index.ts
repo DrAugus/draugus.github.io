@@ -12,6 +12,29 @@ export const sidebar_de_life: SidebarConfigArray = [
     ]
   },
   {
+    text: 'Social',
+    collapsible: false,
+    children: [
+      url_prefix + '/life/social/',
+    ]
+  },
+  {
+    text: 'Accident',
+    collapsible: false,
+    children: [
+      url_prefix + '/life/social/accident/2018-Chongqing-bus-crash',
+      url_prefix + '/life/social/accident/2020-Anshun-bus-crash',
+      url_prefix + '/life/social/accident/2022-China-Eastern-Airlines-Flight-5735',
+    ]
+  },
+  {
+    text: 'Memory',
+    collapsible: false,
+    children: [
+      url_prefix + '/life/memory/',
+    ]
+  },
+  {
     text: 'Feature',
     collapsible: false,
     children: [

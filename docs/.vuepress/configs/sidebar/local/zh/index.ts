@@ -12,6 +12,29 @@ export const sidebar_zh_life: SidebarConfigArray = [
     ]
   },
   {
+    text: '社会',
+    collapsible: false,
+    children: [
+      url_prefix + '/life/social/',
+    ]
+  },
+  {
+    text: '事故',
+    collapsible: false,
+    children: [
+      url_prefix + '/life/social/accident/2018-Chongqing-bus-crash',
+      url_prefix + '/life/social/accident/2020-Anshun-bus-crash',
+      url_prefix + '/life/social/accident/2022-China-Eastern-Airlines-Flight-5735',
+    ]
+  },
+  {
+    text: '回忆',
+    collapsible: false,
+    children: [
+      url_prefix + '/life/memory/',
+    ]
+  },
+  {
     text: '功能',
     collapsible: false,
     children: [
