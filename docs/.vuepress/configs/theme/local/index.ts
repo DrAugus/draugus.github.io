@@ -10,8 +10,8 @@ export const theme_local: LocaleConfig = {
 
   '/': {
     navbar: navbar_en,
-    selectText: 'Languages',
-    label: 'English',
+    selectLanguageName: 'Languages',
+    selectLanguageText: 'English',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -23,8 +23,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/zh/': {
     navbar: navbar_zh,
-    selectText: '语言',
-    label: '中文-简体',
+    selectLanguageName: '语言',
+    selectLanguageText: '中文-简体',
     editLinkText: '编辑此页',
     contributorsText: '贡献者',
     lastUpdatedText: '上次更新',
@@ -36,8 +36,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/de/': {
     navbar: navbar_de,
-    selectText: 'Sprache',
-    label: 'Deutsch',
+    selectLanguageName: 'Sprache',
+    selectLanguageText: 'Deutsch',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -49,8 +49,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/fr/': {
     navbar: navbar_fr,
-    selectText: 'Langue',
-    label: 'Français',
+    selectLanguageName: 'Langue',
+    selectLanguageText: 'Français',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -62,8 +62,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/it/': {
     navbar: navbar_it,
-    selectText: 'linguaggio',
-    label: 'Italiano',
+    selectLanguageName: 'linguaggio',
+    selectLanguageText: 'Italiano',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
@@ -75,8 +75,8 @@ export const theme_local: LocaleConfig = {
   },
   '/i18n/kr/': {
     navbar: navbar_kr,
-    selectText: '언어',
-    label: '한국어',
+    selectLanguageName: '언어',
+    selectLanguageText: '한국어',
     editLinkText: 'edit',
     contributorsText: 'contributors',
     lastUpdatedText: 'last updated',
