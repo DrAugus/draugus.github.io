@@ -1,4 +1,4 @@
-status = ["Build and Deploy"]
+status = ["vuepress-deploy"]
 commit_title = "MERGE: ${PR_REFS}"
 delete_merged_branches = true
 # Uncomment this to use a two hour timeout.
