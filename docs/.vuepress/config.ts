@@ -144,6 +144,20 @@ export default defineUserConfig<DefaultThemeOptions>({
             ]
           },
           {
+            text: "人物",
+            children: [
+              {
+                text: '特朗普政府',
+                children: [
+                  {
+                    text: '唐纳德·约翰·特朗普',
+                    link: '/i18n/zh/biography/donald/'
+                  },
+                ]
+              },
+            ]
+          },
+          {
             text: '外链',
             children: [
               {

@@ -132,4 +132,16 @@ export const main: SidebarConfig = {
       ]
     }
   ],
+
+  '/i18n/zh/biography': [
+    {
+      text: "特朗普家族",
+      collapsible: false,
+      children: [
+        '/i18n/zh/biography/donald/',
+        '/i18n/zh/biography/donald/ivanka',
+      ]
+    }
+  ],
+
 }
