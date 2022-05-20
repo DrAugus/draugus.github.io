@@ -29,3 +29,4 @@ yarn docs:dev
 * [Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
 * [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
 * [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
+* [vuepress plugin giscus](https://vuepress-theme-hope.github.io/v2/comment/guide/giscus.html)

@@ -1,7 +1,7 @@
 ---
 title: Heim
 home: true
-heroImage: image/home.png
+heroImage: image/home.jpg
 heroText: Augus
 tagline: eine Sache noch
 actions:

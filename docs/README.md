@@ -1,7 +1,7 @@
 ---
 title: Home
 home: true
-heroImage: image/home.png
+heroImage: image/home.jpg
 heroText: Augus
 tagline: One More Thing
 actions:

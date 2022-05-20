@@ -1,7 +1,7 @@
 ---
 title: Casa
 home: true
-heroImage: image/home.png
+heroImage: image/home.jpg
 heroText: Augus
 tagline: un'altra cosa
 actions:

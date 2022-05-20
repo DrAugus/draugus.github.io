@@ -1,147 +1,40 @@
 import type {SidebarConfig} from '@vuepress/theme-default'
+import {sidebar_zh_code, sidebar_zh_development, sidebar_zh_life} from "./local/zh";
+import {sidebar_en_code, sidebar_en_development, sidebar_en_life} from "./local/en";
+import {sidebar_de_code, sidebar_de_development, sidebar_de_life} from "./local/de";
+import {sidebar_fr_code, sidebar_fr_development, sidebar_fr_life} from "./local/fr";
+import {sidebar_it_code, sidebar_it_development, sidebar_it_life} from "./local/it";
+import {sidebar_kr_code, sidebar_kr_development, sidebar_kr_life} from "./local/kr";
 
 export const main: SidebarConfig = {
-  '/': [
-    {
-      text: 'Guide',
-      collapsible: false,
-      children: [
-        '/documents/',
-        '/documents/features-overview',
-      ]
-    },
+  '/': [],
+  '/life': sidebar_en_life,
+  '/code': sidebar_en_code,
+  '/development': sidebar_en_development,
 
-    {
-      text: 'Feature',
-      collapsible: false,
-      children: [
-        '/documents/features/feat-temp',
-      ],
-    },
+  '/i18n/zh/': [],
+  '/i18n/zh/life': sidebar_zh_life,
+  '/i18n/zh/code': sidebar_zh_code,
+  '/i18n/zh/development': sidebar_zh_development,
 
-    {
-      text: 'FAQ',
-      collapsible: false,
-      children: [
-        "/documents/FAQ/wrong-temp",
-      ],
-    },
+  '/i18n/de/': [],
+  '/i18n/de/life': sidebar_de_life,
+  '/i18n/de/code': sidebar_de_code,
+  '/i18n/de/development': sidebar_de_development,
 
-    {
-      text: 'Code',
-      collapsible: false,
-      children: [
-        "/code",
-      ],
-    },
-  ],
+  '/i18n/fr/': [],
+  '/i18n/fr/life': sidebar_fr_life,
+  '/i18n/fr/code': sidebar_fr_code,
+  '/i18n/fr/development': sidebar_fr_development,
 
-  '/i18n/zh/': [
-    {
-      text: '开始使用',
-      collapsible: false,
-      children: [
-        '/i18n/zh/documents/',
-        '/i18n/zh/documents/features-overview',
-      ]
-    },
+  '/i18n/it/': [],
+  '/i18n/it/life': sidebar_it_life,
+  '/i18n/it/code': sidebar_it_code,
+  '/i18n/it/development': sidebar_it_development,
 
-    {
-      text: '功能指南',
-      collapsible: false,
-      children: [
-        '/i18n/zh/documents/features/feat-temp',
-      ],
-    },
-
-    {
-      text: '常见问题',
-      collapsible: false,
-      children: [
-        "/i18n/zh/documents/FAQ/wrong-temp",
-      ],
-    },
-
-    {
-      text: '编程指南',
-      collapsible: false,
-      children: [
-        "/i18n/zh/code",
-      ],
-    },
-  ],
-
-  '/development': [
-    {
-      text: "开发指南",
-      collapsible: false,
-      children: [
-        '/development/struct',
-      ]
-    }
-  ],
-
-  '/code': [
-    {
-      text: "编程指南",
-      collapsible: false,
-      children: [
-        '/code/',
-        '/code/audition/',
-        '/code/audition/problems',
-        '/code/audition/cpp',
-        '/code/audition/algorithm',
-        '/code/audition/os',
-        '/code/audition/network_protocol',
-        '/code/audition/database',
-        '/code/audition/java',
-        '/code/audition/front_end',
-        '/code/audition/sys_design',
-        '/code/audition/non_tech',
-      ]
-    }
-  ],
-
-  '/i18n/zh/development': [
-    {
-      text: "开发指南",
-      collapsible: false,
-      children: [
-        '/i18n/zh/development/struct',
-      ]
-    }
-  ],
-
-  '/i18n/zh/code': [
-    {
-      text: "编程指南",
-      collapsible: false,
-      children: [
-        '/i18n/zh/code/',
-        '/i18n/zh/code/audition/',
-        '/i18n/zh/code/audition/problems',
-        '/i18n/zh/code/audition/cpp',
-        '/i18n/zh/code/audition/algorithm',
-        '/i18n/zh/code/audition/os',
-        '/i18n/zh/code/audition/network_protocol',
-        '/i18n/zh/code/audition/database',
-        '/i18n/zh/code/audition/java',
-        '/i18n/zh/code/audition/front_end',
-        '/i18n/zh/code/audition/sys_design',
-        '/i18n/zh/code/audition/non_tech',
-      ]
-    }
-  ],
-
-  '/i18n/zh/biography': [
-    {
-      text: "特朗普家族",
-      collapsible: false,
-      children: [
-        '/i18n/zh/biography/donald/',
-        '/i18n/zh/biography/donald/ivanka',
-      ]
-    }
-  ],
+  '/i18n/kr/': [],
+  '/i18n/kr/life': sidebar_kr_life,
+  '/i18n/kr/code': sidebar_kr_code,
+  '/i18n/kr/development': sidebar_kr_development,
 
 }

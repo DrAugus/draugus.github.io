@@ -1,0 +1,8 @@
+status = [
+  "Checkout",
+  "vuepress-deploy"
+]
+commit_title = "MERGE: ${PR_REFS}"
+delete_merged_branches = true
+# The default is one hour.
+timeout_sec = 600
