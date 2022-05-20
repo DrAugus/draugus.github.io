@@ -28,6 +28,20 @@ export const navbar_zh: Partial<any> = [
     ]
   },
   {
+    text: "人物",
+    children: [
+      {
+        text: '特朗普政府',
+        children: [
+          {
+            text: '唐纳德·约翰·特朗普',
+            link: url_prefix + '/biography/donald/'
+          },
+        ]
+      },
+    ]
+  },
+  {
     text: '外链',
     children: [
       {

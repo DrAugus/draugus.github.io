@@ -1,5 +1,5 @@
 import type {SidebarConfig} from '@vuepress/theme-default'
-import {sidebar_zh_code, sidebar_zh_development, sidebar_zh_life} from "./local/zh";
+import {sidebar_zh_biography, sidebar_zh_code, sidebar_zh_development, sidebar_zh_life} from "./local/zh";
 import {sidebar_en_code, sidebar_en_development, sidebar_en_life} from "./local/en";
 import {sidebar_de_code, sidebar_de_development, sidebar_de_life} from "./local/de";
 import {sidebar_fr_code, sidebar_fr_development, sidebar_fr_life} from "./local/fr";
@@ -16,6 +16,7 @@ export const main: SidebarConfig = {
   '/i18n/zh/life': sidebar_zh_life,
   '/i18n/zh/code': sidebar_zh_code,
   '/i18n/zh/development': sidebar_zh_development,
+  '/i18n/zh/biography': sidebar_zh_biography,
 
   '/i18n/de/': [],
   '/i18n/de/life': sidebar_de_life,
