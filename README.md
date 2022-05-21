@@ -1,11 +1,11 @@
 # Augus
 
-## develop
+## Develop
 
 prerequisites：
 
 - nodejs(Version >= 16)
-- yarn(Version >= 1)
+- yarn(Version >= 1) (`npm install -g yarn`)
 
 git clone：
 
