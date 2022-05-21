@@ -7,7 +7,25 @@ export const navbar_zh: Partial<any> = [
   },
   {
     text: "生活",
-    link: url_prefix + '/life'
+    children: [
+      {
+        text: '旅行',
+        link: url_prefix + '/life/trip/'
+      },
+      {
+        text: '社会',
+        children: [
+          {
+            text: '事故',
+            link: url_prefix + '/life/social/accident/'
+          },
+        ]
+      },
+      {
+        text: '记忆',
+        link: url_prefix + '/life/memory/'
+      },
+    ]
   },
   {
     text: "编程",

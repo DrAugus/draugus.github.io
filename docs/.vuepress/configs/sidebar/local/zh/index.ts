@@ -12,10 +12,12 @@ export const sidebar_zh_life: SidebarConfigArray = [
     ]
   },
   {
-    text: '社会',
+    text: "旅行",
     collapsible: false,
     children: [
-      url_prefix + '/life/social/',
+      url_prefix + '/life/trip/Hangzhou',
+      url_prefix + '/life/trip/Suzhou',
+      url_prefix + '/life/trip/Xiamen',
     ]
   },
   {
@@ -31,15 +33,8 @@ export const sidebar_zh_life: SidebarConfigArray = [
     text: '回忆',
     collapsible: false,
     children: [
-      url_prefix + '/life/memory/',
+
     ]
-  },
-  {
-    text: '功能',
-    collapsible: false,
-    children: [
-      url_prefix + '/life/features/feat-temp',
-    ],
   },
   {
     text: '问题',
