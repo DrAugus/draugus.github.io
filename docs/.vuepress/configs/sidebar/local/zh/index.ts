@@ -13,9 +13,13 @@ export const sidebar_zh_life: SidebarConfigArray = [
   },
   {
     text: "旅行",
-    collapsible: false,
+    collapsible: true,
     children: [
+      url_prefix + '/life/trip/Beijing',
+      url_prefix + '/life/trip/Chengdu',
+      url_prefix + '/life/trip/Chongqing',
       url_prefix + '/life/trip/Hangzhou',
+      url_prefix + '/life/trip/Nanjing',
       url_prefix + '/life/trip/Suzhou',
       url_prefix + '/life/trip/Xiamen',
     ]
@@ -32,9 +36,7 @@ export const sidebar_zh_life: SidebarConfigArray = [
   {
     text: '回忆',
     collapsible: false,
-    children: [
-
-    ]
+    children: []
   },
   {
     text: '问题',
