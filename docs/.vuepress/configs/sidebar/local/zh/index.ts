@@ -91,11 +91,13 @@ export const sidebar_zh_development: SidebarConfigArray = [
 
 export const sidebar_zh_biography: SidebarConfigArray = [
   {
-    text: "特朗普家族",
+    text: "人物简介",
     collapsible: false,
     children: [
       url_prefix + '/biography/donald/',
       url_prefix + '/biography/donald/ivanka',
+      url_prefix + '/biography/taylor',
+      url_prefix + '/biography/taylor/2022NYU',
     ]
   }
 ]
