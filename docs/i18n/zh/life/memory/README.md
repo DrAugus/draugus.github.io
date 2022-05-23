@@ -1,3 +1,3 @@
-# memory everything
+# 回忆
 
-loading
+知道这个世界上什么最可怕吗？记忆。

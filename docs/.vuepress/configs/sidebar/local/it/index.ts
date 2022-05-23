@@ -35,13 +35,6 @@ export const sidebar_it_life: SidebarConfigArray = [
     ]
   },
   {
-    text: 'Feature',
-    collapsible: false,
-    children: [
-      url_prefix + '/life/features/feat-temp',
-    ],
-  },
-  {
     text: 'FAQ',
     collapsible: false,
     children: [
