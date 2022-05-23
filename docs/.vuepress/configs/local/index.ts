@@ -1,4 +1,4 @@
-import {SiteLocaleConfig} from "@vuepress/shared/lib/types/site";
+import {SiteLocaleConfig} from "vuepress";
 
 export const main: SiteLocaleConfig = {
 
