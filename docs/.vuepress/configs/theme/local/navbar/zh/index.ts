@@ -49,11 +49,15 @@ export const navbar_zh: Partial<any> = [
     text: "人物",
     children: [
       {
-        text: '特朗普政府',
+        text: '人物简介',
         children: [
           {
             text: '唐纳德·约翰·特朗普',
             link: url_prefix + '/biography/donald/'
+          },
+          {
+            text: '泰勒斯威夫特',
+            link: url_prefix + '/biography/taylor/'
           },
         ]
       },
