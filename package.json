@@ -4,16 +4,21 @@
   "description": "record everything",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "git:push": "git push",
+    "git:pull": "git pull",
+    "augus:dev": "vuepress dev docs",
+    "augus:build": "vuepress build docs",
+    "augus:vite-build": "vuepress-vite build docs",
+    "augus:vite-clean-dev": "vuepress-vite dev docs --clean-cache",
+    "augus:vite-dev": "vuepress-vite dev docs"
   },
   "repository": "https://github.com/DrAugus/Augus.git",
   "author": "DrAugus",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-search": "^2.0.0-beta.35",
-    "vuepress": "^2.0.0-beta.35",
-    "vuepress-plugin-giscus": "^2.0.0-alpha.21",
-    "vuepress-plugin-clipboard": "^1.0.6"
+    "vuepress": "^2.0.0-beta.44",
+    "vuepress-plugin-clipboard": "^2.1.0",
+    "vuepress-plugin-comment2": "^2.0.0-beta.63"
   }
 }

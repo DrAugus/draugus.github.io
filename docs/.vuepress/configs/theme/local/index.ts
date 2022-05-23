@@ -1,4 +1,4 @@
-import {LocaleConfig} from '@vuepress/shared';
+import {LocaleConfig} from "vuepress";
 import {navbar_zh} from './navbar/zh';
 import {navbar_en} from './navbar/en';
 import {navbar_de} from './navbar/de';
