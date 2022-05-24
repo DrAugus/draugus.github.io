@@ -30,3 +30,4 @@ yarn docs:dev
 * [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
 * [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
 * [vuepress plugin giscus](https://vuepress-theme-hope.github.io/v2/comment/guide/giscus.html)
+* [Vuepress Hope: vuepress-plugin-comment2](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/demo/comment2)
