@@ -13,5 +13,7 @@ export const commentTheme = (options: DefaultThemeOptions): Theme => ({
   layouts: {
     // we override the default layout to provide comment service
     Layout: path.resolve(__dirname, "layouts", "Layout.vue"),
+    // leaflet
+    Leaflet: path.resolve(__dirname, "layouts", "Leaflet.vue"),
   },
 });

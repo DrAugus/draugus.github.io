@@ -13,6 +13,10 @@ export const navbar_zh: Partial<any> = [
         link: url_prefix + '/life/trip/'
       },
       {
+        text: '记忆',
+        link: url_prefix + '/life/memory/'
+      },
+      {
         text: '社会',
         children: [
           {
@@ -20,10 +24,6 @@ export const navbar_zh: Partial<any> = [
             link: url_prefix + '/life/social/accident/'
           },
         ]
-      },
-      {
-        text: '记忆',
-        link: url_prefix + '/life/memory/'
       },
     ]
   },
