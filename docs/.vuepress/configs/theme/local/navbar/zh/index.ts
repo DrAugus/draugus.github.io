@@ -25,6 +25,10 @@ export const navbar_zh: Partial<any> = [
         text: '记忆',
         link: url_prefix + '/life/memory/'
       },
+      {
+        text: '乐子',
+        link: url_prefix + '/life/happiness/'
+      },
     ]
   },
   {
