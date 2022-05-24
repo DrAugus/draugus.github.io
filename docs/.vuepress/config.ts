@@ -5,6 +5,7 @@ module.exports = {
   head: [
     ["link", {rel: "icon", href: "/logo/favicon.ico"}],
     ["script", {src: "https://cdn.jsdelivr.net/npm/cfga@1.0.3", async: true}],
+    ["script", {src: "https://embed.github.com/view/geojson/DrAugus/Augus/tree/master/docs/i18n/zh/life/trip/README.md"}]
   ],
   base: "/Augus/",
   lang: 'en-US',
