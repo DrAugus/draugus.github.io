@@ -5,6 +5,8 @@ module.exports = {
   head: [
     ["link", {rel: "icon", href: "/logo/favicon.ico"}],
     ["script", {src: "https://cdn.jsdelivr.net/npm/cfga@1.0.3", async: true}],
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css' }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css' }]
   ],
   base: "/Augus/",
   lang: 'en-US',
@@ -22,4 +24,7 @@ module.exports = {
     lastUpdated: true,
   }),
   plugins: plugin.main,
+  extendsMarkdown: md => {
+    md.use(require("markdown-it-katex"));
+  },
 }
