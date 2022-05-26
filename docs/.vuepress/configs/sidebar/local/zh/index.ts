@@ -84,7 +84,16 @@ export const sidebar_zh_development: SidebarConfigArray = [
     text: '架构',
     collapsible: false,
     children: [
+      url_prefix + '/development/course',
       url_prefix + '/development/struct',
+    ],
+  },
+  {
+    text: '散记',
+    collapsible: false,
+    children: [
+      url_prefix + '/development/linux',
+      url_prefix + '/development/stroll',
     ],
   },
 ]
