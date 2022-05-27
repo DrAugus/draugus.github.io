@@ -8,9 +8,13 @@
 
 [食用指南](https://github.com/DrAugus/zhenxun_bot/tree/augus)，直接一键部署。如果不想一键部署，也可以参考[安装文档](https://hibikier.github.io/zhenxun_bot/docs/installation_doc/)
 
+更多使用方法，请参考[使用文档](https://hibikier.github.io/zhenxun_bot/docs/help_doc/)
+
 踩坑了吗？好像踩了，又好像没踩。不了解机制。注意查看日志即可！
 
 pg的坑肯定是踩了的！
+
+#### pg 坑
 
 * 本想在win平台，安装pg，但安装最新的[v14](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)出错。遂放弃，改用wsl，安装过程直接蓝屏笑嘻嘻。
 * 直接购买服务器！
@@ -27,7 +31,41 @@ pg的坑肯定是踩了的！
   sudo systemctl start postgresql-14
   ```
 
-更多使用方法，请参考[使用文档](https://hibikier.github.io/zhenxun_bot/docs/help_doc/)
+#### 食用pg
+
+安装完毕后，系统会创建一个数据库超级用户 postgres，密码为空。进入 postgres
+
+```bash
+sudo -i -u postgres
+```
+
+输入`psql`，显示如下，即安装成功
+
+```bash
+-bash-4.2$ psql
+psql (14.3)
+Type "help" for help.
+
+postgres=# 
+```
+
+修改数据库密码
+
+```bash
+\password
+```
+
+查看pg版本
+
+```bash
+select version();
+```
+
+查看系统表
+
+```bash
+select * from pg_tables;
+```
 
 ### [yunzai bot](https://github.com/Le-niao/Yunzai-Bot)
 
