@@ -110,3 +110,27 @@ export const sidebar_zh_biography: SidebarConfigArray = [
     ]
   }
 ]
+
+export const sidebar_zh_apple: SidebarConfigArray = [
+  {
+    text: "Apple",
+    collapsible: false,
+    children: [
+      url_prefix + '/apple/',
+      url_prefix + '/apple/calendar',
+      url_prefix + '/apple/reflect',
+    ]
+  }
+]
+
+export const sidebar_zh_game: SidebarConfigArray = [
+  {
+    text: "游戏",
+    collapsible: false,
+    children: [
+      url_prefix + '/game/',
+    ]
+  }
+]
+
+

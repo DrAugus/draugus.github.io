@@ -17,6 +17,18 @@ export const navbar_zh: Partial<any> = [
         link: url_prefix + '/life/memory/'
       },
       {
+        text: 'Apple',
+        link: url_prefix + '/apple/'
+      },
+      {
+        text: '游戏',
+        link: url_prefix + '/game/'
+      },
+      {
+        text: '博客迁移',
+        link: url_prefix + '/blog/'
+      },
+      {
         text: '社会',
         children: [
           {
