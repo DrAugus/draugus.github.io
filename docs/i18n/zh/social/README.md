@@ -1,3 +1,3 @@
-# social
+# 社会
 
 social info

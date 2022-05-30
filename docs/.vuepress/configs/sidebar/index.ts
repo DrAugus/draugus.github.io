@@ -1,10 +1,16 @@
 import type {SidebarConfig} from '@vuepress/theme-default'
 import {
-  sidebar_zh_apple,
-  sidebar_zh_biography,
-  sidebar_zh_code,
-  sidebar_zh_development, sidebar_zh_game,
-  sidebar_zh_life
+  sidebar_zh_learn_art,
+  sidebar_zh_learn_blog,
+  sidebar_zh_learn_code,
+  sidebar_zh_learn_language,
+  sidebar_zh_life_game,
+  sidebar_zh_life_memory,
+  sidebar_zh_life_tech,
+  sidebar_zh_life_trip,
+  sidebar_zh_social_accident,
+  sidebar_zh_social_biography,
+  sidebar_zh_social_war
 } from "./local/zh";
 import {sidebar_en_code, sidebar_en_development, sidebar_en_life} from "./local/en";
 import {sidebar_de_code, sidebar_de_development, sidebar_de_life} from "./local/de";
@@ -19,12 +25,17 @@ export const main: SidebarConfig = {
   '/development': sidebar_en_development,
 
   '/i18n/zh/': [],
-  '/i18n/zh/life': sidebar_zh_life,
-  '/i18n/zh/code': sidebar_zh_code,
-  '/i18n/zh/development': sidebar_zh_development,
-  '/i18n/zh/biography': sidebar_zh_biography,
-  '/i18n/zh/apple': sidebar_zh_apple,
-  '/i18n/zh/game': sidebar_zh_game,
+  '/i18n/zh/life/tech': sidebar_zh_life_tech,
+  '/i18n/zh/life/game': sidebar_zh_life_game,
+  '/i18n/zh/life/memory': sidebar_zh_life_memory,
+  '/i18n/zh/life/trip': sidebar_zh_life_trip,
+  '/i18n/zh/learn/art': sidebar_zh_learn_art,
+  '/i18n/zh/learn/blog': sidebar_zh_learn_blog,
+  '/i18n/zh/learn/code': sidebar_zh_learn_code,
+  '/i18n/zh/learn/language': sidebar_zh_learn_language,
+  '/i18n/zh/social/accident': sidebar_zh_social_accident,
+  '/i18n/zh/social/biography': sidebar_zh_social_biography,
+  '/i18n/zh/social/war': sidebar_zh_social_war,
 
   '/i18n/de/': [],
   '/i18n/de/life': sidebar_de_life,
