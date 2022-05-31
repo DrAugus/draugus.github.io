@@ -2,8 +2,9 @@ import {SidebarConfigArray} from "@vuepress/theme-default/lib/shared/nav";
 
 const url_prefix = '/i18n/zh';
 
-const url_life = url_prefix + '/life';
+const url_blog = url_prefix + '/blog';
 const url_learn = url_prefix + '/learn';
+const url_life = url_prefix + '/life';
 const url_social = url_prefix + '/social';
 
 const life_default: SidebarConfigArray = [{
@@ -86,28 +87,20 @@ export const sidebar_zh_learn_art: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_learn_blog: SidebarConfigArray = [
+export const sidebar_zh_learn_development: SidebarConfigArray = [
   learn_default[0],
   {
-    text: '散记',
+    text: '项目设计',
     collapsible: false,
     children: [
-      url_learn + '/development/linux',
-      url_learn + '/development/stroll',
-    ],
+      url_learn + '/development/course',
+      url_learn + '/development/struct',
+    ]
   },
 ]
 
 export const sidebar_zh_learn_code: SidebarConfigArray = [
   learn_default[0],
-  {
-    text: '散记',
-    collapsible: false,
-    children: [
-      url_learn + '/development/linux',
-      url_learn + '/development/stroll',
-    ],
-  },
   {
     text: '代码',
     collapsible: false,
@@ -198,7 +191,6 @@ export const sidebar_zh_social_biography: SidebarConfigArray = [
 
 export const sidebar_zh_social_war: SidebarConfigArray = [
   social_default[0],
-
   {
     text: "战争",
     collapsible: false,
@@ -207,4 +199,23 @@ export const sidebar_zh_social_war: SidebarConfigArray = [
     ]
   },
 
+]
+
+export const sidebar_zh_blog: SidebarConfigArray = [
+  {
+    text: "博客",
+    collapsible: false,
+    children: [
+      url_blog + '/',
+      url_blog + '/nanyang2shenyang',
+    ]
+  },
+  {
+    text: '散记',
+    collapsible: false,
+    children: [
+      url_blog + '/linux',
+      url_blog + '/stroll',
+    ],
+  },
 ]

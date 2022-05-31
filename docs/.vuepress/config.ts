@@ -28,6 +28,7 @@ module.exports = {
     md.use(require("markdown-it-katex"));
   },
   markdown: {
+    // 大于16行 显示行号
     code: {
       lineNumbers: 16
     }

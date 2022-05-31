@@ -1,8 +1,9 @@
 import type {SidebarConfig} from '@vuepress/theme-default'
 import {
+  sidebar_zh_blog,
   sidebar_zh_learn_art,
-  sidebar_zh_learn_blog,
   sidebar_zh_learn_code,
+  sidebar_zh_learn_development,
   sidebar_zh_learn_language,
   sidebar_zh_life_game,
   sidebar_zh_life_memory,
@@ -30,12 +31,13 @@ export const main: SidebarConfig = {
   '/i18n/zh/life/memory': sidebar_zh_life_memory,
   '/i18n/zh/life/trip': sidebar_zh_life_trip,
   '/i18n/zh/learn/art': sidebar_zh_learn_art,
-  '/i18n/zh/learn/blog': sidebar_zh_learn_blog,
+  '/i18n/zh/learn/development': sidebar_zh_learn_development,
   '/i18n/zh/learn/code': sidebar_zh_learn_code,
   '/i18n/zh/learn/language': sidebar_zh_learn_language,
   '/i18n/zh/social/accident': sidebar_zh_social_accident,
   '/i18n/zh/social/biography': sidebar_zh_social_biography,
   '/i18n/zh/social/war': sidebar_zh_social_war,
+  '/i18n/zh/blog': sidebar_zh_blog,
 
   '/i18n/de/': [],
   '/i18n/de/life': sidebar_de_life,

@@ -38,10 +38,6 @@ export const navbar_zh: Partial<any> = [
         link: url_learn + '/art/'
       },
       {
-        text: '博客迁移',
-        link: url_learn + '/blog/'
-      },
-      {
         text: '面试',
         link: url_learn + '/code/audition/'
       },
@@ -67,6 +63,10 @@ export const navbar_zh: Partial<any> = [
         link: url_social + '/biography/',
       },
     ]
+  },
+  {
+    text: '博客迁移',
+    link: url_prefix + '/blog/'
   },
   {
     text: '外链',
