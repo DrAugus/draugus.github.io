@@ -207,7 +207,6 @@ export const sidebar_zh_blog: SidebarConfigArray = [
     collapsible: false,
     children: [
       url_blog + '/',
-      url_blog + '/nanyang2shenyang',
     ]
   },
   {

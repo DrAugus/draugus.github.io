@@ -1,7 +1,7 @@
 ---
-title: 南阳——沈阳    
-author: 冴羽  
+title: 南阳——沈阳     
 date: 2021-02-18 10:54:16   
+permalinkPattern: blog/:year/:month/:day/:slug.html  
 categories: 杂谈    
 tags: 杂谈 旅行
 ---

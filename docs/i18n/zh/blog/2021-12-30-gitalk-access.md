@@ -1,7 +1,8 @@
 ---
-title:  gitalk评论接入教程    
+title: gitalk评论接入教程    
 layout: post  
-date:   '2021-12-30 15:39:11'  
+date: 2021-12-30 15:39:11 
+permalinkPattern: blog/:year/:month/:day/:slug.html  
 categories: 编程    
 tags: gitalk 评论 转载    
 excerpt: gitalk评论接入教程
