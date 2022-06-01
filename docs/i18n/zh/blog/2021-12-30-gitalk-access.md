@@ -3,8 +3,12 @@ title: gitalk评论接入教程
 sidebar: false  
 date: 2021-12-30 15:39:11 
 permalinkPattern: blog/:year/:month/:day/:slug.html  
-categories: 编程    
-tags: gitalk 评论 转载    
+category: 
+  - 编程    
+tag: 
+  - gitalk 
+  - 评论 
+  - 转载    
 excerpt: gitalk评论接入教程
 ---
 

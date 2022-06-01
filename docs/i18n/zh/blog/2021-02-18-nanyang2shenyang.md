@@ -4,8 +4,11 @@ title: 南阳——沈阳
 date: 2021-02-18 10:54:16   
 permalinkPattern: blog/:year/:month/:day/:slug.html  
 isOriginal: true
-categories: 杂谈    
-tags: 杂谈 旅行
+category:
+  - 杂谈
+tag:
+  - 杂谈
+  - 旅行
 ---
 
 * [绿皮车](#content1)

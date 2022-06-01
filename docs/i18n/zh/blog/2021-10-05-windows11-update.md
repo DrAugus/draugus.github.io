@@ -3,8 +3,11 @@ sidebar: false
 title: windows11更新纪要
 date: 2021-10-05 13:16:44
 permalinkPattern: blog/:year/:month/:day/:slug.html  
-categories: windows
-tags: windows 更新
+category: 
+  - windows
+tag: 
+  - windows 
+  - 更新
 excerpt: 介绍win11更新路上的绊脚石
 ---
 

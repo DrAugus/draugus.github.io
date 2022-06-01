@@ -1,8 +1,10 @@
 ---
 title: lua自动化测试指南
 date: 2021-11-24 11:15:22  
-categories: 编程  
-tags: lua  
+category: 
+  - 编程  
+tag: 
+  - lua  
 excerpt: lua自动化测试指南
 ---
 
