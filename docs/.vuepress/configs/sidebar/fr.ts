@@ -1,8 +1,8 @@
 import {SidebarConfigArray} from "@vuepress/theme-default/lib/shared/nav";
 
-const url_prefix = ''
+const url_prefix = '/i18n/fr'
 
-export const sidebar_en_life: SidebarConfigArray = [
+ const sidebar_fr_life: SidebarConfigArray = [
   {
     text: 'Life',
     collapsible: false,
@@ -43,7 +43,7 @@ export const sidebar_en_life: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_en_code: SidebarConfigArray = [
+ const sidebar_fr_code: SidebarConfigArray = [
   {
     text: 'Code',
     collapsible: false,
@@ -70,7 +70,7 @@ export const sidebar_en_code: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_en_development: SidebarConfigArray = [
+ const sidebar_fr_development: SidebarConfigArray = [
   {
     text: 'Guide',
     collapsible: false,

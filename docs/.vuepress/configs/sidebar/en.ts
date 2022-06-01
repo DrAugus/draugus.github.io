@@ -1,8 +1,9 @@
 import {SidebarConfigArray} from "@vuepress/theme-default/lib/shared/nav";
+import {sidebar} from "vuepress-theme-hope";
 
-const url_prefix = '/i18n/fr'
+const url_prefix = ''
 
-export const sidebar_fr_life: SidebarConfigArray = [
+const sidebar_en_life = [
   {
     text: 'Life',
     collapsible: false,
@@ -43,7 +44,7 @@ export const sidebar_fr_life: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_fr_code: SidebarConfigArray = [
+const sidebar_en_code = [
   {
     text: 'Code',
     collapsible: false,
@@ -70,7 +71,7 @@ export const sidebar_fr_code: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_fr_development: SidebarConfigArray = [
+const sidebar_en_development = [
   {
     text: 'Guide',
     collapsible: false,
@@ -84,3 +85,11 @@ export const sidebar_fr_development: SidebarConfigArray = [
     ],
   },
 ]
+
+
+export const sidebar_en = sidebar({
+  '/': [],
+  '/life': sidebar_en_life,
+  '/code': sidebar_en_code,
+  '/development': sidebar_en_development,
+})

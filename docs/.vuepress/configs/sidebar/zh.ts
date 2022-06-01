@@ -1,3 +1,4 @@
+import {sidebar} from "vuepress-theme-hope";
 import {SidebarConfigArray} from "@vuepress/theme-default/lib/shared/nav";
 
 const url_prefix = '/i18n/zh';
@@ -7,7 +8,7 @@ const url_learn = url_prefix + '/learn';
 const url_life = url_prefix + '/life';
 const url_social = url_prefix + '/social';
 
-const life_default: SidebarConfigArray = [{
+const life_default = [{
   text: '生活',
   collapsible: false,
   children: [
@@ -16,7 +17,7 @@ const life_default: SidebarConfigArray = [{
   ]
 }]
 
-export const sidebar_zh_life_tech: SidebarConfigArray = [
+const sidebar_zh_life_tech = [
   life_default[0],
   {
     text: "Apple",
@@ -29,7 +30,7 @@ export const sidebar_zh_life_tech: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_life_game: SidebarConfigArray = [
+const sidebar_zh_life_game = [
   life_default[0],
   {
     text: "游戏",
@@ -40,7 +41,7 @@ export const sidebar_zh_life_game: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_life_memory: SidebarConfigArray = [
+const sidebar_zh_life_memory = [
   life_default[0],
   {
     text: '回忆',
@@ -49,7 +50,7 @@ export const sidebar_zh_life_memory: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_life_trip: SidebarConfigArray = [
+const sidebar_zh_life_trip = [
   life_default[0],
   {
     text: "旅行",
@@ -66,16 +67,17 @@ export const sidebar_zh_life_trip: SidebarConfigArray = [
   },
 ]
 
-const learn_default: SidebarConfigArray = [{
+const learn_default = [{
   text: '学习',
   collapsible: false,
   children: [
     url_learn + '/',
     url_learn + '/FAQ/wrong-temp',
+    url_learn + '/FAQ/QA',
   ]
 }]
 
-export const sidebar_zh_learn_art: SidebarConfigArray = [
+const sidebar_zh_learn_art = [
   learn_default[0],
   {
     text: '艺术',
@@ -87,7 +89,7 @@ export const sidebar_zh_learn_art: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_learn_development: SidebarConfigArray = [
+const sidebar_zh_learn_development = [
   learn_default[0],
   {
     text: '项目设计',
@@ -99,7 +101,7 @@ export const sidebar_zh_learn_development: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_learn_code: SidebarConfigArray = [
+const sidebar_zh_learn_code = [
   learn_default[0],
   {
     text: '代码',
@@ -140,7 +142,7 @@ export const sidebar_zh_learn_code: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_learn_language: SidebarConfigArray = [
+const sidebar_zh_learn_language = [
   learn_default[0],
   {
     text: '语言',
@@ -151,7 +153,7 @@ export const sidebar_zh_learn_language: SidebarConfigArray = [
   },
 ]
 
-const social_default: SidebarConfigArray = [{
+const social_default = [{
   text: '社会',
   collapsible: false,
   children: [
@@ -159,7 +161,7 @@ const social_default: SidebarConfigArray = [{
   ]
 }]
 
-export const sidebar_zh_social_accident: SidebarConfigArray = [
+const sidebar_zh_social_accident = [
   social_default[0],
 
   {
@@ -174,7 +176,7 @@ export const sidebar_zh_social_accident: SidebarConfigArray = [
   },
 ]
 
-export const sidebar_zh_social_biography: SidebarConfigArray = [
+const sidebar_zh_social_biography = [
   social_default[0],
   {
     text: "人物",
@@ -189,7 +191,7 @@ export const sidebar_zh_social_biography: SidebarConfigArray = [
 
 ]
 
-export const sidebar_zh_social_war: SidebarConfigArray = [
+const sidebar_zh_social_war = [
   social_default[0],
   {
     text: "战争",
@@ -201,7 +203,7 @@ export const sidebar_zh_social_war: SidebarConfigArray = [
 
 ]
 
-export const sidebar_zh_blog: SidebarConfigArray = [
+const sidebar_zh_blog = [
   {
     text: "博客",
     collapsible: false,
@@ -218,3 +220,19 @@ export const sidebar_zh_blog: SidebarConfigArray = [
     ],
   },
 ]
+
+export const sidebar_zh = sidebar({
+  '/i18n/zh/': ["", "home", "slide"],
+  '/i18n/zh/life/tech': sidebar_zh_life_tech,
+  '/i18n/zh/life/game': sidebar_zh_life_game,
+  '/i18n/zh/life/memory': sidebar_zh_life_memory,
+  '/i18n/zh/life/trip': sidebar_zh_life_trip,
+  '/i18n/zh/learn/art': sidebar_zh_learn_art,
+  '/i18n/zh/learn/development': sidebar_zh_learn_development,
+  '/i18n/zh/learn/code': sidebar_zh_learn_code,
+  '/i18n/zh/learn/language': sidebar_zh_learn_language,
+  '/i18n/zh/social/accident': sidebar_zh_social_accident,
+  '/i18n/zh/social/biography': sidebar_zh_social_biography,
+  '/i18n/zh/social/war': sidebar_zh_social_war,
+  '/i18n/zh/blog': sidebar_zh_blog,
+})
