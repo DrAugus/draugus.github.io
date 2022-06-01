@@ -13,4 +13,4 @@
 - 20220523 giscus AVALIABLE
 - 20220524 try geojson, failed
 - 20220526 feat markdown plugin, markdown-it-katex
-
+- 20220531 feat blog, new [theme](https://github.com/vuepress-theme-hope/vuepress-theme-hope)

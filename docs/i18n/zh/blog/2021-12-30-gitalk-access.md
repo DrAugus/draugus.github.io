@@ -107,7 +107,7 @@ const initGitalk = () => {
 
 配置好会显示如下[效果](https://gitalk.github.io/)
 
-![1](/assets/res/post/gitalk/1.png)
+![1](/image/blog/gitalk/1.png)
 
 
 
