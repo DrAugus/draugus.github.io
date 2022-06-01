@@ -1,9 +1,7 @@
 const url_prefix = '';
 export const navbar_en: Partial<any> = [
-  {
-    text: 'Home',
-    link: url_prefix + '/home/'
-  },
+  "/",
+  "/home",
   {
     text: "Life",
     link: url_prefix + '/life'

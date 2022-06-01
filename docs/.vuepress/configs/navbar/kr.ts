@@ -1,9 +1,7 @@
 const url_prefix = '/i18n/kr';
 export const navbar_kr: Partial<any> = [
-  {
-    text: '집',
-    link: url_prefix + '/home/'
-  },
+  url_prefix + "/",
+  url_prefix + "/home",
   {
     text: '삶',
     link: url_prefix + '/life'

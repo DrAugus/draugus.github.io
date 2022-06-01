@@ -1,14 +1,14 @@
+import {navbar} from "vuepress-theme-hope";
+
 const url_prefix = '/i18n/zh';
 
 const url_life = url_prefix + '/life';
 const url_learn = url_prefix + '/learn';
 const url_social = url_prefix + '/social';
 
-export const navbar_zh: Partial<any> = [
-  {
-    text: '主页',
-    link: url_prefix + '/home/'
-  },
+export const navbar_zh = navbar([
+  url_prefix + "/",
+  url_prefix + "/home",
   {
     text: "生活",
     children: [
@@ -100,4 +100,4 @@ export const navbar_zh: Partial<any> = [
     link: url_prefix + '/sponsor'
   },
 
-]
+]);

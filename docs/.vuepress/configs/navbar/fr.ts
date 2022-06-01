@@ -1,21 +1,20 @@
-const url_prefix = '/i18n/de';
-export const navbar_de: Partial<any> = [
+const url_prefix = '/i18n/fr';
+
+export const navbar_fr: Partial<any> = [
+  url_prefix + "/",
+  url_prefix + "/home",
   {
-    text: 'Heim',
-    link: url_prefix + '/home/'
-  },
-  {
-    text: 'Leben',
+    text: 'La vie',
     link: url_prefix + '/life'
   },
   {
     text: "Code",
     children: [
       {
-        text: 'Vorsprechen',
+        text: 'audition',
         children: [
           {
-            text: 'Programmierterview',
+            text: 'Entretien du programmeur',
             link: url_prefix + '/code/audition/'
           },
         ]
@@ -23,13 +22,13 @@ export const navbar_de: Partial<any> = [
     ]
   },
   {
-    text: 'Links',
+    text: 'Liens',
     children: [
       {
-        text: 'Königliche Familie',
+        text: 'Famille royale',
         children: [
           {
-            text: 'Windsor-Familie',
+            text: 'Famille Windsor',
             link: 'https://augusmeow.cn/RoyalFamily/'
           },
         ]
@@ -42,7 +41,7 @@ export const navbar_de: Partial<any> = [
             link: 'https://augusmeow.cn/'
           },
           {
-            text: 'Spiel',
+            text: 'Jeu',
             link: 'https://augusmeow.cn/list/genshin'
           },
         ]
@@ -50,7 +49,7 @@ export const navbar_de: Partial<any> = [
     ]
   },
   {
-    text: 'Sponsor',
+    text: 'Parrainer',
     link: url_prefix + '/life/statement/sponsor'
   },
 ]
