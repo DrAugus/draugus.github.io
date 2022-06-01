@@ -20,6 +20,10 @@ yarn install
 yarn docs:dev
 ```
 
+## Contribute
+
+Before you commit, please run `vuepress-vite build docs`
+
 ## Thanks
 
 [JetBrains](https://www.jetbrains.com/zh-cn/community/opensource/#support)
