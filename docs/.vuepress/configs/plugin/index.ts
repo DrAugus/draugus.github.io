@@ -1,5 +1,4 @@
 import {PluginConfig} from "@vuepress/core/lib/types/plugin";
-import commentPlugin from "vuepress-plugin-comment2";
 
 const {searchPlugin} = require('@vuepress/plugin-search')
 
@@ -32,12 +31,5 @@ export const main: PluginConfig = [
       },
     }
   }),
-  commentPlugin({
-    type: "giscus",
-    repo: "DrAugus/Augus",
-    repoId: "R_kgDOHV19bA",
-    category: "Announcements",
-    categoryId: "DIC_kwDOHV19bM4CPJQy",
-    inputPosition: "top"
-  }),
+
 ]
