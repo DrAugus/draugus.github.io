@@ -43,3 +43,19 @@ yarn docs:dev
 - 生活 => 科技 游戏 旅行 回忆
 - 学习 => 艺术 博客 散记 代码 面试 指南 架构
 - 社会 => 人物 战争 事故
+
+### About blog home page
+
+In blog home page.
+
+To use this layout, you should set both `layout: Blog` and `home: true` in the page front matter.
+
+For related configuration docs, please see [blog homepage](https://vuepress-theme-hope.github.io/v2/guide/blog/home/).
+
+### About site info page
+
+This is an example of a normal homepage. You can place your main content here.
+
+To use this layout, you need to set `home: true` in the page front matter.
+
+For related descriptions of configuration items, please see [Project HomePage Layout Config](https://vuepress-theme-hope.github.io/v2/guide/layout/home/).

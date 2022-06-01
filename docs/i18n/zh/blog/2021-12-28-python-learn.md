@@ -1,6 +1,6 @@
 ---
 title: Python学习记录  
-layout: post  
+sidebar: false  
 date: 2021-12-28 18:22:11  
 permalinkPattern: blog/:year/:month/:day/:slug.html  
 categories: 编程     
