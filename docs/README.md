@@ -3,7 +3,7 @@ home: true
 layout: Blog
 title: Blog
 bgImage: image/blog.jpg
-heroImage: image/smile_akaya.png
+heroImage: null
 heroText: Augus
 tagline: One More Thing
 heroFullScreen: true
