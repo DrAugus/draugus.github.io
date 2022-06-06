@@ -24,6 +24,7 @@ const sidebar_zh_life_tech = [
       url_life + '/tech/apple/',
       url_life + '/tech/apple/calendar',
       url_life + '/tech/apple/reflect',
+      url_life + '/tech/apple/price',
     ]
   },
 ]
