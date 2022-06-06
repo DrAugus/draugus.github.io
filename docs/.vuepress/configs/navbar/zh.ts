@@ -65,10 +65,6 @@ export const navbar_zh = navbar([
     ]
   },
   {
-    text: '博客迁移',
-    link: url_prefix + '/blog/'
-  },
-  {
     text: '外链',
     children: [
       {

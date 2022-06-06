@@ -1,9 +1,7 @@
 import {sidebar} from "vuepress-theme-hope";
-import {SidebarConfigArray} from "@vuepress/theme-default/lib/shared/nav";
 
 const url_prefix = '/i18n/zh';
 
-const url_blog = url_prefix + '/blog';
 const url_learn = url_prefix + '/learn';
 const url_life = url_prefix + '/life';
 const url_social = url_prefix + '/social';
@@ -203,36 +201,26 @@ const sidebar_zh_social_war = [
 
 ]
 
-const sidebar_zh_blog = [
-  {
-    text: "博客",
-    collapsible: false,
-    children: [
-      url_blog + '/',
-    ]
-  },
-  {
-    text: '散记',
-    collapsible: false,
-    children: [
-      url_blog + '/linux',
-      url_blog + '/stroll',
-    ],
-  },
-]
-
 export const sidebar_zh = sidebar({
   '/i18n/zh/': ["", "home", "slide"],
+
+  '/i18n/zh/life/': [life_default[0], '/i18n/zh/life/tech', '/i18n/zh/life/game', '/i18n/zh/life/memory', '/i18n/zh/life/trip'],
+
   '/i18n/zh/life/tech': sidebar_zh_life_tech,
   '/i18n/zh/life/game': sidebar_zh_life_game,
   '/i18n/zh/life/memory': sidebar_zh_life_memory,
   '/i18n/zh/life/trip': sidebar_zh_life_trip,
+
+  '/i18n/zh/learn/': [learn_default[0], '/i18n/zh/learn/art', '/i18n/zh/learn/development', '/i18n/zh/learn/code', '/i18n/zh/learn/language'],
+
   '/i18n/zh/learn/art': sidebar_zh_learn_art,
   '/i18n/zh/learn/development': sidebar_zh_learn_development,
   '/i18n/zh/learn/code': sidebar_zh_learn_code,
   '/i18n/zh/learn/language': sidebar_zh_learn_language,
+
+  '/i18n/zh/social/': [social_default[0], '/i18n/zh/social/accident', '/i18n/zh/social/biography', '/i18n/zh/social/war'],
+
   '/i18n/zh/social/accident': sidebar_zh_social_accident,
   '/i18n/zh/social/biography': sidebar_zh_social_biography,
   '/i18n/zh/social/war': sidebar_zh_social_war,
-  '/i18n/zh/blog': sidebar_zh_blog,
 })
