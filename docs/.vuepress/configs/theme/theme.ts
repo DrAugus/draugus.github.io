@@ -23,7 +23,7 @@ export default hopeTheme({
 
   editLinkPattern: ":repo/edit/master/docs/:path",
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime","Word"],
+  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word"],
 
   blog: {
     medias: {
@@ -69,6 +69,8 @@ export default hopeTheme({
   plugins: {
     blog: {
       autoExcerpt: true,
+      // only with date frontmatter are articles
+      filter: (page) => !!page.frontmatter.date,
     },
 
     // If you don't need to comment feature, you can remove following option
