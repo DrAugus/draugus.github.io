@@ -22,6 +22,13 @@ const life_default = [
       url_life + '/cat',
     ]
   },
+  {
+    text: '花',
+    collapsible: false,
+    children: [
+      url_life + '/flower',
+    ]
+  },
 ]
 
 const sidebar_zh_life_tech = [
