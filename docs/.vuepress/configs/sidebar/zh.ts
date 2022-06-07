@@ -6,14 +6,23 @@ const url_learn = url_prefix + '/learn';
 const url_life = url_prefix + '/life';
 const url_social = url_prefix + '/social';
 
-const life_default = [{
-  text: '生活',
-  collapsible: false,
-  children: [
-    url_life + '/',
-    url_life + '/features-overview',
-  ]
-}]
+const life_default = [
+  {
+    text: '生活',
+    collapsible: false,
+    children: [
+      url_life + '/',
+      url_life + '/features-overview',
+    ]
+  },
+  {
+    text: '小猫',
+    collapsible: false,
+    children: [
+      url_life + '/cat',
+    ]
+  },
+]
 
 const sidebar_zh_life_tech = [
   life_default[0],
@@ -205,7 +214,7 @@ const sidebar_zh_social_war = [
 export const sidebar_zh = sidebar({
   '/i18n/zh/': ["", "home", "slide"],
 
-  '/i18n/zh/life/': [life_default[0], '/i18n/zh/life/tech', '/i18n/zh/life/game', '/i18n/zh/life/memory', '/i18n/zh/life/trip'],
+  '/i18n/zh/life/': [life_default[0], life_default[1], '/i18n/zh/life/tech', '/i18n/zh/life/game', '/i18n/zh/life/memory', '/i18n/zh/life/trip'],
 
   '/i18n/zh/life/tech': sidebar_zh_life_tech,
   '/i18n/zh/life/game': sidebar_zh_life_game,
