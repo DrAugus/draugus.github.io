@@ -1,6 +1,7 @@
 import {defineUserConfig} from "vuepress";
 import theme from "./configs/theme/theme";
 import {plugin, siteLocalConfig} from './configs'
+import {path} from "@vuepress/utils";
 
 export default defineUserConfig({
   base: "/Augus/",
@@ -15,5 +16,8 @@ export default defineUserConfig({
     code: {
       lineNumbers: 16
     }
+  },
+  alias: {
+    "@War": path.resolve(__dirname, "components/War.vue")
   }
 });

@@ -1,3 +1,7 @@
 # War
 
-war info
+<War />
+
+<script setup lang="ts">
+import War from "@War";
+</script>
