@@ -18,6 +18,7 @@ export default defineUserConfig({
     }
   },
   alias: {
-    "@War": path.resolve(__dirname, "components/War.vue")
+    "@War": path.resolve(__dirname, "components/War.vue"),
+    "@History": path.resolve(__dirname, "components/History.vue"),
   }
 });
