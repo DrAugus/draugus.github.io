@@ -1,4 +1,5 @@
 ---
+sidebar: false   
 title: rapidJson::Document doc
 date: 2021-08-02 15:00:03 
 category: 
