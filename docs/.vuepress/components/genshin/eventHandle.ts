@@ -5,9 +5,10 @@ import {WISH} from "./wish";
 const TIMELINE_PADDING = 10;
 let lastEventTime = dayjs().year(2000);
 let firstDay = dayjs();
-const userAgent = navigator.userAgent;
-const isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
-console.info(isSafari ? "now is safari" : "I am not safari");
+// const userAgent = navigator.userAgent;
+// const isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
+// console.info(isSafari ? "now is safari" : "I am not safari");
+const isSafari = false;
 
 const convertToDate = (e, i, j) => {
 
