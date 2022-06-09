@@ -1,4 +1,4 @@
-import * as dayjs from 'dayjs'
+const dayjs = require('dayjs')
 import {WISH} from "./wish";
 
 

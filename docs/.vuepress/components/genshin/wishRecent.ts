@@ -1,7 +1,7 @@
 import {processEvent} from "./eventHandle";
 import {Deadline} from "../utils";
 
-import * as dayjs from 'dayjs'
+const dayjs = require('dayjs')
 
 const ELEMENT_COLOR = {
   dendro: "#98e628",//草
