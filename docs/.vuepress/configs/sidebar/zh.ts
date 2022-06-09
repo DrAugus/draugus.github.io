@@ -54,6 +54,13 @@ const sidebar_zh_life_game = [
       url_life + '/game/',
     ]
   },
+  {
+    text: "原神",
+    collapsible: false,
+    children: [
+      url_life + '/game/genshin/',
+    ]
+  },
 ]
 
 const sidebar_zh_life_memory = [

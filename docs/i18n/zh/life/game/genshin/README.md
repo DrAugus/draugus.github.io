@@ -14,4 +14,6 @@ tag:
 - [提瓦特语言](language.md)
 - [等级提升](level.md)
 - [队伍搭配](party.md)
-- [祈愿信息](wish.md)
+- [全部祈愿信息](timeline.md)
+- [当前祈愿信息](wishCurrent.md)
+- [未来祈愿信息](wishFuture.md)
