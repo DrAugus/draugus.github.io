@@ -24,7 +24,6 @@
 
 <script>
 import json from "../../data/genshin/party-setup.json";
-import characters from "../../data/genshin/characters.json";
 
 export default {
   name: "PartySetup",
