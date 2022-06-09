@@ -20,8 +20,7 @@
     {{ item }}
   </p>
 
-  <!--<img src="{{falklands_war.zh.img}}"> -->
-
+  <img :src="falklands_war.zh.img"/>
 
 </template>
 
