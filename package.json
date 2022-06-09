@@ -8,7 +8,7 @@
     "git:pull": "git pull",
     "augus:build": "vuepress build docs",
     "augus:clean-dev": "vuepress dev docs --clean-cache",
-    "augus:clean-debeg": "vuepress dev docs --clean-cache --debug",
+    "augus:clean-debug": "vuepress dev docs --clean-cache --debug",
     "augus:dev": "vuepress dev docs",
     "augus:vite-build": "vuepress-vite build docs",
     "augus:vite-clean-dev": "vuepress-vite dev docs --clean-cache",
