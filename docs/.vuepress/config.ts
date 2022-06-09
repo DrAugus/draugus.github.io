@@ -20,5 +20,10 @@ export default defineUserConfig({
   alias: {
     "@War": path.resolve(__dirname, "components/War.vue"),
     "@History": path.resolve(__dirname, "components/History.vue"),
+    "@GenshinLevelExp": path.resolve(__dirname, "components/genshin/LevelExp.vue"),
+    "@GenshinPartySetup": path.resolve(__dirname, "components/genshin/PartySetup.vue"),
+    "@GenshinCharacters": path.resolve(__dirname, "components/genshin/Characters.vue"),
+    "@GenshinWishCurrent": path.resolve(__dirname, "components/genshin/WishCurrent.vue"),
+    "@GenshinWishFuture": path.resolve(__dirname, "components/genshin/WishFuture.vue"),
   }
 });
