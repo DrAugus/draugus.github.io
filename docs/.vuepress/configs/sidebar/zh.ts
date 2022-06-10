@@ -94,7 +94,7 @@ const learn_default = [{
   collapsible: false,
   children: [
     url_learn + '/',
-    url_learn + '/FAQ/wrong-temp',
+    url_learn + '/FAQ/',
     url_learn + '/FAQ/QA',
   ]
 }]

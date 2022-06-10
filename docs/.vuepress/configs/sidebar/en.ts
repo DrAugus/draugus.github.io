@@ -39,7 +39,7 @@ const sidebar_en_life = [
     text: 'FAQ',
     collapsible: false,
     children: [
-      url_prefix + '/life/FAQ/wrong-temp',
+      url_prefix + '/life/FAQ/',
     ],
   },
 ]
