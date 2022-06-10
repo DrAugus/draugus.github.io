@@ -114,6 +114,14 @@ const sidebar_zh_learn_art = [
 const sidebar_zh_learn_development = [
   learn_default[0],
   {
+    text: '指南',
+    collapsible: false,
+    children: [
+      url_learn + '/development/',
+      url_learn + '/development/guide',
+    ]
+  },
+  {
     text: '项目设计',
     collapsible: false,
     children: [
@@ -148,19 +156,6 @@ const sidebar_zh_learn_code = [
       url_learn + '/code/audition/sys_design',
       url_learn + '/code/audition/non_tech',
     ]
-  },
-  {
-    text: '指南',
-    collapsible: false,
-    children: []
-  },
-  {
-    text: '架构',
-    collapsible: false,
-    children: [
-      url_learn + '/development/course',
-      url_learn + '/development/struct',
-    ],
   },
 ]
 
