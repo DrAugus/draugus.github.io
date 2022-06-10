@@ -7,7 +7,8 @@ let firstDay = dayjs();
 
 const convertToDate = (e, i, j) => {
 
-    let isSafari = false;
+    // 暂时全按 safari 的格式进行格式化
+    let isSafari = true;
     // if (typeof window !== undefined) {
     //     let userAgent = window.navigator.userAgent;
     //     isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
