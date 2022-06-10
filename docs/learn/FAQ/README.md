@@ -18,5 +18,5 @@ const dayjs = require('dayjs')
 - build success
 - debug `ReferenceError: require is not defined`
 
-**finally use js** c0f38f802693f358570c78730b5a4848d81609d8
+**finally use js** [c0f38f8](https://github.com/DrAugus/Augus/commit/c0f38f802693f358570c78730b5a4848d81609d8)
 

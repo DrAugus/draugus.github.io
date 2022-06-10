@@ -18,7 +18,7 @@ const dayjs = require('dayjs')
 
 build正常，debug模式直接报错，`ReferenceError: require is not defined`
 
-**最终解决方案换成js** c0f38f802693f358570c78730b5a4848d81609d8
+**最终解决方案换成js** [c0f38f8](https://github.com/DrAugus/Augus/commit/c0f38f802693f358570c78730b5a4848d81609d8)
 
 ## 遗留问题
 
