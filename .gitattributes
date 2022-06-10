@@ -1,14 +1,4 @@
-* text eol=lf
-*.txt text eol=crlf
-
-*.png binary
-*.jpg binary
-*.jpeg binary
-*.ico binary
-*.tff binary
-*.woff binary
-*.woff2 binary
-
-*.js linguist-language=Javascript
-*.ts linguist-language=Typescript
-*.vue linguist-language=Vue
+*.html linguist-language=html
+*.js linguist-language=javascript
+*.ts linguist-language=typescript
+*.vue linguist-language=vue
