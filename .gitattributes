@@ -8,3 +8,7 @@
 *.tff binary
 *.woff binary
 *.woff2 binary
+
+*.js linguist-language=Javascript
+*.ts linguist-language=Typescript
+*.vue linguist-language=Vue
