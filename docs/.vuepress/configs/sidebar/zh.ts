@@ -167,6 +167,10 @@ const sidebar_zh_learn_language = [
     children: [
       url_learn + '/language/',
       url_learn + '/language/name',
+      url_learn + '/language/english',
+      url_learn + '/language/french',
+      url_learn + '/language/german',
+      url_learn + '/language/italian',
     ],
   },
 ]
