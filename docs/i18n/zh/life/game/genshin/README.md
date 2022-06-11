@@ -17,3 +17,4 @@ tag:
 - [全部祈愿信息](timeline.md)
 - [当前祈愿信息](wishCurrent.md)
 - [未来祈愿信息](wishFuture.md)
+- [dialog](dialog.md)
