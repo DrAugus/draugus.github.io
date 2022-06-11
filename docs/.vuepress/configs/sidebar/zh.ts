@@ -166,6 +166,7 @@ const sidebar_zh_learn_language = [
     collapsible: false,
     children: [
       url_learn + '/language/',
+      url_learn + '/language/name',
     ],
   },
 ]
