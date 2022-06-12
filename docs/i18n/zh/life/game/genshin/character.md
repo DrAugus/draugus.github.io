@@ -1,5 +1,5 @@
 ---
-title: 原神
+title: 原神角色
 ---
 
 <GenshinCharacters />

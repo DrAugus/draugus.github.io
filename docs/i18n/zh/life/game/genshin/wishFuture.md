@@ -1,4 +1,4 @@
-# 当前祈愿
+# 未来祈愿
 
 
 <GenshinWishFuture />
