@@ -1,4 +1,4 @@
-# 资助
+# Sponsor
 
 ![wechat](/image/wechatpay.png)
 

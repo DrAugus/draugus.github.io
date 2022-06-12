@@ -5,10 +5,10 @@ export const local_zh = {
 
   navbar: navbar_zh,
   sidebar: {
-    '/i18n/zh/': ["", "home", "slide"],
-    '/i18n/zh/life/': 'structure',
-    '/i18n/zh/learn/': 'structure',
-    '/i18n/zh/social/': 'structure',
+    '/': ["", "home", "slide"],
+    '/life/': 'structure',
+    '/learn/': 'structure',
+    '/social/': 'structure',
   },
 
   navbarLocales: {

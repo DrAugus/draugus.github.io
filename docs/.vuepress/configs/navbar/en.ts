@@ -1,10 +1,10 @@
 import {navbar} from "vuepress-theme-hope";
 
-const url_prefix = '';
+const url_prefix = '/i18n/en';
 
 export const navbar_en = navbar([
-  "/",
-  "/home",
+  url_prefix + "/",
+  url_prefix+ "/home",
   {
     text: "Life",
     icon: 'bed',

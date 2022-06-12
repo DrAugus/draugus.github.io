@@ -5,13 +5,13 @@ const {searchPlugin} = require('@vuepress/plugin-search')
 export const main: PluginConfig = [
   searchPlugin({
     locales: {
-      '/': {
+      '/i18n/en/': {
         placeholder: 'search',
-        hotKeys: ['/']
+        hotKeys: ['/i18n/en/']
       },
-      '/i18n/zh/': {
+      '/': {
         placeholder: '搜索',
-        hotKeys: ['/i18n/zh/']
+        hotKeys: ['/']
       },
       '/i18n/de/': {
         placeholder: 'Suche',

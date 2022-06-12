@@ -1,6 +1,6 @@
 import {navbar} from "vuepress-theme-hope";
 
-const url_prefix = '/i18n/zh';
+const url_prefix = '';
 
 const url_life = url_prefix + '/life';
 const url_learn = url_prefix + '/learn';

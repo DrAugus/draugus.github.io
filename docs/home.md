@@ -1,63 +1,63 @@
 ---
 home: true
-title: Home
+title: 介绍
+icon: award
 heroImage: image/home.jpg
 heroText: Augus
-tagline: Record Everything
+tagline: 记录日常
 actions:
   - text: How to Use 💡
-    link: /learn/development/struct
+    link: /guide/
     type: primary
 
   - text: Blog homepage 🏠
     link: /
 
 features:
-  - title: Markdown Enhance
+  - title: Markdown 增强
     icon: markdown
-    details: Add align, sup/sub script, footnote, task-list, tex, flowchart, diagram, mark and presentation support in markdown
+    details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
 
-  - title: Slide page
+  - title: 幻灯片页面
     icon: slides
-    details: Adding slide pages to display things you like
+    details: 添加幻灯片页面以显示你喜欢的内容
 
-  - title: Article information
+  - title: 文章信息
     icon: info
-    details: Add author, writing date, reading time, word count and other information to your article
+    details: 为文章添加作者、写作日期、预计阅读时间、字数统计等信息
 
-  - title: Blog support
+  - title: 博客支持
     icon: blog
-    details: Listing your articles with their dates, tags and categories with some awesome layouts
+    details: 使用一些很棒的布局提供博客功能，通过文章的日期、标签和分类，自动生成文章、分类、标签与时间轴列表
     link: /
 
-  - title: War Info
+  - title: 战争
     icon: eye
-    details: War information. The main records that have occurred, such as World War I, World War II, Malaysia War, etc.
-    link: /learn/development/struct
-
+    details: 战争资讯。主要记录已经发生过的战争，如一战，二战，马岛战争等等。
+    link: /social/war/
   - title: Apple
     icon: linter
-    details: Related information of Apple, the use of Apple devices, and the fun function of Apple devices.
-    link: /i18n/zh/life/tech/
-  - title: Code
+    details: Apple的相关信息，Apple设备的使用以及Apple设备的娱乐功能。
+    link: /life/tech/
+  - title: 编码
     icon: code
-    details: Maybe you can provide some coding skills here, and you can also find some interview questions here.
-    link: /i18n/zh/learn/code/
-  - title: Accident
+    details: 或许能提供一些编码技巧，还可以找到部分面试题的题解。
+    link: /learn/code/ 
+  - title: 事故
     icon: interact
-    details: Considering accident records.
-    link: /i18n/zh/social/accident/
-  - title: Game
+    details: 需要深思的事故记录。
+    link: /social/accident/
+  - title: 游戏
     icon: launch
-    details: How to play the game? List of the information of the game's event wish.
-    link: /i18n/zh/life/game/
-  - title: Memory
+    details: 游戏到底该怎么玩？原神祈愿信息一览。
+    link: /life/game/
+  - title: 回忆
     icon: box
-    details: Memoirs, mainly record some past events.
-    link: /i18n/zh/life/memory/
-  - title: Project Structure
+    details: 回忆录，主要记载一些往事。
+    link: /life/memory/
+  - title: 项目架构
     icon: enum
-    details: Project Structure
+    details: 项目结构
     link: /learn/development/struct
 
 copyright: false

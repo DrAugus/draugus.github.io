@@ -38,23 +38,23 @@ features:
   - title: Apple
     icon: linter
     details: Related information of Apple, the use of Apple devices, and the fun function of Apple devices.
-    link: /i18n/zh/life/tech/
+    link: /i18n/en/life/tech/
   - title: Code
     icon: code
     details: Maybe you can provide some coding skills here, and you can also find some interview questions here.
-    link: /i18n/zh/learn/code/
+    link: /i18n/en/learn/code/
   - title: Accident
     icon: interact
     details: Considering accident records.
-    link: /i18n/zh/social/accident/
+    link: /i18n/en/social/accident/
   - title: Game
     icon: launch
     details: How to play the game? List of the information of the game's event wish.
-    link: /i18n/zh/life/game/
+    link: /i18n/en/life/game/
   - title: Memory
     icon: box
     details: Memoirs, mainly record some past events.
-    link: /i18n/zh/life/memory/
+    link: /i18n/en/life/memory/
   - title: Project Structure
     icon: enum
     details: Project Structure

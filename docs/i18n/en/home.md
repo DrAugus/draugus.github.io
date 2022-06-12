@@ -1,6 +1,6 @@
 ---
 home: true
-title: Heim
+title: Home
 heroImage: image/home.jpg
 heroText: Augus
 tagline: Record Everything
@@ -38,23 +38,23 @@ features:
   - title: Apple
     icon: linter
     details: Related information of Apple, the use of Apple devices, and the fun function of Apple devices.
-    link: /life/tech/
+    link: /i18n/en/life/tech/
   - title: Code
     icon: code
     details: Maybe you can provide some coding skills here, and you can also find some interview questions here.
-    link: /learn/code/
+    link: /i18n/en/learn/code/
   - title: Accident
     icon: interact
     details: Considering accident records.
-    link: /social/accident/
+    link: /i18n/en/social/accident/
   - title: Game
     icon: launch
     details: How to play the game? List of the information of the game's event wish.
-    link: /life/game/
+    link: /i18n/en/life/game/
   - title: Memory
     icon: box
     details: Memoirs, mainly record some past events.
-    link: /life/memory/
+    link: /i18n/en/life/memory/
   - title: Project Structure
     icon: enum
     details: Project Structure
