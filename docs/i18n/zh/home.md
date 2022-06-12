@@ -1,6 +1,7 @@
 ---
 home: true
-title: 首页
+title: 介绍
+icon: award
 heroImage: image/home.jpg
 heroText: Augus
 tagline: 记录日常

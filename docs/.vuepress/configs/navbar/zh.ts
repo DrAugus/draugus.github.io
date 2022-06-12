@@ -11,9 +11,11 @@ export const navbar_zh = navbar([
   url_prefix + "/home",
   {
     text: "生活",
+    icon:'bed',
     children: [
       {
         text: 'Apple',
+        icon:"apple",
         link: url_life + '/tech/'
       },
       {
@@ -32,6 +34,7 @@ export const navbar_zh = navbar([
   },
   {
     text: '学习',
+    icon:'book',
     children: [
       {
         text: '艺术',
@@ -49,6 +52,7 @@ export const navbar_zh = navbar([
   },
   {
     text: '社会',
+    icon:'diagnoses',
     children: [
       {
         text: '事故',
@@ -66,6 +70,7 @@ export const navbar_zh = navbar([
   },
   {
     text: '外链',
+    icon:'democrat',
     children: [
       {
         text: '原神',
@@ -93,6 +98,7 @@ export const navbar_zh = navbar([
   },
   {
     text: '赞助',
+    icon:'euro-sign',
     link: url_prefix + '/sponsor'
   },
 

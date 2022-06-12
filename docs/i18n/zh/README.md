@@ -2,6 +2,7 @@
 home: true
 layout: Blog
 title: 博客
+icon: bath
 bgImage: image/blog.jpg
 heroImage: null
 heroText: Augus

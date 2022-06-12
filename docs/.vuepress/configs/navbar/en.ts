@@ -1,31 +1,32 @@
+import {navbar} from "vuepress-theme-hope";
+
 const url_prefix = '';
-export const navbar_en: Partial<any> = [
+
+export const navbar_en = navbar([
   "/",
   "/home",
   {
     text: "Life",
+    icon: 'bed',
     link: url_prefix + '/life'
   },
   {
-    text: "Code",
+    text: "Learn",
+    icon: 'book',
     children: [
       {
-        text: 'Audition',
-        children: [
-          {
-            text: 'Code Everything',
-            link: url_prefix + '/code/'
-          },
-          {
-            text: 'Code Audition',
-            link: url_prefix + '/code/audition/'
-          },
-        ]
+        text: 'Code',
+        link: url_prefix + '/code/'
+      },
+      {
+        text: 'Learn',
+        link: url_prefix + '/learn/'
       },
     ]
   },
   {
     text: 'Links',
+    icon: 'democrat',
     children: [
       {
         text: 'Royal Family',
@@ -53,6 +54,7 @@ export const navbar_en: Partial<any> = [
   },
   {
     text: 'Sponsor',
+    icon: 'euro-sign',
     link: url_prefix + '/sponsor'
   },
-]
+])

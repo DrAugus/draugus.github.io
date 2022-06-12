@@ -1,3 +1,0 @@
-# social
-
-social info
