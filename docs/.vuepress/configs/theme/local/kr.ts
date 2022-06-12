@@ -1,13 +1,10 @@
-import {HopeThemeLocaleData} from "vuepress-theme-hope";
 import {navbar_kr} from "../../navbar";
-import {sidebar_en} from "../../sidebar";
-
 
 export const local_kr = {
   lang: "kr-KR",
 
   navbar: navbar_kr,
-  sidebar: sidebar_en,
+  sidebar: 'structure',
 
   navbarLocales: {
     langName: "한국어",

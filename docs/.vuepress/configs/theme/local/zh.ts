@@ -1,13 +1,15 @@
-import {HopeThemeLocaleData} from "vuepress-theme-hope";
 import {navbar_zh} from "../../navbar";
-import {sidebar_zh} from "../../sidebar";
-
 
 export const local_zh = {
   lang: "zh-CN",
 
   navbar: navbar_zh,
-  sidebar: sidebar_zh,
+  sidebar: {
+    '/i18n/zh/': ["", "home", "slide"],
+    '/i18n/zh/life/': 'structure',
+    '/i18n/zh/learn/': 'structure',
+    '/i18n/zh/social/': 'structure',
+  },
 
   navbarLocales: {
     langName: "简体中文",

@@ -1,14 +1,11 @@
-import {HopeThemeLocaleData} from "vuepress-theme-hope";
 import {navbar_en} from "../../navbar";
-import {sidebar_en} from "../../sidebar";
-
 
 export const local_en = {
 
   lang: "en-US",
 
   navbar: navbar_en,
-  sidebar: sidebar_en,
+  sidebar: 'structure',
 
   navbarLocales: {
     langName: "English",
