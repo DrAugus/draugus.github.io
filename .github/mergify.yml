@@ -2,7 +2,8 @@ pull_request_rules:
   - name: automatic merge for ImgBot pull requests
     conditions:
       - author=imgbot[bot]
-      - check-success=Travis CI - Pull Request
+      - check-success=Summary
+      - check-success=restyled
     actions:
       merge:
         method: merge
@@ -10,7 +11,8 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - check-success=Travis CI - Pull Request
+      - check-success=Summary
+      - check-success=restyled
     actions:
       merge:
         method: merge
@@ -19,7 +21,8 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - check-success=Travis CI - Pull Request
+      - check-success=Summary
+      - check-success=restyled
     actions:
       merge:
         method: merge
