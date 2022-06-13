@@ -3,6 +3,6 @@ branches:
   only:
     - master
 node_js:
-  - v14.17.6
+  - 14.19.3
 script:
   - vuepress build docs
