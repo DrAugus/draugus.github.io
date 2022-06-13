@@ -6,8 +6,10 @@
   "scripts": {
     "git:push": "git push",
     "git:pull": "git pull",
-    "augus:dev": "vuepress dev docs",
     "augus:build": "vuepress build docs",
+    "augus:clean-dev": "vuepress dev docs --clean-cache",
+    "augus:clean-debug": "vuepress dev docs --clean-cache --debug",
+    "augus:dev": "vuepress dev docs",
     "augus:vite-build": "vuepress-vite build docs",
     "augus:vite-clean-dev": "vuepress-vite dev docs --clean-cache",
     "augus:vite-dev": "vuepress-vite dev docs"
@@ -16,9 +18,17 @@
   "author": "DrAugus",
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-search": "^2.0.0-beta.35",
-    "vuepress": "^2.0.0-beta.44",
+    "@vuepress/client": "^2.0.0-beta.46",
+    "@vuepress/plugin-search": "^2.0.0-beta.46",
+    "vue": "^3.2.33",
+    "vuepress": "^2.0.0-beta.46",
     "vuepress-plugin-clipboard": "^2.1.0",
-    "vuepress-plugin-comment2": "^2.0.0-beta.63"
+    "vuepress-plugin-comment2": "^2.0.0-beta.63",
+    "vuepress-theme-hope": "^2.0.0-beta.75"
+  },
+  "dependencies": {
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
+    "dayjs": "^1.11.3",
+    "leaflet": "^1.8.0"
   }
 }

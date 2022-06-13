@@ -1,17 +1,16 @@
-import { defaultTheme } from "@vuepress/theme-default";
-import { path } from "@vuepress/utils";
+import {LocaleConfig} from "vuepress";
+import {local_en} from "./local/en";
+import {local_zh} from "./local/zh";
+import {local_de} from "./local/de";
+import {local_fr} from "./local/fr";
+import {local_it} from "./local/it";
+import {local_kr} from "./local/kr";
 
-import type { Theme } from "@vuepress/core";
-import type { DefaultThemeOptions } from "@vuepress/theme-default";
-
-export const commentTheme = (options: DefaultThemeOptions): Theme => ({
-  name: "comment-theme",
-
-  // we are extending @vuepress/theme-default
-  extends: defaultTheme(options),
-
-  layouts: {
-    // we override the default layout to provide comment service
-    Layout: path.resolve(__dirname, "layouts", "Layout.vue"),
-  },
-});
+export const theme_local: LocaleConfig = {
+  '/': local_zh,
+  '/i18n/en/': local_en,
+  '/i18n/de/': local_de,
+  '/i18n/fr/': local_fr,
+  '/i18n/it/': local_it,
+  '/i18n/kr/': local_kr,
+}

@@ -1,0 +1,300 @@
+{
+  "world_war_1": {
+    "name": "World War I",
+    "duration": "",
+    "info": {
+      "德奥同盟": {
+        "name": "德奥同盟",
+        "date": "1879-10-07",
+        "intro": "在德国首相俾斯麦的推动下，德国与奥匈帝国签署了同盟条约，这个条约具有明星的反俄性质"
+      },
+      "三国同盟": {
+        "name": "三国同盟",
+        "date": "1882-05-20",
+        "intro": "意大利在同法国争夺突尼斯的斗争中失败，俾斯麦趁机拉拢意大利，德奥意三国同盟正式建立"
+      },
+      "法俄协约": {
+        "name": "法俄协约",
+        "date": "1892-08-17",
+        "intro": "为了应对同盟国的威胁，法俄两国签订军事协定，两大军事集团对峙开始"
+      },
+      "俾斯麦逝世": {
+        "name": "俾斯麦逝世",
+        "date": "1898-07-30",
+        "intro": "俾斯麦在位期间，统一了德意志帝国。在他死后，德国在外交领域再无能与之相提并论的人物"
+      },
+      "三国协约": {
+        "name": "三国协约",
+        "date": "1907-08-31",
+        "intro": "德国的崛起挑战了英国的霸主地位，英国与法、俄相继签订了互助协约，三国协约正式建立"
+      },
+      "巴尔干火药桶": {
+        "name": "巴尔干火药桶",
+        "date": "1912-10-09",
+        "intro": "巴尔干地区民族成分复杂、宗教多样、矛盾尖锐，相继爆发了两次巴尔干战争"
+      },
+      "萨拉热窝的枪声": {
+        "name": "萨拉热窝的枪声",
+        "date": "1914-06-28",
+        "intro": "奥匈帝国皇储斐迪南大公在萨拉热窝遇刺，凶手为塞尔维亚人，被视为一战的导火索"
+      },
+      "空白支票": {
+        "name": "空白支票",
+        "date": "1914-07-05",
+        "intro": "德皇威廉二世向奥匈帝国许诺，一旦战争爆发，德国将与奥匈帝国站在一起"
+      },
+      "最后通牒": {
+        "name": "最后通牒",
+        "date": "1914-07-23",
+        "intro": "得到德皇许诺后，奥匈帝国向塞尔维亚提出最后通牒，条件极为苛刻。",
+        "after": "塞尔维亚政府拒绝接受全部条款，紧张局势进一步升级"
+      },
+      "战争总动员": {
+        "name": "战争总动员",
+        "date": "1914-07-25",
+        "intro": "塞尔维亚和奥匈帝国都开始战争总动员，俄国与奥匈帝国在巴尔干有尖锐矛盾，也宣布进入战争准备期"
+      },
+      "一战爆发": {
+        "name": "一战爆发",
+        "date": "1914-07-28",
+        "intro": "奥匈帝国向塞尔维亚宣战，并炮击塞尔维亚首都，第一次世界大战正式爆发"
+      },
+      "德国参战": {
+        "name": "德国参战",
+        "date": "1914-08-01",
+        "intro": "德国以俄国进行战争动员为由，对俄宣战，随后又对宿敌法国宣战"
+      },
+      "英国参战": {
+        "name": "英国参战",
+        "date": "1914-08-04",
+        "intro": "在德国入侵比利时后，英国进入战争总动员，并向德国宣判"
+      },
+      "法国参战": {
+        "name": "法国参战",
+        "date": "1914-08-07",
+        "intro": "在被德国宣战后，法国向普法战争中失去的阿尔萨斯地区发动了进攻"
+      },
+      "俄国参战": {
+        "name": "俄国参战",
+        "date": "1914-08-16",
+        "intro": "在被德国宣战后，俄国向德国的东普鲁士地区发动了进攻"
+      },
+      "施里芬计划": {
+        "name": "施里芬计划",
+        "date": "1914-08",
+        "intro": "德军计划先集中兵力于西线，穿越比利时，试图迅速击败法国"
+      },
+      "空袭列日": {
+        "name": "空袭列日",
+        "date": "1914-08-05",
+        "intro": "德国的齐柏林飞艇空袭比利时的列日要塞，这是齐柏林飞艇首次运用于实践"
+      },
+      "比利时沦陷": {
+        "name": "比利时沦陷",
+        "date": "1914-08-20",
+        "intro": "比利时首都布鲁塞尔被德军攻陷，但比军已经成功拖延了德军的进攻"
+      },
+      "日本参战": {
+        "name": "日本参战",
+        "date": "1914-08-23",
+        "intro": "日本向德国宣战，意在夺取被德国侵占的中国胶州湾和太平洋上的德属岛屿"
+      },
+      "坦能堡之战": {
+        "name": "坦能堡之战",
+        "date": "1914-08-26",
+        "intro": "俄国第二集团军被围歼，德军将领兴登堡和鲁登道夫声威大震"
+      },
+      "马恩河奇迹": {
+        "name": "马恩河奇迹",
+        "date": "1914-09-05",
+        "intro": "德军距离巴黎本已仅有24公里，却因侧翼暴露，遭到英法联军的惨痛打击，施里芬计划失败"
+      },
+      "奔向大海": {
+        "name": "奔向大海",
+        "date": "1914-09-17",
+        "intro": "西线双方都试图迂回包围对方，战壕绵延700多公里直至北海岸边，但双方最后都没能成功"
+      },
+      "奥斯曼参战": {
+        "name": "奥斯曼参战",
+        "date": "1914-11-11",
+        "intro": "奥斯曼帝国与俄国历来矛盾尖锐，在德国向其许诺了好处之后，加入同盟国阵营"
+      },
+      "达达尼尔战役": {
+        "name": "达达尼尔战役",
+        "date": "1915-02-19",
+        "intro": "英法联军试图夺取达达尼尔海峡，登陆加里波利半岛，再直取奥斯曼首都伊斯坦布尔",
+        "after": "这场一战中最大规模的登陆作战最终失败，英国海军大臣丘吉尔引咎辞职。在这次战役中，奥斯曼军官凯末尔初露锋芒，后来成为土耳其国父"
+      },
+      "毒气战": {
+        "name": "毒气战",
+        "date": "1915-04-22",
+        "intro": "德军在第二次伊普尔战役中首次大规模使用毒气作战，导致5000余名协约国士兵死亡",
+        "after": "此后一战双方都广泛、大量地使用了毒气，造成了130万人伤亡"
+      },
+      "向东线进攻": {
+        "name": "向东线进攻",
+        "date": "1915-05",
+        "intro": "德奥联军集中兵力于东线，发动了长达八个月的猛烈攻势，试图击溃俄国"
+      },
+      "意大利倒戈": {
+        "name": "意大利倒戈",
+        "date": "1915-05-23",
+        "intro": "身为同盟国的意大利，在伦敦与英、法、俄达成了秘密协定，随后跳反，向奥匈帝国宣战"
+      },
+      "伊松佐河战役": {
+        "name": "伊松佐河战役",
+        "date": "1915-06-23",
+        "intro": "意大利和奥匈帝国共进行了十二场伊松佐河战役，双方互有胜负，损失超过150万人"
+      },
+      "攻占华沙": {
+        "name": "攻占华沙",
+        "date": "1915-08-06",
+        "intro": "德军攻占华沙，今天波兰的首都，当时俄国最大的城市之一"
+      },
+      "攻占维尔诺": {
+        "name": "攻占维尔诺",
+        "date": "1915-09",
+        "intro": "德军攻占维尔诺，今天立陶宛的首都，当时俄国最大的城市之一"
+      },
+      "攻占贝尔格莱德": {
+        "name": "攻占贝尔格莱德",
+        "date": "1915-10-09",
+        "intro": "德军攻占塞尔维亚首都贝尔格莱德，不久之后塞尔维亚全境沦陷"
+      },
+      "凡尔登攻势": {
+        "name": "凡尔登攻势",
+        "date": "1916-02-21",
+        "intro": "凡尔登有“巴黎钥匙”之称，德军集中了西线约二分之一的兵力，对凡尔登发起猛攻"
+      },
+      "贝当上台": {
+        "name": "贝当上台",
+        "date": "1916-02-25",
+        "intro": "贝当被任命为整个凡尔登地区的法军指挥官，他组织起高效的防御，一举扭转了法军的颓势"
+      },
+      "绞肉机": {
+        "name": "绞肉机",
+        "date": "1916-03",
+        "intro": "凡尔登战役陷入了漫长的僵局，双方共发射了4000多万发炮弹，超过七十万人伤亡"
+      },
+      "日德兰海战": {
+        "name": "日德兰海战",
+        "date": "1916-05-31",
+        "intro": "一战中最大规模的海战，英德两军海军舰队主力对决，最终英国获胜"
+      },
+      "布鲁西洛夫攻势": {
+        "name": "布鲁西洛夫攻势",
+        "date": "1916-06-04",
+        "intro": "一战中俄国最辉煌的胜利，重创了同盟国军队，大大减轻了西线的压力"
+      },
+      "阿拉伯大起义": {
+        "name": "阿拉伯大起义",
+        "date": "1916-06-05",
+        "intro": "阿拉伯领袖侯赛因和英国合作，推翻了奥斯曼帝国的统治"
+      },
+      "索姆河战役": {
+        "name": "索姆河战役",
+        "date": "1916-07-01",
+        "intro": "为了减轻凡尔登战区的压力，英法联军发动了索姆河战役，坦克首次运用于实践",
+        "after": "索姆河战役是一战中伤亡最大的战役，双方共计伤亡130万人，被称为“索姆河地狱”"
+      },
+      "凡尔登反攻": {
+        "name": "凡尔登反攻",
+        "date": "1916-10-24",
+        "intro": "法军开始反攻，逐渐收复了凡尔登以东的大片土地，德军节节败退",
+        "after": "凡尔登战役是一战转折点，法军士兵以惊人的勇气和鲜血取得了胜利，掌握了战争主动权"
+      },
+      "无限制潜艇战": {
+        "name": "无限制潜艇战",
+        "date": "1917-01-31",
+        "intro": "德国宣布，将使用潜艇不分国籍地击沉任何驶往英国海域的商船",
+        "after": "德国的无限制潜艇战没能彻底切断英国的运输线，反倒惹恼了美国"
+      },
+      "美国参战": {
+        "name": "美国参战",
+        "date": "1917-04-06",
+        "intro": "德国的无限制潜艇战和齐默曼电报彻底激怒了美国，在美国加入后，协约国实力大增"
+      },
+      "法军哗变": {
+        "name": "法军哗变",
+        "date": "1917-04-17",
+        "intro": "一战的残酷、血腥、非正义性，让许多国家的士兵产生了反战心理"
+      },
+      "中国参战": {
+        "name": "中国参战",
+        "date": "1917-08-14",
+        "intro": "中国北洋政府用以工代兵的方式参战，20万华工支援协约国",
+        "after": "这些华工从事着最危险的工作，为后来中国在巴黎和会上争取权益提供了重要凭据"
+      },
+      "十月革命": {
+        "name": "十月革命",
+        "date": "1917-11-07",
+        "intro": "布尔什维克建立起了世界上第一个社会主义国家苏俄"
+      },
+      "布列斯特和约": {
+        "name": "布列斯特和约",
+        "date": "1918-03-03",
+        "intro": "为保存新生的苏维埃政权，苏俄和德国进行了和谈，以较大代价退出了一战"
+      },
+      "皇帝会战": {
+        "name": "皇帝会战",
+        "date": "1918-03-21",
+        "intro": "德军最后一搏，试图在美军登陆欧洲前，击败英法联军"
+      },
+      "第二次马恩河战役": {
+        "name": "第二次马恩河战役",
+        "date": "1918-07-15",
+        "intro": "德军最后一次大规模进攻，却被英法击退，彻底失去主动权"
+      },
+      "亚眠战役": {
+        "name": "亚眠战役",
+        "date": "1918-08-08",
+        "intro": "英法联军在亚眠发动进攻，德军遭遇“最黑暗的一天”，被迫向兴登堡防线撤退"
+      },
+      "维内托战役": {
+        "name": "维内托战役",
+        "date": "1918-10-24",
+        "intro": "意大利取得了决定性胜利，彻底击败了奥匈帝国"
+      },
+      "奥斯曼投降": {
+        "name": "奥斯曼投降",
+        "date": "1918-10-30",
+        "intro": "在协约国的进攻和阿拉伯人的起义下，奥斯曼帝国无力抵抗，走向崩溃"
+      },
+      "奥匈帝国投降": {
+        "name": "奥匈帝国投降",
+        "date": "1918-11-03",
+        "intro": "对外战争的失败又引爆了帝国内部的民族矛盾，不久帝国解体"
+      },
+      "德国投降": {
+        "name": "德国投降",
+        "date": "1918-11-11",
+        "intro": "战争的失败和革命的爆发，令德国不得不投降，威廉二世退位并流亡荷兰"
+      },
+      "conclusion": "第一次世界大战，导致了1500万人死亡，2000万人受伤。其范围之广、伤亡之重，在当时前所未有，所以人们将其称为“世界大战”。但当时人们没有想到，还要在“世界大战”之前，加上“第一次”",
+      "after": "21年后，二战爆发"
+    },
+    "img": null
+  },
+  "falklands_war": {
+    "name": "Falklands War",
+    "info": [
+      "The Falklands War (Spanish: Guerra de las Malvinas) was a ten-week undeclared war between Argentina and the United Kingdom in 1982 over two British dependent territories in the South Atlantic: the Falkland Islands and its territorial dependency, South Georgia and the South Sandwich Islands.",
+      "The conflict began on 2 April, when Argentina invaded and occupied the Falkland Islands, followed by the invasion of South Georgia the next day. On 5 April, the British government dispatched a naval task force to engage the Argentine Navy and Air Force before making an amphibious assault on the islands. The conflict lasted 74 days and ended with an Argentine surrender on 14 June, returning the islands to British control. In total, 649 Argentine military personnel, 255 British military personnel, and three Falkland Islanders died during the hostilities.",
+      "The conflict was a major episode in the protracted dispute over the territories' sovereignty. Argentina asserted (and maintains) that the islands are Argentine territory, and the Argentine government thus characterised its military action as the reclamation of its own territory. The British government regarded the action as an invasion of a territory that had been a Crown colony since 1841. Falkland Islanders, who have inhabited the islands since the early 19th century, are predominantly descendants of British settlers, and strongly favour British sovereignty. Neither state officially declared war, although both governments declared the islands a war zone.",
+      "The conflict has had a strong effect in both countries and has been the subject of various books, articles, films, and songs. Patriotic sentiment ran high in Argentina, but the unfavourable outcome prompted large protests against the ruling military government, hastening its downfall and the democratisation of the country. In the United Kingdom, the Conservative government, bolstered by the successful outcome, was re-elected with an increased majority the following year. The cultural and political effect of the conflict has been less in the UK than in Argentina, where it has remained a common topic for discussion.",
+      "Diplomatic relations between the United Kingdom and Argentina were restored in 1989 following a meeting in Madrid, at which the two governments issued a joint statement. No change in either country's position regarding the sovereignty of the Falkland Islands was made explicit. In 1994, Argentina adopted a new constitution, which declared the Falkland Islands as part of one of its provinces by law. However, the islands continue to operate as a self-governing British Overseas Territory."
+    ],
+    "url": "https://en.wikipedia.org/wiki/Falklands_War",
+    "img": "/image/social/war/fw1982.jpg",
+    "zh": {
+      "name": "马岛战争",
+      "info": [
+        "马岛战争，是指1982年4月到6月间，英国和阿根廷为争夺福克兰群岛（英语）／马尔维纳斯群岛（略早由法国探险家命名，现西班牙语仍在使用）的主权而爆发的一场局部战争。",
+        "阿根廷在1980年代初期发生了严重的经济危机和大规模反对以加尔铁里总统为首的军政府的运动，阿根廷政府试图通过对福克兰群岛采取军事行动，转移视线以解决国内的政治危机。1982年3月19日，阿根廷军队率先登陆南乔治亚岛，并且升起阿根廷国旗。1982年4月2日，加尔铁里总统下令对福岛发动进攻。随后，英国派出海空军对福岛和周边海域的阿根廷军发动反击，登陆并且收复福岛。阿根廷在一系列的军事行动失败后，于同年6月14日与英国签订停战协议。英国通过本次战争重新控制了福克兰群岛，但是阿根廷战败后仍从未放弃对福克兰群岛的主权诉求。",
+        "阿根廷在本次局部战争中失败，引发了大规模的反政府运动，导致了加尔铁里上将的军政府倒台。在英国，伴随着战争而来的强烈爱国主义情绪，加强了撒切尔夫人为首的政府的权威，帮助英国保守党赢得1983年大选。这场战争在英国─阿根廷关系史上占有重要的一页，并且成为不少书籍、电影和歌曲的题材。"
+      ],
+      "url": "https://zh.wikipedia.org/wiki/马岛战争",
+      "img": "/image/social/war/Land.ops.2.en.svg"
+    }
+  }
+}

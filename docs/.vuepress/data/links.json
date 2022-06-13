@@ -1,0 +1,232 @@
+{
+  "links": {
+    "royal": {
+      "name": "英国王室",
+      "url": "https://draugus.github.io/RoyalFamily/"
+    },
+    "genshin": {
+      "name": "原神",
+      "url": "https://draugus.github.io/"
+    },
+    "blog": {
+      "name": "博客",
+      "url": "https://draugus.github.io/Augus/"
+    }
+  },
+  "website": {
+    "good": [
+      {
+        "url": "https://cloud.tencent.com/developer/article/1731875",
+        "name": "实战矿马：数据异常牵出的挖矿木马(.systemd-service.sh)",
+        "tip": null
+      },
+      {
+        "url": "https://developer.mozilla.org/en-US/docs/Learn",
+        "name": "Learn web development",
+        "tip": null
+      },
+      {
+        "url": "https://q.uiver.app/",
+        "name": "q.uiver",
+        "tip": "一个似乎用不到的画图软件我完全可以用merid方法画图"
+      },
+      {
+        "url": "https://books.halfrost.com/leetcode/",
+        "name": "leetcode旅程",
+        "tip": "刷题指南?"
+      },
+      {
+        "url": "https://paimon.moe/",
+        "name": "原神",
+        "tip": null
+      },
+      {
+        "url": "https://www.ipaddress.com/",
+        "name": "IP地址查询",
+        "tip": null
+      },
+      {
+        "url": "https://changkun.de/modern-cpp/",
+        "name": "现代cpp",
+        "tip": null
+      },
+      {
+        "url": "https://chishenme.xyz/",
+        "name": "中午吃什么",
+        "tip": null
+      },
+      {
+        "url": "https://bing.ioliu.cn/",
+        "name": "bing壁纸",
+        "tip": null
+      },
+      {
+        "url": "https://artsexperiments.withgoogle.com/artpalette/",
+        "name": "基于谷歌AI的智能配色工具",
+        "tip": null
+      },
+      {
+        "url": "https://www.ivsky.com/tupian/zhonghua_meishi_t3903/",
+        "name": "不错的美食图片素材",
+        "tip": null
+      },
+      {
+        "url": "https://www.tsunagujapan.com/50-japanese-foods-to-try-while-you-are-in-japan/2/",
+        "name": "日本推荐美食图片素材",
+        "tip": null
+      },
+      {
+        "url": "https://simpleicons.org/",
+        "name": "Simple Icons",
+        "tip": null
+      },
+      {
+        "url": "https://github.com/simple-icons/simple-icons/blob/develop/slugs.md",
+        "name": "Simple Icons 缩写",
+        "tip": null
+      },
+      {
+        "url": "https://shields.io/",
+        "name": "各种标签",
+        "tip": null
+      },
+      {
+        "url": "https://datatracker.ietf.org/doc/html/rfc6265",
+        "name": "HTTP State Management Mechanism",
+        "tip": null
+      },
+      {
+        "url": "https://github.com/zmap/zmap",
+        "name": "快速扫描端口：ZMap is a fast single packet network scanner designed for Internet-wide network surveys.",
+        "tip": null
+      },
+      {
+        "url": "https://www.cnblogs.com/coderzh/",
+        "name": "玩转Google开源C++单元测试框架Google Test系列",
+        "tip": null
+      },
+      {
+        "url": "http://caibaojian.com/interview-map/frontend/",
+        "name": "js前端面试之道",
+        "tip": null
+      },
+      {
+        "url": "https://www.levels.fyi/",
+        "name": "Helping people make better career decisions",
+        "tip": null
+      },
+      {
+        "url": "https://www.boost.org/",
+        "name": "Boost C++ libraries",
+        "tip": "ree peer-reviewed portable C++ source libraries that are candidates for the future C++ Standard"
+      },
+      {
+        "url": "https://www.agner.org/optimize/",
+        "name": "Software optimization resources by Agner Fog",
+        "tip": "excellent resources for optimizations, including but not limited to C++"
+      },
+      {
+        "url": "https://www.manning.com/books/functional-programming-in-c-plus-plus",
+        "name": "Functional Programming in C++ by Ivan Čukić",
+        "tip": null
+      },
+      {
+        "url": "https://www.stroustrup.com/",
+        "name": "Bjarne Stroustrup’s C++ page",
+        "tip": null
+      },
+      {
+        "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf",
+        "name": "Draft C++11 standard",
+        "tip": null
+      },
+      {
+        "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3690.pdf",
+        "name": "Draft C++14 standard",
+        "tip": null
+      },
+      {
+        "url": "https://web.archive.org/web/20170325025026/http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4660.pdf",
+        "name": "Draft C++17 standard",
+        "tip": null
+      },
+      {
+        "url": "https://isocpp.org/files/papers/N4860.pdf",
+        "name": "Draft C++20 standard",
+        "tip": null
+      },
+      {
+        "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+        "name": "C++ core guidelines",
+        "tip": null
+      },
+      {
+        "url": "https://isocpp.org/",
+        "name": "Standard C++",
+        "tip": null
+      },
+      {
+        "url": "http://www.free-culture.cc/",
+        "name": "Free Culture",
+        "tip": null
+      },
+      {
+        "url": null,
+        "name": null,
+        "tip": null
+      }
+    ],
+    "backup": [
+      {
+        "url": "https://blog.csdn.net/LaineGates/article/details/108242803",
+        "name": "cmake:add_library详解",
+        "tip": null
+      },
+      {
+        "url": "https://blog.csdn.net/l1028386804/article/details/117917710",
+        "name": "Linux指令大全",
+        "tip": null
+      },
+      {
+        "url": "https://blog.csdn.net/l1028386804/article/details/116081409",
+        "name": "核心技能学习路线",
+        "tip": null
+      },
+      {
+        "url": "https://www.cnblogs.com/koushuige/p/9212033.html",
+        "name": "网络抓包工具 wireshark 入门教程",
+        "tip": null
+      },
+      {
+        "url": "https://paveldogreat.github.io/WebGL-Fluid-Simulation/",
+        "name": "流体模拟",
+        "tip": null
+      },
+      {
+        "url": "https://zhuanlan.zhihu.com/p/137646370",
+        "name": "c++20速览",
+        "tip": null
+      },
+      {
+        "url": "https://www.macrumors.com/roundup/macbook-pro/",
+        "name": "Apple新款预测",
+        "tip": null
+      },
+      {
+        "url": "https://www.maigoo.com/",
+        "name": "一个神奇的排行榜网站",
+        "tip": null
+      },
+      {
+        "url": "https://hk.v2ex.com/",
+        "name": "一个程序员社区似乎需要科学工具",
+        "tip": null
+      },
+      {
+        "url": null,
+        "name": null,
+        "tip": null
+      }
+    ]
+  }
+}

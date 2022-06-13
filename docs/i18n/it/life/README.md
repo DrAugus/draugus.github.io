@@ -1,1 +1,1 @@
-# Quick Start
+# Life is beautiful

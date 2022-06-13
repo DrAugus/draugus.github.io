@@ -1,18 +1,17 @@
 import {PluginConfig} from "@vuepress/core/lib/types/plugin";
-import commentPlugin from "vuepress-plugin-comment2";
 
 const {searchPlugin} = require('@vuepress/plugin-search')
 
 export const main: PluginConfig = [
   searchPlugin({
     locales: {
-      '/': {
+      '/i18n/en/': {
         placeholder: 'search',
-        hotKeys: ['/']
+        hotKeys: ['/i18n/en/']
       },
-      '/i18n/zh/': {
+      '/': {
         placeholder: '搜索',
-        hotKeys: ['/i18n/zh/']
+        hotKeys: ['/']
       },
       '/i18n/de/': {
         placeholder: 'Suche',
@@ -32,12 +31,5 @@ export const main: PluginConfig = [
       },
     }
   }),
-  commentPlugin({
-    type: "giscus",
-    repo: "DrAugus/Augus",
-    repoId: "R_kgDOHV19bA",
-    category: "Announcements",
-    categoryId: "DIC_kwDOHV19bM4CPJQy",
-    inputPosition: "top"
-  }),
+
 ]

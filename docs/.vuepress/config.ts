@@ -1,25 +1,30 @@
-import {sidebar, themeInfo, plugin, siteLocalConfig} from './configs'
-import {commentTheme} from "./configs/theme";
+import {defineUserConfig} from "vuepress";
+import theme from "./configs/theme/theme";
+import {plugin, siteLocalConfig} from './configs'
+import {path} from "@vuepress/utils";
 
-module.exports = {
-  head: [
-    ["link", {rel: "icon", href: "/logo/favicon.ico"}],
-    ["script", {src: "https://cdn.jsdelivr.net/npm/cfga@1.0.3", async: true}],
-  ],
+export default defineUserConfig({
   base: "/Augus/",
   lang: 'en-US',
   title: 'AUGUS',
   description: 'Record Everything',
   locales: siteLocalConfig.main,
-  theme: commentTheme({
-    logo: '/logo/ico.jpg',
-    locales: themeInfo.theme_local,
-    repo: 'DrAugus/Augus',
-    editLinkPattern: ':repo/edit/master/docs/:path',
-    sidebar: sidebar.main,
-    editLink: true,
-    contributors: true,
-    lastUpdated: true,
-  }),
+  theme,
   plugins: plugin.main,
-}
+  markdown: {
+    // 大于16行 显示行号
+    code: {
+      lineNumbers: 16
+    }
+  },
+  alias: {
+    "@War": path.resolve(__dirname, "components/War.vue"),
+    "@History": path.resolve(__dirname, "components/History.vue"),
+    "@TestLeaflet": path.resolve(__dirname, "components/Leaflet.vue"),
+    "@GenshinLevelExp": path.resolve(__dirname, "components/genshin/LevelExp.vue"),
+    "@GenshinPartySetup": path.resolve(__dirname, "components/genshin/PartySetup.vue"),
+    "@GenshinCharacters": path.resolve(__dirname, "components/genshin/Characters.vue"),
+    "@GenshinWishCurrent": path.resolve(__dirname, "components/genshin/WishCurrent.vue"),
+    "@GenshinWishFuture": path.resolve(__dirname, "components/genshin/WishFuture.vue"),
+  }
+});
