@@ -1356,7 +1356,7 @@
     envinfo "^7.8.1"
     esbuild "^0.14.41"
 
-"@vuepress/client@2.0.0-beta.45":
+"@vuepress/client@2.0.0-beta.45", "@vuepress/client@^2.0.0-beta.45":
   version "2.0.0-beta.45"
   resolved "https://registry.yarnpkg.com/@vuepress/client/-/client-2.0.0-beta.45.tgz#49a1b818fb730dc07ebb0dacf1e2def608107961"
   integrity sha512-4oK77LI5FpHvF6bZxREfLdWfOgAZroDkyy46moRopasg72UeXjfvOTb/6tIKaNQP6e/Kn2ubRxVeLe7DR5d9Ng==
@@ -1412,7 +1412,7 @@
     toml "^3.0.0"
     vue "^3.2.35"
 
-"@vuepress/core@2.0.0-beta.48":
+"@vuepress/core@2.0.0-beta.48", "@vuepress/core@^2.0.0-beta.45":
   version "2.0.0-beta.48"
   resolved "https://registry.yarnpkg.com/@vuepress/core/-/core-2.0.0-beta.48.tgz#ed5effabbf2590a1dfc400a63048bff16ae18cd5"
   integrity sha512-J9fge3oV5amAkx2g8TOPp8EpHyFgm6jy/FbCkYIGCBkKiERn91iz5aGCgoUF4O8AToLekbKpLwdZtNKF+wxAew==
@@ -1768,7 +1768,7 @@
     ora "^5.4.1"
     upath "^2.0.1"
 
-"@vuepress/utils@2.0.0-beta.48":
+"@vuepress/utils@2.0.0-beta.48", "@vuepress/utils@^2.0.0-beta.45":
   version "2.0.0-beta.48"
   resolved "https://registry.yarnpkg.com/@vuepress/utils/-/utils-2.0.0-beta.48.tgz#5513a21f2e66a1c110b66ac8a6065b328fca9ac9"
   integrity sha512-Y0e3j0SHkPHMWnNlZZOcdN3G4zhdTIs63Ywy4IULFsrpKAihRIUcSe4Yry6lCJyYCCS/gebwc1fQYAmPuNkijg==
@@ -4591,14 +4591,14 @@ vuepress-plugin-blog2@2.0.0-beta.75:
     vue-router "^4.0.15"
     vuepress-shared "2.0.0-beta.75"
 
-vuepress-plugin-clipboard@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-clipboard/-/vuepress-plugin-clipboard-2.1.0.tgz#40837cd02efa6ebab0647f4a84b34a718f374aa4"
-  integrity sha512-AGGEK5xqXie2nacFL5aC6pX6ucAGSOr12Mem9EpgJDXNhepxFDAy1n+Ve04VkOQtFqEAyT6hIQTesGxh9P4+xg==
+vuepress-plugin-clipboard@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-clipboard/-/vuepress-plugin-clipboard-2.1.1.tgz#6ccbd189c9cb84b6d7bd3e0e47c2fede4f46fe26"
+  integrity sha512-DfrxqIXQMh+WGz+rHhFJNJJ3p61EhvddaTFFqB5dT6BOjApF4c147I1M3qMkZ/XkIuSXu65YoXYaJmB+Bf6Cig==
   dependencies:
-    "@vuepress/client" "2.0.0-beta.45"
-    "@vuepress/core" "2.0.0-beta.45"
-    "@vuepress/utils" "2.0.0-beta.45"
+    "@vuepress/client" "^2.0.0-beta.45"
+    "@vuepress/core" "^2.0.0-beta.45"
+    "@vuepress/utils" "^2.0.0-beta.45"
     vue "^3.2.33"
     vue-router "^4.0.15"
 
