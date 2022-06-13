@@ -1,11 +1,7 @@
 .idea
-node_modules
-.temp
-.cache
-dist
+node_modules/
 *.bak
 
-node_modules/
 docs/.vuepress/.cache/
 docs/.vuepress/.temp/
 docs/.vuepress/dist/
