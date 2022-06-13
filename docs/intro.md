@@ -2,6 +2,8 @@
 icon: info
 ---
 
-# Intro Page
+# 介绍一下
 
-Place your introducation and profile here.
+说点什么吧
+
+![DrAugus's Github chart](https://ghchart.rshah.org/draugus)
