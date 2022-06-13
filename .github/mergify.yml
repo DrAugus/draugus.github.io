@@ -6,3 +6,21 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+
+  - name: automatic merge for Renovate pull requests
+    conditions:
+      - author=renovate[bot]
+      - check-success=Travis CI - Pull Request
+    actions:
+      merge:
+        method: merge
+
+  - name: automatic merge for Requires.io pull requests
+    conditions:
+      - title~=^\[requires.io\]
+      - head~=^requires-io
+      - check-success=Travis CI - Pull Request
+    actions:
+      merge:
+        method: merge
+       
