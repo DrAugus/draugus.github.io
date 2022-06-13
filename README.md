@@ -2,22 +2,28 @@
 
 ## Develop
 
-prerequisites：
+### prerequisites
 
 - nodejs(Version >= 16)
 - yarn(Version >= 1) (`npm install -g yarn`)
 
-git clone：
+### git clone
 
 ```git
 git clone https://github.com/DrAugus/Augus.git
 ```
 
-run：
+### run
 
 ```yarn
 yarn install
 yarn docs:dev
+```
+
+### upgrade
+
+```yarn
+yarn add vuepress@next vuepress-theme-hope@next && yarn install && yarn upgrade
 ```
 
 ## Contribute

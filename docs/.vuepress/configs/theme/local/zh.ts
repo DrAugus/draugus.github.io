@@ -81,4 +81,10 @@ export const local_zh = {
     home: "带我回家",
     openInNewWindow: "Open in new window",
   },
+
+  blog: {
+    description: "说点什么",
+    intro: "/intro",
+  },
+
 };

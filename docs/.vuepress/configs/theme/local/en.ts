@@ -77,4 +77,9 @@ export const local_en = {
     home: "Take me home",
     openInNewWindow: "Open in new window",
   },
+
+  blog: {
+    description: "say",
+    intro: "/intro",
+  },
 };
