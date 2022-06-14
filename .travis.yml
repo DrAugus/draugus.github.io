@@ -1,8 +1,0 @@
-language: node_js
-branches:
-  only:
-    - master
-node_js:
-  - 14.19.3
-script:
-  - vuepress build docs
