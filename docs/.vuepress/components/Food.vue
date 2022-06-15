@@ -1,11 +1,11 @@
 <template>
   <h2>吃什么选一个吧</h2>
 
-  {{ all }}
+  <span ref="choiceFromAll"></span>
 
   <h2>具体吃什么</h2>
 
-  {{ details }}
+  <span ref="choiceFromDetails"></span>
 
   <h2>真的不能吃</h2>
   <ul>
@@ -16,9 +16,10 @@
 
 </template>
 
-<script setup lang="ts">
+<script>
 
-import foodInfo from '../data/food.json'
+import Typed from "typed.js";
+import foodInfo from "../data/food.json";
 
 let allType = foodInfo.外卖.分类;
 
@@ -27,7 +28,7 @@ let details = [];
 for (let objMainType in allType) {
   // 大类别
   all.push(objMainType);
-  if (allType[objMainType].constructor == Object) {
+  if (allType[objMainType].constructor === Object) {
     for (let objSubType in allType[objMainType]) {
       // 小类别
       all.push(objSubType);
@@ -41,6 +42,30 @@ for (let objMainType in allType) {
 }
 
 let blockFood = foodInfo.外卖.拉黑;
+
+export default {
+  data() {
+    return {
+      blockFood
+    };
+  },
+  mounted() {
+    const typed = new Typed(this.$refs.choiceFromAll, {
+      strings: all,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    });
+    const typed2 = new Typed(this.$refs.choiceFromDetails, {
+      strings: details,
+      startDelay: 300,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50
+    });
+  }
+};
 
 </script>
 

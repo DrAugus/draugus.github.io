@@ -29,6 +29,7 @@
   "dependencies": {
     "@vue-leaflet/vue-leaflet": "^0.6.1",
     "dayjs": "^1.11.3",
-    "leaflet": "^1.8.0"
+    "leaflet": "^1.8.0",
+    "typed.js": "^2.0.12"
   }
 }
