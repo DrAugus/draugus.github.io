@@ -1,4 +1,10 @@
-# War
+---
+title: 战争
+icon: chess
+index: false
+dir:
+    order: 1
+---
 
 <War />
 

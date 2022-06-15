@@ -1,1 +1,7 @@
-# 人物简介
+---
+title: 人物
+icon: bacon
+index: false
+dir:
+    order: 1
+---
