@@ -18,6 +18,7 @@ export default defineUserConfig({
     }
   },
   alias: {
+    "@Food": path.resolve(__dirname, "components/Food.vue"),
     "@War": path.resolve(__dirname, "components/War.vue"),
     "@History": path.resolve(__dirname, "components/History.vue"),
     "@TestLeaflet": path.resolve(__dirname, "components/Leaflet.vue"),
