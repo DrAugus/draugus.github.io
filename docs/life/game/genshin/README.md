@@ -1,6 +1,5 @@
 ---
 index: false
-icon: creative
 category:
   - game
 tag:

@@ -1,4 +1,9 @@
-# 感受旅行，拥抱世界
+---
+title: 旅行
+index: false
+---
+ 
+> 感受旅行，拥抱世界
 
 <TestLeaflet />
 
