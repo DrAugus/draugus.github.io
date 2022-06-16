@@ -6,7 +6,7 @@
       {{ value.name }}
     </div>
     <div class="character-avatar">
-      <img :src="'/image/life/game/genshin/characters/' + value.id +'.png'">
+      <img :src="$withBase('/image/life/game/genshin/characters/' + value.id +'.png')">
     </div>
     <blockquote>
       {{ value.intro }}
