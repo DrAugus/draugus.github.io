@@ -7,4 +7,4 @@ dir:
 
 ## 快来一起撰写吧！
 
-[冲冲冲](https://github.com/DrAugus/Augus)
+[冲冲冲](https://github.com/DrAugus/draugus.github.io)

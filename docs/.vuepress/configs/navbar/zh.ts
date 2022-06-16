@@ -74,14 +74,14 @@ export const navbar_zh = navbar([
     children: [
       {
         text: '原神',
-        link: 'https://augusmeow.cn/list/genshin'
+        link: 'https://draugus.github.io/list/genshin'
       },
       {
         text: '英国王室',
         children: [
           {
             text: '温莎',
-            link: 'https://augusmeow.cn/RoyalFamily/'
+            link: 'https://draugus.github.io/RoyalFamily/'
           },
         ]
       },
@@ -90,7 +90,7 @@ export const navbar_zh = navbar([
         children: [
           {
             text: '博文',
-            link: 'https://augusmeow.cn/blog/'
+            link: 'https://draugus.github.io/blog/'
           },
         ]
       },

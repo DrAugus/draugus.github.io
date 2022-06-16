@@ -2,7 +2,7 @@ import {hopeTheme} from "vuepress-theme-hope";
 import {theme_local} from "./";
 
 export default hopeTheme({
-  hostname: "https://augusmeow.cn/Augus/",
+  hostname: "https://draugus.github.io/",
 
   author: {
     name: "Augus",
@@ -19,7 +19,7 @@ export default hopeTheme({
   },
 
   logo: "/logo/logo.jpg",
-  repo: "DrAugus/Augus",
+  repo: "DrAugus/draugus.github.io",
 
   editLinkPattern: ":repo/edit/master/docs/:path",
 
@@ -27,33 +27,33 @@ export default hopeTheme({
 
   blog: {
     medias: {
-      Baidu: "https://augusmeow.cn/Augus/",
-      Bitbucket: "https://augusmeow.cn/Augus/",
-      Dingding: "https://augusmeow.cn/Augus/",
-      Discord: "https://augusmeow.cn/Augus/",
-      Dribbble: "https://augusmeow.cn/Augus/",
-      Email: "https://augusmeow.cn/Augus/",
-      Evernote: "https://augusmeow.cn/Augus/",
-      Facebook: "https://augusmeow.cn/Augus/",
-      Flipboard: "https://augusmeow.cn/Augus/",
+      Baidu: "https://draugus.github.io/",
+      Bitbucket: "https://draugus.github.io/",
+      Dingding: "https://draugus.github.io/",
+      Discord: "https://draugus.github.io/",
+      Dribbble: "https://draugus.github.io/",
+      Email: "https://draugus.github.io/",
+      Evernote: "https://draugus.github.io/",
+      Facebook: "https://draugus.github.io/",
+      Flipboard: "https://draugus.github.io/",
       GitHub: "https://github.com/DrAugus",
-      Gmail: "https://augusmeow.cn/Augus/",
-      Instagram: "https://augusmeow.cn/Augus/",
-      Lines: "https://augusmeow.cn/Augus/",
-      Linkedin: "https://augusmeow.cn/Augus/",
-      Pinterest: "https://augusmeow.cn/Augus/",
-      Pocket: "https://augusmeow.cn/Augus/",
-      QQ: "https://augusmeow.cn/Augus/",
-      Qzone: "https://augusmeow.cn/Augus/",
-      Reddit: "https://augusmeow.cn/Augus/",
-      Rss: "https://augusmeow.cn/Augus/",
-      Steam: "https://augusmeow.cn/Augus/",
-      Twitter: "https://augusmeow.cn/Augus/",
-      Wechat: "https://augusmeow.cn/Augus/",
-      Weibo: "https://augusmeow.cn/Augus/",
-      Whatsapp: "https://augusmeow.cn/Augus/",
-      Youtube: "https://augusmeow.cn/Augus/",
-      Zhihu: "https://augusmeow.cn/Augus/",
+      Gmail: "https://draugus.github.io/",
+      Instagram: "https://draugus.github.io/",
+      Lines: "https://draugus.github.io/",
+      Linkedin: "https://draugus.github.io/",
+      Pinterest: "https://draugus.github.io/",
+      Pocket: "https://draugus.github.io/",
+      QQ: "https://draugus.github.io/",
+      Qzone: "https://draugus.github.io/",
+      Reddit: "https://draugus.github.io/",
+      Rss: "https://draugus.github.io/",
+      Steam: "https://draugus.github.io/",
+      Twitter: "https://draugus.github.io/",
+      Wechat: "https://draugus.github.io/",
+      Weibo: "https://draugus.github.io/",
+      Whatsapp: "https://draugus.github.io/",
+      Youtube: "https://draugus.github.io/",
+      Zhihu: "https://draugus.github.io/",
     },
   },
 
@@ -80,7 +80,7 @@ export default hopeTheme({
     // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
     comment: {
       provider: "Giscus",
-      repo: "DrAugus/Augus",
+      repo: "DrAugus/draugus.github.io",
       repoId: "R_kgDOHV19bA",
       category: "Announcements",
       categoryId: "DIC_kwDOHV19bM4CPJQy",

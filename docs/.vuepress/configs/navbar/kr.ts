@@ -28,7 +28,7 @@ export const navbar_kr: Partial<any> = [
         children: [
           {
             text: '윈저 가족',
-            link: 'https://augusmeow.cn/RoyalFamily/'
+            link: 'https://draugus.github.io/RoyalFamily/'
           },
         ]
       },
@@ -37,11 +37,11 @@ export const navbar_kr: Partial<any> = [
         children: [
           {
             text: '블로그',
-            link: 'https://augusmeow.cn/'
+            link: 'https://draugus.github.io/'
           },
           {
             text: '게임',
-            link: 'https://augusmeow.cn/list/genshin'
+            link: 'https://draugus.github.io/list/genshin'
           },
         ]
       },
