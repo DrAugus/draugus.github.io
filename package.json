@@ -14,7 +14,7 @@
     "augus:vite-dev-clean": "vuepress-vite dev docs --clean-cache",
     "augus:vite-dev": "vuepress-vite dev docs"
   },
-  "repository": "https://github.com/DrAugus/Augus.git",
+  "repository": "https://github.com/DrAugus/draugus.github.io.git",
   "author": "DrAugus",
   "license": "MIT",
   "devDependencies": {

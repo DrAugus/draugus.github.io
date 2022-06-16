@@ -4,7 +4,7 @@ import {plugin, siteLocalConfig} from './configs'
 import {path} from "@vuepress/utils";
 
 export default defineUserConfig({
-  base: "/Augus/",
+  base: "/",
   lang: 'en-US',
   title: 'AUGUS',
   description: 'Record Everything',

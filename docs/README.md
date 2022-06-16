@@ -17,12 +17,12 @@ projects:
   - icon: link
     name: 英国王室
     desc: 温莎
-    link: https://augusmeow.cn/RoyalFamily/
+    link: https://draugus.github.io/RoyalFamily/
 
   - icon: article
     name: 文章
     desc: 消磨时间的文章
-    link: https://augusmeow.cn/Augus/i18n/
+    link: https://draugus.github.io/
 
   - icon: friend
     name: 友链

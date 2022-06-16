@@ -16,12 +16,12 @@ projects:
   - icon: link
     name: British Royal Family
     desc: House of Windsor Family Tree
-    link: https://augusmeow.cn/RoyalFamily/
+    link: https://draugus.github.io/RoyalFamily/
 
   - icon: article
     name: Article
     desc: Some boring articles
-    link: https://augusmeow.cn/Augus/
+    link: https://draugus.github.io/
 
   - icon: friend
     name: Friends Link

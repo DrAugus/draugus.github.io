@@ -40,4 +40,4 @@
       └─ social                         
 ```
 
-暂时以中文目录下的为准，对于英、德、法、意、韩，翻译持续进行中。更欢迎各位语言高手来[贡献](https://github.com/DrAugus/Augus/tree/master/docs/i18n)。
+暂时以中文目录下的为准，对于英、德、法、意、韩，翻译持续进行中。更欢迎各位语言高手来[贡献](https://github.com/DrAugus/draugus.github.io/tree/master/docs/i18n)。

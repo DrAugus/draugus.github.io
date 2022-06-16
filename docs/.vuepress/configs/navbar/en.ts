@@ -33,7 +33,7 @@ export const navbar_en = navbar([
         children: [
           {
             text: 'Windsor Family',
-            link: 'https://augusmeow.cn/RoyalFamily/'
+            link: 'https://draugus.github.io/RoyalFamily/'
           },
         ]
       },
@@ -42,11 +42,11 @@ export const navbar_en = navbar([
         children: [
           {
             text: 'Bolg',
-            link: 'https://augusmeow.cn/'
+            link: 'https://draugus.github.io/'
           },
           {
             text: 'Genshin',
-            link: 'https://augusmeow.cn/list/genshin'
+            link: 'https://draugus.github.io/list/genshin'
           },
         ]
       },

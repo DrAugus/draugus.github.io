@@ -10,7 +10,7 @@
 ### git clone
 
 ```git
-git clone https://github.com/DrAugus/Augus.git
+git clone https://github.com/DrAugus/draugus.github.io.git
 ```
 
 ### run
