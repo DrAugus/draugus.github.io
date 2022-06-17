@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - dev
   # 手动触发部署
   workflow_dispatch:
 
