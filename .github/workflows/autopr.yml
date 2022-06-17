@@ -14,6 +14,3 @@ jobs:
           git reset --hard origin/dev
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
-        with:
-          branch: master
-          token: ${{ secrets.ACCESS_TOKEN }}
