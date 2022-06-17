@@ -17,26 +17,22 @@ features:
   - title: Markdown 增强
     icon: markdown
     details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
-
   - title: 幻灯片页面
-    icon: slides
+    icon: hat-cowboy-side
     details: 添加幻灯片页面以显示你喜欢的内容
-
   - title: 文章信息
     icon: info
     details: 为文章添加作者、写作日期、预计阅读时间、字数统计等信息
-
   - title: 博客支持
     icon: blog
     details: 使用一些很棒的布局提供博客功能，通过文章的日期、标签和分类，自动生成文章、分类、标签与时间轴列表
     link: /
-
   - title: 战争
     icon: eye
     details: 战争资讯。主要记录已经发生过的战争，如一战，二战，马岛战争等等。
     link: /social/war/
   - title: Apple
-    icon: linter
+    icon: apple
     details: Apple的相关信息，Apple设备的使用以及Apple设备的娱乐功能。
     link: /life/tech/
   - title: 编码
@@ -44,11 +40,11 @@ features:
     details: 或许能提供一些编码技巧，还可以找到部分面试题的题解。
     link: /learn/code/ 
   - title: 事故
-    icon: interact
+    icon: car-crash
     details: 需要深思的事故记录。
     link: /social/accident/
   - title: 游戏
-    icon: launch
+    icon: chess
     details: 游戏到底该怎么玩？原神祈愿信息一览。
     link: /life/game/
   - title: 回忆
@@ -56,7 +52,7 @@ features:
     details: 回忆录，主要记载一些往事。
     link: /life/memory/
   - title: 项目架构
-    icon: enum
+    icon: stream
     details: 项目结构
     link: /learn/development/struct
 

@@ -15,7 +15,6 @@ export const navbar_zh = navbar([
     children: [
       {
         text: 'Apple',
-        icon:"apple",
         link: url_life + '/tech/'
       },
       {
