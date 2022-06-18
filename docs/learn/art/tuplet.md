@@ -24,14 +24,15 @@ $$\frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+...+\frac{1}{4^n}=\sum\limits _{i=1}^n
 ![](/image/learn/art/jstcxjbw.png)
 
 ![](/image/learn/art/guoge.png)
-聂耳 义勇军进行曲
 
+聂耳 义勇军进行曲
 :::
 
 三连音的写法如下。在辨认的时候，去掉一个音符，取 2 个所表达的长度，就是时值了。
 
 ::: center
 ![](/image/learn/art/tuplet.png)
+
 tuplet
 :::
 
@@ -41,6 +42,7 @@ tuplet
 
 ::: center
 ![](/image/learn/art/quintuplets.png)
+
 Quintuplets Sixtuplets Seventuplets
 :::
 
@@ -50,6 +52,7 @@ Quintuplets Sixtuplets Seventuplets
 
 ::: center
 ![](/image/learn/art/Ninet.png)
+
 Ninet Tentuplet Eleventup
 :::
 
@@ -59,12 +62,13 @@ Ninet Tentuplet Eleventup
 
 ::: center
 ![](/image/learn/art/doublet.png)
-doublet
 
 ![](/image/learn/art/lsmd0c6l.png)
+
 doublet
 
 ![](/image/learn/art/octave.jpg)
+
 octave
 :::
 
@@ -72,6 +76,7 @@ octave
 
 ::: center
 ![](/image/learn/art/tuplet2.png)
+
 tuplet
 :::
 
@@ -83,6 +88,7 @@ tuplet
 
 ::: center
 ![](/image/learn/art/tentuplets.png)
+
 tentuplets
 :::
 
