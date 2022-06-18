@@ -18,14 +18,15 @@ export default defineUserConfig({
     }
   },
   alias: {
-    "@Food": path.resolve(__dirname, "components/Food.vue"),
-    "@War": path.resolve(__dirname, "components/War.vue"),
-    "@History": path.resolve(__dirname, "components/History.vue"),
-    "@TestLeaflet": path.resolve(__dirname, "components/Leaflet.vue"),
-    "@GenshinLevelExp": path.resolve(__dirname, "components/genshin/LevelExp.vue"),
-    "@GenshinPartySetup": path.resolve(__dirname, "components/genshin/PartySetup.vue"),
-    "@GenshinCharacters": path.resolve(__dirname, "components/genshin/Characters.vue"),
-    "@GenshinWishCurrent": path.resolve(__dirname, "components/genshin/WishCurrent.vue"),
-    "@GenshinWishFuture": path.resolve(__dirname, "components/genshin/WishFuture.vue"),
+    "@KatexPlayground": path.resolve(__dirname, "./components/KatexPlayground"),
+    "@Food": path.resolve(__dirname, "./components/Food.vue"),
+    "@War": path.resolve(__dirname, "./components/War.vue"),
+    "@History": path.resolve(__dirname, "./components/History.vue"),
+    "@TestLeaflet": path.resolve(__dirname, "./components/Leaflet.vue"),
+    "@GenshinLevelExp": path.resolve(__dirname, "./components/genshin/LevelExp.vue"),
+    "@GenshinPartySetup": path.resolve(__dirname, "./components/genshin/PartySetup.vue"),
+    "@GenshinCharacters": path.resolve(__dirname, "./components/genshin/Characters.vue"),
+    "@GenshinWishCurrent": path.resolve(__dirname, "./components/genshin/WishCurrent.vue"),
+    "@GenshinWishFuture": path.resolve(__dirname, "./components/genshin/WishFuture.vue"),
   }
 });
