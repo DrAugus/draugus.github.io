@@ -29,7 +29,7 @@ pull_request_rules:
 
   - name: automatic merge for restyled-io pull requests
     conditions:
-      - title~=^\[Restyle\]
+      - author=restyled-io[bot]
     actions:
       merge:
         method: merge
