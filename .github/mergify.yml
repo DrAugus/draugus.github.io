@@ -3,7 +3,6 @@ pull_request_rules:
     conditions:
       - author=imgbot[bot]
       - check-success=Summary
-      - check-success=restyled
     actions:
       merge:
         method: merge
@@ -12,7 +11,6 @@ pull_request_rules:
     conditions:
       - author=renovate[bot]
       - check-success=Summary
-      - check-success=restyled
     actions:
       merge:
         method: merge
@@ -22,14 +20,6 @@ pull_request_rules:
       - title~=^\[requires.io\]
       - head~=^requires-io
       - check-success=Summary
-      - check-success=restyled
-    actions:
-      merge:
-        method: merge
-
-  - name: automatic merge for restyled-io pull requests
-    conditions:
-      - author=restyled-io[bot]
     actions:
       merge:
         method: merge
@@ -39,7 +29,6 @@ pull_request_rules:
       - title=pulling refs/heads/dev into master
       - check-success=deploy
       - check-success=Summary
-      - check-success=restyled
     actions:
       merge:
         method: merge
