@@ -92,7 +92,7 @@ export let current = {
 if (objWish.haveWish) {
     for (let v of objWish.wishIndex) {
         let picName = replaceAndLow(wishCharacters[v].name) + "_" + wishCharacters[v].image;
-        current.currentSrc.push("/image/life/game/genshin/wish/" + picName + ".jpg");
+        current.currentSrc.push("https://github.com/DrAugus/data/blob/master/game/genshin/wish/" + picName + ".jpg");
         current.currentDate.push(dayjs(wishCharacters[v].start, "YYYY/MM/DD HH:mm:ss") + "~" + dayjs(wishCharacters[v].end, "YYYY/MM/DD HH:mm:ss"));
     }
 }
@@ -104,7 +104,7 @@ export let future = {
 };
 for (let v of objWish.comingIndex) {
     let picName = replaceAndLow(wishCharacters[v].name) + "_" + wishCharacters[v].image;
-    future.futureSrc.push("/image/life/game/genshin/wish/" + picName + ".jpg");
+    future.futureSrc.push("https://github.com/DrAugus/data/blob/master/game/genshin/wish/" + picName + ".jpg");
     future.futureDate.push(dayjs(wishCharacters[v].start, "YYYY/MM/DD HH:mm:ss") + "~" + dayjs(wishCharacters[v].end, "YYYY/MM/DD HH:mm:ss"));
 }
 
