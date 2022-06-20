@@ -7,6 +7,25 @@
 
   <span ref="choiceFromDetails"></span>
 
+  <h2>下馆子去咯</h2>
+
+  <div v-for="(value, key, index) in outdoor">
+    <h3>{{ key }}</h3>
+    <div v-if="value.good">
+      <u>推荐</u>
+      <ul>
+        <li v-for="(k,i) in value.good">{{ k }}</li>
+      </ul>
+    </div>
+    <div v-if="value.bad">
+      <u>真的别点</u>
+      <ul>
+        <li v-for="(k,i) in value.bad">{{ k }}</li>
+      </ul>
+    </div>
+  </div>
+
+
   <h2>真的不能吃</h2>
   <ul>
     <li v-for="(item, index) in blockFood">
@@ -42,11 +61,13 @@ for (let objMainType in allType) {
 }
 
 let blockFood = foodInfo.外卖.拉黑;
+let outdoor = foodInfo.下馆子;
 
 export default {
   data() {
     return {
-      blockFood
+      blockFood,
+      outdoor
     };
   },
   mounted() {
