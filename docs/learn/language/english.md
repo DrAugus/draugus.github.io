@@ -94,4 +94,12 @@ The students returned to the classroom after the break 那些学生们在休息�
 Towels take a long time to dry 毛巾花很长时间烘干  
 I had champagne once a long time ago 我很久之前喝过一次香槟  
 What kind of soup is this 这是哪种汤  
-Can I get you more coffee 你想要更多咖啡吗
+Can I get you more coffee 你想要更多咖啡吗  
+There's a nice cafe across from the library. 在图书馆对面有一个不错的咖啡厅  
+show you around 带你四处看看  
+walk around 四处逛逛  
+The last building on the right is a bank 右边的最后一座楼是一家银行  
+apartment one zero six 106号公寓  
+have a great time 玩得很尽兴  
+How was your first month at university 你在大学的第一个月怎么样  
+

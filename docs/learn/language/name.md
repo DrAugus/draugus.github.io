@@ -23,4 +23,6 @@
 
 - Gustav ♂
 - Karl
+- Nina ♀
+- Lukas
 
