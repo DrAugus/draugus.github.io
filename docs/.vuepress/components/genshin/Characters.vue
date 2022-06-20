@@ -6,7 +6,7 @@
       {{ value.name }}
     </div>
     <div class="character-avatar">
-      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + value.id +'.png'">
+      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + value.id +'.png?raw=true'">
     </div>
     <blockquote>
       {{ value.intro }}
