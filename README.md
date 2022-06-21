@@ -17,7 +17,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ```yarn
 yarn install
-yarn docs:dev
+yarn src:dev
 ```
 
 ### upgrade
@@ -28,7 +28,7 @@ yarn add vuepress@next vuepress-theme-hope@next && yarn install && yarn upgrade
 
 ## Contribute
 
-Before you commit, please run `vuepress-vite build docs`
+Before you commit, please run `vuepress-vite build src`
 
 ## Thanks
 

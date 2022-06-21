@@ -6,13 +6,13 @@
   "scripts": {
     "git:push": "git push",
     "git:pull": "git pull",
-    "augus:build": "vuepress build docs",
-    "augus:dev": "vuepress dev docs",
-    "augus:dev-clean": "vuepress dev docs --clean-cache",
-    "augus:dev-clean-debug": "vuepress dev docs --clean-cache --debug",
-    "augus:vite-build": "vuepress-vite build docs",
-    "augus:vite-dev-clean": "vuepress-vite dev docs --clean-cache",
-    "augus:vite-dev": "vuepress-vite dev docs"
+    "augus:build": "vuepress build src",
+    "augus:dev": "vuepress dev src",
+    "augus:dev-clean": "vuepress dev src --clean-cache",
+    "augus:dev-clean-debug": "vuepress dev src --clean-cache --debug",
+    "augus:vite-build": "vuepress-vite build src",
+    "augus:vite-dev-clean": "vuepress-vite dev src --clean-cache",
+    "augus:vite-dev": "vuepress-vite dev src"
   },
   "repository": "https://github.com/DrAugus/draugus.github.io.git",
   "author": "DrAugus",
