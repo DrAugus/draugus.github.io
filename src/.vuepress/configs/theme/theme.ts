@@ -21,7 +21,7 @@ export default hopeTheme({
   logo: "/logo/logo.jpg",
   repo: "DrAugus/draugus.github.io",
 
-  editLinkPattern: ":repo/edit/master/docs/:path",
+  editLinkPattern: ":repo/edit/master/src/:path",
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word"],
 
