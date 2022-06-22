@@ -70,7 +70,9 @@ export default hopeTheme({
     blog: {
       autoExcerpt: true,
       // only with date frontmatter are articles
-      filter: (page) => !!page.frontmatter.date,
+      // filter: (page) => !!page.frontmatter.date,
+      // only article is article
+      filter: (page) => !!page.frontmatter.article,
     },
 
     components: ["Badge", "CodePen", "FontIcon", "PDF", "StackBlitz", "YouTube"],

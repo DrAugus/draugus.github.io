@@ -1,5 +1,6 @@
 ---
-sidebar: false  
+sidebar: false
+article: true  
 title: 高并发性能指标:QPS、TPS、RT、并发数、吞吐量    
 date: 2022-02-21 13:50:16  
 permalinkPattern: blog/:year/:month/:day/:slug.html  

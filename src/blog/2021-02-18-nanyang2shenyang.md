@@ -1,5 +1,6 @@
 ---
 sidebar: false
+article: true
 title: 南阳——沈阳     
 date: 2021-02-18 10:54:16   
 permalinkPattern: blog/:year/:month/:day/:slug.html  

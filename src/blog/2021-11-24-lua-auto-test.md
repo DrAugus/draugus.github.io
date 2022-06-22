@@ -1,4 +1,6 @@
 ---
+sidebar: false
+article: true
 title: lua自动化测试指南
 date: 2021-11-24 11:15:22  
 category: 

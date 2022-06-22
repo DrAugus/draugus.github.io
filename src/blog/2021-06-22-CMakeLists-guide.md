@@ -1,5 +1,6 @@
 ---
-sidebar: false   
+sidebar: false
+article: true   
 title: CMakeLists Guide
 date: 2021-06-22 10:30:13 
 category: 
