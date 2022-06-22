@@ -1,6 +1,7 @@
 ---
 title: gitalk评论接入教程    
-sidebar: false  
+sidebar: false
+article: true  
 date: 2021-12-30 15:39:11 
 permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 

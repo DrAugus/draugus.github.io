@@ -1,4 +1,6 @@
 ---
+sidebar: false
+article: true
 title: XShell全局设置配色方案
 date: 2021-10-21 14:32:44
 category: 
