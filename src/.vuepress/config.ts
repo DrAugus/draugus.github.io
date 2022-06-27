@@ -26,7 +26,6 @@ export default defineUserConfig({
     "@GenshinLevelExp": path.resolve(__dirname, "./components/genshin/LevelExp.vue"),
     "@GenshinPartySetup": path.resolve(__dirname, "./components/genshin/PartySetup.vue"),
     "@GenshinCharacters": path.resolve(__dirname, "./components/genshin/Characters.vue"),
-    "@GenshinWishCurrent": path.resolve(__dirname, "./components/genshin/WishCurrent.vue"),
-    "@GenshinWishFuture": path.resolve(__dirname, "./components/genshin/WishFuture.vue"),
+    "@GenshinWish": path.resolve(__dirname, "./components/genshin/Wish.vue"),
   }
 });

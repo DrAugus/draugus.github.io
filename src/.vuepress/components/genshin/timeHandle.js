@@ -1,0 +1,1 @@
+export const formatDate = (dayjsObj) => dayjsObj.format("YYYY/MM/DD HH:mm:ss");

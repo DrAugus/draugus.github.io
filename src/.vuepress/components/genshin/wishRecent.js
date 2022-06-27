@@ -1,6 +1,10 @@
 import {processEvent} from "./eventHandle";
 import {Deadline} from "../utils";
 import dayjs from "dayjs";
+import "dayjs/locale/zh";
+import {formatDate} from "./timeHandle";
+
+dayjs.locale("zh");
 
 const ELEMENT_COLOR = {
     dendro: "#98e628",//草
@@ -96,7 +100,10 @@ if (objWish.haveWish) {
         img += picName;
         img += ".jpg?raw=true";
         current.currentSrc.push(img);
-        current.currentDate.push(dayjs(wishCharacters[v].start, "YYYY/MM/DD HH:mm:ss") + "~" + dayjs(wishCharacters[v].end, "YYYY/MM/DD HH:mm:ss"));
+        let s = formatDate(dayjs(wishCharacters[v].start));
+        let e = formatDate(dayjs(wishCharacters[v].end));
+        console.log(s, e);
+        current.currentDate.push(s + "~" + e);
     }
 }
 
@@ -111,11 +118,16 @@ for (let v of objWish.comingIndex) {
     img += picName;
     img += ".jpg?raw=true";
     future.futureSrc.push(img);
-    future.futureDate.push(dayjs(wishCharacters[v].start, "YYYY/MM/DD HH:mm:ss") + "~" + dayjs(wishCharacters[v].end, "YYYY/MM/DD HH:mm:ss"));
+    let s = formatDate(dayjs(wishCharacters[v].start));
+    let e = formatDate(dayjs(wishCharacters[v].end));
+    console.log(s, e);
+    future.futureDate.push(s + "~" + e);
 }
 
 console.log(current, future);
 
-//祈愿倒计时
 export const wishDeadline = () => Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end));
+export const wishBegin = () => Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start));
+
+console.log(wishDeadline(), wishBegin());
 

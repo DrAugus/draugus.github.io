@@ -1,0 +1,72 @@
+<template>
+
+  <div v-if="current.able">
+
+    <h2>当前祈愿</h2>
+    <h2>{{ end }} 后结束</h2>
+    <blockquote>祈愿周期：{{ current.currentDate[0] }}</blockquote>
+
+    <div v-for="(item,index) in current.currentSrc">
+      <img :src="item">
+    </div>
+
+  </div>
+  <div v-else>
+    暂无祈愿，敬请期待
+  </div>
+
+  <div v-if="future.able">
+
+    <h2>未来祈愿</h2>
+    <h2>{{ begin }} 后开始</h2>
+    <blockquote>祈愿周期：{{ future.futureDate[0] }}</blockquote>
+
+    <div v-for="(item,index) in future.futureSrc">
+      <img :src="item">
+
+    </div>
+
+  </div>
+  <div v-else>
+    未来祈愿，等待更新
+  </div>
+
+</template>
+
+<script>
+
+import {current, future, wishDeadline, wishBegin} from "./wishRecent";
+
+export default {
+  name: "Wish",
+  data() {
+    return {
+      future,
+      current,
+      begin: new Date(),
+      end: new Date(),
+    };
+  },
+  methods: {},
+  mounted() {
+    let _this = this;
+    this.timer1 = setInterval(() => {
+      _this.begin = wishBegin();
+    }, 1000);
+    this.timer2 = setInterval(() => {
+      _this.end = wishDeadline();
+    }, 1000);
+  },
+  beforeDestroy() {
+    if (this.timer1)
+      clearInterval(this.timer1);
+    if (this.timer2)
+      clearInterval(this.timer2);
+  },
+
+};
+</script>
+
+<style scoped>
+
+</style>
