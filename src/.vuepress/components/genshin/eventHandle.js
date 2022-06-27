@@ -1,6 +1,11 @@
 import dayjs from "dayjs";
 import {WISH} from "./wish";
 
+import "dayjs/locale/zh";
+
+dayjs.locale("zh"); // use locale globally
+// dayjs().locale('zh').format() // use locale in a specific instance
+
 const TIMELINE_PADDING = 10;
 let lastEventTime = dayjs().year(2000);
 let firstDay = dayjs();
@@ -19,12 +24,9 @@ const convertToDate = (e, i, j) => {
     if (isSafari) {
         e.start = e.start.replace(/-/g, "/");
         e.end = e.end.replace(/-/g, "/");
-        start = dayjs(e.start, "YYYY/MM/DD HH:mm:ss").subtract(0, "minute");
-        end = dayjs(e.end, "YYYY/MM/DD HH:mm:ss").subtract(0, "minute");
-    } else {
-        start = dayjs(e.start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
-        end = dayjs(e.end, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
     }
+    start = dayjs(e.start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+    end = dayjs(e.end, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
 
     const duration = end.diff(start, "day", true);
 
