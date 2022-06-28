@@ -1,5 +1,5 @@
 import {PluginConfig} from "@vuepress/core/lib/types/plugin";
-
+import Unocss from 'unocss/vite'
 const {searchPlugin} = require('@vuepress/plugin-search')
 
 export const main: PluginConfig = [
@@ -31,5 +31,5 @@ export const main: PluginConfig = [
       },
     }
   }),
-
+  Unocss({ /* options */ }),
 ]
