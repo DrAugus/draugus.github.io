@@ -1,5 +1,6 @@
 import {PluginConfig} from "@vuepress/core/lib/types/plugin";
 
+const {googleAnalyticsPlugin} = require("@vuepress/plugin-google-analytics");
 const {searchPlugin} = require('@vuepress/plugin-search')
 
 export const main: PluginConfig = [
@@ -31,5 +32,7 @@ export const main: PluginConfig = [
       },
     }
   }),
-
+  googleAnalyticsPlugin({
+    id: "G-XN078ZZTRC",
+  }),
 ]

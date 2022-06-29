@@ -309,7 +309,7 @@ export const WISH = {
         "rosaria"
       ],
       wishName: "「浪涌之瞬」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/12233204"
     },
     {
@@ -356,7 +356,7 @@ export const WISH = {
         "ningguang"
       ],
       wishName: "「烟火之邀」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -387,7 +387,7 @@ export const WISH = {
         "beidou"
       ],
       wishName: "「浮生孰来」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -434,7 +434,7 @@ export const WISH = {
         "kujou_sara"
       ],
       wishName: "「浮岳虹珠」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -466,7 +466,7 @@ export const WISH = {
         "yunjin"
       ],
       wishName: "「杯装之诗」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -513,7 +513,7 @@ export const WISH = {
         "barbara"
       ],
       wishName: "「烟火之邀」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -548,7 +548,7 @@ export const WISH = {
       wish5star: "kaedehara_kazuha",
       wish4star: "",
       wishName: "「叶落风随」",
-      "wish_2": true,
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
