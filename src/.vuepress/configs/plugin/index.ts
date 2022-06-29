@@ -1,5 +1,6 @@
 import {PluginConfig} from "@vuepress/core/lib/types/plugin";
-import Unocss from 'unocss/vite'
+
+const {googleAnalyticsPlugin} = require("@vuepress/plugin-google-analytics");
 const {searchPlugin} = require('@vuepress/plugin-search')
 
 export const main: PluginConfig = [
@@ -31,5 +32,7 @@ export const main: PluginConfig = [
       },
     }
   }),
-  Unocss({ /* options */ }),
+  googleAnalyticsPlugin({
+    id: "G-321180886",
+  }),
 ]
