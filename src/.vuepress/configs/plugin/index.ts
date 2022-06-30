@@ -33,6 +33,6 @@ export const main: PluginConfig = [
     }
   }),
   googleAnalyticsPlugin({
-    id: "G-XN078ZZTRC",
+    id: "UA-233173102-1",
   }),
 ]
