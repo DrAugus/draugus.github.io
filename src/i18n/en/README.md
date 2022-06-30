@@ -2,7 +2,7 @@
 home: true
 layout: Blog
 title: Blog
-bgImage: image/blog.jpg
+bgImage: image/home2.jpg
 heroImage: null
 heroText: Augus
 tagline: One More Thing
