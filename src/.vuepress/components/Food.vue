@@ -40,46 +40,53 @@
 import Typed from "typed.js";
 import foodInfo from "../data/food.json";
 
-let allType = foodInfo.外卖.分类;
-
-let all = [];
-let details = [];
-for (let objMainType in allType) {
-  // 大类别
-  all.push(objMainType);
-  if (allType[objMainType].constructor === Object) {
-    for (let objSubType in allType[objMainType]) {
-      // 小类别
-      all.push(objSubType);
-      // 小类别里的详细推荐
-      details = details.concat(allType[objMainType][objSubType]);
-    }
-  } else {
-    // 没有小类别 直接是 详细的美食推荐
-    details = details.concat(allType[objMainType]);
-  }
-}
-
-let blockFood = foodInfo.外卖.拉黑;
-let outdoor = foodInfo.下馆子;
-
 export default {
+  name: "Food",
+  components: {
+    Typed,
+  },
   data() {
     return {
-      blockFood,
-      outdoor
+      blockFood: foodInfo.外卖.拉黑,
+      outdoor: foodInfo.下馆子,
     };
   },
-  mounted() {
+  methods: {
+    get() {
+      let all = [];
+      let details = [];
+      let allType = foodInfo.外卖.分类;
+      for (let objMainType in allType) {
+        // 大类别
+        all.push(objMainType);
+        if (allType[objMainType].constructor === Object) {
+          for (let objSubType in allType[objMainType]) {
+            // 小类别
+            all.push(objSubType);
+            // 小类别里的详细推荐
+            details = details.concat(allType[objMainType][objSubType]);
+          }
+        } else {
+          // 没有小类别 直接是 详细的美食推荐
+          details = details.concat(allType[objMainType]);
+        }
+      }
+      return {
+        all,
+        details
+      };
+    }
+  },
+  async mounted() {
     const typed = new Typed(this.$refs.choiceFromAll, {
-      strings: all,
+      strings: this.get().all,
       startDelay: 300,
       typeSpeed: 150,
       loop: true,
       backSpeed: 50
     });
     const typed2 = new Typed(this.$refs.choiceFromDetails, {
-      strings: details,
+      strings: this.get().details,
       startDelay: 300,
       typeSpeed: 100,
       loop: true,

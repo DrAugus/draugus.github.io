@@ -39,6 +39,10 @@ import {current, future, wishDeadline, wishBegin} from "./wishRecent";
 
 export default {
   name: "Wish",
+  components: {
+    wishDeadline,
+    wishBegin,
+  },
   data() {
     return {
       future,
