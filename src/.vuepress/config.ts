@@ -23,6 +23,8 @@ export default defineUserConfig({
     "@War": path.resolve(__dirname, "./components/War.vue"),
     "@History": path.resolve(__dirname, "./components/History.vue"),
     "@TestLeaflet": path.resolve(__dirname, "./components/Leaflet.vue"),
+    "@LinksRecord": path.resolve(__dirname, "./components/LinksRecord.vue"),
+
     "@GenshinLevelExp": path.resolve(__dirname, "./components/genshin/LevelExp.vue"),
     "@GenshinPartySetup": path.resolve(__dirname, "./components/genshin/PartySetup.vue"),
     "@GenshinCharacters": path.resolve(__dirname, "./components/genshin/Characters.vue"),

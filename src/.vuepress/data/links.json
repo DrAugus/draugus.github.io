@@ -171,8 +171,18 @@
         "tip": null
       },
       {
-        "url": null,
-        "name": null,
+        "url": "https://cppinsights.io/",
+        "name": "cppinsights",
+        "tip": null
+      },
+      {
+        "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
+        "name": "Data Structure Visualizations",
+        "tip": null
+      },
+      {
+        "url": "https://girliemac.com/",
+        "name": "girliemac",
         "tip": null
       }
     ],
