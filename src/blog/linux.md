@@ -1,6 +1,7 @@
 ---
 article: true
 date: 2022-05-26
+isOriginal: true
 ---
 
 # Linux 日常

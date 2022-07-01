@@ -3,6 +3,7 @@ sidebar: false
 article: true
 title: windows11更新纪要
 date: 2021-10-05 13:16:44
+isOriginal: true
 permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 
   - windows

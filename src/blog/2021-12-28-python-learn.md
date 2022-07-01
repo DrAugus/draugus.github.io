@@ -2,7 +2,8 @@
 title: Python学习记录  
 sidebar: false
 article: true  
-date: 2021-12-28 18:22:11  
+date: 2021-12-28 18:22:11
+isOriginal: true
 permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 
   - 编程     
