@@ -100,10 +100,10 @@ export const processEvent = () => {
     for (let i = 0; i < dayTotal; i++) {
         const year = firstDay.add(i, "day").format("YYYY");
         const month = firstDay.add(i, "day").format("MMMM");
-        if (!years[year]) {
+        if (years[year] === undefined) {
             years[year] = [];
         }
-        if (!years[year][month]) {
+        if (years[year][month] === undefined) {
             years[year][month] = {
                 total: 0,
                 offset: 0
