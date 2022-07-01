@@ -1,6 +1,6 @@
 ---
-title: 阅读文章
+title: 帝国
+icon: gopuram
 index: false
 order: 1
 ---
-

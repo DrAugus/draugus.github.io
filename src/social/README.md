@@ -1,9 +1,9 @@
 ---
 title: 社会
-icon: greater-than-equal
 index: false
-dir:
-    order: 0
 ---
+
+> 但得众生皆得饱 不辞羸病卧残阳
+
 
 社会是什么？

@@ -1,7 +1,7 @@
 ---
 home: true
 layout: Blog
-title: 博客
+title: 主页
 icon: bath
 bgImage: image/blog.jpg
 heroImage: null

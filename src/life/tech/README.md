@@ -1,4 +1,5 @@
 ---
-title: 科技改变一切
+title: 🧬 科技
 index: false
+order: 6
 ---

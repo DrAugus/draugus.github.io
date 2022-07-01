@@ -1,5 +1,5 @@
 ---
-title: 阅读文章
+title: 经济学
 index: false
 order: 1
 ---

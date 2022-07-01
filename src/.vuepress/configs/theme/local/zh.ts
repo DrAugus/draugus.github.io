@@ -7,7 +7,11 @@ export const local_zh = {
   sidebar: {
     '/': ["", "home", "slide"],
     '/life/': 'structure',
-    '/learn/': 'structure',
+    '/learn/humanities/': 'structure',
+    '/learn/social-science/': 'structure',
+    '/learn/natural-science/': 'structure',
+    '/learn/formal-science/': 'structure',
+    '/learn/applied-science/': 'structure',
     '/social/': 'structure',
   },
 

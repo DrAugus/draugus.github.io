@@ -8,72 +8,64 @@ const url_social = url_prefix + '/social';
 
 export const navbar_zh = navbar([
   url_prefix + "/",
-  url_prefix + "/home",
   {
     text: "生活",
-    icon:'bed',
-    children: [
-      {
-        text: 'Apple',
-        link: url_life + '/tech/'
-      },
-      {
-        text: '游戏',
-        link: url_life + '/game/'
-      },
-      {
-        text: '旅行',
-        link: url_life + '/trip/'
-      },
-      {
-        text: '记忆',
-        link: url_life + '/memory/'
-      },
-    ]
+    icon: 'bed',
+    link: url_life + '/',
   },
   {
     text: '学习',
-    icon:'book',
+    icon: 'book',
     children: [
       {
-        text: '艺术',
-        link: url_learn + '/art/'
+        text: '学术领域',
+        icon: 'award',
+        link: url_learn + '/'
       },
       {
-        text: '面试',
-        link: url_learn + '/code/audition/'
-      },
-      {
-        text: '开发此项目',
-        link: url_learn + '/development'
-      },
+        text: '领域展开',
+        children: [
+          {
+            text: '人文',
+            icon: 'egg',
+            link: url_learn + '/humanities/'
+          },
+          {
+            text: '社会',
+            icon: 'binoculars',
+            link: url_learn + '/social-science/'
+          },
+          {
+            text: '自然',
+            icon: 'bong',
+            link: url_learn + '/natural-science/'
+          },
+          {
+            text: '形式',
+            icon: 'code-branch',
+            link: url_learn + '/formal-science/'
+          },
+          {
+            text: '应用',
+            icon: 'chart-line',
+            link: url_learn + '/applied-science/'
+          },
+        ]
+      }
     ]
   },
   {
     text: '社会',
-    icon:'diagnoses',
-    children: [
-      {
-        text: '事故',
-        link: url_social + '/accident/'
-      },
-      {
-        text: '战争',
-        link: url_social + '/war/'
-      },
-      {
-        text: "人物",
-        link: url_social + '/biography/',
-      },
-    ]
+    icon: 'diagnoses',
+    link: url_social + '/',
   },
   {
     text: '外链',
-    icon:'democrat',
+    icon: 'democrat',
     children: [
       {
         text: '原神',
-        link: 'https://draugus.github.io/list/genshin'
+        link: 'https://draugus.github.io/genshin'
       },
       {
         text: '英国王室',
@@ -97,7 +89,7 @@ export const navbar_zh = navbar([
   },
   {
     text: '赞助',
-    icon:'euro-sign',
+    icon: 'euro-sign',
     link: url_prefix + '/sponsor'
   },
 

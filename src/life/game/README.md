@@ -1,8 +1,7 @@
 ---
-title: 游戏人生
+title: 🎮 游戏
 index: false
-dir:
-    order: 1
+order: 5
 --- 
 
 游戏到底怎么玩？
