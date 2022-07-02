@@ -671,7 +671,7 @@ export const CHARACTER = {
     prefix: "兰生幽谷",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "自称供职于总务司的神秘人士，却又是总务司名录里的「不存在之人」。神出鬼没，行踪飘忽，变幻无常，这些都是她的标志。",
     city: City.Liyue,
     ele: Element.hydro,
     weapon: Weapon.bow
@@ -682,7 +682,7 @@ export const CHARACTER = {
     prefix: "烦恼刈除",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "「荒泷派」的二把手。脸上戴着一只造型别致的面铠，不苟言笑。很少有人知道，为什么这种级别的人才会跑去混街头帮派。更没有人知道，她面铠下藏着怎样的真容。至少大家表面上都这么说。虽然可能，知情人…也没那么少。",
     city: City.Inazuma,
     ele: Element.electro,
     weapon: Weapon.sword

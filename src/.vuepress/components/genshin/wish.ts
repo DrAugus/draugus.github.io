@@ -521,34 +521,22 @@ export const WISH = {
       image: 2,
       shortName: "Arataki Itto",
       start: "2022-06-21 18:00:00 +0800",
-      end: "2022-07-11 14:59:59 +0800",
+      end: "2022-07-12 14:59:59 +0800",
       wish5star: "arataki_itto",
       wish4star: "",
       wishName: "「花坂豪快」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Tapestry of Golden Flames",
-      image: 2,
-      shortName: "Yoimiya",
-      start: "2022-07-12 11:00:00 +0800",
-      end: "2022-08-03 17:59:59 +0800",
-      wish5star: "yoimiya",
-      wish4star: "",
-      version: 2.8,
-      wishName: "「焰色天河」",
-      url: "https://bbs.mihoyo.com/ys/article/?"
-    },
-    {
       name: "Leaves in the Wind",
       image: 2,
       shortName: "Kaedehara Kazuha",
-      start: "2022-07-12 11:00:00 +0800",
+      start: "2022-07-13 11:00:00 +0800",
       end: "2022-08-03 17:59:59 +0800",
       wish5star: "kaedehara_kazuha",
       wish4star: "",
+      version: 2.8,
       wishName: "「叶落风随」",
-      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -556,10 +544,22 @@ export const WISH = {
       image: 3,
       shortName: "Klee",
       start: "2022-08-03 18:00:00 +0800",
-      end: "2022-08-23 14:59:59 +0800",
+      end: "2022-08-24 14:59:59 +0800",
       wish5star: "klee",
       wish4star: "",
       wishName: "「闪焰的驻足」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Tapestry of Golden Flames",
+      image: 2,
+      shortName: "Yoimiya",
+      start: "2022-08-03 18:00:00 +0800",
+      end: "2022-08-24 14:59:59 +0800",
+      wish5star: "yoimiya",
+      wish4star: "",
+      wishName: "「焰色天河」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     }
   ],
