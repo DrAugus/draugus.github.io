@@ -1,54 +1,57 @@
 <template>
   <!--时间轴 电脑版-->
-  <div class="col s12 hide-on-small-only">
-    <h2 class="center-align">祈愿信息</h2>
+  <div class="hide-on-small-only">
     <p class="center">也许有未实装、未确定的虚假信息</p>
-    <p class="center"><a href="javascript:setCurrentPos()">回到当前时间</a></p>
+    <!--    <p class="center"><a href="javascript:setCurrentPos()">回到当前时间</a></p>-->
     <div class="timeline-scroll-x" id="setNowPos">
 
-      <div class="timeline-month" v-for="(item,index) in monthList">
-        <div v-bind:style="{left:DAY_WIDTH* item[1].offset +'px'}">
-          <div v-bind:style="{width:DAY_WIDTH* item[1].total +'px'}">
-            <span class="timeline-month-text">{{ item[0] }}</span>
+      <div class="timeline-month">
+        <div v-for="(item,index) in monthList">
+          <div v-bind:style="{left:DAY_WIDTH* item[1].offset +'px'}">
+            <div v-bind:style="{width:DAY_WIDTH* item[1].total +'px'}">
+              <span class="timeline-month-text">{{ item[0] }}</span>
+            </div>
           </div>
         </div>
       </div>
 
-      <div v-for="(t,i) in dates">
-        <div class="timeline-wrapper" v-bind:style="{left: ((DAY_WIDTH - 30) * i) + 'px'}">
-          <div class="timeline-index"><span>{{ t }}</span></div>
-        </div>
-      </div>
-
-
       <div class="timeline-day">
 
-        <div v-bind:style="{left:todayOffset}" id="findNowPos">
-          <div class="timeline-today-line-pos-text">{{ currentTime }}</div>
-        </div>
+        <!--        <div v-bind:style="{left:todayOffset}" id="findNowPos">-->
+        <!--          <div class="timeline-today-line-pos-text">{{ currentTime }}</div>-->
+        <!--        </div>-->
 
-        <div class="timeline-wish-event-weapon" v-for="(value, i) in WISH.weapons">
-          <div class="card event-item "
-               v-bind:style="{width: wishWeapons[i].duration * DAY_WIDTH + 'px',left:durationWeapon * DAY_WIDTH + 30 + 'px'}">
+        <div class="timeline-wish-event-weapon">
+          <div class="card event-item" v-for="(value, i) in WISH.weapons"
+               v-bind:style="{width: wishWeapons[i].duration * DAY_WIDTH + 'px',
+                 left:durationWeapon * DAY_WIDTH + 30 + 'px',    height: 'var(--event-height)'}">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
-              <!--              <div class="event-img responsive-img lazy"-->
-              <!--                   data-original="/assets/res/genshin-impact/wish/{{weapon.name | downcase | replace: ' ', '_' | append: '_' | append: weapon.image | append: '.jpg' }}">-->
-              <!--              </div>-->
+              <div class="event-img">
+                <img
+                    v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/'+
+                      value.name.concat('_'+value.image+'.jpg').toLowerCase().replace(/ /g, '_')+
+                      '?raw=true'" alt="">
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline-wish-event-character" v-for="(value, i) in WISH.characters">
-          <div class="card event-item event-item-background-{{CHARACTER[value.wish5star].ele}}"
-               v-bind:style="{width: wishCharacters[i].duration * DAY_WIDTH + 'px',left:durationCharacter * DAY_WIDTH + 30 + 'px'}">
+        <div class="timeline-wish-event-character">
+          <div class="card event-item " v-for="(value, i) in WISH.characters"
+               v-bind:class="'event-item-background-'+ElementString[CHARACTER[value.wish5star].ele]"
+               v-bind:style="{width: wishCharacters[i].duration * DAY_WIDTH + 'px',
+               left:durationCharacter * DAY_WIDTH + 30 + 'px',marginTop: value.wish_2?'140px':''}">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <!-- Modal Trigger -->
               <a class="modal-trigger" href="#modal{{i}}">
-                <div class="event-img responsive-img lazy"
-                     data-original="https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/{{value.wish5star}}.png?raw=true">
+                <div class="event-img responsive-img lazy">
+                  <img
+                      v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/'+
+                        value.wish5star+'.png?raw=true'" alt="">
                 </div>
               </a>
-              <div class="left-align timeline-character-text ele-text-{{CHARACTER[value.wish5star].ele}}">
+              <div class="left-align timeline-character-text"
+                   v-bind:class="'ele-text-'+ElementString[CHARACTER[value.wish5star].ele]">
                 <div class="timeline-wish-name">
                   {{ value.wishName }}
                 </div>
@@ -62,7 +65,11 @@
           </div>
         </div>
 
-
+        <div class="timeline-wrapper" v-for="(t,i) in dates">
+          <div class="timeline-index" v-bind:style="{left: ((DAY_WIDTH - 30) * i) + 'px'}">
+            <span>{{ t }}</span>
+          </div>
+        </div>
 
       </div>
 
@@ -80,8 +87,20 @@ import "dayjs/locale/zh";
 import {processEvent} from "./eventHandle";
 import {getDuration} from "../utils";
 import {wishBegin, wishDeadline} from "./wishRecent";
+import {ElementString} from "./utils";
 
 dayjs.locale("zh");
+
+
+const colorMap = {
+  "denro": "#98e628",
+  "geo": "#e2b032",
+  "electro": "#d296fc",
+  "hydro": "#03ddfe",
+  "pyro": "#fa5d3e",
+  "anemo": "#57dcb0",
+  "cryo": "#84c2e6",
+};
 
 
 const DAY_WIDTH = 25;
@@ -155,6 +174,8 @@ export default {
       durationWeapon,
       wishCharacters,
       wishWeapons,
+      colorMap,
+      ElementString,
     };
   },
   mounted() {
@@ -174,14 +195,14 @@ export default {
 <style scoped>
 
 .card {
-  position: relative;
-  margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
-  -webkit-transition: -webkit-box-shadow .25s;
-  transition: -webkit-box-shadow .25s;
-  transition: box-shadow .25s;
-  transition: box-shadow .25s, -webkit-box-shadow .25s;
-  border-radius: 2px;
+  /*position: relative;*/
+  /*margin: 0.5rem 0 1rem 0;*/
+  /*background-color: #fff;*/
+  /*-webkit-transition: -webkit-box-shadow .25s;*/
+  /*transition: -webkit-box-shadow .25s;*/
+  /*transition: box-shadow .25s;*/
+  /*transition: box-shadow .25s, -webkit-box-shadow .25s;*/
+  /*border-radius: 2px;*/
 }
 
 .card .card-image {
@@ -203,9 +224,11 @@ export default {
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
 }
+
 .waves-block {
   display: block;
 }
+
 .container {
   width: 99%;
 }
@@ -217,11 +240,25 @@ export default {
 .grey-no-publish {
   filter: grayscale(100%) brightness(1) contrast(.5)
 }
-.s12{
+
+.s12 {
   width: 100%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .hide-on-small-only, .hide-on-small-and-down {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .hide-on-large-only {
+    display: none !important;
+  }
+}
+
 
 </style>
