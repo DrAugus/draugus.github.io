@@ -22,7 +22,7 @@ export interface Characters {
 }
 
 export const CHARACTER = {
-  kaedehara_kazuha: {
+  10000001: {
     id: "kaedehara_kazuha",
     name: "枫原万叶",
     star: 5,
@@ -32,7 +32,7 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.sword
   },
-  yanfei: {
+  10000002: {
     id: "yanfei",
     name: "烟绯",
     prefix: "智明无邪",
@@ -43,7 +43,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.catalyst
   },
-  eula: {
+  10000003: {
     id: "eula",
     name: "优菈",
     star: 5,
@@ -53,7 +53,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.claymore
   },
-  jean: {
+  10000004: {
     id: "jean",
     name: "琴",
     star: 5,
@@ -63,7 +63,7 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.claymore
   },
-  lisa: {
+  10000005: {
     id: "lisa",
     name: "丽莎",
     star: 4,
@@ -73,7 +73,7 @@ export const CHARACTER = {
     ele: Element.electro,
     weapon: Weapon.catalyst
   },
-  barbara: {
+  10000006: {
     id: "barbara",
     name: "芭芭拉",
     prefix: "闪耀偶像",
@@ -84,7 +84,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.catalyst
   },
-  kaeya: {
+  10000007: {
     id: "kaeya",
     name: "凯亚",
     star: 4,
@@ -94,7 +94,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.sword
   },
-  diluc: {
+  10000008: {
     id: "diluc",
     name: "迪卢克",
     star: 5,
@@ -104,7 +104,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.claymore
   },
-  razor: {
+  10000009: {
     id: "razor",
     name: "雷泽",
     prefix: "狼少年",
@@ -115,7 +115,7 @@ export const CHARACTER = {
     ele: Element.electro,
     weapon: Weapon.claymore
   },
-  amber: {
+  10000010: {
     id: "amber",
     name: "安柏",
     star: 4,
@@ -125,7 +125,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.bow
   },
-  venti: {
+  10000011: {
     id: "venti",
     name: "温迪",
     star: 5,
@@ -135,7 +135,7 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.bow
   },
-  xiangling: {
+  10000012: {
     id: "xiangling",
     name: "香菱",
     prefix: "万民百味",
@@ -160,7 +160,7 @@ export const CHARACTER = {
       tips: ""
     }
   },
-  beidou: {
+  10000013: {
     id: "beidou",
     name: "北斗",
     star: 4,
@@ -170,7 +170,7 @@ export const CHARACTER = {
     ele: Element.electro,
     weapon: Weapon.claymore
   },
-  xingqiu: {
+  10000014: {
     id: "xingqiu",
     name: "行秋",
     star: 4,
@@ -180,7 +180,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.sword
   },
-  xiao: {
+  10000015: {
     id: "xiao",
     name: "魈",
     prefix: "护法夜叉",
@@ -191,7 +191,7 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.polearm
   },
-  ningguang: {
+  10000016: {
     id: "ningguang",
     name: "凝光",
     star: 4,
@@ -201,7 +201,7 @@ export const CHARACTER = {
     ele: Element.geo,
     weapon: Weapon.catalyst
   },
-  klee: {
+  10000017: {
     id: "klee",
     name: "可莉",
     star: 5,
@@ -211,7 +211,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.catalyst
   },
-  zhongli: {
+  10000018: {
     id: "zhongli",
     name: "钟离",
     star: 5,
@@ -240,7 +240,7 @@ export const CHARACTER = {
       tips: ""
     }
   },
-  fischl: {
+  10000019: {
     id: "fischl",
     name: "菲谢尔",
     star: 4,
@@ -250,7 +250,7 @@ export const CHARACTER = {
     ele: Element.electro,
     weapon: Weapon.bow
   },
-  bennett: {
+  10000020: {
     id: "bennett",
     name: "班尼特",
     star: 4,
@@ -277,7 +277,7 @@ export const CHARACTER = {
       tips: ""
     }
   },
-  tartaglia: {
+  10000021: {
     id: "tartaglia",
     name: "达达利亚",
     star: 5,
@@ -287,7 +287,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.bow
   },
-  noelle: {
+  10000022: {
     id: "noelle",
     name: "诺艾尔",
     prefix: "未授勋之花",
@@ -298,7 +298,7 @@ export const CHARACTER = {
     ele: Element.geo,
     weapon: Weapon.claymore
   },
-  qiqi: {
+  10000023: {
     id: "qiqi",
     name: "七七",
     star: 5,
@@ -308,7 +308,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.sword
   },
-  chongyun: {
+  10000024: {
     id: "chongyun",
     name: "重云",
     star: 4,
@@ -318,7 +318,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.claymore
   },
-  ganyu: {
+  10000025: {
     id: "ganyu",
     name: "甘雨",
     star: 5,
@@ -328,7 +328,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.bow
   },
-  albedo: {
+  10000026: {
     id: "albedo",
     name: "阿贝多",
     star: 5,
@@ -338,7 +338,7 @@ export const CHARACTER = {
     ele: Element.geo,
     weapon: Weapon.sword
   },
-  diona: {
+  10000027: {
     id: "diona",
     name: "迪奥娜",
     star: 4,
@@ -348,7 +348,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.bow
   },
-  mona: {
+  10000028: {
     id: "mona",
     name: "莫娜",
     star: 5,
@@ -358,7 +358,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.catalyst
   },
-  keqing: {
+  10000029: {
     id: "keqing",
     name: "刻晴",
     star: 5,
@@ -368,7 +368,7 @@ export const CHARACTER = {
     ele: Element.electro,
     weapon: Weapon.sword
   },
-  sucrose: {
+  10000030: {
     id: "sucrose",
     name: "砂糖",
     prefix: "无害甜度",
@@ -379,7 +379,7 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.catalyst
   },
-  xinyan: {
+  10000031: {
     id: "xinyan",
     name: "辛焱",
     star: 4,
@@ -389,7 +389,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.claymore
   },
-  rosaria: {
+  10000032: {
     id: "rosaria",
     name: "罗莎莉亚",
     prefix: "棘冠恩典",
@@ -400,7 +400,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.polearm
   },
-  hu_tao: {
+  10000033: {
     id: "hu_tao",
     name: "胡桃",
     star: 5,
@@ -410,7 +410,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.polearm
   },
-  yoimiya: {
+  10000034: {
     id: "yoimiya",
     name: "宵宫",
     star: 5,
@@ -420,7 +420,7 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.bow
   },
-  sayu: {
+  10000035: {
     id: "sayu",
     name: "早柚",
     prefix: "忍里之貉",
@@ -431,7 +431,7 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.claymore
   },
-  kamisato_ayaka: {
+  10000036: {
     id: "kamisato_ayaka",
     name: "神里绫华",
     prefix: "白鹭霜华",
@@ -442,7 +442,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.sword
   },
-  raiden_shogun: {
+  10000037: {
     id: "raiden_shogun",
     name: "雷电将军",
     star: 5,
@@ -480,7 +480,7 @@ export const CHARACTER = {
       tips: ""
     }
   },
-  sangonomiya_kokomi: {
+  10000038: {
     id: "sangonomiya_kokomi",
     name: "珊瑚宫心海",
     star: 5,
@@ -490,7 +490,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.catalyst
   },
-  kujou_sara: {
+  10000039: {
     id: "kujou_sara",
     name: "九条裟罗",
     star: 4,
@@ -528,7 +528,7 @@ export const CHARACTER = {
       tips: ""
     }
   },
-  aloy: {
+  10000040: {
     id: "aloy",
     name: "埃洛伊",
     star: 5,
@@ -538,7 +538,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.bow
   },
-  thoma: {
+  10000041: {
     id: "thoma",
     name: "托马",
     star: 4,
@@ -565,7 +565,7 @@ export const CHARACTER = {
       tips: "如果选择生命值武器，那么时之沙主属性选择充能效率；如果选择充能武器，那么时之沙主属性选择生命值。"
     }
   },
-  arataki_itto: {
+  10000042: {
     id: "arataki_itto",
     name: "荒泷一斗",
     star: 5,
@@ -594,7 +594,7 @@ export const CHARACTER = {
       tips: ""
     }
   },
-  gorou: {
+  10000043: {
     id: "gorou",
     name: "五郎",
     star: 4,
@@ -604,7 +604,7 @@ export const CHARACTER = {
     ele: Element.geo,
     weapon: Weapon.bow
   },
-  shenhe: {
+  10000044: {
     id: "shenhe",
     name: "申鹤",
     prefix: "孤辰茕怀",
@@ -615,7 +615,7 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.polearm
   },
-  yunjin: {
+  10000045: {
     id: "yunjin",
     name: "云堇",
     prefix: "红毹婵娟",
@@ -643,7 +643,7 @@ export const CHARACTER = {
       tips: "建议充能不低于220%"
     }
   },
-  yae_miko: {
+  10000046: {
     id: "yae_miko",
     name: "八重神子",
     prefix: "浮世笑百姿",
@@ -654,7 +654,7 @@ export const CHARACTER = {
     ele: Element.electro,
     weapon: Weapon.catalyst
   },
-  kamisato_ayato: {
+  10000047: {
     id: "kamisato_ayato",
     name: "神里凌人",
     prefix: "磐祭叶守",
@@ -665,7 +665,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.sword
   },
-  yelan: {
+  10000048: {
     id: "yelan",
     name: "夜兰",
     prefix: "兰生幽谷",
@@ -676,7 +676,7 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.bow
   },
-  kuki_shinobu: {
+  10000049: {
     id: "kuki_shinobu",
     name: "久岐忍",
     prefix: "烦恼刈除",

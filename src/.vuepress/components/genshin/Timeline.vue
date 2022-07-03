@@ -1,0 +1,227 @@
+<template>
+  <!--时间轴 电脑版-->
+  <div class="col s12 hide-on-small-only">
+    <h2 class="center-align">祈愿信息</h2>
+    <p class="center">也许有未实装、未确定的虚假信息</p>
+    <p class="center"><a href="javascript:setCurrentPos()">回到当前时间</a></p>
+    <div class="timeline-scroll-x" id="setNowPos">
+
+      <div class="timeline-month" v-for="(item,index) in monthList">
+        <div v-bind:style="{left:DAY_WIDTH* item[1].offset +'px'}">
+          <div v-bind:style="{width:DAY_WIDTH* item[1].total +'px'}">
+            <span class="timeline-month-text">{{ item[0] }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div v-for="(t,i) in dates">
+        <div class="timeline-wrapper" v-bind:style="{left: ((DAY_WIDTH - 30) * i) + 'px'}">
+          <div class="timeline-index"><span>{{ t }}</span></div>
+        </div>
+      </div>
+
+
+      <div class="timeline-day">
+
+        <div v-bind:style="{left:todayOffset}" id="findNowPos">
+          <div class="timeline-today-line-pos-text">{{ currentTime }}</div>
+        </div>
+
+        <div class="timeline-wish-event-weapon" v-for="(value, i) in WISH.weapons">
+          <div class="card event-item "
+               v-bind:style="{width: wishWeapons[i].duration * DAY_WIDTH + 'px',left:durationWeapon * DAY_WIDTH + 30 + 'px'}">
+            <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
+              <!--              <div class="event-img responsive-img lazy"-->
+              <!--                   data-original="/assets/res/genshin-impact/wish/{{weapon.name | downcase | replace: ' ', '_' | append: '_' | append: weapon.image | append: '.jpg' }}">-->
+              <!--              </div>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-wish-event-character" v-for="(value, i) in WISH.characters">
+          <div class="card event-item event-item-background-{{CHARACTER[value.wish5star].ele}}"
+               v-bind:style="{width: wishCharacters[i].duration * DAY_WIDTH + 'px',left:durationCharacter * DAY_WIDTH + 30 + 'px'}">
+            <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
+              <!-- Modal Trigger -->
+              <a class="modal-trigger" href="#modal{{i}}">
+                <div class="event-img responsive-img lazy"
+                     data-original="https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/{{value.wish5star}}.png?raw=true">
+                </div>
+              </a>
+              <div class="left-align timeline-character-text ele-text-{{CHARACTER[value.wish5star].ele}}">
+                <div class="timeline-wish-name">
+                  {{ value.wishName }}
+                </div>
+                <div>
+                  <span class="timeline-character-prefix">{{ CHARACTER[value.wish5star].prefix }}</span>
+                  <span class="timeline-character-name">{{ CHARACTER[value.wish5star].name }}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+</template>
+
+<script>
+import "./genshin.css";
+import dayjs from "dayjs";
+import {WISH} from "./wish";
+import {CHARACTER} from "./characters";
+import "dayjs/locale/zh";
+import {processEvent} from "./eventHandle";
+import {getDuration} from "../utils";
+import {wishBegin, wishDeadline} from "./wishRecent";
+
+dayjs.locale("zh");
+
+
+const DAY_WIDTH = 25;
+let today = dayjs();
+let firstDay = dayjs();
+
+const eventObj = processEvent();
+
+let wishCharacters = eventObj.events[0];
+let wishWeapons = eventObj.events[1];
+let wishCharacterLength = wishCharacters.length;
+let wishWeaponLength = wishWeapons.length;
+let dates = eventObj.dates;
+let monthList = eventObj.monthList;
+let todayOffset = "";
+let durationCharacter = 0;
+let durationWeapon = 0;
+
+//设置时间轴
+const setTimeAxis = () => {
+  todayOffset = Math.abs(firstDay.diff(today, "day", true));
+  todayOffset = todayOffset * DAY_WIDTH + 30 + "px";
+};
+setTimeAxis();
+
+
+//当前时间定位 ----------------------------------------------------------------
+const setCurrentPos = () => {
+  // document.getElementById("setNowPos").scrollLeft = document.getElementById("findNowPos").offsetLeft - document.body.clientWidth / 2;
+};
+setCurrentPos();
+//---------------------------------------------------------------------------
+
+//祈愿角色信息
+const wishCharacterInfo = () => {
+  for (let i = 0; i < wishCharacterLength; ++i) {
+    let start = firstDay;
+    const end = dayjs(wishCharacters[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+    durationCharacter = end.diff(start, "day", true);
+    console.log(i, durationCharacter);
+
+    // if (wishCharacters[i].wish_2)
+    //   $(".event-item-character-" + i).css("marginTop", "140px");
+
+  }
+};
+wishCharacterInfo();
+//祈愿武器信息
+const wishWeaponInfo = () => {
+  for (let i = 0; i < wishWeaponLength; ++i) {
+    let start = firstDay;
+    const end = dayjs(wishWeapons[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+    durationWeapon = end.diff(start, "day", true);
+    console.log(i, durationWeapon);
+  }
+};
+wishWeaponInfo();
+
+export default {
+  name: "Timeline",
+  data() {
+    return {
+      monthList,
+      dates,
+      DAY_WIDTH,
+      todayOffset,
+      currentTime: new Date(),
+      WISH,
+      CHARACTER,
+      durationCharacter,
+      durationWeapon,
+      wishCharacters,
+      wishWeapons,
+    };
+  },
+  mounted() {
+    let _this = this;
+    this.timer1 = setInterval(() => {
+      _this.currentTime = dayjs().format("HH:mm:ss");
+    }, 1000);
+  },
+  beforeDestroy() {
+    if (this.timer1)
+      clearInterval(this.timer1);
+  },
+
+};
+</script>
+
+<style scoped>
+
+.card {
+  position: relative;
+  margin: 0.5rem 0 1rem 0;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+}
+
+.card .card-image {
+  position: relative;
+}
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+.waves-block {
+  display: block;
+}
+.container {
+  width: 99%;
+}
+
+.no-publish {
+  background: linear-gradient(to left, #444, rgb(0 0 0 / 0%)) no-repeat
+}
+
+.grey-no-publish {
+  filter: grayscale(100%) brightness(1) contrast(.5)
+}
+.s12{
+  width: 100%;
+  margin-left: auto;
+  left: auto;
+  right: auto;
+}
+
+</style>

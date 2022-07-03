@@ -29,5 +29,6 @@ export default defineUserConfig({
     "@GenshinPartySetup": path.resolve(__dirname, "./components/genshin/PartySetup.vue"),
     "@GenshinCharacters": path.resolve(__dirname, "./components/genshin/Characters.vue"),
     "@GenshinWish": path.resolve(__dirname, "./components/genshin/Wish.vue"),
+    "@GenshinTimeline": path.resolve(__dirname, "./components/genshin/Timeline.vue"),
   }
 });
