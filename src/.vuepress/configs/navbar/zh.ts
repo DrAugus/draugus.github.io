@@ -55,39 +55,6 @@ export const navbar_zh = navbar([
     ]
   },
   {
-    text: '社会',
-    icon: 'diagnoses',
-    link: url_social + '/',
-  },
-  {
-    text: '外链',
-    icon: 'democrat',
-    children: [
-      {
-        text: '原神',
-        link: 'https://draugus.github.io/genshin'
-      },
-      {
-        text: '英国王室',
-        children: [
-          {
-            text: '温莎',
-            link: 'https://draugus.github.io/RoyalFamily/'
-          },
-        ]
-      },
-      {
-        text: '博客',
-        children: [
-          {
-            text: '博文',
-            link: 'https://draugus.github.io/blog/'
-          },
-        ]
-      },
-    ]
-  },
-  {
     text: '赞助',
     icon: 'euro-sign',
     link: url_prefix + '/sponsor'
