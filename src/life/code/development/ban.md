@@ -5,6 +5,7 @@ navbar: false
 sidebar: false
 breadcrumb: false
 pageInfo: false
+toc: false
 contributors: false
 editLink: false
 lastUpdated: false
@@ -21,6 +22,7 @@ backtotop: false
 - 侧边栏
 - 路径导航
 - 页面信息
+- 目录
 - 贡献者
 - 编辑此页链接
 - 更新时间

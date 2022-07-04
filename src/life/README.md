@@ -1,8 +1,21 @@
 ---
 index: false
+pageInfo: false
+toc: false
 ---
 
 # 寄蜉蝣于天地
+
+<div class="heti heti--vertical">
+寄蜉蝣于天地 <br>渺沧海之一粟 <br>
+哀吾生之须臾 <br>羡长江之无穷 <br>
+挟飞仙以遨游 <br>抱明月而长终 <br>
+知不可乎骤得 <br>托遗响于悲风 <br>
+</div>
+
+## 最近在忙什么
+
+短期目标很重要
 
 生于一世
 
