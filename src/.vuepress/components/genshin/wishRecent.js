@@ -102,7 +102,7 @@ if (objWish.haveWish) {
         current.currentSrc.push(img);
         let s = formatDate(dayjs(wishCharacters[v].start));
         let e = formatDate(dayjs(wishCharacters[v].end));
-        console.log(s, e);
+        // console.log(s, e);
         current.currentDate.push(s + "~" + e);
     }
 }
@@ -120,14 +120,14 @@ for (let v of objWish.comingIndex) {
     future.futureSrc.push(img);
     let s = formatDate(dayjs(wishCharacters[v].start));
     let e = formatDate(dayjs(wishCharacters[v].end));
-    console.log(s, e);
+    // console.log(s, e);
     future.futureDate.push(s + "~" + e);
 }
 
-console.log(current, future);
+// console.log(current, future);
 
 export const wishDeadline = () => Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end));
 export const wishBegin = () => Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start));
 
-console.log(wishDeadline(), wishBegin());
+// console.log(wishDeadline(), wishBegin());
 

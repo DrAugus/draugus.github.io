@@ -140,7 +140,7 @@ const wishCharacterInfo = () => {
     let start = firstDay;
     const end = dayjs(wishCharacters[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
     durationCharacter = end.diff(start, "day", true);
-    console.log(i, durationCharacter);
+    // console.log(i, durationCharacter);
 
     // if (wishCharacters[i].wish_2)
     //   $(".event-item-character-" + i).css("marginTop", "140px");
@@ -154,7 +154,7 @@ const wishWeaponInfo = () => {
     let start = firstDay;
     const end = dayjs(wishWeapons[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
     durationWeapon = end.diff(start, "day", true);
-    console.log(i, durationWeapon);
+    // console.log(i, durationWeapon);
   }
 };
 wishWeaponInfo();
