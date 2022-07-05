@@ -102,4 +102,23 @@ The last building on the right is a bank 右边的最后一座楼是一家银行
 apartment one zero six 106号公寓  
 have a great time 玩得很尽兴  
 How was your first month at university 你在大学的第一个月怎么样  
+call the front desk 给前台打电话  
+will someone be cleaning the room today 今天会有人打扫房间吗  
+walk past the bus stop and turn right 走过公交站然后右转  
+will you be doing some activities tonight 你今晚将会进行一些活动吗  
+could you give me a wake-up call every day at six 你可以每天六点给我打一下叫醒电话吗  
+could you give us a ride to the airport 你能载我们去机场吗  
+The hotel's driver will give us a ride later 酒店司机晚一点将会载我们一程  
+I enjoyed my time here 我在这里过得很愉快  
+The heat is off in room eight zero two 802号房间没有暖气  
+Our staff will always be available 我们的工作人员将会随时待命  
+The water is off in my room 我的房间停水了  
+Could you carry these suitcase across the hall 你能把这些行李箱拿到走廊对面吗  
+This parking lot is for the customers 停车场是给顾客的  
+How many days will they be travelling in the UK  他们将会在英国旅游几天  
+Is the swimming pool across the hall 游泳池在走廊对面吗  
+I'll be staying here for a few extra days 我将会在这里再多待几天  
+
+
+
 
