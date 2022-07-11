@@ -12,6 +12,7 @@ export interface Cultivate {
 export interface Characters {
   id: string,
   name: string
+  prefix: string,
   star: number
   event_exclusive: boolean
   intro: string
@@ -25,6 +26,7 @@ export const CHARACTER = {
   kaedehara_kazuha: {
     id: "kaedehara_kazuha",
     name: "枫原万叶",
+    prefix: "红叶逐荒波",
     star: 5,
     event_exclusive: true,
     intro: "稻妻出身的浪人武士。为人谦和，个性温顺。年轻潇洒的外表下埋藏着许多往事。看似随性，心中却有独属于自己的行事准则。",
@@ -46,6 +48,7 @@ export const CHARACTER = {
   eula: {
     id: "eula",
     name: "优菈",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "优菈——常年在外作战的「浪花骑士」，反叛的旧贵族末裔。生于旧日宗室，身负罪恶血脉之人，的确需要独特的处世技巧，才能在偏见的高墙下安然行走。当然，这并不妨碍她与家族决裂，作为卓越的「浪花骑士」，在外游猎蒙德的敌人，完成她那意义独特的「复仇」。",
@@ -56,6 +59,7 @@ export const CHARACTER = {
   jean: {
     id: "jean",
     name: "琴",
+    prefix: "",
     star: 5,
     event_exclusive: false,
     intro: "身为西风骑士团的代理团长，琴一直忠于职守，为人们带来安宁。虽然并非天赋异禀，但通过刻苦训练，如今的她已然能够独当一面。当风魔龙的威胁开始临近，这位可靠的代理团长早已做好了准备，誓要守护蒙德。",
@@ -66,6 +70,7 @@ export const CHARACTER = {
   lisa: {
     id: "lisa",
     name: "丽莎",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "她是钟情于睡眠的知性魔女。作为西风骑士团图书馆的管理员，聪明的丽莎总能以最有效的方式将遇到的问题统统解决。虽然看似慵懒，但处变不惊的她似乎早已将一切尽数掌控。",
@@ -87,6 +92,7 @@ export const CHARACTER = {
   kaeya: {
     id: "kaeya",
     name: "凯亚",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "在西风骑士团里，凯亚是代理团长最信任的副手。凡是交托于他的任务，总能得到解决。在蒙德城中，风趣幽默的他同样深受人们的喜爱，然而这位谈吐不凡的骑士隐约有着什么不为人知的秘密。",
@@ -97,6 +103,7 @@ export const CHARACTER = {
   diluc: {
     id: "diluc",
     name: "迪卢克",
+    prefix: "",
     star: 5,
     event_exclusive: false,
     intro: "身为蒙德城第一富豪，风度翩翩的迪卢克总是以完美的贵公子形象示人。然而他真实的一面，是秉承坚定信念的战士，他那「不惜一切守护蒙德」的意志犹如火焰般炽热，令他能以恐怖的攻势，毫不留情地将一切敌人击溃。",
@@ -118,6 +125,7 @@ export const CHARACTER = {
   amber: {
     id: "amber",
     name: "安柏",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "活泼率直的少女，是蒙德城中唯一的侦察骑士。擅长使用风之翼的安柏，连续三年蝉联蒙德城的「飞行冠军」。作为西风骑士团的新星，今天的安柏依然活跃在第一线。",
@@ -128,6 +136,7 @@ export const CHARACTER = {
   venti: {
     id: "venti",
     name: "温迪",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "来路不明的吟游诗人，有时唱一些老掉牙的旧诗，有时又会唱出谁也没听过的新歌。喜欢苹果和热闹的气氛，讨厌奶酪和一切黏糊糊的物质。在引导「风」的元素力时，元素的塑形往往外显为羽毛，因为他很中意看上去轻飘飘的东西。",
@@ -163,6 +172,7 @@ export const CHARACTER = {
   beidou: {
     id: "beidou",
     name: "北斗",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "「南十字」船队头领，在璃月有着相当的声望。有人说她能开山劈海，有人说她善举剑引雷，还有人说，连可怖的冥海巨兽都不是北斗的一合之敌。外人也许会把这些话当做夸张的玩笑，但那些曾与北斗同航的人却会说——「世上若真有什么冥海巨兽，那北斗一定能将它劈作两截。」",
@@ -173,6 +183,7 @@ export const CHARACTER = {
   xingqiu: {
     id: "xingqiu",
     name: "行秋",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "璃月港飞云商会的二少爷，自幼便以勤奋好学、待人礼貌闻名。不过，即使是如此文雅的少年人，也有着动若脱兔的一面。",
@@ -194,6 +205,7 @@ export const CHARACTER = {
   ningguang: {
     id: "ningguang",
     name: "凝光",
+    prefix: "掩月天权",
     star: 4,
     event_exclusive: false,
     intro: "坐拥空中宫殿，有着大量传言的璃月权贵，脸上总是挂着优雅神秘的笑容。作为「璃月七星」中的天权星，她不仅象征着权力与律法，也代表着财富与才智。",
@@ -204,6 +216,7 @@ export const CHARACTER = {
   klee: {
     id: "klee",
     name: "可莉",
+    prefix: "逃跑的太阳",
     star: 5,
     event_exclusive: true,
     intro: "西风骑士团，火花骑士！永远伴随闪光与爆炸出现！——然后在琴团长严厉的目光注视下默默消失。虽然新炸药的配方，很多都是在被关禁闭的时候想出来的……但如果不被关禁闭的话，就更好了。",
@@ -214,6 +227,7 @@ export const CHARACTER = {
   zhongli: {
     id: "zhongli",
     name: "钟离",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "应「往生堂」邀请而来的神秘客卿。样貌俊美，举止高雅，拥有远超常人的学识。虽说来历不明，却知礼数、晓规矩。坐镇「往生堂」，能行天地万物之典仪。",
@@ -243,6 +257,7 @@ export const CHARACTER = {
   fischl: {
     id: "fischl",
     name: "菲谢尔",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "自称「断罪之皇女」，与名为奥兹的漆黑夜鸦同行的神秘少女。目前正以调查员身份供职于冒险家协会。通过自己的特殊能力加上奇妙的个性，还有本人不愿意承认的努力，菲谢尔成为了冒险家协会调查员中的新星，且成功赢得了大家的认可。",
@@ -253,6 +268,7 @@ export const CHARACTER = {
   bennett: {
     id: "bennett",
     name: "班尼特",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "蒙德城冒险家协会为数不多的年轻冒险家，一直被莫名的「不幸」所纠缠。他所创立的「班尼冒险团」，在「不幸」的影响下不断有成员长期告假，目前仅有团长一人在队活动，已处于解散边缘。但在班尼特诚恳的请求下，蒙德城冒险家协会接待员凯瑟琳小姐为他保留了「班尼冒险团」的编制，同时，也向他隐瞒了其他成员早已跳槽的事实。",
@@ -280,10 +296,11 @@ export const CHARACTER = {
   tartaglia: {
     id: "tartaglia",
     name: "达达利亚",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "达达利亚——来自寒冰之国，心思变幻莫测的客人。不必猜测他的想法，也无需质疑他的来意。只要记住：这副稚气未脱的外表下暗藏的，是锤炼到极致的战士之躯。",
-    city: "Snezhnayan",
+    city: City.Snezhnaya,
     ele: Element.hydro,
     weapon: Weapon.bow
   },
@@ -301,6 +318,7 @@ export const CHARACTER = {
   qiqi: {
     id: "qiqi",
     name: "七七",
+    prefix: "",
     star: 5,
     event_exclusive: false,
     intro: "药庐「不卜庐」的采药姑娘兼学徒。因「仙缘」而拥有不死之身，行动时需要自己给自己下敕令。七七的记忆力非常差，为了保证日常生活的顺利，她随身携带着一本笔记，写有各种各样的注意事项。但在最不巧的那些日子里，她连「要看笔记」这件事都会忘记……",
@@ -311,6 +329,7 @@ export const CHARACTER = {
   chongyun: {
     id: "chongyun",
     name: "重云",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "以璃月为中心，四处进行驱邪活动的云游方士。作为驱邪世家继承人，他自幼便有过人的绝技。然而，这种绝技并非学自师门，而是与生俱来的异能——「纯阳之体」。",
@@ -321,6 +340,7 @@ export const CHARACTER = {
   ganyu: {
     id: "ganyu",
     name: "甘雨",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "璃月七星的秘书，体内流淌着人类与仙兽的血脉。天性优雅娴静，但仙兽「麒麟」温柔的性情与坚定毅重的工作态度毫无冲突。毕竟，甘雨坚信自己所做的一切工作都是为了践行与帝君的契约，谋求璃月众生的最大福祉。",
@@ -331,6 +351,7 @@ export const CHARACTER = {
   albedo: {
     id: "albedo",
     name: "阿贝多",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "阿贝多——现定居蒙德的炼金术士，效力于西风骑士团。「天才」、「白垩之子」或「调查队长」…他不怎么在意称号和名望，只专注于研究课题。财富和人脉不是他的目标。他渴望驾驭的，是从古到今深藏于人类头脑中的无上知识。",
@@ -341,6 +362,7 @@ export const CHARACTER = {
   diona: {
     id: "diona",
     name: "迪奥娜",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "「猫尾酒馆」的超人气调酒师，蒙德酒业的超新星，传统势力的最大挑战者。出身于清泉镇的猫耳猫尾少女，只要经迪奥娜之手调制过的酒类，都会变成难以想象的美味佳酿。然而对于极度厌恶酒类的她来说，这到底是一种「祝福」还是「诅咒」呢？",
@@ -351,6 +373,7 @@ export const CHARACTER = {
   mona: {
     id: "mona",
     name: "莫娜",
+    prefix: "",
     star: 5,
     event_exclusive: false,
     intro: "神秘的少女占星术士，声称自己是「伟大的占星术士莫娜」，拥有与名号相符的不俗实力，博学而高傲。尽管过着拮据、清贫的生活，但她坚决不用占卜来牟利…正是这种坚持，导致莫娜总是在为生计发愁。",
@@ -361,6 +384,7 @@ export const CHARACTER = {
   keqing: {
     id: "keqing",
     name: "刻晴",
+    prefix: "",
     star: 5,
     event_exclusive: false,
     intro: "璃月七星之一，玉衡星。对「帝君一言而决的璃月」颇有微词——但实际上，神挺欣赏她这样的人。她坚信与人类命运相关的事，应当由人类去做，而且人类一定可以做得更好。为了证明这一点，她比任何人都要努力。",
@@ -382,6 +406,7 @@ export const CHARACTER = {
   xinyan: {
     id: "xinyan",
     name: "辛焱",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "在璃月港，摇滚属于新兴艺术，辛焱则是这门艺术身先士卒的践行者。她用音乐和热情歌颂着对「成见」的反抗，想要唤醒劳于世间昏昏沉沉的灵魂。如果有机会，请千万不要错过她的演出。",
@@ -403,6 +428,7 @@ export const CHARACTER = {
   hu_tao: {
     id: "hu_tao",
     name: "胡桃",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "胡桃——「往生堂」第七十七代堂主，掌控着璃月葬仪事务的重要人物。尽心尽力地为人们完成送别之仪，维护着世间阴阳平衡之道。除此以外还是个神奇打油诗人，诸多「杰作」被璃月人口口相传。",
@@ -413,6 +439,7 @@ export const CHARACTER = {
   yoimiya: {
     id: "yoimiya",
     name: "宵宫",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "才华横溢的烟花工匠，「长野原烟花店」的现任店主，被誉为「夏祭的女王」。热情似火的少女。未泯的童心与匠人的执着在她身上交织出了奇妙的焰色反应。",
@@ -445,6 +472,7 @@ export const CHARACTER = {
   raiden_shogun: {
     id: "raiden_shogun",
     name: "雷电将军",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "雷电将军——此世最殊胜威怖的雷霆化身，稻妻幕府的最高主宰。挟威权之鸣雷，逐永恒之孤道的寂灭者。",
@@ -483,6 +511,7 @@ export const CHARACTER = {
   sangonomiya_kokomi: {
     id: "sangonomiya_kokomi",
     name: "珊瑚宫心海",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "心海是海祇岛的「现人神巫女」，也就是现任海祇岛最高领袖。她通读兵法、擅长谋略，在军事上有着独特见解，也能将内政、外交等工作处理得井井有条。不过，这位人们眼中深不可测的领导者，似乎也有不为人知的一面…",
@@ -493,6 +522,7 @@ export const CHARACTER = {
   kujou_sara: {
     id: "kujou_sara",
     name: "九条裟罗",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "天领奉行的将领。行如风，言如誓，是位魄力过人的女性。她有着「神的笃信者」之名，将全部忠心都奉献给了雷电将军。将军所追求的「永恒」，也是她愿意为之而战的信念。",
@@ -531,6 +561,7 @@ export const CHARACTER = {
   aloy: {
     id: "aloy",
     name: "埃洛伊",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "来自诺拉的机敏猎手。随时能为正当之事挽弓放箭。",
@@ -541,6 +572,7 @@ export const CHARACTER = {
   thoma: {
     id: "thoma",
     name: "托马",
+    prefix: "渡来介者",
     star: 4,
     event_exclusive: false,
     intro: "社奉行神里家的家政官，同时也是活跃在稻妻的「地头蛇」。为人友善又富有亲和力，不论身处何处都能轻易融入人群。乍看似乎是个非常随性的人，实际上却很有责任感。无论对待工作或人际都有着格外认真的一面。",
@@ -568,6 +600,7 @@ export const CHARACTER = {
   arataki_itto: {
     id: "arataki_itto",
     name: "荒泷一斗",
+    prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "鬼族后裔，性格豪爽热血的快意男儿。如风一般迅猛，也如雷一般夺目。",
@@ -597,6 +630,7 @@ export const CHARACTER = {
   gorou: {
     id: "gorou",
     name: "五郎",
+    prefix: "",
     star: 4,
     event_exclusive: false,
     intro: "海祇军大将。身具领兵者威严的同时，又无高位者的倨傲。 无论何时何地都深受部下信赖，能让人毫无负担地寄托后背与心灵。",

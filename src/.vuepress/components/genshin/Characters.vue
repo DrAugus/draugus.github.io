@@ -2,9 +2,13 @@
 
   <div class="character-info" v-for="(value, key, index) in info">
 
-    <div>
-      {{ value.name }}
-    </div>
+    <Modal :info="{
+      header: value.name,
+      img:'https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/' + value.id +'.png?raw=true',
+      body: value.intro,
+      footer:'todo',
+     }"></Modal>
+
     <div class="character-avatar">
       <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + value.id +'.png?raw=true'">
     </div>
@@ -18,16 +22,21 @@
 <script>
 
 import {CHARACTER} from "./characters";
+import Modal from "./Modal.vue";
 
 export default {
   name: "Characters",
-
+  components: {Modal},
   data() {
     return {
-      info: CHARACTER
+      info: CHARACTER,
+      showModal: false
     };
-  }
+  },
+  mounted() {
 
+  },
+  methods: {}
 };
 </script>
 
