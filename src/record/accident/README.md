@@ -1,6 +1,5 @@
 ---
 title: 事故
-icon: car-crash
 index: false
 order: 1
 ---

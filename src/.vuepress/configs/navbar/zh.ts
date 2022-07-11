@@ -4,7 +4,7 @@ const url_prefix = '';
 
 const url_life = url_prefix + '/life';
 const url_learn = url_prefix + '/learn';
-const url_social = url_prefix + '/social';
+const url_record = url_prefix + '/record';
 
 export const navbar_zh = navbar([
   url_prefix + "/",
@@ -53,6 +53,11 @@ export const navbar_zh = navbar([
         ]
       }
     ]
+  },
+  {
+    text: "记录",
+    icon: 'box',
+    link: url_record + '/',
   },
   {
     text: '赞助',

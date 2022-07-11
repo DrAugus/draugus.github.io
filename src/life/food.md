@@ -1,6 +1,8 @@
 ---
 title: 🥪 饮食
 order: 2
+pageInfo: false
+toc: false
 ---
 
 <Food />

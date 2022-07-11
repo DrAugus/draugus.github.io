@@ -1,7 +1,8 @@
 ---
 title: 🎯 记忆
 index: false
-order: 7
+pageInfo: false
+toc: false
 ---
 
 > 当年称意须为乐 不到天明未肯休

@@ -12,7 +12,7 @@ export const local_zh = {
     '/learn/natural-science/': 'structure',
     '/learn/formal-science/': 'structure',
     '/learn/applied-science/': 'structure',
-    '/social/': 'structure',
+    '/record/': 'structure',
   },
 
   navbarLocales: {

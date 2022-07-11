@@ -1,6 +1,5 @@
 ---
 title: 历史
-icon: book
 index: false
 order: 1
 ---

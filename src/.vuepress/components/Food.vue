@@ -1,4 +1,14 @@
 <template>
+
+  <h2>成为Bot</h2>
+  <ul>
+    <li>Mon. 胖次打面团</li>
+    <li>Tue. 漠漠家</li>
+    <li>Wed. 秦味观</li>
+    <li>Thu. 大芝小士</li>
+    <li>Fri.</li>
+  </ul>
+
   <h2>吃什么选一个吧</h2>
 
   <span ref="choiceFromAll"></span>
