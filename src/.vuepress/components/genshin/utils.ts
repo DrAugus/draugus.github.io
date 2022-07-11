@@ -22,7 +22,13 @@ export enum City {
   Mondstadt,
   Liyue,
   Inazuma,
+  Sumeru,
+  Fontaine,
+  Natlan,
+  Snezhnaya,
 }
+
+export const CityZH = ["蒙德", "璃月", "稻妻", "须弥", "枫丹", "纳塔", "至冬"]
 
 export const ElementZH = ["风", "火", "冰", "雷", "水", "岩", "草"]
 

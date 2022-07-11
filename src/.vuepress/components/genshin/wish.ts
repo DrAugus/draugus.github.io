@@ -507,11 +507,7 @@ export const WISH = {
       start: "2022-05-31 11:00:00 +0800",
       end: "2022-06-21 17:59:59 +0800",
       wish5star: "xiao",
-      wish4star: [
-        "yanfei",
-        "noelle",
-        "barbara"
-      ],
+      wish4star: ["yanfei", "noelle", "barbara"],
       wishName: "「烟火之邀」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -534,7 +530,7 @@ export const WISH = {
       start: "2022-07-13 11:00:00 +0800",
       end: "2022-08-03 17:59:59 +0800",
       wish5star: "kaedehara_kazuha",
-      wish4star: "",
+      wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
       version: 2.8,
       wishName: "「叶落风随」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -546,7 +542,7 @@ export const WISH = {
       start: "2022-07-13 11:00:00 +0800",
       end: "2022-08-03 17:59:59 +0800",
       wish5star: "klee",
-      wish4star: "",
+      wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
       wishName: "「闪焰的驻足」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"

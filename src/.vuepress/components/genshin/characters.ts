@@ -686,5 +686,49 @@ export const CHARACTER = {
     city: City.Inazuma,
     ele: Element.electro,
     weapon: Weapon.sword
-  }
+  },
+  shikanoin_heizou: {
+    id: "shikanoin_heizou",
+    name: "鹿野院平藏",
+    prefix: "心朝乂安",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.anemo,
+    weapon: Weapon.sword
+  },
+  dori: {
+    id: "dori",
+    name: "多莉",
+    prefix: "梦园藏金",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.electro,
+    weapon: Weapon.sword
+  },
+  collei: {
+    id: "collei",
+    name: "柯莱",
+    prefix: "萃念初蘖",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.anemo,
+    weapon: Weapon.bow
+  },
+  tighnari: {
+    id: "tighnari",
+    name: "提纳里",
+    prefix: "浅蔚轻行",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.anemo,
+    weapon: Weapon.bow
+  },
 }
