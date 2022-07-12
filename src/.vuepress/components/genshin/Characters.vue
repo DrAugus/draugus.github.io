@@ -1,20 +1,18 @@
 <template>
 
-  <div class="character-info" v-for="(value, key, index) in info">
+  <div class="character-info">
 
-    <Modal :info="{
-      header: value.name,
-      img:'https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/' + value.id +'.png?raw=true',
-      body: value.intro,
-      footer:'todo',
-     }"></Modal>
+    <div v-for="(value, key, index) in info">
 
-    <div class="character-avatar">
-      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + value.id +'.png?raw=true'">
+      <Modal :info="{
+        name:value.name,
+        prefix:value.prefix,
+        id:value.id,
+        intro:value.intro,
+        }"></Modal>
+
     </div>
-    <blockquote>
-      {{ value.intro }}
-    </blockquote>
+
   </div>
 
 </template>
@@ -41,9 +39,10 @@ export default {
 </script>
 
 <style scoped>
-.character-avatar {
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
+
+.character-info {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
+
 </style>
