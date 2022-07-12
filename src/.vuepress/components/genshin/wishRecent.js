@@ -65,6 +65,7 @@ const getWishObj = () => {
             if (endAfter && startBefore) {
                 obj.wishIndex.push(wishCharacters[i].index2);
                 obj.isFuture = true;
+                break;
             }
         }
     }
@@ -74,8 +75,8 @@ const getWishObj = () => {
     //存放所有未来的祈愿
     if (obj.wishIndex.length) {
         let startIndex = obj.wishIndex[obj.wishIndex.length - 1];
-        if (obj.isFuture) obj.comingIndex.push(startIndex);
-        else ++startIndex;
+        obj.comingIndex.push(startIndex);
+        ++startIndex;
         for (let i = startIndex; i < wishLength; ++i) {
             obj.comingIndex.push(i);
         }
@@ -88,7 +89,7 @@ console.log("objWish", objWish);
 
 
 export let current = {
-    able: !!objWish.wishIndex[0],
+    able: objWish.haveWish,
     currentDate: [],
     currentSrc: []
 };
@@ -108,7 +109,7 @@ if (objWish.haveWish) {
 }
 
 export let future = {
-    able: !!objWish.comingIndex[0],
+    able: objWish.isFuture,
     futureDate: [],
     futureSrc: []
 };

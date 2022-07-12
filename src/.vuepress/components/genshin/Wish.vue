@@ -12,7 +12,7 @@
 
   </div>
   <div v-else>
-    暂无祈愿，敬请期待
+    <h2>现在 暂无祈愿，敬请期待</h2>
   </div>
 
   <div v-if="future.able">
@@ -28,7 +28,7 @@
 
   </div>
   <div v-else>
-    未来祈愿，等待更新
+    <h2>未来祈愿，等待更新</h2>
   </div>
 
 </template>
