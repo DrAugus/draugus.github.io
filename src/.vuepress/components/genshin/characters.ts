@@ -751,7 +751,7 @@ export const CHARACTER = {
     event_exclusive: true,
     intro: "",
     city: City.Sumeru,
-    ele: Element.anemo,
+    ele: Element.dendro,
     weapon: Weapon.bow
   },
   tighnari: {
@@ -762,7 +762,7 @@ export const CHARACTER = {
     event_exclusive: true,
     intro: "",
     city: City.Sumeru,
-    ele: Element.anemo,
+    ele: Element.dendro,
     weapon: Weapon.bow
   },
 }

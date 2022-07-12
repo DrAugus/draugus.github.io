@@ -1,5 +1,7 @@
 ---
 title: 原神角色
+pageInfo: false
+toc: false
 ---
 
 <GenshinCharacters />

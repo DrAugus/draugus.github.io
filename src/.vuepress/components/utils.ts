@@ -36,3 +36,8 @@ export const getDuration = (type, start, end) => {
   return $array;
 };
 
+// https://stackoverflow.com/questions/5072136/javascript-filter-for-objects
+export const objFilter = (obj, predicate) =>
+    Object.keys(obj)
+        .filter(key => predicate(obj[key]))
+        .reduce((res, key) => (res[key] = obj[key], res), {});

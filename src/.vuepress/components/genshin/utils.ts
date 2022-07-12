@@ -36,6 +36,8 @@ export enum Weapon {
   sword, claymore, catalyst, bow, polearm
 }
 
+export const WeaponZH = ["单手剑", "双手剑", "法器", "弓", "长柄武器"]
+
 export enum Artifacts {
   flower, plume, sands, goblet, circlet
 }
