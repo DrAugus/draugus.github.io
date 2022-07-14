@@ -3,8 +3,10 @@ import {navbar} from "vuepress-theme-hope";
 const url_prefix = '';
 
 const url_life = url_prefix + '/life';
+const url_game = url_prefix + '/game';
 const url_learn = url_prefix + '/learn';
 const url_record = url_prefix + '/record';
+const url_code = url_prefix + '/code';
 
 export const navbar_zh = navbar([
   url_prefix + "/",
@@ -12,6 +14,11 @@ export const navbar_zh = navbar([
     text: "生活",
     icon: 'bed',
     link: url_life + '/',
+  },
+  {
+    text: "游戏",
+    icon: 'gamepad',
+    link: url_game + '/',
   },
   {
     text: '学习',
@@ -58,6 +65,11 @@ export const navbar_zh = navbar([
     text: "记录",
     icon: 'box',
     link: url_record + '/',
+  },
+  {
+    text: "编码",
+    icon: 'code',
+    link: url_code + '/',
   },
   {
     text: '赞助',

@@ -13,6 +13,8 @@ export const local_zh = {
     '/learn/formal-science/': 'structure',
     '/learn/applied-science/': 'structure',
     '/record/': 'structure',
+    '/code/': 'structure',
+    '/game/': 'structure',
   },
 
   navbarLocales: {
