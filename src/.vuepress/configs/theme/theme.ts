@@ -56,7 +56,7 @@ export default hopeTheme({
       filter: (page) => !!page.frontmatter.article,
     },
 
-    components: ["Badge", "CodePen", "FontIcon", "PDF", "StackBlitz", "YouTube"],
+    components: ["Badge", "CodePen", "PDF", "StackBlitz", "YouTube"],
 
     // If you don't need to comment feature, you can remove following option
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.

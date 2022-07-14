@@ -6,7 +6,7 @@ toc: false
 
 > 本项目开发过程
 
-- 20220516: 受[Snap.Genshin.Docs][Snap]启发，模仿，并立项。初步目标为，apple、war、docs [2b2be8d]。进行多语言支持，出于当前学习的语言，进行支持，支持部分页面的 🇩🇪 🇰🇷
+- 20220516: 受[Snap.Genshin.Docs][Snap]启发，模仿，并立项。初步目标为，apple、war、docs [2b2be8d] 进行多语言支持，出于当前学习的语言，进行支持，支持部分页面的 🇩🇪 🇰🇷
   🇫🇷 🇮🇹 🇬🇧 ~~当然现在已经除了主页全都不支持了~~ [5b17fd9]
 - 20220517: 构建踩坑 修复 采用 ACCESS_TOKEN 在GitHub配置 Secrets。feat giscus, can't work at that time
 - 20220519: feat accident memory
@@ -22,8 +22,8 @@ toc: false
 - 20220629: feat google analysis [2c1bf23]
 - 20220701: fix _ file [github-community], [8b69956] 
 - 20220704: feat [heti] 赫蹏 [ad71f7b]
-- 20220711: feat modal [dbf37f6]
-- 20220712: feat genshin [filter][filter-obj] [4f5cf06], css [grid], [cb517cc] , 另左右
+- 20220711: feat modal [dbf37f6], [组件传值][vue组件传值]
+- 20220712: feat genshin [filter][filter-obj] [4f5cf06], css [grid], [cb517cc]. 另左右滚动列表实现暂时抛弃，参见[原神官网角色]底部
 
 [zbl]: https://github.com/zbl5337
 [Snap]: https://github.com/DGP-Studio/Snap.Genshin.Docs
@@ -32,6 +32,8 @@ toc: false
 [grid]: https://www.runoob.com/css3/css-grid.html
 [github-community]: https://github.com/orgs/github-community/discussions/19794
 [heti]: https://github.com/sivan/heti
+[vue组件传值]: https://segmentfault.com/a/1190000022700216
+[原神官网角色]: https://genshin.hoyoverse.com/en/character/mondstadt?char=0
 
 [2b2be8d]: https://github.com/DrAugus/draugus.github.io/commit/2b2be8d34dcb6890822aadce20e7f5cd15a2764e
 [5b17fd9]: https://github.com/DrAugus/draugus.github.io/commit/5b17fd914da6e0aa75ba2a4def7e61af98fdb69d
