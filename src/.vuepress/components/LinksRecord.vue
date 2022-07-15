@@ -2,16 +2,16 @@
 
   <h2>Good Website</h2>
 
-  <ul v-for="(t,i) in allLinks.website.good">
-    <li v-if="t.url">
+  <ul>
+    <li v-for="(t,i) in allLinks.website.good">
       <a v-bind:href="t.url">{{ t.name }}<span v-if="t.tip">: {{ t.tip }}</span></a>
     </li>
   </ul>
 
   <h2>Backup</h2>
 
-  <ul v-for="(t,i) in allLinks.website.backup">
-    <li v-if="t.url">
+  <ul>
+    <li v-for="(t,i) in allLinks.website.backup">
       <a v-bind:href="t.url">{{ t.name }}<span v-if="t.tip">: {{ t.tip }}</span></a>
     </li>
   </ul>

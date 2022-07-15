@@ -189,6 +189,11 @@
         "url": "https://www.savetweetvid.com/",
         "name": "tweet video download",
         "tip": null
+      },
+      {
+        "url": "https://duibiao.info/",
+        "name": "职级对标",
+        "tip": "薪资查询 职级对标"
       }
     ],
     "backup": [
@@ -235,11 +240,6 @@
       {
         "url": "https://hk.v2ex.com/",
         "name": "一个程序员社区似乎需要科学工具",
-        "tip": null
-      },
-      {
-        "url": null,
-        "name": null,
         "tip": null
       }
     ]
