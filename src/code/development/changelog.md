@@ -22,7 +22,7 @@ toc: false
 - 20220629: feat google analysis [2c1bf23]
 - 20220701: fix _ file [github-community], [8b69956] 
 - 20220704: feat [heti] 赫蹏 [ad71f7b]
-- 20220711: feat modal [dbf37f6], [组件传值][vue组件传值]
+- 20220711: feat [modal], [组件传值][vue组件传值], [dbf37f6]
 - 20220712: feat genshin [filter][filter-obj] [4f5cf06], css [grid], [cb517cc]. 另左右滚动列表实现暂时抛弃，参见[原神官网角色]底部
 
 [zbl]: https://github.com/zbl5337
@@ -34,6 +34,7 @@ toc: false
 [heti]: https://github.com/sivan/heti
 [vue组件传值]: https://segmentfault.com/a/1190000022700216
 [原神官网角色]: https://genshin.hoyoverse.com/en/character/mondstadt?char=0
+[modal]: https://staging-cn.vuejs.org/examples/#modal
 
 [2b2be8d]: https://github.com/DrAugus/draugus.github.io/commit/2b2be8d34dcb6890822aadce20e7f5cd15a2764e
 [5b17fd9]: https://github.com/DrAugus/draugus.github.io/commit/5b17fd914da6e0aa75ba2a4def7e61af98fdb69d

@@ -56,6 +56,12 @@ export default hopeTheme({
       filter: (page) => !!page.frontmatter.article,
     },
 
+    feed: {
+      atom: true,
+      rss: true,
+      json: true,
+    },
+
     components: ["Badge", "CodePen", "PDF", "StackBlitz", "YouTube"],
 
     // If you don't need to comment feature, you can remove following option
