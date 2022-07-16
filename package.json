@@ -30,7 +30,9 @@
   "dependencies": {
     "@vue-leaflet/vue-leaflet": "^0.6.1",
     "dayjs": "^1.11.3",
+    "echarts": "^5.3.3",
     "leaflet": "^1.8.0",
-    "typed.js": "^2.0.12"
+    "typed.js": "^2.0.12",
+    "vue-echarts": "^6.2.3"
   }
 }
