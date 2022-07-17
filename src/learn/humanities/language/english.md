@@ -118,6 +118,24 @@ This parking lot is for the customers 停车场是给顾客的
 How many days will they be travelling in the UK  他们将会在英国旅游几天  
 Is the swimming pool across the hall 游泳池在走廊对面吗  
 I'll be staying here for a few extra days 我将会在这里再多待几天  
+The kitchen is next to the dining room 厨房在餐厅旁边  
+The people in this village are nicer 在这个村子里的人更友善  
+Do cows have four legs 牛有四条腿吗  
+what do cows eat 牛吃什么  
+we never finish school early 我们从来不提早放学  
+Emma needs to get on the train in one hour 艾玛需要在一个小时后上火车  
+The subway station isn't too far from here 地铁站离这里不太远  
+The gate is closed because the airplane is leaving soon 登机口关了因为飞机马上要离开  
+Duo wants to take a tour of this city 多儿想参观这个城市  
+You can't influence a jury. But a magistrate, there's room for manoeuvre. 你影响不到陪审团的，但是我们可以在地方执法官身上找到回旋余地  
+room for manoeuvre 回旋余地，可能性，机会  
+They'll get married next April 他们明年四月会结婚  
+His lunch break is in an hour and a half 他的午休在一个半小时后  
+How do you say your first name 您的名字怎么读  
+If you buy a shirt, you'll get a hat for free 如果你买一件衬衫 你会拿到一顶免费帽子  
+When does the bookstore close every day 书店每天都什么时候关门  
+Maybe he'll get me some fried chicken 也许他会给我买一些炸鸡  
+He's worried about the score that he got on the SAT 他很担心他在SAT上得到的成绩  
 
 
 
