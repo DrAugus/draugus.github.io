@@ -4397,21 +4397,6 @@ vuepress-plugin-clipboard@2.1.2:
     vue "^3.2.33"
     vue-router "^4.0.15"
 
-vuepress-plugin-comment2@2.0.0-beta.86:
-  version "2.0.0-beta.86"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-comment2/-/vuepress-plugin-comment2-2.0.0-beta.86.tgz#2f4b7ed39af89287621bd4dc9db8c29a2789d016"
-  integrity sha512-ZIQ8ubQbbiefj4zA2Ypom5RJ2Tq0lZXZf59A393k9NT3ohfaaMES2OSZknkqAplrMpYlm4fYN0eBBCkhPB8Iyw==
-  dependencies:
-    "@vuepress/client" "2.0.0-beta.49"
-    "@vuepress/utils" "2.0.0-beta.49"
-    "@waline/client" "^2.6.1"
-    giscus "^1.0.6"
-    twikoo "^1.5.11"
-    vue "^3.2.37"
-    vue-router "^4.1.2"
-    vuepress-plugin-sass-palette "2.0.0-beta.86"
-    vuepress-shared "2.0.0-beta.86"
-
 vuepress-plugin-comment2@2.0.0-beta.87:
   version "2.0.0-beta.87"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-comment2/-/vuepress-plugin-comment2-2.0.0-beta.87.tgz#0922022cb08953c050e4133c706b9705bc4ab5f2"
@@ -4543,16 +4528,6 @@ vuepress-plugin-reading-time2@2.0.0-beta.87:
   dependencies:
     vuepress-shared "2.0.0-beta.87"
 
-vuepress-plugin-sass-palette@2.0.0-beta.86:
-  version "2.0.0-beta.86"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-beta.86.tgz#37b5ed7ec484ca8a90c632a209072fa01235a54f"
-  integrity sha512-RW8hoq5/GRzJNVYCRjTjO938EdVhOjjSw3WnTDh6q7e/50BLai20Jc/qkU3vWzIG6VlCOe+BPFjdbT493gNmgw==
-  dependencies:
-    "@vuepress/utils" "2.0.0-beta.49"
-    chokidar "^3.5.3"
-    sass "^1.53.0"
-    vuepress-shared "2.0.0-beta.86"
-
 vuepress-plugin-sass-palette@2.0.0-beta.87:
   version "2.0.0-beta.87"
   resolved "https://registry.yarnpkg.com/vuepress-plugin-sass-palette/-/vuepress-plugin-sass-palette-2.0.0-beta.87.tgz#6fd85143ea1a3d3eea6c3f9ff1e82fd93e96fff4"
@@ -4582,21 +4557,6 @@ vuepress-plugin-sitemap2@2.0.0-beta.87:
     "@vuepress/utils" "2.0.0-beta.49"
     sitemap "^7.1.1"
     vuepress-shared "2.0.0-beta.87"
-
-vuepress-shared@2.0.0-beta.86:
-  version "2.0.0-beta.86"
-  resolved "https://registry.yarnpkg.com/vuepress-shared/-/vuepress-shared-2.0.0-beta.86.tgz#09c190644949f2a759011d90f77bc4ad57d0984b"
-  integrity sha512-8XjUscW4dmP59WxqhPg42okoarlybMNXAyi9k5J0KeQLHTeDMySSzqrYkF/iQdv63PKE3JFIhSRhUsaK0yedMw==
-  dependencies:
-    "@vuepress/client" "2.0.0-beta.49"
-    "@vuepress/plugin-git" "2.0.0-beta.49"
-    "@vuepress/shared" "2.0.0-beta.49"
-    "@vuepress/utils" "2.0.0-beta.49"
-    dayjs "^1.11.3"
-    execa "^5.1.1"
-    ora "^5.4.1"
-    vue "^3.2.37"
-    vue-router "^4.1.2"
 
 vuepress-shared@2.0.0-beta.87:
   version "2.0.0-beta.87"
