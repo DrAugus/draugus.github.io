@@ -1,4 +1,8 @@
-# 近期祈愿
+---
+title: 近期祈愿
+pageInfo: false
+toc: false
+---
 
 
 <GenshinWish />
