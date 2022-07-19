@@ -600,7 +600,7 @@ export const CHARACTER = {
   arataki_itto: {
     id: "arataki_itto",
     name: "荒泷一斗",
-    prefix: "",
+    prefix: "花坂豪快",
     star: 5,
     event_exclusive: true,
     intro: "鬼族后裔，性格豪爽热血的快意男儿。如风一般迅猛，也如雷一般夺目。",
@@ -747,7 +747,7 @@ export const CHARACTER = {
     id: "collei",
     name: "柯莱",
     prefix: "萃念初蘖",
-    star: 5,
+    star: 4,
     event_exclusive: true,
     intro: "",
     city: City.Sumeru,

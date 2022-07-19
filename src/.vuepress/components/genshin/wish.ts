@@ -557,7 +557,42 @@ export const WISH = {
       wish4star: "",
       wishName: "「焰色天河」",
       url: "https://bbs.mihoyo.com/ys/article/?"
-    }
+    },
+    {
+      name: "tighnari",
+      image: 1,
+      shortName: "Tighnari",
+      start: "2022-08-25 11:00:00 +0800",
+      end: "2022-09-15 14:59:59 +0800",
+      wish5star: "tighnari",
+      wish4star: ["collei", "bennett", "beidou"],
+      version: 3.0,
+      wishName: "「幽蔓狐生」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Gentry of Hermitage",
+      image: 4,
+      shortName: "Zhongli",
+      start: "2022-09-15 18:00:00 +0800",
+      end: "2022-10-05 14:59:59 +0800",
+      wish5star: "zhongli",
+      wish4star: ["dori", "xingqiu", "xiangling"],
+      wishName: "「陵薮市朝」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Adrift in the Harbor",
+      image: 3,
+      shortName: "Ganyu",
+      start: "2022-09-15 18:00:00 +0800",
+      end: "2022-10-05 14:59:59 +0800",
+      wish5star: "ganyu",
+      wish4star: ["dori", "xingqiu", "xiangling"],
+      wishName: "「浮生孰来」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
   ],
   weapons: [
     {
