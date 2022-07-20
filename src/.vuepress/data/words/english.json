@@ -1,23 +1,7 @@
 {
-  "example": [
-    [
-      "chinese",
-      "chinese2"
-    ],
-    [
-      "english_explain_1",
-      "Example_sentences_1"
-    ],
-    [
-      "english_explain_2",
-      "Example_sentences_2"
-    ]
-  ],
   "hazy": [
     [
-      "朦胧"
-    ],
-    [
+      "朦胧",
       "covered by a haze.",
       "the sky was hazy from irrigation evaporation"
     ]
@@ -25,77 +9,72 @@
   "afford": [
     [
       "买得起",
-      "给予"
-    ],
-    [
       "have enough money to pay for.",
       "the best that I could afford was a first-floor room"
     ],
     [
+      "给予",
       "provide or supply (an opportunity or facility)",
       "the rooftop terrace affords beautiful views"
     ]
   ],
   "chore": [
     [
-      "家务活"
-    ],
-    [
+      "家务活",
       "a routine task, especially a household one.",
       "the early risers were up and about, doing their chores"
     ]
   ],
   "weeding": [
     [
-      "除草"
-    ],
-    [
+      "除草",
       "remove unwanted plants from (an area of ground).",
       "I was weeding a flower bed"
     ]
   ],
   "nugget": [
     [
-      "掘金"
+      "天然贵重金属块",
+      "a small lump of gold or other precious metal found ready-formed in the earth."
     ],
     [
-      "a small lump of gold or other precious metal found ready-formed in the earth."
+      "小块",
+      "small lump",
+      "a nugget of bread"
+    ],
+    [
+      "宝贵的想法，有用的事实",
+      "figurative idea/fact",
+      "a nugget of news"
     ]
   ],
   "mind-blowing": [
     [
-      "令人兴奋的"
-    ],
-    [
+      "令人兴奋的",
       "overwhelmingly impressive.",
       "for a kid, Chicago was really mind-blowing"
     ]
   ],
   "poser": [
     [
-      "装腔作势"
-    ],
-    [
+      "装腔作势的人",
       "a person who acts in an affected manner in order to impress others."
     ],
     [
+      "难题",
       "a difficult or perplexing question or problem."
     ]
   ],
   "infatuation": [
     [
-      "痴情"
-    ],
-    [
+      "痴情",
       "an intense but short-lived passion or admiration for someone or something.",
       "he had developed an infatuation with the girl"
     ]
   ],
   "allegedly": [
     [
-      "据称"
-    ],
-    [
+      "据称",
       "used to convey that something is claimed to be the case or have taken place, although there is no proof.",
       "he was allegedly a leading participant in the coup attempt"
     ]
