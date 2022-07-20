@@ -4,8 +4,8 @@
   <blockquote>仅限下文收录的查询</blockquote>
   <input v-model="query_words" placeholder="输入需要查询的单词">
   <h3 @click="showResult"><a>点击</a>查询</h3>
-  <div>
-    <span>{{ query_res[0] }}</span><br>
+  <div v-if="query_res">
+    <span class="words-head">{{ query_words + " " }} </span><span>{{ query_res[0] }}</span><br>
     <ul class="words-list">
       <li>释义：{{ query_res[1] }}</li>
       <li v-if="query_res[2].length">近义：<span v-for="(vv,ii) in query_res[2]"> {{ vv + " " }} </span></li>
