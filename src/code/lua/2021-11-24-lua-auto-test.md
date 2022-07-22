@@ -1,14 +1,13 @@
 ---
-sidebar: false
-article: true
 title: lua自动化测试指南
 date: 2021-11-24 11:15:22  
 isOriginal: true
 category: 
   - 编程  
+
 tag: 
   - lua  
-excerpt: lua自动化测试指南
+
 ---
 
 
