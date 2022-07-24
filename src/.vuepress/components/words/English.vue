@@ -33,7 +33,7 @@ export default {
   name: "English",
   data() {
     return {
-      english,
+      english: english.words,
       query_words: null,
       query_res: null,
     };
@@ -42,7 +42,7 @@ export default {
     showResult() {
       let words = this.query_words;
       console.log(words);
-      this.query_res = english[words];
+      this.query_res = this.english[words];
     }
   }
 };
