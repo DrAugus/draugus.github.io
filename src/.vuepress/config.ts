@@ -31,7 +31,8 @@ export default defineUserConfig({
     "@GenshinWish": path.resolve(__dirname, "./components/genshin/Wish.vue"),
     "@GenshinTimeline": path.resolve(__dirname, "./components/genshin/Timeline.vue"),
 
-    "@EnglishWords": path.resolve(__dirname, "./components/words/English.vue"),
-    "@ChineseIdiom": path.resolve(__dirname, "./components/words/Idiom.vue"),
+    "@EnglishWords": path.resolve(__dirname, "./components/language/EnglishWords.vue"),
+    "@EnglishSentence": path.resolve(__dirname, "./components/language/EnglishSentence.vue"),
+    "@ChineseIdiom": path.resolve(__dirname, "./components/language/Idiom.vue"),
   }
 });

@@ -194,6 +194,11 @@
         "url": "https://duibiao.info/",
         "name": "职级对标",
         "tip": "薪资查询 职级对标"
+      },
+      {
+        "url": "https://www.remove.bg/",
+        "name": "Remove Image Background",
+        "tip": null
       }
     ],
     "backup": [

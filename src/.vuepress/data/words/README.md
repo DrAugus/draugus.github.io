@@ -16,27 +16,33 @@
 
 obj: key 为成语，value为定长数组 0 注音 1 释义 2 近义词数组 3 反义词数组 4 出处
 
-
 ## [ENGLISH json](./english.json)
 
 ```json
 {
-  "afford": [
-    [
-      "买得起",
-      "have enough money to pay for.",
-      "the best that I could afford was a first-floor room"
-    ],
-    [
-      "给予",
-      "provide or supply (an opportunity or facility)",
-      "the rooftop terrace affords beautiful views"
+  "words": {
+    "afford": [
+      [
+        "买得起",
+        "have enough money to pay for.",
+        "the best that I could afford was a first-floor room"
+      ],
+      [
+        "给予",
+        "provide or supply (an opportunity or facility)",
+        "the rooftop terrace affords beautiful views"
+      ]
     ]
+  },
+  "sentence": [
+    ["For how many nights?", "住几个晚上"],
+    []
   ]
 }
 ```
 
-obj: 
+obj:
+
 - words: obj key 为单词，value 为不定长数组，代表 0-N 个释义，每个释义内部分为 0 中文释义 1 英文释义 2 对应例句
-- sentence: 二维数组 
+- sentence: 二维数组 子数组 0 英 1 汉
 
