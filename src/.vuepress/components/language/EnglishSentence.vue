@@ -44,14 +44,6 @@ export default {
 </script>
 
 <style scoped>
-.words-part {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  line-height: 1.7;
-}
 
 .words-explain-en {
   font-style: italic;
