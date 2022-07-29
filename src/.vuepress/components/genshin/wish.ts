@@ -1,3 +1,4 @@
+// 20 + 21= 41 days one version
 export const WISH = {
   characters: [
     {
@@ -8,6 +9,7 @@ export const WISH = {
       end: "2020-10-18 17:59:59 +0800",
       version: "1.0",
       wish5star: "venti",
+      wish4star: ['barbara', 'fischl', 'xiangling'],
       wishName: "「杯装之诗」",
       url: "https://bbs.mihoyo.com/ys/article/1748378"
     },
@@ -18,6 +20,7 @@ export const WISH = {
       start: "2020-10-20 18:00:00 +0800",
       end: "2020-11-09 17:59:59 +0800",
       wish5star: "klee",
+      wish4star: ['xingqiu', 'sucrose', 'noelle'],
       wishName: "「闪焰的驻足」",
       url: "https://bbs.mihoyo.com/ys/article/2277693"
     },
@@ -29,6 +32,7 @@ export const WISH = {
       end: "2020-12-01 15:59:59 +0800",
       version: 1.1,
       wish5star: "tartaglia",
+      wish4star: ['ningguang', 'beidou', 'diona'],
       wishName: "「暂别冬都」",
       url: "https://bbs.mihoyo.com/ys/article/2563525"
     },
@@ -39,6 +43,7 @@ export const WISH = {
       start: "2020-12-01 18:00:00 +0800",
       end: "2020-12-22 14:59:59 +0800",
       wish5star: "zhongli",
+      wish4star: ['xinyan', 'razor', 'chongyun'],
       wishName: "「陵薮市朝」",
       url: "https://bbs.mihoyo.com/ys/article/2878243"
     },
@@ -50,6 +55,7 @@ export const WISH = {
       end: "2021-01-12 15:59:59 +0800",
       version: 1.2,
       wish5star: "albedo",
+      wish4star: ['fischl', 'bennett', 'sucrose'],
       wishName: "「深秘之息」",
       url: "https://bbs.mihoyo.com/ys/article/3236897"
     },
@@ -60,6 +66,7 @@ export const WISH = {
       start: "2021-01-12 18:00:00 +0800",
       end: "2021-02-02 14:59:59 +0800",
       wish5star: "ganyu",
+      wish4star: ['xingqiu', 'xiangling', 'noelle'],
       wishName: "「浮生孰来」",
       url: "https://bbs.mihoyo.com/ys/article/3661305"
     },
@@ -71,6 +78,7 @@ export const WISH = {
       end: "2021-02-17 15:59:59 +0800",
       version: 1.3,
       wish5star: "xiao",
+      wish4star: ['diona', 'xinyan', 'beidou'],
       wishName: "「烟火之邀」",
       url: "https://bbs.mihoyo.com/ys/article/4005715"
     },
@@ -81,6 +89,7 @@ export const WISH = {
       start: "2021-02-17 18:00:00 +0800",
       end: "2021-03-02 15:59:59 +0800",
       wish5star: "keqing",
+      wish4star: ['barbara', 'bennett', 'ningguang'],
       wishName: "「鱼龙灯昼」",
       url: "https://bbs.mihoyo.com/ys/article/4005720"
     },
@@ -91,6 +100,7 @@ export const WISH = {
       start: "2021-03-02 18:00:00 +0800",
       end: "2021-03-16 14:59:59 +0800",
       wish5star: "hu_tao",
+      wish4star: ['xingqiu', 'xiangling', 'chongyun'],
       wishName: "「赤团开时」",
       url: "https://bbs.mihoyo.com/ys/article/4701165"
     },
@@ -101,11 +111,7 @@ export const WISH = {
       start: "2021-03-17 11:00:00 +0800",
       end: "2021-04-06 15:59:59 +0800",
       wish5star: "venti",
-      wish4star: [
-        "sucrose",
-        "razor",
-        "noelle"
-      ],
+      wish4star: ["sucrose", "razor", "noelle"],
       version: 1.4,
       wishName: "「杯装之诗」",
       url: "https://bbs.mihoyo.com/ys/article/4959532"
@@ -528,7 +534,7 @@ export const WISH = {
       image: 2,
       shortName: "Kaedehara Kazuha",
       start: "2022-07-13 11:00:00 +0800",
-      end: "2022-08-03 17:59:59 +0800",
+      end: "2022-08-02 17:59:59 +0800",
       wish5star: "kaedehara_kazuha",
       wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
       version: 2.8,
@@ -540,7 +546,7 @@ export const WISH = {
       image: 3,
       shortName: "Klee",
       start: "2022-07-13 11:00:00 +0800",
-      end: "2022-08-03 17:59:59 +0800",
+      end: "2022-08-02 17:59:59 +0800",
       wish5star: "klee",
       wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
       wishName: "「闪焰的驻足」",
@@ -551,8 +557,8 @@ export const WISH = {
       name: "Tapestry of Golden Flames",
       image: 2,
       shortName: "Yoimiya",
-      start: "2022-08-03 18:00:00 +0800",
-      end: "2022-08-24 14:59:59 +0800",
+      start: "2022-08-02 18:00:00 +0800",
+      end: "2022-08-23 14:59:59 +0800",
       wish5star: "yoimiya",
       wish4star: "",
       wishName: "「焰色天河」",
@@ -601,10 +607,8 @@ export const WISH = {
       start: "2020-09-28 00:00:00 +0800",
       end: "2020-10-18 18:00:00 +0800",
       shortName: "Amos",
-      wish5star: [
-        "aquila_favonia",
-        "amos_bow"
-      ],
+      wish5star: ['aquila_favonia', 'amos_bow'],
+      wish4star: ['the_flute', 'the_bell', 'the_widsith', 'the_stringless', 'favonius_lance'],
       url: "https://bbs.mihoyo.com/ys/article/1748393"
     },
     {
@@ -613,10 +617,8 @@ export const WISH = {
       start: "2020-10-20 18:00:00 +0800",
       end: "2020-11-09 17:59:59 +0800",
       shortName: "Lost Prayer",
-      wish5star: [
-        "lost_prayer_to_the_sacred_winds",
-        "wolfs_gravestone"
-      ],
+      wish5star: ['lost_prayer_to_the_sacred_winds', 'wolfs_gravestone'],
+      wish4star: ['sacrificial_sword', 'sacrificial_bow', 'sacrificial_greatsword', 'sacrificial_fragments', 'dragons_bane',],
       url: "https://bbs.mihoyo.com/ys/article/2277850"
     },
     {
@@ -625,10 +627,8 @@ export const WISH = {
       start: "2020-11-11 06:00:00 +0800",
       end: "2020-12-01 16:00:00 +0800",
       shortName: "Skyward",
-      wish5star: [
-        "skyward_harp",
-        "memory_of_dust"
-      ],
+      wish5star: ['skyward_harp', 'memory_of_dust'],
+      wish4star: ['the_flute', 'rainslasher', 'eye_of_perception', 'rust', 'favonius_lance'],
       url: "https://bbs.mihoyo.com/ys/article/2563554"
     },
     {
@@ -637,10 +637,8 @@ export const WISH = {
       start: "2020-12-01 18:00:00 +0800",
       end: "2020-12-22 15:00:00 +0800",
       shortName: "Vortex",
-      wish5star: [
-        "vortex_vanquisher",
-        "the_unforged"
-      ],
+      wish5star: ['vortex_vanquisher', 'the_unforged'],
+      wish4star: ['lions_roar', 'the_bell', 'favonius_codex', 'favonius_warbow', 'dragons_bane'],
       url: "https://bbs.mihoyo.com/ys/article/2878254"
     },
     {
@@ -649,11 +647,8 @@ export const WISH = {
       start: "2020-12-23 06:00:00 +0800",
       end: "2021-01-12 16:00:00 +0800",
       shortName: "Summit",
-      version: true,
-      wish5star: [
-        "summit_shaper",
-        "skyward_atlas"
-      ],
+      wish5star: ['summit_shaper', 'skyward_atlas'],
+      wish4star: ['favonius_sword', 'favonius_greatsword', 'favonius_lance', 'sacrificial_fragments', 'the_stringless',],
       url: "https://bbs.mihoyo.com/ys/article/3236902"
     },
     {
@@ -662,10 +657,8 @@ export const WISH = {
       start: "2021-01-12 18:00:00 +0800",
       end: "2021-02-02 15:00:00 +0800",
       shortName: "Amos",
-      wish5star: [
-        "amos_bow",
-        "skyward_pride"
-      ],
+      wish5star: ['amos_bow', 'skyward_pride'],
+      wish4star: ['sacrificial_sword', 'the_bell', 'dragons_bane', 'eye_of_perception', 'favonius_warbow'],
       url: "https://bbs.mihoyo.com/ys/article/3661310"
     },
     {
@@ -674,11 +667,8 @@ export const WISH = {
       start: "2021-02-03 06:00:00 +0800",
       end: "2021-02-23 16:00:00 +0800",
       shortName: "Primordial",
-      version: true,
-      wish5star: [
-        "primordial_jade_winged-spear",
-        "primordial_jade_cutter"
-      ],
+      wish5star: ['primordial_jade_winged-spear', 'primordial_jade_cutter'],
+      wish4star: ['the_flute', 'sacrificial_greatsword', 'rust', 'eye_of_perception', 'favonius_lance'],
       url: "https://bbs.mihoyo.com/ys/article/4005726"
     },
     {
@@ -687,7 +677,8 @@ export const WISH = {
       start: "2021-02-23 18:00:00 +0800",
       end: "2021-03-16 15:00:00 +0800",
       shortName: "Homa",
-      wish5star: "wolfs_gravestone staff_of_homa",
+      wish5star: ['wolfs_gravestone', 'staff_of_homa'],
+      wish4star: ['lithic_blade', 'lithic_spear', 'lions_roar', 'sacrificial_bow', 'the_widsith'],
       url: "https://bbs.mihoyo.com/ys/article/4571433"
     },
     {
@@ -696,8 +687,8 @@ export const WISH = {
       start: "2021-03-17 06:00:00 +0800",
       end: "2021-04-06 16:00:00 +0800",
       shortName: "Elegy",
-      wish5star: "elegy_for_the_end skyward_blade",
-      wish4star: "the_alley_flash wine_and_song favonius_greatsword favonius_warbow dragons_bane",
+      wish5star: ['elegy_for_the_end', 'skyward_blade'],
+      wish4star: ['the_alley_flash', 'wine_and_song', 'favonius_greatsword', 'favonius_warbow', 'dragons_bane'],
       url: "https://bbs.mihoyo.com/ys/article/4959533"
     },
     {
@@ -706,8 +697,8 @@ export const WISH = {
       start: "2021-04-06 18:00:00 +0800",
       end: "2021-04-27 15:00:00 +0800",
       shortName: "Skyward",
-      wish5star: "skyward_harp lost_prayer_to_the_sacred_winds",
-      wish4star: "alley_hunter favonius_codex favonius_lance sacrificial_greatsword favonius_sword",
+      wish5star: ['skyward_harp', 'lost_prayer_to_the_sacred_winds'],
+      wish4star: ['alley_hunter', 'favonius_codex', 'favonius_lance', 'sacrificial_greatsword', 'favonius_sword'],
       url: "https://bbs.mihoyo.com/ys/article/5305224"
     },
     {
@@ -716,8 +707,8 @@ export const WISH = {
       start: "2021-04-28 06:00:00 +0800",
       end: "2021-05-18 17:59:59 +0800",
       shortName: "Summit",
-      wish5star: "summit_shaper memory_of_dust",
-      wish4star: "lithic_blade lithic_spear sacrificial_bow eye_of_perception the_flute",
+      wish5star: ['summit_shaper', 'memory_of_dust'],
+      wish4star: ['lithic_blade', 'lithic_spear', 'sacrificial_bow', 'eye_of_perception', 'the_flute'],
       url: "https://bbs.mihoyo.com/ys/article/5726196"
     },
     {
@@ -726,8 +717,8 @@ export const WISH = {
       start: "2021-05-18 18:00:00 +0800",
       end: "2021-06-08 15:00:00 +0800",
       shortName: "Pines",
-      wish5star: "song_of_broken_pines aquila_favonia",
-      wish4star: "rust sacrificial_fragments dragons_bane rainslasher sacrificial_sword",
+      wish5star: ['song_of_broken_pines', 'aquila_favonia'],
+      wish4star: ['rust', 'sacrificial_fragments', 'dragons_bane', 'rainslasher', 'sacrificial_sword'],
       url: "https://bbs.mihoyo.com/ys/article/6179334"
     },
     {
@@ -736,9 +727,8 @@ export const WISH = {
       start: "2021-06-09 06:00:00 +0800",
       end: "2021-06-29 17:59:59 +0800",
       shortName: "Lost Prayer",
-      wish5star: "lost_prayer_to_the_sacred_winds skyward_pride",
-      wish4star: "mitternachts_waltz lions_roar the_bell favonius_lance the_widsith",
-      version: true,
+      wish5star: ['lost_prayer_to_the_sacred_winds', 'skyward_pride'],
+      wish4star: ['mitternachts_waltz', 'lions_roar', 'the_bell', 'favonius_lance', 'the_widsith'],
       url: "https://bbs.mihoyo.com/ys/article/6634464"
     },
     {
@@ -747,8 +737,8 @@ export const WISH = {
       start: "2021-06-29 18:00:00 +0800",
       end: "2021-07-20 14:59:59 +0800",
       shortName: "Freedom-Sworn",
-      wish5star: "freedom-sworn skyward_atlas",
-      wish4star: "the_alley_flash wine_and_song alley_hunter favonius_greatsword dragons_bane",
+      wish5star: ['freedom-sworn', 'skyward_atlas'],
+      wish4star: ['the_alley_flash', 'wine_and_song', 'alley_hunter', 'favonius_greatsword', 'dragons_bane'],
       url: "https://bbs.mihoyo.com/ys/article/7067773"
     },
     {
@@ -757,9 +747,8 @@ export const WISH = {
       start: "2021-07-21 06:00:00 +0800",
       end: "2021-08-10 17:59:59 +0800",
       shortName: "Mistsplitter",
-      wish5star: "mistsplitter_reforged skyward_spine",
-      wish4star: "favonius_sword sacrificial_greatsword favonius_lance favonius_codex the_stringless",
-      version: true,
+      wish5star: ['mistsplitter_reforged', 'skyward_spine'],
+      wish4star: ['favonius_sword', 'sacrificial_greatsword', 'favonius_lance', 'favonius_codex', 'the_stringless'],
       url: "https://bbs.mihoyo.com/ys/article/7578979"
     },
     {
@@ -768,8 +757,8 @@ export const WISH = {
       start: "2021-08-10 18:00:00 +0800",
       end: "2021-08-31 14:59:59 +0800",
       shortName: "Thundering Pulse",
-      wish5star: "thundering_pulse skyward_blade",
-      wish4star: "sacrificial_sword rainslasher dragons_bane sacrificial_fragments favonius_warbow",
+      wish5star: ['thundering_pulse', 'skyward_blade'],
+      wish4star: ['sacrificial_sword', 'rainslasher', 'dragons_bane', 'sacrificial_fragments', 'favonius_warbow'],
       url: "https://bbs.mihoyo.com/ys/article/8275803"
     },
     {
@@ -778,9 +767,8 @@ export const WISH = {
       start: "2021-09-01 06:00:00 +0800",
       end: "2021-09-21 17:59:59 +0800",
       shortName: "Engulfing",
-      wish5star: "engulfing_lightning the_unforged",
-      wish4star: "lions_roar the_bell favonius_lance the_widsith sacrificial_bow",
-      version: true,
+      wish5star: ['engulfing_lightning', 'the_unforged'],
+      wish4star: ['lions_roar', 'the_bell', 'favonius_lance', 'the_widsith', 'sacrificial_bow'],
       url: "https://bbs.mihoyo.com/ys/article/9004345"
     },
     {
@@ -789,8 +777,8 @@ export const WISH = {
       start: "2021-09-21 18:00:00 +0800",
       end: "2021-10-12 14:59:59 +0800",
       shortName: "Moonglow",
-      wish5star: "primordial_jade_cutter everlasting_moonglow",
-      wish4star: "the_flute favonius_greatsword dragons_bane favonius_codex the_stringless",
+      wish5star: ['primordial_jade_cutter', 'everlasting_moonglow'],
+      wish4star: ['the_flute', 'favonius_greatsword', 'dragons_bane', 'favonius_codex', 'the_stringless'],
       url: "https://bbs.mihoyo.com/ys/article/9679285"
     },
     {
@@ -799,9 +787,8 @@ export const WISH = {
       start: "2021-10-13 06:00:00 +0800",
       end: "2021-11-02 17:59:59 +0800",
       shortName: "Polar Star",
-      wish5star: "polar_star memory_of_dust",
-      wish4star: "akuoumaru favonius_sword favonius_lance eye_of_perception rust",
-      version: true,
+      wish5star: ['polar_star', 'memory_of_dust'],
+      wish4star: ['akuoumaru', 'favonius_sword', 'favonius_lance', 'eye_of_perception', 'rust'],
       url: "https://bbs.mihoyo.com/ys/article/10755907"
     },
     {
@@ -810,8 +797,8 @@ export const WISH = {
       start: "2021-11-02 18:00:00 +0800",
       end: "2021-11-23 14:59:59 +0800",
       shortName: "Homa",
-      wish5star: "staff_of_homa elegy_for_the_end",
-      wish4star: "wavebreakers_fin mouuns_moon sacrificial_sword rainslasher the_widsith",
+      wish5star: ['staff_of_homa', 'elegy_for_the_end'],
+      wish4star: ['wavebreakers_fin', 'mouuns_moon', 'sacrificial_sword', 'rainslasher', 'the_widsith'],
       url: "https://bbs.mihoyo.com/ys/article/11444617"
     },
     {
@@ -820,17 +807,8 @@ export const WISH = {
       start: "2021-11-24 11:00:00 +0800",
       end: "2021-12-14 17:59:59 +0800",
       shortName: "",
-      wish5star: [
-        "freedom-sworn",
-        "song_of_broken_pines"
-      ],
-      wish4star: [
-        "wine_and_song",
-        "alley_hunter",
-        "lions_roar",
-        "sacrificial_greatsword",
-        "dragons_bane"
-      ],
+      wish5star: ['freedom-sworn', 'song_of_broken_pines'],
+      wish4star: ['wine_and_song', 'alley_hunter', 'lions_roar', 'sacrificial_greatsword', 'dragons_bane'],
       url: "https://bbs.mihoyo.com/ys/article/11444617"
     },
     {
@@ -839,9 +817,8 @@ export const WISH = {
       start: "2021-12-14 18:00:00 +0800",
       end: "2022-01-04 17:59:59 +0800",
       shortName: "Redhorn",
-      wish5star: "redhorn_stonethresher skyward_harp",
-      wish4star: "the_alley_flash mitternachts_waltz the_bell favonius_lance sacrificial_fragments",
-      "timezoneDependent": true,
+      wish5star: ['redhorn_stonethresher', 'skyward_harp'],
+      wish4star: ['the_alley_flash', 'mitternachts_waltz', 'the_bell', 'favonius_lance', 'sacrificial_fragments'],
       url: "https://ys.mihoyo.com/main/news/detail/18668"
     },
     {
@@ -850,17 +827,8 @@ export const WISH = {
       start: "2022-01-05 11:00:00 +0800",
       end: "2022-01-25 17:59:59 +0800",
       shortName: "Queller",
-      wish5star: [
-        "calamity_queller",
-        "primordial_jade_winged-spear"
-      ],
-      wish4star: [
-        "lithic_spear",
-        "the_flute",
-        "favonius_greatsword",
-        "the_widsith",
-        "favonius_warbow"
-      ],
+      wish5star: ['calamity_queller', 'primordial_jade_winged-spear'],
+      wish4star: ['lithic_spear', 'the_flute', 'favonius_greatsword', 'the_widsith', 'favonius_warbow'],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {
@@ -869,17 +837,8 @@ export const WISH = {
       start: "2022-01-25 18:00:00 +0800",
       end: "2022-02-15 14:59:59 +0800",
       shortName: "Amos",
-      wish5star: [
-        "amos_bow",
-        "vortex_vanquisher"
-      ],
-      wish4star: [
-        "lithic_blade",
-        "favonius_sword",
-        "dragons_bane",
-        "favonius_codex",
-        "sacrificial_bow"
-      ],
+      wish5star: ['amos_bow', 'vortex_vanquisher'],
+      wish4star: ['lithic_blade', 'favonius_sword', 'dragons_bane', 'favonius_codex', 'sacrificial_bow'],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {
@@ -887,18 +846,9 @@ export const WISH = {
       image: 25,
       start: "2022-02-16 11:00:00 +0800",
       end: "2022-03-08 17:59:59 +0800",
-      shortName: "",
-      wish5star: [
-        "kaguras_verity",
-        "primordial_jade_cutter"
-      ],
-      wish4star: [
-        "wavebreakers_fin",
-        "sacrificial_sword",
-        "rainslasher",
-        "eye_of_perception",
-        "the_stringless"
-      ],
+      shortName: 'Verity',
+      wish5star: ['kaguras_verity', 'primordial_jade_cutter'],
+      wish4star: ['wavebreakers_fin', 'sacrificial_sword', 'rainslasher', 'eye_of_perception', 'the_stringless'],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {
@@ -906,17 +856,9 @@ export const WISH = {
       image: 26,
       start: "2022-03-08 18:00:00 +0800",
       end: "2022-03-29 14:59:59 +0800",
-      shortName: "",
-      wish5star: [
-        "engulfing_lightning",
-        "everlasting_moonglow"
-      ],
-      wish4star: [
-        "akuoumaru",
-        "mouun's_moon,lion's_roar",
-        "favonius_lance",
-        "sacrificial_fragments"
-      ],
+      shortName: 'Engulfing',
+      wish5star: ['engulfing_lightning', 'everlasting_moonglow'],
+      wish4star: ['akuoumaru', 'mouuns_moon', 'lions_roar', 'favonius_lance', 'sacrificial_fragments'],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {
@@ -924,18 +866,9 @@ export const WISH = {
       image: 27,
       start: "2022-03-30 11:00:00 +0800",
       end: "2022-04-19 17:59:59 +0800",
-      shortName: "",
-      wish5star: [
-        "haran_geppaku_futsu",
-        "elegy_for_the_end"
-      ],
-      wish4star: [
-        "the_flute",
-        "sacrificial_greatsword",
-        "dragons_bane",
-        "the_widsith",
-        "rust"
-      ],
+      shortName: 'Haran',
+      wish5star: ['haran_geppaku_futsu', 'elegy_for_the_end'],
+      wish4star: ['the_flute', 'sacrificial_greatsword', 'dragons_bane', 'the_widsith', 'rust'],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {
@@ -943,18 +876,9 @@ export const WISH = {
       image: 28,
       start: "2022-04-19 18:00:00 +0800",
       end: "2022-05-31 05:59:59 +0800",
-      shortName: "",
-      wish5star: [
-        "Mistsplitter Reforged",
-        "The Unforged"
-      ],
-      wish4star: [
-        "Favonius Sword",
-        "The Bell",
-        "Favonius Lance",
-        "Favonius Codex",
-        "and Favonius Warbow"
-      ],
+      shortName: 'Mistsplitter',
+      wish5star: ['mistsplitter_reforged', 'the_unforged'],
+      wish4star: ['favonius_sword', 'the_bell', 'favonius_lance', 'favonius_codex', 'favonius_warbow'],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {
@@ -962,19 +886,28 @@ export const WISH = {
       image: 29,
       start: "2022-05-31 11:00:00 +0800",
       end: "2022-06-21 17:59:59 +0800",
-      shortName: "",
-      wish5star: [
-        "Mistsplitter Reforged",
-        "The Unforged"
-      ],
-      wish4star: [
-        "Favonius Sword",
-        "The Bell",
-        "Favonius Lance",
-        "Favonius Codex",
-        "and Favonius Warbow"
-      ],
+      shortName: 'Aqua',
+      wish5star: ['aqua_simulacra', 'primordial_jade_winged-spear'],
+      wish4star: ['lithic_spear', 'sacrificial_sword', 'favonius_greatsword', 'eye_of_perception', 'sacrificial_bow',],
       url: "https://ys.mihoyo.com/main/news/detail/"
-    }
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 30,
+      start: '2022-06-21 18:00:00 +0800',
+      end: '2022-07-12 14:59:59 +0800',
+      shortName: 'Redhorn',
+      wish5star: ['redhorn_stonethresher', 'memory_of_dust'],
+      wish4star: ['lithic_blade', 'lions_roar', 'dragons_bane', 'sacrificial_fragments', 'the_stringless'],
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 31,
+      start: '2022-07-13 06:00:00 +0800',
+      end: '2022-08-02 17:59:59 +0800',
+      shortName: 'Freedom-Sworn',
+      wish5star: ['freedom-sworn', 'lost_prayer_to_the_sacred_winds'],
+      wish4star: ['the_alley_flash', 'mitternachts_waltz', 'rainslasher', 'favonius_lance', 'the_widsith'],
+    },
   ]
 }

@@ -6,9 +6,9 @@ heroText: 祈愿时间轴
 tagline: 全部祈愿信息
 actions:
 - text: 返回上级
-  link: /life/game/genshin
+  link: /game/genshin
 - text: 当前祈愿
-  link: /life/game/genshin/wish
+  link: /game/genshin/wish
   type: primary
 ---
 
