@@ -1,5 +1,21 @@
 # What are you preparing to do
 
+## Hang in There
+
+- [BST查找树中是否有指定元素](https://raw.githubusercontent.com/DrAugus/cpp/master/src/leetcode/700.cpp)
+- [括号匹配](https://raw.githubusercontent.com/DrAugus/cpp/master/src/leetcode/20.cpp)
+- 十个桶的hash表，key%10，142存放在哪里
+- 搜索排序的时间复杂度
+- 合并有序/无序的两个数组时间复杂度
+- 排序算法的稳定性
+- 先序、中序、后序遍历
+- In a binary tree that has K nodes having two children and L leaves, show the relation between K and L
+- B-Trees are used commonly for ?
+- 影响哈希表查找的效率有哪些
+- Big(O) notation
+- A Priority-Queue is implemented as a Max-Heap. 最小堆、最大堆的插入
+- 双向链表什么时候比单链表效率更高
+
 ## 其他
 
 - 解释面向对象语言，C和C++的区别
