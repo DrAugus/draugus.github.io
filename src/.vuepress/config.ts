@@ -8,6 +8,16 @@ export default defineUserConfig({
   lang: 'en-US',
   title: 'AUGUS',
   description: 'Record Everything',
+  head: [
+    [
+      "link",
+      // https://vuepress-theme-hope.github.io/v2/zh/faq/vite.html#import-%E8%AF%AD%E6%B3%95%E6%97%A0%E6%95%88
+      {
+        rel: "stylesheet",
+        href: "//unpkg.com/heti/umd/heti.min.css",
+      },
+    ],
+  ],
   locales: siteLocalConfig.main,
   theme,
   plugins: plugin.main,
