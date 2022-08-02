@@ -1,0 +1,1 @@
+import{_ as a}from"./plugin-vue_export-helper.21dcd24c.js";import{o as r,c as t,a as e,b as n}from"./app.d1ff24bc.js";const o={},c=e("h1",{id:"german",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#german","aria-hidden":"true"},"#"),n(" German")],-1),s=[c];function _(d,m){return r(),t("div",null,s)}var l=a(o,[["render",_],["__file","german.html.vue"]]);export{l as default};

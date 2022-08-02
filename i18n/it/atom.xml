@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="it-IT">
+  <id>https://draugus.github.io/i18n/it/</id>
+  <title>AUGUS</title>
+  <subtitle>Registra tutto</subtitle>
+  <updated>2022-08-02T10:07:29.769Z</updated>
+  <generator>vuepress-plugin-feed2</generator>
+  <link rel="self" href="https://draugus.github.io/atom.xml"/>
+  <link rel="alternate" href="https://draugus.github.io/i18n/it/"/>
+  <entry>
+    <title type="html">Coding Everything</title>
+    <id>https://draugus.github.io/i18n/it/code/</id>
+    <link href="https://draugus.github.io/i18n/it/code/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="coding-everything" tabindex="-1"> Coding Everything</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Learn something</title>
+    <id>https://draugus.github.io/i18n/it/learn/</id>
+    <link href="https://draugus.github.io/i18n/it/learn/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="learn-something" tabindex="-1"> Learn something</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Life is beautiful</title>
+    <id>https://draugus.github.io/i18n/it/life/</id>
+    <link href="https://draugus.github.io/i18n/it/life/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="life-is-beautiful" tabindex="-1"> Life is beautiful</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Social is unbelievable</title>
+    <id>https://draugus.github.io/i18n/it/social/</id>
+    <link href="https://draugus.github.io/i18n/it/social/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="social-is-unbelievable" tabindex="-1"> Social is unbelievable</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+</feed>

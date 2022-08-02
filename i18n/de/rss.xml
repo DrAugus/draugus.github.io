@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://draugus.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>AUGUS</title>
+    <link>https://draugus.github.io/i18n/de/</link>
+    <description>Alles aufzeichnen</description>
+    <language>de-DE</language>
+    <pubDate>Tue, 02 Aug 2022 10:07:29 GMT</pubDate>
+    <lastBuildDate>Tue, 02 Aug 2022 10:07:29 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed2</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>Coding Everything</title>
+      <link>https://draugus.github.io/i18n/de/code/</link>
+      <guid>https://draugus.github.io/i18n/de/code/</guid>
+      <source url="https://draugus.github.io/rss.xml">Coding Everything</source>
+      <pubDate>Tue, 21 Jun 2022 06:24:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="coding-everything" tabindex="-1"> Coding Everything</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Learn something</title>
+      <link>https://draugus.github.io/i18n/de/learn/</link>
+      <guid>https://draugus.github.io/i18n/de/learn/</guid>
+      <source url="https://draugus.github.io/rss.xml">Learn something</source>
+      <pubDate>Tue, 21 Jun 2022 06:24:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="learn-something" tabindex="-1"> Learn something</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Life is beautiful</title>
+      <link>https://draugus.github.io/i18n/de/life/</link>
+      <guid>https://draugus.github.io/i18n/de/life/</guid>
+      <source url="https://draugus.github.io/rss.xml">Life is beautiful</source>
+      <pubDate>Tue, 21 Jun 2022 06:24:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="life-is-beautiful" tabindex="-1"> Life is beautiful</h1>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Social is unbelievable</title>
+      <link>https://draugus.github.io/i18n/de/social/</link>
+      <guid>https://draugus.github.io/i18n/de/social/</guid>
+      <source url="https://draugus.github.io/rss.xml">Social is unbelievable</source>
+      <pubDate>Tue, 21 Jun 2022 06:24:41 GMT</pubDate>
+      <content:encoded><![CDATA[<h1 id="social-is-unbelievable" tabindex="-1"> Social is unbelievable</h1>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "AUGUS",
+  "home_page_url": "https://draugus.github.io/i18n/de/",
+  "feed_url": "https://draugus.github.io/feed.json",
+  "description": "Alles aufzeichnen",
+  "items": [
+    {
+      "title": "Coding Everything",
+      "url": "https://draugus.github.io/i18n/de/code/",
+      "id": "https://draugus.github.io/i18n/de/code/",
+      "content_html": "<h1 id=\"coding-everything\" tabindex=\"-1\"> Coding Everything</h1>\n",
+      "date_published": "2022-06-21T06:24:41.000Z",
+      "date_modified": "2022-06-21T06:24:41.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "Learn something",
+      "url": "https://draugus.github.io/i18n/de/learn/",
+      "id": "https://draugus.github.io/i18n/de/learn/",
+      "content_html": "<h1 id=\"learn-something\" tabindex=\"-1\"> Learn something</h1>\n",
+      "date_published": "2022-06-21T06:24:41.000Z",
+      "date_modified": "2022-06-21T06:24:41.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "Life is beautiful",
+      "url": "https://draugus.github.io/i18n/de/life/",
+      "id": "https://draugus.github.io/i18n/de/life/",
+      "content_html": "<h1 id=\"life-is-beautiful\" tabindex=\"-1\"> Life is beautiful</h1>\n",
+      "date_published": "2022-06-21T06:24:41.000Z",
+      "date_modified": "2022-06-21T06:24:41.000Z",
+      "authors": [],
+      "tags": []
+    },
+    {
+      "title": "Social is unbelievable",
+      "url": "https://draugus.github.io/i18n/de/social/",
+      "id": "https://draugus.github.io/i18n/de/social/",
+      "content_html": "<h1 id=\"social-is-unbelievable\" tabindex=\"-1\"> Social is unbelievable</h1>\n",
+      "date_published": "2022-06-21T06:24:41.000Z",
+      "date_modified": "2022-06-21T06:24:41.000Z",
+      "authors": [],
+      "tags": []
+    }
+  ]
+}

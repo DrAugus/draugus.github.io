@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <id>https://draugus.github.io/i18n/en/</id>
+  <title>AUGUS</title>
+  <subtitle>Record Everything</subtitle>
+  <updated>2022-08-02T10:07:29.769Z</updated>
+  <generator>vuepress-plugin-feed2</generator>
+  <link rel="self" href="https://draugus.github.io/atom.xml"/>
+  <link rel="alternate" href="https://draugus.github.io/i18n/en/"/>
+  <entry>
+    <title type="html">About me</title>
+    <id>https://draugus.github.io/i18n/en/intro.html</id>
+    <link href="https://draugus.github.io/i18n/en/intro.html"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="about-me" tabindex="-1"> About me</h1>
+<p>I am Augus, a self-taught back-end developer from China.</p>
+<p><img src="https://ghchart.rshah.org/draugus" alt="DrAugus's Github chart" loading="lazy"></p>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Slide page</title>
+    <id>https://draugus.github.io/i18n/en/slide.html</id>
+    <link href="https://draugus.github.io/i18n/en/slide.html"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[
+<i>Content not supported</i>]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Sponsor</title>
+    <id>https://draugus.github.io/i18n/en/sponsor.html</id>
+    <link href="https://draugus.github.io/i18n/en/sponsor.html"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="sponsor" tabindex="-1"> Sponsor</h1>
+<p><img src="/image/wechatpay.png" alt="wechat" loading="lazy"></p>
+<p><img src="/image/alipay.png" alt="ali" loading="lazy"></p>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Coding Everything</title>
+    <id>https://draugus.github.io/i18n/en/code/</id>
+    <link href="https://draugus.github.io/i18n/en/code/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="coding-everything" tabindex="-1"> Coding Everything</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Learn something</title>
+    <id>https://draugus.github.io/i18n/en/learn/</id>
+    <link href="https://draugus.github.io/i18n/en/learn/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="learn-something" tabindex="-1"> Learn something</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Life is beautiful</title>
+    <id>https://draugus.github.io/i18n/en/life/</id>
+    <link href="https://draugus.github.io/i18n/en/life/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="life-is-beautiful" tabindex="-1"> Life is beautiful</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+  <entry>
+    <title type="html">Social is unbelievable</title>
+    <id>https://draugus.github.io/i18n/en/social/</id>
+    <link href="https://draugus.github.io/i18n/en/social/"/>
+    <updated>2022-06-21T06:24:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="social-is-unbelievable" tabindex="-1"> Social is unbelievable</h1>
+]]></content>
+    <published>2022-06-21T06:24:41.000Z</published>
+  </entry>
+</feed>
