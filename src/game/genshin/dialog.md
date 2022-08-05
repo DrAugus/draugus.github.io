@@ -8,3 +8,6 @@
 ![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/20220709135902.png?raw=true)
 ![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/9CE90EF3-4206-47C1-A777-FB947AE6B5AD.jpeg?raw=true)
 ![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/C9A7CC41-3F8C-48D0-800D-DB1B58E0F25F.jpeg?raw=true)
+![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/1.jpg?raw=true)
+![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/2.jpg?raw=true)
+![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/1.png?raw=true)

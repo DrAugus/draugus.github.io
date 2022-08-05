@@ -15,7 +15,7 @@
   </div>
 
   <h2>全部词汇</h2>
-  <div class="words-part" v-for="(v,k,i) in idiom">
+  <div class="words-part" v-for="(v,k,i) in chinese">
     <span class="words-head">{{ k + " " }} </span> <span> {{ v[0] + " " }}</span><br>
 
     <ul class="words-list">
@@ -32,13 +32,13 @@
 </template>
 
 <script>
-import idiom from "../../data/words/idiom.json";
+import chinese from "../../data/words/chinese.json";
 
 export default {
-  name: "Idiom",
+  name: "Chinese",
   data() {
     return {
-      idiom,
+      chinese,
       query_words: null,
       query_res: null,
     };
@@ -47,7 +47,7 @@ export default {
     showResult() {
       let words = this.query_words;
       console.log(words);
-      this.query_res = idiom[words];
+      this.query_res = chinese[words];
     }
   }
 };

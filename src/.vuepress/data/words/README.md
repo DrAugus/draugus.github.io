@@ -1,6 +1,6 @@
 # 格式说明
 
-## [IDIOM json](./idiom.json)
+## [IDIOM json](./chinese.json)
 
 ```json
 {

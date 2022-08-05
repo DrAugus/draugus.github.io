@@ -44,6 +44,6 @@ export default defineUserConfig({
 
     "@EnglishWords": path.resolve(__dirname, "./components/language/EnglishWords.vue"),
     "@EnglishSentence": path.resolve(__dirname, "./components/language/EnglishSentence.vue"),
-    "@ChineseIdiom": path.resolve(__dirname, "./components/language/Idiom.vue"),
+    "@Chinese": path.resolve(__dirname, "./components/language/Chinese.vue"),
   }
 });
