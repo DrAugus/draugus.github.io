@@ -1,3 +1,9 @@
+---
+pageInfo: false
+toc: false
+title: 这里是福建
+---
+
 # 这里是厦门
 
 ## 计划
