@@ -113,7 +113,7 @@
       {
         "url": "https://www.levels.fyi/",
         "name": "Helping people make better career decisions",
-        "tip": null
+        "tip": "blog: http://sideidea.com/article/42"
       },
       {
         "url": "https://www.boost.org/",
@@ -250,6 +250,11 @@
       {
         "url": "https://hk.v2ex.com/",
         "name": "一个程序员社区似乎需要科学工具",
+        "tip": null
+      },
+      {
+        "url": "https://www.townandcountrymag.com/society/a20736482/british-royal-family-tree/",
+        "name": "british-royal-family-tree",
         "tip": null
       }
     ]
