@@ -14,7 +14,7 @@
   <h2>全部词汇</h2>
   <div class="words-part" v-for="(v,k,i) in english">
     <span class="words-head">{{ k }} </span><br>
-    <ol class="words-list">
+    <ol v-if="v" class="words-list">
       <li v-for="(item,ii) in v">
         <span class="words-explain-en"> {{ item[1] + " " }}</span>
         <span class="words-explain-zh"> {{ item[0] + " " }}</span><br>
