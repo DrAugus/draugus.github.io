@@ -1,5 +1,5 @@
 ---
-title: 🧸 有生之年系列
+title: 有生之年系列
 pageInfo: false
 toc: false
 ---
