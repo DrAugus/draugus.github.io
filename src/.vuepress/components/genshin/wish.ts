@@ -1,4 +1,6 @@
 // 20 + 21= 41 days one version
+// ver2.6 下半因上海疫情封城拖延
+// 3.0 3.1 3.2 3.3 四个版本时间缩短 或许跟上面有关系吧 均为35天 18+17
 export const WISH = {
   characters: [
     {
@@ -568,8 +570,8 @@ export const WISH = {
       name: "tighnari",
       image: 1,
       shortName: "Tighnari",
-      start: "2022-08-25 11:00:00 +0800",
-      end: "2022-09-15 14:59:59 +0800",
+      start: "2022-08-24 11:00:00 +0800",
+      end: "2022-09-11 14:59:59 +0800",
       wish5star: "tighnari",
       wish4star: ["collei", "bennett", "beidou"],
       version: 3.0,
@@ -580,22 +582,34 @@ export const WISH = {
       name: "Gentry of Hermitage",
       image: 4,
       shortName: "Zhongli",
-      start: "2022-09-15 18:00:00 +0800",
-      end: "2022-10-05 14:59:59 +0800",
+      start: "2022-08-25 11:00:00 +0800",
+      end: "2022-09-11 14:59:59 +0800",
       wish5star: "zhongli",
-      wish4star: ["dori", "xingqiu", "xiangling"],
+      wish4star: ["collei", "bennett", "beidou"],
       wishName: "「陵薮市朝」",
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
       name: "Adrift in the Harbor",
       image: 3,
       shortName: "Ganyu",
-      start: "2022-09-15 18:00:00 +0800",
-      end: "2022-10-05 14:59:59 +0800",
+      start: "2022-09-11 18:00:00 +0800",
+      end: "2022-09-28 14:59:59 +0800",
       wish5star: "ganyu",
       wish4star: ["dori", "xingqiu", "xiangling"],
       wishName: "「浮生孰来」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Drifting Luminescence",
+      image: 3,
+      shortName: "Sangonomiya Kokomi",
+      start: "2022-09-11 18:00:00 +0800",
+      end: "2022-09-28 14:59:59 +0800",
+      wish5star: "sangonomiya_kokomi",
+      wish4star: ["dori", "xingqiu", "xiangling"],
+      wishName: "「浮岳虹珠」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
