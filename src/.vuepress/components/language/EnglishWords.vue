@@ -5,8 +5,8 @@
   <input v-model="query_words" placeholder="输入需要查询的单词">
   <h3 @click="showResult"><a>点击</a>查询</h3>
   <p v-for="(item,ii) in query_res">
-    <span class="words-explain-en"> {{ item[1] + " " }}</span>
-    <span class="words-explain-zh"> {{ item[0] + " " }}</span><br>
+    <span v-if="item[1]" class="words-explain-en"> {{ item[1] + " " }}</span>
+    <span v-if="item[0]" class="words-explain-zh"> {{ item[0] + " " }}</span><br>
     <span v-if="item[2]"> {{ item[2] }}</span>
   </p>
 
@@ -14,10 +14,10 @@
   <h2>全部词汇</h2>
   <div class="words-part" v-for="(v,k,i) in english">
     <span class="words-head">{{ k }} </span><br>
-    <ol v-if="v" class="words-list">
+    <ol class="words-list">
       <li v-for="(item,ii) in v">
-        <span class="words-explain-en"> {{ item[1] + " " }}</span>
-        <span class="words-explain-zh"> {{ item[0] + " " }}</span><br>
+        <span v-if="item[1]" class="words-explain-en"> {{ item[1] + " " }}</span>
+        <span v-if="item[0]" class="words-explain-zh"> {{ item[0] + " " }}</span><br>
         <span v-if="item[2]"> {{ item[2] }}</span>
       </li>
     </ol>
