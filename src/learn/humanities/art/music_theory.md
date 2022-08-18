@@ -1,5 +1,7 @@
 # Music Theory
 
+[钢琴教学网站](https://www.musictheory.net/)
+
 > The University of Edinburgh - [Fundamentals of Music Theory](https://www.coursera.org/learn/edinburgh-music-theory/home/welcome)
 
 ::: warning Concept
