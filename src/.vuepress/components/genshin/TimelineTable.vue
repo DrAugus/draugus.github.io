@@ -32,8 +32,7 @@ import dayjs from "dayjs";
 import {WISH} from "./wish";
 import {CHARACTER} from "./characters";
 import "dayjs/locale/zh";
-import {replaceAndLow} from "./utils";
-import {formatDate} from "./timeHandle";
+import {replaceAndLow, formatDate} from "./utils";
 
 dayjs.locale("zh");
 

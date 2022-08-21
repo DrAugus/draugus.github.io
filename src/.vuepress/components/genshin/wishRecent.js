@@ -1,9 +1,8 @@
 import {processEvent} from "./eventHandle";
 import {Deadline} from "../utils";
-import {replaceAndLow} from "./utils";
+import {replaceAndLow, formatDate} from "./utils";
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
-import {formatDate} from "./timeHandle";
 
 dayjs.locale("zh");
 

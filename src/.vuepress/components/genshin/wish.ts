@@ -574,7 +574,7 @@ export const WISH = {
       end: "2022-09-11 14:59:59 +0800",
       wish5star: "tighnari",
       wish4star: ["collei", "bennett", "beidou"],
-      version: 3.0,
+      version: "3.0",
       wishName: "「幽蔓狐生」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
