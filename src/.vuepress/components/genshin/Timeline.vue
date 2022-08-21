@@ -105,10 +105,10 @@ const colorMap = {
 
 const DAY_WIDTH = 25;
 let today = dayjs();
-let firstDay = dayjs();
 
 const eventObj = processEvent();
 
+let firstDay = eventObj.firstDay;
 let wishCharacters = eventObj.events[0];
 let wishWeapons = eventObj.events[1];
 let wishCharacterLength = wishCharacters.length;

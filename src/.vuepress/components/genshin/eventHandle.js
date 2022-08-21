@@ -125,11 +125,12 @@ export const processEvent = () => {
     dates = [...new Array(dayTotal)].map((_, i) => firstDay.add(i, "day").date());
 
     return {
-        dates: dates,
-        years: years,
-        yearList: yearList,
-        monthList: monthList,
-        events: events,
+        dates,
+        years,
+        yearList,
+        monthList,
+        events,
+        firstDay,
     };
 
 };
