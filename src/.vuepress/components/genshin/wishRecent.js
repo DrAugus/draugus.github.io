@@ -1,5 +1,6 @@
 import {processEvent} from "./eventHandle";
 import {Deadline} from "../utils";
+import {replaceAndLow} from "./utils";
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
 import {formatDate} from "./timeHandle";
@@ -21,9 +22,6 @@ const eventObj = processEvent();
 let wishCharacters = eventObj.events[0];
 let wishLength = wishCharacters.length;
 
-//替换空格 转小写----------------
-//因为liquid没找到'如何替换 此处不再替换'
-const replaceAndLow = str => str.replace(/ /g, "_").toLowerCase();
 
 //----------------------------
 

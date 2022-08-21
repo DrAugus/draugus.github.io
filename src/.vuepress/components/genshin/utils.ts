@@ -41,3 +41,6 @@ export const WeaponZH = ["单手剑", "双手剑", "法器", "弓", "长柄武�
 export enum Artifacts {
   flower, plume, sands, goblet, circlet
 }
+
+//替换空格 转小写
+export const replaceAndLow = str => str.replace(/ /g, "_").toLowerCase();

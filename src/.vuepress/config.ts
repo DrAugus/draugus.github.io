@@ -41,6 +41,7 @@ export default defineUserConfig({
     "@GenshinCharacters": path.resolve(__dirname, "./components/genshin/Characters.vue"),
     "@GenshinWish": path.resolve(__dirname, "./components/genshin/Wish.vue"),
     "@GenshinTimeline": path.resolve(__dirname, "./components/genshin/Timeline.vue"),
+    "@GenshinTimelineTable": path.resolve(__dirname, "./components/genshin/TimelineTable.vue"),
 
     "@EnglishWords": path.resolve(__dirname, "./components/language/EnglishWords.vue"),
     "@EnglishSentence": path.resolve(__dirname, "./components/language/EnglishSentence.vue"),
