@@ -125,7 +125,6 @@
 }
 
 .timeline-index {
-    position: absolute;
     margin-top: -60px;
     margin-left: -15px;
     text-align: center;
@@ -218,7 +217,7 @@
 }
 
 .event-item {
-    /*position: absolute;*/
+    position: absolute;
     border-radius: 20px;
     opacity: 1;
     right: 0;

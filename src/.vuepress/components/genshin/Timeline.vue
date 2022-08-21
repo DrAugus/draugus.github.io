@@ -24,7 +24,8 @@
         <div class="timeline-wish-event-weapon">
           <div class="card event-item" v-for="(value, i) in WISH.weapons"
                v-bind:style="{width: wishWeapons[i].duration * DAY_WIDTH + 'px',
-                 left:durationWeapon * DAY_WIDTH + 30 + 'px',    height: 'var(--event-height)'}">
+                 left:durationWeapon[i] * DAY_WIDTH + 30 + 'px',
+                 height: 'var(--event-height)'}">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img">
                 <img
@@ -40,7 +41,8 @@
           <div class="card event-item " v-for="(value, i) in WISH.characters"
                v-bind:class="'event-item-background-'+ElementString[CHARACTER[value.wish5star].ele]"
                v-bind:style="{width: wishCharacters[i].duration * DAY_WIDTH + 'px',
-               left:durationCharacter * DAY_WIDTH + 30 + 'px',marginTop: value.wish_2?'140px':''}">
+               left:durationCharacter[i] * DAY_WIDTH + 30 + 'px',
+               marginTop: value.wish_2?'140px':''}">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <!-- Modal Trigger -->
               <a class="modal-trigger" href="#modal{{i}}">
@@ -116,8 +118,8 @@ let wishWeaponLength = wishWeapons.length;
 let dates = eventObj.dates;
 let monthList = eventObj.monthList;
 let todayOffset = "";
-let durationCharacter = 0;
-let durationWeapon = 0;
+let durationCharacter = [];
+let durationWeapon = [];
 
 //设置时间轴
 const setTimeAxis = () => {
@@ -139,7 +141,7 @@ const wishCharacterInfo = () => {
   for (let i = 0; i < wishCharacterLength; ++i) {
     let start = firstDay;
     const end = dayjs(wishCharacters[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
-    durationCharacter = end.diff(start, "day", true);
+    durationCharacter.push(end.diff(start, "day", true));
     // console.log(i, durationCharacter);
 
     // if (wishCharacters[i].wish_2)
@@ -153,11 +155,14 @@ const wishWeaponInfo = () => {
   for (let i = 0; i < wishWeaponLength; ++i) {
     let start = firstDay;
     const end = dayjs(wishWeapons[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
-    durationWeapon = end.diff(start, "day", true);
-    // console.log(i, durationWeapon);
+    // console.log(start, end);
+    // console.log(i, end.diff(start, "day", true));
+    durationWeapon.push(end.diff(start, "day", true));
   }
 };
+// console.log("======== wish weapon ========");
 wishWeaponInfo();
+// console.log(durationWeapon);
 
 export default {
   name: "Timeline",
