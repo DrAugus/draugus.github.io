@@ -727,7 +727,7 @@ export const CHARACTER = {
     prefix: "心朝乂安",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "天领奉行的天才少年侦探，直觉敏锐，心思巧妙。无论面对何种悬案，都能用出人意料的方式揭开真相。",
     city: City.Inazuma,
     ele: Element.anemo,
     weapon: Weapon.sword
@@ -764,5 +764,38 @@ export const CHARACTER = {
     city: City.Sumeru,
     ele: Element.dendro,
     weapon: Weapon.bow
+  },
+  cyno: {
+    id: "cyno",
+    name: "赛诺",
+    prefix: "缄秘的裁遣",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.electro,
+    weapon: Weapon.polearm
+  },
+  nilou: {
+    id: "nilou",
+    name: "妮露",
+    prefix: "莲光落舞筵",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.hydro,
+    weapon: Weapon.catalyst
+  },
+  candace: {
+    id: "candace",
+    name: "坎蒂丝",
+    prefix: "浮金的誓愿",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.hydro,
+    weapon: Weapon.sword
   },
 }

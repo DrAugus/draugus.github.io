@@ -923,5 +923,14 @@ export const WISH = {
       wish5star: ['freedom-sworn', 'lost_prayer_to_the_sacred_winds'],
       wish4star: ['the_alley_flash', 'mitternachts_waltz', 'rainslasher', 'favonius_lance', 'the_widsith'],
     },
+    {
+      name: 'Epitome Invocation',
+      image: 32,
+      start: '2022-08-02 18:00:00 +0800',
+      end: '2022-08-23 14:59:59 +0800',
+      shortName: 'Thundering',
+      wish5star: ['thundering_pulse', 'summit_shaper'],
+      wish4star: ['wine_and_song', 'alley_hunter', 'the_flute', 'sacrificial_greatsword', 'dragons_bane'],
+    },
   ]
 }
