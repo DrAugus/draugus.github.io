@@ -68,12 +68,12 @@ export default hopeTheme({
     // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
     // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
     comment: {
-      provider: "Giscus",
-      repo: "DrAugus/draugus.github.io",
-      repoId: "R_kgDOHV19bA",
-      category: "Announcements",
-      categoryId: "DIC_kwDOHV19bM4CPJQy",
-      inputPosition: "top"
+      // provider: "Giscus",
+      // repo: "DrAugus/draugus.github.io",
+      // repoId: "R_kgDOHV19bA",
+      // category: "Announcements",
+      // categoryId: "DIC_kwDOHV19bM4CPJQy",
+      // inputPosition: "top"
 
       /**
        * Using twikoo
