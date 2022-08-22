@@ -257,7 +257,7 @@ export const CHARACTER = {
   fischl: {
     id: "fischl",
     name: "菲谢尔",
-    prefix: "",
+    prefix: "断罪皇女",
     star: 4,
     event_exclusive: false,
     intro: "自称「断罪之皇女」，与名为奥兹的漆黑夜鸦同行的神秘少女。目前正以调查员身份供职于冒险家协会。通过自己的特殊能力加上奇妙的个性，还有本人不愿意承认的努力，菲谢尔成为了冒险家协会调查员中的新星，且成功赢得了大家的认可。",
@@ -362,7 +362,7 @@ export const CHARACTER = {
   diona: {
     id: "diona",
     name: "迪奥娜",
-    prefix: "",
+    prefix: "猫尾特调",
     star: 4,
     event_exclusive: false,
     intro: "「猫尾酒馆」的超人气调酒师，蒙德酒业的超新星，传统势力的最大挑战者。出身于清泉镇的猫耳猫尾少女，只要经迪奥娜之手调制过的酒类，都会变成难以想象的美味佳酿。然而对于极度厌恶酒类的她来说，这到底是一种「祝福」还是「诅咒」呢？",

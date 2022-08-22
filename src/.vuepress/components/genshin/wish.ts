@@ -1,6 +1,6 @@
-// 20 + 21= 41 days one version
+// 20 + 21= 41 days one version /42days/
 // ver2.6 下半因上海疫情封城拖延
-// 3.0 3.1 3.2 3.3 四个版本时间缩短 或许跟上面有关系吧 均为35天 18+17
+// 3.0 3.1 3.2 3.3 四个版本时间缩短 或许跟上面有关系吧 均为34天 16+18 /35days/
 export const WISH = {
   characters: [
     {
@@ -567,13 +567,13 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "tighnari",
+      name: "Viridescent Vigil",
       image: 1,
       shortName: "Tighnari",
       start: "2022-08-24 11:00:00 +0800",
-      end: "2022-09-11 14:59:59 +0800",
+      end: "2022-09-09 17:59:59 +0800",
       wish5star: "tighnari",
-      wish4star: ["collei", "bennett", "beidou"],
+      wish4star: ["collei", "diona ", "fischl"],
       version: "3.0",
       wishName: "「幽蔓狐生」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -582,10 +582,10 @@ export const WISH = {
       name: "Gentry of Hermitage",
       image: 4,
       shortName: "Zhongli",
-      start: "2022-08-25 11:00:00 +0800",
-      end: "2022-09-11 14:59:59 +0800",
+      start: "2022-08-24 11:00:00 +0800",
+      end: "2022-09-09 17:59:59 +0800",
       wish5star: "zhongli",
-      wish4star: ["collei", "bennett", "beidou"],
+      wish4star: ["collei", "diona ", "fischl"],
       wishName: "「陵薮市朝」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -594,8 +594,8 @@ export const WISH = {
       name: "Adrift in the Harbor",
       image: 3,
       shortName: "Ganyu",
-      start: "2022-09-11 18:00:00 +0800",
-      end: "2022-09-28 14:59:59 +0800",
+      start: "2022-09-09 18:00:00 +0800",
+      end: "2022-09-27 14:59:59 +0800",
       wish5star: "ganyu",
       wish4star: ["dori", "xingqiu", "xiangling"],
       wishName: "「浮生孰来」",
@@ -605,8 +605,8 @@ export const WISH = {
       name: "Drifting Luminescence",
       image: 3,
       shortName: "Sangonomiya Kokomi",
-      start: "2022-09-11 18:00:00 +0800",
-      end: "2022-09-28 14:59:59 +0800",
+      start: "2022-09-09 18:00:00 +0800",
+      end: "2022-09-27 14:59:59 +0800",
       wish5star: "sangonomiya_kokomi",
       wish4star: ["dori", "xingqiu", "xiangling"],
       wishName: "「浮岳虹珠」",
@@ -931,6 +931,15 @@ export const WISH = {
       shortName: 'Thundering',
       wish5star: ['thundering_pulse', 'summit_shaper'],
       wish4star: ['wine_and_song', 'alley_hunter', 'the_flute', 'sacrificial_greatsword', 'dragons_bane'],
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 33,
+      start: "2022-08-24 11:00:00 +0800",
+      end: "2022-09-09 17:59:59 +0800",
+      shortName: 'Thundering',
+      wish5star: ['Hunter\'s Path', 'Vortex Vanquisher'],
+      wish4star: ['Favonius Sword', 'The Bell', 'Favonius Lance', 'Favonius Codex'],
     },
   ]
 }
