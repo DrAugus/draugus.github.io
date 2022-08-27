@@ -1,6 +1,8 @@
 ---
 title: 🎁 日用
 order: -2
+pageInfo: false
+toc: false
 ---
 
 > 价格参考
