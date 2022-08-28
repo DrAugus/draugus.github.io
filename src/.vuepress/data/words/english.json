@@ -250,6 +250,10 @@
     ["How was your trip to New York yesterday", "你昨天去纽约的旅行怎么样"],
     ["When did you call the doctor yesterday", "你昨天什么时候给医生打的电话"],
     ["Let's walk along the path on the left", "咱们沿着在左边的小路走吧"],
-    ["Don't let them stay up too late", "别让他们熬夜太晚"]
+    ["Don't let them stay up too late", "别让他们熬夜太晚"],
+    ["Is there a student discount on these things","这些东西有学生折扣吗"],
+    ["It's a good deal", "很划算"],
+    ["Is this buy one get one free?", "这个买一送一吗"],
+    ["This leather chair comes in brown and black"]
   ]
 }

@@ -33,29 +33,24 @@ export const navbar_zh = navbar([
         text: '领域展开',
         children: [
           {
-            text: '人文',
+            text: '文学',
             icon: 'egg',
-            link: url_learn + '/humanities/'
+            link: url_learn + '/arts/'
           },
           {
-            text: '社会',
+            text: '史学',
             icon: 'binoculars',
-            link: url_learn + '/social-science/'
+            link: url_learn + '/history/'
           },
           {
-            text: '自然',
-            icon: 'bong',
-            link: url_learn + '/natural-science/'
-          },
-          {
-            text: '形式',
+            text: '语言',
             icon: 'code-branch',
-            link: url_learn + '/formal-science/'
+            link: url_learn + '/language/'
           },
           {
-            text: '应用',
-            icon: 'chart-line',
-            link: url_learn + '/applied-science/'
+            text: '理学',
+            icon: 'bong',
+            link: url_learn + '/science/'
           },
         ]
       }
