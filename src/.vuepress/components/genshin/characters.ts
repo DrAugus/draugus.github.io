@@ -748,8 +748,8 @@ export const CHARACTER = {
     name: "柯莱",
     prefix: "萃念初蘖",
     star: 4,
-    event_exclusive: true,
-    intro: "",
+    event_exclusive: false,
+    intro: "见习巡林员，师从提纳里。学术方面较同龄人起步稍晚，目前正在努力补习各种知识。她将性格的另一面深深掩藏在阳光善良的表象之下。",
     city: City.Sumeru,
     ele: Element.dendro,
     weapon: Weapon.bow
@@ -760,7 +760,7 @@ export const CHARACTER = {
     prefix: "浅蔚轻行",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "道成林的巡林官，毕业于阿弥利多学院的植物学学者。每天都过着巡查雨林、保护生态、教训笨蛋的充实生活。",
     city: City.Sumeru,
     ele: Element.dendro,
     weapon: Weapon.bow
