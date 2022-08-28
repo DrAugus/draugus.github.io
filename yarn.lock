@@ -1257,11 +1257,6 @@
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.2.0.tgz#e3dc98a0cce8e87292745e2d24c9ee8c274a023b"
   integrity sha512-pF1G4wky+hkifDiZSWn8xfuLOJI1ZXtuambpBEYaf7Xaf6zC/pM29rvAGpd3qaGXnr4BAXU1Pxz/VfvBGwexGA==
 
-"@vue/devtools-api@^6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.2.1.tgz#6f2948ff002ec46df01420dfeff91de16c5b4092"
-  integrity sha512-OEgAMeQXvCoJ+1x8WyQuVZzFo0wcyCmUR3baRVLmKBo1LmYZWMlRiXlux5jd0fqVJu6PfDbOrZItVqUEzLobeQ==
-
 "@vue/reactivity-transform@3.2.37":
   version "3.2.37"
   resolved "https://registry.yarnpkg.com/@vue/reactivity-transform/-/reactivity-transform-3.2.37.tgz#0caa47c4344df4ae59f5a05dde2a8758829f8eca"
@@ -1350,16 +1345,6 @@
     "@vuepress/shared" "2.0.0-beta.49"
     vue "^3.2.37"
     vue-router "^4.1.2"
-
-"@vuepress/client@2.0.0-beta.50":
-  version "2.0.0-beta.50"
-  resolved "https://registry.yarnpkg.com/@vuepress/client/-/client-2.0.0-beta.50.tgz#622053703b65533f64a6e6db6e0eb9f00f31d1f3"
-  integrity sha512-wQwtlZTxZL7o7U6VnKXtuvyqrb8OY5ONYe2P+gHjoS1lcKWJi4kiZ62aHVfFeUMunqUySky3lP4Rhc5hWJePHw==
-  dependencies:
-    "@vue/devtools-api" "^6.2.1"
-    "@vuepress/shared" "2.0.0-beta.50"
-    vue "^3.2.37"
-    vue-router "^4.1.4"
 
 "@vuepress/core@2.0.0-beta.49", "@vuepress/core@^2.0.0-beta.49":
   version "2.0.0-beta.49"
@@ -1528,13 +1513,6 @@
   version "2.0.0-beta.49"
   resolved "https://registry.yarnpkg.com/@vuepress/shared/-/shared-2.0.0-beta.49.tgz#8c24c7128f8b56e47cf0ff31871d96235dedfafa"
   integrity sha512-yoUgOtRUrIfe0O1HMTIMj0NYU3tAiUZ4rwVEtemtGa7/RK7qIZdBpAfv08Ve2CUpa3wrMb1Pux1aBsiz1EQx+g==
-  dependencies:
-    "@vue/shared" "^3.2.37"
-
-"@vuepress/shared@2.0.0-beta.50":
-  version "2.0.0-beta.50"
-  resolved "https://registry.yarnpkg.com/@vuepress/shared/-/shared-2.0.0-beta.50.tgz#4db42729655026cf0989d492041e9bcec3f9c283"
-  integrity sha512-o3/6ohstbcOygCz2qd7aOrkN1niW2QLbI8HyVALeBLGGFi8+lenFn3tcfS+nDZOaJeaax4TerV565d4sd3UjCQ==
   dependencies:
     "@vue/shared" "^3.2.37"
 
@@ -4386,13 +4364,6 @@ vue-router@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.1.2.tgz#ae08f63c9610afa6bff6743e8f128b7054d4c9f5"
   integrity sha512-5BP1qXFncVRwgV/XnqzsKApdMjQPqWIpoUBdL1ynz8HyLxIX/UDAx7Ql2BjmA5CXT/p61JfZvkpiFWFpaqcfag==
-  dependencies:
-    "@vue/devtools-api" "^6.1.4"
-
-vue-router@^4.1.4:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.1.5.tgz#256f597e3f5a281a23352a6193aa6e342c8d9f9a"
-  integrity sha512-IsvoF5D2GQ/EGTs/Th4NQms9gd2NSqV+yylxIyp/OYp8xOwxmU8Kj/74E9DTSYAyH5LX7idVUngN3JSj1X4xcQ==
   dependencies:
     "@vue/devtools-api" "^6.1.4"
 
