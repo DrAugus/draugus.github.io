@@ -1,177 +1,12 @@
 # C++
 
-## stroustrup
+- [cpp feature](./cpp/feature)
+- [cpp & c diff](./cpp/c_cpp_diff)
+- [一些概念](./cpp/concept)
+- [一些要点](./cpp/tip)
+- [复杂声明辨析](./cpp/complex_declaration)
+- [程序题](./cpp/code)
 
-### C++11 features
-
-> C++11 feels like a new language -- stroustrup
-
-> [page29](https://www.stroustrup.com/hopl20main-p5-p-bfc9cd4--final.pdf)
-
-C++11 introduced a bewildering number of language features, including:
-
-* memory model - an efficient low level-model of modern hardware as a foundation for concurrency
-* auto and decltype - avoiding redundant repetition of type names
-* range-for - simple linear traversal of ranges
-* move semantics and rvalue references - minimizing copying of data
-* uniform initialization - an (almost) completely general syntax and semantics for initializing objects of all kinds and types
-* nullptr - a name for the null pointer
-* constexpr functions - compile-time evaluated functions
-* user-defined literals - literals for user-defined types
-* raw string literals - literals where escape characters are not needed, mostly for regular expressions
-* attributes - associating essentially arbitrary information with a name
-* lambdas - unnamed function objects
-* variadic templates - templates that can handle an arbitrary number of arguments of arbitrary types
-* template aliases - the ability to rename a template and to bind some template arguments for the new name
-* noexcept - a way of ensuring that an exception isn’t thrown from a function
-* override and final - explicit syntax for managing large class hierarchies
-* static_assert - compile-time assertions
-* long long - a longer integer type
-* default member initializers - give a data member a default value that can be superseded by initialization in a
-  constructor
-* enum classes - strongly typed enumerations with scoped enumerators
-
-And here is a list of the major standard-library components:
-
-* unique_ptr and shared_ptr - resource-management pointers relying on RAII
-* memory model and atomic variables
-* thread, mutex, condition_variable, etc. - type-safe and portable support for basic system- level concurrency
-* future, promise, and packaged_task, etc. - slightly higher-level concurrency
-* tuple - unnamed simple composite types
-* type traits - testable properties of types for use in metaprogramming
-* regular expression matching
-* random numbers - with many generators (engines) and distributions
-* Time - time_point and duration
-* unordered_map, etc. - hash tables
-* forward_list - a singly-linked list
-* array - a fixed-constant-sized array that knows its size
-* emplace operations - construct objects right within a container to avoid copying
-* exception_ptr - enables transfer of exceptions between threads
-
-### C++17 features
-
-C++17 had about 21 new language features (depending on how you count), including:
-
-* Constructor template argument deduction - simplify object definitions
-* Deduction guides - an explicit notation for resolving constructor template argument deduction ambiguities
-* Structured bindings - simplify notation and eliminate a source of uninitialized variables
-* inline variables - simplify the use of statically allocated variables in header-only libraries
-* Fold expressions - simplify some uses of variadic templates
-* Explicit test in conditions - a bit like conditions in for-statements
-* Guaranteed copy elision - eliminate many redundant copy operations
-* Stricter expression evaluation order - prevents some subtle order-of-evaluation mistakes
-* auto as a template argument type - type deduction for value template arguments
-* Standard attributes to catch common mistakes - [[maybe_unused]], [[nodiscard]], and [[fallthrough]]
-* Hexadecimal floating-point literals
-* Constant expression if - simplify compile-time evaluated code
-
-The C++17 standard-library added about 13 new features plus many minor modifications:
-
-* optional, variant, and any - standard-library types for expressing alternatives
-* shared_mutex and shared_lock (reader-writer locks) and scoped_lock
-* parallel STL - multi-threaded and/or vectorized versions of standard-library algorithms
-* file system - the ability to portably manipulate file-system paths and directories
-* string_view - a non-owning reference to an immutable sequence of characters
-* Mathematical special functions - including Laguerre and Legendre polynomials, beta func- tions, Riemann zeta function
-
-## 概念
-
-### C 和 C++ 的区别
-
-* 简单版本
-    - C++是面向对象的语言，而C是面向过程的语言
-    - C++引入new/delete运算符，取代了C中的malloc/free库函数
-    - C++引入引用的概念，而C中没有
-    - C++引入类的概念，而C中没有
-    - C++引入函数重载的特性，而C中没有
-* 标准：分别隶属于两个不同的标准委员会。C以C99标准为主流，C11已经发布；C++以C++98/03为主流，C++11/14也日趋流行。
-* 语言本身：
-    * C++是面向对象语言，C是面向过程语言。
-    * 结构：C以结构体struct为核心结构；C++以类class为核心结构。
-    * 多态：C可以以宏定义的方式“自定义”部分地支持多态；C++自身提供多态，并以模板templates支持编译期多态，以虚函数virtual function支持运行期多态。
-    * 头文件的调用：C++用< >代替” “代表系统头文件；且复用C的头文件时，去掉”.h”在开头加上”C”。
-    * 输入输出：鉴于C++中以对象作为核心，输入和输出都是在流对象上的操作。
-    * 封装：C中的封装由于struct的特性全部为公有封装，C++中的封装由于class的特性更加完善、安全。
-    * 常见风格：C中常用宏定义来进行文本替换，不具有类型安全性；C++中常建议采用常量定义，具有类型安全性。
-    * 效率：常见的说法是同等目的C通常比C++更富有效率(这其实有一定的误解，主要在于C++代码更难于优化且少有人使用编译期求值的特性)。
-    * 常用语言/库特性：
-    * 数组：C中采用内建数组，C++中建议采用vector。相比之下vector的大小可以动态增长，且使用一些技巧后增长并不低效，且成员函数丰富。
-    * 字符串 C中采用C风格的string(实则为字符串数组)，C++中建议采用string，对比与上一条类似。
-    * 内存分配：C中使用malloc与free，它们是是C标准库函数，C++中建议使用new/delete代替前者，他们说是C++的运算符(这是笔试面试常考点)以C++中的new为例，new可分为operator new(new 操作)、new operator(new 操作符)和placement new(定位 new)。其中operator new执行和malloc相同的任务，即分配内存，但对构造函数一无所知；而 new
-      operator则调用operator new，分配内存后再调用对象构造函数进行对象的构造。其中operator new是可以重载的。placement new，就是operator
-      new的一个重载版本，允许你在一个已经分配好的内存中构造一个新的对象。
-    * 指针：C中通常使用的是原生指针(raw pointer)，由于常出现程序员在申请后忘记释放造成资源泄漏的问题，在C++98中加入了“第一代”基于引用计数的智能指针auto_ptr，由于初代的各种问题(
-      主要是无法解决循环指针)，在03标准也就是TR1中引入了shared_ptr,weak_ptr和unique_ptr这三个功能各异的智能指针，并与11标准中正式确定，较好的解决了上述问题。
-* 仅有C++才有的常用特性：
-    * 语言(范式)特性：
-        * 面向对象编程：C++中以关键字class和多态特性支持的一种编程范式；
-        * 泛型编程：C++中以关键字template支持的一种编程范式；
-        * 模板元编程 ：C++中以模板特化和模板递归调用机制支持的一种编程范式。
-        * C++中以对象和类型作为整个程序的核心，在对象方面，时刻注意对象创建和析构的成本，例如有一个很常用的(具名)返回值优化((N)RVO); 在类型方面，有运行时类型信息(RTTI)等技术作为C++类型技术的支撑。
-        * 函数重载：C++允许拥有不同变量但具有相同函数名的函数(函数重载的编译器实现方式、函数重载和(主)模板特化的区别都曾考过)。
-        * 异常：以catch、throw、try等关键字支持的一种机制。
-        * 命名空间：namespace，可以避免和减少命名冲突且让代码具有更强的可读性。
-        * 谓词用法：通常以bool函数或仿函数(functor)或lambda函数的形式，出现在STL的大多数算法的第三个元素。
-    * 常见关键字(操作符)特性：
-        * auto：在C中，auto代表自动类型通常都可省略；而在C++11新标准中，则起到一种“动态类型”的作用——通常在自动类型推导和decltype搭配使用。
-        * 空指针：在C中常以NULL代表空指针，在C++中根据新标准用nullptr来代表空指针。
-        * &: 在C中仅代表取某个左值(lvalue)的地址，在C++中还可以表示引用(别名)。
-        * &&：在C中仅能表示逻辑与，在C++中还可以表示右值引用。
-        * []：在C中仅能表示下标操作符，在C++中还可以表示lambda函数的捕捉列表。
-        * {}：在C中仅能用于数组的初始化，在C++中由于引入了初始化列表(initializer_list)，可用于任何类型、容器等的初始化。
-        * 常量定义：C中常以define来定义常量，C++中用const来定义运行期常量，用constexpr来定义编译器常量。
-    * 常用新特性：
-        * 右值引用和move语义(太多内容，建议自查)。
-        * 基于范围的for循环(与python中的写法类似，常用于容器)。
-        * 基于auto——decltype的自动类型推导。
-        * lambda函数(一种局部、匿名函数，高效方便地出现在需要局部、匿名语义的地方)。
-        * 标准规范后的多线程库。
-
-### 编译时链接有几种方式？[静态链接和动态链接的区别](https://www.cnblogs.com/cyyljw/p/10949660.html)是什么？
-
-问题变形，
-
-- 简述 C++ 从代码到可执行二进制文件的过程
-- 简述 C++ 编译的过程
-    * 编译分为3步
-        * 首先对源文件进行预处理，这个过程主要是处理一些#号定义的命令或语句（如宏、#include、预编译指令#ifdef等），生成*.i文件；
-        * 然后进行编译，这个过程主要是进行词法分析、语法分析和语义分析等，生成*.s的汇编文件；
-        * 最后进行汇编，这个过程比较简单，就是将对应的汇编指令翻译成机器指令，生成可重定位的二进制目标文件。
-    * 静态链接
-    * 动态链接
-    * 更多细节，[从编写源代码到程序在内存中运行的全过程解析](https://blog.csdn.net/kang___xi/article/details/79571137)
-
-### 转移语义(Move Semantics)
-
-### 左值和右值
-
-### malloc 和 new，free 和 delete 的区别
-
-malloc是函数，而new是关键字。然后new作为C++中动态对象创建的基石，除了完成堆空间的分配操作以外还要完成一些初始化操作，及new的过程中会调用对象的构造函数去初始化，而malloc不会。最后要明确的是malloc分配的内存只能用free来释放，而new分配的地址只能用delete来释放，如果new分配的是数组，则需要delete[ ]
-来释放，否则会出现未定义行为。
-
-`delete`会调用对象的析构函数,和`new`对应`free`
-只会释放内存，new调用构造函数。malloc与free是C++/C语言的标准库函数，new/delete是C++的运算符。它们都可用于申请动态内存和释放内存。对于非内部数据类型的对象而言，光用maloc/free无法满足动态对象的要求。对象在创建的同时要自动执行构造函数，对象在消亡之前要自动执行析构函数。由于malloc/free是库函数而不是运算符，不在编译器控制权限之内，不能够把执行构造函数和析构函数的任务强加于malloc/free。因此C++语言需要一个能完成动态内存分配和初始化工作的运算符new，以及一个能完成清理与释放内存工作的运算符delete。注意new/delete不是库函数。
-
-`delete` 与 `delete []`区别
-
-delete只会调用一次析构函数，而delete[]会调用每一个成员的析构函数。在More Effective C++中有更为详细的解释：“当delete操作符用于数组时，它为每个数组元素调用析构函数，然后调用operator
-delete来释放内存。”delete与new配套，delete []与new []配套
-
-```c++
-MemTest *mTest1 = new MemTest[10];
-MemTest *mTest2 = new MemTest;
-Int *pInt1 = new int[10];
-Int *pInt2 = new int;
-delete[]pInt1; //-1-
-delete[]pInt2; //-2-
-delete[]mTest1;//-3-
-delete[]mTest2;//-4-
-```
-
-在-4-处报错。 这就说明：对于内建简单数据类型，delete和delete[]功能是相同的。对于自定义的复杂数据类型，delete和delete[]不能互用。delete[]
-删除一个数组，delete删除一个指针。简单来说，用new分配的内存用delete删除；用new[]分配的内存用delete[]删除。delete[]
-会调用数组元素的析构函数。内部数据类型没有析构函数，所以问题不大。如果你在用delete时没用括号，delete就会认为指向的是单个对象，否则，它就会认为指向的是一个数组。
 
 ### 二维动态数组的申请和删除
 
@@ -239,82 +74,10 @@ delete[]MathTable;
 function object就是重载了函数调用操作符 operator()的一个struct或者class 所有内置一元仿函数均继承自unary_function，所有内置二元仿函数均继承自binary_function
 继承自unary_function和binary_function的仿函数可以成为“可配接“的仿函数。可配接的仿函数，能够与其他STL组件更”和谐“地协同工作。
 
-### C++ 11 有什么新特性
-
-* lambda
-* 线程库
-* 智能指针
-* auto
-    * 自动类型推导
-    * 当与`const`结合使用时
-        * 当类型不为引用时，auto 的推导结果将不保留表达式的 const 属性；
-        * 当类型为引用时，auto 的推导结果将保留表达式的 const 属性。
-    * auto的限制
-        * 使用 auto 的时候必须对变量进行初始化
-        * auto 不能在函数的参数中使用
-            * 这个很容易理解，我们在定义函数的时候只是对参数进行了声明，指明了参数的类型，但并没有给它赋值，只有在实际调用函数的时候才会给参数赋值；而 auto 要求必须对变量进行初始化，所以这是矛盾的。
-        * auto 不能作用于类的非静态成员变量（也就是没有 static 关键字修饰的成员变量）中
-            * 可以用`decltype`定义，如下就可以写成`decltype(T().begin()) m_it;`
-          ```c++
-          template <typename T>
-          class A {
-          private:
-              typename T::iterator m_it;
-          }       
-          ```
-        * auto 关键字不能定义数组
-        * auto 不能作用于模板参数
-    * auto常用
-        * 使用 auto 定义迭代器
-        * auto 用于泛型编程
-* 使用`using`定义别名（替代`typedef`）
-* 支持函数模板的默认模板参数
-
-### [C++ 20 有什么新特性](http://jimmysue.me/c-20-features/)
-
-### 深拷贝与浅拷贝区别是什么？
-
-* **浅拷贝**：如果在类中没有显式地声明一个[拷贝构造函数](##copyConstructor)，那么，编译器将会根据需要生成一个默认的[拷贝构造函数](##copyConstructor)，完成对象之间的位拷贝。default
-  memberwise copy即称为浅拷贝。 此处需要注意，并非像大多数人认为的“如果class未定义出copy constructor，那么编译器就会为之合成一个执行default memberwise copy语义的copy
-  constructor”。 通常情况下，只有在default copy constructor被视为trivial时，才会发生上述情况。一个class，如果既没有任何base/member class含有copy
-  constructor，也没有任何virtual base class或 virtual functions， 它就会被视为trivial。 通常情况下，浅拷贝是够用的。
-* **深拷贝**：然而在某些状况下，类内成员变量需要动态开辟堆内存，如果实行位拷贝，也就是把对象里的值完全复制给另一个对象，如A=B。
-  这时，如果B中有一个成员变量指针已经申请了内存，那A中的那个成员变量也指向同一块内存。如果此时B中执行析构函数释放掉指向那一块堆的指针，这时A内的指针就将成为悬挂指针。
-  因此，这种情况下不能简单地复制指针，而应该复制“资源”，也就是再重新开辟一块同样大小的内存空间。
 
 ### 什么是字节对齐，为什么要采用这种机制？
 
-### const、static 关键字有什么区别
 
-### 如何初始化const和static数据成员？
-
-通常在类外初始化static数据成员，但是 static const 的整型(ool，char，int，long)可以再类声明中初始化， static const的其他类型也必须在类外初始化(包括整型的数组)。
-
-### const
-
-如何在const成员函数中赋值？
-
-> 使用`mutable`去掉const的成员函数的const性质
-
-为什么要有这种去除常量标志的需求？
-
-* 两个概念：物理常量性和逻辑常量性
-    * 物理常量性：实际上就是常量。
-    * 逻辑常量性：对用户而言是常量，但在用户不能访问的细节上不是常量。
-
-const_cast和mutable的比较
-
-* const_cast:
-    * 强制去掉对象的const属性。
-    * 缺点：对const对象，调用包含const_cast的const成员函数，属于未定义行为。
-* mutable:
-    * 使用场景：对可能要发生变化的成员前，加上存储描述符mutable。
-    * 实质：对加了mutable的成员，无视所有const声明。
-
-
-* const 与 #define 的比较，const有什么优点?
-    - const 常量有数据类型，而宏常量没有数据类型。编译器可以对前者进行类型安全检查。而对后者只进行字符替换，没有类型安全检查，并且在字符替换可能会产生意料不到的错误（边际效应） 。
-    - 有些集成化的调试工具可以对 const 常量进行调试，但是不能对宏常量进行调试。
 
 ### 两种常用的实现隐式类类型转换的方式是什么？如何避免隐式类型转换？
 
@@ -346,32 +109,7 @@ const_cast和mutable的比较
 
 ### 函数调用的具体实现
 
-### 关于复杂声明
 
-```C++
-void * ( * (*fp1)(int))[10];
-```
-
-`fp1`是一个指针，指向一个函数，这个函数的参数为`int`型，函数的返回值是一个指针，这个指针指向一个数组，这个数组有10个元素，每个元素是一个`void*`型指针。
-
-```C++
-float (*(* fp2)(int,int,int))(int);
-```
-
-`fp2`是一个指针，指向一个函数，这个函数的参数为3个`int`型，函数的返回值是一个指针，这个指针指向一个函数，这个函数的参数为`int`型，函数的返回值是`float`型。
-
-```C++
-int (* ( * fp3)())[10]();
-```
-
-`fp3`是一个指针，指向一个函数，这个函数的参数为空，函数的返回值是一个指针，这个指针指向一个数组，这个数组有10个元素，每个元素是一个指针，指向一个函数，这个函数的参数为空，函数的返回值是`int`型。
-> have error: 'fp3' declared as array of functions of type 'int ()'
-
-```c++
-int (*s[10])(int)
-```
-
-函数指针数组，每个指针指向一个`int func(int param)`的函数
 
 ### 分别写出bool,int,float,指针类型的变量a 与“零”的比较语句。
 
@@ -899,58 +637,3 @@ cout << (str7 == str8) << endl;//1指向文字常量区地址相同
 
 解答：str1,str2,str3,str4是数组变量，它们有各自的内存空间；而str5,str6,str7,str8是指针，它们指向相同的常量区域。
 
-## 一些程序题
-
-1.
-
-```c++
-  int a = 4;
-
-  int &f(int x) {
-    a = a + x;
-    return a;
-  }
-  
-  int main() {
-    int t = 5;
-    cout << f(t) << endl; //a = 9
-    f(t) = 20; //a = 20
-    cout << f(t) << endl; //a = 25
-    t = f(t); //a = 30 t = 30
-    cout << f(t) << endl; // a = 60
-  }
-```
-
-2.求下面函数的返回值
-
-```c++
-int func(int x) {
-  int countx = 0;
-  while (x) {
-    countx++;
-    x = x & (x - 1);
-  }
-  return countx;
-}
-```
-
-假定x = 9999。 答案：8
-
-思路：将x转化为2进制，看含有的1的个数。
-
-3.
-
-```c++
-int main()
-{
-    int i = 1;
-    printf("%d,%d\n", ++i, ++i);    
-    printf("%d,%d\n", ++i, i++);   
-    printf("%d,%d\n", i++, i++);    
-    printf("%d,%d\n", i++, ++i);   
-    system("pause");
-    return 0;
-}
-```
-
-3 3 5 3 6 5 8 9
