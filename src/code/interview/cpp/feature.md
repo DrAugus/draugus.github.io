@@ -6,35 +6,49 @@ index: false
 
 ## C++ 11 有什么新特性
 
-* lambda
-* 线程库
-* 智能指针
-* auto
-    * 自动类型推导
-    * 当与`const`结合使用时
-        * 当类型不为引用时，auto 的推导结果将不保留表达式的 const 属性；
-        * 当类型为引用时，auto 的推导结果将保留表达式的 const 属性。
-    * auto的限制
-        * 使用 auto 的时候必须对变量进行初始化
-        * auto 不能在函数的参数中使用
-            * 这个很容易理解，我们在定义函数的时候只是对参数进行了声明，指明了参数的类型，但并没有给它赋值，只有在实际调用函数的时候才会给参数赋值；而
-              auto 要求必须对变量进行初始化，所以这是矛盾的。
-        * auto 不能作用于类的非静态成员变量（也就是没有 static 关键字修饰的成员变量）中
-            * 可以用`decltype`定义，如下就可以写成`decltype(T().begin()) m_it;`
-          ```c++
-          template <typename T>
-          class A {
-          private:
-              typename T::iterator m_it;
-          }       
-          ```
-        * auto 关键字不能定义数组
-        * auto 不能作用于模板参数
-    * auto常用
-        * 使用 auto 定义迭代器
-        * auto 用于泛型编程
-* 使用`using`定义别名（替代`typedef`）
-* 支持函数模板的默认模板参数
+### lambda
+
+### 线程库
+
+### 智能指针
+
+### auto
+
+> 自动类型推导
+
+当与`const`结合使用时
+
+* 当类型不为引用时，auto 的推导结果将不保留表达式的 const 属性；
+* 当类型为引用时，auto 的推导结果将保留表达式的 const 属性。
+
+auto的限制
+
+* 使用 auto 的时候必须对变量进行初始化
+* auto 不能在函数的参数中使用
+    * 这个很容易理解，我们在定义函数的时候只是对参数进行了声明，指明了参数的类型，但并没有给它赋值，只有在实际调用函数的时候才会给参数赋值；而
+      auto 要求必须对变量进行初始化，所以这是矛盾的。
+* auto 不能作用于类的非静态成员变量（也就是没有 static 关键字修饰的成员变量）中
+    * 可以用`decltype`定义，如下就可以写成`decltype(T().begin()) m_it;`
+  ```cpp
+  template <typename T>
+  class A {
+  private:
+      typename T::iterator m_it;
+  }       
+  ```
+* auto 关键字不能定义数组
+* auto 不能作用于模板参数
+
+auto常用
+
+* 使用 auto 定义迭代器
+* auto 用于泛型编程
+
+### using
+
+使用`using`定义别名（替代`typedef`）
+
+### 支持函数模板的默认模板参数
 
 ## from stroustrup
 
