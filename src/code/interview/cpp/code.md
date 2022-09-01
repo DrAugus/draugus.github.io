@@ -60,7 +60,7 @@ index: false
 
 4. 栈内存与文字常量区
 
-   ```c++
+   ```cpp
    char str1[] = "abc";
    char str2[] = "abc";
    

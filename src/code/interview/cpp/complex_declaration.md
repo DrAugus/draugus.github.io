@@ -7,7 +7,7 @@ index: false
 
 ## case 1
 
-```C++
+```cpp
 void * ( * (*fp1)(int))[10];
 ```
 
@@ -15,7 +15,7 @@ void * ( * (*fp1)(int))[10];
 
 ## case 2
 
-```C++
+```cpp
 float (*(* fp2)(int,int,int))(int);
 ```
 
@@ -23,7 +23,7 @@ float (*(* fp2)(int,int,int))(int);
 
 ## case 3
 
-```C++
+```cpp
 int (* ( * fp3)())[10]();
 ```
 
@@ -32,7 +32,7 @@ int (* ( * fp3)())[10]();
 
 ## case 4
 
-```c++
+```cpp
 int (*s[10])(int)
 ```
 
@@ -40,7 +40,11 @@ int (*s[10])(int)
 
 ## case 5
 
-`int id[sizeof(unsigned long)];`这个对吗？为什么？
+```cpp
+int id[sizeof(unsigned long)];
+```
+
+这个对吗？为什么？
 
 正确 这个 sizeof是编译时运算符，编译时就确定了，可以看成和机器有关的常量。
 

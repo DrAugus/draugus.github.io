@@ -14,7 +14,7 @@ index: false
 
 如何实现一个不能在堆上分配的类，如果要在堆上分配就是会使用new，所以可以重载new 操作符，并将其重载于class A的private内：
 
-```c++
+```cpp
 class A 
 {
 public:
@@ -36,7 +36,7 @@ private:
 
 如何实现一个不能被继承的类，这里有一个比较简单的方法，利用C++11的新关键字final：
 
-```c++
+```cpp
 class B final {
     public:
         B(int a) {

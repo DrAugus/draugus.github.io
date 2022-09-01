@@ -98,7 +98,7 @@ Animal b = a;
 
 > 而C++生成了两个对象
 
-```C++
+```cpp
 Animal a;
 Animal b = a;
 ```

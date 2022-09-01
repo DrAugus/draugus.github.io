@@ -92,7 +92,7 @@ delete只会调用一次析构函数，而delete[]会调用每一个成员的析
 C++中有更为详细的解释：“当delete操作符用于数组时，它为每个数组元素调用析构函数，然后调用operator
 delete来释放内存。”delete与new配套，delete []与new []配套
 
-```c++
+```cpp
 MemTest *mTest1 = new MemTest[10];
 MemTest *mTest2 = new MemTest;
 Int *pInt1 = new int[10];
@@ -156,7 +156,7 @@ delete[]mTest2;//-4-
 因为已经这个步骤在变量或函数定义的地方进行分配了  
 而**定义**则很清楚了，就是要求分配内存空间。 很多时候，声明和定义是合而为一的。
 
-```c++
+```cpp
 int a;
 void func() {};
 ```

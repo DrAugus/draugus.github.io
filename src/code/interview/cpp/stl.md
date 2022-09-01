@@ -92,8 +92,8 @@ sort，避免quicksort深度递归带来的过大的额外负担，如果递归�
 
 ## 相等和等价的区别？哪些类型的容器使用相等或等价？
 
-* 相等(equality)是以operator==为基础，如果x==y为真，则判定x和y相等。
-* 等价(equivalence)是以operator<为基础，如果!(x < y) && !(y < x)为真，则判定x和y等价。
+* 相等(equality)是以`operator==`为基础，如果`x==y`为真，则判定x和y相等。
+* 等价(equivalence)是以`operator<`为基础，如果`!(x < y) && !(y < x)`为真，则判定x和y等价。
 
 通常，关联容器采用“等价”，而顺序容器采用“相等”。
 

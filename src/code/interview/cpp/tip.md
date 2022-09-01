@@ -8,7 +8,7 @@ index: false
 
 首先是如何申请二维的数组，这里我们先申请一个指针数组，然后令指针数组中的每一个元素都指向一个数组，这样二维数组就成了：
 
-```c++
+```cpp
 size_t row, col;
 //输入row和col的数值
 int **MathTable = new int*[row];
@@ -18,7 +18,7 @@ for (int i = 0; i < row; i++)
 
 然后是释放空间的过程：
 
-```c++
+```cpp
 //code
 for (int i = 0; i < row; i++)
   delete[] MathTable[i];
@@ -54,7 +54,7 @@ function object就是重载了函数调用操作符 operator()的一个struct或
 
 1. 使用单参数的构造函数或N个参数中有N-1个是默认参数的构造函数，
 
-    ```c++
+    ```cpp
     class A {
     public:
         A(string s);
@@ -63,15 +63,16 @@ function object就是重载了函数调用操作符 operator()的一个struct或
     ```
 
    使用operator what_you_want_to_convert_type() const
-   ```c++
+   ```cpp
    class A {
-   public:
-   operator char *() const {
-   return data;//当从其他类型转换到char*时自动调用
-   }
-   private:
-   char *data;
-   };
+    public:
+        operator char *() const {
+            return data;//当从其他类型转换到char*时自动调用
+        }
+    
+    private:
+        char *data;
+    };
    ```
 
 2. 在单参数的构造函数或N个参数中有N-1个是默认参数的构造函数声明之前加上explicit。
@@ -143,7 +144,7 @@ operator）：static_cast，const_cast，dynamic_cast和reinterpret_cast，使�
 
 然后引入C++的：
 
-```c++
+```cpp
 static_cast<type>(expression);//这是C++的
 ```
 
@@ -156,7 +157,7 @@ static_cast<type>(expression);//这是C++的
   此外，dynamic_cast还有一个用途就是找出被对象占用的内存的起始点。
 * reinterpret_cast：这个操作符的转换结果几乎总是和编译器平台相关，所以不具有移植性。reinterpret_cast的最常用用途是转换“函数指针”类型，如下：
 
-    ```c++
+    ```cpp
     typedef void (*FuncPtr)();
     int doSomething();
     int main() {
@@ -184,7 +185,7 @@ static_cast<type>(expression);//这是C++的
 
 ## C++是不是类型安全的？
 
-不是。两个不同类型的指针之间可以强制转换（用reinterpret cast)。C##是类型安全的。
+不是。两个不同类型的指针之间可以强制转换（用reinterpret cast)。C#是类型安全的。
 
 ## 有哪几种情况只能用initialization list而不能用assignment?
 
