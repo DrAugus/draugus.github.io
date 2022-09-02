@@ -5,8 +5,8 @@ title: 主页
 icon: bath
 bgImage: image/blog.jpg
 heroImage: null
-heroText: Augus
-tagline: One More Thing
+heroText: AUGUS
+tagline: 奇迹不能去理解，不能去追求，只能等待
 heroFullScreen: true
 projects:
   - icon: project

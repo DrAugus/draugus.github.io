@@ -14,26 +14,22 @@ actions:
   link: /
 
 features:
-- title: 人文科学
+- title: 文学
   icon: egg
-  details: 研究人类的学科，使用主要是分析、批判或推测的方法，有别于自然科学的主要经验方法。
-  link: /learn/humanities/
-- title: 社会科学
+  details: 但得众生皆得饱 不辞羸病卧残阳
+  link: /learn/arts/
+- title: 史学
   icon: binoculars
-  details: 社会科学是与社会、人类行为和社会有关的科学。
-  link: /learn/social-science/
-- title: 自然科学
-  icon: bong
-  details: 自然科学可以分为两个主要分支：生命科学和物理科学。这些分支中的每一个及其所有子分支都被称为自然科学。
-  link: /learn/natural-science/
-- title: 形式科学
+  details: 人类能从历史中吸取的唯一教训就是人类从来不会从历史中吸取教训
+  link: /learn/history/
+- title: 语言
   icon: code-branch
-  details: 形式科学不关注基于现实世界观察的理论的有效性，而是关注基于定义和规则的形式系统。
-  link: /learn/formal-science/
-- title: 应用科学
-  icon: chart-line
-  details: 应用现有科学发展更实用的科学分支，包括发明和其他技术进步。科学本身是以可检验的解释和预测的形式构建和组织的系统。
-  link: /learn/applied-science/
+  details: 森林会记住一切
+  link: /learn/language/
+- title: 理学
+  icon: bong
+  details: 理学
+  link: /learn/science/
 
 
 copyright: false
