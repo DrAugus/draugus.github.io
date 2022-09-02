@@ -1,9 +1,9 @@
 <template>
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
-    <p class="center">也许有未实装、未确定的虚假信息</p>
-    <!--    <p class="center"><a href="javascript:setCurrentPos()">回到当前时间</a></p>-->
-    <div class="timeline-scroll-x" id="setNowPos">
+    <p>也许有未实装、未确定的虚假信息</p>
+    <p><a @click="setCurrentPos()">回到当前时间</a></p>
+    <div class="timeline-scroll-x" ref="setNowPos">
 
       <div class="timeline-month">
         <div v-for="(item,index) in monthList">
@@ -17,9 +17,9 @@
 
       <div class="timeline-day">
 
-        <!--        <div v-bind:style="{left:todayOffset}" id="findNowPos">-->
-        <!--          <div class="timeline-today-line-pos-text">{{ currentTime }}</div>-->
-        <!--        </div>-->
+        <div v-bind:style="{left: todayOffset}" class="timeline-today-line-pos" ref="findNowPos">
+          <div class="timeline-today-line-pos-text">{{ currentTime }}</div>
+        </div>
 
         <div class="timeline-wish-event-weapon">
           <div class="card event-item" v-for="(value, i) in WISH.weapons"
@@ -87,12 +87,9 @@ import {WISH} from "./wish";
 import {CHARACTER} from "./characters";
 import "dayjs/locale/zh";
 import {processEvent} from "./eventHandle";
-import {getDuration} from "../utils";
-import {wishBegin, wishDeadline} from "./wishRecent";
 import {ElementString} from "./utils";
 
 dayjs.locale("zh");
-
 
 const colorMap = {
   "denro": "#98e628",
@@ -103,7 +100,6 @@ const colorMap = {
   "anemo": "#57dcb0",
   "cryo": "#84c2e6",
 };
-
 
 const DAY_WIDTH = 25;
 let today = dayjs();
@@ -125,16 +121,9 @@ let durationWeapon = [];
 const setTimeAxis = () => {
   todayOffset = Math.abs(firstDay.diff(today, "day", true));
   todayOffset = todayOffset * DAY_WIDTH + 30 + "px";
+  console.log("todayOffset", todayOffset);
 };
 setTimeAxis();
-
-
-//当前时间定位 ----------------------------------------------------------------
-const setCurrentPos = () => {
-  // document.getElementById("setNowPos").scrollLeft = document.getElementById("findNowPos").offsetLeft - document.body.clientWidth / 2;
-};
-setCurrentPos();
-//---------------------------------------------------------------------------
 
 //祈愿角色信息
 const wishCharacterInfo = () => {
@@ -143,10 +132,6 @@ const wishCharacterInfo = () => {
     const end = dayjs(wishCharacters[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
     durationCharacter.push(end.diff(start, "day", true));
     // console.log(i, durationCharacter);
-
-    // if (wishCharacters[i].wish_2)
-    //   $(".event-item-character-" + i).css("marginTop", "140px");
-
   }
 };
 wishCharacterInfo();
@@ -188,6 +173,13 @@ export default {
     this.timer1 = setInterval(() => {
       _this.currentTime = dayjs().format("HH:mm:ss");
     }, 1000);
+
+    this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+  },
+  methods: {
+    setCurrentPos() {
+      this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+    }
   },
   beforeDestroy() {
     if (this.timer1)
@@ -244,13 +236,6 @@ export default {
 
 .grey-no-publish {
   filter: grayscale(100%) brightness(1) contrast(.5)
-}
-
-.s12 {
-  width: 100%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
 }
 
 @media only screen and (max-width: 600px) {
