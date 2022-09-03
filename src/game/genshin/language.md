@@ -1,4 +1,9 @@
-# 提瓦特通用文字
+---
+title: 提瓦特通用文字
+pageInfo: false
+toc: false
+---
+ 
 
 > [refer](https://www.bilibili.com/read/cv8339816)
 

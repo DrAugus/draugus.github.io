@@ -1,8 +1,8 @@
 <template>
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
-    <p>也许有未实装、未确定的虚假信息</p>
-    <p><a @click="setCurrentPos()">回到当前时间</a></p>
+    <span>也许有未实装、未确定的虚假信息<a @click="setCurrentPos()">回到当前时间</a></span>
+
     <div class="timeline-scroll-x" ref="setNowPos">
 
       <div class="timeline-month">
@@ -76,6 +76,10 @@
       </div>
 
     </div>
+  </div>
+
+  <div class="hide-on-large-only">
+    <h2>请在电脑端查看此页</h2>
   </div>
 
 </template>
