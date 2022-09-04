@@ -613,6 +613,100 @@ export const WISH = {
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
+    {
+      name: "",
+      image: 1,
+      shortName: "Nilou",
+      start: "2022-09-28 11:00:00 +0800",
+      end: "2022-10-14 17:59:59 +0800",
+      wish5star: "nilou",
+      wish4star: [],
+      version: "3.1",
+      wishName: "「」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Born of Ocean Swell",
+      image: 3,
+      shortName: "Eula",
+      start: "2022-09-28 11:00:00 +0800",
+      end: "2022-10-14 17:59:59 +0800",
+      wish5star: "eula",
+      wish4star: [],
+      wishName: "「浪涌之瞬」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "",
+      image: 1,
+      shortName: "Cyno",
+      start: "2022-10-14 18:00:00 +0800",
+      end: "2022-11-01 14:59:59 +0800",
+      wish5star: "cyno",
+      wish4star: [],
+      wishName: "「」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Ballad in Goblets",
+      image: 4,
+      shortName: "Venti",
+      start: "2022-10-14 18:00:00 +0800",
+      end: "2022-11-01 14:59:59 +0800",
+      wish5star: "venti",
+      wish4star: [],
+      wishName: "「杯装之诗」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "",
+      image: 1,
+      shortName: "Nahida",
+      start: "2022-11-02 11:00:00 +0800",
+      end: "2022-11-18 17:59:59 +0800",
+      wish5star: "nahida",
+      wish4star: [],
+      version: "3.2",
+      wishName: "「」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    // {
+    //   name: "Gentry of Hermitage",
+    //   image: 4,
+    //   shortName: "Zhongli",
+    //   start: "2022-11-02 11:00:00 +0800",
+    //   end: "2022-11-18 17:59:59 +0800",
+    //   wish5star: "zhongli",
+    //   wish4star: ["collei", "diona ", "fischl"],
+    //   wishName: "「陵薮市朝」",
+    //   wish_2: true,
+    //   url: "https://bbs.mihoyo.com/ys/article/?"
+    // },
+    {
+      name: "Farewell of Snezhnaya",
+      image: 4,
+      shortName: "Tartaglia",
+      start: "2022-11-18 18:00:00 +0800",
+      end: "2022-12-06 14:59:59 +0800",
+      wish5star: "tartaglia",
+      wish4star: ["", "", ""],
+      wishName: "「暂别冬都」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Everbloom Violet",
+      image: 2,
+      shortName: "Yae Miko",
+      start: "2022-11-18 18:00:00 +0800",
+      end: "2022-12-06 14:59:59 +0800",
+      wish5star: "yae_miko",
+      wish4star: ["", "", ""],
+      wishName: "「华紫樱绯」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
   ],
   weapons: [
     {

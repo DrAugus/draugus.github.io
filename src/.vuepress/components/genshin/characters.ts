@@ -791,11 +791,33 @@ export const CHARACTER = {
     id: "candace",
     name: "坎蒂丝",
     prefix: "浮金的誓愿",
-    star: 5,
-    event_exclusive: true,
+    star: 4,
+    event_exclusive: false,
     intro: "",
     city: City.Sumeru,
     ele: Element.hydro,
     weapon: Weapon.sword
+  },
+  nahida: {
+    id: "nahida",
+    name: "纳西妲",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.dendro,
+    weapon: Weapon.catalyst
+  },
+  layla: {
+    id: "layla",
+    name: "",
+    prefix: "",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.cryo,
+    weapon: Weapon.catalyst
   },
 }
