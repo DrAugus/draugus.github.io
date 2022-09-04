@@ -103,7 +103,15 @@
         "subject to further confirmation; not definitely.",
         "the project is tentatively scheduled for next year"
       ]
+    ],
+    "obnoxious": [
+      [
+        "讨厌的",
+        "extremely unpleasant.",
+        "obnoxious odors"
+      ]
     ]
+
   },
   "sentence": [
     ["For how many nights?","住几个晚上"],
@@ -254,6 +262,176 @@
     ["Is there a student discount on these things","这些东西有学生折扣吗"],
     ["It's a good deal", "很划算"],
     ["Is this buy one get one free?", "这个买一送一吗"],
-    ["This leather chair comes in brown and black"]
+    ["this is some pimped out rap video","这也太奢侈了吧"],
+    ["short-term memory","短期记忆"],
+    ["final four","四强"],
+    ["that's life","这就是生活"],
+    ["My dog often gets excited, if the weather is nice",
+      "我的狗经常变得很兴奋，如果天气不错的话"]
+  ,["Can we go inside and look at it",
+      "我们可以进去看看吗"]
+  ,["Let's go for a walk",
+      "咱们去散步吧"]
+  ,["I'll email you by 4p.m.",
+      "我下午四点前会发邮件给你"]
+  ,["The house on the left is ours",
+      "左边的房子是我们的"]
+  ,["Let's go inside",
+      "咱们进去吧"]
+  ,["There's a big sink in the kitchen",
+      "在厨房里有一个大水槽"]
+  ,["Our apartment is in the last building on the right",
+      "我们的公寓在右边的最后一座楼里"]
+  ,["The bank is across from the grocery store",
+      "银行在杂货店对面"]
+  ,["We got here by taxi ",
+      "我们是坐出租车到这里的"]
+  ,["When did you get here",
+      "你是什么时候到这里的"]
+  ,["Dad has been a factory worker for 13 years",
+      "爸爸做工厂员工做了13年了"]
+  ,["We have never been so happy",
+      "我们从来没有这么开心过"]
+  ,["They have always been happy",
+      "他们一直都很开心"]
+  ,["What's your nationality",
+      "你是什么国籍"]
+  ,["We have been to this small town",
+      "我们去过这个小镇"]
+  ,["This leather chair comes in brown and black",
+      "这张皮椅有棕色的和黑色的"]
+  ,["She wants this very badly",
+      "她非常想要这个"]
+  ,["Does this scarf come in red",
+      "这条围巾有红色的吗"]
+  ,["Can I find second hand books at the flea market",
+      "我可以在跳蚤市场找到二手书吗"]
+  ,["Did you see that poster for the flea market",
+      "你看到那张跳蚤市场的海报了吗"]
+  ,["Do most of you work from home these days?",
+      "你们大多数人这些天都在家工作吗"]
+  ,["I can't hear you very well",
+      "我听得不是非常清楚"]
+  ,["mechanic",
+      "修车工"]
+  ,["auto repair shop",
+      "汽车修理店"]
+  ,["pajamas",
+      "睡衣"]
+  ,["the people in this village are poor",
+      "在这个村子里的人很穷"]
+  ,["hello folks",
+      "大家好"]
+  ,["It's either the suite or the street",
+      "要么留 要么滚（有语言背景才可这么翻译 可以套用）"]
+  ,["It's miles away, you can't see it",
+      "那里很遥远，你看不到它"]
+  ,["The speaker on the left is broken",
+      "左边的扬声器坏了"]
+  ,["Why don't the kids get tired",
+      "孩子们为什么不累"]
+  ,["Cleaning our neighborhood was a success, wasn't it",
+      "打扫我们的街区很成功，不是吗"]
+  ,["What kind of position are you looking for",
+      "你在找什么样的职位"]
+  ,["What kind of job are you looking for",
+      "你在找什么样的工作"]
+  ,["Thank you for the souvenir",
+      "谢谢你的纪念品"]
+  ,["The broken speakers annoyed me",
+      "坏掉的扬声器让我很恼火"]
+  ,["pharmacy",
+      "药店"]
+  ,["heels",
+      "高跟鞋"]
+  ,["Are they going to join us or not",
+      "他们到底要不要跟我们一起去"]
+  ,["If you like, you can join us",
+      "如果你愿意 你可以跟我们一起去"]
+  ,["Are you going to drive, or not",
+      "你到底要不要开车"]
+  ,["Why don't you go for a walk",
+      "你为什么不去散步"]
+  ,["May is warmer than April",
+      "五月比四月更暖和"]
+  ,["Did you watch a show last night in Las Vegas",
+      "你昨晚在拉斯维加斯看了一场演出吗"]
+  ,["I have two tickets to the concert",
+      "我有两张音乐会的票"]
+  ,["Are the kids making that noise",
+      "是孩子们在发出那个响声吗"]
+  ,["You will enjoy your next trip to China",
+      "你会享受你下一次去中国的旅行"]
+  ,["The short weeks of autumn dip the whole landscape in a sea of color",
+      "秋天短暂的数周把整个地带渲染得缤纷多彩(sea of 大量)"]
+  ,["Are we in groups of five or in groups of six",
+      "我们是五人一组还是六人一组"]
+  ,["Is this seat taken",
+      "这个座位有人吗"]
+  ,["We did this project in pairs",
+      "我们两人一组做了这个课题"]
+  ,["Were they workers at this company",
+      "他们以前是这家公司的员工吗"]
+  ,["Why are you so afraid of change",
+      "你为什么这么害怕改变"]
+  ,["They painted the door white",
+      "他们把门涂成了白色"]
+  ,["This is a picture of you",
+      "这是你的照片"]
+  ,["There wooden chairs are his ",
+      "这些木制椅子是他的"]
+  ,["Where do they want to put this dresser",
+      "他们想要把这个柜子放在哪里"]
+  ,["Both of their parents were doctors",
+      "他们的父母以前都是医生"]
+  ,["Can you put your clothes in the bedroom",
+      "你可以把你的衣服放在卧室里吗"],
+    ["She is with you","她和你一起"],
+    ["My plane arrived at half past one","我的飞机是在一点半到的"],
+    ["We arrived in London last Friday at about 7 o'clock","我们上周五是在七点钟左右到的伦敦"],
+    ["I was not angry at my husband yesterday","我昨天没有生我丈夫的气"],
+    ["Does she want a brighter color","她想要更亮的颜色吗"],
+    ["The spaces between the houses are important","在房子之间的这些空间是最重要的"],
+    ["I like these shoes very much","我非常喜欢这些鞋子"],
+    ["The table is in the kitchen","桌子在厨房里"],
+    ["It is cold in January","在一月很冷"],
+    ["Is the blond woman over there an actor","在那里的金发女人是一个演员吗"],
+    ["We eat by the water","我们在水边吃"],
+    ["Mr.Wang has many photos of his house","王先生有很多他的房子的照片"],
+    ["Did you like the play last night","你喜欢昨晚的戏剧吗"],
+    ["Did they bring you red envelopes","他们给你带红包了吗"],
+    ["It has been two days","已经两天了"],
+    ["Is the manager available now","经理现在有空吗"],
+    ["Is it OK to take notes","可以做笔记吗"],
+    ["I'll be back in a minute","我稍后就会回来"],
+    ["He'll be with you soon","他马上来见你"],
+    ["She'll be with you in a minute","她稍后就会来见你"],
+    ["I've worked as a receptionist for two years","我当前台两年了"],
+    ["Were you a secretary at your last job","你上一份工作是一个秘书吗"],
+    ["Good luck with your new job","祝你新工作顺利"],
+    ["We will be staying here till May third","我们将会在这里待到五月三号"],
+    ["The rooms that are cheaper don't have an ocean view","更便宜的房间没有海景"],
+    ["Our neighbor's house is for sale","我们邻居的房子在出售"],
+    ["He is flying to Beijing in three hours","他三个小时后要飞去北京"],
+    ["I need to get on a train to London","我需要上一列去伦敦的火车"],
+    ["If the answer is correct, put a check here","如果答案正确就在这里打勾"],
+    ["If your answer is correct, put your hand up","如果你的答案是正确的就举手"],
+    ["How many classes will you take next semester","你下学期会上几门课"],
+    ["I've failed that exam twice","我两次都没通过那个考试"],
+    ["Our principal never makes mistakes","我们的校长从来不犯错"],
+    ["The principal will give everyone a diploma","校长会给每个人一张毕业证"],
+    ["take a video of us","给我们拍个视频吧"],
+    ["They might complete the project by Thursday","他们周四前可能会完成项目"],
+    ["He needs help with the email","这封邮件他需要帮助"],
+    ["Are there any ducks on your farm","在你的农场有鸭子吗"],
+    ["What does this sentence mean","这个句子是什么意思"],
+    ["What time is our regular meeting","我们的例会是几点"],
+    ["Somebody should email this customer by Friday","得有人在周五前给这个顾客发邮件"],
+    ["He wants to meet to discuss several problems","他想要见面讨论几个问题"],
+    ["Could I discuss several things with you","我能跟你一起讨论几件事吗"],
+    ["I can't rent this apartment for the whole year","我不能租这个公寓租一整年"],
+    ["Can we go inside and look at it","我们可以进去看看吗"],
+    ["These rooms are nice they are a good size","这些房间不错，他们的大小合适"],
+    ["There is a refrigerator next to the swimming pool","在游泳池旁边有一个冰箱"]
   ]
 }
