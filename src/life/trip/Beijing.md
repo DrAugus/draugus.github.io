@@ -1,4 +1,8 @@
-# 这里是北京
+---
+pageInfo: false
+toc: false
+title: 这里是北京
+---
 
 - 故宫博物院 3次了
 - 天坛公园
