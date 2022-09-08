@@ -597,7 +597,7 @@ export const WISH = {
       start: "2022-09-09 18:00:00 +0800",
       end: "2022-09-27 14:59:59 +0800",
       wish5star: "ganyu",
-      wish4star: ["dori", "xingqiu", "xiangling"],
+      wish4star: ["dori", "sucrose", "xingqiu"],
       wishName: "「浮生孰来」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -608,7 +608,7 @@ export const WISH = {
       start: "2022-09-09 18:00:00 +0800",
       end: "2022-09-27 14:59:59 +0800",
       wish5star: "sangonomiya_kokomi",
-      wish4star: ["dori", "xingqiu", "xiangling"],
+      wish4star: ["dori", "sucrose", "xingqiu"],
       wishName: "「浮岳虹珠」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"

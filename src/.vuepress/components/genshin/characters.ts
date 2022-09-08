@@ -183,7 +183,7 @@ export const CHARACTER = {
   xingqiu: {
     id: "xingqiu",
     name: "行秋",
-    prefix: "",
+    prefix: "少年春衫薄",
     star: 4,
     event_exclusive: false,
     intro: "璃月港飞云商会的二少爷，自幼便以勤奋好学、待人礼貌闻名。不过，即使是如此文雅的少年人，也有着动若脱兔的一面。",
@@ -227,7 +227,7 @@ export const CHARACTER = {
   zhongli: {
     id: "zhongli",
     name: "钟离",
-    prefix: "",
+    prefix: "尘世闲游",
     star: 5,
     event_exclusive: true,
     intro: "应「往生堂」邀请而来的神秘客卿。样貌俊美，举止高雅，拥有远超常人的学识。虽说来历不明，却知礼数、晓规矩。坐镇「往生堂」，能行天地万物之典仪。",
@@ -340,7 +340,7 @@ export const CHARACTER = {
   ganyu: {
     id: "ganyu",
     name: "甘雨",
-    prefix: "",
+    prefix: "循循守月",
     star: 5,
     event_exclusive: true,
     intro: "璃月七星的秘书，体内流淌着人类与仙兽的血脉。天性优雅娴静，但仙兽「麒麟」温柔的性情与坚定毅重的工作态度毫无冲突。毕竟，甘雨坚信自己所做的一切工作都是为了践行与帝君的契约，谋求璃月众生的最大福祉。",
@@ -511,7 +511,7 @@ export const CHARACTER = {
   sangonomiya_kokomi: {
     id: "sangonomiya_kokomi",
     name: "珊瑚宫心海",
-    prefix: "",
+    prefix: "真珠之智",
     star: 5,
     event_exclusive: true,
     intro: "心海是海祇岛的「现人神巫女」，也就是现任海祇岛最高领袖。她通读兵法、擅长谋略，在军事上有着独特见解，也能将内政、外交等工作处理得井井有条。不过，这位人们眼中深不可测的领导者，似乎也有不为人知的一面…",
@@ -738,7 +738,7 @@ export const CHARACTER = {
     prefix: "梦园藏金",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "多莉是活跃在须弥的百货商人，最喜欢亮闪闪的摩拉。能靠着精湛话术将手里那些许多奇特又神秘的道具卖出高价。",
     city: City.Sumeru,
     ele: Element.electro,
     weapon: Weapon.sword
