@@ -1035,5 +1035,14 @@ export const WISH = {
       wish5star: ['Hunter\'s Path', 'Vortex Vanquisher'],
       wish4star: ['Favonius Sword', 'The Bell', 'Favonius Lance', 'Favonius Codex'],
     },
+    {
+      name: 'Epitome Invocation',
+      image: 34,
+      start: '2022-09-09 18:00:00 +0800',
+      end: '2022-09-27 14:59:59 +0800',
+      shortName: 'Amos',
+      wish5star: ['amos_bow', 'everlasting_moonglow'],
+      wish4star: ['sacrificial_sword', 'favonius_greatsword', 'dragons_bane', 'eye_of_perception', 'rust'],
+    },
   ]
 }
