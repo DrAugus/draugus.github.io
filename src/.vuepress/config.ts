@@ -43,8 +43,9 @@ export default defineUserConfig({
     "@GenshinTimeline": path.resolve(__dirname, "./components/genshin/Timeline.vue"),
     "@GenshinTimelineTable": path.resolve(__dirname, "./components/genshin/TimelineTable.vue"),
 
-    "@EnglishWords": path.resolve(__dirname, "./components/language/EnglishWords.vue"),
-    "@EnglishSentence": path.resolve(__dirname, "./components/language/EnglishSentence.vue"),
     "@Chinese": path.resolve(__dirname, "./components/language/Chinese.vue"),
+    "@WordsEN": path.resolve(__dirname, "./components/language/WordsEN.vue"),
+    "@SentenceIT": path.resolve(__dirname, "./components/language/SentenceIT.vue"),
+    "@SentenceEN": path.resolve(__dirname, "./components/language/SentenceEN.vue"),
   }
 });

@@ -4,8 +4,8 @@ pageInfo: false
 toc: false
 ---
 
-<EnglishWords />
+<WordsEN />
 
 <script setup lang="ts">
-import EnglishWords from "@EnglishWords";
+import WordsEN from "@WordsEN";
 </script>

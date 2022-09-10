@@ -4,8 +4,8 @@ pageInfo: false
 toc: false
 ---
 
-<EnglishSentence />
+<SentenceEN />
 
 <script setup lang="ts">
-import EnglishSentence from "@EnglishSentence";
+import SentenceEN from "@SentenceEN";
 </script>
