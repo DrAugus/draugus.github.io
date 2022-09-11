@@ -191,5 +191,7 @@ static_cast<type>(expression);//这是C++的
 
 当类中含const、reference成员变量；基类的构造函数都需要初始化表。
 
+## List 和 Set
 
+List 可以存放相同元素 Set 不可存放相同元素
 
