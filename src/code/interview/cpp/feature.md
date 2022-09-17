@@ -1,7 +1,3 @@
----
-index: false
----
-
 # C++ Feature
 
 ## C++ 11 有什么新特性

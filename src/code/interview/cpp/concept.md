@@ -1,7 +1,3 @@
----
-index: false
----
-
 # 概念辨析
 
 - [const](./const)
