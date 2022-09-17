@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # LATEX
 
 <KatexPlayground />

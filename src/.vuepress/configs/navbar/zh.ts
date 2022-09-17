@@ -64,7 +64,36 @@ export const navbar_zh = navbar([
   {
     text: "编码",
     icon: 'code',
-    link: url_code + '/',
+    children: [
+      {
+        text: '立即开发',
+        link: url_code + '/development/'
+      },
+      {
+        text: '疑难解答',
+        link: url_code + '/FAQ/'
+      },
+      {
+        text: '面试指南',
+        link: url_code + '/interview/'
+      },
+      {
+        text: '配环境',
+        link: url_code + '/config-env'
+      },
+      {
+        text: '未来',
+        link: url_code + '/future/'
+      },
+      {
+        text: 'Lua',
+        link: url_code + '/lua/'
+      },
+      {
+        text: 'Latex',
+        link: url_code + '/latex'
+      },
+    ]
   },
   {
     text: '赞助',

@@ -12,7 +12,11 @@ export const local_zh = {
     '/learn/language/': 'structure',
     '/learn/science/': 'structure',
     '/record/': 'structure',
-    '/code/': 'structure',
+    '/code/development/': 'structure',
+    '/code/FAQ/': 'structure',
+    '/code/interview/': 'structure',
+    '/code/future/': 'structure',
+    '/code/lua/': 'structure',
     '/game/': 'structure',
   },
 
