@@ -1,8 +1,8 @@
 # LeetCode
 
-- 多数元素 [169](https://leetcode-cn.com/problems/majority-element/solution/qiu-/)
-- 按序打印 [1114](https://leetcode-cn.com/problems/print-in-order/)
-- 爬楼梯 [70](https://leetcode-cn.com/problems/climbing-stairs/)
+- 多数元素 [169] [sol][169sol]
+- 按序打印 [1114] [参考](./lc-1114) [sol][1114sol]
+- 爬楼梯 [70]
 - 路径总和 [112](https://leetcode-cn.com/problems/path-sum/)
 - 用 `Rand7()` 实现 `Rand10()` [470](https://leetcode-cn.com/problems/implement-rand10-using-rand7/)
 - 字符串解码 [394](https://leetcode-cn.com/problems/decode-string/)
@@ -51,3 +51,12 @@
 - 环形链表 [141](https://leetcode-cn.com/problems/linked-list-cycle/)
 - 合并两个有序链表 [21](https://leetcode-cn.com/problems/merge-two-sorted-lists/)
 - 反转链表 [剑指Offer24](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/) [92](https://leetcode-cn.com/problems/reverse-linked-list-ii/)
+
+
+
+[169]: https://leetcode.cn/problems/majority-element/
+[169sol]: https://raw.githubusercontent.com/DrAugus/cpp/master/src/leetcode/169.cpp
+[1114]: https://leetcode-cn.com/problems/print-in-order/
+[1114sol]: https://raw.githubusercontent.com/DrAugus/cpp/master/src/leetcode/1114.cpp
+[70]: https://leetcode-cn.com/problems/climbing-stairs/
+

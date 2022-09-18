@@ -1,5 +1,27 @@
 # STL
 
+[refer](https://zintrulcre.vip/posts/cpp/basics/basics/#%E6%89%80%E6%9C%89%E5%AE%B9%E5%99%A8)
+
+| 容器                 | 	实现	           | 查询        | 	插入删除	           | 特点            |
+|:-------------------|:---------------|:----------|:-----------------|:--------------|
+| array              | 	数组            | 	O(1)	    | O(1)	            | 大小固定          |
+| vector             | 	数组            | 	O(1)	    | 尾部 O(1)，其他 O(n)  | 	大小可变，扩容耗时    |
+| deque              | 	双端队列          | O(n)	     | 头尾 O(1)，其他 O(n)	 | 一个中央控制器，多个缓冲区 |
+| list               | 	双向链表          | 	O(n)	    | O(1)             ||
+| forward_list       | 	单向链表          | O(n)	     | O(1)             ||
+| stack              | deque / list 	 | /	        | O(1)             | 	先进后出         |
+| queue              | deque / list 	 | /         | 	O(1)	           | 先进先出          |
+| priority_queue     | 	vector	       | /         | 	O(logn)	堆，完全二叉树 |
+| set                | 红黑树	           | O(logn)   | 	O(logn)         ||
+| multiset           | 红黑树            | 	O(logn)	 | O(logn)          ||
+| map                | 红黑树	           | O(logn)   | 	O(logn)         ||
+| multimap	          | 红黑树	           | O(logn)   | 	O(logn)         ||
+| unordered_set      | 哈希表	           | 平均 O(1)	  | 平均 O(1)          ||
+| unordered_multiset | 	         哈希表	 | 平均 O(1)	  | 平均 O(1)          ||
+| unordered_map      | 哈希表            | 	平均 O(1)  | 	平均 O(1)         ||
+| unordered_multimap | 	哈希表           | 	平均 O(1)  | 	平均 O(1)         ||
+
+
 ## 常用的容器有哪些
 
 ## 简述 vector 的实现原理

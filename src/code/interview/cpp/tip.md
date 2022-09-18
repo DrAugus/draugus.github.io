@@ -195,6 +195,8 @@ List 可以存放相同元素 Set 不可存放相同元素
 
 ## 谈一谈 c++ 的 this 
 
+[匿名函数](https://zintrulcre.vip/posts/cpp/closure-and-anonymous-function/)
+
 ## 不同类型的语言有什么差异
 
 ## 如何优化冒泡排序
