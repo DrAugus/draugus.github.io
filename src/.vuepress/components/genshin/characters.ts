@@ -771,7 +771,7 @@ export const CHARACTER = {
     prefix: "缄秘的裁遣",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "教令院的大风纪官，所有风纪官们的首领。拥有的独特幽默感令人印象深刻。",
     city: City.Sumeru,
     ele: Element.electro,
     weapon: Weapon.polearm
@@ -793,10 +793,10 @@ export const CHARACTER = {
     prefix: "浮金的誓愿",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "阿如村的守护者，为人温柔和善。在她的守护下，几乎没人能够危害阿如村。",
     city: City.Sumeru,
     ele: Element.hydro,
-    weapon: Weapon.sword
+    weapon: Weapon.polearm
   },
   nahida: {
     id: "nahida",

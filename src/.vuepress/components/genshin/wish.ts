@@ -614,15 +614,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "Twilight Arbiter",
       image: 1,
       shortName: "Cyno",
       start: "2022-09-28 11:00:00 +0800",
       end: "2022-10-14 17:59:59 +0800",
       wish5star: "cyno",
-      wish4star: [],
+      wish4star: ["candace","kuki_shinobu","sayu"],
       version: "3.1",
-      wishName: "「」",
+      wishName: "「雳裁冥昭」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -632,7 +632,7 @@ export const WISH = {
       start: "2022-09-28 11:00:00 +0800",
       end: "2022-10-14 17:59:59 +0800",
       wish5star: "venti",
-      wish4star: [],
+      wish4star: ["candace","kuki_shinobu","sayu"],
       wishName: "「杯装之诗」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
