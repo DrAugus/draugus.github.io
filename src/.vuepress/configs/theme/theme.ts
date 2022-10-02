@@ -74,18 +74,6 @@ export default hopeTheme({
       // category: "Announcements",
       // categoryId: "DIC_kwDOHV19bM4CPJQy",
       // inputPosition: "top"
-
-      /**
-       * Using twikoo
-       */
-      // type: "twikoo",
-      // envId: "https://twikoo.ccknbc.vercel.app",
-
-      /**
-       * Using Waline
-       */
-      // type: "waline",
-      // serverURL: "https://vuepress-theme-hope-comment.vercel.app",
     },
 
     mdEnhance: {

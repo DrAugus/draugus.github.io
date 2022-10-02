@@ -657,6 +657,7 @@ export const WISH = {
       wish5star: "albedo",
       wish4star: [],
       wishName: "「深秘之息」",
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -671,18 +672,6 @@ export const WISH = {
       wishName: "「」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
-    // {
-    //   name: "Gentry of Hermitage",
-    //   image: 4,
-    //   shortName: "Zhongli",
-    //   start: "2022-11-02 11:00:00 +0800",
-    //   end: "2022-11-18 17:59:59 +0800",
-    //   wish5star: "zhongli",
-    //   wish4star: ["collei", "diona ", "fischl"],
-    //   wishName: "「陵薮市朝」",
-    //   wish_2: true,
-    //   url: "https://bbs.mihoyo.com/ys/article/?"
-    // },
     {
       name: "Farewell of Snezhnaya",
       image: 4,
