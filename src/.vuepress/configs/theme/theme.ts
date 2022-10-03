@@ -77,7 +77,17 @@ export default hopeTheme({
     },
 
     mdEnhance: {
-      // enableAll: true,
+      container: true,
+      linkCheck: true,
+      vpre: true,
+      tabs: true,
+      codetabs: true,
+      align: true,
+      footnote: true,
+      lazyLoad: true,
+      katex: true,
+      chart: true,
+      echarts: true,
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
