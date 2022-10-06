@@ -59,7 +59,32 @@ export const navbar_zh = navbar([
   {
     text: "记录",
     icon: 'box',
-    link: url_record + '/',
+    children: [
+      {
+        text: "accident",
+        link: url_record + "/accident/",
+      },
+      {
+        text: "health",
+        link: url_record + "/health/",
+      },
+      {
+        text: "history",
+        link: url_record + "/history/",
+      },
+      {
+        text: "plant",
+        link: url_record + "/plant/",
+      },
+      {
+        text: "war",
+        link: url_record + "/war/",
+      },
+      {
+        text: "乐",
+        link: url_record + "/funny/",
+      },
+    ],
   },
   {
     text: "编码",
