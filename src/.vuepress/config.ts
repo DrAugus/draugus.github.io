@@ -1,7 +1,10 @@
 import {defineUserConfig} from "vuepress";
 import theme from "./configs/theme/theme";
 import {plugin, siteLocalConfig} from './configs'
-import {path} from "@vuepress/utils";
+import { getDirname, path } from '@vuepress/utils'
+
+// https://v2.vuepress.vuejs.org/zh/reference/plugin-api.html#alias
+const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
   base: "/",
@@ -11,7 +14,6 @@ export default defineUserConfig({
   head: [
     [
       "link",
-      // https://vuepress-theme-hope.github.io/v2/zh/faq/vite.html#import-%E8%AF%AD%E6%B3%95%E6%97%A0%E6%95%88
       {
         rel: "stylesheet",
         href: "//unpkg.com/heti/umd/heti.min.css",
