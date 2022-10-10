@@ -14,21 +14,21 @@ export const main: SiteLocaleConfig = {
     title: 'AUGUS',
     description: 'Tout enregistrer'
   },
-  '/i18n/de/': {
-    lang: 'de-DE',
-    title: 'AUGUS',
-    description: 'Alles aufzeichnen'
-  },
-  '/i18n/it/': {
-    lang: 'it-IT',
-    title: 'AUGUS',
-    description: 'Registra tutto'
-  },
-  '/i18n/kr/': {
-    lang: 'kr-KR',
-    title: 'AUGUS',
-    description: '모든 것을 기록'
-  },
+  // '/i18n/de/': {
+  //   lang: 'de-DE',
+  //   title: 'AUGUS',
+  //   description: 'Alles aufzeichnen'
+  // },
+  // '/i18n/it/': {
+  //   lang: 'it-IT',
+  //   title: 'AUGUS',
+  //   description: 'Registra tutto'
+  // },
+  // '/i18n/kr/': {
+  //   lang: 'kr-KR',
+  //   title: 'AUGUS',
+  //   description: '모든 것을 기록'
+  // },
   '/': {
     lang: 'zh-CN',
     title: 'AUGUS',
