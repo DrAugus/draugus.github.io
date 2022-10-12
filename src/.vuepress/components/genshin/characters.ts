@@ -172,7 +172,7 @@ export const CHARACTER = {
   beidou: {
     id: "beidou",
     name: "北斗",
-    prefix: "",
+    prefix: "无冕的龙王",
     star: 4,
     event_exclusive: false,
     intro: "「南十字」船队头领，在璃月有着相当的声望。有人说她能开山劈海，有人说她善举剑引雷，还有人说，连可怖的冥海巨兽都不是北斗的一合之敌。外人也许会把这些话当做夸张的玩笑，但那些曾与北斗同航的人却会说——「世上若真有什么冥海巨兽，那北斗一定能将它劈作两截。」",
@@ -782,7 +782,7 @@ export const CHARACTER = {
     prefix: "莲光落舞筵",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "「祖拜尔剧场」的明星演员，舞姿娉婷，如睡莲初绽，一尘不染。但她绝非高傲清冷之人，即便只是匆匆的旅者，也会对她纯洁质朴的笑容过目不忘。",
     city: City.Sumeru,
     ele: Element.hydro,
     weapon: Weapon.catalyst

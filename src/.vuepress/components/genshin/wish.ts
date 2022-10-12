@@ -638,14 +638,14 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "Twirling Lotus",
       image: 1,
       shortName: "Nilou",
       start: "2022-10-14 18:00:00 +0800",
       end: "2022-11-01 14:59:59 +0800",
       wish5star: "nilou",
-      wish4star: [],
-      wishName: "「」",
+      wish4star: ["Beidou","Barbara","Xiangling"],
+      wishName: "「翩舞歈莲」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -655,7 +655,7 @@ export const WISH = {
       start: "2022-10-14 18:00:00 +0800",
       end: "2022-11-01 14:59:59 +0800",
       wish5star: "albedo",
-      wish4star: [],
+      wish4star: ["Beidou","Barbara","Xiangling"],
       wishName: "「深秘之息」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
