@@ -3,6 +3,7 @@ import {navbar} from "vuepress-theme-hope";
 const url_prefix = '';
 
 const url_life = url_prefix + '/life';
+const url_food = url_prefix + '/food';
 const url_game = url_prefix + '/game';
 const url_learn = url_prefix + '/learn';
 const url_record = url_prefix + '/record';
@@ -14,6 +15,11 @@ export const navbar_zh = navbar([
     text: "生活",
     icon: 'bed',
     link: url_life + '/',
+  },
+  {
+    text: "干饭",
+    icon: 'food',
+    link: url_food + '/',
   },
   {
     text: "游戏",

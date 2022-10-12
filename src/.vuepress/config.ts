@@ -31,12 +31,18 @@ export default defineUserConfig({
   },
   alias: {
     "@KatexPlayground": path.resolve(__dirname, "./components/KatexPlayground"),
-    "@Food": path.resolve(__dirname, "./components/Food.vue"),
     "@War": path.resolve(__dirname, "./components/War.vue"),
     "@History": path.resolve(__dirname, "./components/History.vue"),
     "@TestLeaflet": path.resolve(__dirname, "./components/Leaflet.vue"),
     "@LinksRecord": path.resolve(__dirname, "./components/LinksRecord.vue"),
     "@Article": path.resolve(__dirname, "./components/Article.vue"),
+
+
+    "@FoodBlock": path.resolve(__dirname, "./components/food/Block.vue"),
+    "@FoodCookbook": path.resolve(__dirname, "./components/food/Cookbook.vue"),
+    "@FoodDineOut": path.resolve(__dirname, "./components/food/DineOut.vue"),
+    "@FoodRandom": path.resolve(__dirname, "./components/food/Random.vue"),
+    "@FoodTakeaway": path.resolve(__dirname, "./components/food/Takeaway.vue"),
 
     "@GenshinLevelExp": path.resolve(__dirname, "./components/genshin/LevelExp.vue"),
     "@GenshinPartySetup": path.resolve(__dirname, "./components/genshin/PartySetup.vue"),

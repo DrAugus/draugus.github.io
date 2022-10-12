@@ -17,7 +17,8 @@ export const local_zh = {
     '/code/interview/': 'structure',
     '/code/future/': 'structure',
     '/code/lua/': 'structure',
-    '/game/': 'structure',
+    '/game/genshin/': 'structure',
+    '/food/': 'structure',
   },
 
   navbarLocales: {
