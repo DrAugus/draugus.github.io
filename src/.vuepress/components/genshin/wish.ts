@@ -620,7 +620,7 @@ export const WISH = {
       start: "2022-09-28 11:00:00 +0800",
       end: "2022-10-14 17:59:59 +0800",
       wish5star: "cyno",
-      wish4star: ["candace","kuki_shinobu","sayu"],
+      wish4star: ["candace", "kuki_shinobu", "sayu"],
       version: "3.1",
       wishName: "「雳裁冥昭」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -632,7 +632,7 @@ export const WISH = {
       start: "2022-09-28 11:00:00 +0800",
       end: "2022-10-14 17:59:59 +0800",
       wish5star: "venti",
-      wish4star: ["candace","kuki_shinobu","sayu"],
+      wish4star: ["candace", "kuki_shinobu", "sayu"],
       wishName: "「杯装之诗」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -644,7 +644,7 @@ export const WISH = {
       start: "2022-10-14 18:00:00 +0800",
       end: "2022-11-01 14:59:59 +0800",
       wish5star: "nilou",
-      wish4star: ["Beidou","Barbara","Xiangling"],
+      wish4star: ["Beidou", "Barbara", "Xiangling"],
       wishName: "「翩舞歈莲」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -655,7 +655,7 @@ export const WISH = {
       start: "2022-10-14 18:00:00 +0800",
       end: "2022-11-01 14:59:59 +0800",
       wish5star: "albedo",
-      wish4star: ["Beidou","Barbara","Xiangling"],
+      wish4star: ["Beidou", "Barbara", "Xiangling"],
       wishName: "「深秘之息」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -1031,6 +1031,18 @@ export const WISH = {
       shortName: 'Amos',
       wish5star: ['amos_bow', 'everlasting_moonglow'],
       wish4star: ['sacrificial_sword', 'favonius_greatsword', 'dragons_bane', 'eye_of_perception', 'rust'],
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 35,
+      start: "2022-09-28 11:00:00 +0800",
+      end: "2022-10-14 17:59:59 +0800",
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 36,
+      start: "2022-09-28 11:00:00 +0800",
+      end: "2022-10-14 17:59:59 +0800",
     },
   ]
 }
