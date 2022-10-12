@@ -18,7 +18,7 @@ export const navbar_zh = navbar([
   },
   {
     text: "干饭",
-    icon: 'food',
+    icon: 'cookie-bite',
     link: url_food + '/',
   },
   {
