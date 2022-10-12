@@ -23,7 +23,7 @@
 import foodInfo from "../../data/food.json";
 
 export default {
-  name: "Food",
+  name: "Food-DineOut",
   components: {
   },
   data() {

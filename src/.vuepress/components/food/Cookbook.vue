@@ -24,7 +24,7 @@ function split_raw(raw) {
 }
 
 export default {
-  name: "Food",
+  name: "Food-Cookbook",
   components: {
   },
   data() {

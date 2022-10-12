@@ -7,7 +7,7 @@
 import foodInfo from "../../data/food.json";
 
 export default {
-  name: "Food",
+  name: "Food-Random",
   components: {
   },
   data() {
