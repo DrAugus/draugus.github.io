@@ -1,7 +1,5 @@
 <template>
 
-  <h1>{{title}}</h1>
-
   <h2>吃什么选一个吧</h2>
 
   <span ref="choiceFromAll"></span>
@@ -15,7 +13,7 @@
 <script>
 
 import Typed from "typed.js";
-import foodInfo from "../data/food.json";
+import foodInfo from "../../data/food.json";
 
 export default {
   name: "Food",
@@ -24,7 +22,6 @@ export default {
   },
   data() {
     return {
-      title: "random"
     };
   },
   methods: {

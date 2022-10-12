@@ -1,7 +1,5 @@
 <template>
 
-<h1>{{title}}</h1>
-
 <div v-for="(item, index) in cookbook">
   <div v-if="item.name">
     <h2>{{item.name}}</h2>
@@ -17,7 +15,7 @@
 
 <script>
 
-import foodInfo from "../data/food.json";
+import foodInfo from "../../data/food.json";
 
 function split_raw(raw) {
   if(raw.indexOf("|") === -1) return raw;
@@ -28,11 +26,9 @@ function split_raw(raw) {
 export default {
   name: "Food",
   components: {
-    Typed,
   },
   data() {
     return {
-      title: "cookbook",
       cookbook: foodInfo.cookbook,// name raw flow source
       split_raw,
     };

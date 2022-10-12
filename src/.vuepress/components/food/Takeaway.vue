@@ -1,12 +1,10 @@
 <template>
 
-  <h1>{{title}}</h1>
-
 </template>
 
 <script>
 
-import foodInfo from "../data/food.json";
+import foodInfo from "../../data/food.json";
 
 export default {
   name: "Food",
@@ -14,7 +12,6 @@ export default {
   },
   data() {
     return {
-      title: "takeaway"
     };
   },
   methods: {

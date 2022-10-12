@@ -1,7 +1,5 @@
 <template>
 
-  <h1>{{title}}</h1>
-
   <ul>
     <li v-for="(item, index) in blockFood">
       {{ item }}

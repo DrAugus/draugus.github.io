@@ -1,7 +1,5 @@
 <template>
 
-  <h1>{{title}}</h1>
-
   <div v-for="(value, key, index) in outdoor">
     <h3>{{ key }}</h3>
     <div v-if="value.good">
@@ -22,7 +20,7 @@
 
 <script>
 
-import foodInfo from "../data/food.json";
+import foodInfo from "../../data/food.json";
 
 export default {
   name: "Food",
