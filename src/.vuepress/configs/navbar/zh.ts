@@ -63,6 +63,11 @@ export const navbar_zh = navbar([
             icon: 'bong',
             link: url_learn + '/science/'
           },
+          {
+            text: '工具使用',
+            icon: 'bong',
+            link: url_learn + '/tools/'
+          },
         ]
       }
     ]

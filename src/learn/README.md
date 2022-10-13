@@ -30,6 +30,10 @@ features:
   icon: bong
   details: 理学
   link: /learn/science/
+- title: 工具
+  icon: bong
+  details: 工欲善其事必先利其器
+  link: /learn/tools/
 
 
 copyright: false
