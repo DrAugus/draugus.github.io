@@ -1,25 +1,11 @@
 import {navbar_zh} from "../../navbar";
+import { sidebar_zh } from "../../sidebar/zh";
 
 export const local_zh = {
   lang: "zh-CN",
 
   navbar: navbar_zh,
-  sidebar: {
-    '/': ["", "home", "slide"],
-    '/life/': 'structure',
-    '/learn/arts/': 'structure',
-    '/learn/history/': 'structure',
-    '/learn/language/': 'structure',
-    '/learn/science/': 'structure',
-    '/record/': 'structure',
-    '/code/development/': 'structure',
-    '/code/FAQ/': 'structure',
-    '/code/interview/': 'structure',
-    '/code/future/': 'structure',
-    '/code/lua/': 'structure',
-    '/game/genshin/': 'structure',
-    '/food/': 'structure',
-  },
+  sidebar: sidebar_zh,
 
   navbarLocales: {
     langName: "简体中文",

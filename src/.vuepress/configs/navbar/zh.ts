@@ -110,6 +110,10 @@ export const navbar_zh = navbar([
         link: url_code + '/FAQ/'
       },
       {
+        text: '未来',
+        link: url_code + '/future/'
+      },
+      {
         text: '面试指南',
         link: url_code + '/interview/'
       },
@@ -118,16 +122,16 @@ export const navbar_zh = navbar([
         link: url_code + '/config-env'
       },
       {
-        text: '未来',
-        link: url_code + '/future/'
-      },
-      {
         text: 'Lua',
         link: url_code + '/lua/'
       },
       {
         text: 'Latex',
         link: url_code + '/latex'
+      },
+      {
+        text: '学习记录',
+        link: url_code + '/record/'
       },
     ]
   },
