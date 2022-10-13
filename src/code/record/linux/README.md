@@ -1,6 +1,7 @@
 ---
 article: true
 title: linux记录  
+index: false
 isOriginal: true
 date: 2021-12-07 09:32:11  
 category:
