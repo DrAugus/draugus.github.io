@@ -11,7 +11,12 @@ export const sidebar_zh = sidebar({
     '/learn/language/': 'structure',
     '/learn/science/': 'structure',
 
-    '/record/': 'structure',
+    '/record/accident/': 'structure',
+    '/record/funny/': 'structure',
+    '/record/health/': 'structure',
+    '/record/history/': 'structure',
+    '/record/plant/': 'structure',
+    '/record/war/': 'structure',
 
     '/code/development/': 'structure',
     '/code/FAQ/': 'structure',
