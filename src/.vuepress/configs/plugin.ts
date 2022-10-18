@@ -2,7 +2,7 @@ import {docsearchPlugin} from '@vuepress/plugin-docsearch'
 import { PluginConfig } from 'vuepress'
 import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics'
 
-export const main:PluginConfig = [
+export const plugin:PluginConfig = [
   docsearchPlugin({
     appId: 'FYSTNJLMWZ',
     apiKey: '15ca6881fc750ff0327aac7c0f47d7df',
