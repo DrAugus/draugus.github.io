@@ -77,23 +77,23 @@ export const navbar_zh = navbar([
     icon: 'box',
     children: [
       {
-        text: "accident",
+        text: "意外事故",
         link: url_record + "/accident/",
       },
       {
-        text: "health",
+        text: "健康生活",
         link: url_record + "/health/",
       },
       {
-        text: "history",
+        text: "铭记历史",
         link: url_record + "/history/",
       },
       {
-        text: "plant",
+        text: "花草树木",
         link: url_record + "/plant/",
       },
       {
-        text: "war",
+        text: "远离战争",
         link: url_record + "/war/",
       },
       {

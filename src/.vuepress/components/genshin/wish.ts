@@ -1041,8 +1041,20 @@ export const WISH = {
     {
       name: 'Epitome Invocation',
       image: 36,
-      start: "2022-09-28 11:00:00 +0800",
-      end: "2022-10-14 17:59:59 +0800",
+      start: "2022-10-14 18:00:00 +0800",
+      end: "2022-11-01 14:59:59 +0800",
     },
+    {
+      name: 'Epitome Invocation',
+      image: 37,
+      start: "2022-11-02 11:00:00 +0800",
+      end: "2022-11-18 17:59:59 +0800",
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 38,
+      start: "2022-11-18 18:00:00 +0800",
+      end: "2022-12-06 14:59:59 +0800",
+    }
   ]
 }
