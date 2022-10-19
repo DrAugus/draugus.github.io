@@ -12,9 +12,9 @@ tag:
 
 # Linux 日常
 
-[安装pg](./stroll.md#pg-坑)
+[安装pg](/blog/stroll.md#pg-坑)
 
-[安装nodejs](./stroll.md#安装-nodejs-流程)
+[安装nodejs](/blog/stroll.md#安装-nodejs-流程)
 
 
 - [linux系统分类](./sys_category)

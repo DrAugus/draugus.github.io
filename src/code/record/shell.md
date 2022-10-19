@@ -33,3 +33,15 @@ sidebar: false
     - 当执行系统自身的命令时，`$?` 对应这个命令的返回值。 
     - 当执行 shell 脚本时，`$?` 对应该脚本调用 exit 命令返回的值。如果没有主动调用 exit 命令，默认返回为 0。 
     - 当执行自定义的 bash 函数时，`$?` 对应该函数调用 return 命令返回的值。如果没有主动调用 return 命令，默认返回为 0。
+
+
+## qa
+
+foo.sh
+```shell
+#!/bin/bash 
+mkdir -p {bin,lib,etc}
+```
+execute this sh, `sh foo.sh`, 会创建一个名字为`{bin,lib,etc}`的文件夹。  
+sol: `chmod a+x foo.sh` then execute `./foo.sh`
+
