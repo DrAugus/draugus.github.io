@@ -3,10 +3,22 @@
 本地调试无法显示上次更新，及贡献者。
 > 启动脚本 加入 `--debug`
 
-参考 [官方指南](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/meta.html)
+## plugin
+
+### docsearch
+
+[获取搜索索引](https://v2.vuepress.vuejs.org/zh/reference/plugin/docsearch.html#获取搜索索引)
+
+1. [sign up](https://docsearch.algolia.com/apply/)
+2. copy key, id
+3. run py to make index, use [docker](https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image)
+
 
 
 <details>
+<summary>
+参考 [官方指南](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/meta.html)
+</summary>
 
 主题通过 [`@vuepress/plugin-git`][git] 插件在页面底部显示页面的最后更新时间与贡献者，并提供了“编辑此页”按钮的支持。
 
@@ -14,7 +26,7 @@
 
 <!-- more -->
 
-## 基于 Git 的信息
+### 基于 Git 的信息
 
 `vuepress-theme-hope` 通过内置 [`@vuepress/plugin-git`][git] 插件，实现了页面创建时间、最后更新时间与贡献者的自动生成。
 
@@ -42,7 +54,7 @@
 
 :::
 
-## 编辑此页链接
+### 编辑此页链接
 
 你可以通过在主题选项中中设置如下项目，来自动为每个页面生成编辑此页链接:
 
@@ -50,7 +62,7 @@
 - `docsDir`: 文档在仓库中的目录，默认为根目录
 - `docsBranch`: 文档存放的分值，默认为 `"main"`
 
-## 显示控制
+### 显示控制
 
 如果你想要全局禁用这些项目的显示，请在主题选项中中，将以下对应项目设置为 `false`。你也可以通过 `YAML front matter` 中设置这些项目来启用/禁用指定页面:
 
