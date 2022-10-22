@@ -1,10 +1,7 @@
 ---
+pageInfo: false
+toc: false
 index: false
-category:
-  - game
-tag:
-  - genshin
-  - game
 ---
 
 # 原神
