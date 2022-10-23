@@ -527,7 +527,7 @@ export const WISH = {
       start: "2022-06-21 18:00:00 +0800",
       end: "2022-07-12 14:59:59 +0800",
       wish5star: "arataki_itto",
-      wish4star: "",
+      wish4star: [],
       wishName: "「花坂豪快」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -562,7 +562,7 @@ export const WISH = {
       start: "2022-08-02 18:00:00 +0800",
       end: "2022-08-23 14:59:59 +0800",
       wish5star: "yoimiya",
-      wish4star: "",
+      wish4star: [],
       wishName: "「焰色天河」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -673,14 +673,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Farewell of Snezhnaya",
-      image: 4,
-      shortName: "Tartaglia",
-      start: "2022-11-18 18:00:00 +0800",
-      end: "2022-12-06 14:59:59 +0800",
-      wish5star: "tartaglia",
-      wish4star: ["", "", ""],
-      wishName: "「暂别冬都」",
+      name: "Tapestry of Golden Flames",
+      image: 3,
+      shortName: "Yoimiya",
+      start: "2022-11-02 11:00:00 +0800",
+      end: "2022-11-18 17:59:59 +0800",
+      wish5star: "yoimiya",
+      wish4star: [],
+      wishName: "「焰色天河」",
+      wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -692,6 +693,17 @@ export const WISH = {
       wish5star: "yae_miko",
       wish4star: ["", "", ""],
       wishName: "「华紫樱绯」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Farewell of Snezhnaya",
+      image: 4,
+      shortName: "Tartaglia",
+      start: "2022-11-18 18:00:00 +0800",
+      end: "2022-12-06 14:59:59 +0800",
+      wish5star: "tartaglia",
+      wish4star: ["", "", ""],
+      wishName: "「暂别冬都」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
