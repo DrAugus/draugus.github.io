@@ -131,6 +131,10 @@ export const navbar_zh = navbar([
         link: url_code + '/lua/'
       },
       {
+        text: 'Cpp',
+        link: url_code + '/cpp/'
+      },
+      {
         text: 'Latex',
         link: url_code + '/latex'
       },

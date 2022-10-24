@@ -24,6 +24,7 @@ export const sidebar_zh = sidebar({
     '/code/future/': 'structure',
     '/code/interview/': 'structure',
     '/code/lua/': 'structure',
+    '/code/cpp/': 'structure',
     '/code/record/linux/': 'structure',
 
     '/game/genshin/': 'structure',
