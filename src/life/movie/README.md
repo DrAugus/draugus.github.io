@@ -2,6 +2,7 @@
 title: 🎥 电影
 pageInfo: false
 toc: false
+index: false
 ---
 
 ## 推荐
