@@ -3,7 +3,7 @@ home: true
 title: 学习记录
 heroAlt: 不生效？
 heroText: 编程知识
-tagline: 平时遇到的
+tagline: 平时遇到的问题，及学习记录
 actions:
 - text: 返回上级
   link: /code
@@ -14,20 +14,16 @@ actions:
   type: primary
 features:
 - title: Linux
-  icon: egg
-  details: Linux 使用记录
+  details: 记录一些命令，收集一些问题，linux 的分类，及 gdb 的调试
   link: /code/record/linux/
 - title: shell
-  icon: egg
-  details: shell 脚本
+  details: shell 脚本的语法及使用
   link: /code/record/shell
 - title: vim
-  icon: egg
-  details: vim
+  details: vim 实用教程
   link: /code/record/vim
 - title: markdown
-  icon: egg
-  details: markdown intro, markdown check
+  details: markdown 介绍及语法校验指南
   link: /code/record/markdown
 
 

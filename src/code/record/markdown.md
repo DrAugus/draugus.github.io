@@ -1,3 +1,7 @@
+---
+sidebar: false
+---
+
 # Markdown
 
 代码块支持的语言，以文件名后缀即可
@@ -10,11 +14,11 @@
 Markdown 常用代码规范检查工具如下：
 
 
-｜ 工具 ｜ 	用途	｜ lint 命令｜	支持 IDE｜
-｜:---:｜:---:｜:---:｜:--—:｜
-|[remark]	|Markdown 通用规范	|remark -f docs/	|[VSCode][vsc-remark]|
-|[lint-md]|	Markdown 中文规范|	lint-md docs/	|[VSCode][vsc-lint-md]|
-|[fnlint]|	文件名 slug 规范	|fnlint -c .fnlint.json	|不支持|
+| 工具 | 	用途	| lint 命令|	支持 IDE    |
+|---|---|---|---|
+| [remark]	|   Markdown 通用规范	|   remark -f docs/	| [VSCode][vsc-remark] |
+| [lint-md] |	Markdown 中文规范   |	lint-md docs/	| [VSCode][vsc-lint-md] |
+| [fnlint]  |	文件名 slug 规范    | fnlint -c .fnlint.json	|   不支持  |
 
 ### remark
 
