@@ -2,12 +2,12 @@
 
   <div v-if="sentences">
     <h2>
-    <span @click="showLang">
+    <span @click="showLang(true, false)">
       <span v-if="language===1">英文</span>
       <span v-if="language===2">意大利文</span>
     </span> |
-      <span @click="showZH">中文</span> |
-      <span @click="showAll">双语</span>
+      <span @click="showLang(false, true)">中文</span> |
+      <span @click="showLang(true, true)">双语</span>
     </h2>
 
     <span v-for="(v,i) in info">
@@ -62,17 +62,9 @@ export default {
     };
   },
   methods: {
-    showLang() {
-      this.show_lang = true;
-      this.show_zh = false;
-    },
-    showZH() {
-      this.show_lang = false;
-      this.show_zh = true;
-    },
-    showAll() {
-      this.show_lang = true;
-      this.show_zh = true;
+    showLang(lang, zh) {
+      this.show_lang = lang;
+      this.show_zh = zh;
     },
     showResult() {
       let words = this.query_words;
