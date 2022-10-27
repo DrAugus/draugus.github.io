@@ -13,6 +13,7 @@ export const alias = {
   "@TestLeaflet": path.resolve(__dirname, pre_path + "Leaflet.vue"),
   "@LinksRecord": path.resolve(__dirname, pre_path + "LinksRecord.vue"),
   "@Article": path.resolve(__dirname, pre_path + "Article.vue"),
+  "@Marvel": path.resolve(__dirname, pre_path + "Marvel.vue"),
 
   "@FoodBlock": path.resolve(__dirname, pre_path + "food/Block.vue"),
   "@FoodCookbook": path.resolve(__dirname, pre_path + "food/Cookbook.vue"),

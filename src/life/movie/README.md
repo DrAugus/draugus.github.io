@@ -4,9 +4,6 @@ pageInfo: false
 toc: false
 ---
 
-Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/), timeline todo 
-
-
 ## 推荐
 
 - [ ] Sorry We Missed You
