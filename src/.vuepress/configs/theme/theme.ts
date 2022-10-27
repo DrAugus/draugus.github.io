@@ -23,7 +23,7 @@ export default hopeTheme({
 
   editLinkPattern: ":repo/edit/master/src/:path",
 
-  pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime", "Word", "PageView"],
+  pageInfo: [/*"Author",*/ "Original", "Date", "Category", "Tag", /*"ReadingTime", "Word",*/ "PageView"],
 
   blog: {
     medias: {
