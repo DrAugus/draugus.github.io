@@ -1,12 +1,12 @@
 import {docsearchPlugin} from '@vuepress/plugin-docsearch'
-import { PluginConfig } from 'vuepress'
+import {PluginConfig} from 'vuepress'
 import {googleAnalyticsPlugin} from '@vuepress/plugin-google-analytics'
 
 export const plugin:PluginConfig = [
   docsearchPlugin({
-    appId: 'FYSTNJLMWZ',
-    apiKey: '15ca6881fc750ff0327aac7c0f47d7df',
-    indexName: 'augusmeow',
+    appId: 'VM6JVT5NK4',
+    apiKey: 'c0461d06c52659dbb87959e913623e9b',
+    indexName: 'draugusio',
     locales: {
       '/': {
         placeholder: '搜索',
