@@ -268,7 +268,7 @@ export const CHARACTER = {
   bennett: {
     id: "bennett",
     name: "班尼特",
-    prefix: "",
+    prefix: "命运试金石",
     star: 4,
     event_exclusive: false,
     intro: "蒙德城冒险家协会为数不多的年轻冒险家，一直被莫名的「不幸」所纠缠。他所创立的「班尼冒险团」，在「不幸」的影响下不断有成员长期告假，目前仅有团长一人在队活动，已处于解散边缘。但在班尼特诚恳的请求下，蒙德城冒险家协会接待员凯瑟琳小姐为他保留了「班尼冒险团」的编制，同时，也向他隐瞒了其他成员早已跳槽的事实。",
@@ -439,7 +439,7 @@ export const CHARACTER = {
   yoimiya: {
     id: "yoimiya",
     name: "宵宫",
-    prefix: "",
+    prefix: "琉焰华舞",
     star: 5,
     event_exclusive: true,
     intro: "才华横溢的烟花工匠，「长野原烟花店」的现任店主，被誉为「夏祭的女王」。热情似火的少女。未泯的童心与匠人的执着在她身上交织出了奇妙的焰色反应。",
@@ -804,7 +804,7 @@ export const CHARACTER = {
     prefix: "",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "「小吉祥草王」深居于净善宫内，向来不受重视，也很少被人提及。她身负重任，哪怕目睹漆黑，经历孤独，也不曾停下脚步。",
     city: City.Sumeru,
     ele: Element.dendro,
     weapon: Weapon.catalyst
@@ -818,6 +818,28 @@ export const CHARACTER = {
     intro: "",
     city: City.Sumeru,
     ele: Element.cryo,
+    weapon: Weapon.catalyst
+  },
+  faruzan: {
+    id: "faruzan",
+    name: "珐露珊",
+    prefix: "机逐封秘",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.anemo,
+    weapon: Weapon.catalyst
+  },
+  wanderer: {
+    id: "wanderer",
+    name: "流浪者",
+    prefix: "久世浮倾",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.anemo,
     weapon: Weapon.catalyst
   },
 }

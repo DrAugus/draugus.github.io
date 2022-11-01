@@ -661,15 +661,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "The Moongrass' Enlightenment",
       image: 1,
       shortName: "Nahida",
       start: "2022-11-02 11:00:00 +0800",
       end: "2022-11-18 17:59:59 +0800",
       wish5star: "nahida",
-      wish4star: [],
+      wish4star: ["Razor","Noelle","Bennett"],
       version: "3.2",
-      wishName: "「」",
+      wishName: "「月草的赐慧」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -679,7 +679,7 @@ export const WISH = {
       start: "2022-11-02 11:00:00 +0800",
       end: "2022-11-18 17:59:59 +0800",
       wish5star: "yoimiya",
-      wish4star: [],
+      wish4star: ["Razor","Noelle","Bennett"],
       wishName: "「焰色天河」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
