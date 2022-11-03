@@ -22,6 +22,9 @@ features:
 - title: vim
   details: vim 实用教程
   link: /code/record/vim
+- title: gcc
+  details: GCC 参数详解
+  link: /code/record/gcc
 - title: markdown
   details: markdown 介绍及语法校验指南
   link: /code/record/markdown

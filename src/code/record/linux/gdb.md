@@ -206,6 +206,7 @@ gdb中，输入命令时，可以不用打全命令，只用打命令的前几�
 - `b` + line, breakpoint
 - `n` 下一步
 - `s` 步入
+- `c` continue
 - 设置源码路径 `set substitute-path source now_pos`
 - [`layout split`](#layout)
 
