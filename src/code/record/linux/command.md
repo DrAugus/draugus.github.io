@@ -98,7 +98,7 @@ au(x) 输出格式
 4. 【方式4】 如果不知道文件所在的大致目录，知道文件的类型（例如文本类型 txt），可以在root根目录 /
    下根据特定字符串进行查找：`find / -type f -name "*.txt" | xargs grep "Hello"`
 
-**在系统中查找包含 bra 的文件或目录**
+**在系统中查找包含 bra 的文件或目录**, combine [rm](#rm) [xargs](#xagrs) [wc](#wc)
 
 `find / -name '*bra*'`
 
@@ -111,6 +111,49 @@ au(x) 输出格式
 `find /home/app/ -name '*app*'`  
 `find /home/app/ -name 'app*'`  
 `find /home/app/ -name '*app'`   
+
+## rm
+
+- `-i` 删除前逐一询问确认。
+- `-f` 即使原档案属性设为唯读，亦直接删除，无需逐一确认。
+- `-r` 将目录及以下之档案亦逐一删除。
+
+
+
+`rm -rf `
+
+find and then delete
+- `find . -name "*.a" | wc -l`
+- `find . -name "*.a" | xargs rm -rfv`
+
+## xargs
+
+xargs（英文全拼： eXtended ARGuments）是给命令传递参数的一个过滤器，也是组合多个命令的一个工具。
+
+`somecommand | xargs -item  command`
+
+- -a file 从文件中读入作为 stdin
+- -e flag ，注意有的时候可能会是-E，flag必须是一个以空格分隔的标志，当xargs分析到含有flag这个标志的时候就停止。
+- -p 当每次执行一个argument的时候询问一次用户。
+- -n num 后面加次数，表示命令在执行的时候一次用的argument的个数，默认是用所有的。
+- -t 表示先打印命令，然后再执行。
+- -i 或者是-I，这得看linux支持了，将xargs的每项名称，一般是一行一行赋值给 {}，可以用 {} 代替。
+- -r no-run-if-empty 当xargs的输入为空的时候则停止xargs，不用再去执行了。
+- -s num 命令行的最大字符数，指的是 xargs 后面那个命令的最大命令行字符数。
+- -L num 或者是 -l num 从标准输入一次读取 num 行送给 command 命令。
+- -d delim 分隔符，默认的xargs分隔符是回车，argument的分隔符是空格，这里修改的是xargs的分隔符。
+- -x exit的意思，主要是配合-s使用。。
+- -P 修改最大的进程数，默认是1，为0时候为as many as it can
+
+## wc
+
+`wc [-clw][--help][--version][file...]`
+
+- -c或--bytes或--chars 只显示Bytes数。
+- -l或--lines 显示行数。
+- -w或--words 只显示字数。
+- --help 在线帮助。
+- --version 显示版本信息。
 
 ## ar
 
@@ -140,6 +183,37 @@ ar可让您集合许多文件，成为单一的备存文件。在备存文件中
 - `u` 　只将日期较新文件插入备存文件中。
 - `v` 　程序执行时显示详细的信息。
 - `V` 　显示版本信息。
+
+## tree
+
+获取目录结构
+
+win
+- `tree` 只显示文件夹
+- `tree /f` 显示文件夹及所有文件
+- 导出 
+    ```bash
+    tree /f >1.txt
+    保存的树形结构，只含有文件夹
+    tree /f >1.txt
+    保存的树形结构，包含文件夹和文件
+    ```
+
+mac
+- `brew install tree`
+- `tree`
+- `tree -L 1` 只显示一级目录
+
+## > 
+
+输出重定向
+
+mac
+
+有两种方式可以将输出重定向：
+
+- `n> file` 将文件描述符n重定向到文件file中，如果文件不存在则会创建文件，如果存在的话将会覆盖原有内容。
+- `n>> file` 将文件描述符n重定向到文件file中，如果文件不存在将会创建文件，如果存在则会在文件的结尾开始写入输出。
 
 ## others
 
