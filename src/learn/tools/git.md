@@ -5,6 +5,7 @@ tag:
   - Git
 ---
 
+
 # Git
 
 ## submodule
@@ -19,8 +20,29 @@ tag:
 - `git remote rm name`  删除远程仓库
 - `git remote rename old_name new_name`  修改仓库名
 
+## git add
+
+## git status
+
+`git status`
+
+`-s` 参数来获得简短的输出结果
+
+## git diff
+
+- 尚未缓存的改动：git diff
+    - `git diff [file]`
+    - `git diff [first-branch]...[second-branch]`
+- 查看已缓存的改动： git diff --cached
+    - `git diff --cached [file]`
+- 查看已缓存的与未缓存的所有改动：git diff HEAD
+- 显示摘要而非整个 diff：git diff --stat
 
 ## git commit log
+
+`git commit -m [message]`
+
+-a 参数设置修改文件后不需要执行 git add 命令，直接来提交
 
 > Commit message 的格式
 > 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
@@ -116,6 +138,26 @@ Footer 部分只用于两种情况。
    ```text
    Closes #123, #245, #992
    ```
+
+## git reset
+
+`git reset [--soft | --mixed | --hard] [HEAD]`
+
+- --mixed 为默认，可以不用带该参数，用于重置暂存区的文件与上一次的提交(commit)保持一致，工作区文件内容保持不变。
+- --soft 参数用于回退到某个版本
+- --hard 参数撤销工作区中所有未提交的修改内容，将暂存区与工作区都回到上一次版本，并删除之前的所有信息提交
+    > 谨慎使用 –-hard 参数，它会删除回退点之前的所有信息。
+
+**HEAD** 说明：
+- HEAD 表示当前版本
+- HEAD^ 上一个版本
+- HEAD^^ 上上一个版本
+- 以此类推...
+可以使用 ～数字表示
+- HEAD~0 表示当前版本
+- HEAD~1 上一个版本
+- HEAD^2 上上一个版本
+- 以此类推...
 
 ## git遗弃本地所有修改
 
