@@ -1,20 +1,62 @@
 <template>
 
-  <h2>查询角色复刻周期时间</h2>
-  todo
+  <h2>所有角色最近出场 情报</h2>
 
-  <h2>最近出场的角色</h2>
-  <div v-for="(v, k) in allLastChar">
-    <strong>{{ v[0] }}</strong>: {{ v[1].start }}
+  <select v-model="selectedLastChar">
+    <option disabled value="">Please select one</option>
+    <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
+  </select>
+  <!-- <p>
+    出场时间: <span class="date">{{ allLastChar.get(selectedLastChar).start }}</span>
     <br>
-  </div>
+    结束时间: <span class="date">{{ allLastChar.get(selectedLastChar).end }}</span>
+    <br>
+    <span class="underline" v-if="allLastChar.get(selectedLastChar).durationStart2Today < 0">
+      {{ -parseInt(allLastChar.get(selectedLastChar).durationStart2Today) }} 天后出场
+    </span>
+    <span class="underline" v-else>
+      <span v-if="allLastChar.get(selectedLastChar).durationEnd2Today < 0">当期祈愿进行时</span>
+      <span v-else>距今 {{ parseInt(allLastChar.get(selectedLastChar).durationEnd2Today) }} 天</span>
+    </span>
+    <br>
+  </p> -->
 
-  <h2>所有角色复刻周期</h2>
-  todo
-  
-  <h2></h2>
+  <hr>
 
-  <h2></h2>
+  <p v-for="(v, k) in allLastChar">
+    <strong>{{ v[0] }}</strong><br>
+    出场时间: <span class="date">{{ v[1].start }}</span>
+    <br>
+    结束时间: <span class="date">{{ v[1].end }}</span>
+    <br>
+    <span class="underline" v-if="v[1].durationStart2Today < 0">
+      {{ -parseInt(v[1].durationStart2Today) }} 天后出场
+    </span>
+    <span class="underline" v-else>
+      <span v-if="v[1].durationEnd2Today < 0">当期祈愿进行时</span>
+      <span v-else>距今 {{ parseInt(v[1].durationEnd2Today) }} 天</span>
+    </span>
+    <br>
+  </p>
+
+  <h2>角色复刻周期时间</h2>
+
+  <select v-model="selectedFork">
+    <option disabled value="">Please select one</option>
+    <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
+  </select>
+  <!-- <p>
+    <span v-for="(vv, ii) in displayMap.get(selectedFork).toNow">
+      {{ FORK_DESCRIBE[ii + 1] }}距今{{ vv }}天<br>
+    </span>
+  </p> -->
+
+  <p v-for="(v, k) in displayMap">
+    <strong>{{ v[0] }}</strong><br>
+    <span v-for="(vv, ii) in v[1].toNow">
+      {{ FORK_DESCRIBE[ii + 1] }}距今{{ vv }}天<br>
+    </span>
+  </p>
 
 </template>
 
@@ -31,25 +73,15 @@ dayjs.locale("zh"); // use locale globally
 
 // refer eventHandle
 const convertToDate = (e, i, j) => {
+  e.start = e.start.replace(/-/g, "/");
+  e.end = e.end.replace(/-/g, "/");
 
-  // 暂时全按 safari 的格式进行格式化
-  let isSafari = true;
-  // if (typeof window !== undefined) {
-  //     let userAgent = window.navigator.userAgent;
-  //     isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
-  //     console.info(isSafari ? "now is safari" : "I am not safari");
-  // }
-
-  let start, end;
-  if (isSafari) {
-    e.start = e.start.replace(/-/g, "/");
-    e.end = e.end.replace(/-/g, "/");
-  }
-  start = dayjs(e.start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
-  end = dayjs(e.end, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+  let start = dayjs(e.start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute"),
+    end = dayjs(e.end, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
 
   // to today, every event, end time to now
-  const durationToToday = dayjs().diff(end, "day", true);
+  const durationEnd2Today = dayjs().diff(end, "day", true);
+  const durationStart2Today = dayjs().diff(start, "day", true);
 
   return {
     ...e,
@@ -57,7 +89,8 @@ const convertToDate = (e, i, j) => {
     index2: j,
     start,
     end,
-    durationToToday
+    durationEnd2Today,
+    durationStart2Today
   };
 };
 
@@ -94,23 +127,72 @@ const FORK_DESCRIBE = {
   7: "六次复刻"
 }
 
-const sliceChar = [...new Set(CHAR_ALL.map(obj => obj.wish5star))].map(v => CHARACTER[v].name);
+const sliceChar = [...new Set(CHAR_ALL.map(obj => obj.wish5star))];
 // console.log("sliceChar")
 // console.log(sliceChar)
+const sliceCharZH = sliceChar.map(v => CHARACTER[v].name)
 
 // first slice
-const sliceInfoFirst = CHAR_ALL.map(object => {
+const sliceCharInfo = CHAR_ALL.map(object => {
   return {
-    name: CHARACTER[object.wish5star].name,
+    name: object.wish5star,
     times: object.image,
     start: formatDate(dayjs(object.start)),
     end: formatDate(dayjs(object.end)),
-    durationToToday: object.durationToToday,
+    durationEnd2Today: object.durationEnd2Today,
+    durationStart2Today: object.durationStart2Today,
   };
 })
 
-// console.log("===sliceInfoFirst===")
-// console.log(sliceInfoFirst)
+// console.log("===sliceCharInfo===")
+// console.log(sliceCharInfo)
+
+// second filter
+const filterCharInfo = () => {
+  let allCharMap = new Map();
+  for (let v of sliceChar) {
+    allCharMap.set(v, sliceCharInfo.filter(d => d.name === v))
+  }
+  // console.log(allCharMap)
+  return allCharMap
+}
+
+const mapCharInfo = filterCharInfo();
+
+// third format
+const formatCharInfo = (arr) => {
+  let twiceDur = [];
+  for (let i = 1; i < arr.length; ++i) {
+    let dur = dayjs(arr[i].start).diff(arr[i - 1].end, "day", true);
+    twiceDur.push(parseInt(dur))
+  }
+  let toNow = []
+  for (let v of arr) {
+    toNow.push(parseInt(v.durationEnd2Today))
+  }
+  return {
+    twiceDur,
+    toNow,
+    len: arr.length,
+  }
+}
+
+// fourth display
+const displayCharInfo = () => {
+  let displayMap = new Map();
+  mapCharInfo.forEach((v, k) => {
+    displayMap.set(
+      CHARACTER[k].name,
+      formatCharInfo(v)
+    )
+  })
+  // console.log(displayMap)
+  return displayMap
+}
+
+const displayMap = displayCharInfo()
+
+
 
 // all recent char up, done, include future
 const allLastChar = new Map(CHAR_ALL.map(object =>
@@ -119,8 +201,9 @@ const allLastChar = new Map(CHAR_ALL.map(object =>
     {
       times: formatDate(dayjs(object.image)),
       start: formatDate(dayjs(object.start)),
-      end: object.end,
-      durationToToday: object.durationToToday,
+      end: formatDate(dayjs(object.end)),
+      durationEnd2Today: object.durationEnd2Today,
+      durationStart2Today: object.durationStart2Today,
     }
   ]
 ));
@@ -152,7 +235,12 @@ export default {
   data() {
     return {
       EVENT,
+      FORK_DESCRIBE,
+      sliceCharZH,
       allLastChar,
+      displayMap,
+      selectedLastChar: "",
+      selectedFork: "",
     };
   },
   methods: {},
@@ -160,5 +248,12 @@ export default {
 </script>
 
 <style scoped>
+.underline {
+  text-decoration: underline;
+}
 
+.date {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-style: italic;
+}
 </style>
