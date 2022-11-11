@@ -27,6 +27,7 @@ export const alias = {
   "@GenshinWish": path.resolve(__dirname, pre_path + "genshin/Wish.vue"),
   "@GenshinTimeline": path.resolve(__dirname, pre_path + "genshin/Timeline.vue"),
   "@GenshinTimelineTable": path.resolve(__dirname, pre_path + "genshin/TimelineTable.vue"),
+  "@GenshinFork": path.resolve(__dirname, pre_path + "genshin/Fork.vue"),
 
   "@Chinese": path.resolve(__dirname, pre_path + "language/Chinese.vue"),
   "@WordsEN": path.resolve(__dirname, pre_path + "language/WordsEN.vue"),

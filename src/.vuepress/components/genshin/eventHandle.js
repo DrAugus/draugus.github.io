@@ -34,8 +34,8 @@ const convertToDate = (e, i, j) => {
 
     return {
         ...e,
-        index: i,
-        index2: j,//2022-3-4改进为数组event故而取index2
+        index: i, // obj 外层索引
+        index2: j, // 内层索引 2022-3-4改进为数组event故而取index2
         start,
         end,
         duration
