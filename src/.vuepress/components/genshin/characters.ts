@@ -801,7 +801,7 @@ export const CHARACTER = {
   nahida: {
     id: "nahida",
     name: "纳西妲",
-    prefix: "",
+    prefix: "白草净华",
     star: 5,
     event_exclusive: true,
     intro: "「小吉祥草王」深居于净善宫内，向来不受重视，也很少被人提及。她身负重任，哪怕目睹漆黑，经历孤独，也不曾停下脚步。",
@@ -811,11 +811,11 @@ export const CHARACTER = {
   },
   layla: {
     id: "layla",
-    name: "",
-    prefix: "",
+    name: "莱依拉",
+    prefix: "绮思晚星",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "梨多梵谛学院的学生，为学业愁黑了眼眶，总是一副睡眠不足的样子。但无论课业多重，她总能拿出最精彩的推演，叫人不得不怀疑，她是否连做梦都在写论文？",
     city: City.Sumeru,
     ele: Element.cryo,
     weapon: Weapon.catalyst

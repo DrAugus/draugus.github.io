@@ -6,7 +6,7 @@ import re
 import yaml
 
 # 获取yaml文件路径
-yaml_path = 'config.yml'
+yaml_path = 'code/genshin/config.yml'
 
 f = open(yaml_path, 'rb')
 config = yaml.safe_load_all(f)
@@ -58,8 +58,8 @@ url_en_content_prefix = "https://content-static-sea.hoyoverse.com/content/yuansh
 
 def url_compose(prefix, channel_id,
                 page_size=url_page_size, page_num=url_page_num, order=url_order):
-    url_res = prefix + "pageSize=" + str(page_size) + "&pageNum=" + str(
-        page_num) + "&order=" + order + "&channelId=" + str(channel_id)
+    url_res = prefix + "pageSize=" + str(page_size) + "&pageNum=" + \
+        str(page_num) + "&order=" + order + "&channelId=" + str(channel_id)
     print(url_res)
     return url_res
 
@@ -137,9 +137,9 @@ def lookup(name, url):
     for key, value in json.items():
         if key == "音频":
             for keys, values in json[key].items():
-                print(f"{keys}：{values}")
+                print(f"{keys}: {values}")
         else:
-            print(f"{key}：{value}")
+            print(f"{key}: {value}")
 
 
 url_zh_event_list = url_compose(url_zh_content_list_prefix, url_zh_event_channel_id)
@@ -151,8 +151,21 @@ def wish_data(url_lang, str_match):
     json_list = clean_wish_data(get_json(url_lang), str_match)
     for json in json_list:
         _json_[json['id']] = json
-    print(_json_)
+    print("============")
+    display_format_event(_json_)
+    print("============")
     return _json_
+
+# obj
+# todo: download img and then rename img
+def display_format_event(event_map):
+    for k in event_map:
+        s = "--------" + \
+            "\n [id] "f"{event_map[k]['id']}" + \
+            "\n [title] "f"{event_map[k]['title']}" + \
+            "\n [img] "f"{event_map[k]['img']}" + \
+            "\n--------\n"
+        print(s)
 
 
 def wish_detail_data(url_lang, str_match):
@@ -180,6 +193,7 @@ def clean_wish_data(_data_, str_match):
         # when only wish, have not wish
         if not show_all_event and title.find(str_match) == -1:
             continue
+        # todo: one id, many img can't get
         all_data = {key['contentId']: {
             "title": key["title"],
             "img": ext[1]["value"][0]["url"],

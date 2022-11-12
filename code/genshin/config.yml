@@ -9,7 +9,7 @@ show_char_info: 0
 # all event
 show_all_event: 0
 # url config
-url_page_size: 30
+url_page_size: 50
 url_page_num: 1
 # asc des
 url_order: "des"
