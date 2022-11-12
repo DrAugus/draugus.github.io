@@ -1,0 +1,17 @@
+# chinese or english
+show_zh: 0
+# wish info
+show_wish: 1
+show_wish_char: 1
+show_wish_weapon: 1
+# character
+show_char_info: 0
+# all event
+show_all_event: 0
+# url config
+url_page_size: 30
+url_page_num: 1
+# asc des
+url_order: "des"
+# 用不用都无所谓 get content
+url_around: 1
