@@ -1,9 +1,13 @@
 <template>
 
-  <h2>所有角色最近出场 情报</h2>
+  <h2>最近出场角色 情报</h2>
+
+  <a @click="sortLast">最新排序</a> | 
+  <a @click="sortEarly">最远排序</a>
+  <br><br>
 
   <select v-model="selectedLastChar">
-    <option disabled value="">Please select one</option>
+    <option disabled value="">选择角色</option>
     <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
   </select>
   <p v-if="selectedLastChar" class="choose">
@@ -216,22 +220,6 @@ const allLastChar = new Map(CHAR_ALL.map(object =>
 // every time duration, end to next start, by name 
 // 
 
-const get5Star = () => {
-  let character = WISH.characters;
-  let set = new Set();
-  for (let ch of character) {
-    set.add(ch.wish5star);
-  }
-  console.log(set);
-  return set;
-};
-
-const changeWishObj = () => {
-  let character = WISH.characters;
-  const res = new Map();
-};
-
-
 export default {
   name: "Fork",
   data() {
@@ -245,7 +233,18 @@ export default {
       selectedFork: "",
     };
   },
-  methods: {},
+  methods: {
+    sortLast() {
+      this.allLastChar = new Map(Array.from(this.allLastChar).sort(
+        (a, b) => a[1].durationEnd2Today - b[1].durationEnd2Today
+      ))
+    },
+    sortEarly() {
+      this.allLastChar = new Map(Array.from(this.allLastChar).sort(
+        (a, b) => b[1].durationEnd2Today - a[1].durationEnd2Today
+      ))
+    },
+  },
   async mounted() {
     this.selectedFork = ""
     this.selectedLastChar = ""
