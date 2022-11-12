@@ -6,7 +6,8 @@
     <option disabled value="">Please select one</option>
     <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
   </select>
-  <!-- <p>
+  <p v-if="selectedLastChar" class="choose">
+    <strong>{{ selectedLastChar }}</strong><br>
     出场时间: <span class="date">{{ allLastChar.get(selectedLastChar).start }}</span>
     <br>
     结束时间: <span class="date">{{ allLastChar.get(selectedLastChar).end }}</span>
@@ -19,7 +20,7 @@
       <span v-else>距今 {{ parseInt(allLastChar.get(selectedLastChar).durationEnd2Today) }} 天</span>
     </span>
     <br>
-  </p> -->
+  </p>
 
   <hr>
 
@@ -45,11 +46,12 @@
     <option disabled value="">Please select one</option>
     <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
   </select>
-  <!-- <p>
+  <p v-if="selectedFork" class="choose">
+    <strong>{{ selectedFork }}</strong><br>
     <span v-for="(vv, ii) in displayMap.get(selectedFork).toNow">
       {{ FORK_DESCRIBE[ii + 1] }}距今{{ vv }}天<br>
     </span>
-  </p> -->
+  </p>
 
   <p v-for="(v, k) in displayMap">
     <strong>{{ v[0] }}</strong><br>
@@ -244,6 +246,10 @@ export default {
     };
   },
   methods: {},
+  async mounted() {
+    this.selectedFork = ""
+    this.selectedLastChar = ""
+  }
 };
 </script>
 
@@ -255,5 +261,9 @@ export default {
 .date {
   font-family: 'Lora', 'Times New Roman', serif;
   font-style: italic;
+}
+
+.choose {
+  color: rgb(242, 109, 109);
 }
 </style>
