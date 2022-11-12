@@ -3,13 +3,13 @@
   <div v-for="(value, key, index) in outdoor">
     <h3>{{ key }}</h3>
     <div v-if="value.good">
-      <u>推荐</u>
+      <span class="underline">推荐</span>
       <ul>
         <li v-for="(k,i) in value.good">{{ k }}</li>
       </ul>
     </div>
     <div v-if="value.bad">
-      <u>真的别点</u>
+      <span class="underline">不建议尝试</span>
       <ul>
         <li v-for="(k,i) in value.bad">{{ k }}</li>
       </ul>
@@ -39,5 +39,7 @@ export default {
 </script>
 
 <style scoped>
-
+.underline {
+  text-decoration: underline;
+}
 </style>
