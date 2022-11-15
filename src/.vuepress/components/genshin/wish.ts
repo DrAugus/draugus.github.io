@@ -691,7 +691,7 @@ export const WISH = {
       start: "2022-11-18 18:00:00 +0800",
       end: "2022-12-06 14:59:59 +0800",
       wish5star: "yae_miko",
-      wish4star: ["", "", ""],
+      wish4star: ["Layla", "Thoma", "Shikanoin Heizou"],
       wishName: "「华紫樱绯」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -702,7 +702,7 @@ export const WISH = {
       start: "2022-11-18 18:00:00 +0800",
       end: "2022-12-06 14:59:59 +0800",
       wish5star: "tartaglia",
-      wish4star: ["", "", ""],
+      wish4star: ["Layla", "Thoma", "Shikanoin Heizou"],
       wishName: "「暂别冬都」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"

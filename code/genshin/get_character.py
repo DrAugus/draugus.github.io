@@ -170,7 +170,11 @@ def display_format_event(event_map):
 
 def wish_detail_data(url_lang, str_match):
     arr = clean_wish_detail_data(get_json(url_lang), str_match)
-    print(arr)
+    print("xxxxxxxxxxxx")
+    for a in arr:
+        if len(a):
+            print(a)
+    print("xxxxxxxxxxxx")
     return arr
 
 
