@@ -68,6 +68,8 @@ au(x) 输出格式
 
 - zip `tar -zcvf zip.tar.gz zip/`
 - unzip `tar -zxvf zip.tar.gz`
+- unzip .tar.bz2 `tar -jxvf zip.tar.bz2`
+
 
 ## pidof
 
@@ -229,6 +231,69 @@ mac
 - `n> file` 将文件描述符n重定向到文件file中，如果文件不存在则会创建文件，如果存在的话将会覆盖原有内容。
 - `n>> file` 将文件描述符n重定向到文件file中，如果文件不存在将会创建文件，如果存在则会在文件的结尾开始写入输出。
 
+## scp
+
+服务器A上执行scp到服务器B，报错：`Permission denied (publickey)`.
+> 解决方法，把A的公钥放到B上
+
+具体操作：
+- A：cat .ssh/id_rsa.pub
+- B: cat .ssh/authorized_keys 
+
+把A的公钥贴过来即可
+
+## [ssh-keygen]
+
+`ssh-keygen -t rsa -C "your_email@example.com"`
+
+- -t 指定密钥类型，默认是 rsa ，可以省略。
+- -C 设置注释文字，比如邮箱。
+- -f 指定密钥文件存储文件名。
+
+## clip
+
+`clip < ~/.ssh/id_rsa.pub`
+
+## [logrotate]
+
+主流Linux发行版上都默认安装有logrotate包，如果出于某种原因，logrotate没有出现在里头，你可以使用apt-get或yum命令来安装。
+- `apt-get install logrotate cron`
+- `yum install logrotate crontabs`
+
+logrotate的配置文件是`/etc/logrotate.conf`，通常不需要对它进行修改。日志文件的轮循设置在独立的配置文件中，它（们）放在`/etc/logrotate.d/`目录下。
+
+案例
+
+从创建一个日志文件开始，然后在其中填入一个10MB的随机比特流数据。
+```shell
+touch /var/log/log-file
+head -c 10M < /dev/urandom > /var/log/log-file
+```
+创建一个配置文件 `vim /etc/logrotate.d/log-file`
+```
+/var/log/log-file {
+    monthly
+    rotate 5
+    compress
+    delaycompress
+    missingok
+    notifempty
+    create 644 root root
+    postrotate
+        /usr/bin/killall -HUP rsyslogd
+    endscript
+}
+```
+- monthly: 日志文件将按月轮循。其它可用值为‘daily’，‘weekly’或者‘yearly’。
+- rotate 5: 一次将存储5个归档日志。对于第六个归档，时间最久的归档将被删除。
+- compress: 在轮循任务完成后，已轮循的归档将使用gzip进行压缩。
+- delaycompress: 总是与compress选项一起用，delaycompress选项指示logrotate不要将最近的归档压缩，压缩将在下一次轮循周期进行。这在你或任何软件仍然需要读取最新归档时很有用。
+- missingok: 在日志轮循期间，任何错误将被忽略，例如“文件无法找到”之类的错误。
+- notifempty: 如果日志文件为空，轮循不会进行。
+- create 644 root root: 以指定的权限创建全新的日志文件，同时logrotate也会重命名原始日志文件。
+- postrotate/endscript: 在所有其它指令完成后，postrotate和endscript里面指定的命令将被执行。在这种情况下，rsyslogd 进程将立即再次读取其配置并继续运行。
+
+
 ## others
 
 - [Linux使用sar进行性能分析](https://blog.csdn.net/xusensen/article/details/54606401)
@@ -242,4 +307,12 @@ mac
 -----
 
 **参考：**
-- [runoob](https://www.runoob.com/linux/linux-comm-date.html)
+- [runoob]
+- [ssh-keygen]
+- [logrotate]
+
+
+
+[runoob]: https://www.runoob.com/linux/linux-comm-date.html
+[ssh-keygen]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
+[logrotate]: https://www.xmodulo.com/logrotate-manage-log-files-linux.html
