@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import data from '../data/history-china.json'
+import data from '../data/history_china.json'
 
 const history = data;
 
