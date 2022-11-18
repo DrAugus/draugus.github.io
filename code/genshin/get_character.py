@@ -237,16 +237,18 @@ def wish_detail_filter(arr):
                 arr_filter1.append(filter_aa[0])
                 # print(filter_aa[0])
         if not len(arr_filter1):
-            log_debug(LV["trace"], "arr_filter1", arr_filter1)
+            log_debug(LV["error"], "arr_filter1", arr_filter1)
             continue
 
         arr_filter2 = []
         with_prefix_char = []
         for aa in arr_filter1:
             # zh
-            split_aa = aa.split('&middot;')
+            if '&middot;' in aa:
+                split_aa = aa.split('&middot;')
             # en
-            split_aa = aa.split('&quot;')
+            if '&quot;' in aa:
+                split_aa = aa.split('&quot;')
 
             if not len(split_aa):
                 log_debug(LV["error"], "split aa none")
