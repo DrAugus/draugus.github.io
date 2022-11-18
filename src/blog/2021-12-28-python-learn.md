@@ -22,3 +22,17 @@ pip安装lib时报错`ValueError: check_hostname requires server_hostname`，是
 
 ## python 提取字符串中的指定字符 正则表达式
 
+## 一维转二维
+
+```py
+import numpy
+new_list = [i for i in range(9)]
+newnew = numpy.array(new_list).reshape(3, 3)
+```
+
+## 使用filter()去除list的空值
+
+```py
+d = ['', 'ad', 'fi', '', 'ar', 'ff']
+d = list(filter(None, d))
+```
