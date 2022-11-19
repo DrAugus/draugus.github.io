@@ -6,7 +6,7 @@
     <h2>{{ end }} 后结束</h2>
     <blockquote>祈愿周期：{{ current.currentDate[0] }}</blockquote>
 
-    <div v-for="(item,index) in current.currentSrc">
+    <div v-for="(item, index) in current.currentSrc">
       <img :src="item">
     </div>
 
@@ -21,7 +21,7 @@
     <h2>{{ begin }} 后开始</h2>
     <blockquote>祈愿周期：{{ future.futureDate[0] }}</blockquote>
 
-    <div v-for="(item,index) in future.futureSrc">
+    <div v-for="(item, index) in future.futureSrc">
       <img :src="item">
 
     </div>
@@ -35,7 +35,7 @@
 
 <script>
 
-import {current, future, wishDeadline, wishBegin} from "./wishRecent";
+import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
 export default {
   name: "Wish",

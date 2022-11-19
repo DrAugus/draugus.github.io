@@ -1,6 +1,6 @@
-import {processEvent} from "./eventHandle";
-import {Deadline} from "../utils";
-import {replaceAndLow, formatDate} from "./utils";
+import { processEvent } from "./eventHandle";
+import { Deadline } from "../utils";
+import { replaceAndLow, formatDate } from "./utils";
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
 
@@ -74,19 +74,16 @@ export let current = {
     currentDate: [],
     currentSrc: []
 };
-
-if (objWish.haveWish) {
-    for (let v of objWish.wishIndex) {
-        let picName = replaceAndLow(wishCharacters[v].name) + "_" + wishCharacters[v].image;
-        let img = "https://github.com/DrAugus/data/blob/master/game/genshin/wish/";
-        img += picName;
-        img += ".jpg?raw=true";
-        current.currentSrc.push(img);
-        let s = formatDate(dayjs(wishCharacters[v].start));
-        let e = formatDate(dayjs(wishCharacters[v].end));
-        // console.log(s, e);
-        current.currentDate.push(s + "~" + e);
-    }
+for (let v of objWish.wishIndex) {
+    let picName = replaceAndLow(wishCharacters[v].name) + "_" + wishCharacters[v].image;
+    let img = "https://github.com/DrAugus/data/blob/master/game/genshin/wish/";
+    img += picName;
+    img += ".jpg?raw=true";
+    current.currentSrc.push(img);
+    let s = formatDate(dayjs(wishCharacters[v].start));
+    let e = formatDate(dayjs(wishCharacters[v].end));
+    // console.log(s, e);
+    current.currentDate.push(s + "~" + e);
 }
 
 export let future = {
@@ -107,9 +104,8 @@ for (let v of objWish.comingIndex) {
 }
 
 // console.log(current, future);
-
-export const wishDeadline = () => Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end));
-export const wishBegin = () => Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start));
+export const wishDeadline = () => current.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) : -1;
+export const wishBegin = () => future.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) : -1;
 
 // console.log(wishDeadline(), wishBegin());
 

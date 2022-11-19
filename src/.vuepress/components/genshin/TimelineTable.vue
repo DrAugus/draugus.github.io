@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import "./genshin.css";
 import dayjs from "dayjs";
 import {WISH} from "./wish";
 import {CHARACTER} from "./characters";
