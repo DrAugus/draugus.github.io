@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import {WISH} from "./wish";
+import { WISH } from "./wish";
 
 import "dayjs/locale/zh";
 
@@ -122,7 +122,10 @@ export const processEvent = () => {
         monthList[i][1].offset = i - 1 >= 0 ? monthList[i - 1][1].total + monthList[i - 1][1].offset : 0;
     }
 
-    dates = [...new Array(dayTotal)].map((_, i) => firstDay.add(i, "day").date());
+    dates = [...new Array(dayTotal)].map((_, i) => {
+        const cur = firstDay.add(i, 'day');
+        return [cur.date(), cur.format('dd')];
+    });
 
     return {
         dates,

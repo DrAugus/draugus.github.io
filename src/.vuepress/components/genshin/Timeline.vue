@@ -70,9 +70,8 @@
         </div>
 
         <div v-bind:style="{ marginLeft: DUR_DAY_WIDTH }" v-for="(t, i) in dates" class="timeline-wrapper">
-          <div class="timeline-index" v-bind:style="{ left: ((DAY_WIDTH + DUR_DAY_WIDTH) * i) + 'px' }">
-            <span>{{ t }}</span>
-          </div>
+          <span class="timeline-day-index" v-bind:style="{ left: ((DAY_WIDTH + DUR_DAY_WIDTH) * i) + 'px' }">  {{ t[0] }} </span>
+          <span class="timeline-week-index" v-bind:style="{ left: ((DAY_WIDTH + DUR_DAY_WIDTH) * i) + 'px' }">  {{ t[1] }} </span>
         </div>
 
       </div>
