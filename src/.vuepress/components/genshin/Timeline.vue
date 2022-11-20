@@ -6,69 +6,71 @@
     <div class="timeline-scroll-x" ref="setNowPos">
 
       <div class="timeline-month">
-        <div v-for="(item,index) in monthList">
-          <div v-bind:style="{left:DAY_WIDTH* item[1].offset +'px'}">
-            <div v-bind:style="{width:DAY_WIDTH* item[1].total +'px'}">
-              <span class="timeline-month-text">{{ item[0] }}</span>
-            </div>
+        <div v-for="(item, index) in monthList"
+          v-bind:style="{ left: DAY_WIDTH * item[1].offset + DUR_DAY_WIDTH + 'px' }">
+          <!-- +1 min-width: 1px -->
+          <div v-bind:style="{ width: (DUR_DAY_WIDTH + 1) * item[1].total + 'px' }">
+            <span class="timeline-month-text">{{ item[0] }}</span>
           </div>
         </div>
       </div>
 
       <div class="timeline-day">
 
-        <div v-bind:style="{left: todayOffset}" class="timeline-today-line-pos" ref="findNowPos">
+        <div v-bind:style="{ left: todayOffset }" class="timeline-today-line-pos" ref="findNowPos">
           <div class="timeline-today-line-pos-text">{{ currentTime }}</div>
         </div>
 
         <div class="timeline-wish-event-weapon">
-          <div class="card event-item" v-for="(value, i) in WISH.weapons"
-               v-bind:style="{width: wishWeapons[i].duration * DAY_WIDTH + 'px',
-                 left:durationWeapon[i] * DAY_WIDTH + 30 + 'px',
-                 height: 'var(--event-height)'}">
+          <div class="card event-item weapon" v-for="(value, i) in WISH.weapons" v-bind:style="{
+            width: wishWeapons[i].duration * DAY_WIDTH + 'px',
+            left: durationWeapon[i] * DAY_WIDTH + DUR_DAY_WIDTH + 'px',
+            height: 'var(--event-height)'
+          }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img">
-                <img
-                    v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/'+
-                      value.name.concat('_'+value.image+'.jpg').toLowerCase().replace(/ /g, '_')+
-                      '?raw=true'" alt="">
+                <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
+                value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
+                '?raw=true'" alt="">
               </div>
+              <span class="left-align timeline-character-text sticky text-shadow-weapon ">
+                「神铸赋形」活动祈愿
+              </span>
             </div>
           </div>
         </div>
 
         <div class="timeline-wish-event-character">
-          <div class="card event-item " v-for="(value, i) in WISH.characters"
-               v-bind:class="'event-item-background-'+ElementString[CHARACTER[value.wish5star].ele]"
-               v-bind:style="{width: wishCharacters[i].duration * DAY_WIDTH + 'px',
-               left:durationCharacter[i] * DAY_WIDTH + 30 + 'px',
-               marginTop: value.wish_2?'140px':''}">
+          <div class="card event-item " v-for="(value, i) in WISH.characters" :class="[
+            'ele-' + ElementString[CHARACTER[value.wish5star].ele],
+            i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) ? '' : 'rounded-l-xl',
+            i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) ? 'border-r-4 border-white' : 'rounded-r-xl'
+          ]" :style="[
+            { width: wishCharacters[i].duration * DAY_WIDTH + 'px' },
+            { left: durationCharacter[i] * DAY_WIDTH + DUR_DAY_WIDTH + 'px' },
+            { marginTop: value.wish_2 ? '68px' : '' }
+          ]">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <!-- Modal Trigger -->
               <a class="modal-trigger" href="#modal{{i}}">
                 <div class="event-img responsive-img lazy">
-                  <img
-                      v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/'+
-                        value.wish5star+'.png?raw=true'" alt="">
+                  <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
+                  value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
+                  '?raw=true'" alt="">
                 </div>
               </a>
-              <div class="left-align timeline-character-text"
-                   v-bind:class="'ele-text-'+ElementString[CHARACTER[value.wish5star].ele]">
-                <div class="timeline-wish-name">
-                  {{ value.wishName }}
-                </div>
-                <div>
-                  <span class="timeline-character-prefix">{{ CHARACTER[value.wish5star].prefix }}</span>
-                  <span class="timeline-character-name">{{ CHARACTER[value.wish5star].name }}</span>
-                </div>
-              </div>
+              <span class="left-align timeline-character-text sticky"
+                :class="'ele-text-shadow-' + ElementString[CHARACTER[value.wish5star].ele]">
+                {{ value.wishName }} 活动祈愿 「{{ CHARACTER[value.wish5star].prefix }}」 {{ CHARACTER[value.wish5star].name
+                }}
+              </span>
             </div>
 
           </div>
         </div>
 
-        <div class="timeline-wrapper" v-for="(t,i) in dates">
-          <div class="timeline-index" v-bind:style="{left: ((DAY_WIDTH - 30) * i) + 'px'}">
+        <div v-bind:style="{ marginLeft: DUR_DAY_WIDTH }" v-for="(t, i) in dates" class="timeline-wrapper">
+          <div class="timeline-index" v-bind:style="{ left: ((DAY_WIDTH + DUR_DAY_WIDTH) * i) + 'px' }">
             <span>{{ t }}</span>
           </div>
         </div>
@@ -85,13 +87,13 @@
 </template>
 
 <script>
-import "./genshin.css";
+import "./genshin.scss";
 import dayjs from "dayjs";
-import {WISH} from "./wish";
-import {CHARACTER} from "./characters";
+import { WISH } from "./wish";
+import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
-import {processEvent} from "./eventHandle";
-import {ElementString} from "./utils";
+import { processEvent } from "./eventHandle";
+import { ElementString } from "./utils";
 
 dayjs.locale("zh");
 
@@ -105,7 +107,8 @@ const colorMap = {
   "cryo": "#84c2e6",
 };
 
-const DAY_WIDTH = 25;
+const DAY_WIDTH = 35;
+const DUR_DAY_WIDTH = 40;
 let today = dayjs();
 
 const eventObj = processEvent();
@@ -121,10 +124,12 @@ let todayOffset = "";
 let durationCharacter = [];
 let durationWeapon = [];
 
+console.log(monthList)
+
 //设置时间轴
 const setTimeAxis = () => {
   todayOffset = Math.abs(firstDay.diff(today, "day", true));
-  todayOffset = todayOffset * DAY_WIDTH + 30 + "px";
+  todayOffset = todayOffset * DAY_WIDTH + DUR_DAY_WIDTH + "px";
   console.log("todayOffset", todayOffset);
 };
 setTimeAxis();
@@ -160,6 +165,7 @@ export default {
       monthList,
       dates,
       DAY_WIDTH,
+      DUR_DAY_WIDTH,
       todayOffset,
       currentTime: new Date(),
       WISH,
@@ -183,7 +189,11 @@ export default {
   methods: {
     setCurrentPos() {
       this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
-    }
+    },
+    diffWishStyle(s, e) {
+      return dayjs(e, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute")
+        .diff(dayjs(s, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute"), "hour", true) < 1
+    },
   },
   beforeDestroy() {
     if (this.timer1)
@@ -194,7 +204,6 @@ export default {
 </script>
 
 <style scoped>
-
 .card {
   /*position: relative;*/
   /*margin: 0.5rem 0 1rem 0;*/
@@ -242,8 +251,34 @@ export default {
   filter: grayscale(100%) brightness(1) contrast(.5)
 }
 
+.rounded-l-xl {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.border-r-4 {
+  border-right-width: 4px
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / 1);
+}
+
+.rounded-r-xl {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 @media only screen and (max-width: 600px) {
-  .hide-on-small-only, .hide-on-small-and-down {
+
+  .hide-on-small-only,
+  .hide-on-small-and-down {
     display: none !important;
   }
 }
@@ -253,6 +288,4 @@ export default {
     display: none !important;
   }
 }
-
-
 </style>

@@ -1,7 +1,7 @@
 ---
 home: true
 title: 祈愿时间轴
-heroImage: https://github.com/DrAugus/data/blob/master/game/genshin/ys.png?raw=true
+heroImage: null
 heroText: 祈愿时间轴
 tagline: 全部祈愿信息
 actions:

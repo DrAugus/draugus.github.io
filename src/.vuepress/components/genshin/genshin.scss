@@ -6,8 +6,19 @@
     --ele-pyro: #fa5d3e;
     --ele-anemo: #57dcb0;
     --ele-cryo: #84c2e6;
-    --event-height: 128px;
-    --event-number: 4;
+    --ele-weapon: #ffb169;
+    --event-height: 58px;
+    --event-number: 5;
+    --event-dur-day-width: 40px;
+}
+
+@mixin ele-text-shadow($color) {
+    text-shadow: var($color) -1px -1px 4px, var($color) 1px -1px 4px, var($color) -1px 1px 4px, var($color) 1px 1px 4px, var($color) 0 0 10px;
+}
+
+
+.weapon {
+    background-color: var(--ele-weapon)
 }
 
 /*元素背景色*/
@@ -39,9 +50,41 @@
     background-color: var(--ele-cryo)
 }
 
+.text-shadow-weapon {
+    @include ele-text-shadow(var(--ele-weapon))
+}
+
+.ele-text-shadow-dendro {
+    @include ele-text-shadow(var(--ele-denro))
+}
+
+.ele-text-shadow-geo {
+    @include ele-text-shadow(var(--ele-geo))
+}
+
+.ele-text-shadow-electro {
+    @include ele-text-shadow(var(--ele-electro))
+}
+
+.ele-text-shadow-hydro {
+    @include ele-text-shadow(var(--ele-hydro))
+}
+
+.ele-text-shadow-pyro {
+    @include ele-text-shadow(var(--ele-pyro))
+}
+
+.ele-text-shadow-anemo {
+    @include ele-text-shadow(var(--ele-anemo))
+}
+
+.ele-text-shadow-cryo {
+    @include ele-text-shadow(var(--ele-cryo))
+}
+
 /*元素文本色*/
 .ele-text-dendro {
-    color: var(--ele-denro)
+    color: var(--ele-denro);
 }
 
 .ele-text-geo {
@@ -87,9 +130,7 @@
 
 
 @media screen and (max-width: 610px) {
-    .timeline-top-info {
-
-    }
+    .timeline-top-info {}
 }
 
 .timeline-area {
@@ -106,7 +147,7 @@
     width: 1px;
     min-width: 1px;
     position: relative;
-    margin-left: 29px;
+    margin-left: var(--event-dur-day-width);
     z-index: 1
 }
 
@@ -130,7 +171,7 @@
     margin-top: -60px;
     margin-left: -15px;
     text-align: center;
-    width: 30px;
+    width: var(--event-dur-day-width);
     height: 30px;
     border-radius: 50%;
     font-size: 18px;
@@ -200,70 +241,66 @@
     text-align: left;
 }
 
-.timeline-wish-name {
-    font-size: 2rem;
-}
-
-.timeline-character-prefix {
-    font-size: 3rem;
-}
-
-.timeline-character-name {
-    font-size: 3rem;
-}
-
 .timeline-character-text {
-    font-size: 3rem;
-    margin-top: 10px;
+    font-size: 20px;
     margin-left: 10px;
+    line-height: var(--event-height);
+    height: var(--event-height);
 }
 
 .event-item {
     position: absolute;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     opacity: 1;
     right: 0;
     height: var(--event-height);
 }
 
+.event-item-background-weapon {
+    background: linear-gradient(to right, var(--ele-weapon), rgb(0 0 0 / 0%)) no-repeat;
+}
+
 .event-item-background-dendro {
-    background: linear-gradient(to left, #98e628, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-denro), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-item-background-geo {
-    background: linear-gradient(to left, #e2b032, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-geo), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-item-background-electro {
-    background: linear-gradient(to left, #fca7ff, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-electro), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-item-background-hydro {
-    background: linear-gradient(to left, #03ddfe, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-hydro), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-item-background-pyro {
-    background: linear-gradient(to left, #fa5d3e, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-pyro), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-item-background-anemo {
-    background: linear-gradient(to left, #4cf3b6, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-anemo), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-item-background-cryo {
-    background: linear-gradient(to left, #a6fdfd, rgb(0 0 0 / 0%)) no-repeat;
+    background: linear-gradient(to right, var(--ele-cryo), rgb(0 0 0 / 0%)) no-repeat;
 }
 
 .event-img {
     position: absolute;
     margin-left: 165px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     opacity: 1;
     right: 0;
     width: 100%;
     height: 100%;
+    max-width: 200px;
     /*background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)) no-repeat 0 25%;*/
     background-size: 100%;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .event-wish-color {
@@ -282,12 +319,15 @@
     height: calc(var(--event-height) * var(--event-number));
 }
 
-.timeline-scroll-x::-webkit-scrollbar { /*滚动条整体样式*/
-    width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+.timeline-scroll-x::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 4px;
+    /*高宽分别对应横竖滚动条的尺寸*/
     height: 25px;
 }
 
-.timeline-scroll-x::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+.timeline-scroll-x::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
     border-radius: 5px;
     /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
     background-size: 25px;
@@ -295,7 +335,8 @@
     /*background-image: url("/assets/res/genshin-impact/intertwined_fate.png");*/
 }
 
-.timeline-scroll-x::-webkit-scrollbar-track { /*滚动条里面轨道*/
+.timeline-scroll-x::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
     /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
     /*border-radius: 0;*/
     /*background: rgba(0, 0, 0, 0.1);*/
@@ -384,7 +425,8 @@ button:focus {
     background-color: rgba(255, 255, 255, 0);
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
     text-decoration: none
 }
 
@@ -406,14 +448,4 @@ a:focus, a:hover {
     font-family: 'Lora', 'Times New Roman', serif;
     font-weight: 600;
     font-size: 2rem
-}
-
-@media only screen and (max-width: 600px) {
-    .timeline-character-text {
-        font-size: 2rem;
-    }
-
-    .timeline-character-image {
-        height: 10rem;
-    }
 }
