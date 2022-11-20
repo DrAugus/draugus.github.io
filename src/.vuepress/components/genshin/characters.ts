@@ -842,4 +842,26 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.catalyst
   },
+  alhaitham: {
+    id: "alhaitham",
+    name: "艾尔海森",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.dendro,
+    weapon: Weapon.sword
+  },
+  kaveh: {
+    id: "kaveh",
+    name: "卡维",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.dendro,
+    weapon: Weapon.sword
+  },
 }
