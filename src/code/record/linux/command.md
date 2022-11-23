@@ -50,7 +50,7 @@ au(x) 输出格式
 
 重命名文件，cp副本+\`date +%F\`
 
-> 其他命令参考[runoob](https://www.runoob.com/linux/linux-comm-date.html)
+> 其他命令参考[runoob date]
 
 ## ln
 
@@ -293,11 +293,46 @@ head -c 10M < /dev/urandom > /var/log/log-file
 - create 644 root root: 以指定的权限创建全新的日志文件，同时logrotate也会重命名原始日志文件。
 - postrotate/endscript: 在所有其它指令完成后，postrotate和endscript里面指定的命令将被执行。在这种情况下，rsyslogd 进程将立即再次读取其配置并继续运行。
 
+## lsof
+
+list open files
+
+`lsof -i: port`
+
+```
+lsof -i:8080：查看8080端口占用
+lsof abc.txt：显示开启文件abc.txt的进程
+lsof -c abc：显示abc进程现在打开的文件
+lsof -c -p 1234：列出进程号为1234的进程所打开的文件
+lsof -g gid：显示归属gid的进程情况
+lsof +d /usr/local/：显示目录下被进程开启的文件
+lsof +D /usr/local/：同上，但是会搜索目录下的目录，时间较长
+lsof -d 4：显示使用fd为4的进程
+lsof -i -U：显示所有打开的端口和UNIX domain文件
+```
+
+## netstat
+
+`netstat -tunlp` 用于显示 tcp，udp 的端口和进程等相关情况。
+
+`netstat -tunlp | grep port`
+
+- -t (tcp) 仅显示tcp相关选项
+- -u (udp)仅显示udp相关选项
+- -n 拒绝显示别名，能显示数字的全部转化为数字
+- -l 仅列出在Listen(监听)的服务状态
+- -p 显示建立相关链接的程序名
+
+```
+netstat -ntlp   //查看当前所有tcp端口
+netstat -ntulp | grep 80   //查看所有80端口使用情况
+netstat -ntulp | grep 3306   //查看所有3306端口使用情况
+```
 
 ## others
 
-- [Linux使用sar进行性能分析](https://blog.csdn.net/xusensen/article/details/54606401)
-- [使用iostat分析IO性能](https://blog.csdn.net/xusensen/article/details/73080887)
+- [Linux使用sar进行性能分析]
+- [使用iostat分析IO性能]
 
 
 
@@ -307,12 +342,16 @@ head -c 10M < /dev/urandom > /var/log/log-file
 -----
 
 **参考：**
-- [runoob]
+- [runoob date]
 - [ssh-keygen]
 - [logrotate]
 
 
 
-[runoob]: https://www.runoob.com/linux/linux-comm-date.html
+
+[runoob date]: https://www.runoob.com/linux/linux-comm-date.html
 [ssh-keygen]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 [logrotate]: https://www.xmodulo.com/logrotate-manage-log-files-linux.html
+[Linux使用sar进行性能分析]: https://blog.csdn.net/xusensen/article/details/54606401
+[使用iostat分析IO性能]: https://blog.csdn.net/xusensen/article/details/73080887
+

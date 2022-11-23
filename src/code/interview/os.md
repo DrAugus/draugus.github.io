@@ -11,7 +11,8 @@
 - 简述几个常用的 Linux 命令以及他们的功能
 - 简述操作系统中 malloc 的实现原理
 - Linux 中虚拟内存和物理内存有什么区别？有什么优点？
-- Linux 下如何查看端口被哪个进程占用？
+- Linux 下如何查看端口被哪个进程占用？  
+    [lsof] 和 [netstat] 
 - Linux 下如何排查 CPU 以及 内存占用过多？
 - Linux 下如何查看 CPU 荷载，正在运行的进程，某个端口对应的进程？
 - 如何调试服务器内存占用过高的问题？
@@ -37,3 +38,5 @@
 - 简述乐观锁以及悲观锁的区别以及使用场景
 
 
+[netstat]: /code/record/linux/command.md#netstat
+[lsof]: /code/record/linux/command.md#lsof
