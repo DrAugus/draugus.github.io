@@ -27,3 +27,8 @@ sidebar: false
 - `Ctrl` + `u` 向前滚动半页
 - `Ctrl` + `d` 向后滚动半页
 
+## 撤销
+
+- `u` 撤销
+- `ctrl+r` 恢复刚刚的撤销
+

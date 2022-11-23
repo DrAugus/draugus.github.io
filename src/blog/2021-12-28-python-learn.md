@@ -30,6 +30,13 @@ new_list = [i for i in range(9)]
 newnew = numpy.array(new_list).reshape(3, 3)
 ```
 
+## 二维转一维
+
+```py
+foo = [[1,3,4], [1,3]]
+new_foo = sum(foo, [])
+```
+
 ## 使用filter()去除list的空值
 
 ```py
