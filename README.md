@@ -22,13 +22,21 @@ yarn src:dev
 
 ### Upgrade
 
-```yarn
+make sure all vuepress plugins are up to date.
+
+plugins
+```shell
+yarn add @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
+```
+
+vuepress and theme
+```shell
 yarn add vuepress@next vuepress-theme-hope@next && yarn install && yarn upgrade
 ```
 
 ## Contribute
 
-Before you commit, please run `vuepress-vite build src`
+Before you commit, please run `yarn vuepress-vite build src`
 
 ## Thanks
 

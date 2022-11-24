@@ -1,4 +1,4 @@
-# 开发本网站遇到的问题
+# 开发本网站遇到的问题 (vuepress hope theme)
 
 本地调试无法显示上次更新，及贡献者。
 > 启动脚本 加入 `--debug`
@@ -74,3 +74,63 @@
 
 
 </details>
+
+## 各种奇怪报错
+
+### client 版本不一致
+
+```
+✔ Compiling with vite - done in 58.94s
+✖ Rendering 394 pages - failed in 10.09s
+ReferenceError: Cannot access 'clientConfigs' before initialization
+    at file:///Users/apple/Documents/GitHub/draugus.github.io/src/.vuepress/.temp/.server/app.ab084cb7.mjs:3264:17
+    at ModuleJob.run (node:internal/modules/esm/module_job:193:25)
+    at async Promise.all (index 0)
+    at async ESMLoader.import (node:internal/modules/esm/loader:526:24)
+    at async file:///Users/apple/Documents/GitHub/draugus.github.io/node_modules/@vuepress/bundler-vite/dist/index.js:420:30
+    at async file:///Users/apple/Documents/GitHub/draugus.github.io/node_modules/@vuepress/utils/dist/index.js:98:20
+    at async build (file:///Users/apple/Documents/GitHub/draugus.github.io/node_modules/@vuepress/bundler-vite/dist/index.js:408:3)
+    at async CAC.<anonymous> (file:///Users/apple/Documents/GitHub/draugus.github.io/node_modules/@vuepress/cli/dist/index.js:228:3)
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
+请确保你在使用最新的 `vuepress` 和 `vuepress-theme-hope` V2 版本，因为一些你遇到的 bug 可能已经在新版本中修复。
+
+你可以通过执行下列命令来更新到最新版本。
+
+::: code-tabs#shell
+
+@tab pnpm
+
+```bash
+pnpm add vuepress@next vuepress-theme-hope@next
+```
+
+@tab yarn
+
+```bash
+yarn add vuepress@next vuepress-theme-hope@next
+```
+
+@tab npm
+
+```bash
+npm i vuepress@next vuepress-theme-hope@next
+```
+
+:::
+
+::: warning
+
+任何以 `@vuepress/plugin-` 开头的官方插件应该和 VuePress 保持相同版本。
+
+如果你使用了其他第三方插件，请确保它兼容你要升级到的 VuePress 版本。
+
+:::
+
+事实上并不是 版本不同 引起这个错误
+
+算了 不用了
+
+每次升级都需要做大量的修改！难用至极！！！
