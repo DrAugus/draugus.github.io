@@ -26,7 +26,7 @@ make sure all vuepress plugins are up to date.
 
 plugins
 ```shell
-yarn add @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
+yarn add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
 ```
 
 vuepress and theme

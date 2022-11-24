@@ -131,6 +131,8 @@ npm i vuepress@next vuepress-theme-hope@next
 
 事实上并不是 版本不同 引起这个错误
 
+vue 本身也需要升级 真的是绝了
+
 算了 不用了
 
 每次升级都需要做大量的修改！难用至极！！！
