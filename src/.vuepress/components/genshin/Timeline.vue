@@ -5,15 +5,16 @@
 
     <div class="timeline-scroll-x" ref="setNowPos">
 
+
       <div class="timeline-month">
-        <div v-for="(item, index) in monthList"
-          v-bind:style="{ left: DAY_WIDTH * item[1].offset + DUR_DAY_WIDTH + 'px' }">
+        <div v-for="(item, index) in monthList">
           <!-- +1 min-width: 1px -->
           <div v-bind:style="{ width: (DUR_DAY_WIDTH + 1) * item[1].total + 'px' }">
             <span class="timeline-month-text">{{ item[0] }}</span>
           </div>
         </div>
       </div>
+
 
       <div class="timeline-day">
 
@@ -23,8 +24,8 @@
 
         <div class="timeline-wish-event-weapon">
           <div class="card event-item weapon" v-for="(value, i) in WISH.weapons" v-bind:style="{
-            width: wishWeapons[i].duration * DAY_WIDTH + 'px',
-            left: durationWeapon[i] * DAY_WIDTH + DUR_DAY_WIDTH + 'px',
+            width: wishWeapons[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
+            left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
             height: 'var(--event-height)'
           }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
@@ -40,25 +41,24 @@
           </div>
         </div>
 
+        <!-- dur day +1 cause line width is 1 px -->
+        <!-- duration + 1 cause 从左边开始计算的  -->
         <div class="timeline-wish-event-character">
           <div class="card event-item " v-for="(value, i) in WISH.characters" :class="[
             'ele-' + ElementString[CHARACTER[value.wish5star].ele],
             i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) ? '' : 'rounded-l-xl',
             i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) ? 'border-r-4 border-white' : 'rounded-r-xl'
-          ]" :style="[
-            { width: wishCharacters[i].duration * DAY_WIDTH + 'px' },
-            { left: durationCharacter[i] * DAY_WIDTH + DUR_DAY_WIDTH + 'px' },
-            { marginTop: value.wish_2 ? '68px' : '' }
-          ]">
+          ]" :style="{
+            width: wishCharacters[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
+            left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+            marginTop: value.wish_2 ? '68px' : ''
+          }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
-              <!-- Modal Trigger -->
-              <a class="modal-trigger" href="#modal{{i}}">
-                <div class="event-img responsive-img lazy">
-                  <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
-                  value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                  '?raw=true'" alt="">
-                </div>
-              </a>
+              <div class="event-img responsive-img lazy">
+                <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
+                value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
+                '?raw=true'" alt="">
+              </div>
               <span class="left-align timeline-character-text sticky"
                 :class="'ele-text-shadow-' + ElementString[CHARACTER[value.wish5star].ele]">
                 {{ value.wishName }} 活动祈愿 「{{ CHARACTER[value.wish5star].prefix }}」 {{ CHARACTER[value.wish5star].name
@@ -70,8 +70,9 @@
         </div>
 
         <div v-bind:style="{ marginLeft: DUR_DAY_WIDTH }" v-for="(t, i) in dates" class="timeline-wrapper">
-          <span class="timeline-day-index" v-bind:style="{ left: ((DAY_WIDTH + DUR_DAY_WIDTH) * i) + 'px' }">  {{ t[0] }} </span>
-          <span class="timeline-week-index" v-bind:style="{ left: ((DAY_WIDTH + DUR_DAY_WIDTH) * i) + 'px' }">  {{ t[1] }} </span>
+          <span class="timeline-day-index" > {{ t[0] }}
+          </span>
+          <span class="timeline-week-index" > {{ t[1]}} </span>
         </div>
 
       </div>
@@ -106,7 +107,6 @@ const colorMap = {
   "cryo": "#84c2e6",
 };
 
-const DAY_WIDTH = 35;
 const DUR_DAY_WIDTH = 40;
 let today = dayjs();
 
@@ -123,12 +123,14 @@ let todayOffset = "";
 let durationCharacter = [];
 let durationWeapon = [];
 
+// console.log(wishCharacters)
+
 console.log(monthList)
 
 //设置时间轴
 const setTimeAxis = () => {
   todayOffset = Math.abs(firstDay.diff(today, "day", true));
-  todayOffset = todayOffset * DAY_WIDTH + DUR_DAY_WIDTH + "px";
+  todayOffset = (todayOffset + 1) * (DUR_DAY_WIDTH + 1) + "px";
   console.log("todayOffset", todayOffset);
 };
 setTimeAxis();
@@ -142,7 +144,10 @@ const wishCharacterInfo = () => {
     // console.log(i, durationCharacter);
   }
 };
+// console.log("======== wish char ========")
 wishCharacterInfo();
+// console.log(durationCharacter)
+
 //祈愿武器信息
 const wishWeaponInfo = () => {
   for (let i = 0; i < wishWeaponLength; ++i) {
@@ -163,7 +168,6 @@ export default {
     return {
       monthList,
       dates,
-      DAY_WIDTH,
       DUR_DAY_WIDTH,
       todayOffset,
       currentTime: new Date(),
