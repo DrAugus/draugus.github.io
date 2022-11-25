@@ -33,3 +33,9 @@ new_foo = sum(foo, [])
 d = ['', 'ad', 'fi', '', 'ar', 'ff']
 d = list(filter(None, d))
 ```
+
+## os name
+
+`os.name`: The name of the operating system dependent module imported. The following names have currently been registered: 'posix', 'nt', 'java'.
+- `posix`: mac
+- `nt`: windows
