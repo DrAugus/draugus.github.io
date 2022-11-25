@@ -1,4 +1,5 @@
 ---
+icon: logos:python
 title: Python
 ---
 

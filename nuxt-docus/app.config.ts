@@ -2,6 +2,7 @@ export default defineAppConfig({
   docus: {
     title: 'Coding',
     description: 'The best place to start your documentation.',
+    // image: "/4x4.png",
     socials: {
       github: 'DrAugus/draugus.github.io',
     },
@@ -15,7 +16,7 @@ export default defineAppConfig({
       exclude: []
     },
     header: {
-      // logo: true,
+      logo: false,
       showLinkIcon: true,
       exclude: []
     },

@@ -219,6 +219,18 @@ mac
 - `brew install tree`
 - `tree`
 - `tree -L 1` 只显示一级目录
+- `-d` option displays only directories
+- `-I` option allows to exclude directories that match specific pattern
+    `tree -I 'node_modules|cache|test_*'`
+
+e.g.  
+`tree -a -I 'node_modules|.git|.github|.idea|.vscode|.cache|.temp|nuxt*|dist' -L 4 > 1.txt`
+
+`-a` All files are printed.  By default tree does not print hidden files 
+(those beginning with a dot `.').  
+In no event does tree print the file system constructs 
+`.` (current directory) and `..` (previous directory).
+
 
 ## > 
 

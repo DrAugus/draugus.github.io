@@ -1,5 +1,5 @@
 ---
-sidebar: false
+icon: logos:vimeo-icon
 ---
 # vim 使用
 

@@ -1,3 +1,6 @@
+---
+icon: fa:envira
+---
 # 配环境
 
 ## INSTALL

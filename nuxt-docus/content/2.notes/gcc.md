@@ -1,3 +1,6 @@
+---
+icon: codicon:debug-console
+---
 # gcc
 
 

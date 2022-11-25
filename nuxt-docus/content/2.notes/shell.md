@@ -1,5 +1,5 @@
 ---
-sidebar: false
+icon: mdi:bash
 ---
 
 # Bash

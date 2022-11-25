@@ -115,7 +115,7 @@ export const navbar_zh = navbar([
     ],
   },
   {
-    text: "编码",
+    text: "开发",
     icon: 'code',
     children: [
       {

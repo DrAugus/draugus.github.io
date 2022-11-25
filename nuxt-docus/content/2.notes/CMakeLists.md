@@ -1,7 +1,6 @@
 ---
-  
+icon: vscode-icons:file-type-cmake
 title: CMakeLists Guide
-
 ---
 
 
