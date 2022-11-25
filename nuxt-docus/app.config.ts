@@ -3,10 +3,15 @@ export default defineAppConfig({
     title: 'My Docs',
     description: 'The best place to start your documentation.',
     socials: {
-      github: 'nuxt-themes/docus',
+      github: 'DrAugus/draugus.github.io',
+    },
+    github: {
+      root: 'nuxt-docus/content',
+      edit: true,
+      releases: false
     },
     aside: {
-      level: 0,
+      level: 1,
       exclude: []
     },
     header: {

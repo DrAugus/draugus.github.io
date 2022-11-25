@@ -1,7 +1,3 @@
----
-sidebar: false
----
-
 # 配环境
 
 ## INSTALL
