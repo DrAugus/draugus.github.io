@@ -1,15 +1,5 @@
 ---
-sidebar: false
-article: true
-title: SQL语句
-date: 2021-07-21 11:29:12
-permalinkPattern: blog/:year/:month/:day/:slug.html  
-category: 
-  - 编程
-tag: 
-  - SQL 
-  - Record
-excerpt: 一些sql语句记录
+title: SQL
 ---
 
 <h3><a href = "https://www.runoob.com/sql/sql-insert-into-select.html" title="more info" target="_blank">SQL INSERT INTO SELECT 语法</a></h3>

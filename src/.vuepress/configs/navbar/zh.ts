@@ -127,39 +127,9 @@ export const navbar_zh = navbar([
         link: url_code + '/FAQ/'
       },
       {
-        text: '未来',
-        link: url_code + '/future/'
-      },
-      {
-        text: '面试指南',
-        link: url_code + '/interview/'
-      },
-      {
-        text: '配环境',
-        link: url_code + '/config-env'
-      },
-      {
-        text: 'Lua',
-        link: url_code + '/lua/'
-      },
-      {
-        text: 'Cpp',
-        link: url_code + '/cpp/'
-      },
-      {
         text: 'Latex',
         link: url_code + '/latex'
       },
-      {
-        text: "学习",
-        children: [
-          {
-            text: '学习记录',
-            link: url_code + '/record/'
-          },
-        ]
-      },
-
     ]
   },
   {
