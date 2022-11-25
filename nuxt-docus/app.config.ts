@@ -1,6 +1,6 @@
 export default defineAppConfig({
   docus: {
-    title: 'My Docs',
+    title: 'Coding',
     description: 'The best place to start your documentation.',
     socials: {
       github: 'DrAugus/draugus.github.io',
@@ -20,12 +20,12 @@ export default defineAppConfig({
       exclude: []
     },
     footer: {
-      // iconLinks: [
-      //   {
-      //     href: 'https://nuxt.com',
-      //     icon: 'IconNuxtLabs'
-      //   }
-      // ]
+      iconLinks: [
+        {
+          href: 'https://nuxt.com',
+          icon: 'IconNuxtLabs'
+        }
+      ]
     }
   }
 })
