@@ -1,4 +1,4 @@
-import {navbar} from "vuepress-theme-hope";
+import { navbar } from "vuepress-theme-hope";
 
 const url_prefix = '';
 
@@ -63,13 +63,19 @@ export const navbar_zh = navbar([
             icon: 'bong',
             link: url_learn + '/science/'
           },
+        ]
+      },
+      {
+        text: "工具",
+        children: [
           {
             text: '工具使用',
             icon: 'bong',
             link: url_learn + '/tools/'
           },
         ]
-      }
+      },
+
     ]
   },
   {
@@ -97,9 +103,15 @@ export const navbar_zh = navbar([
         link: url_record + "/war/",
       },
       {
-        text: "乐",
-        link: url_record + "/funny/",
+        text: "偷乐",
+        children: [
+          {
+            text: "乐",
+            link: url_record + "/funny/",
+          },
+        ]
       },
+
     ],
   },
   {
@@ -139,9 +151,15 @@ export const navbar_zh = navbar([
         link: url_code + '/latex'
       },
       {
-        text: '学习记录',
-        link: url_code + '/record/'
+        text: "学习",
+        children: [
+          {
+            text: '学习记录',
+            link: url_code + '/record/'
+          },
+        ]
       },
+
     ]
   },
   {
