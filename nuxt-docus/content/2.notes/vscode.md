@@ -1,3 +1,7 @@
+---
+icon: vscode-icons:file-type-vscode
+---
+
 # VS Code
 
 ## tips

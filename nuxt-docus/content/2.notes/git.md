@@ -1,8 +1,5 @@
 ---
-category: 
-  - 编程  
-tag: 
-  - Git
+icon: vscode-icons:file-type-git
 ---
 
 
