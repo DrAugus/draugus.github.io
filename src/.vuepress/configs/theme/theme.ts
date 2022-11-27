@@ -39,6 +39,7 @@ export default hopeTheme({
   },
 
   locales: theme_local,
+  breadcrumb: false,
 
   encrypt: {
     config: {

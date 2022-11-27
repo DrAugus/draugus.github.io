@@ -2,7 +2,7 @@
 
   <ul>
     <li v-for="(item, index) in blockFood">
-      {{ item }}
+      {{ item.split(",")[0] }} {{ item.split(",")[1] }}
     </li>
   </ul>
 
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       title: "block",
-      blockFood: foodInfo.外卖.拉黑,
+      blockFood: foodInfo.blacklist,
     };
   },
   methods: {

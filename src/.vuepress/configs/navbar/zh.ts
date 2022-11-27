@@ -22,17 +22,12 @@ export const navbar_zh = navbar([
     link: url_food + '/',
   },
   {
-    text: "游戏",
+    text: "",
     icon: 'gamepad',
-    children: [
-      {
-        text: "原神",
-        link: url_game + "/genshin/",
-      },
-    ]
+    link: url_game + "/genshin/",
   },
   {
-    text: '学习',
+    text: '',
     icon: 'book',
     children: [
       {
@@ -44,12 +39,12 @@ export const navbar_zh = navbar([
         text: '领域展开',
         children: [
           {
-            text: '文学',
+            text: '文',
             icon: 'egg',
             link: url_learn + '/arts/'
           },
           {
-            text: '史学',
+            text: '史',
             icon: 'binoculars',
             link: url_learn + '/history/'
           },
@@ -57,11 +52,6 @@ export const navbar_zh = navbar([
             text: '语言',
             icon: 'code-branch',
             link: url_learn + '/language/'
-          },
-          {
-            text: '理学',
-            icon: 'bong',
-            link: url_learn + '/science/'
           },
         ]
       },
@@ -92,7 +82,7 @@ export const navbar_zh = navbar([
     ],
   },
   {
-    text: "开发",
+    text: "",
     icon: 'code',
     children: [
       {
@@ -110,7 +100,7 @@ export const navbar_zh = navbar([
     ]
   },
   {
-    text: '赞助',
+    text: '',
     icon: 'euro-sign',
     link: url_prefix + '/sponsor'
   },
