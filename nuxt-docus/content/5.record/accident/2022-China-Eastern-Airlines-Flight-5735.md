@@ -1,6 +1,6 @@
 # 中国东方航空5735号班机空难
 
-<img :src="$withBase('/image/social/accident/China_Eastern_Airlines_Flight_5735_flight_path_zh-cn.svg')" alt="foo">
+![](/accident/China_Eastern_Airlines_Flight_5735_flight_path_zh-cn.svg)
 
 中国东方航空5735号班机空难，官方名称“3·21”东航MU5735航空器飞行事故，又称3·21东航客机事故、东航“3·21”坠机事故或梧州空难、藤县空难，是发生于北京时间2022年3月21日下午的一起中国客机坠毁事故。
 

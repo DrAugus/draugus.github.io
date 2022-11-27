@@ -1,6 +1,6 @@
 # 梅花与桃花的区别
 
-![](/image/prunus_mume.jpg)
+![](/prunus_mume.jpg)
 
 ## 颜色
 
