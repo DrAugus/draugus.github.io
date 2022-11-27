@@ -65,17 +65,6 @@ export const navbar_zh = navbar([
           },
         ]
       },
-      {
-        text: "工具",
-        children: [
-          {
-            text: '工具使用',
-            icon: 'bong',
-            link: url_learn + '/tools/'
-          },
-        ]
-      },
-
     ]
   },
   {
@@ -83,20 +72,8 @@ export const navbar_zh = navbar([
     icon: 'box',
     children: [
       {
-        text: "意外事故",
-        link: url_record + "/accident/",
-      },
-      {
-        text: "健康生活",
-        link: url_record + "/health/",
-      },
-      {
         text: "铭记历史",
         link: url_record + "/history/",
-      },
-      {
-        text: "花草树木",
-        link: url_record + "/plant/",
       },
       {
         text: "远离战争",
