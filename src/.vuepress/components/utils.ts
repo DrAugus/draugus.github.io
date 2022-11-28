@@ -38,6 +38,11 @@ export const getDuration = (type, start, end) => {
 
 // https://stackoverflow.com/questions/5072136/javascript-filter-for-objects
 export const objFilter = (obj, predicate) =>
-    Object.keys(obj)
-        .filter(key => predicate(obj[key]))
-        .reduce((res, key) => (res[key] = obj[key], res), {});
+  Object.keys(obj)
+    .filter(key => predicate(obj[key]))
+    .reduce((res, key) => (res[key] = obj[key], res), {});
+
+export const filterObject = (obj, callback) =>
+  Object.fromEntries(Object.entries(obj)
+    .filter(([key, val]) => callback(val, key)));
+
