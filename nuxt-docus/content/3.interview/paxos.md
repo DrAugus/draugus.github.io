@@ -1,7 +1,3 @@
----
-index: false
----
-
 # PAXOS
 
 > 总结自[paxos](https://blog.openacid.com/algo/paxos/)

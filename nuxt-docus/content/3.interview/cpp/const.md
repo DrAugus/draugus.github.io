@@ -1,5 +1,5 @@
 ---
-index: false
+icon: vscode-icons:file-type-cpp2
 ---
 
 # const
