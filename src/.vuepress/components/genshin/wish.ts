@@ -1,6 +1,6 @@
 // 20 + 21= 41 days one version /42days/
 // ver2.6 下半因上海疫情封城拖延
-// 3.0 3.1 3.2 3.3 四个版本时间缩短 或许跟上面有关系吧 均为34天 16+18 /35days/
+// 3.0 3.1 3.2 三个版本时间缩短 或许跟上面有关系吧 均为34天 16+18 /35days/
 export const WISH = {
   characters: [
     {
@@ -715,7 +715,7 @@ export const WISH = {
       image: 1,
       shortName: "Wanderer",
       start: "2022-12-07 11:00:00 +0800",
-      end: "2022-12-23 17:59:59 +0800",
+      end: "2022-12-27 17:59:59 +0800",
       wish5star: "wanderer",
       wish4star: [],
       version: "3.3",
@@ -727,7 +727,7 @@ export const WISH = {
       image: 3,
       shortName: "Arataki Itto",
       start: "2022-12-07 11:00:00 +0800",
-      end: "2022-12-23 17:59:59 +0800",
+      end: "2022-12-27 17:59:59 +0800",
       wish5star: "arataki_itto",
       wish4star: [],
       version: "3.3",
@@ -739,8 +739,8 @@ export const WISH = {
       name: "Reign of Serenity",
       image: 3,
       shortName: "Raiden Shogun",
-      start: "2022-12-23 18:00:00 +0800",
-      end: "2023-01-10 14:59:59 +0800",
+      start: "2022-12-27 18:00:00 +0800",
+      end: "2023-01-17 14:59:59 +0800",
       wish5star: "raiden_shogun",
       wish4star: [ ],
       version: "3.3",
@@ -751,8 +751,8 @@ export const WISH = {
       name: "Azure Excursion",
       image: 2,
       shortName: "Kamisato Ayato",
-      start: "2022-12-23 18:00:00 +0800",
-      end: "2023-01-10 14:59:59 +0800",
+      start: "2022-12-27 18:00:00 +0800",
+      end: "2023-01-17 14:59:59 +0800",
       wish5star: "kamisato_ayato",
       wish4star: [],
       version: "3.3",
