@@ -6,7 +6,18 @@ icon: vscode-icons:file-type-git
 # Git
 
 ## submodule
+
 `git submodule add <url> <path>`
+
+`git clone --recursive-submodules -j8 url`
+
+For already cloned repos, or older Git versions, use:
+
+```shell
+git clone git://github.com/foo/bar.git
+cd bar
+git submodule update --init --recursive
+```
 
 ## remote
 
@@ -217,11 +228,11 @@ git checkout .
 
    > 再尝试git push不再需要输入密码.
 
+
+
 ## QA
 
-1. github clone private repo, clone submodule private repo  
-    ????
-2. todo
+todo
 
 
 [linux下git免密码登录配置]: http://yongqing.is-programmer.com/posts/80371.html
