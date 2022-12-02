@@ -1,5 +1,5 @@
 ---
-icon: logos:github
+icon: logos:github-octocat
 ---
 
 # Github

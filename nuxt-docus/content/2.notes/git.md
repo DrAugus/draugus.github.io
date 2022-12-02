@@ -5,6 +5,12 @@ icon: vscode-icons:file-type-git
 
 # Git
 
+## clone
+
+`git clone <xxx.git>`
+
+`git clone --branch your_branch_or_tag <xxx.git>`
+
 ## submodule
 
 `git submodule add <url> <path>`

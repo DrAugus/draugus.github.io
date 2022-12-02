@@ -1,7 +1,3 @@
----
-image: '/stanford.jpeg'
----
-
 # Threads and Mutexes
 
 from [stanford][link] edu **CS110 Lecture 10: Threads and Mutexes**
@@ -250,9 +246,9 @@ A mutex is a variable type that represents something like a "locked door".
 
 ![](/stanford/locked_door.png)
 
-You can **lock**the door:
+You can **lock**the door:
 
-- if it's unlocked, you go through the door and lock it![](Aspose.Words.76adaef4-3b48-49e6-a234-f1dfaf619441.019.png)
+- if it's unlocked, you go through the door and lock it
 - if it's locked, you *wait for it to unlock first*
 
 If you most recently locked the door, you can **unlock**the door:

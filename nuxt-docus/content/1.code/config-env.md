@@ -1,5 +1,5 @@
 ---
-icon: fa:envira
+icon: vscode-icons:file-type-dependencies
 ---
 # 配环境
 

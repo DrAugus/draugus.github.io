@@ -1,5 +1,5 @@
 ---
-icon: mdi:bash
+icon: vscode-icons:file-type-powershell-psd2
 ---
 
 # Bash

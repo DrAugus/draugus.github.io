@@ -1,5 +1,5 @@
 ---
-icon: logos:markdown
+icon: vscode-icons:file-type-markdown
 ---
 
 # Markdown

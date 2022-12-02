@@ -1,5 +1,5 @@
 ---
-icon: codicon:debug-console
+icon: twemoji:building-construction
 ---
 # gcc
 

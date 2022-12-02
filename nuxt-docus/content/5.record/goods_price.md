@@ -1,8 +1,6 @@
 ---
-title: 🎁 日用
-order: -2
-pageInfo: false
-toc: false
+title: 日用价格
+icon: emojione:shopping-cart
 ---
 
 > 价格参考

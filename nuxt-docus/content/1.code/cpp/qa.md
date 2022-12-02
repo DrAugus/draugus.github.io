@@ -2,11 +2,17 @@
 
 > 代码过程遇到的一些问题速查表
 
+## OS error code 4: Interrupted system call
+
+
+
 ## error: invalid storage class for function  
 
 报错的函数的前面的那一个函数{}不配对
 
-## 地址消毒器。
+## 地址消毒器
+
+为什么必须是下面这个顺序？暂时还不晓得
 
 ```cmake
 set_target_properties (app PROPERTIES LINK_FLAGS "-fsanitize=address")
