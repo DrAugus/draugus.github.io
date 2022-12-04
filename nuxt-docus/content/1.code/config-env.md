@@ -6,7 +6,7 @@ icon: fa:envira
 ## Ubuntu
 
 ```shell
-sudo apt install git cmake 
+sudo apt install git cmake python3 python3-pip
 ```
 
 ## cue
