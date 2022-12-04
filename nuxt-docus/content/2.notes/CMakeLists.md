@@ -3,10 +3,97 @@ icon: vscode-icons:file-type-cmake
 title: CMakeLists Guide
 ---
 
+## 基本语法
+
+### 变量
+
+使用set命令显式定义及赋值，在非if语句中，使用${}引用，if中直接使用变量名引用；后续的set命令会清理变量原来的值；
+
+command (args ...)#命令不分大小写，参数使用空格分隔，使用双引号引起参数中空格
+
+set(var a;b;c) <=> set(var a b c)#定义变量var并赋值为a;b;c这样一个string list
+
+Add_executable(${var}) <=> Add_executable(a b c)#变量使用${xxx}引用
+
+### 条件语句
+
+|逻辑值|常量值|
+|:---:|:---:|
+|true |1、ON、YES、TRUE、Y、非0数字|
+|false| 0、OFF、NO、FALSE、N、IGNORE、NOTFOUNT、空字符串、-NOTFOUND结尾字符串|
+
+```cmake
+if(var)
+#...
+else()/elseif()
+#...
+endif(var)
+```
+
+```cmake
+# 逻辑运算
+if(NOT <condition>) # 非运算
+if(<cond1> AND <cond2>) # 与运算
+if(<cond1> OR <cond2>) #或运算
+if((condition) AND (condition OR (condition))) # 有括号时，先计算括号的逻辑值
+
+# 存在性判断
+if(COMMAND command-name) # true 给定参数是可调用的命令、宏、函数时
+if(POLICY policy-id) # true 给定的策略存在时
+if(TARGET target-name) # true 给定的目标参数是通过add_executable()、add_library() 或 add_custom_target() 命令创建并存在的
+if(TEST test-name) # true 给定参数是通过add_test()创建并存在的
+if(DEFINED <name>|CACHE{<name>}|ENV{<name>}) # true 如果变量、缓存、环境变量存在（其取值无关）
+if(<variable|string> IN_LIST <variable>) # true 如果<variable|string>存在于列表变量<variable>中
+
+# 文件判断
+# 以下路径参数可以为相对路径或绝对路径，相对是指相对于当前执行cmake的路径。
+if(EXISTS path-to-file-or-directory) # true 如果文件/目录存在，当参数是连接时表示连接指向的实体存在。
+if(file1 IS_NEWER_THAN file2) # true file1比file2新
+if(IS_DIRECTORY path-to-directory) # true 如果参数是目录
+if(IS_SYMLINK file-name)# true 如果参数是一个链接
+if(IS_ABSOLUTE path) # true 如果参数是绝对路径
+
+# 比较
+# 正则匹配
+if(<variable|string> MATCHES regex)
+# 数字比较
+if(<variable|string> LESS <variable|string>)       # <
+if(<variable|string> GREATER <variable|string>)     # >
+if(<variable|string> EQUAL <variable|string>)      # ==
+if(<variable|string> LESS_EQUAL <variable|string>)   # <=
+if(<variable|string> GREATER_EQUAL <variable|string>) # >=
+# 字符串比较
+if(<variable|string> STRLESS <variable|string>)       # <
+if(<variable|string> STRGREATER <variable|string>)     # >
+if(<variable|string> STREQUAL <variable|string>)      # ==
+if(<variable|string> STRLESS_EQUAL <variable|string>)   # <=
+if(<variable|string> STRGREATER_EQUAL <variable|string>) # >=
+# 版本号比较
+if(<variable|string> VERSION_LESS <variable|string>)       # <
+if(<variable|string> VERSION_GREATER <variable|string>)     # >
+if(<variable|string> VERSION_EQUAL <variable|string>)      # ==
+if(<variable|string> VERSION_LESS_EQUAL <variable|string>)   # <=
+if(<variable|string> VERSION_GREATER_EQUAL <variable|string>) # >=
+```
+
+### 循环语句
+
+```cmake
+Set(VAR a b c)
+Foreach(f ${VAR})
+#...
+Endforeach(f)
+```
+
+```cmake
+WHILE()
+#...
+ENDWHILE()
+```
+
+## others
 
 ### 导入库文件
-
------------------
 
 需要添加的内容包括
 
@@ -14,14 +101,10 @@ title: CMakeLists Guide
 
 2.需要添加的库名称： 这里我用到的库是ws2_32库文件，因此添加的内容是：link_libraries(ws2_32)
 
------------------
-
 以上内容需要添加在`add_executable`前。 在`add_executable`后加上`target_link_libraries("执行名称"空格库名)`
 即`target_link_libraries(YOUR_PROJECT ws2_32)`
 
 ### 一个示例
-
------------------
 
 ```cmake
 set(LINK_DIR /usr/lib2/libnet-1.2-rc3/src/.libs)
@@ -54,41 +137,7 @@ ADD_EXECUTABLE(${PRO} ${DIR_SRCS})
 TARGET_LINK_LIBRARIES(${PRO} net pcap)
 ```
 
-## 基本语法
-
-----------
-
-1.#注释
-
-2.变量：使用set命令显式定义及赋值，在非if语句中，使用${}引用，if中直接使用变量名引用；后续的set命令会清理变量原来的值；
-
-3.command (args ...)#命令不分大小写，参数使用空格分隔，使用双引号引起参数中空格
-
-4.set(var a;b;c) <=> set(var a b c)#定义变量var并赋值为a;b;c这样一个string list
-
-5.Add_executable(${var}) <=> Add_executable(a b c)#变量使用${xxx}引用
-
-6.条件语句：
-
-if(var) #var非empty 0 N No OFF FALSE... #非运算使用NOT
-
-…
-
-else()/elseif() … endif(var)
-
-7.循环语句
-
-Set(VAR a b c)
-
-Foreach(f ${VAR})…Endforeach(f)
-
-8.循环语句
-
-WHILE() … ENDWHILE()
-
 ## 内部变量
-
--------
 
 `CMAKE_C_COMPILER`：指定C编译器
 
@@ -110,8 +159,6 @@ WHILE() … ENDWHILE()
 * cmake命令中使用，如`cmake -DBUILD_SHARED_LIBS=OFF`
 
 ## 命令
-
----------
 
 project(HELLO)#指定项目名称，生成的VC项目的名称；
 
@@ -160,8 +207,6 @@ link_libraries( lib1 lib2 ...): All targets link with the same set of libs
 CMAKE生成的makefile能够处理好.h文件更改时只编译需要的cpp文件
 
 ## FAQ
-
--------
 
 1）怎样获得一个目录下的所有源文件
 
