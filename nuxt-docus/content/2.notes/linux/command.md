@@ -69,6 +69,7 @@ au(x) 输出格式
 - zip `tar -zcvf zip.tar.gz zip/`
 - unzip `tar -zxvf zip.tar.gz`
 - unzip .tar.bz2 `tar -jxvf zip.tar.bz2`
+- unzip .tat.xz `tar -xvf zip.tar.xz`
 
 
 ## pidof
