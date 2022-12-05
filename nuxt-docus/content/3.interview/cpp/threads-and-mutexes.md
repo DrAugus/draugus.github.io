@@ -2,14 +2,13 @@
 
 from [stanford][link] edu **CS110 Lecture 10: Threads and Mutexes**
 
-
 **CS110 Lecture 10: Threads and Mutexes**
 
 Principles of Computer Systems  
-Winter 2020   
-Stanford University   
+Winter 2020
+Stanford University
 Computer Science Department  
-**Instructors**: Chris Gregg and Nick Troccoli 
+**Instructors**: Chris Gregg and Nick Troccoli
 
 **CS110 Topic 3**: How can we have concurrency within a single process?
 
@@ -19,16 +18,15 @@ Computer Science Department
 
 ## Today's Learning Goals
 
-- Discover some of the pitfalls of threads sharing the same virtual address space 
+- Discover some of the pitfalls of threads sharing the same virtual address space
 - Learn how locks can help us limit access to shared resources
 - Get practice using condition variables to wait for signals from other threads
 
 ## Plan For Today
 
 - **Recap:** Threads in C++
-- Races When Accessing Shared Data 
+- Races When Accessing Shared Data
 - Introducing Mutexes
-
 
 ### **Recap:** Threads in C++
 
@@ -45,13 +43,14 @@ A **thread** is an independent execution sequence within a single process.
 #### Threads vs. Processes
 
 **Processes:**
-- isolate virtual address spaces (good: security and stability, bad: harder to share info) 
+
+- isolate virtual address spaces (good: security and stability, bad: harder to share info)
 - can run external programs easily (fork-exec) (good)
 - harder to coordinate multiple tasks within the same program (bad)
 
 **Threads:**
 
-- share virtual address space (bad: security and stability, good: easier to share info) 
+- share virtual address space (bad: security and stability, good: easier to share info)
 - can't run external programs easily (bad)
 - easier to coordinate multiple tasks within the same program (good)
 
@@ -64,7 +63,7 @@ thread myThread(myFunc, arg1, arg2, ...);
 ```
 
 - **myFunc:**the function the thread should execute asynchronously
-- **args:**a list of arguments (any length, or none) to pass to the function upon execution 
+- **args:**a list of arguments (any length, or none) to pass to the function upon execution
 - Once initialized with this constructor, the thread may execute at any time!
 
 To pass objects by reference to a thread, use the **ref()**function:
@@ -95,6 +94,7 @@ for (thread& currFriend : friends) {
     currFriend = thread(myFunc, arg1, arg2); 
 }  
 ```
+
 To wait on a thread to finish, use the **.join()** method:
 
 ```cpp
@@ -121,7 +121,7 @@ for (size_t i = 0; i < 5; i++) {
 
 A *thread-safe*function is one that will always execute correctly, even when called concurrently from multiple threads.
 
-- **printf**is thread-safe, but **operator<<**is *not*. This means e.g. **cout** statements could get interleaved! 
+- **printf**is thread-safe, but **operator<<**is *not*. This means e.g. **cout** statements could get interleaved!
 - To avoid this, use **oslock**and **osunlock**(custom CS110 functions - **#include "ostreamlock.h"**) around streams. They ensure at most one thread has permission to write into a stream at any one time.
 
 ```cpp
@@ -180,12 +180,12 @@ for ( size_t i =  0; i < kNumFriends; i++) {
 
 **Solution**: pass a copy of i (not by reference) so it does not change.
 
-### **Races When Accessing Shared Data** 
+### **Races When Accessing Shared Data**
 
 #### Thread-Level Parallelism
 
-- Threads allow a process to parallelize a problem across multiple cores 
-- Consider a scenario where we want to process 250 images and have 10 cores 
+- Threads allow a process to parallelize a problem across multiple cores
+- Consider a scenario where we want to process 250 images and have 10 cores
 - **Simulation**: let each thread help process images until none are left
 - Let's jump to a demo to see how this works
 
@@ -202,6 +202,7 @@ int main(int argc, const char *argv[]) {
 ```
 
 There is a *race condition* here!
+
 - **Problem:**threads could interrupt each other in between lines 2 and 3.
 
     ```cpp
@@ -213,9 +214,9 @@ There is a *race condition* here!
         }
         //... 
     }
-    ```    
+    ```
 
-- **Why is this?**It's because **remainingImages > 0** test and **remainingImages--** aren't atomic 
+- **Why is this?**It's because **remainingImages > 0** test and **remainingImages--** aren't atomic
 - Atomicity: externally, the code has either executed or not; external observers do not see any intermediate states mid-execution
 - If a thread evaluates **remainingImages > 0**to be **true**and commits to processing an image, another thread could come in and claim that same image before this thread processes it.
 
@@ -235,8 +236,8 @@ There is a *race condition* here!
 
 - The first two lines drill through the **remainingImages** reference to load a copy of the **remainingImages** held on **main**'s stack. The third line decrements that copy, and the last two write the decremented copy back to the **remainingImages** variable held on **main**'s stack.
 - The ALU operates on registers, but registers are private to a core, so the variable needs to be loaded from and stored to memory.
-    - Each thread makes a local copy of the variable before operating on it
-    - What if multiple threads all load the variable at the same time: they all think there's only 128 images remaining and process 128 at the same time
+  - Each thread makes a local copy of the variable before operating on it
+  - What if multiple threads all load the variable at the same time: they all think there's only 128 images remaining and process 128 at the same time
 
 ### Introducing Mutexes
 
@@ -257,7 +258,7 @@ If you most recently locked the door, you can **unlock**the door:
 
 #### Mutex - Mutual Exclusion
 
-A mutex is a type used to enforce *mutual exclusion*, i.e., a critical section 
+A mutex is a type used to enforce *mutual exclusion*, i.e., a critical section
 
 Mutexes are often called locks
 
@@ -286,8 +287,8 @@ public:
 
 #### Critical Sections With Mutexes
 
-**main** instantiates a mutex, which it passes (by reference!) to invocations of **process.**   
-The **process** code uses this lock to protect **remainingImages**.   
+**main** instantiates a mutex, which it passes (by reference!) to invocations of **process.**
+The **process** code uses this lock to protect **remainingImages**.
 Note we need to unlock on line 5 -- in complex code forgetting this is an easy bug
 
 ```cpp
@@ -313,7 +314,7 @@ static void process ( size_t id, size_t & remainingImages, mutex& counterLock) {
 
 The way we've set it up, only one thread agent can process an image at a time!
 
-We can do better: serialize deciding which image to process and parallelize the actual processing 
+We can do better: serialize deciding which image to process and parallelize the actual processing
 
 Keep your critical sections as small as possible!
 
@@ -357,11 +358,11 @@ What if there's a bug in your code, such that sometimes processImage randomly en
 - Need a way to reissue an image to an idle thread
 - An infinite loop of course shouldn't occur, but when we get to networks sometimes execution time can vary by 100x for reasons outside our control
 
-#### Some Types of Mutexes 
+#### Some Types of Mutexes
 
 Standard **mutex**: what we've seen
 
-- If a thread holding the lock tries to re-lock it, deadlock 
+- If a thread holding the lock tries to re-lock it, deadlock
 
 **recursive_mutex**
 
@@ -370,7 +371,7 @@ Standard **mutex**: what we've seen
 **timed_mutex**
 
 - A thread can **try_lock_for** / **try_lock_until**: if time elapses, don't take lock
-- Deadlocks if same thread tries to lock multiple times, like standard mutex 
+- Deadlocks if same thread tries to lock multiple times, like standard mutex
 
 In this class, we'll focus on just regular **mutex**
 
@@ -389,12 +390,9 @@ How does this work with caches?
 Hardware provides atomic memory operations, such as compare and swap
 
 - cas old, new, addr
-    - If addr == old, set addr to new
+  - If addr == old, set addr to new
 - Use this as a single bit to see if the lock is held and if not, take it
 - If the lock is held already, then enqueue yourself (in a thread safe way) and tell kernel to sleep you
 - When a node unlocks, it clears the bit and wakes up a thread
-
-
-
 
 [link]: https://web.stanford.edu/class/archive/cs/cs110/cs110.1204/static/lectures/10-threads-and-mutexes.pdf

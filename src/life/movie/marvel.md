@@ -4,17 +4,18 @@ pageInfo: false
 toc: false
 ---
 
-Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/), timeline todo 
+Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/), timeline todo
 
 [refer1][manweimi]
 
 [refer2][zhihu-timeline]
 
-## MCU 
+## MCU
 
 ### 按照剧情时间顺序
 
 > 注：电影、短片、Disney+剧集&特别篇必看，其他剧集可以不看。
+
 1. 《美国队长：复仇者先锋》
     - 剧集:《特工卡特第一季》
     - 剧集:《特工卡特第二季》
@@ -99,15 +100,11 @@ Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/),
 29. 《雷神4：爱与雷霆》
     - Disney+特别篇：《暗夜狼人》
 
-
-
 <Marvel />
 
 <script setup lang="ts">
 import Marvel from "@Marvel";
 </script>
-
-
 
 [manweimi]: https://www.manweimi.cn/notice/16721.html
 [zhihu-timeline]: https://zhuanlan.zhihu.com/p/546488177

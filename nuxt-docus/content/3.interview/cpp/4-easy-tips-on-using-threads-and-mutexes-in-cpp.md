@@ -6,7 +6,7 @@ C++ is a great programming language that’s generally associated with fast perf
 
 In this article, I will go over four tips for using threads and mutexes in C++. The interfaces discussed here are those defined in the C++11 standard of the language. Prior to C++11, threads were not formally defined in the language and only OS-specific thread interfaces such as posix threads could be used.
 
-## 1. Threads Aren’t Disposable — You Have to Join Them Back Together!
+## 1. Threads Aren’t Disposable — You Have to Join Them Back Together
 
 A common mistake made by those new to multithreading is believing that the function passed to a new thread being created is similar to just calling another function. It’s not. Let’s take a look at the seemingly benign program below:
 
@@ -219,10 +219,5 @@ The number of concurrent threads is 4
 This value is typically useful when implementing a thread pool, a design where threads continuously run a loop to check a resource such as a queue for jobs to perform. In a thread pool, you typically will not see a benefit from using more than the number of concurrent threads the hardware supports. In general, checking the hardware concurrency limit is a form of hardware-focused design.
 
 There are many components of modern C++, like atomic variables and memory fences, that provide optimizations for multithreaded programs, but only for particular hardware architectures.
-
-
-
-
-
 
 [link]: https://betterprogramming.pub/4-easy-tips-on-using-threads-and-mutexes-in-c-566eb2927152
