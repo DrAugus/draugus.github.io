@@ -11,8 +11,6 @@
 |平衡树 | o(logn)| o(logn) | o(logn)
 |哈希表 | o(1)| o(1)| o(1)
 
-
-
 <table style="text-align: center">
 <tr>
 <td rowspan="2">类别</td>

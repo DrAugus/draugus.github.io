@@ -34,6 +34,13 @@ git submodule update --init --recursive
 - `git remote rm name`  删除远程仓库
 - `git remote rename old_name new_name`  修改仓库名
 
+## config
+
+```shell
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+```
+
 ## git add
 
 ## git status
@@ -45,10 +52,10 @@ git submodule update --init --recursive
 ## git diff
 
 - 尚未缓存的改动：git diff
-    - `git diff [file]`
-    - `git diff [first-branch]...[second-branch]`
+  - `git diff [file]`
+  - `git diff [first-branch]...[second-branch]`
 - 查看已缓存的改动： git diff --cached
-    - `git diff --cached [file]`
+  - `git diff --cached [file]`
 - 查看已缓存的与未缓存的所有改动：git diff HEAD
 - 显示摘要而非整个 diff：git diff --stat
 
@@ -163,6 +170,7 @@ Footer 部分只用于两种情况。
     > 谨慎使用 –-hard 参数，它会删除回退点之前的所有信息。
 
 **HEAD** 说明：
+
 - HEAD 表示当前版本
 - HEAD^ 上一个版本
 - HEAD^^ 上上一个版本
@@ -216,10 +224,10 @@ git checkout .
 > 使用git push提交时，每次都要输入密码，次数多了，感觉挺麻烦. 如果git以ssh协议通讯，免密码可以用ssh公钥设置免登录。如果git时以https方式访问呢，该怎么办？下面方式可以解决这个问题.
 
 1. 编辑`git-credentials`文件(如果没有 键入 `touch .git-credentials`)
-    * `vi .git-credentials`
+    - `vi .git-credentials`
 
 2. 文件中添加`https://username:passeord@项目地址`
-    * 如果账号密码中有@符号，用40%代替
+    - 如果账号密码中有@符号，用40%代替
 
 3. `git config --global credential.helper store`
 
@@ -234,11 +242,20 @@ git checkout .
 
    > 再尝试git push不再需要输入密码.
 
+### better
 
+[服务器上的 Git - 生成 SSH 公钥]
+
+```shell
+cd ~/.ssh
+ls
+ssh-keygen -o
+cat ~/.ssh/id_rsa.pub
+```
 
 ## QA
 
 todo
 
-
 [linux下git免密码登录配置]: http://yongqing.is-programmer.com/posts/80371.html
+[服务器上的 Git - 生成 SSH 公钥]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
