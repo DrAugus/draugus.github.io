@@ -3,38 +3,36 @@ icon: twemoji:building-construction
 ---
 # gcc
 
-
 `gcc` 与 `g++` 分别是 `gnu` 的 `c/c++` 编译器 `gcc/g++` 在执行编译工作的时候，总共需要4步：
+
 1. 预处理, 生成 .i 的文件[预处理器cpp]
 2. 将预处理后的文件转换成汇编语言, 生成文件 .s [编译器egcs]
 3. 有汇编变为目标代码(机器代码)生成 .o 的文件[汇编器as]
 4. 连接目标代码, 生成可执行程序 [链接器ld]
 
-
 **gcc 命令的常用选项**
-|选项	|解释|
+|选项 |解释|
 |---|---|
-| `-ansi`|	只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。|
-| `-c`|	只编译并生成目标文件。|
-| `-DMACRO`|	以字符串"1"定义 MACRO 宏。|
-| `-DMACRO=DEFN`|	以字符串"DEFN"定义 MACRO 宏。|
-| `-E`|	只运行 C 预编译器。|
-| `-g`|	生成调试信息。GNU 调试器可利用该信息。|
-| `-IDIRECTORY`|	指定额外的头文件搜索路径DIRECTORY。|
-| `-LDIRECTORY`|	指定额外的函数库搜索路径DIRECTORY。|
-| `-lLIBRARY`|	连接时搜索指定的函数库LIBRARY。|
-| `-m486`|	针对 486 进行代码优化。|
-| `-o FILE`|	生成指定的输出文件。用在生成可执行文件时。|
-| `-O0`|	不进行优化处理。|
-| `-O` 或 `-O1`|	优化生成代码。|
-| `-O2`|	进一步优化。|
-| `-O3`|	比 -O2 更进一步优化，包括 inline 函数。|
-| `-shared`|	生成共享目标文件。通常用在建立共享库时。|
-| `-static`|	禁止使用共享连接。|
-| `-UMACRO`|	取消对 MACRO 宏的定义。|
-| `-w`|	不生成任何警告信息。|
-| `-Wall`|	生成所有警告信息。|
-
+| `-ansi`| 只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。|
+| `-c`| 只编译并生成目标文件。|
+| `-DMACRO`| 以字符串"1"定义 MACRO 宏。|
+| `-DMACRO=DEFN`| 以字符串"DEFN"定义 MACRO 宏。|
+| `-E`| 只运行 C 预编译器。|
+| `-g`| 生成调试信息。GNU 调试器可利用该信息。|
+| `-IDIRECTORY`| 指定额外的头文件搜索路径DIRECTORY。|
+| `-LDIRECTORY`| 指定额外的函数库搜索路径DIRECTORY。|
+| `-lLIBRARY`| 连接时搜索指定的函数库LIBRARY。|
+| `-m486`| 针对 486 进行代码优化。|
+| `-o FILE`| 生成指定的输出文件。用在生成可执行文件时。|
+| `-O0`| 不进行优化处理。|
+| `-O` 或 `-O1`| 优化生成代码。|
+| `-O2`| 进一步优化。|
+| `-O3`| 比 -O2 更进一步优化，包括 inline 函数。|
+| `-shared`| 生成共享目标文件。通常用在建立共享库时。|
+| `-static`| 禁止使用共享连接。|
+| `-UMACRO`| 取消对 MACRO 宏的定义。|
+| `-w`| 不生成任何警告信息。|
+| `-Wall`| 生成所有警告信息。|
 
 ## 参数详解
 
@@ -76,7 +74,8 @@ icon: twemoji:building-construction
 ### -o
 
 制定目标名称, 默认的时候, gcc 编译出来的文件是 a.out, 很难听, 如果你和我有同感，改掉它, 哈哈。  
-例子用法:   
+例子用法:
+
 ```shell
 gcc -o hello.exe hello.c #(哦,windows用习惯了) 
 　　gcc -o hello.asm -S hello.c
@@ -85,48 +84,61 @@ gcc -o hello.exe hello.c #(哦,windows用习惯了)
 ### -pipe
 　　
 使用管道代替编译中临时文件, 在使用非 gnu 汇编工具的时候, 可能有些问题。  
-`gcc -pipe -o hello.exe hello.c` 
+`gcc -pipe -o hello.exe hello.c`
 
 ### -ansi
+
 关闭 gnu c中与 ansi c 不兼容的特性, 激活 ansi c 的专有特性（包括禁止一些 asm inline typeof 关键字, 以及 UNIX,vax 等预处理宏）。
+
 ### -fno-asm
+
 此选项实现 ansi 选项的功能的一部分，它禁止将 asm, inline 和 typeof 用作关键字。
-　　　　
+
 ### -fno-strict-prototype
+
 只对 g++ 起作用, 使用这个选项, g++ 将对不带参数的函数,都认为是没有显式的对参数的个数和类型说明,而不是没有参数。  
 而 gcc 无论是否使用这个参数, 都将对没有带参数的函数, 认为城没有显式说明的类型。
 　　
 ### -fthis-is-varialble
+
 就是向传统 c++ 看齐, 可以使用 this 当一般变量使用。
 　　
 ### -fcond-mismatch
+
 允许条件表达式的第二和第三参数类型不匹配, 表达式的值将为 void 类型。
 　　
 ### -funsigned-char 、-fno-signed-char、-fsigned-char 、-fno-unsigned-char
+
 这四个参数是对 char 类型进行设置, 决定将 char 类型设置成 unsigned char(前两个参数)或者 signed char(后两个参数)。
 　　
 ### -include file
+
 包含某个代码,简单来说,就是便以某个文件,需要另一个文件的时候,就可以用它设定,功能就相当于在代码中使用 `#include<filename>`。  
-例子用法:  　
-`gcc hello.c -include /root/pianopan.h` 
+例子用法:
+`gcc hello.c -include /root/pianopan.h`
 　　
 ### -imacros file
 　　
 将 file 文件的宏, 扩展到 gcc/g++ 的输入文件, 宏定义本身并不出现在输入文件中。
 　　
 ### -Dmacro
+
 相当于 C 语言中的 #define macro
 　　
 ### -Dmacro=defn
+
 相当于 C 语言中的 #define macro=defn
 　　
 ### -Umacro
+
 相当于 C 语言中的 #undef macro
+
 ### -undef
 　　
 取消对任何非标准宏的定义
 　　
 ### -Idir
+
 在你是用 `#include "file"` 的时候, gcc/g++ 会先在当前目录查找你所制定的头文件, 如果没有找到, 他回到默认的头文件目录找, 如果使用 -I 制定了目录,他会先在你所制定的目录查找, 然后再按常规的顺序去找。  
 对于 `#include<file>`, gcc/g++ 会到 -I 制定的目录查找, 查找不到, 然后将到系统的默认的头文件目录查找 。
 　　
@@ -135,9 +147,11 @@ gcc -o hello.exe hello.c #(哦,windows用习惯了)
 就是取消前一个参数的功能, 所以一般在 `-Idir` 之后使用。
 　　
 ### -idirafter dir
+
 在 -I 的目录里面查找失败, 讲到这个目录里面查找。
 　　
 ### -iprefix prefix 、-iwithprefix dir
+
 一般一起使用, 当 -I 的目录查找失败, 会到 prefix+dir 下查找
 　　
 ### -nostdinc
@@ -145,37 +159,39 @@ gcc -o hello.exe hello.c #(哦,windows用习惯了)
 使编译器不再系统默认的头文件目录里面找头文件, 一般和 -I 联合使用,明确限定头文件的位置。
 　　
 ### -nostdin C++
-　
+
 规定不在 g++ 指定的标准路经中搜索, 但仍在其他路径中搜索, 此选项在创 libg++ 库使用 。
 　　
 ### -C
-　
+
 在预处理的时候, 不删除注释信息, 一般和-E使用, 有时候分析程序，用这个很方便的。
 　　
 ### -M
-　
+
 生成文件关联的信息。包含目标文件所依赖的所有源代码你可以用 gcc -M hello.c 来测试一下，很简单。
 　　
 ### -MM
-　
-和上面的那个一样，但是它将忽略由 `#include<file>` 造成的依赖关系。 　　
+
+和上面的那个一样，但是它将忽略由 `#include<file>` 造成的依赖关系。
+
 ### -MD
-　
-和-M相同，但是输出将导入到.d的文件里面 　　
+
+和-M相同，但是输出将导入到.d的文件里面
+
 ### -MMD
-　
+
 和 -MM 相同，但是输出将导入到 .d 的文件里面。
 　　
 ### -Wa,option
-　
+
 此选项传递 option 给汇编程序; 如果 option 中间有逗号, 就将 option 分成多个选项, 然 后传递给会汇编程序。
 　　
 ### -Wl.option
-　
+
 此选项传递 option 给连接程序; 如果 option 中间有逗号, 就将 option 分成多个选项, 然 后传递给会连接程序。
 　　
 ### -llibrary
-　
+
 制定编译的时候使用的库  
 例子用法  
 `gcc -lcurses hello.c`
@@ -189,7 +205,7 @@ gcc -o hello.exe hello.c #(哦,windows用习惯了)
 ### -O0 、-O1 、-O2 、-O3
 　　
 编译器的优化选项的 4 个级别，-O0 表示没有优化, -O1 为默认值，-O3 优化级别最高。
-　 　 　　
+
 ### -g
 　　
 只是编译器，在编译的时候，产生调试信息。
@@ -205,16 +221,18 @@ gcc -o hello.exe hello.c #(哦,windows用习惯了)
 ### -ggdb
 　　
 此选项将尽可能的生成 gdb 的可以使用的调试信息。
+
 ### -static
 　　
 此选项将禁止使用动态库，所以，编译出来的东西，一般都很大，也不需要什么动态连接库，就可以运行。
+
 ### -share
-　
+
 此选项将尽量使用动态库，所以生成文件比较小，但是需要系统由动态库。
+
 ### -traditional
 　　
 试图让编译器支持传统的C语言特性。  
-
 
 GCC 是 GNU 的 C 和 C++ 编译器。实际上，GCC 能够编译三种语言：C、C++ 和 Object C（C 语言的一种面向对象扩展）。利用 gcc 命令可同时编译并连接 C 和 C++ 源程序。  
 如果你有两个或少数几个 C 源文件，也可以方便地利用 GCC 编译、连接并生成可执行文件。  

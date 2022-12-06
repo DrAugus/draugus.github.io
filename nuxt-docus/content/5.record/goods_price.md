@@ -11,5 +11,4 @@ icon: emojione:shopping-cart
 
 ## 饮食类
 
-胡姬花花生油 ¥23.75/L 
-
+胡姬花花生油 ¥23.75/L

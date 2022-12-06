@@ -3,7 +3,7 @@ title: fish
 icon: noto:fishing-pole
 ---
 
-## switch to fish as your default
+## switch to fish as your [default]
 
 To change your login shell to fish:
 
@@ -14,9 +14,9 @@ To change your login shell to fish:
     ```
 
 2. Change your default shell with:
+
     ```shell
     chsh -s /usr/local/bin/fish
     ```
-
 
 [default]: https://fishshell.com/docs/current/index.html?highlight=set+default#default-shell
