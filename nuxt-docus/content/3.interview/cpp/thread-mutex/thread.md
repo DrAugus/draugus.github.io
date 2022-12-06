@@ -1,21 +1,21 @@
 # Thread
 
-## 在c++标准中提供了 std::thread, std::async, std::package_task, std::promise等模块以支持异步开发, 在实际开发中一般使用那种呢, 还是直接使用pthread?
+## 在c++标准中提供了 `std::thread`, `std::async`, `std::package_task`, `std::promise`等模块以支持异步开发, 在实际开发中一般使用那种呢, 还是直接使用pthread?
 
 在实际开发中，使用哪种方法取决于应用程序的具体需求和限制。
 
-- std::thread 是一个用于在c++程序中创建和管理线程的标准库类。使用std::thread可以方便地在c++程序中创建线程，并且可以使用c++标准库的同步原语（如std::mutex和std::condition_variable）来管理线程间的同步。
-- std::async 是一个用于在c++程序中执行异步操作的函数。std::async可以在后台执行指定的任务，并返回一个 std::future 对象，可以用来获取任务的结果。
-- std::package_task 是一个c++标准库类，用于封装异步任务。std::package_task 可以用来封装任意可调用对象（如函数、lambda表达式等），然后可以在以后执行这个任务。
-- std::promise 是一个c++标准库类，用于在线程之间传递结果值。std::promise 可以用来向一个 std::future 对象写入结果值，以便在其他线程中获取该值。
+- `std::thread` 是一个用于在c++程序中创建和管理线程的标准库类。使用`std::thread`可以方便地在c++程序中创建线程，并且可以使用c++标准库的同步原语（如`std::mutex`和`std::condition_variable`）来管理线程间的同步。
+- `std::async` 是一个用于在c++程序中执行异步操作的函数。`std::async`可以在后台执行指定的任务，并返回一个 `std::future` 对象，可以用来获取任务的结果。
+- `std::package_task` 是一个c++标准库类，用于封装异步任务。`std::package_task` 可以用来封装任意可调用对象（如函数、lambda表达式等），然后可以在以后执行这个任务。
+- `std::promise` 是一个c++标准库类，用于在线程之间传递结果值。`std::promise` 可以用来向一个 `std::future` 对象写入结果值，以便在其他线程中获取该值。
 
-在实际开发中，使用 std::thread, std::async, std::package_task, std::promise 等方法的选择取决于应用程序的具体需求和限制。例如，如果需要创建多个线程来执行异步任务，可以使用 std::thread 和 std::mutex 等同步原语来管理线程。如果需要在后台执行异步任务，并获取结果，可以使用 std::async 和 std::future。如果需要在以后执行异步任务，可以使用 std::package_task 封装任务，并在需要时执行。如果需要在线程之间传递结果值，可以使用 std::promise 和 std::future。
+在实际开发中，使用 `std::thread`, `std::async`, `std::package_task`, `std::promise` 等方法的选择取决于应用程序的具体需求和限制。例如，如果需要创建多个线程来执行异步任务，可以使用 `std::thread` 和 `std::mutex` 等同步原语来管理线程。如果需要在后台执行异步任务，并获取结果，可以使用 `std::async` 和 `std::future`。如果需要在以后执行异步任务，可以使用 `std::package_task` 封装任务，并在需要时执行。如果需要在线程之间传递结果值，可以使用 `std::promise` 和 `std::future`。
 
-另外，c++标准库中还提供了 std::thread::id 和 std::thread::native_handle 等类型，可以用来标识和操作线程。
+另外，c++标准库中还提供了 `std::thread::id` 和 `std::thread::native_handle` 等类型，可以用来标识和操作线程。
 
-如果需要，也可以使用pthread库来创建和管理线程。pthread库是一个跨平台的库，用于在Linux、macOS和其他操作系统上创建和管理线程。使用pthread库需要在c++程序中包含头文件`#include <pthread.h>`，并使用pthread库提供的函数和数据类型来创建和管理线程。
+如果需要，也可以使用`pthread`库来创建和管理线程。`pthread`库是一个跨平台的库，用于在Linux、macOS和其他操作系统上创建和管理线程。使用`pthread`库需要在c++程序中包含头文件`#include <pthread.h>`，并使用pthread库提供的函数和数据类型来创建和管理线程。
 
-总的来说，在实际开发中，可以根据应用程序的具体需求和限制，选择使用c++标准库中提供的 std::thread, std::async, std::package_task, std::promise 等方法，或者使用pthread库来创建和管理线程。使用c++标准库提供的方法可以保证程序的可移植性和可读性，同时也提供了丰富的同步原语和容器类型，可以方便地管理线程和数据。使用pthread库则可以提供更多的低级别控制，并可以在更多的平台上使用。
+总的来说，在实际开发中，可以根据应用程序的具体需求和限制，选择使用c++标准库中提供的 `std::thread`, `std::async`, `std::package_task`, `std::promise` 等方法，或者使用`pthread`库来创建和管理线程。使用c++标准库提供的方法可以保证程序的可移植性和可读性，同时也提供了丰富的同步原语和容器类型，可以方便地管理线程和数据。使用pthread库则可以提供更多的低级别控制，并可以在更多的平台上使用。
 
 ## 在多线程开发中, 有没有什么好的编程模式或程序设计方法, 能够尽可能的避免锁带来的性能消耗和死锁问题?
 
