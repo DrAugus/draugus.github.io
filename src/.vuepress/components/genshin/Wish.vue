@@ -3,7 +3,7 @@
   <div v-if="current.able">
 
     <h2>当前祈愿</h2>
-    <h2>{{ end }} 后结束</h2>
+    <h3>{{ end }} 后结束</h3>
     <blockquote>祈愿周期：{{ current.currentDate[0] }}</blockquote>
 
     <div v-for="(item, index) in current.currentSrc">
@@ -18,7 +18,7 @@
   <div v-if="future.able">
 
     <h2>未来祈愿</h2>
-    <h2>{{ begin }} 后开始</h2>
+    <h3>{{ begin }} 后开始</h3>
     <blockquote>祈愿周期：{{ future.futureDate[0] }}</blockquote>
 
     <div v-for="(item, index) in future.futureSrc">

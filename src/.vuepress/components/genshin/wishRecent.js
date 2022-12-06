@@ -51,18 +51,15 @@ const getWishObj = () => {
         if (startAfter && endBefore) {
             obj.wishIndex.push(e.index2);
         }
+        //当前时间在祈愿起始时间前
+        let startBefore = dayjs().isBefore(e.start, "second");
+        if (startBefore) {
+            obj.comingIndex.push(e.index2)
+        }
     }
 
     obj.reprint = obj.wishIndex.length > 1;
 
-    //存放所有未来的祈愿
-    {
-        let startIndex = obj.wishIndex[obj.wishIndex.length - 1];
-        ++startIndex;
-        for (let i = startIndex; i < wishLength; ++i) {
-            obj.comingIndex.push(i);
-        }
-    }
     return obj;
 
 };
