@@ -7,18 +7,42 @@ import yaml
 import platform
 import numpy
 
-_weapon_zh = ["单手剑", "双手剑", "法器", "弓", "长柄武器"]
-_weapon_en = ["sword", "claymore", "catalyst", "bow", "polearm"]
+# 获取yaml文件路径
+# yaml_path = 'config.yml'
+# if platform.system() == "Windows":
+yaml_path = 'code/genshin/config.yml'
 
+f = open(yaml_path, 'rb')
+config = yaml.safe_load_all(f)
+config_list = list(config)
+
+# ########################### config ###########################
+config_value = config_list[0]
+DEBUG_LV = config_list["log"]
+SHOW_ZH = config_value["SHOW_ZH"]
+SHOW_WISH = config_value["SHOW_WISH"]
+SHOW_WISH_CHAR = config_value["SHOW_WISH_CHAR"]
+SHOW_WISH_WEAPON = config_value["SHOW_WISH_WEAPON"]
+SHOW_CHAR_INFO = config_value["SHOW_CHAR_INFO"]
+SHOW_ALL_EVENT = config_value["SHOW_ALL_EVENT"]
+URL_PAGE_SIZE = config_value["URL_PAGE_SIZE"]
+URL_PAGE_NUM = config_value["URL_PAGE_NUM"]
+URL_ORDER = config_value["URL_ORDER"]
+URL_AROUND = config_value["URL_AROUND"]
+# ########################### config ###########################
 
 LV = {
     'trace': 0,
     'debug': 1,
     'info': 2,
     'warn': 3,
-    'error': 4
+    'error': 4,
+    'max': 5
 }
-DEBUG_LV = LV["info"]
+
+
+def modify_config():
+    DEBUG_LV = LV["trace"]
 
 
 def log_debug(lv, *str):
@@ -29,15 +53,12 @@ def log_debug(lv, *str):
         print(f"\033[1;{color[lv]};m{lv}: {str}\033[0m")
 
 
-# 获取yaml文件路径
-# yaml_path = 'config.yml'
-# if platform.system() == "Windows":
-yaml_path = 'code/genshin/config.yml'
-
-f = open(yaml_path, 'rb')
-config = yaml.safe_load_all(f)
-config_list = list(config)
+modify_config()
 log_debug(LV["trace"], "config_list", config_list)
+
+
+_weapon_zh = ["单手剑", "双手剑", "法器", "弓", "长柄武器"]
+_weapon_en = ["sword", "claymore", "catalyst", "bow", "polearm"]
 
 
 class City(enum.Enum):
@@ -48,21 +69,6 @@ class City(enum.Enum):
     Fontaine = 4,
     Natlan = 5,
     Snezhnaya = 6,
-
-
-# ########################### config ###########################
-config_value = config_list[0]
-show_zh = config_value["show_zh"]
-show_wish = config_value["show_wish"]
-show_wish_char = config_value["show_wish_char"]
-show_wish_weapon = config_value["show_wish_weapon"]
-show_char_info = config_value["show_char_info"]
-show_all_event = config_value["show_all_event"]
-url_page_size = config_value["url_page_size"]
-url_page_num = config_value["url_page_num"]
-url_order = config_value["url_order"]
-url_around = config_value["url_around"]
-# ########################### config ###########################
 
 
 url_zh_char_channel_id = [150, 151, 324, 350]
@@ -83,7 +89,7 @@ url_en_content_prefix = "https://content-static-sea.hoyoverse.com/content/yuansh
 
 
 def url_compose(prefix, channel_id,
-                page_size=url_page_size, page_num=url_page_num, order=url_order):
+                page_size=URL_PAGE_SIZE, page_num=URL_PAGE_NUM, order=URL_ORDER):
     url_res = prefix + "pageSize=" + str(page_size) + "&pageNum=" + \
         str(page_num) + "&order=" + order + "&channelId=" + str(channel_id)
     log_debug(LV["trace"], url_res)
@@ -177,6 +183,7 @@ url_en_event_list = url_compose(
 
 
 def wish_data(url_lang, str_match):
+    # log_debug(LV["info"], "wish_data url_lang "f"{url_lang}")
     _json_ = {}
     json_list = clean_wish_data(get_json(url_lang), str_match)
     for json in json_list:
@@ -186,17 +193,20 @@ def wish_data(url_lang, str_match):
 
 # obj
 # todo: download img and then rename img
+
+
 def display_format_event(event_map):
     for k in event_map:
         s = "--------" + \
-            "\n [id] "f"{event_map[k]['id']}" + \
-            "\n [title] "f"{event_map[k]['title']}" + \
-            "\n [img] "f"{event_map[k]['img']}" + \
+            "\n [id] "f"{event_map[k]['id']} " + \
+            "\n [title] "f"{event_map[k]['title']} " + \
+            "\n [img] "f"{event_map[k]['img']} " + \
             "\n--------\n"
-        log_debug(LV["trace"], s)
+        log_debug(LV["info"], s)
 
 
 def wish_detail_data(url_lang, str_match):
+    log_debug(LV["info"], "wish_detail_data url_lang :"f"{url_lang}")
     arr = clean_wish_detail_data(get_json(url_lang), str_match)
     for a in arr:
         if len(a):
@@ -243,6 +253,7 @@ def wish_detail_filter(arr):
         arr_filter2 = []
         with_prefix_char = []
         for aa in arr_filter1:
+            split_aa = []
             # zh
             if '&middot;' in aa:
                 split_aa = aa.split('&middot;')
@@ -331,7 +342,7 @@ def clean_wish_data(_data_, str_match):
         if len(ext) < 2 or len(ext[1]["value"]) < 1:
             continue
         # when only wish, have not wish
-        if not show_all_event and title.find(str_match) == -1:
+        if not SHOW_ALL_EVENT and title.find(str_match) == -1:
             continue
         # todo: one id, many img can't get
         all_data = {key['contentId']: {
@@ -350,7 +361,7 @@ def clean_wish_detail_data(_data_, str_match):
 
     content = _data_['content']
 
-    if show_all_event:
+    if SHOW_ALL_EVENT:
         _return_.append(content)
         return _return_
 
@@ -382,19 +393,17 @@ str_en_detail_match_wish_weapon = [
 
 
 def get_wish_details(content_id):
-    if show_zh:
+    if SHOW_ZH:
         url_zh_event = url_zh_content_prefix + "contentId=" + str(content_id)
-        log_debug(LV["debug"], url_zh_event)
-        if show_wish_char:
+        if SHOW_WISH_CHAR:
             wish_detail_data(url_zh_event, str_zh_detail_match_wish_char)
-        if show_wish_weapon:
+        if SHOW_WISH_WEAPON:
             wish_detail_data(url_zh_event, str_zh_detail_match_wish_weapon)
     else:
         url_en_event = url_en_content_prefix + "contentId=" + str(content_id)
-        log_debug(LV["debug"], url_en_event)
-        if show_wish_char:
+        if SHOW_WISH_CHAR:
             wish_detail_data(url_en_event, str_en_detail_match_wish_char)
-        if show_wish_weapon:
+        if SHOW_WISH_WEAPON:
             wish_detail_data(url_en_event, str_en_detail_match_wish_weapon)
 
 
@@ -408,13 +417,13 @@ if __name__ == '__main__':
     # test_arr = ['', '单手剑', 'middot', '西风剑', '双手剑', 'middot', '钟剑', '长柄武器', 'middot', '匣里灭辰', '法器', 'middot', '西风秘典', '弓', 'middot', '绝弦', '']
     # wish_detail_filter(test_arr)
 
-    if show_char_info:
-        if show_zh:
+    if SHOW_CHAR_INFO:
+        if SHOW_ZH:
             character_data(url_zh_char)
         else:
             character_data(url_en_char)
-    if show_wish:
-        if show_zh:
+    if SHOW_WISH:
+        if SHOW_ZH:
             all_id_zh = all_wish_id(
                 wish_data(url_zh_event_list, str_zh_match_wish))
             for i in all_id_zh:

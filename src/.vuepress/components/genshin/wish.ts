@@ -332,7 +332,7 @@ export const WISH = {
         "barbara",
         "xiangling"
       ],
-      wishName: "「花坂豪快」",
+      wishName: "「鬼门斗宴」",
       url: "https://bbs.mihoyo.com/ys/article/12926123"
     },
     {
@@ -528,7 +528,7 @@ export const WISH = {
       end: "2022-07-12 14:59:59 +0800",
       wish5star: "arataki_itto",
       wish4star: [],
-      wishName: "「花坂豪快」",
+      wishName: "「鬼门斗宴」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -711,15 +711,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "From Ashes Reborn",
       image: 1,
       shortName: "Wanderer",
       start: "2022-12-07 11:00:00 +0800",
       end: "2022-12-27 17:59:59 +0800",
       wish5star: "wanderer",
-      wish4star: [],
+      wish4star: ['Faruzan', 'Gorou', 'Yanfei'],
       version: "3.3",
-      wishName: "「」",
+      wishName: "「余火变相」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -729,9 +729,9 @@ export const WISH = {
       start: "2022-12-07 11:00:00 +0800",
       end: "2022-12-27 17:59:59 +0800",
       wish5star: "arataki_itto",
-      wish4star: [],
+      wish4star: ['Faruzan', 'Gorou', 'Yanfei'],
       version: "3.3",
-      wishName: "「花坂豪快」",
+      wishName: "「鬼门斗宴」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },

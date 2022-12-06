@@ -630,7 +630,7 @@ export const CHARACTER = {
   gorou: {
     id: "gorou",
     name: "五郎",
-    prefix: "",
+    prefix: "戎犬锵锵",
     star: 4,
     event_exclusive: false,
     intro: "海祇军大将。身具领兵者威严的同时，又无高位者的倨傲。 无论何时何地都深受部下信赖，能让人毫无负担地寄托后背与心灵。",
@@ -826,7 +826,7 @@ export const CHARACTER = {
     prefix: "机逐封秘",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "来自「一百年前」的教令院杰出学者，古典机关术学科奠基人之一。虽然身在知论派，却以机关造诣闻名须弥…尽管这些荣誉，都已先于她本人被岁月遗忘。",
     city: City.Sumeru,
     ele: Element.anemo,
     weapon: Weapon.catalyst
@@ -837,7 +837,7 @@ export const CHARACTER = {
     prefix: "久世浮倾",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "若有心者方为人，他不可称之为人。若无心者亦有悲喜苦乐，他便是最像人的人偶。",
     city: City.Inazuma,
     ele: Element.anemo,
     weapon: Weapon.catalyst
