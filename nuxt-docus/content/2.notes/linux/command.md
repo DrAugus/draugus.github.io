@@ -23,12 +23,13 @@ list directory contents, 用于显示指定工作目录下之内容（列出目�
 `ps [options] [--help]`
 
 `ps` 的参数非常多, 在此仅列出几个常用的参数并大略介绍含义
+
 - `-A` 列出所有的进程
 - `-w` 显示加宽可以显示较多的资讯
 - `-au` 显示较详细的资讯
 - `-aux` 显示所有包含其他使用者的进程
 
-au(x) 输出格式   
+au(x) 输出格式
 |USER |PID| %CPU| %MEM| VSZ |RSS |TTY |STAT| START |TIME| COMMAND`|
 |---|---|---|---|---|---|---|---|---|---|---|
 |行程拥有者|pid|-|-|占用的虚拟记忆体大小|占用的记忆体大小|终端的次要装置号码 (minor device number of tty)|该行程的状态|行程开始时间|执行的时间|所执行的指令|
@@ -71,15 +72,13 @@ au(x) 输出格式
 - unzip .tar.bz2 `tar -jxvf zip.tar.bz2`
 - unzip .tat.xz `tar -xvf zip.tar.xz`
 
-
 ## pidof
 
 `pidof + pid`
 
-
 ## tcpdump
-`tcpdump -i admin port 1433 or port 3306 -vvv -w /home/clog/name.pcap`
 
+`tcpdump -i admin port 1433 or port 3306 -vvv -w /home/clog/name.pcap`
 
 ## chown
 
@@ -103,7 +102,9 @@ au(x) 输出格式
 
 ## find
 
+::alert{type="info"}
 **Linux 查找当前目录下 包含特定字符串 的所有文件**
+::
 
 使用 Linux 经常会遇到这种情况：只知道文件中包含某些特定的字符串，但是不知道具体的文件名。需要根据“特定的字符串”反向查找文件。
 
@@ -127,7 +128,7 @@ au(x) 输出格式
 
 `find /home/app/ -name '*app*'`  
 `find /home/app/ -name 'app*'`  
-`find /home/app/ -name '*app'`   
+`find /home/app/ -name '*app'`
 
 ## rm
 
@@ -135,11 +136,10 @@ au(x) 输出格式
 - `-f` 即使原档案属性设为唯读，亦直接删除，无需逐一确认。
 - `-r` 将目录及以下之档案亦逐一删除。
 
-
-
-`rm -rf `
+`rm -rf`
 
 find and then delete
+
 - `find . -name "*.a" | wc -l`
 - `find . -name "*.a" | xargs rm -rfv`
 
@@ -179,7 +179,8 @@ ar可让您集合许多文件，成为单一的备存文件。在备存文件中
 
 `ar[-dmpqrtx][cfosSuvV][a<成员文件>][b<成员文件>][i<成员文件>][备存文件][成员文件]`
 
-**必要参数** 
+> **必要参数**
+
 - `-d` 　删除备存文件中的成员文件。
 - `-m`　 变更成员文件在备存文件中的次序。
 - `-p` 　显示备存文件中的成员文件内容。
@@ -188,7 +189,8 @@ ar可让您集合许多文件，成为单一的备存文件。在备存文件中
 - `-t` 　显示备存文件中所包含的文件。
 - `-x` 　自备存文件中取出成员文件。
 
-**选项参数**  
+> **选项参数**  
+
 - `a<成员文件>` 　将文件插入备存文件中指定的成员文件之后。
 - `b<成员文件>` 　将文件插入备存文件中指定的成员文件之前。
 - `c` 　建立备存文件。
@@ -206,9 +208,11 @@ ar可让您集合许多文件，成为单一的备存文件。在备存文件中
 获取目录结构
 
 win
+
 - `tree` 只显示文件夹
 - `tree /f` 显示文件夹及所有文件
-- 导出 
+- 导出
+
     ```bash
     tree /f >1.txt
     保存的树形结构，只含有文件夹
@@ -217,6 +221,7 @@ win
     ```
 
 mac
+
 - `brew install tree`
 - `tree`
 - `tree -L 1` 只显示一级目录
@@ -227,13 +232,12 @@ mac
 e.g.  
 `tree -a -I 'node_modules|.git|.github|.idea|.vscode|.cache|.temp|nuxt*|dist' -L 4 > 1.txt`
 
-`-a` All files are printed.  By default tree does not print hidden files 
+`-a` All files are printed.  By default tree does not print hidden files
 (those beginning with a dot `.').  
-In no event does tree print the file system constructs 
-`.` (current directory) and `..` (previous directory).
+In no event does tree print the file system constructs
+`.`(current directory) and`..` (previous directory).
 
-
-## > 
+## >
 
 输出重定向
 
@@ -250,8 +254,9 @@ mac
 > 解决方法，把A的公钥放到B上
 
 具体操作：
+
 - A：cat .ssh/id_rsa.pub
-- B: cat .ssh/authorized_keys 
+- B: cat .ssh/authorized_keys
 
 把A的公钥贴过来即可
 
@@ -270,6 +275,7 @@ mac
 ## [logrotate]
 
 主流Linux发行版上都默认安装有logrotate包，如果出于某种原因，logrotate没有出现在里头，你可以使用apt-get或yum命令来安装。
+
 - `apt-get install logrotate cron`
 - `yum install logrotate crontabs`
 
@@ -278,11 +284,14 @@ logrotate的配置文件是`/etc/logrotate.conf`，通常不需要对它进行�
 案例
 
 从创建一个日志文件开始，然后在其中填入一个10MB的随机比特流数据。
+
 ```shell
 touch /var/log/log-file
 head -c 10M < /dev/urandom > /var/log/log-file
 ```
+
 创建一个配置文件 `vim /etc/logrotate.d/log-file`
+
 ```
 /var/log/log-file {
     monthly
@@ -297,6 +306,7 @@ head -c 10M < /dev/urandom > /var/log/log-file
     endscript
 }
 ```
+
 - monthly: 日志文件将按月轮循。其它可用值为‘daily’，‘weekly’或者‘yearly’。
 - rotate 5: 一次将存储5个归档日志。对于第六个归档，时间最久的归档将被删除。
 - compress: 在轮循任务完成后，已轮循的归档将使用gzip进行压缩。
@@ -312,7 +322,7 @@ list open files
 
 `lsof -i: port`
 
-```
+```shell
 lsof -i:8080：查看8080端口占用
 lsof abc.txt：显示开启文件abc.txt的进程
 lsof -c abc：显示abc进程现在打开的文件
@@ -336,10 +346,95 @@ lsof -i -U：显示所有打开的端口和UNIX domain文件
 - -l 仅列出在Listen(监听)的服务状态
 - -p 显示建立相关链接的程序名
 
-```
+```shell
 netstat -ntlp   //查看当前所有tcp端口
 netstat -ntulp | grep 80   //查看所有80端口使用情况
 netstat -ntulp | grep 3306   //查看所有3306端口使用情况
+```
+
+## curl
+
+> [refer][curl]
+
+### command
+
+[curl command][curl1]
+
+### 查看网页源码
+
+```shell
+curl genshin.hoyoverse.com/main/news/
+```
+
+```out
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>CloudFront</center>
+</body>
+</html>
+```
+
+如果要把这个网页保存下来，可以使用`-o`参数，这就相当于使用wget命令了。
+
+```shell
+curl -o file_name genshin.hoyoverse.com/main/news/
+```
+
+### 自动跳转
+
+有的网址是自动跳转的。使用`-L`参数，curl就会跳转到新的网址。
+
+```shell
+curl -L genshin.hoyoverse.com/main/news/
+```
+
+### 显示头信息
+
+`-i`参数可以显示http response的头信息，连同网页代码一起。
+
+`-I`参数则是只显示http response的头信息。
+
+### 显示通信过程
+
+`-v`参数可以显示一次http通信的整个过程，包括端口连接和http request头信息。
+
+如果你觉得上面的信息还不够，那么下面的命令可以查看更详细的通信过程。
+
+```shell
+curl --trace output.txt genshin.hoyoverse.com/main/news/
+# or
+curl --trace-ascii output.txt genshin.hoyoverse.com/main/news/
+```
+
+### 发送表单信息
+
+发送表单信息有GET和POST两种方法。GET方法相对简单，只要把数据附在网址后面就行。
+
+```shell
+curl example.com/augus?data=xxx
+```
+
+POST方法必须把数据和网址分开，curl就要用到`--data`参数。
+
+```shell
+curl -X POST --data "data=xxx" example.com/augus
+```
+
+如果你的数据没有经过表单编码，还可以让curl为你编码，参数是`--data-urlencode`。
+
+```shell
+curl -X POST --data-urlencode "date=April 1" example.com/augus
+```
+
+### HTTP动词
+
+curl默认的HTTP动词是GET，使用`-X`参数可以支持其他动词。
+
+```shell
+curl -X POST www.example.com
+curl -X DELETE www.example.com
 ```
 
 ## readelf
@@ -348,30 +443,23 @@ netstat -ntulp | grep 3306   //查看所有3306端口使用情况
 
 ## addr2line
 
-
 ## others
 
 - [Linux使用sar进行性能分析]
 - [使用iostat分析IO性能]
 
-
-
-
-
-
 -----
 
 **参考：**
+
 - [runoob date]
 - [ssh-keygen]
 - [logrotate]
-
-
-
 
 [runoob date]: https://www.runoob.com/linux/linux-comm-date.html
 [ssh-keygen]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 [logrotate]: https://www.xmodulo.com/logrotate-manage-log-files-linux.html
 [Linux使用sar进行性能分析]: https://blog.csdn.net/xusensen/article/details/54606401
 [使用iostat分析IO性能]: https://blog.csdn.net/xusensen/article/details/73080887
-
+[curl]: https://catonmat.net/cookbooks/curl
+[curl1]: https://www.ruanyifeng.com/blog/2019/09/curl-reference.html
