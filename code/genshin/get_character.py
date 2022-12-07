@@ -4,8 +4,10 @@ from bs4 import BeautifulSoup as be
 import enum
 import re
 import yaml
-import platform
 import numpy
+import html
+
+import util
 
 # 获取yaml文件路径
 # yaml_path = 'config.yml'
@@ -18,7 +20,7 @@ config_list = list(config)
 
 # ########################### config ###########################
 config_value = config_list[0]
-DEBUG_LV = config_list["log"]
+DEBUG_LV = config_value["LOG"]
 SHOW_ZH = config_value["SHOW_ZH"]
 SHOW_WISH = config_value["SHOW_WISH"]
 SHOW_WISH_CHAR = config_value["SHOW_WISH_CHAR"]
@@ -41,10 +43,6 @@ LV = {
 }
 
 
-def modify_config():
-    DEBUG_LV = LV["trace"]
-
-
 def log_debug(lv, *str):
     # 白色 绿色 青蓝色 yellow red
     color = [37, 32, 36, 33, 31]
@@ -53,12 +51,18 @@ def log_debug(lv, *str):
         print(f"\033[1;{color[lv]};m{lv}: {str}\033[0m")
 
 
-modify_config()
 log_debug(LV["trace"], "config_list", config_list)
 
 
 _weapon_zh = ["单手剑", "双手剑", "法器", "弓", "长柄武器"]
 _weapon_en = ["sword", "claymore", "catalyst", "bow", "polearm"]
+
+# ########################### result ###########################
+RES_WISH_TIME = []
+RES_WISH_INFO = []
+RES_WISH_WITH_PREFIX_INFO = []
+RES_CHAR_INFO = []
+# ########################### result ###########################
 
 
 class City(enum.Enum):
@@ -161,6 +165,7 @@ def character_data(url_lang):
         json_list = clean_char_data(get_json(url))
         for json in json_list:
             _json_[json['角色名字']] = json
+    RES_CHAR_INFO.append(_json_)
     log_debug(LV["trace"], _json_)
     return _json_
 
@@ -273,13 +278,12 @@ def wish_detail_filter(arr):
                     aaa_arr = []
                     for index, aaa in enumerate(split_aa):
                         aaa = aaa.split('(')[0].strip()
-                        # log_debug(LV["debug"], "aaaaa====",aaa)
                         aaa_arr.append(aaa)
-                    log_debug(LV["debug"], "aaa_arr", aaa_arr)
                     if len(aaa_arr) % 2 > 0:
                         log_debug(LV["error"], "aaa_arr", aaa_arr)
                         continue
 
+                    log_debug(LV["debug"], "aaa_arr", aaa_arr)
                     aaa_arr = numpy.array(aaa_arr).reshape(
                         int(len(aaa_arr) / 2), 2)
                     for aaaa in aaa_arr:
@@ -321,8 +325,12 @@ def wish_detail_filter(arr):
             dict_res['prefix'] = split_aa[0].strip()
             dict_res['name'] = split_aa[1].strip()
             with_prefix_char.append(dict_res)
-        log_debug(LV["info"], "arr_filter2", arr_filter2)
-        log_debug(LV["info"], "with_prefix_char", with_prefix_char)
+        if len(arr_filter2):
+            RES_WISH_INFO.append(arr_filter2)
+            log_debug(LV["info"], "arr_filter2", arr_filter2)
+        if len(with_prefix_char):
+            RES_WISH_WITH_PREFIX_INFO.append(with_prefix_char)
+            log_debug(LV["info"], "with_prefix_char", with_prefix_char)
 
 
 def all_wish_id(json):
@@ -360,6 +368,19 @@ def clean_wish_detail_data(_data_, str_match):
     _return_ = []
 
     content = _data_['content']
+
+    # only en website
+    if not SHOW_ZH:
+        s_str = "Event Wish Duration"
+        e_str = "Event Wish Details"
+        new_str = util.remove_html_tags(content)
+        new_str = util.remove_line_break(new_str)
+        wish_time = util.match_strings(new_str, s_str, e_str)
+        if len(wish_time):
+            wt = html.unescape(wish_time[0])
+            if len(wt):
+                RES_WISH_TIME.append(wt)
+            log_debug(LV["info"], "wish time ", wt)
 
     if SHOW_ALL_EVENT:
         _return_.append(content)
@@ -410,6 +431,40 @@ def get_wish_details(content_id):
 str_zh_match_wish = "活动祈愿即将开启"
 str_en_match_wish = "Event Wish"
 
+
+def for_print(str, arr):
+    print(str)
+    for i in arr:
+        print(i)
+
+
+def filter_repeat():
+    global RES_CHAR_INFO
+    global RES_WISH_INFO
+    global RES_WISH_TIME
+    global RES_WISH_WITH_PREFIX_INFO
+    # 目前无法 filter
+    util.remove_duplicate(RES_CHAR_INFO)
+    util.remove_duplicate(RES_WISH_INFO)
+    util.remove_duplicate(RES_WISH_TIME)
+    util.remove_duplicate(RES_WISH_WITH_PREFIX_INFO)
+
+
+def filter_none():
+    # ..
+    print()
+
+
+def display_all_res():
+    # filter_repeat()
+    if SHOW_WISH or SHOW_ALL_EVENT:
+        for_print("RES_WISH_TIME", RES_WISH_TIME)
+        for_print("RES_WISH_INFO", RES_WISH_INFO)
+        for_print("RES_WISH_WITH_PREFIX_INFO", RES_WISH_WITH_PREFIX_INFO)
+    if SHOW_CHAR_INFO:
+        for_print("RES_CHAR_INFO", RES_CHAR_INFO)
+
+
 if __name__ == '__main__':
     # test_arr = ['绮思晚星&middot;莱依拉(冰)」「渡来介者&middot;托马(火)」「心朝乂安&middot;鹿野院平藏']
     # wish_detail_filter(test_arr)
@@ -433,3 +488,7 @@ if __name__ == '__main__':
                 wish_data(url_en_event_list, str_en_match_wish))
             for i in all_id_en:
                 get_wish_details(i)
+
+    print("================")
+    display_all_res()
+    print("================")
