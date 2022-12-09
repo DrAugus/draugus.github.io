@@ -7,6 +7,8 @@
   "scripts": {
     "git:push": "git push",
     "git:pull": "git pull",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "augus:build": "vuepress build src",
     "augus:dev": "vuepress dev src",
     "augus:dev-clean": "vuepress dev src --clean-cache",
@@ -20,12 +22,14 @@
   "license": "MIT",
   "dependencies": {
     "@algolia/client-search": "4.14.2",
+    "@antfu/eslint-config": "^0.33.1",
     "@types/leaflet": "1.9.0",
     "@vue-leaflet/vue-leaflet": "0.7.0",
     "@vuepress/client": "2.0.0-beta.53",
     "@vuepress/plugin-docsearch": "2.0.0-beta.53",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.54",
     "dayjs": "1.11.7",
+    "eslint": "^8.29.0",
     "leaflet": "1.9.3",
     "typed.js": "2.0.12",
     "vue": "3.2.45",
