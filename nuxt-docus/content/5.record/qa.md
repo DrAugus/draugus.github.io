@@ -5,5 +5,5 @@
 在控制台执行
 
 ```js
-javascript:document.body.contentEditable='true';document.designMode='on'; void 0
+javascript:document.body.contentEditable = 'true'; document.designMode = 'on'; void 0
 ```

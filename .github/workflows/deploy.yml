@@ -6,10 +6,10 @@ on:
     branches:
       - master
     paths-ignore:
-      - '.gitignore'
-      - 'LICENSE'
+      - .gitignore
+      - LICENSE
       - 'code/**'
-      - 'README.md'
+      - README.md
       - 'nuxt-docus/**'
       - 'nuxt-app/**'
   # 手动触发部署
@@ -18,10 +18,10 @@ on:
     branches:
       - master
     paths-ignore:
-      - '.gitignore'
-      - 'LICENSE'
+      - .gitignore
+      - LICENSE
       - 'code/**'
-      - 'README.md'
+      - README.md
       - 'nuxt-docus/**'
       - 'nuxt-app/**'
 

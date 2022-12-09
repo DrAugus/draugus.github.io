@@ -11,8 +11,8 @@ github clone private repo, clone submodule private repo
 ```yaml
 uses: actions/checkout@v3
 with:
-    submodules: recursive
-    token: '${{ secrets.KEY }}'
+  submodules: recursive
+  token: '${{ secrets.KEY }}'
 ```
 
 ## [generate ssh]

@@ -7,16 +7,16 @@ icon: logos:javascript
 
 ```js
 const arr = [
-  {key: 'name', value: 'Tom'},
-  {key: 'country', value: 'Chile'},
-];
+  { key: 'name', value: 'Tom' },
+  { key: 'country', value: 'Chile' },
+]
 
 const map1 = new Map(
-  arr.map(object => {
-    return [object.key, object.value];
+  arr.map((object) => {
+    return [object.key, object.value]
   }),
-);
+)
 
 // ️👇️ {'name' => 'Tom', 'country' => 'Chile'}
-console.log(map1);
+console.log(map1)
 ```

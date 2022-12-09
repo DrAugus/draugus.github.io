@@ -13,6 +13,6 @@ SHOW_ALL_EVENT: 0
 URL_PAGE_SIZE: 50
 URL_PAGE_NUM: 1
 # asc des
-URL_ORDER: "des"
+URL_ORDER: des
 # 用不用都无所谓 get content
 URL_AROUND: 1

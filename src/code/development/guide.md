@@ -30,7 +30,7 @@ For these extensions, please read [Markdown extensions in VuePress](https://vuep
 You can set `plugins.mdEnhance.enableAll: true` in theme options to enable all features of the [md-enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/) plugin.
 
 ```js
-const { hopeTheme } = require("vuepress-theme-hope");
+const { hopeTheme } = require('vuepress-theme-hope')
 
 module.exports = {
   theme: hopeTheme({
@@ -40,7 +40,7 @@ module.exports = {
       },
     },
   }),
-};
+}
 ```
 
 ## New Feature
@@ -58,7 +58,7 @@ Safely use {{ variable }} in Markdown.
 A custom information container with `code`, [link](#markdown).
 
 ```js
-const a = 1;
+const a = 1
 ```
 
 :::
@@ -287,9 +287,9 @@ $$
 ```
 
 ```js
-document.querySelector("#very").addEventListener("click", () => {
-  alert("Very powerful!");
-});
+document.querySelector('#very').addEventListener('click', () => {
+  alert('Very powerful!')
+})
 ```
 
 ```css
@@ -322,7 +322,7 @@ A paragraph with some text and a [link](https://mrhope.site)
 ## Slide 3.1
 
 ```js
-const a = 1;
+const a = 1
 ```
 
 --

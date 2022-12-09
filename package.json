@@ -1,9 +1,12 @@
 {
   "name": "augus",
+  "type": "module",
   "version": "0.1.0",
   "description": "record everything",
+  "author": "DrAugus",
+  "license": "MIT",
+  "repository": "https://github.com/DrAugus/draugus.github.io.git",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "git:push": "git push",
     "git:pull": "git pull",
@@ -17,9 +20,6 @@
     "augus:vite-dev-clean": "vuepress-vite dev src --clean-cache",
     "augus:vite-dev": "vuepress-vite dev src"
   },
-  "repository": "https://github.com/DrAugus/draugus.github.io.git",
-  "author": "DrAugus",
-  "license": "MIT",
   "dependencies": {
     "@algolia/client-search": "4.14.2",
     "@antfu/eslint-config": "^0.33.1",
