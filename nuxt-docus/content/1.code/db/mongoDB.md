@@ -1,6 +1,4 @@
 ---
-sidebar: false
-article: true
 title: mongoDB使用记录
 date: 2021-08-19 10:23:13
 category: 
@@ -11,20 +9,20 @@ tag:
 
 # mongoDB使用记录
 
-### 切换数据库
+## 切换数据库
 
-`use test_augus `如果数据库不存在会自动创建 test_augus
+`use test_augus`如果数据库不存在会自动创建 test_augus
 
 `show dbs` 查看所有数据库
 
 新建数据库必须插入数据才会显示在列表中 `db.test_augus.insert({"name":"augus"})`
 
-### user op
+## user op
 
 `show users`
 `db.createUser({user: "ssss",pwd: "oracle", roles: [ { role: "root", db: "admin" } ]})`
 
-### find
+## find
 
 `db["test_sensitive_0"].find()`
 `db.test_sensitive_0.find().count();`
@@ -32,7 +30,7 @@ tag:
 `db.getSiblingDB("test_ddl").getCollection("test_xyz").find({ })`
 `db.getCollection("test_xyz").find({}).limit(88)`
 
-### distinct
+## distinct
 
 `db["test_sensitive_0"].distinct('name')`
 `db.test_xyz.distinct("name",{"age":20})`
@@ -74,14 +72,16 @@ tag:
 `use augus_drop db.augus_drop.insertOne({_id:1,name:"test"})`
 `db.dropDatabase()`
 
-`use test1 db.createRole(
+```sql
+use test1 db.createRole(
 { role: "afafa", privileges: [
 { resource: { cluster: true }, actions: [ "addShard" ] }, { resource: { db: "config", collection: "" }, actions: [ "find", "update", "insert", "remove" ] }, { resource: { db: "users", collection: "usersCollection" }, actions: [ "update", "insert", "remove" ] }, { resource: { db: "", collection: "" }, actions: [ "find" ] }
 ], roles: [
 { role: "read", db: "test1" }
 ]
 }, { w: "majority" , wtimeout: 5000 }
-)`
+)
+```
 
 `use test db.dropRole( "readWrite" )`
 
@@ -95,17 +95,16 @@ tag:
 
 `db.grantRolesToUser("mongoTestAdmin", [{role:"readWrite", db:"admin"}])`
 
-`db.grantRolesToRole(
+```sql
+db.grantRolesToRole(
 "mongoTestAdmin",
 [ "write" ],
-)`
+)
+```
 
-`db.grantRolesToRole(
+```sql
+db.grantRolesToRole(
 "mongoTestAdmin",
 [ "productsReader" ], { w: "majority" , wtimeout: 5000 }
-)`
-
-
-
-
-
+)
+```

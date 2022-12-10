@@ -1,17 +1,14 @@
 ---
 title: gitalk评论接入教程    
-sidebar: false
-article: true  
 date: 2021-12-30 15:39:11 
-permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 
   - 编程    
 tag: 
   - gitalk 
   - 评论 
   - 转载    
-excerpt: gitalk评论接入教程
 ---
+
 
 
 > [转载并修改自sf](https://segmentfault.com/a/1190000018072952)
@@ -57,7 +54,7 @@ excerpt: gitalk评论接入教程
 <div id="gitalk-container"></div>
 ```
 
-#### 3、使用下面的JavaScript代码来生成Gitalk评论：
+#### 3、使用下面的JavaScript代码来生成Gitalk评论
 
 ```javascript  
 const initGitalk = () => {
@@ -113,6 +110,3 @@ const initGitalk = () => {
 配置好会显示如下[效果](https://gitalk.github.io/)
 
 ![1](/image/blog/gitalk/1.png)
-
-
-

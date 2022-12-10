@@ -1,11 +1,10 @@
 ---
-article: true
 date: 2022-05-26
-sidebar: false
-isOriginal: true
 ---
 
 # 瞎玩
+
+> 记录平时的瞎搞
 
 ## play bot
 
@@ -30,6 +29,7 @@ pg的坑肯定是踩了的！
 
   无奈重装了centos7。
 * 按照官网[文档](https://www.postgresql.org/download/linux/redhat/)
+
   ```bash
   sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
   sudo yum install -y postgresql14-server
@@ -82,23 +82,24 @@ select * from pg_tables;
 
 1. 如果nodejs版本不对，会在执行下列命令时卡死。
 
-  ```bash
-  npm install cnpm -g --registry=https://registry.npm.taobao.org
-  ```
+    ```bash
+    npm install cnpm -g --registry=https://registry.npm.taobao.org
+    ```
 
 2. 我的服务器在执行下述命令时，操作失败。
 
-  ```bash
-  yum install -y dnf
-  dnf module install nodejs:16 -y
-  ```
+    ```bash
+    yum install -y dnf
+    dnf module install nodejs:16 -y
+    ```
 
 3. 无奈使用官网的教程进行安装
 
 #### 安装 nodejs 流程
 
-- [官网](https://nodejs.org/en/download/)复制 [linux 二进制文件](https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz) (以16.15.0为准 (includes npm 8.5.5))
-- 执行命令安装
+* [官网](https://nodejs.org/en/download/)复制 [linux 二进制文件](https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz) (以16.15.0为准 (includes npm 8.5.5))
+* 执行命令安装
+
   ```bash
   cd /usr/local/src/
   wget https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz
@@ -106,7 +107,9 @@ select * from pg_tables;
   cd node-v16.15.0-linux-x64/
   ./bin/node -v # 执行node命令 查看版本
   ```
-- 设置软连接
+
+* 设置软连接
+
   ```bash
   ln -s /usr/local/src/node-v16.15.0-linux-x64/bin/node /usr/bin/node
   node -v
@@ -119,4 +122,4 @@ select * from pg_tables;
 
 #### 插件
 
-- [喵喵插件](https://github.com/yoimiya-kokomi/miao-plugin)
+* [喵喵插件](https://github.com/yoimiya-kokomi/miao-plugin)

@@ -1,10 +1,6 @@
 ---
-sidebar: false
-article: true  
 title: 虚拟机记录    
 date: 2022-04-06 09:09:09   
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 
   - 编程  
 tag: 
@@ -31,16 +27,14 @@ vboxdrv服务
 
 重现你当时安装所选的配置，在到虚拟硬盘的步骤时，选择使用现有文件，找到你之前的vdi文件，点击创建，大功告成
 
-[![](https://i.loli.net/2021/10/11/agfDFEBjGoNMdu7.png)](https://sm.ms/image/agfDFEBjGoNMdu7)
+[![1](https://i.loli.net/2021/10/11/agfDFEBjGoNMdu7.png)](https://sm.ms/image/agfDFEBjGoNMdu7)
 
 一些坑...
 
 * 一定要把网络设置为桥接网卡
 
-[![](https://i.loli.net/2021/10/11/OYZgpsw4CBJhVju.png)](https://sm.ms/image/OYZgpsw4CBJhVju)
+[![1](https://i.loli.net/2021/10/11/OYZgpsw4CBJhVju.png)](https://sm.ms/image/OYZgpsw4CBJhVju)
 
 * 检查linux网卡配置
-    * `vim /etc/sysconfig/network-scripts/ifcfg-enp0s3 `
-    * `vim /etc/resolv.conf`
-
-
+  * `vim /etc/sysconfig/network-scripts/ifcfg-enp0s3`
+  * `vim /etc/resolv.conf`

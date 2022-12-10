@@ -1,18 +1,16 @@
 ---
-sidebar: false
-article: true
 title: windows11更新纪要
 date: 2021-10-05 13:16:44
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 
   - windows
 tag: 
   - windows 
   - 更新
-excerpt: 介绍win11更新路上的绊脚石
 ---
 
+# win11
+
+介绍win11更新路上的绊脚石
 
 > 2021-10-11 update AMD用户一定不要升级Windows11
 
@@ -69,5 +67,6 @@ excerpt: 介绍win11更新路上的绊脚石
 > Using the Windows Hypervisor (Hyper-V) is working again. However, the performance is unchanged, i.e. still very noticeably lower than with VirtualBox's own hypervisor code, so it can make sense to disable Hyper-V. You decide.
 
 需要注意
+
 * win11默认关闭Hyper-V服务，需要你重新打开（在windows功能里重新打开）
 * 管理员命令执行`.\VBoxSDS.exe --regservice`

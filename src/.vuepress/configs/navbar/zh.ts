@@ -22,12 +22,12 @@ export const navbar_zh = navbar([
     link: url_food + '/',
   },
   {
-    text: "",
+    text: "原神",
     icon: 'gamepad',
     link: url_game + "/genshin/",
   },
   {
-    text: '',
+    text: '学习',
     icon: 'book',
     children: [
       {
@@ -82,7 +82,7 @@ export const navbar_zh = navbar([
     ],
   },
   {
-    text: "",
+    text: "开发",
     icon: 'code',
     children: [
       {

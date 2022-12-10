@@ -1,10 +1,7 @@
 ---  
-title: vue组件之间相互传值的方式
-sidebar: false
-article: true
+title: vue
+icon: logos:vue
 date: 2022-07-14 18:11:11
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html
 category:
 
 - 编程
@@ -17,7 +14,9 @@ tag:
 ---
 
 
+# Vue
 
+## vue组件之间相互传值的方式
 
 [refer]
 
@@ -28,13 +27,13 @@ tag:
 - 兄弟通信： `Bus`；`Vuex`
 - 跨级通信： `Bus`；`Vuex`；`provide / inject` ; [$attrs / $listeners]
 
-## 父组件向子组件传值
+### 父组件向子组件传值
 
-## 子组件向父组件传值
+### 子组件向父组件传值
 
-## 兄弟组件之间传值
+### 兄弟组件之间传值
 
-## 多层父子组件通信
+### 多层父子组件通信
 
 [refer]: https://segmentfault.com/a/1190000022700216
 
