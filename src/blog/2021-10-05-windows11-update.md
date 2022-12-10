@@ -35,8 +35,8 @@ excerpt: 介绍win11更新路上的绊脚石
 * 关闭csm 在bios搜索csm将csm模式改为`UEFI`
 * 解决以上两步，重新去启用`安全启动`，则可成功启动
 
-
 <span id="dg_op">使用分区助手修改为UEFI</span>
+
 * 前置操作，在磁盘管理中分一个>200MB的区
 * 进入pe桌面后打开DG硬盘分区工具，选中自己的硬盘右键单击选择转换分区表类型为GUID格式，点确定然后点左上方保存更改。此时我们的硬盘已经从MBR变为GPT
 * 右键单击前置操作的分区，选择建立ESP/MSR分区
@@ -44,7 +44,6 @@ excerpt: 介绍win11更新路上的绊脚石
   ![set_esp.png](https://i.loli.net/2021/10/07/xmoZ9JuesbIWTgN.png)
 * 完成之后DiskGenius工具会自动为ESP分区设置一个盘符，如果没有，请手动设置。至此，ESP分区创建完成。
 * 最后，打开pe上的修复工具，修复下引导即可
-
 
 ## 其他问题[20201019bug fixed](#fixed20536)
 
@@ -64,12 +63,11 @@ excerpt: 介绍win11更新路上的绊脚石
 
 > 注意这个解决办法 是能够升级win11但是无法使用virtualbox
 
-
 <span id="fixed20536">2020-10-19 bug已修复</span>
 > fixed in 6.1.28
 > This incompatibility with the Windows Hypervisor related interface in Windows 11 (host) should be fixed with VirtualBox 6.1.28.
 > Using the Windows Hypervisor (Hyper-V) is working again. However, the performance is unchanged, i.e. still very noticeably lower than with VirtualBox's own hypervisor code, so it can make sense to disable Hyper-V. You decide.
 
 需要注意
-- win11默认关闭Hyper-V服务，需要你重新打开（在windows功能里重新打开）
-- 管理员命令执行`.\VBoxSDS.exe --regservice`
+* win11默认关闭Hyper-V服务，需要你重新打开（在windows功能里重新打开）
+* 管理员命令执行`.\VBoxSDS.exe --regservice`
