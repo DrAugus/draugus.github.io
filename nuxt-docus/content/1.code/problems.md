@@ -15,7 +15,7 @@
 - Q: css层级问题 div span 与 div > span  
   A: div span 设置是的div下的所有span div > span 设置的是紧挨着的二级span
 
-- Q: css文字竖向排列   
+- Q: css文字竖向排列
   A: 标签writing-mode vertical-lr; 从左向右 从右向左是 vertical-rl;IE浏览器的从左向右 从右向左是tb-rl
 
 - Q: querySelector .开头和#开头  
@@ -39,7 +39,7 @@
 - Q: run libuv, got "Process finished with exit code -1073741515 (0xC0000135)"  
   A: if you are using visual studio toolchains in CLion, You need to paste in folder cmake-build-debug or
   cmake-build-release the files .dll, but no only SDL2_image.dll, all files from folder lib/x86.
-  refer https://stackoverflow.com/a/65268629/17744936
+  refer <https://stackoverflow.com/a/65268629/17744936>
 
 - Q:  
   A:
@@ -67,11 +67,11 @@
 
 关于网狐棋牌框架
 
-+ `CTCPSocketService`用来处理各个服务器之间的通信的 `TCPNetworkEngine`用来和客户端用户之间的通信
-+ 同时`TCPNetworkEngine`还承担`CTCPSocketService`处理过的消息的转发
-+ `CTCPSocketService`应用了windows下两种常见的socket通信模式
-    + `WSAAsyncSelect`异步I/O模型处理各个服务器之间的通信
-    + 完成端口模型，为windows下特有的通信模型，支持高并发的模型
+- `CTCPSocketService`用来处理各个服务器之间的通信的 `TCPNetworkEngine`用来和客户端用户之间的通信
+- 同时`TCPNetworkEngine`还承担`CTCPSocketService`处理过的消息的转发
+- `CTCPSocketService`应用了windows下两种常见的socket通信模式
+  - `WSAAsyncSelect`异步I/O模型处理各个服务器之间的通信
+  - 完成端口模型，为windows下特有的通信模型，支持高并发的模型
 
 #### 对 Javascript 中闭包、函数式语言等概念有清晰的认知
 
@@ -88,7 +88,7 @@
 **本质上协程就是用户空间下的线程。**
 
 语义不同
-> 关于语义不同 C++和Java有一处最大的区别在于语义不同   
+> 关于语义不同 C++和Java有一处最大的区别在于语义不同
 > Java 只生成了一个对象 a和b仅仅是把持对象的引用而已
 
 ```Java
@@ -102,4 +102,3 @@ Animal b = a;
 Animal a;
 Animal b = a;
 ```
-
