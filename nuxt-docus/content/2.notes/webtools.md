@@ -1,21 +1,9 @@
----
-title: 前端工具链  
-sidebar: false
-article: true  
-date: 2022-06-15 09:31:11
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html  
-category:
-- 编程     
-tag:
-- 前端
-- 工具
-- 编程
----
+# web tools
 
-## win升级yarn
+## yarn
 
 1. 查看当前 yarn 版本
+
    ```shell
    yarn -v
    ```
@@ -25,7 +13,6 @@ tag:
     ```shell
     npm view yarn version
     ```
-
 
 3. 使用npm升级 yarn 版本
 
@@ -38,5 +25,3 @@ tag:
     ```shell
     yarn -v
     ```
-
-

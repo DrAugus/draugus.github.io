@@ -1,6 +1,5 @@
 ---
-sidebar: false
-article: true
+icon: simple-icons:googlescholar
 ---
 
 # 学位服
