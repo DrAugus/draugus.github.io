@@ -1,10 +1,7 @@
 ---  
 title: TMDB
-sidebar: false
-article: true
 date: 2022-10-20 11:42:00
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html
+icon: simple-icons:themoviedatabase
 category:
 
 - 编程
@@ -17,17 +14,16 @@ tag:
 
 ---
 
-
+# The Movie Database
 
 first, get API.
 
 - search: `https://api.themoviedb.org/3/search/movie?query=Marvel&api_key=<yourkey>&page=5`
 - image: `https://image.tmdb.org/t/p/w500/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg`
-    - ori: `https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg`
-    - w500: above
-    - [refer](https://developers.themoviedb.org/3/getting-started/images)
+  - ori: `https://image.tmdb.org/t/p/original/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg`
+  - w500: above
+  - [refer](https://developers.themoviedb.org/3/getting-started/images)
 - by id: `https://api.themoviedb.org/3/movie/157336?api_key=<yourkey>`
-
 
 query 没有 keyword 厉害
 
@@ -39,18 +35,10 @@ query 没有 keyword 厉害
 2. get `/keyword/{keyword_id}/movies` [refer][api-get-movie-by-key]
     `https://api.themoviedb.org/3/keyword/180547/movies?api_key=yourkey`
 
-
 blog 里的 json movie 部分即是 这个 keyword 查询出来的
 
 tv 仍然是 query 出来的
 
-
-
-
-
-
-
-[TMDB]: https://www.themoviedb.org
 [TMDB api]: https://developers.themoviedb.org/3/
 [api-search-keyword]: https://developers.themoviedb.org/3/search/search-keywords
 [api-get-movie-by-key]: https://developers.themoviedb.org/3/keywords/get-movies-by-keyword

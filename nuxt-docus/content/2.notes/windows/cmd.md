@@ -1,10 +1,6 @@
 ---
-sidebar: false
-article: true
 title: cmd指南
 date: 2021-10-30 21:38:01
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html  
 category: 
   - windows
 tag: 
@@ -13,7 +9,7 @@ tag:
 excerpt: cmd命令 & 恢复cmd默认配色
 ---
 
-# CMD 命令
+## CMD 命令
 
 可以用cmd /?查看帮助信息
 
@@ -25,7 +21,7 @@ excerpt: cmd命令 & 恢复cmd默认配色
 
 * `cmd /k start dir` 会打开一个新窗口后执行dir指令，原窗口不会关闭。
 
-# 恢复cmd默认配色
+## 恢复cmd默认配色
 
 不知道哪次脑子抽了换成这种配色
 

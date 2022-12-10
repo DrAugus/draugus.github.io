@@ -1,14 +1,14 @@
 ---
-sidebar: false
-article: true
-title: XShell全局设置配色方案
-isOriginal: true
+icon: vscode-icons:file-type-shell
+title: XShell
 date: 2021-10-21 14:32:44
 category: 
   - XShell
 tag: 
   - XShell
 ---
+
+## 全局设置配色方案
 
 工具 - 配色方案 - 自定义设计好自己喜欢的配色
 

@@ -1,20 +1,7 @@
----  
-title: 正则记录
-sidebar: false
-article: true
-date: 2022-07-25 10:15:11
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html
-category:
-
-- 编程
-
-tag:
-
-- 正则
-
 ---
-
+icon: file-icons:regex
+title: 正则表达式
+---
 
 匹配中文 `[\u4e00-\u9fa5]`  
 匹配英文 `[a-zA-Z`]  
@@ -22,6 +9,3 @@ tag:
 
 匹配 字母+空格+汉字，形如”a 好“，`[a-zA-Z] [\u4e00-\u9fa5]`  
 那么如果只匹配符合这个格式的空格呢？
-
-
-

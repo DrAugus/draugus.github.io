@@ -1,10 +1,6 @@
 ---  
 title: mac primary
-sidebar: false
-article: true
 date: 2022-09-26 16:42:00
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html
 category:
 
 - 编程

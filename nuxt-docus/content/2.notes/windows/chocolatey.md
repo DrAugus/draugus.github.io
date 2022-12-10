@@ -1,10 +1,7 @@
 ---  
 title: chocolatey
-sidebar: false
-article: true
+icon: simple-icons:chocolatey
 date: 2022-07-20 17:52:11
-isOriginal: true
-permalinkPattern: blog/:year/:month/:day/:slug.html
 category:
 
 - 编程
@@ -42,7 +39,7 @@ See more info on the official website
 choco install docfx -y
 ```
 
-> TIPS: 
+> TIPS:
 Environment Vars (like PATH) have changed. Close/reopen your shell to
 see the changes (or in powershell/cmd.exe just type `refreshenv`).
 
