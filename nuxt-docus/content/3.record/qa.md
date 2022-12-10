@@ -7,3 +7,7 @@
 ```js
 javascript:document.body.contentEditable = 'true'; document.designMode = 'on'; void 0
 ```
+
+## search paper
+
+* 如果大家想看某一个领域的论文，可以尝试搜一下awesome+*，比如awesome domain adaptaion，说不定有惊喜
