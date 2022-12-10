@@ -1,5 +1,10 @@
 # Augus
 
+## All Site
+
+- [docus 🇨🇳][site1] [docus not 🇨🇳][site2]
+- [site][site3]
+
 ## Develop
 
 ### Prerequisites
@@ -25,11 +30,13 @@ yarn src:dev
 make sure all vuepress plugins are up to date.
 
 plugins
+
 ```shell
 yarn add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
 ```
 
 vuepress and theme
+
 ```shell
 yarn add vuepress@next vuepress-theme-hope@next && yarn install && yarn upgrade
 ```
@@ -44,9 +51,13 @@ Before you commit, please run `yarn vuepress-vite build src`
 
 ## Reference
 
-* [Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
-* [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
-* [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
-* [vuepress plugin giscus](https://vuepress-theme-hope.github.io/v2/comment/guide/giscus.html)
-* [Vuepress Hope: vuepress-plugin-comment2](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/demo/comment2)
-* [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v2/)
+- [Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
+- [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
+- [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
+- [vuepress plugin giscus](https://vuepress-theme-hope.github.io/v2/comment/guide/giscus.html)
+- [Vuepress Hope: vuepress-plugin-comment2](https://github.com/vuepress-theme-hope/vuepress-theme-hope/tree/main/demo/comment2)
+- [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v2/)
+
+[site1]: https://augus-docus.netlify.app/
+[site2]: https://augus-docus.vercel.app/
+[site3]: https://draugus.github.io/
