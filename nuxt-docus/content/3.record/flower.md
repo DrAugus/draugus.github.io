@@ -1,6 +1,10 @@
+---
+icon: emojione-v1:bouquet-of-flowers
+---
+
 # 梅花与桃花的区别
 
-![](/prunus_mume.jpg)
+![1](/prunus_mume.jpg)
 
 ## 颜色
 

@@ -1,3 +1,7 @@
+---
+icon: icon-park:tips
+---
+
 # 小妙招
 
 ## csdn 复制代码

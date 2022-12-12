@@ -1,5 +1,5 @@
 ---
-title: jetbrains
+title: JetBrains
 icon: logos:jetbrains
 ---
 

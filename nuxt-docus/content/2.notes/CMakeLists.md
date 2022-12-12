@@ -1,6 +1,6 @@
 ---
 icon: vscode-icons:file-type-cmake
-title: CMakeLists Guide
+title: CMakeLists
 ---
 
 ## 基本语法

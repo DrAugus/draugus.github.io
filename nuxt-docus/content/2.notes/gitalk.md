@@ -1,5 +1,6 @@
 ---
-title: gitalk评论接入教程    
+title: gitalk
+icon: icon-park:github-one 
 date: 2021-12-30 15:39:11 
 category: 
   - 编程    
@@ -9,7 +10,7 @@ tag:
   - 转载    
 ---
 
-
+# gitalk评论接入教程
 
 > [转载并修改自sf](https://segmentfault.com/a/1190000018072952)
 

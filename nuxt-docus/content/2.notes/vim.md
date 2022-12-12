@@ -1,7 +1,7 @@
 ---
 icon: logos:vimeo-icon
 ---
-# vim 使用
+# vim
 
 ## 模式
 

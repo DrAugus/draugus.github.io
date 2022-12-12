@@ -1,4 +1,8 @@
-# exercise
+---
+icon: fluent-emoji:person-running
+---
+
+# 锻炼
 
 ## 室内锻炼
 

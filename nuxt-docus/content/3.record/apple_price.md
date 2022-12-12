@@ -1,5 +1,5 @@
 ---
-title: Apple Price
+title: 设备价格
 icon: logos:apple
 ---
 

@@ -1,6 +1,6 @@
 ---
 icon: flat-color-icons:make-decision
-title: Makefile Guide
+title: Makefile
 ---
 
 

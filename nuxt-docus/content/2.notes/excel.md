@@ -1,5 +1,5 @@
 ---
-title: excel使用技巧
+title: Excel
 icon: vscode-icons:file-type-excel2
 ---
 
