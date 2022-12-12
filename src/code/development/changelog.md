@@ -20,7 +20,7 @@ toc: false
 - 20220602: genshin migrate [2d2b54f]
 - 20220622: 调整博客filter [d282e56]
 - 20220629: feat google analysis [2c1bf23]
-- 20220701: fix _ file [github-community], [8b69956] 
+- 20220701: fix _ file [github-community], [8b69956]
 - 20220704: feat [heti] 赫蹏 [ad71f7b]
 - 20220711: feat [modal], [组件传值][vue组件传值], [dbf37f6]
 - 20220712: feat genshin [filter][filter-obj] [4f5cf06], css [grid], [cb517cc]. 另左右滚动列表实现暂时抛弃，参见[原神官网角色]底部

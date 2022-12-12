@@ -18,12 +18,3 @@ actions:
 <script setup lang="ts">
 import GenshinTimeline from "@GenshinTimeline";
 </script>
-
-<style>
-.home.project{
-  max-width: unset !important;
-}
-.hero-info {
-  text-align: center !important;
-}
-</style>

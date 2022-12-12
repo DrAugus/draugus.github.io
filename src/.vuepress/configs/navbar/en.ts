@@ -1,18 +1,14 @@
-import {navbar} from "vuepress-theme-hope";
-
 const url_prefix = '/i18n/en';
 
-export const navbar_en = navbar([
+export const navbar_en = [
   url_prefix + "/",
-  url_prefix+ "/home",
+  url_prefix + "/home",
   {
     text: "Life",
-    icon: 'bed',
     link: url_prefix + '/life'
   },
   {
     text: "Learn",
-    icon: 'book',
     children: [
       {
         text: 'Code',
@@ -26,7 +22,6 @@ export const navbar_en = navbar([
   },
   {
     text: 'Links',
-    icon: 'democrat',
     children: [
       {
         text: 'Royal Family',
@@ -54,7 +49,6 @@ export const navbar_en = navbar([
   },
   {
     text: 'Sponsor',
-    icon: 'euro-sign',
     link: url_prefix + '/sponsor'
   },
-])
+]

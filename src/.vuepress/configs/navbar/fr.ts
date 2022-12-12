@@ -1,6 +1,6 @@
 const url_prefix = '/i18n/fr';
 
-export const navbar_fr: Partial<any> = [
+export const navbar_fr= [
   url_prefix + "/",
   url_prefix + "/home",
   {

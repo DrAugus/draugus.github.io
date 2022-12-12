@@ -49,10 +49,10 @@
             i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) ? '' : 'rounded-l-xl',
             i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) ? 'border-r-4 border-white' : 'rounded-r-xl'
           ]" :style="{
-            width: wishCharacters[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
-            left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-            marginTop: value.wish_2 ? '68px' : ''
-          }">
+  width: wishCharacters[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
+  left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+  marginTop: value.wish_2 ? '68px' : ''
+}">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img responsive-img lazy">
                 <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
@@ -70,9 +70,9 @@
         </div>
 
         <div v-bind:style="{ marginLeft: DUR_DAY_WIDTH }" v-for="(t, i) in dates" class="timeline-wrapper">
-          <span class="timeline-day-index" > {{ t[0] }}
+          <span class="timeline-day-index"> {{ t[0] }}
           </span>
-          <span class="timeline-week-index" > {{ t[1]}} </span>
+          <span class="timeline-week-index"> {{ t[1] }} </span>
         </div>
 
       </div>
@@ -290,5 +290,11 @@ export default {
   .hide-on-large-only {
     display: none !important;
   }
+}
+</style>
+
+<style>
+.home {
+  max-width: unset !important;
 }
 </style>

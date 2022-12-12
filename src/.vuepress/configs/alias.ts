@@ -7,7 +7,6 @@ const pre_path = "../components/";
 
 export const alias = {
 
-  "@KatexPlayground": path.resolve(__dirname, pre_path + "KatexPlayground"),
   "@War": path.resolve(__dirname, pre_path + "War.vue"),
   "@History": path.resolve(__dirname, pre_path + "History.vue"),
   "@TestLeaflet": path.resolve(__dirname, pre_path + "Leaflet.vue"),

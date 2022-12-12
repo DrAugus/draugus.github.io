@@ -1,4 +1,4 @@
-# 开发本网站遇到的问题 (vuepress hope theme)
+# 开发本网站遇到的问题
 
 本地调试无法显示上次更新，及贡献者。
 > 启动脚本 加入 `--debug`
@@ -13,22 +13,13 @@
 2. copy key, id
 3. run py to make index, use [docker](https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image)
 
-
-
-<details>
-<summary>
-参考 [官方指南](https://vuepress-theme-hope.github.io/v2/zh/guide/feature/meta.html)
-</summary>
-
 主题通过 [`@vuepress/plugin-git`][git] 插件在页面底部显示页面的最后更新时间与贡献者，并提供了“编辑此页”按钮的支持。
 
 主题同时根据侧边栏配置提供上一页和下一页的导航按钮。
 
-<!-- more -->
-
 ### 基于 Git 的信息
 
-`vuepress-theme-hope` 通过内置 [`@vuepress/plugin-git`][git] 插件，实现了页面创建时间、最后更新时间与贡献者的自动生成。
+通过内置 [`@vuepress/plugin-git`][git] 插件，实现了页面创建时间、最后更新时间与贡献者的自动生成。
 
 插件会通过页面文件最后一次 `git` 提交的 UNIX 时间戳 (ms) 来自动生成页面创建时间和最后更新时间，同时根据提交记录生成贡献者。
 
@@ -72,9 +63,6 @@
 
 [git]: https://v2.vuepress.vuejs.org/zh/reference/plugin/git.html
 
-
-</details>
-
 ## 各种奇怪报错
 
 ### client 版本不一致
@@ -95,7 +83,7 @@ error Command failed with exit code 1.
 info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
-请确保你在使用最新的 `vuepress` 和 `vuepress-theme-hope` V2 版本，因为一些你遇到的 bug 可能已经在新版本中修复。
+请确保你在使用最新的 `vuepress` V2 版本，因为一些你遇到的 bug 可能已经在新版本中修复。
 
 你可以通过执行下列命令来更新到最新版本。
 
@@ -104,19 +92,19 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 @tab pnpm
 
 ```bash
-pnpm add vuepress@next vuepress-theme-hope@next
+pnpm add vuepress@next 
 ```
 
 @tab yarn
 
 ```bash
-yarn add vuepress@next vuepress-theme-hope@next
+yarn add vuepress@next 
 ```
 
 @tab npm
 
 ```bash
-npm i vuepress@next vuepress-theme-hope@next
+npm i vuepress@next 
 ```
 
 :::
@@ -135,4 +123,6 @@ vue 本身也需要升级 真的是绝了
 
 算了 不用了
 
-每次升级都需要做大量的修改！难用至极！！！
+每次升级都需要做大量的修改！主题难用至极！！！弃用主题
+
+### Cannot read properties of undefined

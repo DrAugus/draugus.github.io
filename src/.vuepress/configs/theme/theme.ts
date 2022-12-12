@@ -1,99 +1,37 @@
-import {hopeTheme} from "vuepress-theme-hope";
-import {theme_local} from "./";
+import { defaultTheme } from "vuepress";
+import { navbar_de, navbar_en, navbar_fr, navbar_it, navbar_kr, navbar_zh } from "../navbar";
 
-export default hopeTheme({
-  hostname: "https://draugus.github.io/",
-
-  author: {
-    name: "Augus",
-    url: "https://github.com/DrAugus",
-  },
-
-  iconAssets: "fontawesome",
-
-  themeColor: {
-    blue: "#2196f3",
-    red: "#f26d6d",
-    green: "#3eaf7c",
-    orange: "#fb9b5f",
-  },
+export default defaultTheme({
 
   logo: "/logo/logo.jpg",
   repo: "DrAugus/draugus.github.io",
 
   editLinkPattern: ":repo/edit/master/src/:path",
+  sidebar: 'auto',
 
-  pageInfo: [/*"Author",*/ "Original", "Date", "Category", "Tag", /*"ReadingTime", "Word",*/ "PageView"],
+  locales: {
+    '/': {
+      navbar: navbar_zh,
 
-  blog: {
-    medias: {
-      Discord: "https://discord.com/channels/AugusMeow#5870",
-      Email: "mailto:980652196@qq.com",
-      GitHub: "https://github.com/DrAugus",
-      Gmail: "mailto:980652196@qq.com",
-      QQ: "http://wpa.qq.com/msgrd?v=3&uin=980652196&site=qq&menu=yes",
-      Steam: "https://steamcommunity.com/id/bramlye/",
-      Weibo: "https://draugus.github.io/",
-      Zhihu: "https://draugus.github.io/",
+      selectLanguageName: "简体中文",
+      selectLanguageText: "选择语言",
+      selectLanguageAriaLabel: "选择语言",
+      editLinkText: "编辑此页",
+      lastUpdatedText: "上次编辑于",
+      contributorsText: "贡献者",
+      notFound: [
+        "这里什么也没有",
+        "我们是怎么来到这儿的？",
+        "这 是 四 零 四 !",
+        "看起来你访问了一个失效的链接",
+      ],
+      backToHome: "返回首页",
     },
-  },
+    '/i18n/en/': { navbar: navbar_en, },
+    '/i18n/de/': { navbar: navbar_de, },
+    '/i18n/fr/': { navbar: navbar_fr, },
+    '/i18n/it/': { navbar: navbar_it, },
+    '/i18n/kr/': { navbar: navbar_kr, },
+  }
 
-  locales: theme_local,
-  breadcrumb: false,
-
-  encrypt: {
-    config: {
-      "/guide/encrypt.html": ["1234"],
-      "/zh/guide/encrypt.html": ["1234"],
-    },
-  },
-
-  plugins: {
-    blog: {
-      autoExcerpt: true,
-      // only with date frontmatter are articles
-      // filter: (page) => !!page.frontmatter.date,
-      // only article is article
-      filter: (page) => !!page.frontmatter.article,
-    },
-
-    feed: {
-      atom: true,
-      rss: true,
-      json: true,
-    },
-
-    components: ["Badge", "CodePen", "PDF", "StackBlitz", "YouTube"],
-
-    // If you don't need to comment feature, you can remove following option
-    // The following config is for demo ONLY, if you need comment feature, please generate and use your own config, see comment plugin documentation for details.
-    // To avoid disturbing the theme developer and consuming his resources, please DO NOT use the following config directly in your production environment!!!!!
-    comment: {
-      // provider: "Giscus",
-      // repo: "DrAugus/draugus.github.io",
-      // repoId: "R_kgDOHV19bA",
-      // category: "Announcements",
-      // categoryId: "DIC_kwDOHV19bM4CPJQy",
-      // inputPosition: "top"
-    },
-
-    mdEnhance: {
-      container: true,
-      linkCheck: true,
-      vPre: true,
-      tabs: true,
-      codetabs: true,
-      align: true,
-      footnote: true,
-      imageLazyload: true,
-      katex: true,
-      chart: true,
-      echarts: true,
-      presentation: {
-        plugins: ["highlight", "math", "search", "notes", "zoom"],
-      },
-    },
-
-
-  },
 });
