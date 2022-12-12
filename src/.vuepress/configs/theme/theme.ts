@@ -1,5 +1,6 @@
 import { defaultTheme } from "vuepress";
 import { navbar_de, navbar_en, navbar_fr, navbar_it, navbar_kr, navbar_zh } from "../navbar";
+import { sidebar_zh } from "../sidebar/zh";
 
 export default defaultTheme({
 
@@ -12,6 +13,7 @@ export default defaultTheme({
   locales: {
     '/': {
       navbar: navbar_zh,
+      sidebar: sidebar_zh,
 
       selectLanguageName: "简体中文",
       selectLanguageText: "选择语言",

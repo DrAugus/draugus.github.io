@@ -6,7 +6,7 @@ heroText: 祈愿时间轴
 tagline: 全部祈愿信息
 actions:
 - text: 原神
-  link: /game/genshin
+  link: /game/genshin/
 - text: 当前祈愿
   link: /game/genshin/wish
   type: primary
