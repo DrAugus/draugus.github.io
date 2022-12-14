@@ -1,13 +1,13 @@
 ---
-title: ''
+title: Algolia
 icon: logos:algolia
 ---
 
-# algolia
+## apply
 
-## [apply]
+[go][apply]
 
-## [Algolia Crawler]
+## [Algolia Crawler][Algolia Crawler]
 
 [apply]: https://docsearch.algolia.com/apply/
 [Algolia Crawler]: https://crawler.algolia.com/admin/crawlers/

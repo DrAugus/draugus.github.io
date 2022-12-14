@@ -1,6 +1,6 @@
 export default defineAppConfig({
   docus: {
-    title: 'Coding',
+    title: 'LIFE',
     description: 'The best place to start your documentation.',
     // image: "/4x4.png",
     socials: {
