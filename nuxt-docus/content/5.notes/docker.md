@@ -64,7 +64,6 @@ scp my_image.tar user@localhost:~/
 docker load < my_image.tar
 ```
 
-
 ## 第一个 docker
 
 要写一个 Dockerfile，需要按照以下步骤进行：
