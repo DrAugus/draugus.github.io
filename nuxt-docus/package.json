@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.1.4",
-    "nuxt": "3.0.0"
+    "echarts": "^5.4.1",
+    "nuxt": "3.0.0",
+    "vue-echarts": "^6.2.4"
   }
 }
