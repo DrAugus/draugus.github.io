@@ -38,3 +38,23 @@ tag:
 [refer]: https://segmentfault.com/a/1190000022700216
 
 [$attrs / $listeners]: https://segmentfault.com/a/1190000022708579
+
+## QA
+
+> [Vue warn]: Data property "option" is already defined in Props.
+
+```vue
+data () {
+  return {
+    // Rename the "option" property in the data option
+    // to avoid the conflict with the "option" prop
+    dataOption: undefined
+  }
+},
+props: {
+  option: {
+    type: Object,
+    required: true
+  }
+}
+```

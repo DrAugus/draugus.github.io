@@ -16,6 +16,7 @@ import {
   LegendComponent,
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
+import "echarts/lib/component/grid"
 
 use([
   UniversalTransition,
@@ -38,11 +39,6 @@ export default {
   },
   provide: {
     [THEME_KEY]: "auto",
-  },
-  data() {
-    return {
-      option: this.option,
-    };
   },
 };
 </script>

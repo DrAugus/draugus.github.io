@@ -1,3 +1,0 @@
-# echarts
-
-:Discount

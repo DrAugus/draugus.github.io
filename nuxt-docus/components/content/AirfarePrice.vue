@@ -1,16 +1,13 @@
 <template>
-
-    500-50?
-
     <EChartsModel :option="option" />
 </template>
   
 <script>
 import EChartsModel from "./EChartsModel.vue"
 
-let opt = {
+const opt = {
     title: {
-        text: 'Stacked Line'
+        text: '机票价格波动'
     },
     tooltip: {
         trigger: 'axis'
@@ -44,28 +41,28 @@ let opt = {
     },
     series: [
         {
-            name: "<= 800km 燃油 ",
+            name: "<= 800km 燃油",
             type: 'line',
-            stack: 'Total',
+            // stack: 'Total',
             data: [0, 10, 20, 50, 60, 80, 100, 80, 60, 60],
         },
         {
-            name: "> 800km 燃油 ",
+            name: "> 800km 燃油",
             type: 'line',
-            stack: 'Total',
+            // stack: 'Total',
             data: [0, 20, 40, 100, 120, 140, 200, 140, 120, 110],
         },
         {
             name: "基建",
             type: 'line',
-            stack: 'Total',
+            // stack: 'Total',
             data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
         },
     ]
 }
 
 export default {
-    name: "Discount",
+    name: "AirfarePrice",
     components: {
         EChartsModel,
     },
