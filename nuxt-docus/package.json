@@ -1,5 +1,5 @@
 {
-  "name": "docus-starter",
+  "name": "augus-docus",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,15 @@
     "preview": "nuxi preview"
   },
   "devDependencies": {
+    "@algolia/client-search": "^4.14.2",
     "@nuxt-themes/docus": "1.1.5",
+    "@vue-leaflet/vue-leaflet": "^0.7.0",
     "echarts": "^5.4.1",
+    "leaflet": "^1.9.3",
     "nuxt": "3.0.0",
+    "postcss": "^8.4.20",
+    "typed.js": "^2.0.12",
+    "vue": "^3.2.45",
     "vue-echarts": "^6.2.4"
   }
 }

@@ -4,4 +4,4 @@ pageInfo: false
 toc: false
 ---
 
-:Wear
+:WearInfo

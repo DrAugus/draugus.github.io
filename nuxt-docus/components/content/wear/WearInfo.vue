@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { WEAR_CONFIG } from "./wear";
+import { WEAR_CONFIG } from "./wear-config";
 import Card from "../Card.vue";
 
 export default {

@@ -64,7 +64,7 @@ export default {
 
 在这个例子中，我们使用 asyncData 方法获取了来自 '/data.json' 的 JSON 数据。然后，我们使用返回值将数据传递给组件。
 
-::alert{type="info"}
+::alert
 注意：asyncData 方法只能在服务端或客户端渲染期间被调用，所以你不能在挂载之后调用它。如果你需要在挂载之后获取数据，你可以使用 created 或 mounted 生命周期钩子来调用 asyncData 方法。
 ::
 
