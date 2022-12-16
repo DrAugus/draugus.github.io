@@ -10,65 +10,8 @@ const url_code = url_prefix + '/code';
 export const navbar_zh = [
   url_prefix + "/",
   {
-    text: "生活",
-    link: url_life + '/',
-  },
-  {
-    text: "干饭",
-    link: url_food + '/',
-  },
-  {
     text: "原神",
     link: url_game + "/genshin/",
-  },
-  {
-    text: '学习',
-    children: [
-      {
-        text: '学术领域',
-        link: url_learn + '/'
-      },
-      {
-        text: '领域展开',
-        children: [
-          {
-            text: '文',
-            link: url_learn + '/arts/'
-          },
-          {
-            text: '史',
-            link: url_learn + '/history/'
-          },
-          {
-            text: '语言',
-            link: url_learn + '/language/'
-          },
-        ]
-      },
-    ]
-  },
-  {
-    text: "记录",
-    children: [
-      {
-        text: "铭记历史",
-        link: url_record + "/history/",
-      },
-      {
-        text: "远离战争",
-        link: url_record + "/war/",
-      },
-      {
-        text: "偷乐",
-        children: [
-          {
-            text: "乐",
-            link: url_record + "/funny/",
-          },
-        ]
-      },
-
-    ],
   },
   {
     text: "开发",
