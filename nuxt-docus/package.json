@@ -10,13 +10,26 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.1.8",
+    "@nuxtjs/algolia": "^1.3.1",
     "@vue-leaflet/vue-leaflet": "^0.7.0",
     "echarts": "^5.4.1",
     "leaflet": "^1.9.3",
     "nuxt": "3.0.0",
-    "postcss": "^8.4.20",
     "typed.js": "^2.0.12",
     "vue": "^3.2.45",
     "vue-echarts": "^6.2.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "axios": "0.25.0"
+      },
+      "ignoreMissing": [
+        "postcss",
+        "postcss-*",
+        "webpack",
+        "axios"
+      ]
+    }
   }
 }
