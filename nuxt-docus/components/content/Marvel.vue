@@ -27,7 +27,7 @@
 </template>
   
 <script>
-import mcu from "~/asserts/json/marvel.json";
+import mcu from "~/assets/json/marvel.json";
 
 export default {
     name: "Marvel",
