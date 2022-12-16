@@ -1,6 +1,5 @@
 ---
 title: 设备价格
-icon: logos:apple
 ---
 
 > 除非特别说明 显示价格均为 RMB  
