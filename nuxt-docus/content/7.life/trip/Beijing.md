@@ -1,6 +1,4 @@
 ---
-pageInfo: false
-toc: false
 title: 这里是北京
 ---
 

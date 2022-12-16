@@ -4,7 +4,7 @@ author: Frank
 
 # [第一次布匿战争](https://zh.wikipedia.org/wiki/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%B8%83%E5%8C%BF%E6%88%98%E4%BA%89)
 
-![第一次布匿战争](/image/social/war/First_Punic_War_264_BC.png)
+![第一次布匿战争](/war/First_Punic_War_264_BC.png)
 
 ::: center
 264年的西地中海 红色为罗马，紫色为迦太基，绿色为叙拉古

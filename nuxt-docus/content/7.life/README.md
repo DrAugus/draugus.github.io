@@ -1,7 +1,5 @@
 ---
 index: false
-pageInfo: false
-toc: false
 ---
 
 # 寄蜉蝣于天地

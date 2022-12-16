@@ -1,6 +1,6 @@
 # [马岛战争](https://zh.wikipedia.org/wiki/马岛战争)
 
-![1](/image/social/war/Land.ops.2.en.svg)
+![1](/war/Land.ops.2.en.svg)
 
 马岛战争，是指1982年4月到6月间，英国和阿根廷为争夺福克兰群岛（英语）／马尔维纳斯群岛（略早由法国探险家命名，现西班牙语仍在使用）的主权而爆发的一场局部战争。
 
