@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@algolia/client-search": "^4.14.2",
-    "@nuxt-themes/docus": "1.1.5",
+    "@nuxt-themes/docus": "1.1.8",
     "@vue-leaflet/vue-leaflet": "^0.7.0",
     "echarts": "^5.4.1",
     "leaflet": "^1.9.3",

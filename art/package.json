@@ -12,7 +12,7 @@
     "vue": "^3.2.45",
     "postcss": "^8.4.20",
     "@algolia/client-search": "^4.14.2",
-    "@nuxt-themes/docus": "1.1.5",
+    "@nuxt-themes/docus": "1.1.8",
     "nuxt": "3.0.0"
   }
 }
