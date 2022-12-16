@@ -1,3 +1,12 @@
+---
+icon: pajamas:git-merge
+---
+
+# Mergify
+
+github 官方支持 [auto merge][github auto merge pr] 这个 [bot][mergify] 可以下架了
+
+```yml
 pull_request_rules:
   - name: automatic merge for ImgBot pull requests
     conditions:
@@ -38,3 +47,7 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+```
+
+[mergify]: https://docs.mergify.com/examples/#bots
+[github auto merge pr]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request
