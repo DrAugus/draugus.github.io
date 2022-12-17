@@ -1,5 +1,5 @@
 <template>
-  <Language :info="info" :words="true" :sentences="false" :language="1"></Language>
+  <Language :info="info" :words="false" :sentences="true" :language="1"></Language>
 </template>
 
 <script>
@@ -9,11 +9,11 @@ import english from "~/assets/json/words/english.json";
 import Language from "./Language.vue";
 
 export default {
-  name: "WordsEN",
+  name: "SentenceEnglish",
   components: {Language},
   data() {
     return {
-      info: english.words
+      info: english.sentence
     };
   }
 };

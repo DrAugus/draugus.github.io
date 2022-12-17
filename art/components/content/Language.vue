@@ -1,49 +1,68 @@
 <template>
 
-  <div v-if="sentences">
+  <span v-if="sentences">
+    <h2>wwww</h2>
     <h2>
-    <span @click="showLang(true, false)">
-      <span v-if="language===1">英文</span>
-      <span v-if="language===2">意大利文</span>
-    </span> |
-      <span @click="showLang(false, true)">中文</span> |
-      <span @click="showLang(true, true)">双语</span>
+      <a @click="showLang(true, false)">
+        <span v-if="language === 1">英文</span>
+        <span v-if="language === 2">意大利文</span>
+      </a> |
+      <a @click="showLang(false, true)">中文</a> |
+      <a @click="showLang(true, true)">双语</a>
     </h2>
+    <br>
 
-    <span v-for="(v,i) in info">
-      <span v-if="show_lang" class="words-explain-en"> {{ v[0] + " " }}<br v-if="show_lang&&!show_zh"></span>
-      <span v-if="v[1]&&show_zh" class="words-explain-zh"> {{ v[1] + " " }}<br></span>
+
+    <span v-for="(v, i) in info">
+      <span v-if="show_lang" class="words-explain-en"> {{ v[0] + " " }}<br v-if="show_lang && !show_zh"></span>
+      <span v-if="v[1] && show_zh" class="words-explain-zh"> {{ v[1] + " " }}<br></span>
     </span>
-  </div>
+  </span>
 
   <div v-if="words">
     <h2>查询</h2>
     <blockquote>仅限下文收录的查询</blockquote>
     <input v-model="query_words" placeholder="输入需要查询的单词">
     <h3 @click="showResult"><a>点击</a>查询</h3>
-    <p v-for="(item,ii) in query_res">
-      <span v-if="item[1]" class="words-explain-en"> {{ item[1] + " " }}</span>
-      <span v-if="item[0]" class="words-explain-zh"> {{ item[0] + " " }}</span><br>
-      <span v-if="item[2]"> {{ item[2] }}</span>
-    </p>
-
-    <h2>全部词汇</h2>
-    <div class="words-part" v-for="(v,k,i) in info">
-      <span class="words-head">{{ k }} </span><br>
-      <ol class="words-list">
-        <li v-for="(item,ii) in v">
+    <Card v-if="query_words">
+      <template #title>{{ query_words }}</template>
+      <template #description>
+        <span v-if="query_res==null">输入错误或未收录</span>
+        <span v-else v-for="(item, ii) in query_res">
           <span v-if="item[1]" class="words-explain-en"> {{ item[1] + " " }}</span>
           <span v-if="item[0]" class="words-explain-zh"> {{ item[0] + " " }}</span><br>
           <span v-if="item[2]"> {{ item[2] }}</span>
-        </li>
-      </ol>
-    </div>
+        </span>
+
+      </template>
+    </Card>
+
+    <br>
+
+    <CardGrid>
+      <template #title>全部词汇</template>
+      <Card v-for="(v, k, i) in info">
+        <template #title>{{ k }}</template>
+        <template #description>
+          <ol class="words-list">
+            <li v-for="(item, ii) in v">
+              <span v-if="item[1]" class="words-explain-en"> {{ item[1] + " " }}</span>
+              <span v-if="item[0]" class="words-explain-zh"> {{ item[0] + " " }}</span><br>
+              <span v-if="item[2]"> {{ item[2] }}</span>
+            </li>
+          </ol>
+
+        </template>
+      </Card>
+
+    </CardGrid>
+
+
   </div>
 
 </template>
 
 <script>
-
 
 export default {
   name: "Language",
@@ -71,7 +90,7 @@ export default {
       console.log(words);
       this.query_res = this.info[words];
     },
-  }
+  },
 };
 </script>
 

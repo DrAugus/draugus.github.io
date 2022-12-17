@@ -9,7 +9,7 @@ import italian from "~/assets/json/words/italian.json";
 import Language from "./Language.vue";
 
 export default {
-  name: "SentenceIT",
+  name: "SentenceItalian",
   components: {Language},
   data() {
     return {

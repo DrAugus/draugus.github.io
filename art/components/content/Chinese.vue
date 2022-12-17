@@ -8,25 +8,33 @@
     <span class="words-head">{{ query_words + " " }} </span><span>{{ query_res[0] }}</span><br>
     <ul class="words-list">
       <li>释义：{{ query_res[1] }}</li>
-      <li v-if="query_res[2].length">近义：<span v-for="(vv,ii) in query_res[2]"> {{ vv + " " }} </span></li>
-      <li v-if="query_res[3].length">反义：<span v-for="(vv,ii) in query_res[3]"> {{ vv + " " }} </span></li>
+      <li v-if="query_res[2].length">近义：<span v-for="(vv, ii) in query_res[2]"> {{ vv + " " }} </span></li>
+      <li v-if="query_res[3].length">反义：<span v-for="(vv, ii) in query_res[3]"> {{ vv + " " }} </span></li>
       <li v-if="query_res[4]">出处：{{ query_res[4] }}</li>
     </ul>
   </div>
 
-  <h2>全部词汇</h2>
-  <div class="words-part" v-for="(v,k,i) in chinese">
-    <span class="words-head">{{ k + " " }} </span> <span> {{ v[0] + " " }}</span><br>
+  <CardGrid>
+    <template #title>全部词汇</template>
 
-    <ul class="words-list">
-      <li>释义：{{ v[1] }}</li>
-      <li v-if="v[2].length">近义：<span v-for="(vv,ii) in v[2]"> {{ vv + " " }} </span></li>
-      <li v-if="v[3].length">反义：<span v-for="(vv,ii) in v[3]"> {{ vv + " " }} </span></li>
-      <li v-if="v[4]">出处：{{ v[4] }}</li>
-    </ul>
+    <Card v-for="(v, k, i) in chinese">
+      <template #title>{{ k }}</template>
+      <template #description>
+
+        {{ v[0] }}<br>
+
+        <ul class="words-list">
+          <li>释义：{{ v[1] }}</li>
+          <li v-if="v[2].length">近义：<span v-for="(vv, ii) in v[2]"> {{ vv + " " }} </span></li>
+          <li v-if="v[3].length">反义：<span v-for="(vv, ii) in v[3]"> {{ vv + " " }} </span></li>
+          <li v-if="v[4]">出处：{{ v[4] }}</li>
+        </ul>
+      </template>
+    </Card>
+
+  </CardGrid>
 
 
-  </div>
 
 
 </template>

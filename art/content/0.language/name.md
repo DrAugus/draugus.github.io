@@ -25,4 +25,3 @@
 - Karl
 - Nina ♀
 - Lukas
-
