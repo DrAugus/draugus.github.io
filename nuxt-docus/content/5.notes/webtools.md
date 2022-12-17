@@ -89,6 +89,15 @@ npm install -g pnpm
     yarn -v
     ```
 
+## QA
+
+### nuxt dev catch error
+
+ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
+
+[solve][nuxt explain]
+
 [node install]: https://github.com/nodesource/distributions
 [node download]: https://nodejs.org/en/download/
 [pnpm install]: https://pnpm.io/installation
+[nuxt explain]: https://github.com/nuxt/framework/issues/9524#issuecomment-1337698628
