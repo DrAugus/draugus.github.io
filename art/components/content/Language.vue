@@ -1,17 +1,20 @@
 <template>
 
   <span v-if="sentences">
-    <h2>wwww</h2>
-    <h2>
-      <a @click="showLang(true, false)">
-        <span v-if="language === 1">英文</span>
-        <span v-if="language === 2">意大利文</span>
-      </a> |
-      <a @click="showLang(false, true)">中文</a> |
-      <a @click="showLang(true, true)">双语</a>
-    </h2>
-    <br>
 
+
+    <ButtonLink :icon="show_icon[0]" @click="showLang(true, false)">
+      {{ display_lang }}
+    </ButtonLink> |
+    <ButtonLink :icon="show_icon[1]" @click="showLang(false, true)">
+      中文
+    </ButtonLink> |
+    <ButtonLink :icon="show_icon[2]" @click="showLang(true, true)">
+      双语
+    </ButtonLink>
+
+    <br>
+    <br>
 
     <span v-for="(v, i) in info">
       <span v-if="show_lang" class="words-explain-en"> {{ v[0] + " " }}<br v-if="show_lang && !show_zh"></span>
@@ -27,7 +30,7 @@
     <Card v-if="query_words">
       <template #title>{{ query_words }}</template>
       <template #description>
-        <span v-if="query_res==null">输入错误或未收录</span>
+        <span v-if="query_res == null">输入错误或未收录</span>
         <span v-else v-for="(item, ii) in query_res">
           <span v-if="item[1]" class="words-explain-en"> {{ item[1] + " " }}</span>
           <span v-if="item[0]" class="words-explain-zh"> {{ item[0] + " " }}</span><br>
@@ -78,6 +81,9 @@ export default {
       show_zh: true,
       query_words: null,
       query_res: null,
+      // 0 lang 1 cn 2 all
+      show_icon: ["fluent:local-language-zi-24-filled", "ion:language", "material-symbols:language"],
+      display_lang: this.language === 1 ? '英文' : '意大利文',
     };
   },
   methods: {
