@@ -1,21 +1,23 @@
 <template>
 
-  <Card v-for="(v, i) in WEAR_CONFIG.pants" :info="{
-    title: v.name,
-    subtitle: v.id + ' ' + v.size + ' ' + v.numeric_size,
-    text: v.color + ' ¥' + v.price + '' + v.shop,
-  }"></Card>
+  <Card v-for="(v, i) in WEAR_CONFIG.pants">
+
+    <template #title>{{ v.name }}</template>
+    <template #description>
+      {{ v.id + ' ' + v.size + ' ' + v.numeric_size }} <br>
+      {{ v.color + ' ¥' + v.price + '' + v.shop }}
+    </template>
+
+  </Card>
 
 
 </template>
 
 <script>
 import { WEAR_CONFIG } from "./wear-config";
-import Card from "../Card.vue";
 
 export default {
   name: "Wear",
-  components: { Card },
   data() {
     return {
       WEAR_CONFIG,

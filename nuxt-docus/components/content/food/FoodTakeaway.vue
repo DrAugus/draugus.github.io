@@ -8,11 +8,16 @@
     </li>
   </ul>
   <Badge text="ohhhhhh" type="info" />
-  <Card v-for="(v, k, i) in takeawayInfo" :info="{
-    title: k,
-    subtitle: displayMenu(v.good),
-    text: v.tip,
-  }"></Card>
+  <Card v-for="(v, k, i) in takeawayInfo">
+
+    <template #title>{{ k }}</template>
+    <template #description>
+      {{ displayMenu(v.good) }} <br> {{ v.tip }}
+    </template>
+
+  </Card>
+
+
 
 </template>
 
@@ -20,7 +25,6 @@
 
 import foodInfo from "~/assets/json/food.json";
 import { filterObject } from "../utils"
-import Card from "../Card.vue";
 
 const takeaway = foodInfo.外卖
 console.log(takeaway)
@@ -35,7 +39,6 @@ console.log(allTag)
 
 export default {
   name: "Food-Random",
-  components: { Card },
   data() {
     return {
       takeawayInfo: takeaway
