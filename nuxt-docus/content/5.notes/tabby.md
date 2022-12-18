@@ -8,7 +8,6 @@ icon: icon-park:terminal
 
 - quick-cmds
 
-
 ## hot keys
 
 - `command-w` close tab

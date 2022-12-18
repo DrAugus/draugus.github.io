@@ -1,7 +1,3 @@
----
-icon: vscode-icons:file-type-cpp2
----
-
 # const
 
 ## 如何在const成员函数中赋值？

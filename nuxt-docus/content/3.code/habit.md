@@ -1,5 +1,4 @@
 ---
-title: 编码习惯
 icon: vscode-icons:file-type-cddl
 ---
 

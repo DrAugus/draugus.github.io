@@ -213,7 +213,7 @@ node-3: a=y₂
 - 脏读
 - 更新丢失问题
 
-https://en.wikipedia.org/wiki/Concurrency_control
+<https://en.wikipedia.org/wiki/Concurrency_control>
 
 ## 从多数派读写到paxos的推导
 
@@ -224,9 +224,9 @@ https://en.wikipedia.org/wiki/Concurrency_control
 - 只存储一个变量`i`
 - `i`的每次更新对应有多个版本：`i1`,`i2`,`i3`...
 - 这个存储系统支持3个命令
-    - `get`：读最新的`i`
-    - `set<n>`：设置下个版本的`i`的值为`<n>`
-    - `inc<n>`：对`i`加`<n>`，也生成1个新版本
+  - `get`：读最新的`i`
+  - `set<n>`：设置下个版本的`i`的值为`<n>`
+  - `inc<n>`：对`i`加`<n>`，也生成1个新版本
 
 命令实现
 

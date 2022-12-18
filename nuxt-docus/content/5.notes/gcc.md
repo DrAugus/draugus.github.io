@@ -10,7 +10,8 @@ icon: twemoji:building-construction
 3. 有汇编变为目标代码(机器代码)生成 .o 的文件[汇编器as]
 4. 连接目标代码, 生成可执行程序 [链接器ld]
 
-**gcc 命令的常用选项**
+## gcc 命令的常用选项
+
 |选项 |解释|
 |---|---|
 | `-ansi`| 只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。|

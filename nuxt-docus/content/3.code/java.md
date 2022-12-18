@@ -1,3 +1,7 @@
+---
+icon: logos:java
+---
+
 # JAVA
 
 ## 线程

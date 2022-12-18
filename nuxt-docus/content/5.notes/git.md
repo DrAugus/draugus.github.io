@@ -255,6 +255,5 @@ cat ~/.ssh/id_rsa.pub
 
 ## QA
 
-
 [linux下git免密码登录配置]: http://yongqing.is-programmer.com/posts/80371.html
 [服务器上的 Git - 生成 SSH 公钥]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key

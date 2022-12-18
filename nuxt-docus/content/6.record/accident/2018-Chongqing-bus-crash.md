@@ -9,4 +9,3 @@
 事故导致包括司机在内的15人遇难。
 
 ![](/accident/2018-Chongqing-bus-crash.png)
-

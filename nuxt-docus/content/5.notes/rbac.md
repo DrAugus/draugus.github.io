@@ -1,11 +1,12 @@
 ---
 icon: eos-icons:role-binding-outlined
-title: RBAC
 ---
 
-> [refer](https://www.strongdm.com/rbac)
+
 
 # Understanding Role-Based Access Control (RBAC)
+
+> [refer](https://www.strongdm.com/rbac)
 
 > Everything you need to know about RBAC in one place.
 

@@ -16,11 +16,8 @@ tag:
 
 [安装nodejs](/blog/stroll.md#安装-nodejs-流程)
 
-
 - [linux系统分类](./sys_category)
 - [查看Linux的基本信息](./sys_base_info)
-
-
 
 ## 遇到的问题
 
@@ -30,7 +27,6 @@ tag:
 - `Can't locate Digest/MD5.pm in @INC (@INC contains:`
   - 原因：缺少perl-Digest-MD5包， 安装perl-Digest-MD5即可解决。
   - 解决：`yum -y install perl-Digest-MD5`
-
 
 ## 其他
 
@@ -51,4 +47,3 @@ tag:
     - `cd ~` 进入自己用户文件夹下，ls .vim检查.vim是否存在，如果不存在则mkdir .vim创建即可
     - `mkdir ~/.vim/colors` 文件夹，然后将上面的molokai.vim文件放入~/.vim/colors/文件夹中。
     - `vim ~/.vimrc` 进行编辑，加入colorscheme molokai即安装molokai配色插件成功。
-

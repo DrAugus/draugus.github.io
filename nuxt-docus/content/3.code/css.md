@@ -1,5 +1,4 @@
 ---
-title: css
 icon: vscode-icons:file-type-scss
 ---
 

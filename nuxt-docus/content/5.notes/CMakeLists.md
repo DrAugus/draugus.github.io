@@ -9,11 +9,11 @@ title: CMakeLists
 
 使用set命令显式定义及赋值，在非if语句中，使用${}引用，if中直接使用变量名引用；后续的set命令会清理变量原来的值；
 
-command (args ...)#命令不分大小写，参数使用空格分隔，使用双引号引起参数中空格
-
-set(var a;b;c) <=> set(var a b c)#定义变量var并赋值为a;b;c这样一个string list
-
-Add_executable(${var}) <=> Add_executable(a b c)#变量使用${xxx}引用
+```cmake
+command (args ...) # 命令不分大小写，参数使用空格分隔，使用双引号引起参数中空格
+set(var a;b;c) <=> set(var a b c) # 定义变量var并赋值为a;b;c这样一个string list
+Add_executable(${var}) <=> Add_executable(a b c) # 变量使用${xxx}引用
+```
 
 ### 条件语句
 

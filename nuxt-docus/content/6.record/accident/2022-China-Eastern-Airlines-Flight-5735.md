@@ -1,4 +1,4 @@
-# 中国东方航空5735号班机空难
+# 2022年中国东方航空5735号班机空难
 
 ![](/accident/China_Eastern_Airlines_Flight_5735_flight_path_zh-cn.svg)
 

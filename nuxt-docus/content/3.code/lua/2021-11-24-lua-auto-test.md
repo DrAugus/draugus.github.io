@@ -21,11 +21,14 @@ To get a default installation of Lua and LuaRocks under `/usr/local`
 
 1. First, ensure that you have development tools installed on your system, otherwise run the command below to install
    them
+
     ```shell
     sudo yum install libtermcap-devel ncurses-devel libevent-devel readline-devel
     ```
+
 2. build and install Lua, run the following commands to download the package tar ball, extract, build and install
    it.([lua source code](http://www.lua.org/ftp/))
+
     ```shell
     -$ curl -R -O http://www.lua.org/ftp/lua-5.1.4.tar.gz
     -$ tar -zxf lua-5.1.4.tar.gz
@@ -33,12 +36,15 @@ To get a default installation of Lua and LuaRocks under `/usr/local`
     -$ make linux test
     -$ sudo make install
     ```
+
 3. Download and unpack the LuaRocks tarball using following commands.
+
     ```shell
     -$ wget https://luarocks.org/releases/luarocks-3.8.0.tar.gz
     -$ tar zxpf luarocks-3.8.0.tar.gz
     -$ cd luarocks-3.8.0
     ```
+
 4. Run `./configure --with-lua-include=/usr/local/include`. (This will attempt to detect your installation of Lua. If
    you get any error messages, see the section "Customizing your settings", below.)
 5. Run `make`.
@@ -50,11 +56,14 @@ To get a default installation of Lua and LuaRocks under `/usr/local`
 
 1. First, ensure that you have development tools installed on your system, otherwise run the command below to install
    them
+
     ```shell
      -$ sudo apt install build-essential libreadline-dev unzip
     ```
+
 2. build and install Lua, run the following commands to download the package tar ball, extract, build and install
    it.([lua source code](http://www.lua.org/ftp/))
+
     ```shell
     -$ curl -R -O http://www.lua.org/ftp/lua-5.1.4.tar.gz
     -$ tar -zxf lua-5.1.4.tar.gz
@@ -62,12 +71,15 @@ To get a default installation of Lua and LuaRocks under `/usr/local`
     -$ make linux test
     -$ sudo make install
     ```
+
 3. Download and unpack the LuaRocks tarball using following commands.
+
     ```shell
     -$ wget https://luarocks.org/releases/luarocks-3.8.0.tar.gz
     -$ tar zxpf luarocks-3.8.0.tar.gz
     -$ cd luarocks-3.8.0
     ```
+
 4. Run `./configure --with-lua-include=/usr/local/include`. (This will attempt to detect your installation of Lua. If
    you get any error messages, see the section "Customizing your settings", below.)
 5. Run `make`.
