@@ -4,8 +4,6 @@
 
 ## OS error code 4: Interrupted system call
 
-
-
 ## error: invalid storage class for function  
 
 报错的函数的前面的那一个函数{}不配对
@@ -29,13 +27,14 @@ set_target_properties (app PROPERTIES LINK_FLAGS "-fsanitize=address")
 ```
 
 抛出错误
+
 ```txt
 undefined reference to symbol 'pthread_join@@GLIBC_2.0'
 //lib/i386-linux-gnu/libpthread.so.0: error adding symbols: DSO missing from command line
 collect2: error: ld returned 1 exit status
 ```
 
-## segfault at 11 ip 00007f24b21adcee sp 00007fff7379ded0 error 4 in...
+## segfault at 11 ip 00007f24b21adcee sp 00007fff7379ded0 error 4 in
 
 [refer][segfault]
 
@@ -59,8 +58,6 @@ run `addr2line -e yourSegfaultingProgram 00007f9bebcca90d`
  *   bit 15 ==                          1: SGX MMU page-fault
  */
 ```
-
-
 
  [link]: https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/arch/x86/include/asm/trap_pf.h?h=v5.16#n5
  [segfault]: https://stackoverflow.com/questions/2549214/interpreting-segfault-messages

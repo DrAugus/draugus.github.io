@@ -95,7 +95,7 @@ npm install -g pnpm
 
 ExperimentalWarning: The Fetch API is an experimental feature. This feature could change at any time
 
-[solve][nuxt explain]
+[solve][nuxt explain] or upgrade your node/npm/pnpm
 
 [node install]: https://github.com/nodesource/distributions
 [node download]: https://nodejs.org/en/download/

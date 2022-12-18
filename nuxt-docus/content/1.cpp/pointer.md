@@ -1,7 +1,3 @@
----
-icon: vscode-icons:file-type-cpp2
----
-
 # 指针
 
 ## 智能指针

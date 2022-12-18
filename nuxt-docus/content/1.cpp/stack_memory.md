@@ -1,7 +1,3 @@
----
-icon: vscode-icons:file-type-cpp2
----
-
 # 堆栈 内存
 
 ## 简述 C++ 的内存分区

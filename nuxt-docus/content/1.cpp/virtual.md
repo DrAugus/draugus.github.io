@@ -1,7 +1,3 @@
----
-icon: vscode-icons:file-type-cpp2
----
-
 # 虚函数
 
 ## C++虚函数表（多态的实现原理）

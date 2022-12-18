@@ -1,7 +1,3 @@
----
-icon: vscode-icons:file-type-cpp2
----
-
 # 引用
 
 ## 左值引用

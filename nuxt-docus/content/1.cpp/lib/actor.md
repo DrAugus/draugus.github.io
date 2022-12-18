@@ -1,7 +1,3 @@
----
-icon: vscode-icons:file-type-api-extractor
----
-
 # actor
 
 Actor 模型是一种编程模型，用于构建分布式系统。它的基本思想是每个 Actor 都是一个并发单元，它可以独立地接收和处理消息，并且可以与其它 Actor 通信。Actor 模型通过提供一种机制来管理 Actor 的并发和通信，使系统变得更加可靠和容错。

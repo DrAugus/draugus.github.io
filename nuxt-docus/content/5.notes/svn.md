@@ -1,5 +1,5 @@
 ---
-icon:
+icon: file-icons:tortoisesvn
 ---
 
 # svn
