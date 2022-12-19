@@ -1,6 +1,8 @@
-# QA
+# Sol
 
-## `[Vue warn]: Data property "option" is already defined in Props.`
+## Vue
+
+### `[Vue warn]: Data property "option" is already defined in Props.`
 
 ```vue
 data () {
@@ -18,7 +20,7 @@ props: {
 }
 ```
 
-## `xAxis "0" not found`
+### `xAxis "0" not found`
 
 > refer: <https://github.com/apache/echarts/issues/14071#issuecomment-762582442>
 
@@ -26,7 +28,7 @@ props: {
 import 'echarts/lib/component/grid';
 ```
 
-## 使用 `asyncData` 方法在组件中获取 `JSON` 数据
+### 使用 `asyncData` 方法在组件中获取 `JSON` 数据
 
 asyncData 方法会在服务端渲染和客户端挂载之前被调用，并且它可以访问上下文对象 (context)。
 
@@ -68,7 +70,9 @@ export default {
 注意：asyncData 方法只能在服务端或客户端渲染期间被调用，所以你不能在挂载之后调用它。如果你需要在挂载之后获取数据，你可以使用 created 或 mounted 生命周期钩子来调用 asyncData 方法。
 ::
 
-## nuxt use json
+## nuxt
+
+### nuxt use json
 
 > [refer][nuxt use json]
 
