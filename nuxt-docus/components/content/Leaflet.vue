@@ -30,7 +30,7 @@
 
       <l-marker :lat-lng="[30.3, 120.2]" draggable @moveend="log('move end')">
         <l-popup>
-          这里是中国？
+          中国？
         </l-popup>
       </l-marker>
 

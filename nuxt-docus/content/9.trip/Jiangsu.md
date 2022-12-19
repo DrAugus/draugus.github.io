@@ -1,16 +1,18 @@
 ---
-title: 这里是江苏
+title: 江苏
 ---
 
 ## 苏州
 
-寒山寺  
+::list{type="success"}
 
-七里山塘街
-
-太湖
-
-鼋头渚 Yuántóuzhǔ
+- 寒山寺  
+- 七里山塘街
+::
+::list{type="info"}
+- 太湖
+- 鼋头渚 Yuántóuzhǔ
+::
 
 ### 旅行记录
 
