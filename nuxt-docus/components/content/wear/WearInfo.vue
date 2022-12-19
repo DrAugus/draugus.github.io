@@ -1,15 +1,18 @@
 <template>
 
-  <Card v-for="(v, i) in WEAR_CONFIG.pants">
+  <CardGrid>
+    <template #title>穿点什么</template>
 
-    <template #title>{{ v.name }}</template>
-    <template #description>
-      {{ v.id + ' ' + v.size + ' ' + v.numeric_size }} <br>
-      {{ v.color + ' ¥' + v.price + '' + v.shop }}
-    </template>
+    <Card v-for="(v, i) in WEAR_CONFIG.pants">
 
-  </Card>
+      <template #title>{{ v.name }}</template>
+      <template #description>
+        {{ v.id + ' ' + v.size + ' ' + v.numeric_size }} <br>
+        {{ v.color + ' ¥' + v.price + '' + v.shop }}
+      </template>
 
+    </Card>
+  </CardGrid>
 
 </template>
 
