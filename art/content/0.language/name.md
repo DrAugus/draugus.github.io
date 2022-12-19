@@ -2,6 +2,8 @@
 
 ## 法国人 Français
 
+::list
+
 - Marie
 - Paul
 - Marc
@@ -10,18 +12,25 @@
 - Sophie
 - Julia
 - Gabriel
+::
 
 ## 意大利人 Italiano
+
+::list
 
 - Davide
 - Maria
 - Giovanni
 - Matteo
 - Lorenzo
+::
 
 ## 德国人 Deutsch
+
+::list
 
 - Gustav ♂
 - Karl
 - Nina ♀
 - Lukas
+::
