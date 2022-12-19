@@ -12,4 +12,22 @@ export default defineNuxtConfig({
       }
     }
   },
+  content: {
+    documentDriven: true,
+    highlight: {
+      theme: {
+        dark: 'github-dark',
+        default: 'github-light'
+      },
+      preload: [
+        'js', 'ts', 'html', 'css', 'vue',
+        'cpp', 'py', 'sql', 'c',
+        'diff', 'shell', 'markdown',
+        'json', 'yaml', 'bash', 'ini'
+      ]
+    },
+    navigation: {
+      fields: ['icon', 'titleTemplate', 'aside']
+    }
+  },
 })
