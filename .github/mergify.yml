@@ -1,14 +1,3 @@
----
-icon: pajamas:git-merge
----
-
-# Mergify
-
-github 官方支持 [auto merge][github auto merge pr] ~~这个 [bot][mergify] 可以下架了~~
-
-nonono, official doc, I haven't figured it yet... now still use mergify
-
-```yml
 pull_request_rules:
   - name: automatic merge for ImgBot pull requests
     conditions:
@@ -20,7 +9,12 @@ pull_request_rules:
   - name: automatic merge for dependabot pull requests
     conditions:
       - author=dependabot[bot]
-      - check-success=deploy
+      # 这三个不一定全都会响应 在此判定 任意一个失败都不可以
+      - not:
+          or:
+            - check-failure=deploy
+            - check-failure=Vercel – art
+            - check-failure=Vercel – docus
     actions:
       merge:
         method: merge
@@ -28,7 +22,11 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - check-success=deploy
+      - not:
+          or:
+            - check-failure=deploy
+            - check-failure=Vercel – art
+            - check-failure=Vercel – docus
     actions:
       merge:
         method: merge
@@ -37,7 +35,11 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - check-success=deploy
+      - not:
+          or:
+            - check-failure=deploy
+            - check-failure=Vercel – art
+            - check-failure=Vercel – docus
     actions:
       merge:
         method: merge
@@ -45,11 +47,11 @@ pull_request_rules:
   - name: automatic merge for auto pull requests
     conditions:
       - title=pulling refs/heads/dev into master
-      - check-success=deploy
+      - not:
+          or:
+            - check-failure=deploy
+            - check-failure=Vercel – art
+            - check-failure=Vercel – docus
     actions:
       merge:
         method: merge
-```
-
-[mergify]: https://docs.mergify.com/examples/#bots
-[github auto merge pr]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request
