@@ -1,18 +1,6 @@
 ---
-sidebar: false
-article: true   
 title: 血腥暴力影视被和谐的感想      
-isOriginal: true
 date: 2022-04-19 23:23:23    
-permalinkPattern: blog/:year/:month/:day/:slug.html  
-category: 
-  - 感     
-tag: 
-  - 影视 
-  - 杂谈 
-  - 记录 
-  - 血腥 
-  - 暴力
 ---
 
 > 与一位少女在看到电影中血腥镜头的谈论感想
