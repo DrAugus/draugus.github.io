@@ -44,14 +44,14 @@ pull_request_rules:
       merge:
         method: merge
 
-  - name: automatic merge for auto pull requests
-    conditions:
-      - title=pulling refs/heads/dev into master
-      - not:
-          or:
-            - check-failure=deploy
-            - check-failure=Vercel – art
-            - check-failure=Vercel – docus
-    actions:
-      merge:
-        method: merge
+  # - name: automatic merge for auto pull requests
+  #   conditions:
+  #     - title=pulling refs/heads/dev into master
+  #     - not:
+  #         or:
+  #           - check-failure=deploy
+  #           - check-failure=Vercel – art
+  #           - check-failure=Vercel – docus
+  #   actions:
+  #     merge:
+  #       method: merge
