@@ -1,3 +1,7 @@
+---
+icon: logos:vue
+---
+
 # Vue
 
 ## vue组件之间相互传值的方式
@@ -55,7 +59,7 @@
 
 ::list
 
-- [Vuetify](https://vuetifyjs.com/)
+- [Vuetify](https://vuetifyjs.com/) :icon{name="logos:vuetifyjs"}
 - [Bootstrap Vue](https://bootstrap-vue.org/)
 - [Quasar Framework](https://quasar.dev/)
 - [Vue Material](https://vuematerial.io/)
@@ -70,7 +74,7 @@
 
 ::list
 
-- vuepress
+- [vuepress](./vuepress)
 - vitepress
 ::
 
