@@ -82,7 +82,9 @@ Server-Side Rendering
 - nuxtjs
 ::
 
-----
+## about `<script>`
+
+`<script lang="ts">` 与 `<script>` 与 `<script setup lang="ts">` 的区别
 
 [props refer]: https://segmentfault.com/a/1190000022700216
 [attrs listeners]: https://segmentfault.com/a/1190000022708579

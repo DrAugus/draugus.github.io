@@ -1,8 +1,7 @@
 ---
 index: false
 title: resume
-pageInfo: false
-toc: false
+sidebar: false
 ---
 
 ## INTRO
@@ -19,7 +18,7 @@ ability and team communication skills.
 
 ## WORK EXPERIENCE
 
-### Hangzhou Meichuang Technology Co., Ltd.
+### Hangzhou Meichuang Technology Co., Ltd
 
 > Software Development Engineer
 
@@ -34,7 +33,7 @@ May 2021 - Aug 2022
 - Optimized the update logic of Lua files, coordinated Java distribution configuration, adopt incremental updates,
   realize parallel loading of Lua engine according to system thread allocation, and greatly reduce update time.
 
-### Liaoning Chuangsheng Network Technology Co., Ltd.
+### Liaoning Chuangsheng Network Technology Co., Ltd
 
 > Software Development Engineer
 
@@ -56,4 +55,3 @@ Jul 2018 - Apr 2021
 - During the working period, dozens of new employees have been trained by me. Responsible for familiarizing new
   employees with the server, client logic, and game flow, and guided new employees to familiarize themselves with and
   master Cocos Creator's control usage and script control.
-

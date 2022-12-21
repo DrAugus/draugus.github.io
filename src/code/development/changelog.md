@@ -1,7 +1,6 @@
 ---
 title: 开发历程
-pageInfo: false
-toc: false
+sidebar: false
 ---
 
 > 本项目开发过程

@@ -1,7 +1,5 @@
 ---
 title: 有趣的台词
-pageInfo: false
-toc: false
 ---
 
 
@@ -12,11 +10,9 @@ toc: false
 
 战局 没有所谓的弃子
 
-因为对这盘棋局来说 
+因为对这盘棋局来说
 
 将杀 并非是终点
-
-
 
 今日我们相聚于此
 
@@ -26,8 +22,6 @@ toc: false
 
 值得足足半日的停工缅怀
 
-
-
 呵 仅仅半日
 
 都说北国银行周转的是血泪与哀嚎
@@ -35,8 +29,6 @@ toc: false
 可市长先生您的价值观
 
 比我这银行家还要扭曲啊
-
-
 
 罗莎琳在陌生的土地上陨落
 
@@ -50,19 +42,13 @@ toc: false
 
 不然孩子们会哭的
 
-
-
 喂喂
 
 就连 我都觉得
 
 这可不是适合争斗的场合
 
-
-
 荒谬可笑
-
-
 
 尽管手段玷污了荣耀
 
@@ -72,8 +58,6 @@ toc: false
 
 倒是多托雷  斯卡拉姆齐和稻妻的神之心呢
 
-
-
 世间常理都觉得
 
 神之灵知是理性无法理解的神圣知识
@@ -81,8 +65,6 @@ toc: false
 在征服神之目光以后
 
 他会迈出新的一步
-
-
 
 夜晚的愚戏该结束了
 
@@ -95,8 +77,6 @@ toc: false
 在高洁的冰之女皇麾下
 
 我们将攫取众神的权柄
-
-
 
 绝对的安宁
 
@@ -112,8 +92,7 @@ toc: false
 
 我承诺你
 
-你的灵柩将会是整个旧世界 
-
+你的灵柩将会是整个旧世界
 
 ![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/20220611155502.png?raw=true)
 ![](https://github.com/DrAugus/data/blob/master/game/genshin/dialog/202206111555021.png?raw=true)
@@ -134,5 +113,3 @@ toc: false
 <span v-for="i in 20">
     <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/dialog/funny/' + i +'.jpg?raw=true'">
 </span>
-
-

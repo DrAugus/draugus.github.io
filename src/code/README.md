@@ -1,8 +1,7 @@
 ---
 title: 🎲 编码
 index: false
-pageInfo: false
-toc: false
+sidebar: false
 ---
 
 ## 今天码了 🐎

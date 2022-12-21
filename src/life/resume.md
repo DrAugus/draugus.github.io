@@ -1,8 +1,7 @@
 ---
 index: false
 title: 简历
-pageInfo: false
-toc: false
+sidebar: false
 ---
 
 ## 介绍

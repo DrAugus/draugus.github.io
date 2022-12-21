@@ -4,8 +4,7 @@
 navbar: false
 sidebar: false
 breadcrumb: false
-pageInfo: false
-toc: false
+sidebar: false
 contributors: false
 editLink: false
 lastUpdated: false

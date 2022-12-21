@@ -1,7 +1,6 @@
 ---
 title: 近期祈愿
-pageInfo: false
-toc: false
+sidebar: false
 ---
 
 
