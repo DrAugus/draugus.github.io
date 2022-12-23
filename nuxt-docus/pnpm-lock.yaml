@@ -4,7 +4,7 @@ specifiers:
   '@algolia/client-search': ^4.14.2
   '@docsearch/css': ^3.3.0
   '@docsearch/js': ^3.3.0
-  '@nuxt-themes/docus': 1.2.2
+  '@nuxt-themes/docus': 1.2.3
   '@nuxtjs/algolia': ^1.3.1
   '@vue-leaflet/vue-leaflet': ^0.7.0
   echarts: ^5.4.1
@@ -18,7 +18,7 @@ devDependencies:
   '@algolia/client-search': 4.14.2
   '@docsearch/css': 3.3.0
   '@docsearch/js': 3.3.0_tbpndr44ulefs3hehwpi2mkf2y
-  '@nuxt-themes/docus': 1.2.2_nuxt@3.0.0+vue@3.2.45
+  '@nuxt-themes/docus': 1.2.3_nuxt@3.0.0+vue@3.2.45
   '@nuxtjs/algolia': 1.3.1_vue@3.2.45
   '@vue-leaflet/vue-leaflet': 0.7.0_leaflet@1.9.3+vue@3.2.45
   echarts: 5.4.1
@@ -646,12 +646,12 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@nuxt-themes/docus/1.2.2_nuxt@3.0.0+vue@3.2.45:
-    resolution: {integrity: sha512-OaSfGXjf57CYSTFKemAkD7jzhVqwN3raHiXg5Il+/jOEmqrBqH4FbFkbeL3ZTp0S6VKHUiOUv4ddwmulfroJzA==}
+  /@nuxt-themes/docus/1.2.3_nuxt@3.0.0+vue@3.2.45:
+    resolution: {integrity: sha512-MWjCZ6mzPV057lqgiE98l1egEUYIIqUy2n3nlOnR8NQThzIU3tJf5YN4RUK4BKDWH7edH9/OA65B2Z/BGirPZw==}
     dependencies:
-      '@nuxt-themes/elements': 0.3.2_vue@3.2.45
-      '@nuxt-themes/tokens': 1.4.1_vue@3.2.45
-      '@nuxt-themes/typography': 0.2.1_vue@3.2.45
+      '@nuxt-themes/elements': 0.3.3_vue@3.2.45
+      '@nuxt-themes/tokens': 1.4.2_vue@3.2.45
+      '@nuxt-themes/typography': 0.2.2_vue@3.2.45
       '@nuxt/content': 2.3.0
       '@nuxthq/studio': 0.4.1
       '@vueuse/nuxt': 9.8.2_nuxt@3.0.0+vue@3.2.45
@@ -667,10 +667,10 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/elements/0.3.2_vue@3.2.45:
-    resolution: {integrity: sha512-iFfp1a+zODueWPFP15V2LsnfVLab4OuOQX40KAPCTSSe4hHJh18DRIyRqsmBHbD9EUUPFy4cRS6KyHqzDYxwew==}
+  /@nuxt-themes/elements/0.3.3_vue@3.2.45:
+    resolution: {integrity: sha512-6S3z+GY2H78Ff36BJNzvWAP4NKhmzju4NGhST6oIJnw07UYKsgkO1ttz867QX1kNhOwFFsCTpcxVCrj0FFxpSw==}
     dependencies:
-      '@nuxt-themes/tokens': 1.4.1_vue@3.2.45
+      '@nuxt-themes/tokens': 1.4.2_vue@3.2.45
       '@vueuse/core': 9.8.2_vue@3.2.45
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -681,12 +681,12 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/tokens/1.4.1_vue@3.2.45:
-    resolution: {integrity: sha512-5LuMcg5yx+j+063Ske4PNxaQyqYErpCjpTUdkacNJUmGkt7Yaakimowu0x6TLa+92IzrqXwodAOg6VLoOpZfMw==}
+  /@nuxt-themes/tokens/1.4.2_vue@3.2.45:
+    resolution: {integrity: sha512-zeqq5jjHG2CqAmGDe38IkdJIIEaNgvRISVf+/iZx2f70yLd2fS+6fDDOmgQleNdr7Mzh8u0ndGVb62F0BoCXmQ==}
     dependencies:
       '@nuxtjs/color-mode': 3.2.0
       '@vueuse/core': 9.8.2_vue@3.2.45
-      pinceau: 0.9.8
+      pinceau: 0.9.11
     transitivePeerDependencies:
       - '@vue/composition-api'
       - postcss
@@ -696,10 +696,10 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/typography/0.2.1_vue@3.2.45:
-    resolution: {integrity: sha512-VhJyFqqWtChDs4URa7JsxwBJJlvozL27XSiqOCOOVzgcUTkP2wtQkZURBxOoat4i9QUYHeBrhHenm6SY3YIC0A==}
+  /@nuxt-themes/typography/0.2.2_vue@3.2.45:
+    resolution: {integrity: sha512-yynYFbnxDqlBvBDttmMW05YSKwzPigNctbE/8k5KepNgHexFvuTDim1asWW9/NsUFkECMsl9yVOW97hXq0UiWQ==}
     dependencies:
-      '@nuxt-themes/tokens': 1.4.1_vue@3.2.45
+      '@nuxt-themes/tokens': 1.4.2_vue@3.2.45
       '@nuxtjs/color-mode': 3.2.0
       nuxt-config-schema: 0.3.7
       nuxt-icon: 0.1.8_vue@3.2.45
@@ -5116,8 +5116,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /pinceau/0.9.8:
-    resolution: {integrity: sha512-dJ2cv0Nz9vzw0jCUPTe/Yv2BqvtrPvA/9a6orThn6m4ak+H6cwxbLdbahg0yEYL9NOMa7dzyluBdezQv4cIGrQ==}
+  /pinceau/0.9.11:
+    resolution: {integrity: sha512-4Yg959IMGJZi7g8i+WTWV9lAqczoXTPMDHbwQi3oPCWhHSaHJoAQyhx+uk112lAF0+4B+kEEfYdoZPwgmtVLPQ==}
     dependencies:
       '@unocss/reset': 0.48.0
       '@volar/vue-language-core': 1.0.16
