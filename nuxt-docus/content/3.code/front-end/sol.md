@@ -64,7 +64,7 @@ export default {
 </script>
 ```
 
-在这个例子中，我们使用 asyncData 方法获取了来自 '/data.json' 的 JSON 数据。然后，我们使用返回值将数据传递给组件。
+在这个例子中，我们使用 asyncData 方法获取了来自 `/data.json` 的 JSON 数据。然后，我们使用返回值将数据传递给组件。
 
 ::alert
 注意：asyncData 方法只能在服务端或客户端渲染期间被调用，所以你不能在挂载之后调用它。如果你需要在挂载之后获取数据，你可以使用 created 或 mounted 生命周期钩子来调用 asyncData 方法。
@@ -79,3 +79,36 @@ export default {
 `import json from "~/static/json/sample.json";` By prepending `~/static`
 
 [nuxt use json]: https://stackoverflow.com/a/55124822/17744936
+
+### JavaScript heap out of memory
+
+```log
+<--- Last few GCs --->
+
+[18465:0x118040000]    98714 ms: Mark-sweep 2008.7 (2084.7) -> 1993.7 (2085.6) MB, 1529.6 / 0.0 ms  (average mu = 0.159, current mu = 0.066) allocation failure; scavenge might not succeed
+[18465:0x118040000]   100665 ms: Mark-sweep 2010.1 (2085.8) -> 1994.9 (2086.8) MB, 1893.5 / 0.0 ms  (average mu = 0.091, current mu = 0.030) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0x100626c88 node::Abort() [/opt/homebrew/Cellar/node/19.1.0/bin/node]
+ 2: 0x100627f54 node::ModifyCodeGenerationFromStrings(v8::Local<v8::Context>, v8::Local<v8::Value>, bool) [/opt/homebrew/Cellar/node/19.1.0/bin/node]
+```
+
+[refer](https://stackoverflow.com/questions/53230823/fatal-error-ineffective-mark-compacts-near-heap-limit-allocation-failed-javas)  
+
+```shell
+export NODE_OPTIONS="--max-old-space-size=5120" # Increase to 5 GB
+export NODE_OPTIONS="--max-old-space-size=6144" # Increase to 6 GB
+export NODE_OPTIONS="--max-old-space-size=7168" # Increase to 7 GB
+export NODE_OPTIONS="--max-old-space-size=8192" # Increase to 8 GB
+
+# and so on...
+
+# formula:
+export NODE_OPTIONS="--max-old-space-size=(X * 1024)" # Increase to X GB
+
+# Note: it doesn't have to be multiples of 1024.
+# max-old-space-size can be any number of memory megabytes (MB) you have available.
+```
