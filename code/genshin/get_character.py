@@ -59,6 +59,7 @@ _weapon_en = ["sword", "claymore", "catalyst", "bow", "polearm"]
 
 # ########################### result ###########################
 RES_WISH_TIME = []
+RES_WISH_NAME = []
 RES_WISH_INFO = []
 RES_WISH_WITH_PREFIX_INFO = []
 RES_CHAR_INFO = []
@@ -212,6 +213,7 @@ def display_format_event(event_map):
 
 def wish_detail_data(url_lang, str_match):
     log_debug(LV["info"], "wish_detail_data url_lang :"f"{url_lang}")
+    for_print("URL", url_lang)
     arr = clean_wish_detail_data(get_json(url_lang), str_match)
     for a in arr:
         if len(a):
@@ -279,6 +281,9 @@ def wish_detail_filter(arr):
                     for index, aaa in enumerate(split_aa):
                         aaa = aaa.split('(')[0].strip()
                         aaa_arr.append(aaa)
+                    
+                    # if len(aaa_arr) > 0 and isinstance(aaa_arr, list):
+                    #     aaa_arr = list(filter(lambda avv: '<' not in avv and '>' not in avv, aaa_arr))
                     if len(aaa_arr) % 2 > 0:
                         log_debug(LV["error"], "aaa_arr", aaa_arr)
                         continue
@@ -368,6 +373,7 @@ def clean_wish_detail_data(_data_, str_match):
     _return_ = []
 
     content = _data_['content']
+    new_str = content
 
     # only en website
     if not SHOW_ZH:
@@ -382,12 +388,15 @@ def clean_wish_detail_data(_data_, str_match):
                 RES_WISH_TIME.append(wt)
             log_debug(LV["info"], "wish time ", wt)
 
+        RES_WISH_NAME.append(re.findall(str_en_wish_name, new_str))
+
     if SHOW_ALL_EVENT:
         _return_.append(content)
         return _return_
 
-    wish5star = re.findall(str_match[0], content)
-    wish4star = re.findall(str_match[1], content)
+    # 英文这里如果 使用 content 直接 find 会找不全 后续再看看为什么
+    wish5star = re.findall(str_match[0], new_str)
+    wish4star = re.findall(str_match[1], new_str)
 
     _return_.append(wish5star)
     _return_.append(wish4star)
@@ -395,13 +404,17 @@ def clean_wish_detail_data(_data_, str_match):
     return _return_
 
 
+str_zh_wish_name = [
+    
+]
+str_en_wish_name = "Event Wish (.*?) - Boosted Drop Rate"
 str_zh_detail_match_wish_char = [
     ".*限定五星角色(.*)的祈愿.*",
     ".*四星角色(.*)的祈愿.*"
 ]
 str_en_detail_match_wish_char = [
-    ".*the event-exclusive 5-star character (.*) will receive a huge.*",
-    ".*the 4-star characters (.*) will receive a huge.*"
+    "the event-exclusive 5-star character (.*?) will receive a huge",
+    "the 4-star characters (.*?) will receive a huge"
 ]
 str_zh_detail_match_wish_weapon = [
     ".*限定五星武器(.*)的祈愿.*",
@@ -459,6 +472,7 @@ def display_all_res():
     # filter_repeat()
     if SHOW_WISH or SHOW_ALL_EVENT:
         for_print("RES_WISH_TIME", RES_WISH_TIME)
+        for_print("RES_WISH_NAME", RES_WISH_NAME)
         for_print("RES_WISH_INFO", RES_WISH_INFO)
         for_print("RES_WISH_WITH_PREFIX_INFO", RES_WISH_WITH_PREFIX_INFO)
     if SHOW_CHAR_INFO:
