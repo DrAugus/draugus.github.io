@@ -82,6 +82,22 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 
 请注意，在上面的命令中，`/path/to/source/file`和`/path/to/target/file`都是相对于Docker容器中的根目录的路径。因此，如果文件在Docker容器中的其他目录下，你需要指定完整的路径。
 
+## 一个 docker 复制到另一个 docker
+
+要将一个Docker容器中的文件迁移到另一个Docker容器，你需要使用Docker的`cp`命令。首先，使用`docker ps`命令查看正在运行的Docker容器的ID。然后，使用以下命令将文件从源容器复制到目标容器：
+
+```shell
+docker cp [source_container_id]:/path/to/source/file [target_container_id]:/path/to/target/file
+```
+
+例如，如果要将一个名为`myfile.txt`的文件从源容器`4fa6e0f0c67a`复制到目标容器`8dbd9e392a96`，你可以使用以下命令：
+
+```shell
+docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
+```
+
+请注意，在上面的命令中，`/path/to/source/file`和`/path/to/target/file`都是相对于Docker容器中的根目录的路径。因此，如果文件在Docker容器中的其他目录下，你需要指定完整的路径。
+
 ## 第一个 docker
 
 要写一个 Dockerfile，需要按照以下步骤进行：
