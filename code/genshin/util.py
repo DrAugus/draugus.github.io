@@ -21,8 +21,12 @@ def remove_html_tags(text):
     return re.sub(clean, '', text)
 
 
+def remove_char(text, ch):
+    return text.replace(ch, '')
+
+
 def remove_line_break(text):
-    return text.replace('\n', '')
+    return remove_char(text, '\n')
 
 
 def remove_duplicate(arr):

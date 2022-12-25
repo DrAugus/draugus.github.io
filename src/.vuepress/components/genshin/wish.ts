@@ -742,7 +742,7 @@ export const WISH = {
       start: "2022-12-27 18:00:00 +0800",
       end: "2023-01-17 14:59:59 +0800",
       wish5star: "raiden_shogun",
-      wish4star: [ ],
+      wish4star: ['Rosaria', 'Sayu', 'Kujou Sara'],
       version: "3.3",
       wishName: "「影寂天下人」",
       url: "https://bbs.mihoyo.com/ys/article/9004344"
@@ -754,7 +754,7 @@ export const WISH = {
       start: "2022-12-27 18:00:00 +0800",
       end: "2023-01-17 14:59:59 +0800",
       wish5star: "kamisato_ayato",
-      wish4star: [],
+      wish4star: ['Rosaria', 'Sayu', 'Kujou Sara'],
       version: "3.3",
       wishName: "「苍流踏花」",
       wish_2: true,

@@ -213,7 +213,7 @@ def display_format_event(event_map):
 
 def wish_detail_data(url_lang, str_match):
     log_debug(LV["info"], "wish_detail_data url_lang :"f"{url_lang}")
-    for_print("URL", url_lang)
+    print("URL", url_lang)
     arr = clean_wish_detail_data(get_json(url_lang), str_match)
     for a in arr:
         if len(a):
@@ -281,7 +281,7 @@ def wish_detail_filter(arr):
                     for index, aaa in enumerate(split_aa):
                         aaa = aaa.split('(')[0].strip()
                         aaa_arr.append(aaa)
-                    
+
                     # if len(aaa_arr) > 0 and isinstance(aaa_arr, list):
                     #     aaa_arr = list(filter(lambda avv: '<' not in avv and '>' not in avv, aaa_arr))
                     if len(aaa_arr) % 2 > 0:
@@ -381,6 +381,7 @@ def clean_wish_detail_data(_data_, str_match):
         e_str = "Event Wish Details"
         new_str = util.remove_html_tags(content)
         new_str = util.remove_line_break(new_str)
+        # new_str = html.unescape(new_str)
         wish_time = util.match_strings(new_str, s_str, e_str)
         if len(wish_time):
             wt = html.unescape(wish_time[0])
@@ -388,7 +389,12 @@ def clean_wish_detail_data(_data_, str_match):
                 RES_WISH_TIME.append(wt)
             log_debug(LV["info"], "wish time ", wt)
 
-        RES_WISH_NAME.append(re.findall(str_en_wish_name, new_str))
+        wish_name = re.findall(str_en_wish_name, new_str)
+        if len(wish_name):
+            wn = html.unescape(wish_name[0])
+            if len(wn):
+                wn = util.remove_char(wn, '"')
+                RES_WISH_NAME.append(wn)
 
     if SHOW_ALL_EVENT:
         _return_.append(content)
@@ -405,7 +411,7 @@ def clean_wish_detail_data(_data_, str_match):
 
 
 str_zh_wish_name = [
-    
+
 ]
 str_en_wish_name = "Event Wish (.*?) - Boosted Drop Rate"
 str_zh_detail_match_wish_char = [
