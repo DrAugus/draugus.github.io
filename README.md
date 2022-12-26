@@ -2,15 +2,25 @@
 
 ## All Site
 
-- [docus 🇨🇳][site1] [docus not 🇨🇳][site2]
-- [site][site3]
+| site | 🇨🇳 | others | tech|
+| :--: |:--: |:--: | :--:|
+| main site (now only game)|  [link][site0] | [link][site0]| vuepress vue3|
+| variety of notes | [link][site1-1] | [link][site1-2]| nuxt docus vue3 |
+| coding |[link][site2-1] | [link][site2-2]|nuxt docus vue3 |
+| art | [link][site3-1] | [link][site3-2]|nuxt docus vue3 |
+
+> notes/code/art site are same, why?
+
+too many records, and "code page" doesn't seem to need `components`, so code page only use markdown file. while "notes page" and "art page" may need `components`. The pages are all separated to make them clearer.
 
 ## Develop
 
 ### Prerequisites
 
-- nodejs(Version >= 16)
-- yarn(Version >= 1) (`npm install -g yarn`)
+- nodejs (version >= 16)
+- npm
+- yarn (`npm install -g yarn`)
+- pnpm (nuxt project required `npm install -g pnpm`)
 
 ### Git clone
 
@@ -55,7 +65,10 @@ Before you commit, please run `yarn vuepress-vite build src`
 - [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
 - [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
 
-
-[site1]: https://augus-docus.netlify.app/
-[site2]: https://augus-docus.vercel.app/
-[site3]: https://draugus.github.io/
+[site0]: https://draugus.github.io/
+[site1-1]: https://augus-docus.netlify.app/
+[site1-2]: https://augus-docus.vercel.app/
+[site2-1]: https://augus-code.netlify.app/
+[site2-2]: https://augus-code.vercel.app/
+[site3-1]: https://augus-art.netlify.app/
+[site3-2]: https://augus-art.vercel.app/
