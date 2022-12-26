@@ -1,8 +1,8 @@
-# Augus
+# AUGUS
 
 ## All Site
 
-| site | 🇨🇳 | others | tech|
+| site | 🇨🇳 | other countries | tech|
 | :--: |:--: |:--: | :--:|
 | main site (now only game)|  [link][site0] | [link][site0]| vuepress vue3|
 | variety of notes | [link][site1-1] | [link][site1-2]| nuxt docus vue3 |
@@ -30,12 +30,18 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ### Run
 
-```yarn
-yarn install
-yarn src:dev
-```
+current dir, use and run vuepress, just run `yarn install && yarn src:dev`  
+for others
+
+- [art](./art/)
+- [code](./code/)
+- [nuxt-docus](./nuxt-docus/)
+
+run `pnpm i && pnpm dev`
 
 ### Upgrade
+
+#### current dir, as vuepress
 
 make sure all vuepress plugins are up to date.
 
@@ -51,9 +57,9 @@ vuepress and theme
 yarn add vuepress@next && yarn install && yarn upgrade
 ```
 
-## Contribute
+#### others
 
-Before you commit, please run `yarn vuepress-vite build src`
+You don't have to think about them. Just give them to the robot.
 
 ## Thanks
 
