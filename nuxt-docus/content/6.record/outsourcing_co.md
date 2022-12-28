@@ -5,7 +5,7 @@ icon: twemoji:compass
 # 外包公司
 
 ::alert{type="info"}
-from [github](https://github.com/grancode/outsourcing/)
+引自 [github](https://github.com/grancode/outsourcing/)
 ::
 
 ![https://oscimg.oschina.net/oscnet/483bc3e33b3e2f3dc53dca38b68d70c4e64.jpg](https://oscimg.oschina.net/oscnet/483bc3e33b3e2f3dc53dca38b68d70c4e64.jpg)
@@ -51,10 +51,6 @@ from [github](https://github.com/grancode/outsourcing/)
 ## 注意
 
 - 上海易立德信息技术股份有限公司
-  > 来源：V2EX <https://www.v2ex.com/t/807555>
-  >
-  > 易立德 超级坑，本人刚离职。不顺眼或者有离职念头的一律 D 评级打 3 折，20 年年终奖也是打了 3 折实在受不了。每年的节假日（包括五一 、春节这些）是没有绩效的，90 一天算起来一年下来几千块都是被公司吞了。强烈建议大家不要去，如果要去美的 ，可以选其他供应商。这公司是我从业几年来本人见过听过的最无耻的外包公司，没有之一，公司管理层和 hr 总是想法设法从开发人员身上能扣一点是一点。
-  > 链接： <https://www.zhihu.com/question/378027854/answer/1872672395>
 - 博悦科创
 - 海万科技
 - 深圳市先进数通融安信息技术
@@ -119,3 +115,4 @@ from [github](https://github.com/grancode/outsourcing/)
 - 凯捷咨询(中国)有限公司
 - 印孚瑟斯技术（中国）有限公司
 - 信雅达系统工程股份有限公司
+- 北京汉克时代科技有限公司
