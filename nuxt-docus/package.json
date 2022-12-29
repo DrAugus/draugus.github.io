@@ -10,6 +10,8 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.2.5",
+    "@docsearch/css": "^3.3.1",
+    "@docsearch/js": "^3.3.1",
     "@vue-leaflet/vue-leaflet": "^0.7.0",
     "echarts": "^5.4.1",
     "leaflet": "^1.9.3",
