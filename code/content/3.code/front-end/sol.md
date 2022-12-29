@@ -112,3 +112,9 @@ export NODE_OPTIONS="--max-old-space-size=(X * 1024)" # Increase to X GB
 # Note: it doesn't have to be multiples of 1024.
 # max-old-space-size can be any number of memory megabytes (MB) you have available.
 ```
+
+### nuxt page 500 `This page is temporarily unavailable.`
+
+![e](/code/nuxt-err1.png)
+
+check commit info, found release 1.2.5 upgrade some deps, while this project's deps didn't upgrade. Essential reason is the deps version are inconsistent.
