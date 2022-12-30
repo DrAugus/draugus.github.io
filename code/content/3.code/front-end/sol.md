@@ -118,3 +118,6 @@ export NODE_OPTIONS="--max-old-space-size=(X * 1024)" # Increase to X GB
 ![e](/code/nuxt-err1.png)
 
 check commit info, found release 1.2.5 upgrade some deps, while this project's deps didn't upgrade. Essential reason is the deps version are inconsistent.
+
+但好像不是这样的，并不能修复  
+目前看到的是[仓库](https://github.com/nuxt-themes/docus) 在 v1.2.5 发布时，自动出包，抛出500错误。而之前的都是正常的

@@ -2,6 +2,22 @@
 
 > 代码过程遇到的一些问题速查表
 
+## version `GLIBCXX_3.4.29' not found
+
+查看报错 libc 的情况
+
+```shell
+strings /your_path/libstdc++.so.6 | grep GLIBC
+```
+
+发现确实没有 version `GLIBCXX_3.4.29’
+
+```shell
+find / -name libstdc++.so.6
+```
+
+在找到的列表里，逐个寻找 `GLIBCXX_3.4.29`，找到后，将此 `libstdc++.so.6` 替换到之前错误路径下
+
 ## OS error code 4: Interrupted system call
 
 ## error: invalid storage class for function  

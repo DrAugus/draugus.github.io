@@ -33,8 +33,10 @@ docker tag <your_image name or id> <tag>
 docker tag my-img my-repo:my-tag
 ```
 
+dockerfile_name 可以在同一项目里放置多个 dockerfile
+
 ```shell
-docker build -t my_image .
+docker build -t my_image -f dockerfile_name .
 ```
 
 ## run
