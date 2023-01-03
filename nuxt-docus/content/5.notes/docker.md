@@ -66,25 +66,64 @@ scp my_image.tar user@localhost:~/
 docker load < my_image.tar
 ```
 
+## multi-stage
+
+### 参数传递
+
+::list
+
+- ARG 声明传入的参数
+- FROM 分隔了不同的构建阶段
+- 不同构建阶段必须先声明 ARG 后才能使用
+::
+
+```docker [e.g.]
+ARG COMMIT_ID
+ARG APP_VERSION
+
+# stage 1
+FROM augus/basin-env:latest AS stage-compile
+
+ARG COMMIT_ID
+
+ENV WORK_PATH /augus
+
+WORKDIR ${WORK_PATH}
+RUN ${WORK_PATH}/a.sh ${COMMIT_ID}
+
+
+# stage 2
+FROM debian:latest AS stage-runtime
+
+ARG COMMIT_ID
+ARG APP_VERSION
+
+ENV WORK_PATH /augus
+ENV PROJECT_NAME "AUGUS"
+ENV PROJECT_SYS_TYPE "Linux_x86_64"
+ENV RELEASE ${PROJECT_NAME}_v${APP_VERSION}_${PROJECT_SYS_TYPE}_${COMMIT_ID}.deb
+
+RUN echo ${RELEASE}
+
+WORKDIR ${WORK_PATH}
+COPY --from=stage-compile ${WORK_PATH}/${RELEASE} .
+```
+
+通过 `--build-arg KEY="VAL"` 传入参数
+
+### 指定阶段
+
+```shell
+docker build --target stage-runtime -t augus/test:runtime .
+```
+
 ## cp
 
+### dockerfile 内互相拷贝
+
+参考上面的 e.g.
+
 ### 一个docker里的文件迁移到另一个docker
-
-要将一个Docker容器中的文件迁移到另一个Docker容器，你需要使用Docker的`cp`命令。首先，使用`docker ps`命令查看正在运行的Docker容器的ID。然后，使用以下命令将文件从源容器复制到目标容器：
-
-```shell
-docker cp [source_container_id]:/path/to/source/file [target_container_id]:/path/to/target/file
-```
-
-例如，如果要将一个名为`myfile.txt`的文件从源容器`4fa6e0f0c67a`复制到目标容器`8dbd9e392a96`，你可以使用以下命令：
-
-```shell
-docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
-```
-
-请注意，在上面的命令中，`/path/to/source/file`和`/path/to/target/file`都是相对于Docker容器中的根目录的路径。因此，如果文件在Docker容器中的其他目录下，你需要指定完整的路径。
-
-## 一个 docker 复制到另一个 docker
 
 要将一个Docker容器中的文件迁移到另一个Docker容器，你需要使用Docker的`cp`命令。首先，使用`docker ps`命令查看正在运行的Docker容器的ID。然后，使用以下命令将文件从源容器复制到目标容器：
 
@@ -107,7 +146,7 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 1. 打开一个文本编辑器，新建一个文件，并命名为“Dockerfile”（注意文件名的大小写）。
 2. 在文件中输入以下内容：
 
-    ```dockerfile
+    ```docker
     # 指定基础镜像
     FROM <base image>
     # 指定维护人员的名字和电子邮件地址
@@ -143,3 +182,12 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 　　总之，写 Dockerfile 需要注意很多细节，需要结合实际情况来进行调整和优化。如果遇到问题，可以查阅相关文档或者询问更有经验的开发人员。
 
 [install]: https://docs.docker.com/engine/install/ubuntu/#prerequisites
+
+----
+
+refer:
+::list
+
+- [Dockerfile 多阶段构建](https://yeasy.gitbook.io/docker_practice/image/multistage-builds)
+- [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
+::

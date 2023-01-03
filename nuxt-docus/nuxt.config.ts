@@ -23,6 +23,7 @@ export default defineNuxtConfig({
         'js', 'ts', 'html', 'css', 'vue',
         'cpp', 'py', 'sql', 'c',
         'diff', 'shell', 'markdown',
+        'docker',
         'json', 'yaml', 'bash', 'ini'
       ]
     },
