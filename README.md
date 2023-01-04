@@ -2,12 +2,12 @@
 
 ## All Site
 
-| site | 🇨🇳 | other countries | tech|
+| site | 🇨🇳 ([netlify][netlify]) | other countries ([vercel][vercel]) | tech|
 | :--: |:--: |:--: | :--:|
-| main site (now only game)|  [link][site0] | [link][site0]| vuepress vue3|
-| variety of notes | [link][site1-1] | [link][site1-2]| nuxt docus vue3 |
-| coding |[link][site2-1] | [link][site2-2]|nuxt docus vue3 |
-| art | [link][site3-1] | [link][site3-2]|nuxt docus vue3 |
+| main site (now only game)|  [online][site0] | [online][site0]| [vuepress][vuepress] [vue3][vue]|
+| variety of notes | [online][site1-1] | [online][site1-2]| [nuxt docus][docus] [vue3][vue] |
+| coding |[online][site2-1] | [online][site2-2]|[nuxt docus][docus] [vue3][vue] |
+| art | [online][site3-1] | [online][site3-2]|[nuxt docus][docus] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -78,3 +78,8 @@ You don't have to think about them. Just give them to the robot.
 [site2-2]: https://augus-code.vercel.app/
 [site3-1]: https://augus-art.netlify.app/
 [site3-2]: https://augus-art.vercel.app/
+[netlify]: https://netlify.com/
+[vercel]: https://vercel.com/
+[docus]: https://docus.dev
+[vue]: https://vuejs.org
+[vuepress]: https://v2.vuepress.vuejs.org
