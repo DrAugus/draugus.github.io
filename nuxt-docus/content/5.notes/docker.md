@@ -117,6 +117,18 @@ COPY --from=stage-compile ${WORK_PATH}/${RELEASE} .
 docker build --target stage-runtime -t augus/test:runtime .
 ```
 
+## check docker
+
+初始化判断docker中某镜像是否存在
+
+```shell
+CON=`docker image ls 'augus:latest' | wc -l`
+if [ $CON -eq 2 ]  #CON取值为2表示镜像存在，为1镜像不存在
+then
+docker rmi augus  #镜像存在时remove
+fi
+```
+
 ## cp
 
 ### dockerfile 内互相拷贝
