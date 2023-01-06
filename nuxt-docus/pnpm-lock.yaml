@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@docsearch/css': ^3.3.1
   '@docsearch/js': ^3.3.1
-  '@nuxt-themes/docus': 1.4.1
+  '@nuxt-themes/docus': 1.4.3
   '@vue-leaflet/vue-leaflet': ^0.7.0
   echarts: ^5.4.1
   leaflet: ^1.9.3
@@ -14,7 +14,7 @@ specifiers:
 devDependencies:
   '@docsearch/css': 3.3.1
   '@docsearch/js': 3.3.1
-  '@nuxt-themes/docus': 1.4.1_nuxt@3.0.0
+  '@nuxt-themes/docus': 1.4.3_nuxt@3.0.0
   '@vue-leaflet/vue-leaflet': 0.7.0_leaflet@1.9.3
   echarts: 5.4.1
   leaflet: 1.9.3
@@ -604,8 +604,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@nuxt-themes/docus/1.4.1_nuxt@3.0.0:
-    resolution: {integrity: sha512-CSODkpYEMyNQ5/CeRcHflJajpUXIYlIbTCWR4vjrSVMg8HA69Ok7Bg3F5wK2Oa5o8tUcr36+ipE9bS6qxjjInQ==}
+  /@nuxt-themes/docus/1.4.3_nuxt@3.0.0:
+    resolution: {integrity: sha512-B/krN08EDTQcWNm1SNAs/lRxYfZLG3EVLkRyhW5mVHY0gzC/C/XDp/AiuJL3drPfhYmoAGyF+9Wvb5GfLFWaiQ==}
     dependencies:
       '@nuxt-themes/elements': 0.4.4
       '@nuxt-themes/tokens': 1.5.3
