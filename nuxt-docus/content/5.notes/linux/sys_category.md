@@ -16,3 +16,5 @@
 * 常见的安装包格式 deb包,安装deb包的命令是“dpkg -参数”
 * 包管理工具 `apt-get`
 * 支持tar包
+
+大陆使用镜像资源超时，可以使用 [aliyun 镜像](https://developer.aliyun.com/mirror/debian)

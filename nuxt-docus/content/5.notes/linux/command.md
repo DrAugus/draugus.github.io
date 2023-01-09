@@ -237,6 +237,23 @@ e.g.
 In no event does tree print the file system constructs
 `.`(current directory) and`..` (previous directory).
 
+## cat
+
+Linux复制文件内容到另一个文件中
+
+```shell
+# 将a文件中的内容追加到b文件中的末尾命令
+cat a >> b
+
+# 将a文件中的内容覆盖b文件内容命令
+cat a > b
+
+# 清空文件内容
+> filename
+echo "" > filename
+cat /dev/null > filename
+```
+
 ## >
 
 输出重定向

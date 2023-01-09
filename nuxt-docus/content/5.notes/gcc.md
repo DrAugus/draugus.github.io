@@ -3,6 +3,8 @@ icon: twemoji:building-construction
 ---
 # gcc
 
+[版本对应](https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html)
+
 `gcc` 与 `g++` 分别是 `gnu` 的 `c/c++` 编译器 `gcc/g++` 在执行编译工作的时候，总共需要4步：
 
 1. 预处理, 生成 .i 的文件[预处理器cpp]

@@ -196,12 +196,12 @@ git checkout .
 4. 查看log找到需要的版本: git log
 5. 根据header checkout : git checkout XXXXXX
 
-> 关于分支
+## branch
 
-1. git branch
-2. git branch -a //查看历史
-3. git branch -d dev //删除本地分支
-4. git checkout -b dev origin/dev //checkout 远程
+1. `git branch`
+2. `git branch -a` //查看历史
+3. `git branch -d dev` or `git branch –delete dev` //删除分支
+4. `git checkout -b dev origin/dev` //checkout 远程
 
 ## git如何取消merge
 
