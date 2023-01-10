@@ -41,15 +41,29 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-## git add
+## push
 
-## git status
+### push to remote
+
+`git push <remote> <branch>`
+
+If your upstream branch is not already created, you will need to create it by running the “git push” command with the “-u” option for upstream.
+
+`git push -u origin feature`
+
+### push b to anther b
+
+`git push <remote> <local_branch>:<remote_name>`
+
+## status
 
 `git status`
 
 `-s` 参数来获得简短的输出结果
 
-## git diff
+`git status ./`
+
+## diff
 
 - 尚未缓存的改动：git diff
   - `git diff [file]`
@@ -59,7 +73,11 @@ git config --global user.name "Your Name"
 - 查看已缓存的与未缓存的所有改动：git diff HEAD
 - 显示摘要而非整个 diff：git diff --stat
 
-## git commit log
+## commit
+
+`git commit -m "msg"`
+
+### git commit log
 
 `git commit -m [message]`
 
@@ -80,7 +98,7 @@ git config --global user.name "Your Name"
 
 不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。
 
-### Header
+#### Header
 
 Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
 
@@ -110,7 +128,7 @@ Header部分只有一行，包括三个字段：type（必需）、scope（可�
     - 第一个字母小写
     - 结尾不加句号（.）
 
-### Body
+#### Body
 
 Body 部分是对本次 commit 的详细描述，可以分成多行。
 
@@ -128,7 +146,7 @@ Further paragraphs come after blank lines.
 1. 使用第一人称现在时，比如使用change而不是changed或changes。
 2. 应该说明代码变动的动机，以及与以前行为的对比。
 
-### Footer
+#### Footer
 
 Footer 部分只用于两种情况。
 
@@ -190,13 +208,20 @@ git checkout .
 
 ## git checkout 指定版本
 
-1. 切换到master: git checkout master
-2. 下载最新代码:  git pull
-3. 下载head： git checkout HEAD
-4. 查看log找到需要的版本: git log
-5. 根据header checkout : git checkout XXXXXX
+1. 切换到master: `git checkout master`
+2. 下载最新代码:  `git pull`
+3. 下载head： `git checkout HEAD`
+4. 查看log找到需要的版本: `git log`
+5. 根据header checkout : `git checkout XXXXXX`
 
 ## branch
+
+```bash
+git checkout <existing_branch>
+git checkout -b <new_branch>
+git switch <existing_branch>
+git switch -c <non_existing_branch>
+```
 
 1. `git branch`
 2. `git branch -a` //查看历史

@@ -195,9 +195,27 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 
 [install]: https://docs.docker.com/engine/install/ubuntu/#prerequisites
 
+## sol
+
+### 不同系统可能出现不同的问题
+
+在一次 docker 编译 c++ 代码实践中，mac 平台出现 `Relocations in generic ELF (EM: 62)` 异常，linux 平台可以正常编译
+
+### docker 源超时问题
+
+加上国内源，在 dockerfile 里导入
+
+```docker
+RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
+COPY source_aliyun /home
+RUN cat /home/source_aliyun >> /etc/apt/sources.list
+RUN apt-get update
+```
+
 ----
 
-refer:
+## refer
+
 ::list
 
 - [Dockerfile 多阶段构建](https://yeasy.gitbook.io/docker_practice/image/multistage-builds)
