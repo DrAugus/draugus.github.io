@@ -1,8 +1,4 @@
----
-icon: logos:java
----
-
-# JAVA
+# sol
 
 ## 线程
 

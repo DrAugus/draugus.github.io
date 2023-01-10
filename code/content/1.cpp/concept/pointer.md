@@ -1,5 +1,31 @@
 # 指针
 
+::alert
+Note that the `*` sign can be confusing here, as it does two different things in our code:
+::list
+
+- When used in declaration (`string* ptr`), it creates a pointer variable.
+- When not used in declaration, it act as a dereference operator.
+::
+::
+
+```cpp
+string food = "Pizza";
+string* ptr = &food;
+// Output the value of food (Pizza)
+cout << food << "\n";
+// Output the memory address of food (0x6dfed4)
+cout << &food << "\n";
+// Access the memory address of food and output its value (Pizza)
+cout << *ptr << "\n";
+// Change the value of the pointer
+*ptr = "Hamburger";
+// Output the new value of the pointer (Hamburger)
+cout << *ptr << "\n";
+// Output the new value of the food variable (Hamburger)
+cout << food << "\n";
+```
+
 ## 智能指针
 
 > 将原生指针封装成对象，来解决堆上内存泄漏的问题。
@@ -10,7 +36,7 @@
 
 当栈对象生存周期结束，智能指针会调用析构函数释放之前申请的内存，从而避免内存泄漏。
 
-智能指针是类，一定要有operator*和operator->();*传回所指的对象，->调用对象的成员。
+智能指针是类，一定要有`operator*`和`operator->();` `*`传回所指的对象，`->`调用对象的成员。
 
 1. shared_ptr：拥有共享对象所有权语义的智能指针；
 2. weak_ptr：到 shared_ptr 所管理对象的弱引用；
@@ -72,10 +98,10 @@ shared_ptr多个指针指向相同的对象，也叫共享指针。shared_ptr采
 
 shared_ptr, 关于shared_ptr使用需要记住什么？
 
-* 尽量避免使用raw pointer构建shared_ptr，至于原因此处不便于多讲，后续还有讲解
-* shared_ptr使得依据共享生命周期而经行地资源管理进行垃圾回收更为方便
-* shared_ptr对象的大小通常是unique_ptr的两倍，这个差异是由于Control Block导致的，并且shared_ptr的引用计数的操作是原子的，这里的分析也会在后续看到
-* 默认的资源销毁是采用delete，但是shared_ptr也支持用户提供deleter，与unique_ptr不同，不同类型的deleter对shared_ptr的类型没有影响。
+- 尽量避免使用raw pointer构建shared_ptr，至于原因此处不便于多讲，后续还有讲解
+- shared_ptr使得依据共享生命周期而经行地资源管理进行垃圾回收更为方便
+- shared_ptr对象的大小通常是unique_ptr的两倍，这个差异是由于Control Block导致的，并且shared_ptr的引用计数的操作是原子的，这里的分析也会在后续看到
+- 默认的资源销毁是采用delete，但是shared_ptr也支持用户提供deleter，与unique_ptr不同，不同类型的deleter对shared_ptr的类型没有影响。
 
 C++程序设计中使用堆内存是非常频繁的操作。C++11中引入了`智能指针`的概念，方便管理`堆内存`。
 使用`普通指针`，容易造成堆内存泄露（忘记释放），二次释放，程序发生异常时内存泄露等问题等，使用智能指针能更好的管理堆内存。
@@ -136,15 +162,15 @@ int main() {
 本质：指针是一个变量，存储内容是一个地址，指向内存的一个存储单元。而引用是原变量的一个别名，实质上和原变量是一个东西，是某块内存的别名。  
 指针的值可以为空，且非const指针可以被重新赋值以指向另一个不同的对象。而引用的值不能为空，并且引用在定义的时候必须初始化，一旦初始化，就和原变量“绑定”，不能更改这个绑定关系。
 
-* 引用必须被初始化，指针不必。
-* 引用初始化以后不能被改变，指针可以改变所指的对象。
-* 不存在指向空值的引用，但是存在指向空值的指针。
+- 引用必须被初始化，指针不必。
+- 引用初始化以后不能被改变，指针可以改变所指的对象。
+- 不存在指向空值的引用，但是存在指向空值的指针。
 
 ## 简述数组与指针的区别？
 
 数组要么在静态存储区被创建（如全局数组），要么在栈上被创建。指针可以随时指向任意类型的内存块。
 
-* 修改内容上的差别
+- 修改内容上的差别
 
     ```cpp
     char a[] = "hello";
@@ -153,7 +179,7 @@ int main() {
     p[0] = 'X'; // 编译器不能发现该错误，运行时错误
     ```
 
-* 用运算符`sizeof`可以计算出数组的容量（字节数）。`sizeof(p)` p 为指针得到的是一个指针变量的字节数，而不是p 所指的内存容量。C++/C
+- 用运算符`sizeof`可以计算出数组的容量（字节数）。`sizeof(p)` p 为指针得到的是一个指针变量的字节数，而不是p 所指的内存容量。C++/C
   语言没有办法知道指针所指的内存容量，除非在申请内存时记住它。注意当数组作为函数的参数进行传递时，该数组自动退化为同类型的指针。
 
     ```cpp
