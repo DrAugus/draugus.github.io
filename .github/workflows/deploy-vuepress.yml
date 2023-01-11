@@ -1,4 +1,4 @@
-name: deploy
+name: deploy-vuepress
 
 on:
   # make sure this is the branch you are using
