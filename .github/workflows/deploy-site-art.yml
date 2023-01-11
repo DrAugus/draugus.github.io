@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'art/**'      
   pull_request:
     types: [opened, synchronize]
     branches:
       - master
+    paths:
+      - 'art/**'  
 
 jobs:
   build:
