@@ -27,7 +27,6 @@ jobs:
             working-directory: ./nuxt-docus
 
     steps:
-      - uses: working-directory
       - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
