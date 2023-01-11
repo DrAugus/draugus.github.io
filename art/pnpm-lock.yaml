@@ -3,13 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@docsearch/css': ^3.3.1
   '@docsearch/js': ^3.3.1
-  '@nuxt-themes/docus': 1.4.4
+  '@nuxt-themes/docus': 1.4.5
   nuxt: 3.0.0
 
 devDependencies:
   '@docsearch/css': 3.3.1
   '@docsearch/js': 3.3.1
-  '@nuxt-themes/docus': 1.4.4_nuxt@3.0.0
+  '@nuxt-themes/docus': 1.4.5_nuxt@3.0.0
   nuxt: 3.0.0
 
 packages:
@@ -594,8 +594,8 @@ packages:
       fastq: 1.14.0
     dev: true
 
-  /@nuxt-themes/docus/1.4.4_nuxt@3.0.0:
-    resolution: {integrity: sha512-hVbFWD/2qotFVBQtau2eeR2g74k9lLdKZBU+voB2GTo6TbtC1SfVEUlh/KeSbR3DqvfIO1pNQnSTJFGvc4vMdg==}
+  /@nuxt-themes/docus/1.4.5_nuxt@3.0.0:
+    resolution: {integrity: sha512-qievU7VeETu6CvwYQ7wDRLbNblNugghGesWKz/NXWhtxjxShJlUr1cp6SOtK0/RRMRX5HYE/hDKSz6yqMcR6Ew==}
     dependencies:
       '@nuxt-themes/elements': 0.4.4
       '@nuxt-themes/tokens': 1.5.3
