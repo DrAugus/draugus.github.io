@@ -50,6 +50,6 @@ jobs:
         with:
           repo: DrAugus/site-nuxt-docus
           target_branch: gh-pages
-          build_dir: nuxt-docus/dist
+          build_dir: ./dist
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

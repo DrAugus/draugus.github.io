@@ -50,6 +50,6 @@ jobs:
         with:
           repo: DrAugus/site-code
           target_branch: gh-pages
-          build_dir: code/dist
+          build_dir: ./dist
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
