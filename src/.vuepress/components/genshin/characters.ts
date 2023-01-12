@@ -864,4 +864,15 @@ export const CHARACTER = {
     ele: Element.dendro,
     weapon: Weapon.sword
   },
+  dehya: {
+    id: "dehya",
+    name: "迪希雅",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.pyro,
+    weapon: Weapon.claymore
+  },
 }

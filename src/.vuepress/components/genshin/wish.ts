@@ -812,10 +812,10 @@ export const WISH = {
     {
       name: "",
       image: 1,
-      shortName: "",
+      shortName: "Dehya",
       start: "2023-03-01 11:00:00 +0800",
       end: "2023-03-21 17:59:59 +0800",
-      wish5star: "",
+      wish5star: "dehya",
       wish4star: [],
       version: "3.5",
       wishName: "「」",
