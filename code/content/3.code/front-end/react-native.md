@@ -23,3 +23,13 @@ pod install
 ### yogakit/yogakit.modulemap' not found React Native
 
 [refer](https://github.com/facebook/react-native/issues/29605)
+
+[useful](https://github.com/facebook/react-native/issues/29605#issuecomment-695197302)
+
+> Maybe u can open `xxx.xcworkspace` instead of `xxx.xcodeproj`
+
+### /xxx/ios/xxx.xcodeproj: error: The linked library 'libPods-xxx.a' is missing one or more architectures required by this target: x86_64. (in target 'xxx' from project 'xxx')
+
+```shell
+arch -x86_64 pod install
+```

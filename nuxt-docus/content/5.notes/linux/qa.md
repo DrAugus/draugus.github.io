@@ -1,5 +1,9 @@
 # Linux 问题收集
 
+## 命令行使用代理
+
+`export HTTPS_PROXY=your_proxy_addr`
+
 ## zsh: 权限不够解决方法
 
 `chmod u+x *.sh`
