@@ -197,6 +197,12 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 
 ## sol
 
+### debian 源加入 阿里云 的镜像源 会抛出 Certificate verification failed
+
+Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown. Could not handshake: Error in the certificate verification.
+
+todo
+
 ### 不同系统可能出现不同的问题
 
 在一次 docker 编译 c++ 代码实践中，mac 平台出现 `Relocations in generic ELF (EM: 62)` 异常，linux 平台可以正常编译

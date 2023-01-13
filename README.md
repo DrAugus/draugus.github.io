@@ -2,12 +2,14 @@
 
 ## All Site
 
-| site | 🇨🇳 ([netlify][netlify]) | other countries ([vercel][vercel]) | tech|
+> cause netlify has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account
+
+| site | ~~🇨🇳 ([netlify][netlify])~~ | other countries ([vercel][vercel]) | tech|
 | :--: |:--: |:--: | :--:|
-| main site (now only game)|  [online][site0] | [online][site0]| [vuepress][vuepress] [vue3][vue]|
-| variety of notes | [online][site1-1] | [online][site1-2]| [nuxt docus][docus] [vue3][vue] |
-| coding |[online][site2-1] | [online][site2-2]|[nuxt docus][docus] [vue3][vue] |
-| art | [online][site3-1] | [online][site3-2]|[nuxt docus][docus] [vue3][vue] |
+| main site (now only game)|  ~~[online][site0]~~ | [online][site0] | [vuepress][vuepress] [vue3][vue]|
+| variety of notes | ~~[online][site1-1]~~ | [online][site1-2] | [nuxt docus][docus] [vue3][vue] |
+| coding | ~~[online][site2-1]~~ | [online][site2-2] | [nuxt docus][docus] [vue3][vue] |
+| art | ~~[online][site3-1]~~ | [online][site3-2] | [nuxt docus][docus] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
