@@ -42,8 +42,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
-        run: pnpm build
+      - name: Generate
+        run: pnpm generate
       
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.7.0
