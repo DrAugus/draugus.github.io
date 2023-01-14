@@ -4,7 +4,7 @@
 
 <script>
 //1 English 2 Italian
-import english from "~/assets/json/words/english.json";
+import english from "~/assets/json/language/english.json";
 
 import Language from "./Language.vue";
 

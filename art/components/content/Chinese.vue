@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import chinese from "~/assets/json/words/chinese.json";
+import chinese from "~/assets/json/language/chinese.json";
 
 export default {
   name: "Chinese",
