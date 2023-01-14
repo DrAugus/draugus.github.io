@@ -12,7 +12,7 @@ import util
 # 获取yaml文件路径
 # yaml_path = 'config.yml'
 # if platform.system() == "Windows":
-yaml_path = 'code/genshin/config.yml'
+yaml_path = 'script/genshin/config.yml'
 
 f = open(yaml_path, 'rb')
 config = yaml.safe_load_all(f)
