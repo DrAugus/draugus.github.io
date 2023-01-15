@@ -51,6 +51,7 @@ jobs:
         with:
           repo: DrAugus/site-nuxt-docus
           target_branch: gh-pages
-          build_dir: .output/public
+          build_dir: nuxt-docus/.output/public
+          jekyll: false
         env:
           GH_PAT: ${{ secrets.DEPLOY_GH }}

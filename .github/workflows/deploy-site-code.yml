@@ -51,6 +51,7 @@ jobs:
         with:
           repo: DrAugus/site-code
           target_branch: gh-pages
-          build_dir: .output/public
+          build_dir: code/.output/public
+          jekyll: false
         env:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
