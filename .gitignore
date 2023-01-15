@@ -7,3 +7,4 @@ src/.vuepress/dist/
 .DS_Store
 __pycache__/
 .augus_output
+test

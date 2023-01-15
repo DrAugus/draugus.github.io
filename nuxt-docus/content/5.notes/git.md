@@ -226,7 +226,8 @@ git switch -c <non_existing_branch>
 1. `git branch`
 2. `git branch -a` //查看历史
 3. `git branch -d dev` or `git branch –delete dev` //删除分支
-4. `git checkout -b dev origin/dev` //checkout 远程
+4. `git push <remote-name> --delete <branch-name>` //删除远程分支
+5. `git checkout -b dev origin/dev` //checkout 远程
 
 ## git如何取消merge
 

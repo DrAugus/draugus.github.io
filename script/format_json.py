@@ -1,6 +1,6 @@
 # 逐行读取 按行加入 ["",""]
 def format_json(sa, sb):
-    str = '["' + sa + '","' + sb + '"]'
+    str = '["' + sa + '","' + sb + '"],'
     print(str)
     return str
 

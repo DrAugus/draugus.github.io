@@ -33,6 +33,16 @@ export const WEAR_CONFIG = {
             comment: "卫衣就按这个买",
         },
         {
+            id: 455817,
+            name: "UT卫衣",
+            size: "XL",
+            numeric_size: "180/108B",
+            color: "63 Blue 天蓝色",
+            price: [199, 99],
+            shop: "UNIQLO",
+            comment: "卫衣就按这个买",
+        },
+        {
             id: 441257,
             name: "摇粒绒半拉链套头衫(长袖)",
             size: "XL",
