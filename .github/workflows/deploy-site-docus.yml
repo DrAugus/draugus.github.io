@@ -5,7 +5,8 @@ on:
     branches:
       - master
     paths:
-      - 'nuxt-docus/**'      
+      - 'nuxt-docus/**'     
+      - '.github/workflows/**' 
   pull_request:
     types: [opened, synchronize]
     branches:
@@ -52,4 +53,4 @@ jobs:
           target_branch: gh-pages
           build_dir: .output/public
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GH_PAT: ${{ secrets.DEPLOY_GH }}
