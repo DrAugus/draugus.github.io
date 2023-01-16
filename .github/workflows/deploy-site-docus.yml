@@ -5,14 +5,14 @@ on:
     branches:
       - master
     paths:
-      - 'nuxt-docus/**'     
-      - '.github/workflows/**' 
+      - "nuxt-docus/**"
+      - ".github/workflows/deploy-site-docus.yml"
   pull_request:
     types: [opened, synchronize]
     branches:
       - master
     paths:
-      - 'nuxt-docus/**' 
+      - "nuxt-docus/**"
 
 jobs:
   build:
@@ -20,12 +20,14 @@ jobs:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
         node: [16]
+        deploy-dir: [nuxt-docus/.output/public]
+        deploy-repo: [site-nuxt-docus]
 
     runs-on: ${{ matrix.os }}
 
     defaults:
-          run:
-            working-directory: ./nuxt-docus
+      run:
+        working-directory: ./nuxt-docus
 
     steps:
       - uses: actions/checkout@v3
@@ -42,16 +44,16 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-      
+
       - name: Generate
         run: pnpm generate
-      
+
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2.7.0
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          repo: DrAugus/site-nuxt-docus
+          repo: DrAugus/${{ matrix.deploy-repo }}
           target_branch: gh-pages
-          build_dir: nuxt-docus/.output/public
+          build_dir: ${{ matrix.deploy-dir }}
           jekyll: false
         env:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
