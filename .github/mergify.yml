@@ -12,9 +12,10 @@ pull_request_rules:
       # 这三个不一定全都会响应 在此判定 任意一个失败都不可以
       - not:
           or:
-            - check-failure=deploy
-            - check-failure=Vercel – art
-            - check-failure=Vercel – docus
+            - check-failure=ci-deploy-vuepress
+            - check-failure=ci-deploy-art
+            - check-failure=ci-deploy-code
+            - check-failure=ci-deploy-nuxt-docus
     actions:
       merge:
         method: merge
@@ -24,9 +25,10 @@ pull_request_rules:
       - author=renovate[bot]
       - not:
           or:
-            - check-failure=deploy
-            - check-failure=Vercel – art
-            - check-failure=Vercel – docus
+            - check-failure=ci-deploy-vuepress
+            - check-failure=ci-deploy-art
+            - check-failure=ci-deploy-code
+            - check-failure=ci-deploy-nuxt-docus
     actions:
       merge:
         method: merge
@@ -37,9 +39,10 @@ pull_request_rules:
       - head~=^requires-io
       - not:
           or:
-            - check-failure=deploy
-            - check-failure=Vercel – art
-            - check-failure=Vercel – docus
+            - check-failure=ci-deploy-vuepress
+            - check-failure=ci-deploy-art
+            - check-failure=ci-deploy-code
+            - check-failure=ci-deploy-nuxt-docus
     actions:
       merge:
         method: merge
