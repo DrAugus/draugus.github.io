@@ -667,7 +667,7 @@ export const WISH = {
       start: "2022-11-02 11:00:00 +0800",
       end: "2022-11-18 17:59:59 +0800",
       wish5star: "nahida",
-      wish4star: ["Razor","Noelle","Bennett"],
+      wish4star: ["Razor", "Noelle", "Bennett"],
       version: "3.2",
       wishName: "「月草的赐慧」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -679,7 +679,7 @@ export const WISH = {
       start: "2022-11-02 11:00:00 +0800",
       end: "2022-11-18 17:59:59 +0800",
       wish5star: "yoimiya",
-      wish4star: ["Razor","Noelle","Bennett"],
+      wish4star: ["Razor", "Noelle", "Bennett"],
       version: "3.2",
       wishName: "「焰色天河」",
       wish_2: true,
@@ -761,15 +761,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "Caution in Confidence",
       image: 1,
       shortName: "Alhaitham",
       start: "2023-01-18 11:00:00 +0800",
       end: "2023-02-07 17:59:59 +0800",
       wish5star: "alhaitham",
-      wish4star: [],
+      wish4star: ["Yaoyao", "Yun Jin", "Xinyan"],
       version: "3.4",
-      wishName: "「」",
+      wishName: "「敕诫枢谋」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -779,7 +779,7 @@ export const WISH = {
       start: "2023-01-18 11:00:00 +0800",
       end: "2023-02-07 17:59:59 +0800",
       wish5star: "xiao",
-      wish4star: [],
+      wish4star: ["Yaoyao", "Yun Jin", "Xinyan"],
       wishName: "「烟火之邀」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -791,7 +791,7 @@ export const WISH = {
       start: "2023-02-07 18:00:00 +0800",
       end: "2023-02-28 14:59:59 +0800",
       wish5star: "hu_tao",
-      wish4star: [ ],
+      wish4star: ["Xingqiu", "Ningguang", "Beidou"],
       version: "3.4",
       wishName: "「雪霁梅香」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -803,7 +803,7 @@ export const WISH = {
       start: "2023-02-07 18:00:00 +0800",
       end: "2023-02-28 14:59:59 +0800",
       wish5star: "yelan",
-      wish4star: [],
+      wish4star: ["Xingqiu", "Ningguang", "Beidou"],
       version: "3.4",
       wishName: "「素霓伣天」",
       wish_2: true,

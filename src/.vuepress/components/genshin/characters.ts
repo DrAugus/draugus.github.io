@@ -845,7 +845,7 @@ export const CHARACTER = {
   alhaitham: {
     id: "alhaitham",
     name: "艾尔海森",
-    prefix: "",
+    prefix: "诲韬诤言",
     star: 5,
     event_exclusive: true,
     intro: "",
