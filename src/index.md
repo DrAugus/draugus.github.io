@@ -1,20 +1,21 @@
 ---
 home: true
-title: 祈愿时间轴
+title: 首页
 heroImage: null
-heroText: 祈愿时间轴
-tagline: 全部祈愿信息
+heroText: 当然是原神啦
+tagline: 近期活动
 actions:
-- text: 原神
+- text: 复刻祈愿
   link: /game/genshin/
+  type: secondary
 - text: 当前祈愿
   link: /game/genshin/wish
   type: primary
+footer: MIT Licensed | Copyright © 2020-present AugusMeow
 ---
 
-
-<GenshinTimeline />
+<GenshinEvents />
 
 <script setup lang="ts">
-import GenshinTimeline from "@GenshinTimeline";
+import GenshinEvents from "@GenshinEvents";
 </script>
