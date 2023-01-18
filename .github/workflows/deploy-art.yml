@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - "art/**"
-      - ".github/workflows/deploy-site-art.yml"
+      - ".github/workflows/deploy-art.yml"
   pull_request:
     types: [opened, synchronize]
     branches:

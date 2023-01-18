@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - "code/**"
-      - ".github/workflows/deploy-site-code.yml"
+      - ".github/workflows/deploy-code.yml"
   pull_request:
     types: [opened, synchronize]
     branches:

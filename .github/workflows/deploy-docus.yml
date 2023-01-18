@@ -6,7 +6,7 @@ on:
       - master
     paths:
       - "nuxt-docus/**"
-      - ".github/workflows/deploy-site-docus.yml"
+      - ".github/workflows/deploy-docus.yml"
   pull_request:
     types: [opened, synchronize]
     branches:
