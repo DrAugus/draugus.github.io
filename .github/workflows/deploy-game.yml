@@ -62,10 +62,10 @@ jobs:
 
       # 防止加载不到 _开头的文件 下面已经有了
       # @see https://github.com/orgs/github-community/discussions/19794
-      - name: Add nojekyll
-        run: |
-          cd src/.vuepress/dist
-          touch .nojekyll
+      # - name: Add nojekyll
+      #   run: |
+      #     cd src/.vuepress/dist
+      #     touch .nojekyll
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -77,6 +77,6 @@ jobs:
           repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
           target_branch: gh-pages
           build_dir: ${{ matrix.deploy-dir }}
-          # jekyll: false
+          jekyll: false
         env:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
