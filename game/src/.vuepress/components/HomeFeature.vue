@@ -1,9 +1,9 @@
 <template>
     <div class="features">
         <!-- v 0 head v 1 body -->
-        <div class="feature" v-for="(v,i) in msg">
+        <div class="feature" v-for="(v, i) in msg">
             <h2>{{ v[0] }}</h2>
-            <p>{{ v[1] }}</p>
+            <p v-for="(vv, ii) in v[1]">{{ vv }}</p>
         </div>
     </div>
 </template>
@@ -20,9 +20,9 @@ export default defineComponent({
             default() { return [] }
         },
     },
-    data(){
-        return{
-            msg: this.msg,
+    data() {
+        return {
+            // info: this.msg,
         }
     },
 })

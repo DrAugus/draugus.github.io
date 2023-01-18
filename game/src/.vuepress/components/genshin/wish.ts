@@ -745,7 +745,7 @@ export const WISH = {
       wish4star: ['Rosaria', 'Sayu', 'Kujou Sara'],
       version: "3.3",
       wishName: "「影寂天下人」",
-      url: "https://bbs.mihoyo.com/ys/article/9004344"
+      url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
       name: "Azure Excursion",

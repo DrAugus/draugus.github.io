@@ -5,17 +5,42 @@
 <script>
 import HomeFeature from '../HomeFeature.vue';
 import { defineComponent } from 'vue'
+import { current, future } from './wishRecent'
 
-let msg = [
-    ["当前祈愿1", "1"],
-    ["当前祈愿2", "1"],
-    ["未来1", "1"],
-    ["未来2", "1"],
-    ["复刻期待", "1"],
-    ["活动1", "1"],
-    ["活动2", "1"],
-    ["活动3", "1"],
-    ["活动4", "1"],
+// title 5 star
+// body time and 4 star
+// console.log(current)
+
+const getEventWish = (obj, arr) => {
+    let lenWish = obj.index.length
+    for (let i = 0; i < lenWish; ++i) {
+        if (i > 2) break;
+        let title = obj.wish5star[i]
+        let body = [obj.wish4star[i], obj.date[i]]
+        console.log(title, body)
+        arr.push([title, body])
+    }
+}
+
+let wishCurrent = []
+let wishFuture = []
+getEventWish(current, wishCurrent)
+getEventWish(future, wishFuture)
+
+console.log("wishCurrent", wishCurrent)
+console.log("wishFuture", wishFuture)
+let temp = [
+    ["复刻期待", ["todo"]],
+    ["活动1", ["todo"]],
+    ["活动2", ["todo"]],
+    ["活动3", ["todo"]],
+    ["活动4", ["todo"]],
+]
+
+const msg = [
+    ...wishCurrent,
+    ...wishFuture,
+    ...temp
 ]
 
 export default defineComponent({
@@ -30,3 +55,14 @@ export default defineComponent({
     },
 })
 </script> 
+
+
+<style scoped>
+.wish-current {
+    color: rgb(74, 191, 138);
+}
+
+.wish-future {
+    color: rgb(74, 191, 138);
+}
+</style>

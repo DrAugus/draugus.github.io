@@ -20,7 +20,7 @@ const eventObj = processEvent();
 
 let wishCharacters = eventObj.events[0];
 let wishLength = wishCharacters.length;
-
+// console.log(wishCharacters)
 
 //----------------------------
 
@@ -66,41 +66,58 @@ const getWishObj = () => {
 let objWish = getWishObj();
 console.log("objWish", objWish);
 
-export let current = {
-    able: objWish.wishIndex.length > 0,
-    currentDate: [],
-    currentSrc: []
-};
-for (let v of objWish.wishIndex) {
-    let picName = replaceAndLow(wishCharacters[v].name) + "_" + wishCharacters[v].image;
+const getWish = (wish) => {
+    let picName = replaceAndLow(wish.name) + "_" + wish.image;
     let img = "https://github.com/DrAugus/data/blob/master/game/genshin/wish/";
     img += picName;
     img += ".jpg?raw=true";
-    current.currentSrc.push(img);
-    let s = formatDate(dayjs(wishCharacters[v].start));
-    let e = formatDate(dayjs(wishCharacters[v].end));
+    let s = formatDate(dayjs(wish.start));
+    let e = formatDate(dayjs(wish.end));
     // console.log(s, e);
-    current.currentDate.push(s + "~" + e);
+    let date = s + " ~ " + e
+    let wish5star = wish.shortName
+    let wish4star = wish.wish4star.length > 0 ? wish.wish4star : ""
+    return {
+        date,
+        src: img,
+        wish5star,
+        wish4star
+    }
+}
+
+export let current = {
+    index: objWish.wishIndex,
+    able: objWish.wishIndex.length > 0,
+    date: [],
+    src: [],
+    wish5star: [],
+    wish4star: []
+};
+for (let v of objWish.wishIndex) {
+    const obj = getWish(wishCharacters[v])
+    current.date.push(obj.date);
+    current.src.push(obj.src);
+    current.wish4star.push(obj.wish4star);
+    current.wish5star.push(obj.wish5star);
 }
 
 export let future = {
+    index: objWish.comingIndex,
     able: objWish.comingIndex.length > 0,
-    futureDate: [],
-    futureSrc: []
+    date: [],
+    src: [],
+    wish5star: [],
+    wish4star: []
 };
 for (let v of objWish.comingIndex) {
-    let picName = replaceAndLow(wishCharacters[v].name) + "_" + wishCharacters[v].image;
-    let img = "https://github.com/DrAugus/data/blob/master/game/genshin/wish/";
-    img += picName;
-    img += ".jpg?raw=true";
-    future.futureSrc.push(img);
-    let s = formatDate(dayjs(wishCharacters[v].start));
-    let e = formatDate(dayjs(wishCharacters[v].end));
-    // console.log(s, e);
-    future.futureDate.push(s + "~" + e);
+    const obj = getWish(wishCharacters[v])
+    future.date.push(obj.date);
+    future.src.push(obj.src);
+    future.wish4star.push(obj.wish4star);
+    future.wish5star.push(obj.wish5star);
 }
 
-// console.log(current, future);
+console.log(current, future);
 export const wishDeadline = () => current.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) : -1;
 export const wishBegin = () => future.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) : -1;
 

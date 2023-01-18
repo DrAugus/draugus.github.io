@@ -4,9 +4,9 @@
 
     <h2>当前祈愿</h2>
     <h3>{{ end }} 后结束</h3>
-    <blockquote>祈愿周期：{{ current.currentDate[0] }}</blockquote>
+    <blockquote>祈愿周期：{{ current.date[0] }}</blockquote>
 
-    <div v-for="(item, index) in current.currentSrc">
+    <div v-for="(item, index) in current.src">
       <img :src="item">
     </div>
 
@@ -19,9 +19,9 @@
 
     <h2>未来祈愿</h2>
     <h3>{{ begin }} 后开始</h3>
-    <blockquote>祈愿周期：{{ future.futureDate[0] }}</blockquote>
+    <blockquote>祈愿周期：{{ future.date[0] }}</blockquote>
 
-    <div v-for="(item, index) in future.futureSrc">
+    <div v-for="(item, index) in future.src">
       <img :src="item">
 
     </div>

@@ -45,19 +45,19 @@ run `pnpm i && pnpm dev`
 
 #### current dir, as vuepress
 
-make sure all vuepress plugins are up to date.
+make sure all vuepress && plugins are up to date.
 
-plugins
+1. vuepress
 
-```shell
-yarn add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
-```
+    ```shell
+    yarn add vuepress@next && yarn install && yarn upgrade
+    ```
 
-vuepress and theme
+2. plugins
 
-```shell
-yarn add vuepress@next && yarn install && yarn upgrade
-```
+    ```shell
+    yarn add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
+    ```
 
 #### others
 
