@@ -1,4 +1,4 @@
-name: ci-deploy-vuepress
+name: ci-deploy-game
 
 on:
   # make sure this is the branch you are using
@@ -6,22 +6,32 @@ on:
     branches:
       - master
     paths:
-      - yarn.lock
-      - package.json
-      - "src/**"
+      - "game/**"
+      - ".github/workflows/deploy-site-game.yml"
   # 手动触发部署
   # workflow_dispatch:
   pull_request:
     branches:
       - master
     paths:
-      - yarn.lock
-      - package.json
-      - "src/**"
+      - "game/**"
+      - ".github/workflows/deploy-site-game.yml"
 
 jobs:
-  deploy-vuepress:
-    runs-on: ubuntu-latest
+  deploy-game:
+    strategy:
+      matrix:
+        os: [ubuntu-latest] # macos-latest, windows-latest
+        node: [16]
+        deploy-dir: [game/src/.vuepress/dist]
+        deploy-user: [augusmeow]
+        deploy-repo: [game]
+
+    runs-on: ${{ matrix.os }}
+
+    defaults:
+      run:
+        working-directory: ./game
 
     steps:
       - name: Checkout
@@ -36,7 +46,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           # 选择要使用的 node 版本
-          node-version: 16
+          node-version: ${{ matrix.node }}
           cache: yarn
 
       # 安装依赖
@@ -51,22 +61,23 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=4096
         run: yarn run augus:build
 
-      # 防止加载不到 _开头的文件
+      # 防止加载不到 _开头的文件 下面已经有了
       # @see https://github.com/orgs/github-community/discussions/19794
-      - name: Add nojekyll
-        run: |
-          cd src/.vuepress/dist
-          touch .nojekyll
+      # - name: Add nojekyll
+      #   run: |
+      #     cd src/.vuepress/dist
+      #     touch .nojekyll
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
+       # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
+          
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          # 部署到 gh-pages 分支
+          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
           target_branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
-          build_dir: src/.vuepress/dist
+          build_dir: ${{ matrix.deploy-dir }}
+          jekyll: false
         env:
-          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GH_PAT: ${{ secrets.DEPLOY_GH }}

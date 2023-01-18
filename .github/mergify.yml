@@ -14,7 +14,7 @@ pull_request_rules:
       # https://docs.mergify.com/conditions/#github-actions
       - not:
           or:
-            - check-failure=deploy-vuepress
+            - check-failure=deploy-game
             - check-failure=deploy-art
             - check-failure=deploy-code
             - check-failure=deploy-docus
@@ -27,7 +27,7 @@ pull_request_rules:
       - author=renovate[bot]
       - not:
           or:
-            - check-failure=deploy-vuepress
+            - check-failure=deploy-game
             - check-failure=deploy-art
             - check-failure=deploy-code
             - check-failure=deploy-docus
@@ -41,7 +41,7 @@ pull_request_rules:
       - head~=^requires-io
       - not:
           or:
-            - check-failure=deploy-vuepress
+            - check-failure=deploy-game
             - check-failure=deploy-art
             - check-failure=deploy-code
             - check-failure=deploy-docus

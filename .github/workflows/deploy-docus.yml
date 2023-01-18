@@ -1,33 +1,34 @@
-name: ci-deploy-code
+name: ci-deploy-docus
 
 on:
   push:
     branches:
       - master
     paths:
-      - "code/**"
-      - ".github/workflows/deploy-site-code.yml"
+      - "nuxt-docus/**"
+      - ".github/workflows/deploy-site-docus.yml"
   pull_request:
     types: [opened, synchronize]
     branches:
       - master
     paths:
-      - "code/**"
+      - "nuxt-docus/**"
 
 jobs:
-  deploy-code:
+  deploy-docus:
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
         node: [16]
-        deploy-dir: [code/.output/public]
-        deploy-repo: [site-code]
+        deploy-dir: [nuxt-docus/.output/public]
+        deploy-user: [augusmeow]
+        deploy-repo: [docus]
 
     runs-on: ${{ matrix.os }}
 
     defaults:
       run:
-        working-directory: ./code
+        working-directory: ./nuxt-docus
 
     steps:
       - name: Checkout
@@ -58,7 +59,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          repo: DrAugus/${{ matrix.deploy-repo }}
+          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
           target_branch: gh-pages
           build_dir: ${{ matrix.deploy-dir }}
           jekyll: false
