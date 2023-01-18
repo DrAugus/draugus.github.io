@@ -51,6 +51,7 @@ jobs:
       - name: Generate
         env:
           BASE: /${{ matrix.deploy-repo }}/
+          NUXT_APP_BASE_URL: /${{ matrix.deploy-repo }}/
           HOSTNAME: https://draugus.github.io/
           NODE_OPTIONS: --max_old_space_size=4096
         run: pnpm generate
