@@ -80,3 +80,12 @@ jobs:
           jekyll: false
         env:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
+
+      # current repo
+      - name: Deploy to GitHub Pages Home Site
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          build_dir: ${{ matrix.deploy-dir }}
+          jekyll: false
+        env:
+          GH_PAT: ${{ secrets.DEPLOY_GH }}
