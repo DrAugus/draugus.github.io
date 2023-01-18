@@ -2,24 +2,24 @@
 # yarn lockfile v1
 
 
-"@algolia/autocomplete-core@1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-core/-/autocomplete-core-1.7.2.tgz#8abbed88082f611997538760dffcb43b33b1fd1d"
-  integrity sha512-eclwUDC6qfApNnEfu1uWcL/rudQsn59tjEoUYZYE2JSXZrHLRjBUGMxiCoknobU2Pva8ejb0eRxpIYDtVVqdsw==
+"@algolia/autocomplete-core@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-core/-/autocomplete-core-1.7.4.tgz#85ff36b2673654a393c8c505345eaedd6eaa4f70"
+  integrity sha512-daoLpQ3ps/VTMRZDEBfU8ixXd+amZcNJ4QSP3IERGyzqnL5Ch8uSRFt/4G8pUvW9c3o6GA4vtVv4I4lmnkdXyg==
   dependencies:
-    "@algolia/autocomplete-shared" "1.7.2"
+    "@algolia/autocomplete-shared" "1.7.4"
 
-"@algolia/autocomplete-preset-algolia@1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.2.tgz#9cd4f64b3d64399657ee2dc2b7e0a939e0713a26"
-  integrity sha512-+RYEG6B0QiGGfRb2G3MtPfyrl0dALF3cQNTWBzBX6p5o01vCCGTTinAm2UKG3tfc2CnOMAtnPLkzNZyJUpnVJw==
+"@algolia/autocomplete-preset-algolia@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-preset-algolia/-/autocomplete-preset-algolia-1.7.4.tgz#610ee1d887962f230b987cba2fd6556478000bc3"
+  integrity sha512-s37hrvLEIfcmKY8VU9LsAXgm2yfmkdHT3DnA3SgHaY93yjZ2qL57wzb5QweVkYuEBZkT2PIREvRoLXC2sxTbpQ==
   dependencies:
-    "@algolia/autocomplete-shared" "1.7.2"
+    "@algolia/autocomplete-shared" "1.7.4"
 
-"@algolia/autocomplete-shared@1.7.2":
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.2.tgz#daa23280e78d3b42ae9564d12470ae034db51a89"
-  integrity sha512-QCckjiC7xXHIUaIL3ektBtjJ0w7tTA3iqKcAE/Hjn1lZ5omp7i3Y4e09rAr9ZybqirL7AbxCLLq0Ra5DDPKeug==
+"@algolia/autocomplete-shared@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-shared/-/autocomplete-shared-1.7.4.tgz#78aea1140a50c4d193e1f06a13b7f12c5e2cbeea"
+  integrity sha512-2VGCk7I9tA9Ge73Km99+Qg87w0wzW4tgUruvWAn/gfey1ZXgmxZtyIRBebk35R1O8TbK77wujVtCnpsGpRy1kg==
 
 "@algolia/cache-browser-local-storage@4.14.2":
   version "4.14.2"
@@ -250,27 +250,27 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.20.5.tgz#7f3c7335fe417665d929f34ae5dceae4c04015e8"
   integrity sha512-r27t/cy/m9uKLXQNWWebeCUHgnAZq0CpG1OwKRxzJMP1vpSU4bSIK2hq+/cp0bQxetkXx38n09rNu8jVkcK/zA==
 
-"@docsearch/css@3.3.0", "@docsearch/css@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.3.0.tgz#d698e48302d12240d7c2f7452ccb2d2239a8cd80"
-  integrity sha512-rODCdDtGyudLj+Va8b6w6Y85KE85bXRsps/R4Yjwt5vueXKXZQKYw0aA9knxLBT6a/bI/GMrAcmCR75KYOM6hg==
+"@docsearch/css@3.3.2", "@docsearch/css@^3.2.0":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@docsearch/css/-/css-3.3.2.tgz#2c49995e6fbc7834c75f317b277ed6e4019223a4"
+  integrity sha512-dctFYiwbvDZkksMlsmc7pj6W6By/EjnVXJq5TEPd05MwQe+dcdHJgaIn1c8wfsucxHpIsdrUcgSkACHCq6aIhw==
 
-"@docsearch/js@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@docsearch/js/-/js-3.3.0.tgz#c8f614b722cc8a6375e83f9c27557e9398d6a4d4"
-  integrity sha512-oFXWRPNvPxAzBhnFJ9UCFIYZiQNc3Yrv6912nZHw/UIGxsyzKpNRZgHq8HDk1niYmOSoLKtVFcxkccpQmYGFyg==
+"@docsearch/js@^3.2.0":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@docsearch/js/-/js-3.3.2.tgz#fd7d5dfdd79abfe2bc8011b119215e0b08e33138"
+  integrity sha512-k2yiB9attFvKoiYswrRtKhIO+qHuzAj1FHYfFWrKz3wSzB2G6s/7EZL9Rf6iytUo1Ok00LUj2C6mWoOnsUTkxg==
   dependencies:
-    "@docsearch/react" "3.3.0"
+    "@docsearch/react" "3.3.2"
     preact "^10.0.0"
 
-"@docsearch/react@3.3.0", "@docsearch/react@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-3.3.0.tgz#b8ac8e7f49b9bf2f96d34c24bc1cfd097ec0eead"
-  integrity sha512-fhS5adZkae2SSdMYEMVg6pxI5a/cE+tW16ki1V0/ur4Fdok3hBRkmN/H8VvlXnxzggkQIIRIVvYPn00JPjen3A==
+"@docsearch/react@3.3.2", "@docsearch/react@^3.2.0":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@docsearch/react/-/react-3.3.2.tgz#252b659c66682f24902bf6db257f63ee73ffe8fa"
+  integrity sha512-ugILab2TYKSh6IEHf6Z9xZbOovsYbsdfo60PBj+Bw+oMJ1MHJ7pBt1TTcmPki1hSgg8mysgKy2hDiVdPm7XWSQ==
   dependencies:
-    "@algolia/autocomplete-core" "1.7.2"
-    "@algolia/autocomplete-preset-algolia" "1.7.2"
-    "@docsearch/css" "3.3.0"
+    "@algolia/autocomplete-core" "1.7.4"
+    "@algolia/autocomplete-preset-algolia" "1.7.4"
+    "@docsearch/css" "3.3.2"
     algoliasearch "^4.0.0"
 
 "@esbuild/android-arm@0.15.18":
@@ -332,12 +332,30 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/plugin-component@^0.9.0":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-component/-/plugin-component-0.9.4.tgz#71b4de6843bce255bb516786dec811a50d275957"
+  integrity sha512-Sc32sjJiXbCxvOTwPc+h6pcT7zEQ1sWBUZ94iODkVPW75HmM7Ir1GC4JN4VwmuiVmjSG/W3caHlVnioG1ePGJw==
+  dependencies:
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/plugin-frontmatter@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-frontmatter/-/plugin-frontmatter-0.11.1.tgz#4e4e013bf151fa54525f4e9c7c0a829912364ccb"
   integrity sha512-AdZJInjD1pTJXlfhuoBS5ycuIQ3ewBfY0R/XHM3TRDEaDHQJHxouUCpCyijZmpdljTU45lFetIowaKtAi7GBog==
   dependencies:
     "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    gray-matter "^4.0.3"
+    markdown-it "^13.0.1"
+
+"@mdit-vue/plugin-frontmatter@^0.9.1":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-frontmatter/-/plugin-frontmatter-0.9.2.tgz#eb3990f5ba488c743ad30f3dc983d4cf868e59b2"
+  integrity sha512-qHVgr6v0sH4C2KPD/q/EMUQBGLjuxpS24gyqLHwKHzg+o977CJGS0UA2TymGybHTliaIqmRiQ9DGkIzqO7sJCQ==
+  dependencies:
+    "@mdit-vue/types" "0.9.2"
     "@types/markdown-it" "^12.2.3"
     gray-matter "^4.0.3"
     markdown-it "^13.0.1"
@@ -352,12 +370,31 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/plugin-headers@^0.9.1":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-headers/-/plugin-headers-0.9.3.tgz#d26528fe2a69f2de8d4b8bbba9573644dd05e063"
+  integrity sha512-CKmRltSTS+OoQDzkRLg+U8Xxte+VqvA9lE3WtdQf0L9wGZbYKSylJGZILiQh9DOJTo18tu0/ckoVwAtgpHmzxg==
+  dependencies:
+    "@mdit-vue/shared" "0.9.2"
+    "@mdit-vue/types" "0.9.2"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/plugin-sfc@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-sfc/-/plugin-sfc-0.11.1.tgz#1e7102ea3f67f0761e482ac50c413f7e10e1ba41"
   integrity sha512-3AjQXqExzT9FWGNOeTBqK1pbt1UA5anrZvjo7OO2PJ3lrfZd0rbjionFkmW/VW1912laHUraIP6n74mUNqPuWw==
   dependencies:
     "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
+"@mdit-vue/plugin-sfc@^0.9.1":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-sfc/-/plugin-sfc-0.9.2.tgz#b0bf5cfe46ab309ee7ed88ce5b1452eb0e98522d"
+  integrity sha512-WLzVVBI7j5E3LhI5yX6+cEdD1XuTv2dHLXbQRLW1X9txQyjhrOY12SBkn0RDiD119YzBXR+m4dXlw12uniX62g==
+  dependencies:
+    "@mdit-vue/types" "0.9.2"
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
@@ -371,6 +408,16 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/plugin-title@^0.9.1":
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-title/-/plugin-title-0.9.3.tgz#4f4facac82ef9e1e6a3129cbe84b969e5e6990de"
+  integrity sha512-qGqrwDn5gNlJgSo7Fx5pDKM6MrfPixxoTIsW6zmi9k4dGQ9ezCalOeP8V3yExbPQ7SeY2/JKt439LyMQvZdVWA==
+  dependencies:
+    "@mdit-vue/shared" "0.9.2"
+    "@mdit-vue/types" "0.9.2"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/plugin-toc@^0.11.1":
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-toc/-/plugin-toc-0.11.1.tgz#81394518fd48e54a94e6c41d804270c2b37761bf"
@@ -378,6 +425,16 @@
   dependencies:
     "@mdit-vue/shared" "0.11.0"
     "@mdit-vue/types" "0.11.0"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
+"@mdit-vue/plugin-toc@^0.9.1":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/plugin-toc/-/plugin-toc-0.9.2.tgz#9b1cc613a31808eb112fb85800d4b2facb4469bc"
+  integrity sha512-Du3fFz+YezlXex9Syn+bc8ADDRx/kBfBokeHXfd/qCW5XqS7I4THLR/IRqlvi9CgIZ0dx7bJv0avxil9EX1PoQ==
+  dependencies:
+    "@mdit-vue/shared" "0.9.2"
+    "@mdit-vue/types" "0.9.2"
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
@@ -390,10 +447,24 @@
     "@types/markdown-it" "^12.2.3"
     markdown-it "^13.0.1"
 
+"@mdit-vue/shared@0.9.2", "@mdit-vue/shared@^0.9.1":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/shared/-/shared-0.9.2.tgz#3737f0f2d5ab1272b209495a50e7b4a8cb106278"
+  integrity sha512-05Nk/o+kJCgeAa7oBGJOIazJq+6n0+VR4jPhzV3LGc9TyuMEqnrH5XzmBoy45vzyyoe7pGxJ/PBDxq4HebQHtQ==
+  dependencies:
+    "@mdit-vue/types" "0.9.2"
+    "@types/markdown-it" "^12.2.3"
+    markdown-it "^13.0.1"
+
 "@mdit-vue/types@0.11.0", "@mdit-vue/types@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@mdit-vue/types/-/types-0.11.0.tgz#ab9c6f4e69d9c9eaabf1a73e59dc699875b224ef"
   integrity sha512-ygCGP7vFpqS02hpZwEe1uz8cfImWX06+zRs08J+tCZRKb6k+easIaIHFtY9ZSxt7j9L/gAPLDo/5RmOT6z0DPQ==
+
+"@mdit-vue/types@0.9.2", "@mdit-vue/types@^0.9.0":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@mdit-vue/types/-/types-0.9.2.tgz#583359b1300bd1ae1888f1af1bf7865bb38000b1"
+  integrity sha512-SuoxzZHS2/9bEqeJ+bjj2xBLjoZhRo6Ww/GVqNZS2ji9rkoM2teA0kbwSmj0X6Kf00K9HnLs6T0dtDtqpBqEHA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -654,7 +725,7 @@
     "@vue/compiler-dom" "3.2.45"
     "@vue/shared" "3.2.45"
 
-"@vue/devtools-api@^6.4.5":
+"@vue/devtools-api@^6.2.1", "@vue/devtools-api@^6.4.5":
   version "6.4.5"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.4.5.tgz#d54e844c1adbb1e677c81c665ecef1a2b4bb8380"
   integrity sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==
@@ -702,7 +773,7 @@
     "@vue/compiler-ssr" "3.2.45"
     "@vue/shared" "3.2.45"
 
-"@vue/shared@3.2.45", "@vue/shared@^3.2.45":
+"@vue/shared@3.2.45", "@vue/shared@^3.2.37", "@vue/shared@^3.2.45":
   version "3.2.45"
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.45.tgz#a3fffa7489eafff38d984e23d0236e230c818bc2"
   integrity sha512-Ewzq5Yhimg7pSztDV+RH1UDKBzmtqieXQlpTVm2AwraoRL/Rks96mvd8Vgi7Lj+h+TH8dv7mXD3FRZR3TUvbSg==
@@ -739,6 +810,16 @@
     envinfo "^7.8.1"
     esbuild "^0.15.18"
 
+"@vuepress/client@2.0.0-beta.50-pre.1":
+  version "2.0.0-beta.50-pre.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/client/-/client-2.0.0-beta.50-pre.1.tgz#4b9255ec344dc140f22a7456cb48d915db91e283"
+  integrity sha512-uhN/LTwCcVLnQjDnrEDMaiPT2bi4mQrvwdtwURnrSZ7dCIgXQ+DMKP1v6+f2vgAlrw3FLnPd97yd3V7lrQs8Ow==
+  dependencies:
+    "@vue/devtools-api" "^6.2.1"
+    "@vuepress/shared" "2.0.0-beta.50-pre.1"
+    vue "^3.2.37"
+    vue-router "^4.1.3"
+
 "@vuepress/client@2.0.0-beta.55":
   version "2.0.0-beta.55"
   resolved "https://registry.yarnpkg.com/@vuepress/client/-/client-2.0.0-beta.55.tgz#8b73e61627d8ae33598bf2e37ed4bced7ad5ab65"
@@ -748,6 +829,17 @@
     "@vuepress/shared" "2.0.0-beta.55"
     vue "^3.2.45"
     vue-router "^4.1.6"
+
+"@vuepress/core@2.0.0-beta.50-pre.1":
+  version "2.0.0-beta.50-pre.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/core/-/core-2.0.0-beta.50-pre.1.tgz#1d7ab63dfa7db6eeaa016eb721833a1ab7a75c74"
+  integrity sha512-JVfRSlv7Gk+6HLGSqXWwk8qm6DtSAUujh09gQW2fAaPSp48ULv7+uzWxCQU/x0gO93ajZM5Ny3ojxNJNNUlQHg==
+  dependencies:
+    "@vuepress/client" "2.0.0-beta.50-pre.1"
+    "@vuepress/markdown" "2.0.0-beta.50-pre.1"
+    "@vuepress/shared" "2.0.0-beta.50-pre.1"
+    "@vuepress/utils" "2.0.0-beta.50-pre.1"
+    vue "^3.2.37"
 
 "@vuepress/core@2.0.0-beta.55":
   version "2.0.0-beta.55"
@@ -759,6 +851,28 @@
     "@vuepress/shared" "2.0.0-beta.55"
     "@vuepress/utils" "2.0.0-beta.55"
     vue "^3.2.45"
+
+"@vuepress/markdown@2.0.0-beta.50-pre.1":
+  version "2.0.0-beta.50-pre.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/markdown/-/markdown-2.0.0-beta.50-pre.1.tgz#86da579607ae27d95b159f5cdb27a66af7494742"
+  integrity sha512-joljMXWVg7g1RlQM1D5hyxZECkjvrKL+mAIAlZMmuQwPFFuMjEIkL6MzzOv4R4BkCoBCfx1h8YpAlc8+Doqszw==
+  dependencies:
+    "@mdit-vue/plugin-component" "^0.9.0"
+    "@mdit-vue/plugin-frontmatter" "^0.9.1"
+    "@mdit-vue/plugin-headers" "^0.9.1"
+    "@mdit-vue/plugin-sfc" "^0.9.1"
+    "@mdit-vue/plugin-title" "^0.9.1"
+    "@mdit-vue/plugin-toc" "^0.9.1"
+    "@mdit-vue/shared" "^0.9.1"
+    "@mdit-vue/types" "^0.9.0"
+    "@types/markdown-it" "^12.2.3"
+    "@types/markdown-it-emoji" "^2.0.2"
+    "@vuepress/shared" "2.0.0-beta.50-pre.1"
+    "@vuepress/utils" "2.0.0-beta.50-pre.1"
+    markdown-it "^13.0.1"
+    markdown-it-anchor "^8.6.4"
+    markdown-it-emoji "^2.0.2"
+    mdurl "^1.0.1"
 
 "@vuepress/markdown@2.0.0-beta.55":
   version "2.0.0-beta.55"
@@ -818,21 +932,21 @@
     markdown-it "^13.0.1"
     markdown-it-container "^3.0.0"
 
-"@vuepress/plugin-docsearch@2.0.0-beta.55":
-  version "2.0.0-beta.55"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-beta.55.tgz#c7db210108433587993cf781bca0953202f0e5ee"
-  integrity sha512-BtOCT6urDBltkkqCAROX6ihouag6FRC9QHxul/zYhnVdb0lkl7mJiy8T9aRKIJpxZtyL97WqzJpPbAazf+WPrQ==
+"@vuepress/plugin-docsearch@2.0.0-beta.50-pre.1":
+  version "2.0.0-beta.50-pre.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-docsearch/-/plugin-docsearch-2.0.0-beta.50-pre.1.tgz#550c5b8456d7bf831eb01d02d10ef2cbb332e04b"
+  integrity sha512-eY6btel2VbbjAHmFE6E3kDb4kw+JAnUwZso7eZiHi+kMxzoh+fsPKkSC3xHdtdBcHOlAbap98aqJoxWGaWZI5A==
   dependencies:
-    "@docsearch/css" "^3.3.0"
-    "@docsearch/js" "^3.3.0"
-    "@docsearch/react" "^3.3.0"
-    "@vuepress/client" "2.0.0-beta.55"
-    "@vuepress/core" "2.0.0-beta.55"
-    "@vuepress/shared" "2.0.0-beta.55"
-    "@vuepress/utils" "2.0.0-beta.55"
+    "@docsearch/css" "^3.2.0"
+    "@docsearch/js" "^3.2.0"
+    "@docsearch/react" "^3.2.0"
+    "@vuepress/client" "2.0.0-beta.50-pre.1"
+    "@vuepress/core" "2.0.0-beta.50-pre.1"
+    "@vuepress/shared" "2.0.0-beta.50-pre.1"
+    "@vuepress/utils" "2.0.0-beta.50-pre.1"
     ts-debounce "^4.0.0"
-    vue "^3.2.45"
-    vue-router "^4.1.6"
+    vue "^3.2.37"
+    vue-router "^4.1.3"
 
 "@vuepress/plugin-external-link-icon@2.0.0-beta.55":
   version "2.0.0-beta.55"
@@ -915,6 +1029,13 @@
     "@vuepress/utils" "2.0.0-beta.55"
     vue "^3.2.45"
 
+"@vuepress/shared@2.0.0-beta.50-pre.1":
+  version "2.0.0-beta.50-pre.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/shared/-/shared-2.0.0-beta.50-pre.1.tgz#48b00f1d28d59337481f807de2c54ba3b441db15"
+  integrity sha512-Gk6ikIV2V8LMokc+H/juH+kBOigo38Woup42Q2pmmWqmlwdLqbUcCYZSt/z+opeOUAqC9s3CZnKR8xCw+qo8BQ==
+  dependencies:
+    "@vue/shared" "^3.2.37"
+
 "@vuepress/shared@2.0.0-beta.55":
   version "2.0.0-beta.55"
   resolved "https://registry.yarnpkg.com/@vuepress/shared/-/shared-2.0.0-beta.55.tgz#baf8ac0529f06c2cca2b94f513c8a333e01f8c7f"
@@ -946,6 +1067,23 @@
     sass "^1.56.2"
     vue "^3.2.45"
     vue-router "^4.1.6"
+
+"@vuepress/utils@2.0.0-beta.50-pre.1":
+  version "2.0.0-beta.50-pre.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/utils/-/utils-2.0.0-beta.50-pre.1.tgz#695fbb1fe0aa77051864f78a9a30e0db25744573"
+  integrity sha512-ODJP1kboA+c12Nf6gqkk4vU9JLnrjOaYI9+NsLtv/MXEXulWVr65ZWZK3SmF+RiNFJZDfTs9kXLbwujetkNBhQ==
+  dependencies:
+    "@types/debug" "^4.1.7"
+    "@types/fs-extra" "^9.0.13"
+    "@types/hash-sum" "^1.0.0"
+    "@vuepress/shared" "2.0.0-beta.50-pre.1"
+    chalk "^5.0.1"
+    debug "^4.3.4"
+    fs-extra "^10.1.0"
+    globby "^13.1.2"
+    hash-sum "^2.0.0"
+    ora "^6.1.2"
+    upath "^2.0.1"
 
 "@vuepress/utils@2.0.0-beta.55":
   version "2.0.0-beta.55"
@@ -1222,7 +1360,7 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^5.0.0:
+chalk@^5.0.0, chalk@^5.0.1:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.2.0.tgz#249623b7d66869c673699fb66d65723e54dfcfb3"
   integrity sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==
@@ -2043,6 +2181,15 @@ fraction.js@^4.2.0:
   resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.2.0.tgz#448e5109a313a3527f5a3ab2119ec4cf0e0e2950"
   integrity sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==
 
+fs-extra@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
+  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
+  dependencies:
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
 fs-extra@^11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-11.1.0.tgz#5784b102104433bb0e090f48bfc4a30742c357ed"
@@ -2640,6 +2787,11 @@ magic-string@^0.25.7:
   integrity sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==
   dependencies:
     sourcemap-codec "^1.4.8"
+
+markdown-it-anchor@^8.6.4:
+  version "8.6.6"
+  resolved "https://registry.yarnpkg.com/markdown-it-anchor/-/markdown-it-anchor-8.6.6.tgz#4a12e358c9c2167ee28cb7a5f10e29d6f1ffd7ca"
+  integrity sha512-jRW30YGywD2ESXDc+l17AiritL0uVaSnWsb26f+68qaW9zgbIIr1f4v2Nsvc0+s0Z2N3uX6t/yAw7BwCQ1wMsA==
 
 markdown-it-anchor@^8.6.5:
   version "8.6.5"
@@ -3536,14 +3688,14 @@ vue-eslint-parser@^9.0.1:
     lodash "^4.17.21"
     semver "^7.3.6"
 
-vue-router@^4.1.6:
+vue-router@^4.1.3, vue-router@^4.1.6:
   version "4.1.6"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.1.6.tgz#b70303737e12b4814578d21d68d21618469375a1"
   integrity sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ==
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-vue@3.2.45, vue@^3.2.45:
+vue@3.2.45, vue@^3.2.37, vue@^3.2.45:
   version "3.2.45"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.45.tgz#94a116784447eb7dbd892167784619fef379b3c8"
   integrity sha512-9Nx/Mg2b2xWlXykmCwiTUCWHbWIj53bnkizBxKai1g61f2Xit700A1ljowpTIM11e3uipOeiPcSqnmBg6gyiaA==
