@@ -2,6 +2,7 @@
 
 ## All Site
 
+
 > cause netlify has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account
 
 | site | ~~🇨🇳 ([netlify][netlify])~~ | other countries ([vercel][vercel]) | tech|
