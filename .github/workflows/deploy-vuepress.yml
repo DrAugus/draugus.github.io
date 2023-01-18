@@ -20,7 +20,7 @@ on:
       - "src/**"
 
 jobs:
-  deploy:
+  deploy-vuepress:
     runs-on: ubuntu-latest
 
     steps:

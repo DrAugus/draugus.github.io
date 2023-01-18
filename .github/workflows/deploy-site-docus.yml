@@ -15,7 +15,7 @@ on:
       - "nuxt-docus/**"
 
 jobs:
-  build:
+  deploy-docus:
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest

@@ -10,12 +10,14 @@ pull_request_rules:
     conditions:
       - author=dependabot[bot]
       # 这三个不一定全都会响应 在此判定 任意一个失败都不可以
+      # condition
+      # https://docs.mergify.com/conditions/#github-actions
       - not:
           or:
-            - check-failure=ci-deploy-vuepress
-            - check-failure=ci-deploy-art
-            - check-failure=ci-deploy-code
-            - check-failure=ci-deploy-nuxt-docus
+            - check-failure=deploy-vuepress
+            - check-failure=deploy-art
+            - check-failure=deploy-code
+            - check-failure=deploy-docus
     actions:
       merge:
         method: merge
@@ -25,10 +27,10 @@ pull_request_rules:
       - author=renovate[bot]
       - not:
           or:
-            - check-failure=ci-deploy-vuepress
-            - check-failure=ci-deploy-art
-            - check-failure=ci-deploy-code
-            - check-failure=ci-deploy-nuxt-docus
+            - check-failure=deploy-vuepress
+            - check-failure=deploy-art
+            - check-failure=deploy-code
+            - check-failure=deploy-docus
     actions:
       merge:
         method: merge
@@ -39,10 +41,10 @@ pull_request_rules:
       - head~=^requires-io
       - not:
           or:
-            - check-failure=ci-deploy-vuepress
-            - check-failure=ci-deploy-art
-            - check-failure=ci-deploy-code
-            - check-failure=ci-deploy-nuxt-docus
+            - check-failure=deploy-vuepress
+            - check-failure=deploy-art
+            - check-failure=deploy-code
+            - check-failure=deploy-docus
     actions:
       merge:
         method: merge

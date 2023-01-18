@@ -15,7 +15,7 @@ on:
       - "code/**"
 
 jobs:
-  build:
+  deploy-code:
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
