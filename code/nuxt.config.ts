@@ -1,12 +1,13 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
+  experimental: {
+    payloadExtraction: false,
+  },
+  app: {
+    baseURL: '/code/',
+  },
   runtimeConfig: {
     public: {
-      content: {
-        api: {
-          baseURL: '/site-code/',
-        }
-      },
       algolia: {
         applicationId: '',
         apiKey: '',

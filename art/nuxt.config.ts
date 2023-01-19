@@ -10,14 +10,7 @@ export default defineNuxtConfig({
     baseURL: '/art/',
   },
   runtimeConfig: {
-    // base:"",
     public: {
-      content: {
-        // base:"",
-        api: {
-          baseURL: '/art/',
-        }
-      },
       algolia: {
         applicationId: '',
         apiKey: '',

@@ -1,5 +1,11 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
+  experimental: {
+    payloadExtraction: false,
+  },
+  app: {
+    baseURL: '/docus/',
+  },
   runtimeConfig: {
     public: {
       algolia: {
@@ -13,12 +19,7 @@ export default defineNuxtConfig({
     }
   },
   content: {
-    documentDriven: true,
     highlight: {
-      theme: {
-        dark: 'github-dark',
-        default: 'github-light'
-      },
       preload: [
         'js', 'ts', 'html', 'css', 'vue',
         'cpp', 'py', 'sql', 'c',
@@ -27,8 +28,5 @@ export default defineNuxtConfig({
         'json', 'yaml', 'bash', 'ini'
       ]
     },
-    navigation: {
-      fields: ['icon', 'titleTemplate', 'aside']
-    }
   },
 })
