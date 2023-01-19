@@ -218,6 +218,14 @@ RUN cat /home/source_aliyun >> /etc/apt/sources.list
 RUN apt-get update
 ```
 
+### Error: You don't have enough free space in /var/cache/apt/archives/
+
+[refer](https://github.com/onyx-platform/onyx-starter/issues/5#issuecomment-276562225), [refer](https://github.com/onyx-platform/onyx-starter/issues/5#issuecomment-736082622)
+
+```shell
+docker system prune
+```
+
 ----
 
 ## refer

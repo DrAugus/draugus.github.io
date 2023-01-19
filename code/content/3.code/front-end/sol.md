@@ -113,6 +113,8 @@ export NODE_OPTIONS="--max-old-space-size=(X * 1024)" # Increase to X GB
 # max-old-space-size can be any number of memory megabytes (MB) you have available.
 ```
 
+如果还是出现这个错误，可能就是代码写错了。之前是 `nuxt.config.ts` 这个脚本配置写错了。
+
 ### nuxt page 500 `This page is temporarily unavailable.`
 
 ![e](/code/nuxt-err1.png)
