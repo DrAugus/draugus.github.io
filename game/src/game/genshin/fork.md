@@ -2,6 +2,8 @@
 title: 复刻祈愿
 ---
 
+# 复刻祈愿
+
 <GenshinFork />
 
 <script setup lang="ts">

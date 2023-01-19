@@ -74,17 +74,17 @@ export const sidebar_zh: SidebarConfigObject = {
     ],
 
     '/game/genshin/': [
-        url_game + "/language.md",
-        url_game + "/level.md",
-        url_game + "/character.md",
-        url_game + "/party.md",
-        url_game + "/artifacts.md",
-        url_game + "/timelinetable.md",
-        url_game + "/timeline.md",
-        url_game + "/dialog.md",
         url_game + "/wish.md",
+        url_game + "/timeline.md",
+        url_game + "/timelinetable.md",
+        url_game + "/character.md",
         url_game + "/fork.md",
 
+        url_game + "/language.md",
+        url_game + "/level.md",
+        url_game + "/party.md",
+        url_game + "/artifacts.md",
+        url_game + "/dialog.md",
     ],
 
     '/food/': [

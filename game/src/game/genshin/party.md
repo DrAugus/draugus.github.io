@@ -2,6 +2,8 @@
 title: 队伍推荐
 ---
 
+# 队伍推荐
+
 <GenshinPartySetup />
 
 <script setup lang="ts">

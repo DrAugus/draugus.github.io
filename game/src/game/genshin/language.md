@@ -2,6 +2,7 @@
 title: 提瓦特通用文字
 ---
  
+# 提瓦特通用文字
 
 > [refer](https://www.bilibili.com/read/cv8339816)
 

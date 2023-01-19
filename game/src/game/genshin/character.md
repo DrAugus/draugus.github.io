@@ -2,6 +2,8 @@
 title: 原神角色
 ---
 
+# 原神角色
+
 <GenshinCharacters />
 
 <script setup lang="ts">
