@@ -6,11 +6,16 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
+  app: {
+    baseURL: '/art/',
+  },
   runtimeConfig: {
+    // base:"",
     public: {
       content: {
+        // base:"",
         api: {
-          baseURL: '/site-art/',
+          baseURL: '/art/',
         }
       },
       algolia: {
