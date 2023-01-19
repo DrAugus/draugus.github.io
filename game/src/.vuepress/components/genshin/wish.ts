@@ -780,6 +780,7 @@ export const WISH = {
       end: "2023-02-07 17:59:59 +0800",
       wish5star: "xiao",
       wish4star: ["Yaoyao", "Yun Jin", "Xinyan"],
+      version: "3.4",
       wishName: "「烟火之邀」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"

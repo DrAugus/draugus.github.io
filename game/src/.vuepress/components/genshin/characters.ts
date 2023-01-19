@@ -1,4 +1,4 @@
-import {City, Element, ElementZH, Weapon, Artifacts} from "./utils";
+import { City, Element, ElementZH, Weapon, Artifacts } from "./utils";
 
 export interface Cultivate {
   weapons: string
@@ -21,6 +21,8 @@ export interface Characters {
   weapon: Weapon
   cultivate: Cultivate
 }
+
+export const modifyChar = (id: string) => CHARACTER[id].name
 
 export const CHARACTER = {
   kaedehara_kazuha: {
@@ -649,8 +651,8 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.polearm
   },
-  yunjin: {
-    id: "yunjin",
+  yun_jin: {
+    id: "yun_jin",
     name: "云堇",
     prefix: "红毹婵娟",
     star: 4,
@@ -841,6 +843,17 @@ export const CHARACTER = {
     city: City.Inazuma,
     ele: Element.anemo,
     weapon: Weapon.catalyst
+  },
+  yaoyao: {
+    id: "kaveh",
+    name: "卡维",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.dendro,
+    weapon: Weapon.sword
   },
   alhaitham: {
     id: "alhaitham",
