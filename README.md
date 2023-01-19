@@ -1,15 +1,15 @@
 # AUGUS
 
-## All Site
+## All Site ([pilot][pilot])
 
-> cause netlify has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account
+> cause [netlify][netlify] has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account
 
-| site | ~~🇨🇳 ([netlify][netlify])~~ | other countries ([vercel][vercel]) | tech|
+| site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | tech|
 | :--: |:--: |:--: | :--:|
-| main site (now only game)|  ~~[online][site0]~~ | [online][site0] | [vuepress][vuepress] [vue3][vue]|
-| variety of notes | ~~[online][site1-1]~~ | [online][site1-2] | [nuxt docus][docus] [vue3][vue] |
-| coding | ~~[online][site2-1]~~ | [online][site2-2] | [nuxt docus][docus] [vue3][vue] |
-| art | ~~[online][site3-1]~~ | [online][site3-2] | [nuxt docus][docus] [vue3][vue] |
+| main site (now only game)|  [online][site0-1] [online2][site0-2] | - | [vuepress][vuepress] [vue3][vue]|
+| variety of notes | [online][site1-1] | [online][site1-2] | [nuxt docus][docus] [vue3][vue] |
+| code | [online][site2-1] | [online][site2-2] | [nuxt docus][docus] [vue3][vue] |
+| art | [online][site3-1] | [online][site3-2] | [nuxt docus][docus] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -32,18 +32,19 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ### Run
 
-current dir, use and run vuepress, just run `yarn install && yarn src:dev`  
-for others
+4 sites
 
+- [game](./game)
 - [art](./art/)
 - [code](./code/)
 - [nuxt-docus](./nuxt-docus/)
 
-run `pnpm i && pnpm dev`
+[game](./game), use and run vuepress, just run `yarn install && yarn src:dev`  
+for others, run `pnpm i && pnpm dev`
 
 ### Upgrade
 
-#### current dir, as vuepress
+#### [game](./game), as vuepress
 
 make sure all vuepress && plugins are up to date.
 
@@ -73,15 +74,18 @@ You don't have to think about them. Just give them to the robot.
 - [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
 - [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
 
-[site0]: https://draugus.github.io/
-[site1-1]: https://augus-docus.netlify.app/
+[pilot]:https://augusmeow.github.io/
+[site0-1]: https://draugus.github.io/
+[site0-2]: https://augusmeow.github.io/game/
+[site1-1]: https://augusmeow.github.io/docus/
 [site1-2]: https://augus-docus.vercel.app/
-[site2-1]: https://augus-code.netlify.app/
+[site2-1]: https://augusmeow.github.io/code/
 [site2-2]: https://augus-code.vercel.app/
-[site3-1]: https://augus-art.netlify.app/
+[site3-1]: https://augusmeow.github.io/art/
 [site3-2]: https://augus-art.vercel.app/
 [netlify]: https://netlify.com/
 [vercel]: https://vercel.com/
 [docus]: https://docus.dev
 [vue]: https://vuejs.org
 [vuepress]: https://v2.vuepress.vuejs.org
+[new-repo]: https://github.com/augusmeow/

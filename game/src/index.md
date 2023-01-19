@@ -6,7 +6,7 @@ heroText: 当然是原神啦
 tagline: 近期活动
 actions:
 - text: 复刻祈愿
-  link: /game/genshin/
+  link: /game/genshin/fork
   type: secondary
 - text: 当前祈愿
   link: /game/genshin/wish
