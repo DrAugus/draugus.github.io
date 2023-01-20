@@ -5,6 +5,25 @@ icon: vscode-icons:file-type-git
 
 # Git
 
+## sol
+
+### could not access submodule
+
+just execute `git submodule update --init --recursive`
+
+### git submodule: already exists in the index
+
+`git rm -rf --cached xx/xx`
+
+### git del commit
+
+`git rebase -i commitID`  
+> `git log` found id you want to del
+
+rebase then enter, edit file, change `pick` to `drop`, then save
+
+这个时候本地删除该 id 的操作已经完成 然后推送 `git push --force`
+
 ## clone
 
 `git clone <xxx.git>`
