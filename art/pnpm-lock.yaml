@@ -3,13 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@docsearch/css': ^3.3.2
   '@docsearch/js': ^3.3.2
-  '@nuxt-themes/docus': 1.4.6
+  '@nuxt-themes/docus': 1.4.7
   nuxt: 3.0.0
 
 devDependencies:
   '@docsearch/css': 3.3.2
   '@docsearch/js': 3.3.2
-  '@nuxt-themes/docus': 1.4.6_nuxt@3.0.0
+  '@nuxt-themes/docus': 1.4.7_nuxt@3.0.0
   nuxt: 3.0.0
 
 packages:
@@ -801,15 +801,15 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nuxt-themes/docus/1.4.6_nuxt@3.0.0:
-    resolution: {integrity: sha512-OmT/gOOohWg59efd0X2WS6DZwfR3HF7VYdd8oMoQCxwN23V8kf7CANItiNoJHAYn8DUs6m0rFLIGg/mNqpgQOA==}
+  /@nuxt-themes/docus/1.4.7_nuxt@3.0.0:
+    resolution: {integrity: sha512-YOUnOky2QFKSZnSASMBHQmObhdEnRny0e+BxKOx2F++qMHKXx9vNpVWfl+2mYjpYEQihSERJ7WZiOhHo0QBLTg==}
     dependencies:
       '@nuxt-themes/elements': 0.4.4
       '@nuxt-themes/tokens': 1.5.3
-      '@nuxt-themes/typography': 0.4.1
+      '@nuxt-themes/typography': 0.4.2
       '@nuxt/content': 2.3.0
-      '@nuxthq/studio': 0.5.6
-      '@vueuse/nuxt': 9.11.0_nuxt@3.0.0
+      '@nuxthq/studio': 0.6.3
+      '@vueuse/nuxt': 9.11.1_nuxt@3.0.0
     transitivePeerDependencies:
       - '@vue/composition-api'
       - bufferutil
@@ -851,8 +851,8 @@ packages:
       - vue
     dev: true
 
-  /@nuxt-themes/typography/0.4.1:
-    resolution: {integrity: sha512-lTdTMz3fRJcnSU78ErmE8NydYHBoYayPJvwSOMjY0jFmVrk5fbsOVZ12FW5oalYsPoOCXEcCJ+BD21O+MSCX3w==}
+  /@nuxt-themes/typography/0.4.2:
+    resolution: {integrity: sha512-+lX7occxSCogUXmVwrsNwvS5ylgmFECGyF22tGXzFKT8Y+TMFSKk/dk/TEYoJ7OnL7CGxkvnW4muLCjN6nLJWA==}
     dependencies:
       '@nuxt-themes/tokens': 1.5.3
       '@nuxtjs/color-mode': 3.2.0
@@ -1106,8 +1106,8 @@ packages:
       - vti
     dev: true
 
-  /@nuxthq/studio/0.5.6:
-    resolution: {integrity: sha512-RmACiWdckQJ+RjW5tr/VtLi/bqCs1EZji9MiMI8ZeW1htFs2otXI/NmJwI+iEzIagLXMzM4q2ZuBLh6vwr7wwQ==}
+  /@nuxthq/studio/0.6.3:
+    resolution: {integrity: sha512-nwU74IzTZiuvSrzEHjjguTNNu8iZCLeby55rpcZRhdQ2Mhg2uk8XdPphdE8DDuHGJUFBDYSyQRmQfg6/KoTPFA==}
     dependencies:
       '@nuxt/kit': 3.0.0
       '@nuxt/schema': 3.0.0
@@ -1659,6 +1659,18 @@ packages:
       - vue
     dev: true
 
+  /@vueuse/core/9.11.1:
+    resolution: {integrity: sha512-E/cizD1w9ILkq4axYjZrXLkKaBfzloaby2n3NMjUfd6yI/jkfTVgc6iwy/Cw2e++Ld4LphGbO+3MhzizvwUslQ==}
+    dependencies:
+      '@types/web-bluetooth': 0.0.16
+      '@vueuse/metadata': 9.11.1
+      '@vueuse/shared': 9.11.1
+      vue-demi: 0.13.11
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
   /@vueuse/head/1.0.22_vue@3.2.45:
     resolution: {integrity: sha512-YmUdbzNdCnhmrAFxGnJS+Rixj+swE+TQC9OEaYDHIro6gE7W11jugcdwVP00HrA4WRQhg+TOQ4YcY2oL/PP1hw==}
     peerDependencies:
@@ -1678,14 +1690,18 @@ packages:
     resolution: {integrity: sha512-HhtG2SWkcfZBLbamHdvLn7jKOCFpw/ifXjVTd5ilFkj98WVUk/3UTQ03wF1XIkuhSO4+b45hD2lfG9/GdKCF7w==}
     dev: true
 
-  /@vueuse/nuxt/9.11.0_nuxt@3.0.0:
-    resolution: {integrity: sha512-gG6Zv85/2ra64elUa4jQGxOKL/rYfGxpJ90XYwOCGEfFaWGyU2PswO3dj8o0IFZHyv592LalAPBuQ/qIb+mfZw==}
+  /@vueuse/metadata/9.11.1:
+    resolution: {integrity: sha512-ABjkrG+VXggNhjfGyw5e/sekxTZfXTwjrYXkkWQmQ7Biyv+Gq9UD6IDNfeGvQZEINI0Qzw6nfuO2UFCd3hlrxQ==}
+    dev: true
+
+  /@vueuse/nuxt/9.11.1_nuxt@3.0.0:
+    resolution: {integrity: sha512-hiiRzLgsH5nTAb2TChyFc6nykIyTB3MnCEhILg44Ug9ILC3vG/qnHnv3zRtIu4bXNOhDQN5shfnchgGPJFf8PA==}
     peerDependencies:
       nuxt: ^3.0.0
     dependencies:
       '@nuxt/kit': 3.0.0
-      '@vueuse/core': 9.11.0
-      '@vueuse/metadata': 9.11.0
+      '@vueuse/core': 9.11.1
+      '@vueuse/metadata': 9.11.1
       local-pkg: 0.4.2
       nuxt: 3.0.0
       vue-demi: 0.13.11
@@ -1698,6 +1714,15 @@ packages:
 
   /@vueuse/shared/9.11.0:
     resolution: {integrity: sha512-8lO7wD5abYxupKy2KynH1pSgP715ky6iCrWYb8aX2AuAVi9uHXj7qE1dw6BnmArSaLHci4x9iuzWPCpAzUkC/A==}
+    dependencies:
+      vue-demi: 0.13.11
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/shared/9.11.1:
+    resolution: {integrity: sha512-UTZYGAjT96hWn4buf4wstZbeheBVNcKPQuej6qpoSkjF1atdaeCD6kqm9uGL2waHfisSgH9mq0qCRiBOk5C/2w==}
     dependencies:
       vue-demi: 0.13.11
     transitivePeerDependencies:
