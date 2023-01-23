@@ -1,8 +1,9 @@
 <template>
 
-  <h2>最近出场角色 情报</h2>
+  <!-- <h2>最近出场角色 情报</h2> -->
+  <!-- todo 点击角色 再展示 曾经出场的 时间段 -->
 
-  <a @click="sortLast">最新排序</a> | 
+  <a @click="sortLast">最近排序</a> |
   <a @click="sortEarly">最远排序</a>
   <br><br>
 
@@ -11,17 +12,18 @@
     <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
   </select>
   <p v-if="selectedLastChar" class="choose">
-    <strong>{{ selectedLastChar }}</strong><br>
+    <strong>{{ selectedLastChar + ' ' }}</strong>
+    <!-- <br>
     出场时间: <span class="date">{{ allLastChar.get(selectedLastChar).start }}</span>
     <br>
     结束时间: <span class="date">{{ allLastChar.get(selectedLastChar).end }}</span>
     <br>
     <span class="underline" v-if="allLastChar.get(selectedLastChar).durationStart2Today < 0">
       {{ -parseInt(allLastChar.get(selectedLastChar).durationStart2Today) }} 天后出场
-    </span>
-    <span class="underline" v-else>
-      <span v-if="allLastChar.get(selectedLastChar).durationEnd2Today < 0">当期祈愿进行时</span>
-      <span v-else>距今 {{ parseInt(allLastChar.get(selectedLastChar).durationEnd2Today) }} 天</span>
+    </span> -->
+    <span class="underline">
+      <!-- <span v-if="allLastChar.get(selectedLastChar).durationEnd2Today < 0">当期祈愿进行时</span> -->
+      <span>距今 {{ parseInt(allLastChar.get(selectedLastChar).durationEnd2Today) }} 天</span>
     </span>
     <br>
   </p>
@@ -29,39 +31,19 @@
   <hr>
 
   <p v-for="(v, k) in allLastChar">
-    <strong>{{ v[0] }}</strong><br>
-    出场时间: <span class="date">{{ v[1].start }}</span>
+
+    <img :src="v[1].src">
+
+    <strong>{{ v[0] + ' ' }}</strong>
+    <!-- <br> -->
+    <!-- 出场时间: <span class="date">{{ v[1].start }}</span>
     <br>
     结束时间: <span class="date">{{ v[1].end }}</span>
-    <br>
-    <span class="underline" v-if="v[1].durationStart2Today < 0">
-      {{ -parseInt(v[1].durationStart2Today) }} 天后出场
-    </span>
-    <span class="underline" v-else>
-      <span v-if="v[1].durationEnd2Today < 0">当期祈愿进行时</span>
-      <span v-else>距今 {{ parseInt(v[1].durationEnd2Today) }} 天</span>
+    <br> -->
+    <span class="underline">
+      <span>距今 {{ parseInt(v[1].durationEnd2Today) }} 天</span>
     </span>
     <br>
-  </p>
-
-  <h2>角色复刻周期时间</h2>
-
-  <select v-model="selectedFork">
-    <option disabled value="">Please select one</option>
-    <option v-for="(v, i) in sliceCharZH"> {{ v }}</option>
-  </select>
-  <p v-if="selectedFork" class="choose">
-    <strong>{{ selectedFork }}</strong><br>
-    <span v-for="(vv, ii) in displayMap.get(selectedFork).toNow">
-      {{ FORK_DESCRIBE[ii + 1] }}距今{{ vv }}天<br>
-    </span>
-  </p>
-
-  <p v-for="(v, k) in displayMap">
-    <strong>{{ v[0] }}</strong><br>
-    <span v-for="(vv, ii) in v[1].toNow">
-      {{ FORK_DESCRIBE[ii + 1] }}距今{{ vv }}天<br>
-    </span>
   </p>
 
 </template>
@@ -119,9 +101,10 @@ const processEvent = () => {
 };
 
 const EVENT = processEvent().events;
-const CHAR_ALL = EVENT[0]
-// console.log("CHAR_ALL")
-// console.log(CHAR_ALL)
+let allChar = EVENT[0]
+// console.log("allChar")
+allChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
+// console.log(allChar)
 
 const FORK_DESCRIBE = {
   1: "首次出场",
@@ -133,13 +116,13 @@ const FORK_DESCRIBE = {
   7: "六次复刻"
 }
 
-const sliceChar = [...new Set(CHAR_ALL.map(obj => obj.wish5star))];
+const sliceChar = [...new Set(allChar.map(obj => obj.wish5star))];
 // console.log("sliceChar")
 // console.log(sliceChar)
 const sliceCharZH = sliceChar.map(v => CHARACTER[v].name)
 
 // first slice
-const sliceCharInfo = CHAR_ALL.map(object => {
+const sliceCharInfo = allChar.map(object => {
   return {
     name: object.wish5star,
     times: object.image,
@@ -198,13 +181,14 @@ const displayCharInfo = () => {
 
 const displayMap = displayCharInfo()
 
-
+const composeSrc = (name) => 'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + name + '.png?raw=true'
 
 // all recent char up, done, include future
-const allLastChar = new Map(CHAR_ALL.map(object =>
+const allLastChar = new Map(allChar.map(object =>
   [
     CHARACTER[object.wish5star].name,
     {
+      src: composeSrc(CHARACTER[object.wish5star].id),
       times: formatDate(dayjs(object.image)),
       start: formatDate(dayjs(object.start)),
       end: formatDate(dayjs(object.end)),
