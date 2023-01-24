@@ -15,7 +15,7 @@
     "@vue-leaflet/vue-leaflet": "^0.7.0",
     "echarts": "^5.4.1",
     "leaflet": "^1.9.3",
-    "nuxt": "3.0.0",
+    "nuxt": "3.1.0",
     "typed.js": "^2.0.12",
     "vue-echarts": "^6.2.4"
   },
