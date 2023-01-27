@@ -845,7 +845,7 @@ export const CHARACTER = {
     weapon: Weapon.catalyst
   },
   yaoyao: {
-    id: "alhaitham",
+    id: "yaoyao",
     name: "瑶瑶",
     prefix: "仙蕊玲珑·",
     star: 4,

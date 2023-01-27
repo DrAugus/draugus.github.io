@@ -26,13 +26,12 @@
 
   <div class="character-info">
 
- 
-      <Modal v-for="(value, key, index) in info" :info="{
-        name: value.name,
-        prefix: value.prefix,
-        id: value.id,
-        intro: value.intro,
-      }"></Modal>
+    <Modal v-for="(value, key, index) in info" :info="{
+      name: value.name,
+      prefix: value.prefix,
+      id: value.id,
+      intro: value.intro,
+    }"></Modal>
 
     <!-- </div> -->
 
@@ -88,7 +87,7 @@ export default {
 }
 
 .character-info {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>
