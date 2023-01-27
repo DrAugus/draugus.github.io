@@ -408,7 +408,7 @@ export const CHARACTER = {
   xinyan: {
     id: "xinyan",
     name: "辛焱",
-    prefix: "",
+    prefix: "燥热旋律",
     star: 4,
     event_exclusive: false,
     intro: "在璃月港，摇滚属于新兴艺术，辛焱则是这门艺术身先士卒的践行者。她用音乐和热情歌颂着对「成见」的反抗，想要唤醒劳于世间昏昏沉沉的灵魂。如果有机会，请千万不要错过她的演出。",
@@ -845,15 +845,15 @@ export const CHARACTER = {
     weapon: Weapon.catalyst
   },
   yaoyao: {
-    id: "kaveh",
-    name: "卡维",
-    prefix: "",
-    star: 5,
+    id: "alhaitham",
+    name: "瑶瑶",
+    prefix: "仙蕊玲珑·",
+    star: 4,
     event_exclusive: true,
-    intro: "",
-    city: City.Inazuma,
+    intro: "年纪幼小的仙家弟子，个性真诚慷慨，习惯于照顾身边所有人。如今正跟随居住在璃月港的师父修行，时常往返于山岭与城市之间。虽然不曾明说，但比起山中洞天，她还是更爱人间的喧嚣市集。",
+    city: City.Liyue,
     ele: Element.dendro,
-    weapon: Weapon.sword
+    weapon: Weapon.polearm
   },
   alhaitham: {
     id: "alhaitham",
@@ -861,7 +861,7 @@ export const CHARACTER = {
     prefix: "诲韬诤言",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "须弥教令院现任书记官，有过人的智慧与才能。生活得自由自在，一般人基本找不到他。",
     city: City.Inazuma,
     ele: Element.dendro,
     weapon: Weapon.sword
