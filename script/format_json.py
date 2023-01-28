@@ -4,19 +4,42 @@ def format_json(sa, sb):
     print(str)
     return str
 
+
+def plus_mark(arr_str, mark):
+    str = '['
+    for s in arr_str:
+        str += mark + s + mark + ','
+    # remove last
+    str = str[:-1]
+    str += '],'
+    print(str)
+
+
 def open_and_read(filename):
     with open(filename, "r", encoding='utf-8') as file_handle:
-        line  = file_handle.readline()
+        line = file_handle.readline()
         while line:
             line_str = line.strip()
-            sss = "sss"
             # 英文 中文 直接的空格
             space_index = line_str.rfind(" ", 0)
             sa = line_str[:space_index]
             sb = line_str[space_index+1:]
             # split_line = line_str.split(' ')
             format_json(sa, sb)
-            line  = file_handle.readline()
+            line = file_handle.readline()
+
+
+def split_all_space(filename):
+    with open(filename, "r", encoding='utf-8') as file_handle:
+        line = file_handle.readline()
+        while line:
+            line_str = line.strip()
+            arr_split_space = line_str.split(" ")
+            # print(arr_split_space)
+            plus_mark(arr_split_space, '"')
+            line = file_handle.readline()
+
 
 if __name__ == '__main__':
-    open_and_read("script/test")
+    # open_and_read("script/test")
+    split_all_space("script/test")
