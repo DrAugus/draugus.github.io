@@ -17,4 +17,9 @@
 * 包管理工具 `apt-get`
 * 支持tar包
 
-大陆使用镜像资源超时，可以使用 [aliyun 镜像](https://developer.aliyun.com/mirror/debian)
+## sol
+
+### 官方源超时
+
+大陆使用镜像资源超时，可以使用 [aliyun 镜像](https://developer.aliyun.com/mirror/debian)  
+这里更推荐[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
