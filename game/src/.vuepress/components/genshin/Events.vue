@@ -28,7 +28,7 @@ const getEventWish = (obj, arr) => {
         if (i > 2) break;
         let title = modifyChar(obj.wish5star[i])
         let body = [
-            obj.ver[i],
+            obj.ver[i] + ' ' + obj.name[i],
             modify4char(obj.wish4star[i]),
             obj.date[i]
         ]

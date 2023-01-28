@@ -74,18 +74,16 @@ const getWish = (wish) => {
     let s = formatDate(dayjs(wish.start));
     let e = formatDate(dayjs(wish.end));
     // console.log(s, e);
-    let date = s + " ~ " + e
-    let ver = wish.version
-    let wish5star = wish.wish5star
     let wish4star = wish.wish4star.length > 0 ? wish.wish4star : ""
     // 有部分没有小写
     if (wish4star != "")
         wish4star = wish4star.map((v, i, arr) => replaceAndLow(v))
     return {
-        date,
-        ver,
+        name: wish.wishName,
+        date: s + " ~ " + e,
+        ver: wish.version,
         src: img,
-        wish5star,
+        wish5star: wish.wish5star,
         wish4star
     }
 }
@@ -93,6 +91,7 @@ const getWish = (wish) => {
 export let current = {
     index: objWish.wishIndex,
     able: objWish.wishIndex.length > 0,
+    name: [],
     date: [],
     ver: [],
     src: [],
@@ -101,6 +100,7 @@ export let current = {
 };
 for (let v of objWish.wishIndex) {
     const obj = getWish(wishCharacters[v])
+    current.name.push(obj.name);
     current.date.push(obj.date);
     current.ver.push(obj.ver);
     current.src.push(obj.src);
@@ -111,6 +111,7 @@ for (let v of objWish.wishIndex) {
 export let future = {
     index: objWish.comingIndex,
     able: objWish.comingIndex.length > 0,
+    name: [],
     date: [],
     ver: [],
     src: [],
@@ -119,6 +120,7 @@ export let future = {
 };
 for (let v of objWish.comingIndex) {
     const obj = getWish(wishCharacters[v])
+    future.name.push(obj.name);
     future.date.push(obj.date);
     future.ver.push(obj.ver);
     future.src.push(obj.src);

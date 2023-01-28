@@ -232,6 +232,8 @@ export default {
   async mounted() {
     this.selectedFork = ""
     this.selectedLastChar = ""
+    // default
+    this.sortEarly()
   }
 };
 </script>

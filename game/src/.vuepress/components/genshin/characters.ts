@@ -50,7 +50,7 @@ export const CHARACTER = {
   eula: {
     id: "eula",
     name: "优菈",
-    prefix: "",
+    prefix: "浪沫的旋舞",
     star: 5,
     event_exclusive: true,
     intro: "优菈——常年在外作战的「浪花骑士」，反叛的旧贵族末裔。生于旧日宗室，身负罪恶血脉之人，的确需要独特的处世技巧，才能在偏见的高墙下安然行走。当然，这并不妨碍她与家族决裂，作为卓越的「浪花骑士」，在外游猎蒙德的敌人，完成她那意义独特的「复仇」。",
@@ -61,7 +61,7 @@ export const CHARACTER = {
   jean: {
     id: "jean",
     name: "琴",
-    prefix: "",
+    prefix: "蒲公英骑士",
     star: 5,
     event_exclusive: false,
     intro: "身为西风骑士团的代理团长，琴一直忠于职守，为人们带来安宁。虽然并非天赋异禀，但通过刻苦训练，如今的她已然能够独当一面。当风魔龙的威胁开始临近，这位可靠的代理团长早已做好了准备，誓要守护蒙德。",
@@ -72,7 +72,7 @@ export const CHARACTER = {
   lisa: {
     id: "lisa",
     name: "丽莎",
-    prefix: "",
+    prefix: "蔷薇魔女",
     star: 4,
     event_exclusive: false,
     intro: "她是钟情于睡眠的知性魔女。作为西风骑士团图书馆的管理员，聪明的丽莎总能以最有效的方式将遇到的问题统统解决。虽然看似慵懒，但处变不惊的她似乎早已将一切尽数掌控。",
@@ -94,7 +94,7 @@ export const CHARACTER = {
   kaeya: {
     id: "kaeya",
     name: "凯亚",
-    prefix: "",
+    prefix: "寒风剑士",
     star: 4,
     event_exclusive: false,
     intro: "在西风骑士团里，凯亚是代理团长最信任的副手。凡是交托于他的任务，总能得到解决。在蒙德城中，风趣幽默的他同样深受人们的喜爱，然而这位谈吐不凡的骑士隐约有着什么不为人知的秘密。",
@@ -105,7 +105,7 @@ export const CHARACTER = {
   diluc: {
     id: "diluc",
     name: "迪卢克",
-    prefix: "",
+    prefix: "晨曦的暗面",
     star: 5,
     event_exclusive: false,
     intro: "身为蒙德城第一富豪，风度翩翩的迪卢克总是以完美的贵公子形象示人。然而他真实的一面，是秉承坚定信念的战士，他那「不惜一切守护蒙德」的意志犹如火焰般炽热，令他能以恐怖的攻势，毫不留情地将一切敌人击溃。",
@@ -127,7 +127,7 @@ export const CHARACTER = {
   amber: {
     id: "amber",
     name: "安柏",
-    prefix: "",
+    prefix: "飞行冠军",
     star: 4,
     event_exclusive: false,
     intro: "活泼率直的少女，是蒙德城中唯一的侦察骑士。擅长使用风之翼的安柏，连续三年蝉联蒙德城的「飞行冠军」。作为西风骑士团的新星，今天的安柏依然活跃在第一线。",
@@ -138,7 +138,7 @@ export const CHARACTER = {
   venti: {
     id: "venti",
     name: "温迪",
-    prefix: "",
+    prefix: "风色诗人",
     star: 5,
     event_exclusive: true,
     intro: "来路不明的吟游诗人，有时唱一些老掉牙的旧诗，有时又会唱出谁也没听过的新歌。喜欢苹果和热闹的气氛，讨厌奶酪和一切黏糊糊的物质。在引导「风」的元素力时，元素的塑形往往外显为羽毛，因为他很中意看上去轻飘飘的东西。",
@@ -298,7 +298,7 @@ export const CHARACTER = {
   tartaglia: {
     id: "tartaglia",
     name: "达达利亚",
-    prefix: "",
+    prefix: "「公子」",
     star: 5,
     event_exclusive: true,
     intro: "达达利亚——来自寒冰之国，心思变幻莫测的客人。不必猜测他的想法，也无需质疑他的来意。只要记住：这副稚气未脱的外表下暗藏的，是锤炼到极致的战士之躯。",
@@ -320,7 +320,7 @@ export const CHARACTER = {
   qiqi: {
     id: "qiqi",
     name: "七七",
-    prefix: "",
+    prefix: "冻冻回魂夜",
     star: 5,
     event_exclusive: false,
     intro: "药庐「不卜庐」的采药姑娘兼学徒。因「仙缘」而拥有不死之身，行动时需要自己给自己下敕令。七七的记忆力非常差，为了保证日常生活的顺利，她随身携带着一本笔记，写有各种各样的注意事项。但在最不巧的那些日子里，她连「要看笔记」这件事都会忘记……",
@@ -331,7 +331,7 @@ export const CHARACTER = {
   chongyun: {
     id: "chongyun",
     name: "重云",
-    prefix: "",
+    prefix: "雪融有踪",
     star: 4,
     event_exclusive: false,
     intro: "以璃月为中心，四处进行驱邪活动的云游方士。作为驱邪世家继承人，他自幼便有过人的绝技。然而，这种绝技并非学自师门，而是与生俱来的异能——「纯阳之体」。",
@@ -353,7 +353,7 @@ export const CHARACTER = {
   albedo: {
     id: "albedo",
     name: "阿贝多",
-    prefix: "",
+    prefix: "白垩之子",
     star: 5,
     event_exclusive: true,
     intro: "阿贝多——现定居蒙德的炼金术士，效力于西风骑士团。「天才」、「白垩之子」或「调查队长」…他不怎么在意称号和名望，只专注于研究课题。财富和人脉不是他的目标。他渴望驾驭的，是从古到今深藏于人类头脑中的无上知识。",
@@ -375,7 +375,7 @@ export const CHARACTER = {
   mona: {
     id: "mona",
     name: "莫娜",
-    prefix: "",
+    prefix: "星天水镜",
     star: 5,
     event_exclusive: false,
     intro: "神秘的少女占星术士，声称自己是「伟大的占星术士莫娜」，拥有与名号相符的不俗实力，博学而高傲。尽管过着拮据、清贫的生活，但她坚决不用占卜来牟利…正是这种坚持，导致莫娜总是在为生计发愁。",
@@ -386,7 +386,7 @@ export const CHARACTER = {
   keqing: {
     id: "keqing",
     name: "刻晴",
-    prefix: "",
+    prefix: "霆霓快雨",
     star: 5,
     event_exclusive: false,
     intro: "璃月七星之一，玉衡星。对「帝君一言而决的璃月」颇有微词——但实际上，神挺欣赏她这样的人。她坚信与人类命运相关的事，应当由人类去做，而且人类一定可以做得更好。为了证明这一点，她比任何人都要努力。",
@@ -430,7 +430,7 @@ export const CHARACTER = {
   hu_tao: {
     id: "hu_tao",
     name: "胡桃",
-    prefix: "",
+    prefix: "雪霁梅香",
     star: 5,
     event_exclusive: true,
     intro: "胡桃——「往生堂」第七十七代堂主，掌控着璃月葬仪事务的重要人物。尽心尽力地为人们完成送别之仪，维护着世间阴阳平衡之道。除此以外还是个神奇打油诗人，诸多「杰作」被璃月人口口相传。",
@@ -474,7 +474,7 @@ export const CHARACTER = {
   raiden_shogun: {
     id: "raiden_shogun",
     name: "雷电将军",
-    prefix: "",
+    prefix: "一心净土",
     star: 5,
     event_exclusive: true,
     intro: "雷电将军——此世最殊胜威怖的雷霆化身，稻妻幕府的最高主宰。挟威权之鸣雷，逐永恒之孤道的寂灭者。",
@@ -524,7 +524,7 @@ export const CHARACTER = {
   kujou_sara: {
     id: "kujou_sara",
     name: "九条裟罗",
-    prefix: "",
+    prefix: "黑羽鸣镝",
     star: 4,
     event_exclusive: false,
     intro: "天领奉行的将领。行如风，言如誓，是位魄力过人的女性。她有着「神的笃信者」之名，将全部忠心都奉献给了雷电将军。将军所追求的「永恒」，也是她愿意为之而战的信念。",
@@ -563,7 +563,7 @@ export const CHARACTER = {
   aloy: {
     id: "aloy",
     name: "埃洛伊",
-    prefix: "",
+    prefix: "异界的救世主",
     star: 5,
     event_exclusive: true,
     intro: "来自诺拉的机敏猎手。随时能为正当之事挽弓放箭。",
@@ -880,7 +880,7 @@ export const CHARACTER = {
   dehya: {
     id: "dehya",
     name: "迪希雅",
-    prefix: "",
+    prefix: "炽鬃之狮",
     star: 5,
     event_exclusive: true,
     intro: "",
