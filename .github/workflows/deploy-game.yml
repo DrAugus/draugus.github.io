@@ -60,7 +60,7 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=4096
         run: yarn run augus:build
 
-      # 防止加载不到 _开头的文件 下面已经有了
+      # 防止加载不到 _开头的文件 下面已经有了 jekyll: false
       # @see https://github.com/orgs/github-community/discussions/19794
       # - name: Add nojekyll
       #   run: |
@@ -71,15 +71,15 @@ jobs:
       # @see https://github.com/crazy-max/ghaction-github-pages
       # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
 
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
-          target_branch: gh-pages
-          build_dir: ${{ matrix.deploy-dir }}
-          jekyll: false
-        env:
-          GH_PAT: ${{ secrets.DEPLOY_GH }}
+      # - name: Deploy to GitHub Pages
+      #   uses: crazy-max/ghaction-github-pages@v3.1.0
+      #   with:
+      #     repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
+      #     target_branch: gh-pages
+      #     build_dir: ${{ matrix.deploy-dir }}
+      #     jekyll: false
+      #   env:
+      #     GH_PAT: ${{ secrets.DEPLOY_GH }}
 
       # current repo
       - name: Deploy to GitHub Pages Home Site

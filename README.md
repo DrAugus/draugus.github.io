@@ -6,7 +6,7 @@
 
 | site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | source | tech|
 | :--: |:--: |:--: | :--:| :--:|
-| main site (now only game)|  [online][site0-1] | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
+| main site (now only game)|  [online][site0-1] ~~[online2 todo][site0-2]~~ | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
 | variety of notes | [online][site1-1] | [online][site1-2] | [nuxt-docus](./nuxt-docus/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [online][site2-2] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
 | art | [online][site3-1] | [online][site3-2] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
@@ -14,6 +14,11 @@
 > notes/code/art site are same, why?
 
 too many records, and "code page" doesn't seem to need `components`, so code page only use markdown file. while "notes page" and "art page" may need `components`. The pages are all separated to make them clearer.
+
+## Tips
+
+about nuxt.config.ts.example([art](./art/nuxt.config.ts.example) | [notes](./nuxt-docus/nuxt.config.ts.example) | [code](./code/nuxt.config.ts.example))
+> nuxt.config.ts for vercel deploy, while nuxt.config.ts.example for auto deploy by yml
 
 ## Develop
 
