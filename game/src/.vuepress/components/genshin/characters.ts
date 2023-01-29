@@ -764,7 +764,7 @@ export const CHARACTER = {
     name: "提纳里",
     prefix: "浅蔚轻行",
     star: 5,
-    event_exclusive: true,
+    event_exclusive: false,
     intro: "道成林的巡林官，毕业于阿弥利多学院的植物学学者。每天都过着巡查雨林、保护生态、教训笨蛋的充实生活。",
     city: City.Sumeru,
     ele: Element.dendro,

@@ -30,9 +30,9 @@
 
   <hr>
 
-  <p v-for="(v, k) in allLastChar">
+  <p v-for="(v, k) in allLastChar" :class="v[1].color">
 
-    <img :src="v[1].src">
+    <img class="char-img" :src="v[1].src">
 
     <strong>{{ v[0] + ' ' }}</strong>
     <!-- <br> -->
@@ -41,7 +41,7 @@
     结束时间: <span class="date">{{ v[1].end }}</span>
     <br> -->
     <span class="underline">
-      <span>距今 {{ parseInt(v[1].durationEnd2Today) }} 天</span>
+      <span>{{ v[1].info }} </span>
     </span>
     <br>
   </p>
@@ -100,12 +100,6 @@ const processEvent = () => {
   };
 };
 
-const EVENT = processEvent().events;
-let allChar = EVENT[0]
-// console.log("allChar")
-allChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
-// console.log(allChar)
-
 const FORK_DESCRIBE = {
   1: "首次出场",
   2: "首次复刻",
@@ -116,13 +110,38 @@ const FORK_DESCRIBE = {
   7: "六次复刻"
 }
 
-const sliceChar = [...new Set(allChar.map(obj => obj.wish5star))];
-// console.log("sliceChar")
-// console.log(sliceChar)
+const EVENT = processEvent().events;
+let allChar = EVENT[0]
+// console.log("allChar", allChar)
+let allPastChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
+const allFutureChar = allChar.filter((v, i, a) => v.durationStart2Today < 0)
+const allCurrentChar = allChar.filter((v, i, a) => v.durationEnd2Today < 0 && v.durationStart2Today > 0)
+
+console.log("allPastChar", allPastChar)
+// console.log("allFutureChar", allFutureChar)
+// console.log("allCurrentChar", allCurrentChar)
+
+const sliceChar = [...new Set(allPastChar.map(obj => obj.wish5star))];
+const sliceFutureChar = [...new Set(allFutureChar.map(obj => obj.wish5star))];
+const sliceCurrentChar = [...new Set(allCurrentChar.map(obj => obj.wish5star))];
+const sliceFutureCharIndex = [...new Set(allFutureChar.map(obj => obj.index2))];
+const sliceCurrentCharIndex = [...new Set(allCurrentChar.map(obj => obj.index2))];
+console.log("sliceChar", sliceChar)
+console.log("sliceFutureChar", sliceFutureChar)
+console.log("sliceCurrentChar", sliceCurrentChar)
+// console.log(sliceFutureCharIndex)
 const sliceCharZH = sliceChar.map(v => CHARACTER[v].name)
 
+// 防止当前与未来重复
+let aa = [...new Set([...sliceFutureChar, ...sliceCurrentChar])]
+console.log(aa)
+
+
+
+// -------------------------------------------------------
+
 // first slice
-const sliceCharInfo = allChar.map(object => {
+const sliceCharInfo = allPastChar.map(object => {
   return {
     name: object.wish5star,
     times: object.image,
@@ -179,26 +198,56 @@ const displayCharInfo = () => {
   return displayMap
 }
 
-const displayMap = displayCharInfo()
+// const displayMap = displayCharInfo()
+
+// -------------------------------------------------------
 
 const composeSrc = (name) => 'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + name + '.png?raw=true'
 
+const findInCurrent = (wish5star) => sliceCurrentChar.indexOf(wish5star) != -1;
+
+const findInFuture = (wish5star) => sliceFutureChar.indexOf(wish5star) != -1;
+
+const isExclusive = (wish5star) => CHARACTER[wish5star].event_exclusive;
+
+
+
+const modifyInfo = (ddl, wish5star) => {
+  let info = '距今' + parseInt(ddl) + '天'
+  if (findInCurrent(wish5star)) info = '当前祈愿进行时'
+  if (findInFuture(wish5star)) info = '很快就来了'
+  if (!isExclusive(wish5star)) info += ' 但是是常驻'
+  return info
+}
+
+const showColor = (wish5star) => {
+  let color = ''
+  if (findInCurrent(wish5star)) color = 'fork-current'
+  if (findInFuture(wish5star)) color = 'fork-future'
+  if (!isExclusive(wish5star)) color = 'always-here'
+  return color
+}
+
+console.log("allPastChar", allPastChar)
 // all recent char up, done, include future
-const allLastChar = new Map(allChar.map(object =>
-  [
-    CHARACTER[object.wish5star].name,
-    {
-      src: composeSrc(CHARACTER[object.wish5star].id),
-      times: formatDate(dayjs(object.image)),
-      start: formatDate(dayjs(object.start)),
-      end: formatDate(dayjs(object.end)),
-      durationEnd2Today: object.durationEnd2Today,
-      durationStart2Today: object.durationStart2Today,
-    }
-  ]
+const allLastChar = new Map(allChar.map(object => [
+  CHARACTER[object.wish5star].name,
+  {
+    src: composeSrc(CHARACTER[object.wish5star].id),
+    times: object.image,
+    start: formatDate(dayjs(object.start)),
+    end: formatDate(dayjs(object.end)),
+    durationEnd2Today: object.durationEnd2Today,
+    durationStart2Today: object.durationStart2Today,
+    sortTag: object.durationEnd2Today,
+    info: modifyInfo(object.durationEnd2Today, object.wish5star),
+    color: showColor(object.wish5star),
+  }
+]
+
 ));
-// console.log("allLastChar")
-// console.log(allLastChar)
+
+console.log("allLastChar", allLastChar)
 
 // 
 // every time duration, end to next start, by name 
@@ -212,7 +261,7 @@ export default {
       FORK_DESCRIBE,
       sliceCharZH,
       allLastChar,
-      displayMap,
+      // displayMap,
       selectedLastChar: "",
       selectedFork: "",
     };
@@ -220,12 +269,12 @@ export default {
   methods: {
     sortLast() {
       this.allLastChar = new Map(Array.from(this.allLastChar).sort(
-        (a, b) => a[1].durationEnd2Today - b[1].durationEnd2Today
+        (a, b) => a[1].sortTag - b[1].sortTag
       ))
     },
     sortEarly() {
       this.allLastChar = new Map(Array.from(this.allLastChar).sort(
-        (a, b) => b[1].durationEnd2Today - a[1].durationEnd2Today
+        (a, b) => b[1].sortTag - a[1].sortTag
       ))
     },
   },
@@ -250,5 +299,22 @@ export default {
 
 .choose {
   color: rgb(242, 109, 109);
+}
+
+.always-here {
+  color: rgb(106, 177, 52);
+}
+
+.fork-current {
+  color: rgb(177, 80, 48);
+}
+
+.fork-future {
+  color: rgb(69, 183, 236);
+}
+
+.char-img {
+  width: 36px;
+  border-radius: 9999px;
 }
 </style>
