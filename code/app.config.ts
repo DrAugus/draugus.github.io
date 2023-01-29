@@ -27,12 +27,8 @@ export default defineAppConfig({
           icon: 'IconNuxtLabs'
         },
         {
-          href: 'https://augus-docus.netlify.app/',
-          icon: 'bx:video-recording'
-        },
-        {
-          href: 'https://augus-art.netlify.app/',
-          icon: 'fluent-emoji-high-contrast:man-artist'
+          href: 'https://augusmeow.github.io/',
+          icon: 'material-symbols:home-work'
         },
       ]
     }
