@@ -4,12 +4,12 @@
 
 > cause [netlify][netlify] has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account
 
-| site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | tech|
-| :--: |:--: |:--: | :--:|
-| main site (now only game)|  [online][site0-1] [online2][site0-2] | - | [vuepress][vuepress] [vue3][vue]|
-| variety of notes | [online][site1-1] | [online][site1-2] | [nuxt docus][docus] [vue3][vue] |
-| code | [online][site2-1] | [online][site2-2] | [nuxt docus][docus] [vue3][vue] |
-| art | [online][site3-1] | [online][site3-2] | [nuxt docus][docus] [vue3][vue] |
+| site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | source | tech|
+| :--: |:--: |:--: | :--:| :--:|
+| main site (now only game)|  [online][site0-1] | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
+| variety of notes | [online][site1-1] | [online][site1-2] | [nuxt-docus](./nuxt-docus/) | [nuxt docus][docus] [vue3][vue] |
+| code | [online][site2-1] | [online][site2-2] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
+| art | [online][site3-1] | [online][site3-2] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -34,7 +34,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 4 sites
 
-- [game](./game)
+- [game](./game/)
 - [art](./art/)
 - [code](./code/)
 - [nuxt-docus](./nuxt-docus/)

@@ -17,6 +17,29 @@
 * 包管理工具 `apt-get`
 * 支持tar包
 
+### Debian
+
+官方镜像列表，[全球镜像站](https://www.debian.org/mirror/list.zh-cn.html)
+
+[release](https://www.debian.org/releases/) name
+::list
+
+* 下一代 Debian 正式发行版的代号为 bookworm — 测试（testing）版 — 发布日期尚未确定
+* Debian 11 (bullseye) — 当前的稳定（stable）版
+* Debian 10（buster） — 当前的旧的稳定（oldstable）版
+* Debian 9（stretch） — 更旧的稳定（oldoldstable）版，现有长期支持
+* Debian 8（jessie） — 已存档版本，现有扩展长期支持
+* Debian 7（wheezy） — 被淘汰的稳定版
+* Debian 6.0（squeeze） — 被淘汰的稳定版
+* Debian GNU/Linux 5.0（lenny） — 被淘汰的稳定版
+* Debian GNU/Linux 4.0（etch） — 被淘汰的稳定版
+* Debian GNU/Linux 3.1（sarge） — 被淘汰的稳定版
+* Debian GNU/Linux 3.0（woody） — 被淘汰的稳定版
+* Debian GNU/Linux 2.2（potato） — 被淘汰的稳定版
+* Debian GNU/Linux 2.1（slink） — 被淘汰的稳定版
+* Debian GNU/Linux 2.0（hamm） — 被淘汰的稳定版
+::
+
 ## sol
 
 ### 官方源超时

@@ -24,6 +24,9 @@ export interface Characters {
 
 export const modifyChar = (id: string) => CHARACTER[id].name
 
+// https://github.com/theBowja/genshin-db
+// todo 后续改为 db
+
 export const CHARACTER = {
   kaedehara_kazuha: {
     id: "kaedehara_kazuha",
