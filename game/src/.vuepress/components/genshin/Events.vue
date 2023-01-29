@@ -24,8 +24,9 @@ const modify4char = (arr) => {
 
 const getEventWish = (obj, arr) => {
     let lenWish = obj.index.length
+    // console.log(lenWish)
     for (let i = 0; i < lenWish; ++i) {
-        if (i > 2) break;
+        if (i > 5) break;
         let title = modifyChar(obj.wish5star[i])
         let body = [
             obj.ver[i] + ' ' + obj.name[i],

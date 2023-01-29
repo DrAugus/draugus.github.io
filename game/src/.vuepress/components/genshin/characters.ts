@@ -891,4 +891,15 @@ export const CHARACTER = {
     ele: Element.pyro,
     weapon: Weapon.claymore
   },
+  baizhu: {
+    id: "baizhu",
+    name: "白术",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Liyue,
+    ele: Element.dendro,
+    weapon: Weapon.catalyst
+  },
 }

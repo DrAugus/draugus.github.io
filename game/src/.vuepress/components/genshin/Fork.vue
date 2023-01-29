@@ -23,7 +23,7 @@
     </span> -->
     <span class="underline">
       <!-- <span v-if="allLastChar.get(selectedLastChar).durationEnd2Today < 0">当期祈愿进行时</span> -->
-      <span>距今 {{ parseInt(allLastChar.get(selectedLastChar).durationEnd2Today) }} 天</span>
+      <span>距今 {{ parseInt(allLastChar.get(selectedLastChar).sortTag) }} 天</span>
     </span>
     <br>
   </p>
