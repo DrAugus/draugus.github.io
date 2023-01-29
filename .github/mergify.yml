@@ -17,7 +17,7 @@ pull_request_rules:
             - check-failure=deploy-game
             - check-failure=deploy-art
             - check-failure=deploy-code
-            - check-failure=deploy-docus
+            - check-failure=deploy-notes
     actions:
       merge:
         method: merge
@@ -30,7 +30,7 @@ pull_request_rules:
             - check-failure=deploy-game
             - check-failure=deploy-art
             - check-failure=deploy-code
-            - check-failure=deploy-docus
+            - check-failure=deploy-notes
     actions:
       merge:
         method: merge
@@ -44,7 +44,7 @@ pull_request_rules:
             - check-failure=deploy-game
             - check-failure=deploy-art
             - check-failure=deploy-code
-            - check-failure=deploy-docus
+            - check-failure=deploy-notes
     actions:
       merge:
         method: merge
@@ -56,7 +56,7 @@ pull_request_rules:
   #         or:
   #           - check-failure=deploy
   #           - check-failure=Vercel – art
-  #           - check-failure=Vercel – docus
+  #           - check-failure=Vercel – notes
   #   actions:
   #     merge:
   #       method: merge

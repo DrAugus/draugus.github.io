@@ -7,7 +7,7 @@
 | site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | source | tech|
 | :--: |:--: |:--: | :--:| :--:|
 | main site (now only game)|  [online][site0-1] ~~[online2 todo][site0-2]~~ | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
-| variety of notes | [online][site1-1] | [online][site1-2] | [nuxt-docus](./nuxt-docus/) | [nuxt docus][docus] [vue3][vue] |
+| variety of notes | [online][site1-1] | [online][site1-2] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [online][site2-2] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
 | art | [online][site3-1] | [online][site3-2] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
 
@@ -17,7 +17,7 @@ too many records, and "code page" doesn't seem to need `components`, so code pag
 
 ## Tips
 
-about nuxt.config.ts.example([art](./art/nuxt.config.ts.example) | [notes](./nuxt-docus/nuxt.config.ts.example) | [code](./code/nuxt.config.ts.example))
+about nuxt.config.ts.example([art](./art/nuxt.config.ts.example) | [notes](./notes/nuxt.config.ts.example) | [code](./code/nuxt.config.ts.example))
 > nuxt.config.ts for vercel deploy, while nuxt.config.ts.example for auto deploy by yml
 
 ## Develop
@@ -42,7 +42,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 - [game](./game/)
 - [art](./art/)
 - [code](./code/)
-- [nuxt-docus](./nuxt-docus/)
+- [notes](./notes/)
 
 [game](./game), use and run vuepress, just run `yarn install && yarn src:dev`  
 for others, run `pnpm i && pnpm dev`
@@ -82,8 +82,8 @@ You don't have to think about them. Just give them to the robot.
 [pilot]:https://augusmeow.github.io/
 [site0-1]: https://draugus.github.io/
 [site0-2]: https://augusmeow.github.io/game/
-[site1-1]: https://augusmeow.github.io/docus/
-[site1-2]: https://augus-docus.vercel.app/
+[site1-1]: https://augusmeow.github.io/notes/
+[site1-2]: https://augus-notes.vercel.app/
 [site2-1]: https://augusmeow.github.io/code/
 [site2-2]: https://augus-code.vercel.app/
 [site3-1]: https://augusmeow.github.io/art/

@@ -32,4 +32,4 @@ see the [issue](https://github.com/nuxt/framework/issues/9314#issuecomment-13271
 
 truly answer is to **close the [analytics][analytics]**
 
-[analytics]: https://vercel.com/draugus/nuxt-docus/analytics
+[analytics]: https://vercel.com/draugus/notes/analytics

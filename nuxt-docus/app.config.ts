@@ -4,10 +4,10 @@ export default defineAppConfig({
     description: 'Slice of Life.',
     // image: "/4x4.png",
     socials: {
-      github: 'DrAugus/draugus.github.io/tree/master/nuxt-docus',
+      github: 'DrAugus/draugus.github.io/tree/master/notes',
     },
     github: {
-      root: 'tree/master/nuxt-docus/content',
+      root: 'tree/master/notes/content',
       edit: true,
       releases: false
     },

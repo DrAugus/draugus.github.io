@@ -1,34 +1,34 @@
-name: ci-deploy-docus
+name: ci-deploy-notes
 
 on:
   push:
     branches:
       - master
     paths:
-      - "nuxt-docus/**"
-      - ".github/workflows/deploy-docus.yml"
+      - "notes/**"
+      - ".github/workflows/deploy-notes.yml"
   pull_request:
     types: [opened, synchronize]
     branches:
       - master
     paths:
-      - "nuxt-docus/**"
+      - "notes/**"
 
 jobs:
-  deploy-docus:
+  deploy-notes:
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
         node: [16]
-        deploy-dir: [nuxt-docus/.output/public]
+        deploy-dir: [notes/.output/public]
         deploy-user: [augusmeow]
-        deploy-repo: [docus]
+        deploy-repo: [notes]
 
     runs-on: ${{ matrix.os }}
 
     defaults:
       run:
-        working-directory: ./nuxt-docus
+        working-directory: ./notes
 
     steps:
       - name: Checkout
