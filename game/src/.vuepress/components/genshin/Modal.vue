@@ -23,14 +23,18 @@ export default {
 <template>
 
   <div class="character" id="show-modal" @click="showModal = true">
-    <div class="character-img">
+    <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star'">
       <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + info.id + '.png?raw=true'">
     </div>
-    <div class="character-ele"></div>
-    <div class="character-name">
-      <p>{{ info.name }}</p>
+    <div class="character-ele">
+      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/elements/' + info.ele + '.png?raw=true'"
+        alt="{{1}}">
     </div>
-
+    <div class="character-name">
+      <div>
+        <p>{{ info.name }}</p>
+      </div>
+    </div>
   </div>
 
   <Teleport to="body">
@@ -54,6 +58,14 @@ export default {
 </template>
 
 <style>
+.bg-5-star {
+  background-color: rgb(255 177 63 / .5);
+}
+
+.bg-4-star {
+  background-color: rgb(210 143 214 / .5);
+}
+
 .img-half {
   position: relative
 }
@@ -96,14 +108,48 @@ export default {
 
 .character-img {
   width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 
+.character-ele {
+  position: absolute;
+  padding: 4px;
+  margin: -10px;
+  top: 0;
+  right: 0;
+  background-color: rgb(0 0 0 /.5);
+  border-radius: 9999px;
+}
+
+.character-ele img {
+  width: 1rem;
+  height: 1rem;
 }
 
 .character-name {
   position: relative;
   height: 30px;
+  /* width: 100%; */
+  /* color: #121212; */
+  background-color: rgb(153, 200, 196);
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+
+}
+
+.character-name div {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  color: #121212;
+  overflow: hidden;
+}
+
+.character-name p {
+  padding: .25rem;
+  text-align: center;
+  margin: 0;
+  font-size: .875rem;
 }
 
 

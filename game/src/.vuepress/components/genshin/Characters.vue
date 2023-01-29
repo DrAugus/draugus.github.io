@@ -1,21 +1,29 @@
 <template>
 
-  <h2> 国家分类 <a @click="all">all</a></h2>
+  <h2> 稀有分类 <a @click="all">(全)</a></h2>
+  <br>
+  <span v-for="(v, i) in star">
+    <a @click="filterStar(v)">{{ v + "🌟" }}</a>
+  </span>
+
+  <h2> 国家分类 <a @click="all">(全)</a></h2>
   <br>
   <span v-for="(v, k) in city">
     <a @click="filterCity(k)">{{ v + " " }}</a>
   </span>
 
-  <h2> 元素分类 <a @click="all">all</a></h2>
+  <h2> 元素分类 <a @click="all">(全)</a></h2>
   <br>
   <div class="genshin-element">
     <div v-for="(v, k) in elementStr">
-      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/elements/' + v + '.png?raw=true'" alt="{{v}}"
-        @click="filterEle(k)">
+      <a @click="filterEle(k)">
+        <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/elements/' + v + '.png?raw=true'"
+          alt="{{v}}">
+      </a>
     </div>
   </div>
 
-  <h2> 武器分类 <a @click="all">all</a></h2>
+  <h2> 武器分类 <a @click="all">(全)</a></h2>
   <br>
   <span v-for="(v, k) in weapon">
     <a @click="filterWeapon(k)">{{ v + " " }}</a>
@@ -31,6 +39,8 @@
       prefix: value.prefix,
       id: value.id,
       intro: value.intro,
+      star: value.star,
+      ele: elementStr[value.ele],
     }"></Modal>
 
     <!-- </div> -->
@@ -58,6 +68,7 @@ export default {
       city: CityZH,
       weapon: WeaponZH,
       showModal: false,
+      star: ['四', '五'],
       lenChar,
     };
   },
@@ -73,6 +84,9 @@ export default {
     },
     filterCity(c) {
       this.info = objFilter(CHARACTER, details => details.city == c);
+    },
+    filterStar(s) {
+      this.info = objFilter(CHARACTER, details => details.star == s);
     },
     all() {
       this.info = CHARACTER;
