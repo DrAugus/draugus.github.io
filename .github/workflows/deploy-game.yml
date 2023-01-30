@@ -81,7 +81,7 @@ jobs:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
 
       - name: Change config.ts
-        run: mv config.ts.example config.ts
+        run: mv ./src/.vuepress/config.ts.example ./src/.vuepress/config.ts
 
       - name: Build VuePress site again
         env:
