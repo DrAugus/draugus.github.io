@@ -6,7 +6,7 @@
 
 | site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | source | tech|
 | :--: |:--: |:--: | :--:| :--:|
-| main site (now only game)|  [online][site0-1] ~~[online2 todo][site0-2]~~ | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
+| main site (now only game)|  [online][site0-1] [online2][site0-2] | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
 | variety of notes | [online][site1-1] | [online][site1-2] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [online][site2-2] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
 | art | [online][site3-1] | [online][site3-2] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
