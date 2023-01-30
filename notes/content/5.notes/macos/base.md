@@ -47,3 +47,24 @@ option + 左右，跨单词移动
 ## 控制台乱码
 
 `reset`
+
+## 解压 rar
+
+> [refer](https://www.cnblogs.com/ningy1009/p/16571791.html)
+
+1. 下载，[官网](https://www.rarlab.com/download.htm)
+2. 解压
+3. 安装
+
+    ```bash
+    cd rar
+    sudo install -c -o $USER rar /usr/local/bin/
+    sudo install -c -o $USER unrar /usr/local/bin/
+    ```
+
+4. 使用
+
+    ```bash
+    unrar x xxx.rar
+    rar a xxx.rar file or dir
+    ```

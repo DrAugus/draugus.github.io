@@ -117,6 +117,17 @@ COPY --from=stage-compile ${WORK_PATH}/${RELEASE} .
 docker build --target stage-runtime -t augus/test:runtime .
 ```
 
+### 阶段内引用
+
+```docker
+FROM debian:latest AS base
+# ...
+FROM base AS derive
+# ...
+FROM derive AS son
+# ...
+```
+
 ## check docker
 
 初始化判断docker中某镜像是否存在
