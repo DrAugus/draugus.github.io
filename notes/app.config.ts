@@ -10,7 +10,7 @@ export default defineAppConfig({
       owner: 'DrAugus',
       repo: 'draugus.github.io',
       branch: 'master',
-      dir: '/notes/',
+      dir: 'notes/content',
       edit: true,
       releases: false
     },
