@@ -1,5 +1,5 @@
 {
-  "name": "augus-docus",
+  "name": "notes",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,15 @@
     "preview": "nuxi preview"
   },
   "devDependencies": {
+    "@docsearch/css": "^3.3.2",
+    "@docsearch/js": "^3.3.2",
     "@nuxt-themes/docus": "1.6.3",
-    "@docsearch/css": "^3.3.1",
-    "@docsearch/js": "^3.3.1",
-    "@vue-leaflet/vue-leaflet": "^0.8.0",
+    "@vue-leaflet/vue-leaflet": "^0.8.1",
     "echarts": "^5.4.1",
     "leaflet": "^1.9.3",
     "nuxt": "3.1.1",
     "typed.js": "^2.0.12",
-    "vue-echarts": "^6.2.4"
+    "vue-echarts": "^6.5.2"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -25,6 +25,7 @@
         "axios": "0.25.0"
       },
       "ignoreMissing": [
+        "@algolia/client-search",
         "postcss",
         "postcss-*",
         "webpack",

@@ -1,4 +1,4 @@
-# Augus Docus
+# Notes
 
 Starter template for [Docus](https://docus.dev).
 
