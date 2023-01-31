@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
   extends: '@nuxt-themes/docus',
-  // experimental: {
-  //   payloadExtraction: false,
-  // },
+  experimental: {
+    payloadExtraction: false,
+  },
   app: {
     baseURL: '/docus/',
   },

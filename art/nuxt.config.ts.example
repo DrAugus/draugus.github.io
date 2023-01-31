@@ -3,9 +3,9 @@ export default defineNuxtConfig({
   // https://github.com/nuxt/framework/discussions/7691
   // You can use new experimental.payloadExtraction: false 
   // flag in nuxt.config to opt-out as well.
-  // experimental: {
-  //   payloadExtraction: false,
-  // },
+  experimental: {
+    payloadExtraction: false,
+  },
   app: {
     baseURL: '/art/',
   },
