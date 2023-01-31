@@ -7,6 +7,9 @@ export default defineAppConfig({
       github: 'DrAugus/draugus.github.io/tree/master/code',
     },
     github: {
+      owner: 'DrAugus',
+      repo: 'draugus.github.io',
+      branch: 'master',
       root: '/tree/master/code/content',
       edit: true,
       releases: false
