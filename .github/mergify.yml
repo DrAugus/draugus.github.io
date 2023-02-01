@@ -11,10 +11,10 @@ pull_request_rules:
       - author=dependabot[bot]
       # condition
       # https://docs.mergify.com/conditions/#github-actions
-      - check-success=deploy-game
-      - check-success=deploy-art
-      - check-success=deploy-code
-      - check-success=deploy-notes
+      - not: check-failure=deploy-game
+      - not: check-failure=deploy-art
+      - not: check-failure=deploy-code
+      - not: check-failure=deploy-notes
     actions:
       merge:
         method: merge
@@ -22,10 +22,10 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - check-success=deploy-game
-      - check-success=deploy-art
-      - check-success=deploy-code
-      - check-success=deploy-notes
+      - not: check-failure=deploy-game
+      - not: check-failure=deploy-art
+      - not: check-failure=deploy-code
+      - not: check-failure=deploy-notes
     actions:
       merge:
         method: merge
@@ -34,10 +34,10 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - check-success=deploy-game
-      - check-success=deploy-art
-      - check-success=deploy-code
-      - check-success=deploy-notes
+      - not: check-failure=deploy-game
+      - not: check-failure=deploy-art
+      - not: check-failure=deploy-code
+      - not: check-failure=deploy-notes
     actions:
       merge:
         method: merge
@@ -45,11 +45,6 @@ pull_request_rules:
   # - name: automatic merge for auto pull requests
   #   conditions:
   #     - title=pulling refs/heads/dev into master
-  #     - not:
-  #         or:
-  #           - check-success=deploy
-  #           - check-success=Vercel – art
-  #           - check-success=Vercel – notes
   #   actions:
   #     merge:
   #       method: merge
