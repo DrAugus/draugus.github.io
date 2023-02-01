@@ -9,15 +9,12 @@ pull_request_rules:
   - name: automatic merge for dependabot pull requests
     conditions:
       - author=dependabot[bot]
-      # 这三个不一定全都会响应 在此判定 任意一个失败都不可以
       # condition
       # https://docs.mergify.com/conditions/#github-actions
-      - not:
-          or:
-            - check-failure=deploy-game
-            - check-failure=deploy-art
-            - check-failure=deploy-code
-            - check-failure=deploy-notes
+      - check-success=deploy-game
+      - check-success=deploy-art
+      - check-success=deploy-code
+      - check-success=deploy-notes
     actions:
       merge:
         method: merge
@@ -25,12 +22,10 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - not:
-          or:
-            - check-failure=deploy-game
-            - check-failure=deploy-art
-            - check-failure=deploy-code
-            - check-failure=deploy-notes
+      - check-success=deploy-game
+      - check-success=deploy-art
+      - check-success=deploy-code
+      - check-success=deploy-notes
     actions:
       merge:
         method: merge
@@ -39,12 +34,10 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - not:
-          or:
-            - check-failure=deploy-game
-            - check-failure=deploy-art
-            - check-failure=deploy-code
-            - check-failure=deploy-notes
+      - check-success=deploy-game
+      - check-success=deploy-art
+      - check-success=deploy-code
+      - check-success=deploy-notes
     actions:
       merge:
         method: merge
@@ -54,9 +47,9 @@ pull_request_rules:
   #     - title=pulling refs/heads/dev into master
   #     - not:
   #         or:
-  #           - check-failure=deploy
-  #           - check-failure=Vercel – art
-  #           - check-failure=Vercel – notes
+  #           - check-success=deploy
+  #           - check-success=Vercel – art
+  #           - check-success=Vercel – notes
   #   actions:
   #     merge:
   #       method: merge
