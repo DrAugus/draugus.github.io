@@ -67,6 +67,12 @@ OPTIONS说明
 - `-i`: 即使没有附加也保持STDIN 打开
 - `-t`: 分配一个伪终端
 
+e.g.
+
+```bash
+docker exec -it container_id /bin/bash
+```
+
 ## save
 
 ```shell
