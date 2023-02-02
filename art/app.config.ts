@@ -12,10 +12,10 @@ export default defineAppConfig({
       branch: 'master',
       dir: 'art/content',
       edit: true,
-      releases: false
     },
     aside: {
       level: 1,
+      collapsed: true,
       exclude: []
     },
     header: {
