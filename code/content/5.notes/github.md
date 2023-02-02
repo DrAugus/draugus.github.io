@@ -4,6 +4,14 @@ icon: logos:github-octocat
 
 # GitHub
 
+## [hub](https://hub.github.com/)
+
+自动建仓
+
+```bash
+hub create [-poc] [-d <DESCRIPTION>] [-h <HOMEPAGE>] [<ORGANIZATION>/<NAME>]
+```
+
 ## clone private repo
 
 github clone private repo, clone submodule private repo  

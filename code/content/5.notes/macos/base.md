@@ -68,3 +68,15 @@ option + 左右，跨单词移动
     unrar x xxx.rar
     rar a xxx.rar file or dir
     ```
+
+## env
+
+[环境变量](https://support.apple.com/zh-cn/guide/terminal/apd382cc5fa-4f58-4449-b20a-41c53c006f8f/mac)
+
+```bash
+PATH=/bin:/sbin:/user/bin:/user/sbin:/system/Library/ export PATH
+# 查看环境变量
+env
+```
+
+在一个“终端”窗口设置变量不会影响其他“终端”窗口的设置。
