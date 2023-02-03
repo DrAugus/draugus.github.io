@@ -11,10 +11,11 @@ pull_request_rules:
       - author=dependabot[bot]
       # condition
       # https://docs.mergify.com/conditions/#github-actions
-      - not: check-failure=deploy-game
-      - not: check-failure=deploy-art
-      - not: check-failure=deploy-code
-      - not: check-failure=deploy-notes
+      - and:
+          - check-success=deploy-game
+          - check-success=deploy-art
+          - check-success=deploy-code
+          - check-success=deploy-notes
     actions:
       merge:
         method: merge
@@ -22,10 +23,11 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - not: check-failure=deploy-game
-      - not: check-failure=deploy-art
-      - not: check-failure=deploy-code
-      - not: check-failure=deploy-notes
+      - and:
+          - check-success=deploy-game
+          - check-success=deploy-art
+          - check-success=deploy-code
+          - check-success=deploy-notes
     actions:
       merge:
         method: merge
@@ -34,10 +36,11 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - not: check-failure=deploy-game
-      - not: check-failure=deploy-art
-      - not: check-failure=deploy-code
-      - not: check-failure=deploy-notes
+      - and:
+          - check-success=deploy-game
+          - check-success=deploy-art
+          - check-success=deploy-code
+          - check-success=deploy-notes
     actions:
       merge:
         method: merge
