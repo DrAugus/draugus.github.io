@@ -12,10 +12,10 @@ pull_request_rules:
       # condition
       # https://docs.mergify.com/conditions/#github-actions
       - and:
-          - check-success=deploy-game
-          - check-success=deploy-art
-          - check-success=deploy-code
-          - check-success=deploy-notes
+          - check-success~=^deploy-game
+          - check-success~=^deploy-art
+          - check-success~=^deploy-code
+          - check-success~=^deploy-notes
     actions:
       merge:
         method: merge
@@ -24,10 +24,10 @@ pull_request_rules:
     conditions:
       - author=renovate[bot]
       - and:
-          - check-success=deploy-game
-          - check-success=deploy-art
-          - check-success=deploy-code
-          - check-success=deploy-notes
+          - check-success~=^deploy-game
+          - check-success~=^deploy-art
+          - check-success~=^deploy-code
+          - check-success~=^deploy-notes
     actions:
       merge:
         method: merge
@@ -37,10 +37,10 @@ pull_request_rules:
       - title~=^\[requires.io\]
       - head~=^requires-io
       - and:
-          - check-success=deploy-game
-          - check-success=deploy-art
-          - check-success=deploy-code
-          - check-success=deploy-notes
+          - check-success~=^deploy-game
+          - check-success~=^deploy-art
+          - check-success~=^deploy-code
+          - check-success~=^deploy-notes
     actions:
       merge:
         method: merge
