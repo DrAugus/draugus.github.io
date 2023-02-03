@@ -30,3 +30,14 @@ dpkg --add-architecture i386 && apt-get update
 apt-get install  gcc-multilib g++-multilib 
 # 编译加上 -m32
 ```
+
+### error adding symbols: DSO missing from command line
+
+```txt
+/usr/bin/ld: build/release/objs/index_conn.o: undefined reference to symbol '_ZN5boost6system15system_categoryEv'
+//usr/lib/x86_64-linux-gnu/libboost_system.so.1.55.0: error adding symbols: DSO missing from command line
+collect2: error: ld returned 1 exit status
+make[1]: *** [build/release/query_runner] Error 1
+```
+
+sol: flag add `-lboost_system`, `:LDFLAGS += -L/usr/lib/boost -lboost_thread -lpthread -lboost_system`
