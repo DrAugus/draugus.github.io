@@ -3,13 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@docsearch/css': ^3.3.2
   '@docsearch/js': ^3.3.2
-  '@nuxt-themes/docus': 1.7.3
+  '@nuxt-themes/docus': 1.7.4
   nuxt: 3.1.2
 
 devDependencies:
   '@docsearch/css': 3.3.2
   '@docsearch/js': 3.3.2
-  '@nuxt-themes/docus': 1.7.3_nuxt@3.1.2
+  '@nuxt-themes/docus': 1.7.4_nuxt@3.1.2
   nuxt: 3.1.2
 
 packages:
@@ -1006,8 +1006,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@nuxt-themes/docus/1.7.3_nuxt@3.1.2:
-    resolution: {integrity: sha512-nkq9JBayZXJcYAUBxlOIMdnN1ee6kSQs9/KdQXzxlmx8xYSD+C59HddeOgHJmgUkIdEOuHs5AI9HmD5P3zIDBA==}
+  /@nuxt-themes/docus/1.7.4_nuxt@3.1.2:
+    resolution: {integrity: sha512-s8AL19WV3QaklGiqPiqQtBLuyd+evy9GCcdWpxVw1l/slCVHDZkBY0YRfb9OhECjvU1CpYNBLtapWNBhAU1caA==}
     dependencies:
       '@nuxt-themes/elements': 0.6.3
       '@nuxt-themes/tokens': 1.7.3
@@ -1292,7 +1292,7 @@ packages:
       ofetch: 1.0.0
       parse-git-config: 3.0.0
       rc9: 2.0.0
-      std-env: 3.3.1
+      std-env: 3.3.2
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -6105,10 +6105,6 @@ packages:
   /statuses/2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
-    dev: true
-
-  /std-env/3.3.1:
-    resolution: {integrity: sha512-3H20QlwQsSm2OvAxWIYhs+j01MzzqwMwGiiO1NQaJYZgJZFPuAbf95/DiKRBSTYIJ2FeGUc+B/6mPGcWP9dO3Q==}
     dev: true
 
   /std-env/3.3.2:
