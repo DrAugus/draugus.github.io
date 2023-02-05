@@ -15,11 +15,12 @@ pull_request_rules:
       # 必须用 not or
       # 修改成这样是因为 无法匹配 matrix
       # https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692
-      - and:
-          - check-success~=^deploy-game
-          - check-success~=^deploy-art
-          - check-success~=^deploy-code
-          - check-success~=^deploy-notes
+      - not:
+          or:
+            - check-failure~=^deploy-game
+            - check-failure~=^deploy-art
+            - check-failure~=^deploy-code
+            - check-failure~=^deploy-notes
     actions:
       merge:
         method: merge
@@ -27,11 +28,12 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - and:
-          - check-success~=^deploy-game
-          - check-success~=^deploy-art
-          - check-success~=^deploy-code
-          - check-success~=^deploy-notes
+      - not:
+          or:
+            - check-failure~=^deploy-game
+            - check-failure~=^deploy-art
+            - check-failure~=^deploy-code
+            - check-failure~=^deploy-notes
     actions:
       merge:
         method: merge
@@ -40,11 +42,12 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - and:
-          - check-success~=^deploy-game
-          - check-success~=^deploy-art
-          - check-success~=^deploy-code
-          - check-success~=^deploy-notes
+      - not:
+          or:
+            - check-failure~=^deploy-game
+            - check-failure~=^deploy-art
+            - check-failure~=^deploy-code
+            - check-failure~=^deploy-notes
     actions:
       merge:
         method: merge
