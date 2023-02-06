@@ -716,10 +716,10 @@
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-4.0.0.tgz#93815beffd23db46288c787352a8ea31a0c03e5e"
   integrity sha512-e0X4jErIxAB5oLtDqbHvHpJe/uWNkdpYV83AOG2xo2tEVSzCzewgJMtREZM30wXnM5ls90hxiOtAuVU6H5JgbA==
 
-"@vue-leaflet/vue-leaflet@0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@vue-leaflet/vue-leaflet/-/vue-leaflet-0.8.1.tgz#0539955e775191f64aa50981762a2d1101075120"
-  integrity sha512-fPkySmxI86lUWY7arIV6UShK6tjXkygumLd81N5C2AH/s0gwsL37L+cOMfr+xvSG8KdBWCoHpCUNPpOMPa0IUA==
+"@vue-leaflet/vue-leaflet@0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@vue-leaflet/vue-leaflet/-/vue-leaflet-0.8.2.tgz#a28c87cc89e7527892895f7633b4a4384186ae52"
+  integrity sha512-/NVDAs7nT+TJ6eWZvRQ6nT5piMVm/s4TkeqfX4DFbnxQJCwBxIMALqqbBYCtAP90c0t7MoN28xnGk2sWat2ggQ==
 
 "@vue/compiler-core@3.2.45":
   version "3.2.45"
