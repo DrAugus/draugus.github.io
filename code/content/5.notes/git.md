@@ -270,7 +270,7 @@ git switch -c <non_existing_branch>
 
 > [原链接][linux下git免密码登录配置]
 
-> 使用git push提交时，每次都要输入密码，次数多了，感觉挺麻烦. 如果git以ssh协议通讯，免密码可以用ssh公钥设置免登录。如果git时以https方式访问呢，该怎么办？下面方式可以解决这个问题.
+使用git push提交时，每次都要输入密码，次数多了，感觉挺麻烦. 如果git以ssh协议通讯，免密码可以用ssh公钥设置免登录。如果git时以https方式访问呢，该怎么办？下面方式可以解决这个问题.
 
 1. 编辑`git-credentials`文件(如果没有 键入 `touch .git-credentials`)
     - `vi .git-credentials`
@@ -293,13 +293,35 @@ git switch -c <non_existing_branch>
 
 ### better
 
-[服务器上的 Git - 生成 SSH 公钥]
+[服务器上的 Git - 生成 SSH 公钥][服务器上的 Git - 生成 SSH 公钥]
 
-```shell
-cd ~/.ssh
-ls
-ssh-keygen -o
-cat ~/.ssh/id_rsa.pub
+[below](#ssh)
+
+## ssh
+
+本地存放多个 ssh
+
+```bash [~/.ssh/config]
+# gitlab
+Host ssh1
+HostName gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/gitlab_id_rsa
+# github
+Host ssh1
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/github_id_rsa
+```
+
+```bash
+ssh-keygen -t ed25519 -C "email@example.com"
+# or
+ssh-keygen -o -t rsa -b 4096 -C "email@example.com"
+# for name
+ssh-keygen -o -t rsa -b 4096 -C "email@example.com" -f <keyname>
+# To test whether your SSH key was added correctly
+ssh -T git@gitlab.com
 ```
 
 ## QA

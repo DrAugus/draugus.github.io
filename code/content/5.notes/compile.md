@@ -41,3 +41,10 @@ make[1]: *** [build/release/query_runner] Error 1
 ```
 
 sol: flag add `-lboost_system`, `:LDFLAGS += -L/usr/lib/boost -lboost_thread -lpthread -lboost_system`
+
+### is incompatible with i386:x86-64 output
+
+/usr/bin/ld: i386 architecture of input file `xxx.a(log.o)' is incompatible with i386:x86-64 output
+
+将 xxx.a 库在当前机器上重新编译 或者 flag + `-m32`  
+cmake `set_target_properties (your_project PROPERTIES LINK_FLAGS "-m32")`
