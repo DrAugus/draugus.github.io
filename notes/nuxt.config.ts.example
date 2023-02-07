@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     payloadExtraction: false,
   },
   app: {
-    baseURL: '/docus/',
+    baseURL: '/notes/',
   },
   runtimeConfig: {
     public: {
