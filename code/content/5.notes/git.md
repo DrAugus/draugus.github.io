@@ -272,15 +272,10 @@ git switch -c <non_existing_branch>
 
 使用git push提交时，每次都要输入密码，次数多了，感觉挺麻烦. 如果git以ssh协议通讯，免密码可以用ssh公钥设置免登录。如果git时以https方式访问呢，该怎么办？下面方式可以解决这个问题.
 
-1. 编辑`git-credentials`文件(如果没有 键入 `touch .git-credentials`)
-    - `vi .git-credentials`
-
-2. 文件中添加`https://username:passeord@项目地址`
-    - 如果账号密码中有@符号，用40%代替
-
+1. 编辑`git-credentials`文件(如果没有 键入 `touch ~/.git-credentials`)，`vi ~/.git-credentials`
+2. 文件中添加`https://{username}:{passeord}@domain`，如果账号密码中有@符号，用40%代替
 3. `git config --global credential.helper store`
-
-4. `vi .gitconfig` 出现 `helper = store` 或者
+4. `cat .gitconfig` 出现 `helper = store`, 再尝试git push不再需要输入密码.
 
    ```shell
    cat .gitconfig
@@ -288,8 +283,6 @@ git switch -c <non_existing_branch>
    [credential]
    helper = store 
    ```
-
-   > 再尝试git push不再需要输入密码.
 
 ### better
 
