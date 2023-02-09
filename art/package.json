@@ -12,7 +12,7 @@
     "@docsearch/css": "^3.3.2",
     "@docsearch/js": "^3.3.2",
     "@nuxt-themes/docus": "1.8.1",
-    "nuxt": "3.1.2"
+    "nuxt": "3.2.0"
   },
   "pnpm": {
     "peerDependencyRules": {
