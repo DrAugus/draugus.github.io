@@ -7,6 +7,7 @@
 - `cat /etc/issue`，此命令也适用于所有的Linux发行版
 - `cat /proc/cpuinfo` 查看CPU信息
 - `lscpu` Linux查看cpu相关信息，包括型号、主频、内核信息等
+- `nproc` cpu core
 - `getconf LONG_BIT` 查看cpu运行在32位还是64位
 - `hostname` 查看服务器名称
 - `ifconfig` 查看网络信息 `cat /etc/sysconfig/network-scripts/ifcfg-eth0`

@@ -4,9 +4,9 @@ icon: logos:docker-icon
 
 # Docker
 
-## [Linux install]
+## install
 
-[ubuntu][install]
+### [ubuntu](https://docs.docker.com/engine/install/ubuntu/#prerequisites)
 
 ```shell
 sudo mkdir -p /etc/apt/keyrings
@@ -19,7 +19,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo docker run hello-world
 ```
 
-debian
+### debian
 
 ```shell
 sudo mkdir -p /etc/apt/keyrings
@@ -238,7 +238,11 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 
 　　总之，写 Dockerfile 需要注意很多细节，需要结合实际情况来进行调整和优化。如果遇到问题，可以查阅相关文档或者询问更有经验的开发人员。
 
-[install]: https://docs.docker.com/engine/install/ubuntu/#prerequisites
+## docker 间通信
+
+bridge 网络通信，不建议，此处略。
+
+在宿主机，`ifconfig` 查看各个 docker 的 ip。直接在 docker A 上指定 服务器 ip 访问 docker B
 
 ## sol
 
