@@ -263,6 +263,8 @@ RUN cat /home/source_aliyun >> /etc/apt/sources.list
 RUN apt-get update
 ```
 
+如果加上国内源出现`Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown.  Could not handshake: Error in the certificate verification.` 可以尝试加上 `echo 'Acquire { https::Verify-Peer false }' >>/etc/apt/apt.conf.d/99synaptic`
+
 ### Error: You don't have enough free space in /var/cache/apt/archives/
 
 [refer](https://github.com/onyx-platform/onyx-starter/issues/5#issuecomment-276562225), [refer](https://github.com/onyx-platform/onyx-starter/issues/5#issuecomment-736082622)

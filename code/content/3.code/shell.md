@@ -350,3 +350,47 @@ bash FileName
 
 作用: 打开一个子 shell 来读取并执行 FileName 中命令，该 filename 文件需要 "执行权限"。  
 注：运行一个 shell 脚本时会启动另一个命令解释器。
+
+## skill
+
+### 判断字符串包含关系
+
+#### grep
+
+```bash
+strA="long string"
+strB="string"
+result=$(echo $strA | grep "${strB}")
+if [[ "$result" != "" ]]
+then
+    echo "包含"
+else
+    echo "不包含"
+fi
+```
+
+### =~
+
+```bash
+strA="long string"
+strB="string"
+if [[ $strA =~ $strB ]]
+then
+    echo "包含"
+else
+    echo "不包含"
+fi
+```
+
+### 通配符
+
+```bash
+strA="long string"
+strB="string"
+if [[ $A == *$B* ]]
+then
+    echo "包含"
+else
+    echo "不包含"
+fi
+```
