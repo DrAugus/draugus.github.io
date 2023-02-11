@@ -79,6 +79,7 @@ export const sidebar_zh: SidebarConfigObject = {
         url_game + "/timelinetable.md",
         url_game + "/character.md",
         url_game + "/fork.md",
+        url_game + "/uptimes.md",
 
         url_game + "/language.md",
         url_game + "/level.md",
