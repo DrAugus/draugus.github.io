@@ -43,7 +43,11 @@ export enum Artifacts {
 }
 
 //替换空格 转小写
-export const replaceAndLow = (str: string) => str.replace(/ /g, "_").toLowerCase();
+export const replaceAndLow = (str: string) =>
+  str.replace(/ /g, "_").toLowerCase();
 
 //格式化日期
-export const formatDate = (dayjsObj) => dayjsObj.format("YYYY/MM/DD HH:mm:ss");
+import dayjs from "dayjs";
+export const formatDayjs = (date: string) =>
+  dayjs(date.replace(/-/g, "/"), "YYYY-MM-DD HH:mm:ss");
+

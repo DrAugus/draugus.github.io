@@ -13,7 +13,7 @@
     <tr v-for="(v,i) in WISH.characters">
 
       <td>{{ v.version }}</td>
-      <td>{{ formatDate(dayjs(v.start)) + "~" + formatDate(dayjs(v.end)) }}</td>
+      <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
       <td>
         <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
               replaceAndLow(v.name) + '_' + v.image + '.jpg?raw=true'" width="320" alt="">
@@ -31,7 +31,7 @@ import dayjs from "dayjs";
 import {WISH} from "./wish";
 import {CHARACTER} from "./characters";
 import "dayjs/locale/zh";
-import {replaceAndLow, formatDate} from "./utils";
+import {replaceAndLow, formatDayjs} from "./utils";
 
 dayjs.locale("zh");
 
@@ -43,7 +43,7 @@ export default {
       CHARACTER,
       replaceAndLow,
       dayjs,
-      formatDate,
+      formatDayjs,
     };
   },
 

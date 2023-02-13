@@ -1,6 +1,6 @@
 import { processEvent } from "./eventHandle";
 import { Deadline } from "../utils";
-import { replaceAndLow, formatDate } from "./utils";
+import { replaceAndLow, formatDayjs } from "./utils";
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
 
@@ -71,8 +71,8 @@ const getWish = (wish) => {
     let img = "https://github.com/DrAugus/data/blob/master/game/genshin/wish/";
     img += picName;
     img += ".jpg?raw=true";
-    let s = formatDate(dayjs(wish.start));
-    let e = formatDate(dayjs(wish.end));
+    let s = formatDayjs(wish.start);
+    let e = formatDayjs(wish.end);
     // console.log(s, e);
     let wish4star = wish.wish4star.length > 0 ? wish.wish4star : ""
     // 有部分没有小写

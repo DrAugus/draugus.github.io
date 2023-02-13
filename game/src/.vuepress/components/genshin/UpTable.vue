@@ -9,7 +9,6 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 // import { CHARACTER } from "./characters";
-// import { formatDate } from "./utils";
 import dayjs from "dayjs";
 import { modifyChar } from './characters';
 
@@ -33,7 +32,7 @@ const filterChar = () => {
             charMap.set(wish5star, [obj]);
         }
     }
-    console.log("charMap", charMap);
+    // console.log("charMap", charMap);
     return charMap;
 }
 

@@ -52,7 +52,7 @@
 import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { formatDate } from "./utils";
+import { formatDayjs } from "./utils";
 
 import "dayjs/locale/zh";
 
@@ -145,8 +145,8 @@ const sliceCharInfo = allPastChar.map(object => {
   return {
     name: object.wish5star,
     times: object.image,
-    start: formatDate(dayjs(object.start)),
-    end: formatDate(dayjs(object.end)),
+    start: formatDayjs(object.start),
+    end: formatDayjs(object.end),
     durationEnd2Today: object.durationEnd2Today,
     durationStart2Today: object.durationStart2Today,
   };
@@ -235,8 +235,8 @@ const allLastChar = new Map(allChar.map(object => [
   {
     src: composeSrc(CHARACTER[object.wish5star].id),
     times: object.image,
-    start: formatDate(dayjs(object.start)),
-    end: formatDate(dayjs(object.end)),
+    start: formatDayjs(object.start),
+    end: formatDayjs(object.end),
     durationEnd2Today: object.durationEnd2Today,
     durationStart2Today: object.durationStart2Today,
     sortTag: object.durationEnd2Today,
