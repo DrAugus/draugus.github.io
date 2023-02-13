@@ -3,11 +3,13 @@ title: Excel
 icon: vscode-icons:file-type-excel2
 ---
 
-### 从身份证中提取年龄
+# Excel
+
+## 从身份证中提取年龄
 
 `=YEAR(NOW())-MID(B2,7,4)`
 
-### 获取当前日期
+## 获取当前日期
 
 在 Excel 中，可以使用函数 `TODAY()` 来获取当前日期。具体使用方法如下：
 
@@ -19,3 +21,32 @@ icon: vscode-icons:file-type-excel2
 ::alert{type="info"}
 注意：虽然 `TODAY()` 函数返回的是当前日期，但它并不包含时间信息。如果需要获取当前时间，可以使用 `NOW()` 函数。
 ::
+
+## 筛选后求和
+
+`SUBTOTAL(function_num,ref1,[ref2],...)`
+
+示例，对 C3:C70 筛选后求和，`SUBTOTAL(9,C3:C70)`
+
+Function_num  
+必需。 数字 1-11 或 101-111，用于指定要为分类汇总使用的函数。 如果使用 1-11，将包括手动隐藏的行，如果使用 101-111，则排除手动隐藏的行；始终排除已筛选掉的单元格。
+
+| Function_num (包括隐藏的行) | Function_num (忽略隐藏的行) | 函数 |
+|:----|:----|:----|
+| 1 | 101 | AVERAGE
+| 2 | 102 | COUNT |
+| 3 | 103 | COUNTA |
+| 4 | 104 | MAX |
+| 5 | 105 | MIN |
+| 6 | 106 | PRODUCT |
+| 7 | 107 | STDEV |
+| 8 | 108 | STDEVP |
+| 9 | 109 | SUM |
+| 10 | 110 | VAR |
+| 11 | 111 | VARP |
+
+Ref1  
+必需。 要对其进行分类汇总计算的第一个命名区域或引用。
+
+Ref2,...  
+可选。 要对其进行分类汇总计算的第 2 个至第 254 个命名区域或引用。

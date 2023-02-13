@@ -123,3 +123,11 @@ export NODE_OPTIONS="--max-old-space-size=(X * 1024)" # Increase to X GB
 
 但好像不是这样的，并不能修复  
 目前看到的是[仓库](https://github.com/nuxt-themes/docus) 在 v1.2.5 发布时，自动出包，抛出500错误。而之前的都是正常的
+
+## js ts
+
+### TypeError: replace is not a function
+
+[refer](https://github.com/DrAugus/draugus.github.io/commit/b206c6559b326add98f7773b637abddd18092577#diff-1d790b86c76035cd166c812c35ce19682c15e5ab353eeb8ab75b8bd91156f1c1)
+
+We used the `toString()` method to convert the number to a string before calling `replace()`.
