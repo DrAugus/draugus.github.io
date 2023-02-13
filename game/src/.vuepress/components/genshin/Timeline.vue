@@ -93,7 +93,7 @@ import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
 import { processEvent } from "./eventHandle";
-import { ElementString } from "./utils";
+import { formatDayjs, ElementString } from "./utils";
 
 dayjs.locale("zh");
 
@@ -139,7 +139,7 @@ setTimeAxis();
 const wishCharacterInfo = () => {
   for (let i = 0; i < wishCharacterLength; ++i) {
     let start = firstDay;
-    const end = dayjs(wishCharacters[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+    const end = formatDayjs(wishCharacters[i].start).subtract(0, "minute");
     durationCharacter.push(end.diff(start, "day", true));
     // console.log(i, durationCharacter);
   }
@@ -152,7 +152,7 @@ wishCharacterInfo();
 const wishWeaponInfo = () => {
   for (let i = 0; i < wishWeaponLength; ++i) {
     let start = firstDay;
-    const end = dayjs(wishWeapons[i].start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+    const end = formatDayjs(wishWeapons[i].start).subtract(0, "minute");
     // console.log(start, end);
     // console.log(i, end.diff(start, "day", true));
     durationWeapon.push(end.diff(start, "day", true));
@@ -163,7 +163,7 @@ wishWeaponInfo();
 // console.log(durationWeapon);
 
 export default {
-  name: "Timeline",
+  name: "GenshinTimeline",
   data() {
     return {
       monthList,
@@ -194,8 +194,8 @@ export default {
       this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
     },
     diffWishStyle(s, e) {
-      return dayjs(e, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute")
-        .diff(dayjs(s, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute"), "hour", true) < 1
+      return formatDayjs(e).subtract(0, "minute")
+        .diff(formatDayjs(s).subtract(0, "minute"), "hour", true) < 1
     },
   },
   beforeDestroy() {

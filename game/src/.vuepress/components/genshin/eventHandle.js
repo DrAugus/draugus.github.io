@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { WISH } from "./wish";
+import { formatDayjs } from "./utils";
 
 import "dayjs/locale/zh";
 
@@ -25,8 +26,8 @@ const convertToDate = (e, i, j) => {
         e.start = e.start.replace(/-/g, "/");
         e.end = e.end.replace(/-/g, "/");
     }
-    start = dayjs(e.start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
-    end = dayjs(e.end, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+    start = formatDayjs(e.start).subtract(0, "minute");
+    end = formatDayjs(e.end).subtract(0, "minute");
 
     const duration = end.diff(start, "day", true);
 

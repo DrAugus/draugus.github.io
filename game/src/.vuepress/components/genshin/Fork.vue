@@ -64,8 +64,8 @@ const convertToDate = (e, i, j) => {
   e.start = e.start.replace(/-/g, "/");
   e.end = e.end.replace(/-/g, "/");
 
-  let start = dayjs(e.start, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute"),
-    end = dayjs(e.end, "YYYY-MM-DD HH:mm:ss").subtract(0, "minute");
+  let start = formatDayjs(e.start).subtract(0, "minute"),
+    end = formatDayjs(e.end).subtract(0, "minute");
 
   // to today, every event, end time to now
   const durationEnd2Today = dayjs().diff(end, "day", true);
