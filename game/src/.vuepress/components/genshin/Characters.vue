@@ -31,6 +31,9 @@
 
   <h2 @click="all"> 全部角色 </h2>
   <p> 当前共计收录 {{ lenChar }} 名角色</p>
+  <!-- <p> 筛选了 {{ lenFilterChar }} 名角色</p> -->
+  <hr>
+  <br>
 
   <div class="character-info">
 
@@ -57,7 +60,7 @@ import { CityZH, ElementString, WeaponZH } from "./utils";
 import { objFilter } from "../utils";
 
 const lenChar = Object.getOwnPropertyNames(CHARACTER).length
-
+// let lenFilterChar = lenChar
 export default {
   name: "Characters",
   components: { Modal },
@@ -68,12 +71,13 @@ export default {
       city: CityZH,
       weapon: WeaponZH,
       showModal: false,
-      star: ['四', '五'],
+      star: [4, 5],
       lenChar,
+      // lenFilterChar,
     };
   },
-  mounted() {
-
+  async mounted() {
+    this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
   },
   methods: {
     filterEle(ele) {
@@ -90,7 +94,7 @@ export default {
     },
     all() {
       this.info = CHARACTER;
-    }
+    },
   }
 };
 </script>
