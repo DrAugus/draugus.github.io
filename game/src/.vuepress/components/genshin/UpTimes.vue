@@ -1,4 +1,9 @@
 <template>
+
+    <p>
+        次数 <a @click="sort(0)">递增</a> | <a @click="sort(1)">递减</a>
+    </p>
+
     <div v-for="(v, k) in charMap">
         {{ modifyChar(v[0]) }} : {{ v[1].length }}
     </div>
@@ -20,7 +25,6 @@ const filterChar = () => {
         let start = formatDayjs(wish.start)
         let end = formatDayjs(wish.end)
         let startBefore = dayjs().isBefore(start, "second");
-        console.log(startBefore)
         if (startBefore) break;
 
         let wish5star = wish.wish5star;
@@ -50,6 +54,15 @@ export default defineComponent({
             charMap,
             modifyChar,
         }
+    },
+    methods: {
+        sort(type) {
+            this.charMap = (Array.from(charMap).sort((a, b) =>
+                !type ?
+                    a[1].length - b[1].length :
+                    b[1].length - a[1].length
+            ))
+        },
     },
 })
 
