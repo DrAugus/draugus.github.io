@@ -54,7 +54,7 @@ export default {
   methods: {
     showResult() {
       let words = this.query_words;
-      console.log(words);
+      // console.log(words);
       this.query_res = chinese[words];
     }
   }

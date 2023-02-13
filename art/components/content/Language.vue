@@ -93,7 +93,7 @@ export default {
     },
     showResult() {
       let words = this.query_words;
-      console.log(words);
+      // console.log(words);
       this.query_res = this.info[words];
     },
   },

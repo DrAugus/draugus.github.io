@@ -125,13 +125,13 @@ let durationWeapon = [];
 
 // console.log(wishCharacters)
 
-console.log(monthList)
+// console.log(monthList)
 
 //设置时间轴
 const setTimeAxis = () => {
   todayOffset = Math.abs(firstDay.diff(today, "day", true));
   todayOffset = (todayOffset + 1) * (DUR_DAY_WIDTH + 1) + "px";
-  console.log("todayOffset", todayOffset);
+  // console.log("todayOffset", todayOffset);
 };
 setTimeAxis();
 

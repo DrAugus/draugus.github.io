@@ -27,7 +27,7 @@ import foodInfo from "~/assets/json/food.json";
 import { filterObject } from "../utils"
 
 const takeaway = foodInfo.外卖
-console.log(takeaway)
+// console.log(takeaway)
 
 let allTag = []
 Object.values(takeaway).forEach((v) => {
@@ -35,7 +35,7 @@ Object.values(takeaway).forEach((v) => {
   allTag = [...allTag, ...splitTag]
 });
 allTag = allTag.filter(Boolean)
-console.log(allTag)
+// console.log(allTag)
 
 export default {
   name: "Food-Random",
@@ -47,7 +47,7 @@ export default {
   methods: {
     filterTag(tag) {
       this.takeawayInfo = filterObject(takeaway, (v) => v.tag == tag)
-      console.log("filterTag", tag, this.takeawayInfo)
+      // console.log("filterTag", tag, this.takeawayInfo)
     },
     displayTag(tag) {
       return tag.split(',')
@@ -61,7 +61,7 @@ export default {
         let s = v.split(',')
         arr.push(s)
       }
-      console.log(arr)
+      // console.log(arr)
       return arr
     },
   },

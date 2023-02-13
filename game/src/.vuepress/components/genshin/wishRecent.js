@@ -64,7 +64,7 @@ const getWishObj = () => {
 
 };
 let objWish = getWishObj();
-console.log("objWish", objWish);
+// console.log("objWish", objWish);
 
 const getWish = (wish) => {
     let picName = replaceAndLow(wish.name) + "_" + wish.image;
@@ -128,7 +128,7 @@ for (let v of objWish.comingIndex) {
     future.wish5star.push(obj.wish5star);
 }
 
-console.log(current, future);
+// console.log(current, future);
 export const wishDeadline = () => current.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) : -1;
 export const wishBegin = () => future.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) : -1;
 

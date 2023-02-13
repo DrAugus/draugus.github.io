@@ -36,15 +36,15 @@ const allLinkLv = [
   ...(allLinks.website.lv5)
 ]
 
-console.log(allLinkLv)
+// console.log(allLinkLv)
 
 
 const allTags = allLinkLv.map(obj => (obj.tag.split(',')))
-console.log(allTags)
+// console.log(allTags)
 
 // es6 降维 arr.flat(depth)
 const filterTags = new Set(allTags.reduce((prev, curr) => (prev.concat(curr)), []))
-console.log(filterTags)
+// console.log(filterTags)
 
 
 export default {
@@ -57,7 +57,7 @@ export default {
   },
   methods: {
     showLv(lv) {
-      console.log(lv)
+      // console.log(lv)
       if (lv == 'all') {
         this.linkLv = allLinkLv
         return
@@ -66,7 +66,7 @@ export default {
       this.linkLv = allLinks.website[str]
     },
     showTag(tag) {
-      console.log(tag)
+      // console.log(tag)
       if (tag == 'all') {
         this.linkLv = allLinkLv
         return

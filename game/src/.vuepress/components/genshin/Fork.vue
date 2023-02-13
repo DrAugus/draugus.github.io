@@ -117,7 +117,7 @@ let allPastChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
 const allFutureChar = allChar.filter((v, i, a) => v.durationStart2Today < 0)
 const allCurrentChar = allChar.filter((v, i, a) => v.durationEnd2Today < 0 && v.durationStart2Today > 0)
 
-console.log("allPastChar", allPastChar)
+// console.log("allPastChar", allPastChar)
 // console.log("allFutureChar", allFutureChar)
 // console.log("allCurrentChar", allCurrentChar)
 
@@ -126,15 +126,15 @@ const sliceFutureChar = [...new Set(allFutureChar.map(obj => obj.wish5star))];
 const sliceCurrentChar = [...new Set(allCurrentChar.map(obj => obj.wish5star))];
 const sliceFutureCharIndex = [...new Set(allFutureChar.map(obj => obj.index2))];
 const sliceCurrentCharIndex = [...new Set(allCurrentChar.map(obj => obj.index2))];
-console.log("sliceChar", sliceChar)
-console.log("sliceFutureChar", sliceFutureChar)
-console.log("sliceCurrentChar", sliceCurrentChar)
+// console.log("sliceChar", sliceChar)
+// console.log("sliceFutureChar", sliceFutureChar)
+// console.log("sliceCurrentChar", sliceCurrentChar)
 // console.log(sliceFutureCharIndex)
 const sliceCharZH = sliceChar.map(v => CHARACTER[v].name)
 
 // 防止当前与未来重复
 let aa = [...new Set([...sliceFutureChar, ...sliceCurrentChar])]
-console.log(aa)
+// console.log(aa)
 
 
 
@@ -228,7 +228,7 @@ const showColor = (wish5star) => {
   return color
 }
 
-console.log("allPastChar", allPastChar)
+// console.log("allPastChar", allPastChar)
 // all recent char up, done, include future
 const allLastChar = new Map(allChar.map(object => [
   CHARACTER[object.wish5star].name,
@@ -247,7 +247,7 @@ const allLastChar = new Map(allChar.map(object => [
 
 ));
 
-console.log("allLastChar", allLastChar)
+// console.log("allLastChar", allLastChar)
 
 // 
 // every time duration, end to next start, by name 

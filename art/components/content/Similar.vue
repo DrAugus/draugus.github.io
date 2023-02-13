@@ -70,7 +70,7 @@ const formatJson = (json) => {
     }
 
     let id = json.id;
-    console.log("formatLexicalEntries", formatLexicalEntries)
+    // console.log("formatLexicalEntries", formatLexicalEntries)
     return formatLexicalEntries
 }
 
