@@ -52,7 +52,7 @@
 import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { formatDayjs } from "./utils";
+import { parseDayjs, formatDayjs } from "./utils";
 
 import "dayjs/locale/zh";
 
@@ -64,8 +64,8 @@ const convertToDate = (e, i, j) => {
   e.start = e.start.replace(/-/g, "/");
   e.end = e.end.replace(/-/g, "/");
 
-  let start = formatDayjs(e.start).subtract(0, "minute"),
-    end = formatDayjs(e.end).subtract(0, "minute");
+  let start = parseDayjs(e.start).subtract(0, "minute"),
+    end = parseDayjs(e.end).subtract(0, "minute");
 
   // to today, every event, end time to now
   const durationEnd2Today = dayjs().diff(end, "day", true);

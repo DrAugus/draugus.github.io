@@ -14,7 +14,7 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 // import { CHARACTER } from "./characters";
-import { formatDayjs } from "./utils";
+import { parseDayjs } from "./utils";
 import dayjs from "dayjs";
 import { modifyChar } from './characters';
 
@@ -22,8 +22,8 @@ const filterChar = () => {
     let charMap = new Map();
     for (let wish of WISH.characters) {
         //当前时间在祈愿起始时间前
-        let start = formatDayjs(wish.start)
-        let end = formatDayjs(wish.end)
+        let start = parseDayjs(wish.start)
+        let end = parseDayjs(wish.end)
         let startBefore = dayjs().isBefore(start, "second");
         if (startBefore) break;
 

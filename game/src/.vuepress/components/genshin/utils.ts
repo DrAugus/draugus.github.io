@@ -48,6 +48,8 @@ export const replaceAndLow = (str: string) =>
 
 //格式化日期
 import dayjs from "dayjs";
+export const parseDayjs = (date: string) =>
+  dayjs(date.toString(), "YYYY-MM-DD HH:mm:ss");
 export const formatDayjs = (date: string) =>
-  dayjs(date.toString().replace(/-/g, "/"), "YYYY-MM-DD HH:mm:ss");
+  parseDayjs(date).format("YYYY-MM-DD HH:mm:ss");
 
