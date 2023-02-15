@@ -246,6 +246,10 @@ bridge 网络通信，不建议，此处略。
 
 ## sol
 
+### docker 会损失性能吗
+
+[不会](https://dominoweb.draco.res.ibm.com/reports/rc25482.pdf)
+
 ### debian 源加入 阿里云 的镜像源 会抛出 Certificate verification failed
 
 Certificate verification failed: The certificate is NOT trusted. The certificate issuer is unknown. Could not handshake: Error in the certificate verification.

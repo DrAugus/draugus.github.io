@@ -38,7 +38,7 @@ rebase then enter, edit file, change `pick` to `drop`, then save
 
 `git submodule add <url> <path>`
 
-`git clone --recursive-submodules -j8 url`
+`git clone --recurse-submodules -j8 url`
 
 For already cloned repos, or older Git versions, use:
 

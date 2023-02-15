@@ -33,3 +33,5 @@
 ## dp
 
 ## 有限元分析
+
+## [PTX](https://docs.nvidia.com/cuda/parallel-thread-execution/index.html)

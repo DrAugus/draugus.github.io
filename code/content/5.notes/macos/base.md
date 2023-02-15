@@ -12,6 +12,10 @@ tag:
 
 ---
 
+# Mac Basin
+
+## [截屏](https://support.apple.com/zh-cn/HT201361)
+
 ## mac上显示.开头的文件
 
 - 第一种方法是在`finder`中按下`command+shift+.`键。
