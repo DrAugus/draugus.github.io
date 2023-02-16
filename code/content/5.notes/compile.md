@@ -48,3 +48,7 @@ sol: flag add `-lboost_system`, `:LDFLAGS += -L/usr/lib/boost -lboost_thread -lp
 
 将 xxx.a 库在当前机器上重新编译 或者 flag + `-m32`  
 cmake `set_target_properties (your_project PROPERTIES LINK_FLAGS "-m32")`
+
+### -D_FILE_OFFSET_BITS=64
+
+<https://digital-domain.net/largefiles.html>

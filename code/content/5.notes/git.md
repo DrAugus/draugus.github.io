@@ -56,6 +56,7 @@ git submodule update --init --recursive
 - `git push -u origin master` push
 - `git remote rm name`  删除远程仓库
 - `git remote rename old_name new_name`  修改仓库名
+- `git remote set-url origin [new_url]` [修改仓库url](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url)
 
 ## config
 

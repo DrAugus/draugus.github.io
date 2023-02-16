@@ -304,6 +304,10 @@ lengthn=${#array_name[n]}
   - 当执行 shell 脚本时，`$?` 对应该脚本调用 exit 命令返回的值。如果没有主动调用 exit 命令，默认返回为 0。
   - 当执行自定义的 bash 函数时，`$?` 对应该函数调用 return 命令返回的值。如果没有主动调用 return 命令，默认返回为 0。
 
+### exit
+
+When used in a shell script, the commands `exit 0` and `exit 1` indicate the success or failure of a command or script. Generally, `exit 0` is used to indicate successful completion, while `exit 1` is used to indicate an error or failure. It is important to note that the exit code is -1 if the script is terminated by a signal such as SIGINT or SIGKILL.
+
 ## QA
 
 ### mkdir err
@@ -408,10 +412,3 @@ else
     echo "不包含"
 fi
 ```
-
-排除这几个魔神：钟离、若陀、归终、灶神、漩涡魔神、盐神
-
-魔神或元素龙：钟离、若陀、归终、灶神
-夜叉：浮舍、弥怒、应达、伐难、金鹏、铜雀
-仙人：移霄导天、留云借风、理水叠山、削月筑阳、歌尘浪市、鸣海栖霞、救苦度厄、烟绯父亲、甘雨母亲、寻瑰纳琦（周游壶灵）、销虹霁雨（壶灵阿圆）
-半仙：甘雨、烟绯
