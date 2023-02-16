@@ -24,10 +24,10 @@ export default {
 
   <div class="character" id="show-modal" @click="showModal = true">
     <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star'">
-      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + info.id + '.png?raw=true'">
+      <img :src="'/image/genshin/characters/' + info.id + '.png?raw=true'">
     </div>
     <div class="character-ele">
-      <img :src="'https://github.com/DrAugus/data/blob/master/game/genshin/elements/' + info.ele + '.png?raw=true'"
+      <img :src="'/image/genshin/elements/' + info.ele + '.png?raw=true'"
         alt="{{1}}">
     </div>
     <div class="character-name">
@@ -46,7 +46,7 @@ export default {
       <template #body>
         <div class="img-half">
           <img
-            :src="'https://github.com/DrAugus/data/blob/master/game/genshin/characters/half/' + info.id + '.png?raw=true'">
+            :src="'/image/genshin/characters/half/' + info.id + '.png?raw=true'">
         </div>
         <span>{{ info.intro }}</span>
       </template>

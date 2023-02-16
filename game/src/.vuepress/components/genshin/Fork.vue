@@ -202,7 +202,7 @@ const displayCharInfo = () => {
 
 // -------------------------------------------------------
 
-const composeSrc = (name) => 'https://github.com/DrAugus/data/blob/master/game/genshin/characters/' + name + '.png?raw=true'
+const composeSrc = (name) => '/image/genshin/characters/' + name + '.png?raw=true'
 
 const findInCurrent = (wish5star) => sliceCurrentChar.indexOf(wish5star) != -1;
 

@@ -30,7 +30,7 @@
           }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img">
-                <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
+                <img v-bind:src="'/image/genshin/wish/' +
                 value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
                 '?raw=true'" alt="">
               </div>
@@ -55,7 +55,7 @@
 }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img responsive-img lazy">
-                <img v-bind:src="'https://github.com/DrAugus/data/blob/master/game/genshin/wish/' +
+                <img v-bind:src="'/image/genshin/wish/' +
                 value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
                 '?raw=true'" alt="">
               </div>

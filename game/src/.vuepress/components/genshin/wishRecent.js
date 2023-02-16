@@ -68,7 +68,7 @@ let objWish = getWishObj();
 
 const getWish = (wish) => {
     let picName = replaceAndLow(wish.name) + "_" + wish.image;
-    let img = "https://github.com/DrAugus/data/blob/master/game/genshin/wish/";
+    let img = "/image/genshin/wish/";
     img += picName;
     img += ".jpg?raw=true";
     let s = formatDayjs(wish.start);
