@@ -20,15 +20,15 @@ $$\frac{1}{4}+\frac{1}{4^2}+\frac{1}{4^3}+...+\frac{1}{4^n}=\sum\limits _{i=1}^n
 
 三连音（tuplet）在音乐创作中最常见。它是将原本可以平均分成两份的基本音符的时值平均分成三份。
 
-![](/img/art/jstcxjbw.png)
+![](/art/jstcxjbw.png)
 
-![](/img/art/guoge.png)
+![](/art/guoge.png)
 
 聂耳 义勇军进行曲
 
 三连音的写法如下。在辨认的时候，去掉一个音符，取 2 个所表达的长度，就是时值了。
 
-![](/img/art/tuplet.png)
+![](/art/tuplet.png)
 
 tuplet
 
@@ -36,7 +36,7 @@ tuplet
 
 五连音、六连音、七连音是将原本可以平均分成四份的一个基本音符的时值平均分成五份、六份、七份。辨认的时候，取 4 个音符的时值作为总时值。
 
-![](/img/art/quintuplets.png)
+![](/art/quintuplets.png)
 
 Quintuplets Sixtuplets Seventuplets
 
@@ -44,7 +44,7 @@ Quintuplets Sixtuplets Seventuplets
 
 从九连音一直到十五连音，它们是将原本可以平均分成八份的一个基本音符的时值平均分成九份、十份直至十五份。这一组连音符用得较少。辨认的时候，取 8 个音符的时值当作总时值。
 
-![](/img/art/Ninet.png)
+![](/art/Ninet.png)
 
 Ninet Tentuplet Eleventup
 
@@ -52,19 +52,19 @@ Ninet Tentuplet Eleventup
 
 二连音、四连音、八连音是将一个附点音符平均分成二份、四份、八份。这类$2^k$连音的用得较少。分一个本来能用二进制表示的连音数没有多大意义，所以这里添上附点音符（前一个音符的一半时值的音符）。找的是最靠近该音符时值的 3/4 时值，因为可以用基本音符加两个附点表示出来。比如$\frac{1}{2}+\frac{1}{4}=\frac{3}{8}+\frac{3}{8}$可以表示出$\frac{3}{8}$这个时值，如果不这么写，你可以用 3 个八分音符来凑这个时值。提醒一下，看到四代三，可能让部分人误以为数目减一地代——$2^k$代$2^k-1$，即八代七，是错误的。
 
-![](/img/art/doublet.png)
+![](/art/doublet.png)
 
-![](/img/art/lsmd0c6l.png)
+![](/art/lsmd0c6l.png)
 
 doublet
 
-![](/img/art/octave.jpg)
+![](/art/octave.jpg)
 
 octave
 
 与前面几种连音符不同的是，二连音、四连音、八连音所分的是一个附点音符的时值，而不是一个基本音符的时值。而二连音更是与众不同，别的连音符都是以多分少：三连音所分的是两部分、四连音所分的是三部分、五连音所分的是四部分、九连音所分的是八部分……而二连音是以少分多：它是将本来是三部分的音符平均分为二部分。
 
-![](/img/art/tuplet2.png)
+![](/art/tuplet2.png)
 
 tuplet
 
@@ -74,7 +74,7 @@ tuplet
 
 最后需要强调的点是，所有的连音符中是可以包含休止符的，只是各组连音符中的休止符也必须和音符有着相同的时值。例子见下图。所以，连音符不一定都是同样的音符哦～
 
-![](/img/art/tentuplets.png)
+![](/art/tentuplets.png)
 
 tentuplets
 

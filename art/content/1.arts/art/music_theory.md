@@ -24,13 +24,13 @@ Bear in mind that the COURSERA site uses American terminology, whereas we are te
 
 ### Sharps and Flats
 
-![img.png](/img/art/sharps_and_flats.png)
+![img.png](/art/sharps_and_flats.png)
 
 ### Keys and Key Signatures
 
 #### Circle of Fifths
 
-![img.png](/img/art/circle_of_fifths.png)
+![img.png](/art/circle_of_fifths.png)
 
 ## Week 3
 
@@ -59,6 +59,6 @@ Dot: A dot always sitting to the right-hand side of the notehead changes the dur
 
 How many times would a guitarist pluck a note when playing the following passage
 
-![img.png](/img/art/q1.png)
+![img.png](/art/q1.png)
 
 Dots lengthen the duration but do not indicate that a note should be re-plucked; similarly the tie--the curved line connecting two notes of the same pitch--lengthens the note by the tied-to duration but also does not imply a re-pluck. This is illustrated most easily by displaying a different note for each pluck
