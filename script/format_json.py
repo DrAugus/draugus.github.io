@@ -60,6 +60,20 @@ def split_all_space(filename):
         write_file(arr_res)
 
 
+def add_prefix(filename, str):
+    with open(filename, "r", encoding='utf-8') as file_handle:
+        line = file_handle.readline()
+        arr_res = []
+        while line:
+            line_str = line.strip()
+            if not len(line_str):
+                line = file_handle.readline()
+                continue
+            arr_res.append(str + line_str + '\n')
+            line = file_handle.readline()
+        write_file(arr_res)
+
+
 def invoke_similar_words():
     split_all_space("script/test")
 
@@ -68,10 +82,15 @@ def invoke_translate():
     open_and_read("script/test")
 
 
+def invoke_add_prefix(str):
+    add_prefix("script/test", str)
+
+
 all_feature = '\n=========*****=========\n' \
     'What do you want to do? \n' \
     '   1: invoke_similar_words\n' \
     '   2: invoke_translate\n' \
+    '   3: invoke_add_prefix\n' \
     '   0: nothing\n' \
     '=========*****=========\n'
 
@@ -86,6 +105,11 @@ if __name__ == '__main__':
             invoke_translate()
             break
         elif judge == '3':
+            while 1:
+                print("please input str you want to add prefix")
+                input_str = input()
+                invoke_add_prefix(input_str)
+                break
             break
         elif judge == '4':
             break
