@@ -8,4 +8,4 @@ title: 提瓦特通用文字
 
 > 提瓦特大陆的通行文字，字体是歌特文风格，大部分内容是英语
 
-![](/image/genshin/genshin_lang.png?raw=true)
+![](/image/genshin/genshin_lang.png)

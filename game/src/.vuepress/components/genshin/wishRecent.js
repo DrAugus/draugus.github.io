@@ -70,7 +70,7 @@ const getWish = (wish) => {
     let picName = replaceAndLow(wish.name) + "_" + wish.image;
     let img = "/image/genshin/wish/";
     img += picName;
-    img += ".jpg?raw=true";
+    img += ".jpg";
     let s = formatDayjs(wish.start);
     let e = formatDayjs(wish.end);
     // console.log(s, e);

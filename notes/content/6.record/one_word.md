@@ -36,7 +36,7 @@ order: 3
 会让你感到疼
 但它也一定比塑料花要好
 中文有个非常美丽的词语叫危机
-危险和机遇是并行的](https://github.com/DrAugus/data/blob/master/extract/罗翔_恋爱.jpg?raw=true)
+危险和机遇是并行的](https://github.com/DrAugus/data/blob/master/extract/罗翔_恋爱.jpg)
 
 [成年人是不能随便后悔的
 我们不能用今天的想法来撤销
@@ -48,7 +48,7 @@ order: 3
 才能帮助他们培育自由的能力
 在孩子手中放一根炸药
 并不能让他变得更强大
-只能增加他不负责任的危险](https://github.com/DrAugus/data/blob/master/extract/罗翔_成年人.jpg?raw=true)
+只能增加他不负责任的危险](https://github.com/DrAugus/data/blob/master/extract/罗翔_成年人.jpg)
 
 真正的大师永远怀着一颗学徒的心
 

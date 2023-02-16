@@ -10,13 +10,13 @@
       <th>5星(up次数)</th>
 
     </tr>
-    <tr v-for="(v,i) in WISH.characters">
+    <tr v-for="(v, i) in WISH.characters">
 
       <td>{{ v.version }}</td>
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
       <td>
         <img v-bind:src="'/image/genshin/wish/' +
-              replaceAndLow(v.name) + '_' + v.image + '.jpg?raw=true'" width="320" alt="">
+        replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" alt="">
       </td>
       <td>{{ CHARACTER[v.wish5star].name }} [{{ v.image }}]</td>
 
@@ -28,10 +28,10 @@
 
 <script>
 import dayjs from "dayjs";
-import {WISH} from "./wish";
-import {CHARACTER} from "./characters";
+import { WISH } from "./wish";
+import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
-import {replaceAndLow, formatDayjs} from "./utils";
+import { replaceAndLow, formatDayjs } from "./utils";
 
 dayjs.locale("zh");
 
@@ -51,6 +51,5 @@ export default {
 </script>
 
 <style scoped>
-
 
 </style>

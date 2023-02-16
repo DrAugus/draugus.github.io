@@ -17,8 +17,7 @@
   <div class="genshin-element">
     <div v-for="(v, k) in elementStr">
       <a @click="filterEle(k)">
-        <img :src="'/image/genshin/elements/' + v + '.png?raw=true'"
-          alt="{{v}}">
+        <img :src="'/image/genshin/elements/' + v + '.png'" alt="{{v}}">
       </a>
     </div>
   </div>

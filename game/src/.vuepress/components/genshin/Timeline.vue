@@ -1,7 +1,10 @@
 <template>
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
-    <span>也许有未实装、未确定的虚假信息<a @click="setCurrentPos()">回到当前时间</a></span>
+    <p :style="{ textAlign: 'center' }">
+      也许有未实装、未确定的虚假信息
+      <a @click="setCurrentPos()">回到当前时间</a>
+    </p>
 
     <div class="timeline-scroll-x" ref="setNowPos">
 
@@ -32,7 +35,7 @@
               <div class="event-img">
                 <img v-bind:src="'/image/genshin/wish/' +
                 value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                '?raw=true'" alt="">
+                ''" alt="">
               </div>
               <span class="left-align timeline-character-text sticky text-shadow-weapon ">
                 「神铸赋形」活动祈愿
@@ -57,12 +60,13 @@
               <div class="event-img responsive-img lazy">
                 <img v-bind:src="'/image/genshin/wish/' +
                 value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                '?raw=true'" alt="">
+                ''" alt="">
               </div>
               <span class="left-align timeline-character-text sticky"
                 :class="'ele-text-shadow-' + ElementString[CHARACTER[value.wish5star].ele]">
-                {{ value.wishName }} 活动祈愿 「{{ CHARACTER[value.wish5star].prefix }}」 {{ CHARACTER[value.wish5star].name
-                }}
+                {{ value.wishName }} 活动祈愿
+                「{{ CHARACTER[value.wish5star].prefix }}」
+                {{ CHARACTER[value.wish5star].name }}
               </span>
             </div>
 
@@ -81,7 +85,7 @@
   </div>
 
   <div class="hide-on-large-only">
-    <h2>请在电脑端查看此页</h2>
+    <!-- <h2>请在电脑端查看此页</h2> -->
   </div>
 
 </template>
@@ -282,13 +286,13 @@ export default {
 
   .hide-on-small-only,
   .hide-on-small-and-down {
-    display: none !important;
+    /* display: none !important; */
   }
 }
 
 @media only screen and (min-width: 993px) {
   .hide-on-large-only {
-    display: none !important;
+    /* display: none !important; */
   }
 }
 </style>
