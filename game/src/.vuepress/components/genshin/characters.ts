@@ -239,25 +239,6 @@ export const CHARACTER = {
     city: City.Liyue,
     ele: Element.geo,
     weapon: Weapon.polearm,
-    cultivate: {
-      weapons: "",
-      talent: "",
-      artifacts: [
-        "千岩固牢2件 + 宗室2件"
-      ],
-      main: {
-        sands: "生命值",
-        goblet: "岩伤",
-        circlet: "暴击%/暴伤"
-      },
-      sub: [
-        "暴击",
-        "暴伤",
-        "生命",
-        "攻击"
-      ],
-      tips: ""
-    }
   },
   fischl: {
     id: "fischl",
@@ -280,23 +261,6 @@ export const CHARACTER = {
     city: City.Mondstadt,
     ele: Element.pyro,
     weapon: Weapon.sword,
-    cultivate: {
-      weapons: "",
-      talent: "",
-      artifacts: [
-        "宗室4件"
-      ],
-      main: {
-        sands: "充能",
-        goblet: "生命",
-        circlet: "治疗"
-      },
-      sub: [
-        "充能",
-        "攻击"
-      ],
-      tips: ""
-    }
   },
   tartaglia: {
     id: "tartaglia",
@@ -484,34 +448,6 @@ export const CHARACTER = {
     city: City.Inazuma,
     ele: Element.electro,
     weapon: Weapon.polearm,
-    cultivate: {
-      weapons: [
-        "稻光",
-        "天空",
-        "鱼叉",
-        "西风"
-      ],
-      talent: [
-        1,
-        8,
-        10
-      ],
-      artifacts: [
-        "绝缘之旗印4件"
-      ],
-      main: {
-        sands: "充能",
-        goblet: "雷伤",
-        circlet: "暴击%/暴伤"
-      },
-      sub: [
-        "充能",
-        "暴击",
-        "暴伤",
-        "攻击"
-      ],
-      tips: ""
-    }
   },
   sangonomiya_kokomi: {
     id: "sangonomiya_kokomi",
@@ -534,34 +470,6 @@ export const CHARACTER = {
     city: City.Inazuma,
     ele: Element.electro,
     weapon: Weapon.bow,
-    cultivate: {
-      weapons: [
-        "天空之翼",
-        "祭礼弓",
-        "绝弦"
-      ],
-      talent: [
-        1,
-        8,
-        8
-      ],
-      artifacts: [
-        "宗室4件",
-        "绝缘之旗印4件"
-      ],
-      main: {
-        sands: "充能",
-        goblet: "雷伤",
-        circlet: "暴击%/暴伤"
-      },
-      sub: [
-        "暴击",
-        "暴伤",
-        "攻击",
-        "充能"
-      ],
-      tips: ""
-    }
   },
   aloy: {
     id: "aloy",
@@ -584,23 +492,6 @@ export const CHARACTER = {
     city: City.Inazuma,
     ele: Element.pyro,
     weapon: Weapon.polearm,
-    cultivate: {
-      weapons: "",
-      talent: "",
-      artifacts: [
-        "千岩固牢2件 + 绝缘之旗印2件"
-      ],
-      main: {
-        sands: "生命值%/充能效率",
-        goblet: "生命值%/充能效率",
-        circlet: "生命值"
-      },
-      sub: [
-        "充能效率",
-        "百分比生命值"
-      ],
-      tips: "如果选择生命值武器，那么时之沙主属性选择充能效率；如果选择充能武器，那么时之沙主属性选择生命值。"
-    }
   },
   arataki_itto: {
     id: "arataki_itto",
@@ -612,25 +503,6 @@ export const CHARACTER = {
     city: City.Inazuma,
     ele: Element.geo,
     weapon: Weapon.claymore,
-    cultivate: {
-      weapons: "",
-      talent: "",
-      artifacts: [
-        "华冠梦醒形骸记4件"
-      ],
-      main: {
-        sands: "防御",
-        goblet: "岩伤",
-        circlet: "暴击%/暴伤"
-      },
-      sub: [
-        "暴击",
-        "暴伤",
-        "防御",
-        "攻击"
-      ],
-      tips: ""
-    }
   },
   gorou: {
     id: "gorou",
@@ -664,23 +536,6 @@ export const CHARACTER = {
     city: City.Liyue,
     ele: Element.geo,
     weapon: Weapon.polearm,
-    cultivate: {
-      weapons: "决斗、西风、喜多院",
-      talent: "1-8-8",
-      artifacts: [
-        "华冠梦醒形骸记4件"
-      ],
-      main: {
-        sands: "充能",
-        goblet: "防御",
-        circlet: "防御"
-      },
-      sub: [
-        "防御",
-        "充能"
-      ],
-      tips: "建议充能不低于220%"
-    }
   },
   yae_miko: {
     id: "yae_miko",
@@ -885,7 +740,7 @@ export const CHARACTER = {
     name: "迪希雅",
     prefix: "炽鬃之狮",
     star: 5,
-    event_exclusive: true,
+    event_exclusive: false,
     intro: "",
     city: City.Inazuma,
     ele: Element.pyro,
