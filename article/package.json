@@ -1,0 +1,22 @@
+{
+  "name": "article",
+  "version": "1.0.0",
+  "description": "augus article record",
+  "main": "index.js",
+  "author": "Augus",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.0",
+    "eslint": "^8.29.0",
+    "vitepress": "^1.0.0-alpha.30",
+    "vue": "^3.2.45"
+  }
+}

@@ -1,0 +1,67 @@
+name: ci-deploy-article
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "article/**"
+      - ".github/workflows/deploy-article.yml"
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - master
+    paths:
+      - "article/**"
+
+jobs:
+  deploy-article:
+    strategy:
+      matrix:
+        os: [ubuntu-latest] # macos-latest, windows-latest
+        node: [16]
+        deploy-dir: [.vitepress/dist]
+        deploy-user: [augusmeow]
+        deploy-repo: [article]
+
+    runs-on: ${{ matrix.os }}
+
+    defaults:
+      run:
+        working-directory: ./article
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          # 选择要使用的 node 版本
+          node-version: ${{ matrix.node }}
+          cache: yarn
+
+      # 如果缓存没有命中，安装依赖
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # 运行构建脚本
+      - name: Build VitePress site
+        env:
+          BASE: /article/
+          HOSTNAME: https://augusmeow.github.io/article/
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: yarn build
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
+          target_branch: gh-pages
+          build_dir: ${{ matrix.deploy-dir }}
+          jekyll: false
+        env:
+          GH_PAT: ${{ secrets.DEPLOY_GH }}
