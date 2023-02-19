@@ -7,8 +7,10 @@
     --ele-anemo: #57dcb0;
     --ele-cryo: #84c2e6;
     --ele-weapon: #ffb169;
+    --event-wish-2: 68px;
+    --event-height-dur: 10px;
     --event-height: 58px;
-    --event-number: 5;
+    --event-number: 5; // 3 个 event + 天的高度 + 月的高度
     --event-dur-day-width: 40px;
 }
 
@@ -128,11 +130,6 @@
     border-radius: 10px;
 }
 
-
-@media screen and (max-width: 610px) {
-    .timeline-top-info {}
-}
-
 .timeline-area {
     display: flex;
     /*flex-wrap: nowrap;*/
@@ -168,7 +165,7 @@
 }
 
 .timeline-day-index {
-    margin-top: -20px;
+    margin-top: calc((-1 * var(--event-height)) / 2);
     margin-left: -15px;
     width: 20px;
     text-align: center;
@@ -176,7 +173,7 @@
 }
 
 .timeline-week-index {
-    margin-top: -40px;
+    margin-top: calc(-1 * var(--event-height));
     margin-left: -15px;
     width: 20px;
     text-align: center;
@@ -321,34 +318,37 @@
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: scroll;
-    height: calc(var(--event-height) * var(--event-number));
+    // event 多加1 不需要再加月份高度
+    height: calc((var(--event-height) + var(--event-height-dur)) * var(--event-number));
 }
 
-.timeline-scroll-x::-webkit-scrollbar {
-    /*滚动条整体样式*/
-    width: 4px;
-    /*高宽分别对应横竖滚动条的尺寸*/
-    height: 25px;
-}
+// .timeline-scroll-x::-webkit-scrollbar {
+//     /*滚动条整体样式*/
+//     // width: 4px;
+//     /*高宽分别对应横竖滚动条的尺寸*/
+//     // height: 25px;
+// }
 
-.timeline-scroll-x::-webkit-scrollbar-thumb {
-    /*滚动条里面小方块*/
-    border-radius: 5px;
-    /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
-    background-size: 25px;
-    background-repeat: no-repeat;
-    /*background-image: url("/assets/res/genshin-impact/intertwined_fate.png");*/
-}
+// .timeline-scroll-x::-webkit-scrollbar-thumb {
+//     /*滚动条里面小方块*/
+//     border-radius: 5px;
+//     /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
+//     background-size: 25px;
+//     background-repeat: no-repeat;
+//     /*background-image: url("/assets/res/genshin-impact/intertwined_fate.png");*/
+// }
 
-.timeline-scroll-x::-webkit-scrollbar-track {
-    /*滚动条里面轨道*/
-    /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
-    /*border-radius: 0;*/
-    /*background: rgba(0, 0, 0, 0.1);*/
-}
+// .timeline-scroll-x::-webkit-scrollbar-track {
+//     /*滚动条里面轨道*/
+//     /*-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);*/
+//     /*border-radius: 0;*/
+//     /*background: rgba(0, 0, 0, 0.1);*/
+// }
 
+// 事件高度加上月份的高度
 .timeline-month {
     display: flex;
+    height: 20px;
 }
 
 .timeline-month-text {
@@ -362,7 +362,7 @@
 
 .timeline-day {
     display: flex;
-    margin-top: 20px;
+    margin-top: var(--event-height);
     height: calc(var(--event-height) * var(--event-number));
     position: relative;
 }
