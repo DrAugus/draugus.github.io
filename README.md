@@ -10,6 +10,7 @@
 | variety of notes | [online][site1-1] | [online][site1-2] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [online][site2-2] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
 | art | [online][site3-1] | [online][site3-2] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
+| article | [online][site4-1] | - | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -37,14 +38,16 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ### Run
 
-4 sites
+5 sites
 
 - [game](./game/)
 - [art](./art/)
+- [article](./article/)
 - [code](./code/)
 - [notes](./notes/)
 
-[game](./game), use and run vuepress, just run `yarn install && yarn src:dev`  
+[game](./game), use and run [vuepress][vuepress], just run `yarn install && yarn src:dev`  
+[article](./article/), use and run [vitepress][vitepress], just run `yarn install && yarn dev`  
 for others, run `pnpm i && pnpm dev`
 
 ### Upgrade
@@ -88,9 +91,11 @@ You don't have to think about them. Just give them to the robot.
 [site2-2]: https://augus-code.vercel.app/
 [site3-1]: https://augusmeow.github.io/art/
 [site3-2]: https://augus-art.vercel.app/
+[site4-1]: https://augusmeow.github.io/article/
 [netlify]: https://netlify.com/
 [vercel]: https://vercel.com/
 [docus]: https://docus.dev
 [vue]: https://vuejs.org
 [vuepress]: https://v2.vuepress.vuejs.org
+[vitepress]: https://vitepress.vuejs.org/
 [new-repo]: https://github.com/augusmeow/
