@@ -20,7 +20,7 @@ jobs:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
         node: [16]
-        deploy-dir: [.vitepress/dist]
+        deploy-dir: [article/.vitepress/dist]
         deploy-user: [augusmeow]
         deploy-repo: [article]
 
