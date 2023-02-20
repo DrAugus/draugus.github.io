@@ -74,6 +74,36 @@ def add_prefix(filename, str):
         write_file(arr_res)
 
 
+def replace_str(filename, a, b):
+    with open(filename, "r", encoding='utf-8') as file_handle:
+        line = file_handle.readline()
+        arr_res = []
+        while line:
+            line_str = line.strip()
+            if not len(line_str):
+                line = file_handle.readline()
+                continue
+            arr_res.append(line_str.replace(a, b))
+            line = file_handle.readline()
+        write_file(arr_res)
+
+
+def change_line(filename, a):
+    with open(filename, "r", encoding='utf-8') as file_handle:
+        line = file_handle.readline()
+        arr_res = []
+        while line:
+            line_str = line.strip()
+            if not len(line_str):
+                line = file_handle.readline()
+                continue
+            line_str = line_str.split(a)
+            for ls in line_str:
+                arr_res.append(ls + '\n')
+            line = file_handle.readline()
+        write_file(arr_res)
+
+
 def invoke_similar_words():
     split_all_space("script/test")
 
@@ -86,11 +116,21 @@ def invoke_add_prefix(str):
     add_prefix("script/test", str)
 
 
+def invoke_replace_str(src, dis):
+    replace_str("script/test", src, dis)
+
+
+def invoke_change_line(str):
+    change_line("script/test", str)
+
+
 all_feature = '\n=========*****=========\n' \
     'What do you want to do? \n' \
     '   1: invoke_similar_words\n' \
     '   2: invoke_translate\n' \
     '   3: invoke_add_prefix\n' \
+    '   4: invoke_replace_str, replace a to b\n' \
+    '   5: invoke_change_line\n' \
     '   0: nothing\n' \
     '=========*****=========\n'
 
@@ -112,8 +152,24 @@ if __name__ == '__main__':
                 break
             break
         elif judge == '4':
+            while 1:
+                print("please input str a, b you want to replace")
+                print("e.g. a b")
+                input_str = input()
+                input_str.split(' ')
+                invoke_replace_str(input_str[0], input_str[1])
+                break
             break
         elif judge == '5':
+            while 1:
+                print("please input str you want to split and line break")
+                input_str = input()
+                invoke_change_line(input_str)
+                break
+            break
+        elif judge == '6':
+            break
+        elif judge == '7':
             break
         elif judge == '0':
             break
