@@ -1,7 +1,8 @@
 ---
-title: 🐱 小猫
-order: 1
+icon: fluent-emoji-high-contrast:cat-face
 ---
+
+# 小猫
 
 > 贡献指南：可增加猫粮、猫砂种类，修改遇到的最低、最高价格
 

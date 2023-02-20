@@ -1,6 +1,7 @@
 ---
-title: 💻 网站
-order: 8
+icon: carbon:text-link
 ---
+
+# 网站收录
 
 :LinksRecord

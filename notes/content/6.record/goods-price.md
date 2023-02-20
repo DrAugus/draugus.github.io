@@ -1,5 +1,4 @@
 ---
-title: 日用价格
 icon: emojione:shopping-cart
 ---
 

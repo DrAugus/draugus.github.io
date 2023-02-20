@@ -1,8 +1,9 @@
 ---
 toc: false
-title: 机票价格
 icon: material-symbols:airplane-ticket
 ---
+
+# 机票价格
 
 收集因疫情导致的机票价格波动
 

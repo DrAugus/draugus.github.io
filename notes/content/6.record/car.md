@@ -1,7 +1,8 @@
 ---
-title: 车车
 icon: openmoji:autonomous-car
 ---
+
+# 买车吗
 
 > 截图来自 2022-11-01 14:00 官网
 
