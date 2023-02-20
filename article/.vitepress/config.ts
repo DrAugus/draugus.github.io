@@ -19,7 +19,7 @@ export default defineConfig({
         logo: '/logo/logo.jpg',
         sidebar: sidebar,
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/DrAugus/' },
+            { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/article' },
         ],
         editLink: {
             pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/article/:path',
