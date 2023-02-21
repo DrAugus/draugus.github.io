@@ -318,7 +318,33 @@ mac
 - `n> file` 将文件描述符n重定向到文件file中，如果文件不存在则会创建文件，如果存在的话将会覆盖原有内容。
 - `n>> file` 将文件描述符n重定向到文件file中，如果文件不存在将会创建文件，如果存在则会在文件的结尾开始写入输出。
 
+## rz sz
+
+```bash
+apt-get install lrzsz
+# 从服务端发送文件到客户端：
+sz filename 
+# 从客户端上传文件到服务端：
+rz
+```
+
+sz 命令
+
+- 用途说明：将选定的文件发送（send）到本地机器。sz命令是利用ZModem协议来从Linux服务器传送文件到本地，一次可以传送一个或多个文件。相对应的从本地上传文件到Linux服务器，可以使用rz命令。
+- 常用参数
+  - `-a`： 以文本方式传输（ascii）。
+  - `-b`： 以二进制方式传输（binary）。
+  - `-e`： 对控制字符转义（escape），这可以保证文件传输正确。
+- 如果能够确定所传输的文件是文本格式的，使用： `sz -a files`
+- 如果是二进制文件，使用： `sz -be files`
+
+[rz](https://linux.die.net/man/1/rz)
+
+- `rz -bye`
+
 ## scp
+
+`scp -r server_a server_b`
 
 服务器A上执行scp到服务器B，报错：`Permission denied (publickey)`.
 > 解决方法，把A的公钥放到B上
