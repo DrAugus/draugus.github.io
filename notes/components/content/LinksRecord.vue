@@ -1,45 +1,28 @@
 <template>
+  <ButtonLink @click="showTag('all')">all</ButtonLink>
 
-  <p>
-    <a @click="showLv('all')">all</a>
-    <span v-for="i in 6">
-      | <a @click="showLv(i - 1)">lv{{ i - 1 }}</a>
-    </span>
-  </p>
+  <br><br>
 
-  <p>
-    <a @click="showTag('all')">all</a>
-    <span v-for="(item, index) in filterTags" :key="index">
-      <a @click="showTag(item)"> | {{ item }}</a>
+  <span v-for="(item, index) in filterTags" :key="index">
+    <a @click="showTag(item)">
+      <Badge> {{ item }}</Badge> {{ ' ' }}
+    </a>
+  </span>
 
-    </span>
-  </p>
+  <br><br>
 
-
-  <ul>
-    <li v-for="(t, i) in linkLv">
-      <a v-bind:href="t.url">{{ t.name }}<span v-if="t.tip">: {{ t.tip }}</span></a>
-    </li>
-  </ul>
-
+  <List v-for="(t, i) in linkLv">
+    <a v-bind:href="t.url">{{ t.name }}
+      <span v-if="t.tip">: {{ t.tip }}</span></a>
+  </List>
 </template>
 
 <script>
 import allLinks from "~/assets/json/links.json";
 
-const allLinkLv = [
-  ...(allLinks.website.lv0),
-  ...(allLinks.website.lv1),
-  ...(allLinks.website.lv2),
-  ...(allLinks.website.lv3),
-  ...(allLinks.website.lv4),
-  ...(allLinks.website.lv5)
-]
+// console.log(allLinks)
 
-// console.log(allLinkLv)
-
-
-const allTags = allLinkLv.map(obj => (obj.tag.split(',')))
+const allTags = allLinks.map(obj => (obj.tag.split(',')))
 // console.log(allTags)
 
 // es6 降维 arr.flat(depth)
@@ -51,33 +34,22 @@ export default {
   name: "LinksRecord",
   data() {
     return {
-      linkLv: allLinkLv,
+      linkLv: allLinks,
       filterTags,
     };
   },
   methods: {
-    showLv(lv) {
-      // console.log(lv)
-      if (lv == 'all') {
-        this.linkLv = allLinkLv
-        return
-      }
-      let str = 'lv' + lv
-      this.linkLv = allLinks.website[str]
-    },
     showTag(tag) {
       // console.log(tag)
       if (tag == 'all') {
-        this.linkLv = allLinkLv
+        this.linkLv = allLinks
         return
       }
-      let all = allLinkLv
+      let all = allLinks
       this.linkLv = all.filter((ele => ele.tag.indexOf(tag) != -1))
     },
   },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

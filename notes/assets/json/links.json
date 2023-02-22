@@ -1,333 +1,314 @@
-{
-  "links": {
-    "royal": {
-      "name": "英国王室",
-      "url": "https://draugus.github.io/RoyalFamily/"
-    },
-    "genshin": {
-      "name": "原神",
-      "url": "https://draugus.github.io/"
-    },
-    "blog": {
-      "name": "博客",
-      "url": "https://draugus.github.io/"
-    }
+[
+  {
+    "url": "https://marabos.nl/atomics/",
+    "name": "Rust Atomics and Locks",
+    "tag": "code,rust",
+    "tip": null
   },
-  "website": {
-    "lv0": [
-      {
-        "url": "https://cloud.tencent.com/developer/article/1731875",
-        "name": "实战矿马：数据异常牵出的挖矿木马(.systemd-service.sh)",
-        "tag": "code",
-        "tip": null
-      },
-      {
-        "url": "https://q.uiver.app/",
-        "name": "q.uiver",
-        "tag": "tool,paint",
-        "tip": "一个似乎用不到的画图软件我完全可以用merid方法画图"
-      },
-      {
-        "url": "https://www.ipaddress.com/",
-        "name": "IP地址查询",
-        "tag": "ip,query",
-        "tip": null
-      },
-      {
-        "url": "https://chishenme.xyz/",
-        "name": "中午吃什么",
-        "tag": "tool,eat",
-        "tip": null
-      },
-      {
-        "url": "https://bing.ioliu.cn/",
-        "name": "bing壁纸",
-        "tag": "picture,wallpaper",
-        "tip": null
-      },
-      {
-        "url": "https://artsexperiments.withgoogle.com/artpalette/",
-        "name": "基于谷歌AI的智能配色工具",
-        "tag": "ai,color",
-        "tip": null
-      },
-      {
-        "url": "https://www.ivsky.com/tupian/zhonghua_meishi_t3903/",
-        "name": "不错的美食图片素材",
-        "tag": "eat,picture",
-        "tip": null
-      },
-      {
-        "url": "https://www.tsunagujapan.com/50-japanese-foods-to-try-while-you-are-in-japan/2/",
-        "name": "日本推荐美食图片素材",
-        "tag": "eat,picture",
-        "tip": null
-      },
-      {
-        "url": "https://simpleicons.org/",
-        "name": "Simple Icons",
-        "tag": "icon",
-        "tip": null
-      },
-      {
-        "url": "https://github.com/simple-icons/simple-icons/blob/develop/slugs.md",
-        "name": "Simple Icons 缩写",
-        "tag": "icon",
-        "tip": null
-      },
-      {
-        "url": "https://shields.io/",
-        "name": "各种标签",
-        "tag": "icon",
-        "tip": null
-      },
-      {
-        "url": "https://www.cnblogs.com/coderzh/",
-        "name": "玩转Google开源C++单元测试框架Google Test系列",
-        "tag": "code,cpp,gtest,test",
-        "tip": null
-      },
-      {
-        "url": "https://www.agner.org/optimize/",
-        "name": "Software optimization resources by Agner Fog",
-        "tag": "code,software",
-        "tip": "excellent resources for optimizations, including but not limited to C++"
-      },
-      {
-        "url": "https://www.manning.com/books/functional-programming-in-c-plus-plus",
-        "name": "Functional Programming in C++ by Ivan Čukić",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://www.stroustrup.com/",
-        "name": "Bjarne Stroustrup's C++ page",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf",
-        "name": "Draft C++11 standard",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3690.pdf",
-        "name": "Draft C++14 standard",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://web.archive.org/web/20170325025026/http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4660.pdf",
-        "name": "Draft C++17 standard",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://isocpp.org/files/papers/N4860.pdf",
-        "name": "Draft C++20 standard",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
-        "name": "C++ core guidelines",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://isocpp.org/",
-        "name": "Standard C++",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "http://www.free-culture.cc/",
-        "name": "Free Culture",
-        "tag": "book",
-        "tip": null
-      },
-      {
-        "url": "https://cppinsights.io/",
-        "name": "cppinsights",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
-        "name": "Data Structure Visualizations",
-        "tag": "code,date structure,algorithm,visual",
-        "tip": null
-      },
-      {
-        "url": "https://girliemac.com/",
-        "name": "girliemac",
-        "tag": "",
-        "tip": null
-      },
-      {
-        "url": "https://www.remove.bg/",
-        "name": "Remove Image Background",
-        "tag": "tool",
-        "tip": null
-      },
-      {
-        "url": "https://oktools.net/",
-        "name": "非常好用的工具",
-        "tag": "tool",
-        "tip": null
-      },
-      {
-        "url": "https://guyujiezi.com/",
-        "name": "科学字体生成器「谷雨解字」",
-        "tag": "tool",
-        "tip": "一种基于网页字体技术可用于网页加密、反爬虫、防拷贝的在线工具"
-      },
-      {
-        "url": "https://crates.io/",
-        "name": "rust community",
-        "tag": "code,rust",
-        "tip": null
-      },
-      {
-        "url": "https://blog.csdn.net/LaineGates/article/details/108242803",
-        "name": "cmake:add_library详解",
-        "tag": "code,cmake",
-        "tip": null
-      },
-      {
-        "url": "https://blog.csdn.net/l1028386804/article/details/117917710",
-        "name": "Linux指令大全",
-        "tag": "code,linux",
-        "tip": null
-      },
-      {
-        "url": "https://blog.csdn.net/l1028386804/article/details/116081409",
-        "name": "核心技能学习路线",
-        "tag": "code",
-        "tip": null
-      },
-      {
-        "url": "https://www.cnblogs.com/koushuige/p/9212033.html",
-        "name": "网络抓包工具 wireshark 入门教程",
-        "tag": "tool,wireshark",
-        "tip": null
-      },
-      {
-        "url": "https://paveldogreat.github.io/WebGL-Fluid-Simulation/",
-        "name": "流体模拟",
-        "tag": "physics,webgl",
-        "tip": null
-      },
-      {
-        "url": "https://zhuanlan.zhihu.com/p/137646370",
-        "name": "c++20速览",
-        "tag": "code,cpp",
-        "tip": null
-      },
-      {
-        "url": "https://hk.v2ex.com/",
-        "name": "一个程序员社区似乎需要科学工具",
-        "tag": "community",
-        "tip": null
-      },
-      {
-        "url": "https://www.townandcountrymag.com/society/a20736482/british-royal-family-tree/",
-        "name": "british-royal-family-tree",
-        "tag": "royal family",
-        "tip": null
-      }
-    ],
-    "lv1": [
-      {
-        "url": "https://www.macrumors.com/roundup/macbook-pro/",
-        "name": "Apple新款预测",
-        "tag": "apple",
-        "tip": null
-      },
-      {
-        "url": "https://www.maigoo.com/",
-        "name": "一个神奇的排行榜网站",
-        "tag": "rank",
-        "tip": null
-      }
-    ],
-    "lv2": [
-      {
-        "url": "https://www.savetweetvid.com/",
-        "name": "tweet video download",
-        "tag": "video,download",
-        "tip": null
-      },
-      {
-        "url": "https://duibiao.info/",
-        "name": "职级对标",
-        "tag": "career level",
-        "tip": "薪资查询 职级对标"
-      },
-      {
-        "url": "https://datatracker.ietf.org/doc/html/rfc6265",
-        "name": "HTTP State Management Mechanism",
-        "tag": "http",
-        "tip": null
-      },
-      {
-        "url": "https://github.com/zmap/zmap",
-        "name": "快速扫描端口: ZMap is a fast single packet network scanner designed for Internet-wide network surveys.",
-        "tag": "",
-        "tip": null
-      },
-      {
-        "url": "http://caibaojian.com/interview-map/frontend/",
-        "name": "js前端面试之道",
-        "tag": "code,js",
-        "tip": null
-      },
-      {
-        "url": "https://www.levels.fyi/",
-        "name": "Helping people make better career decisions",
-        "tag": "career level",
-        "tip": "blog: http://sideidea.com/article/42"
-      },
-      {
-        "url": "https://www.boost.org/",
-        "name": "Boost C++ libraries",
-        "tag": "code,cpp,boost",
-        "tip": "ree peer-reviewed portable C++ source libraries that are candidates for the future C++ Standard"
-      },
-      {
-        "url": "https://developer.mozilla.org/en-US/docs/Learn",
-        "name": "Learn web development",
-        "tag": "code,web",
-        "tip": null
-      },
-      {
-        "url": "https://books.halfrost.com/leetcode/",
-        "name": "leetcode旅程",
-        "tag": "code,leetcode",
-        "tip": "刷题指南?"
-      },
-      {
-        "url": "https://paimon.moe/",
-        "name": "原神",
-        "tag": "genshin,game",
-        "tip": null
-      },
-      {
-        "url": "https://linuxtools-rst.readthedocs.io/zh_CN/latest/",
-        "name": "Linux Tools Quick Tutorial",
-        "tag": "linux,tool",
-        "tip": null
-      },
-      {
-        "url": "https://changkun.de/modern-cpp/",
-        "name": "现代cpp",
-        "tag": "cpp,book",
-        "tip": null
-      }
-    ],
-    "lv3": [],
-    "lv4": [],
-    "lv5": []
+  {
+    "url": "https://cloud.tencent.com/developer/article/1731875",
+    "name": "实战矿马：数据异常牵出的挖矿木马(.systemd-service.sh)",
+    "tag": "code",
+    "tip": null
+  },
+  {
+    "url": "https://q.uiver.app/",
+    "name": "q.uiver",
+    "tag": "tool,paint",
+    "tip": "一个似乎用不到的画图软件我完全可以用merid方法画图"
+  },
+  {
+    "url": "https://www.ipaddress.com/",
+    "name": "IP地址查询",
+    "tag": "ip,query",
+    "tip": null
+  },
+  {
+    "url": "https://chishenme.xyz/",
+    "name": "中午吃什么",
+    "tag": "tool,eat",
+    "tip": null
+  },
+  {
+    "url": "https://bing.ioliu.cn/",
+    "name": "bing壁纸",
+    "tag": "picture,wallpaper",
+    "tip": null
+  },
+  {
+    "url": "https://artsexperiments.withgoogle.com/artpalette/",
+    "name": "基于谷歌AI的智能配色工具",
+    "tag": "ai,color",
+    "tip": null
+  },
+  {
+    "url": "https://www.ivsky.com/tupian/zhonghua_meishi_t3903/",
+    "name": "不错的美食图片素材",
+    "tag": "eat,picture",
+    "tip": null
+  },
+  {
+    "url": "https://www.tsunagujapan.com/50-japanese-foods-to-try-while-you-are-in-japan/2/",
+    "name": "日本推荐美食图片素材",
+    "tag": "eat,picture",
+    "tip": null
+  },
+  {
+    "url": "https://simpleicons.org/",
+    "name": "Simple Icons",
+    "tag": "icon",
+    "tip": null
+  },
+  {
+    "url": "https://github.com/simple-icons/simple-icons/blob/develop/slugs.md",
+    "name": "Simple Icons 缩写",
+    "tag": "icon",
+    "tip": null
+  },
+  {
+    "url": "https://shields.io/",
+    "name": "各种标签",
+    "tag": "icon",
+    "tip": null
+  },
+  {
+    "url": "https://www.cnblogs.com/coderzh/",
+    "name": "玩转Google开源C++单元测试框架Google Test系列",
+    "tag": "code,cpp,gtest,test",
+    "tip": null
+  },
+  {
+    "url": "https://www.agner.org/optimize/",
+    "name": "Software optimization resources by Agner Fog",
+    "tag": "code,software",
+    "tip": "excellent resources for optimizations, including but not limited to C++"
+  },
+  {
+    "url": "https://www.manning.com/books/functional-programming-in-c-plus-plus",
+    "name": "Functional Programming in C++ by Ivan Čukić",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://www.stroustrup.com/",
+    "name": "Bjarne Stroustrup's C++ page",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf",
+    "name": "Draft C++11 standard",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3690.pdf",
+    "name": "Draft C++14 standard",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://web.archive.org/web/20170325025026/http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4660.pdf",
+    "name": "Draft C++17 standard",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://isocpp.org/files/papers/N4860.pdf",
+    "name": "Draft C++20 standard",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines",
+    "name": "C++ core guidelines",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://isocpp.org/",
+    "name": "Standard C++",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "http://www.free-culture.cc/",
+    "name": "Free Culture",
+    "tag": "book",
+    "tip": null
+  },
+  {
+    "url": "https://cppinsights.io/",
+    "name": "cppinsights",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
+    "name": "Data Structure Visualizations",
+    "tag": "code,date structure,algorithm,visual",
+    "tip": null
+  },
+  {
+    "url": "https://girliemac.com/",
+    "name": "girliemac",
+    "tag": "developer",
+    "tip": null
+  },
+  {
+    "url": "https://www.remove.bg/",
+    "name": "Remove Image Background",
+    "tag": "tool",
+    "tip": null
+  },
+  {
+    "url": "https://oktools.net/",
+    "name": "非常好用的工具",
+    "tag": "tool",
+    "tip": null
+  },
+  {
+    "url": "https://guyujiezi.com/",
+    "name": "科学字体生成器「谷雨解字」",
+    "tag": "tool",
+    "tip": "一种基于网页字体技术可用于网页加密、反爬虫、防拷贝的在线工具"
+  },
+  {
+    "url": "https://crates.io/",
+    "name": "rust community",
+    "tag": "code,rust",
+    "tip": null
+  },
+  {
+    "url": "https://blog.csdn.net/LaineGates/article/details/108242803",
+    "name": "cmake:add_library详解",
+    "tag": "code,cmake",
+    "tip": null
+  },
+  {
+    "url": "https://blog.csdn.net/l1028386804/article/details/117917710",
+    "name": "Linux指令大全",
+    "tag": "code,linux",
+    "tip": null
+  },
+  {
+    "url": "https://blog.csdn.net/l1028386804/article/details/116081409",
+    "name": "核心技能学习路线",
+    "tag": "code",
+    "tip": null
+  },
+  {
+    "url": "https://www.cnblogs.com/koushuige/p/9212033.html",
+    "name": "网络抓包工具 wireshark 入门教程",
+    "tag": "tool,wireshark",
+    "tip": null
+  },
+  {
+    "url": "https://paveldogreat.github.io/WebGL-Fluid-Simulation/",
+    "name": "流体模拟",
+    "tag": "physics,webgl",
+    "tip": null
+  },
+  {
+    "url": "https://zhuanlan.zhihu.com/p/137646370",
+    "name": "c++20速览",
+    "tag": "code,cpp",
+    "tip": null
+  },
+  {
+    "url": "https://hk.v2ex.com/",
+    "name": "一个程序员社区似乎需要科学工具",
+    "tag": "community",
+    "tip": null
+  },
+  {
+    "url": "https://www.townandcountrymag.com/society/a20736482/british-royal-family-tree/",
+    "name": "british-royal-family-tree",
+    "tag": "royal family",
+    "tip": null
+  },
+  {
+    "url": "https://www.macrumors.com/roundup/macbook-pro/",
+    "name": "Apple新款预测",
+    "tag": "apple",
+    "tip": null
+  },
+  {
+    "url": "https://www.maigoo.com/",
+    "name": "一个神奇的排行榜网站",
+    "tag": "rank",
+    "tip": null
+  },
+  {
+    "url": "https://www.savetweetvid.com/",
+    "name": "tweet video download",
+    "tag": "video,download",
+    "tip": null
+  },
+  {
+    "url": "https://duibiao.info/",
+    "name": "职级对标",
+    "tag": "career level",
+    "tip": "薪资查询 职级对标"
+  },
+  {
+    "url": "https://datatracker.ietf.org/doc/html/rfc6265",
+    "name": "HTTP State Management Mechanism",
+    "tag": "http",
+    "tip": null
+  },
+  {
+    "url": "https://github.com/zmap/zmap",
+    "name": "快速扫描端口: ZMap is a fast single packet network scanner designed for Internet-wide network surveys.",
+    "tag": "network",
+    "tip": null
+  },
+  {
+    "url": "http://caibaojian.com/interview-map/frontend/",
+    "name": "js前端面试之道",
+    "tag": "code,js",
+    "tip": null
+  },
+  {
+    "url": "https://www.levels.fyi/",
+    "name": "Helping people make better career decisions",
+    "tag": "career level",
+    "tip": "blog: http://sideidea.com/article/42"
+  },
+  {
+    "url": "https://www.boost.org/",
+    "name": "Boost C++ libraries",
+    "tag": "code,cpp,boost",
+    "tip": "ree peer-reviewed portable C++ source libraries that are candidates for the future C++ Standard"
+  },
+  {
+    "url": "https://developer.mozilla.org/en-US/docs/Learn",
+    "name": "Learn web development",
+    "tag": "code,web",
+    "tip": null
+  },
+  {
+    "url": "https://books.halfrost.com/leetcode/",
+    "name": "leetcode旅程",
+    "tag": "code,leetcode",
+    "tip": "刷题指南?"
+  },
+  {
+    "url": "https://paimon.moe/",
+    "name": "原神",
+    "tag": "genshin,game",
+    "tip": null
+  },
+  {
+    "url": "https://linuxtools-rst.readthedocs.io/zh_CN/latest/",
+    "name": "Linux Tools Quick Tutorial",
+    "tag": "linux,tool",
+    "tip": null
+  },
+  {
+    "url": "https://changkun.de/modern-cpp/",
+    "name": "现代cpp",
+    "tag": "cpp,book",
+    "tip": null
   }
-}
+]
