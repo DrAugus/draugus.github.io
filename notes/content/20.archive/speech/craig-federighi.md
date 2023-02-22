@@ -976,7 +976,7 @@ And someone says, "Actually, no."
 Or, "Actually, this is, I
 really value, value this."
 And you're like, "Really?"
-And you realize how narrow, sometimes, you can be viewing things 
+And you realize how narrow, sometimes, you can be viewing things
 if you just have a single viewpoint in the room.
 And, I mean, this has to do with both, you know, the culture, and what national customs, age,
 you know, what's currently fashionable or popular with different demographics.
@@ -1690,6 +1690,3 @@ Go Bears!
 And we hope to see you
 at more events later this year.
 All right, bye-bye.
-
-
-

@@ -36,17 +36,37 @@ rebase then enter, edit file, change `pick` to `drop`, then save
 
 ## submodule
 
-`git submodule add <url> <path>`
-
-`git clone --recurse-submodules -j8 url`
-
-For already cloned repos, or older Git versions, use:
-
-```shell
-git clone git://github.com/foo/bar.git
-cd bar
+```bash
+git submodule add <git_url>
+# clone 时一同初始化并checkout子模块commit，且会拉取嵌套的子模块(即子模块又包含它引用的子模块)
+git clone --recurse-submodules -j8 <url>
+# For already cloned repos, or older Git versions, use:
 git submodule update --init --recursive
+# also 
+git pull --recurse-submodules
 ```
+
+```bash
+# update submodule
+cd submodule
+git checkout <branch>
+git pull
+# 也可以在主模块更新
+git submodule update --remote <submoduleName>
+# 可以通过以下命令设置特定的分支
+git config -f .gitmodules submodule.<submoduleName>.branch <branch>
+```
+
+确保子模块更新
+
+```bash
+# 在主模块 push 之前，检查子模块是否 push，包括嵌套子模块
+git push --recurse-submodules=check
+# 在主模块 push 之前，自动 push 子模块，包括嵌套子模块
+git push --recurse-submodules=on-demand
+```
+
+[refer](https://cloud.tencent.com/developer/article/2143377)
 
 ## remote
 

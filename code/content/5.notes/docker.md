@@ -244,6 +244,25 @@ bridge 网络通信，不建议，此处略。
 
 在宿主机，`ifconfig` 查看各个 docker 的 ip。直接在 docker A 上指定 服务器 ip 访问 docker B
 
+## dockerfile
+
+### EXPOSE
+
+功能为暴漏容器运行时的监听端口给外部，但是EXPOSE并不会使容器访问主机的端口
+
+如果想使得容器与主机的端口有映射关系，必须在容器启动的时候加上 `-p` 参数
+
+### VOLUME
+
+可实现挂载功能，容器告诉Docker在主机上创建一个目录(默认情况下是在/var/lib/docker),然后将其挂载到指定的路径。当删除使用该Volume的容器时,Volume本身不会受到影响,它可以一直存在下去。
+
+```dockerfile
+FROM centos
+#将该镜像的存储内容挂载到test文件夹下。这样即使删除了该镜像，再重新创建后，也不会影响数据
+VOLUME /test  
+CMD echo "hello docker"
+```
+
 ## sol
 
 ### docker 会损失性能吗
