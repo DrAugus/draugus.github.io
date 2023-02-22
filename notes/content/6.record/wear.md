@@ -1,5 +1,6 @@
 ---
-title: 🧣 穿衣
+title: 穿衣
+icon: openmoji:scarf
 ---
 
 :WearInfo
