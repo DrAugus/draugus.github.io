@@ -12,13 +12,13 @@
     "git:pull": "git pull",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "augus:build": "vuepress build src",
-    "augus:dev": "vuepress dev src",
-    "augus:dev-clean": "vuepress dev src --clean-cache",
-    "augus:dev-clean-debug": "vuepress dev src --clean-cache --debug",
-    "augus:vite-build": "vuepress-vite build src",
-    "augus:vite-dev-clean": "vuepress-vite dev src --clean-cache",
-    "augus:vite-dev": "vuepress-vite dev src"
+    "build": "vuepress build src",
+    "dev": "vuepress dev src",
+    "dev-clean": "vuepress dev src --clean-cache",
+    "dev-clean-debug": "vuepress dev src --clean-cache --debug",
+    "vite-build": "vuepress-vite build src",
+    "vite-dev-clean": "vuepress-vite dev src --clean-cache",
+    "vite-dev": "vuepress-vite dev src"
   },
   "dependencies": {
     "@algolia/client-search": "4.14.3",

@@ -58,7 +58,7 @@ jobs:
           BASE: /
           HOSTNAME: https://draugus.github.io/
           NODE_OPTIONS: --max_old_space_size=4096
-        run: yarn run augus:build
+        run: yarn run build
 
       # 防止加载不到 _开头的文件 下面已经有了 jekyll: false
       # @see https://github.com/orgs/github-community/discussions/19794
@@ -88,7 +88,7 @@ jobs:
           BASE: /game/
           HOSTNAME: https://augusmeow.github.io/
           NODE_OPTIONS: --max_old_space_size=4096
-        run: yarn run augus:build
+        run: yarn run build
 
       - name: Deploy to GitHub Pages in augusmeow
         uses: crazy-max/ghaction-github-pages@v3.1.0
