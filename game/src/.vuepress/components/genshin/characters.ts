@@ -727,7 +727,7 @@ export const CHARACTER = {
   kaveh: {
     id: "kaveh",
     name: "卡维",
-    prefix: "",
+    prefix: "天穹之镜",
     star: 5,
     event_exclusive: true,
     intro: "",
@@ -749,7 +749,7 @@ export const CHARACTER = {
   baizhu: {
     id: "baizhu",
     name: "白术",
-    prefix: "",
+    prefix: "遵生合和",
     star: 5,
     event_exclusive: true,
     intro: "",

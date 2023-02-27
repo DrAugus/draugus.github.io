@@ -811,15 +811,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "Auric Blaze",
       image: 1,
       shortName: "Dehya",
       start: "2023-03-01 11:00:00 +0800",
       end: "2023-03-21 17:59:59 +0800",
       wish5star: "dehya",
-      wish4star: [],
+      wish4star: ["Bennett","Barbara", "Collei"],
       version: "3.5",
-      wishName: "「」",
+      wishName: "「烈阳烁金」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -829,7 +829,7 @@ export const WISH = {
       start: "2023-03-01 11:00:00 +0800",
       end: "2023-03-21 17:59:59 +0800",
       wish5star: "cyno",
-      wish4star: [],
+      wish4star: ["Bennett","Barbara", "Collei"],
       version: "3.5",
       wishName: "「雳裁冥昭」",
       wish_2: true,
