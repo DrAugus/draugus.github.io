@@ -42,6 +42,11 @@ export enum Artifacts {
   flower, plume, sands, goblet, circlet
 }
 
+
+export const composeSrc = (name: string) =>
+  '/image/genshin/characters/' + name + '.png'
+
+
 //替换空格 转小写
 export const replaceAndLow = (str: string) =>
   str.replace(/ /g, "_").toLowerCase();

@@ -52,7 +52,7 @@
 import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { parseDayjs, formatDayjs } from "./utils";
+import { composeSrc, parseDayjs, formatDayjs } from "./utils";
 
 import "dayjs/locale/zh";
 
@@ -201,8 +201,6 @@ const displayCharInfo = () => {
 // const displayMap = displayCharInfo()
 
 // -------------------------------------------------------
-
-const composeSrc = (name) => '/image/genshin/characters/' + name + '.png'
 
 const findInCurrent = (wish5star) => sliceCurrentChar.indexOf(wish5star) != -1;
 
