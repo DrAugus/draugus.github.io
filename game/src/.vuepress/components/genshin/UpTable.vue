@@ -2,6 +2,25 @@
     <div v-for="(v, k) in charMap">
         {{ modifyChar(v[0]) }} : {{ v[1].length }}
     </div>
+
+    <table>
+        <tbody>
+
+            <tr>
+                <td> 2</td>
+                <td> 2</td>
+                <td> 2</td>
+            </tr>
+
+            <tr>
+                <td> 2</td>
+                <td> 2</td>
+                <td> 2</td>
+            </tr>
+
+        </tbody>
+
+    </table>
 </template>
 
 <script>
@@ -11,6 +30,31 @@ import { WISH } from "./wish";
 // import { CHARACTER } from "./characters";
 import dayjs from "dayjs";
 import { modifyChar } from './characters';
+
+
+const wishLength = WISH.characters.length
+const characters = WISH.characters
+
+let versions = []
+let sort = false
+
+const process = () => {
+    let _versions = []
+    for (const wish of characters) {
+        if (_versions[wish.version] === undefined) {
+            _versions[wish.version] = 0;
+        }
+        _versions[wish.version]++
+    }
+
+    versions = Object.entries(_versions).map(([ver, len]) => ({
+        ver,
+        len,
+    }))
+
+}
+
+console.log(WISH)
 
 const filterChar = () => {
     let charMap = new Map();
