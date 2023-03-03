@@ -368,6 +368,52 @@ sz 命令
 
 `clip < ~/.ssh/id_rsa.pub`
 
+## crontab
+
+```bash
+crontab [-u username]　　　　#省略用户表表示操作当前用户的crontab
+    -e      #(编辑工作表)
+    -l      #(列出工作表里的命令)
+    -r      #(删除工作作)
+```
+
+我们用`crontab -e`进入当前用户的工作表编辑，是常见的vim界面。每行是一条命令。
+crontab的命令构成为 时间+动作，其时间有分、时、日、月、周五种，操作符有
+
+- `*` 取值范围内的所有数字
+- `/` 每过多少个数字
+- `-` 从X到Z
+- `,` 散列数字
+
+实例
+
+```config
+实例1：每1分钟执行一次myCommand
+* * * * * myCommand
+实例2：每小时的第3和第15分钟执行
+3,15 * * * * myCommand
+实例3：在上午8点到11点的第3和第15分钟执行
+3,15 8-11 * * * myCommand
+实例4：每隔两天的上午8点到11点的第3和第15分钟执行
+3,15 8-11 */2  *  * myCommand
+实例5：每周一上午8点到11点的第3和第15分钟执行
+3,15 8-11 * * 1 myCommand
+实例6：每晚的21:30重启smb
+30 21 * * * /etc/init.d/smb restart
+实例7：每月1、10、22日的4 : 45重启smb
+45 4 1,10,22 * * /etc/init.d/smb restart
+实例8：每周六、周日的1 : 10重启smb
+10 1 * * 6,0 /etc/init.d/smb restart
+实例9：每天18 : 00至23 : 00之间每隔30分钟重启smb
+0,30 18-23 * * * /etc/init.d/smb restart
+实例10：每星期六的晚上11 : 00 pm重启smb
+0 23 * * 6 /etc/init.d/smb restart
+实例11：每一小时重启smb
+0 */1 * * * /etc/init.d/smb restart
+实例12：晚上11点到早上7点之间，每隔一小时重启smb
+0 23-7/1 * * * /etc/init.d/smb restart
+```
+
 ## [logrotate]
 
 主流Linux发行版上都默认安装有logrotate包，如果出于某种原因，logrotate没有出现在里头，你可以使用apt-get或yum命令来安装。
