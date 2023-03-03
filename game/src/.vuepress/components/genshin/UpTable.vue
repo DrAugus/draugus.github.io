@@ -92,7 +92,7 @@ const process = () => {
         ver,
         len,
     }))
-    rows = [..._rows5, new Array(length).fill({ l: '' }), ..._rows4, new Array(length).fill({ l: '' })];
+    rows = [..._rows5, new Array(wishLength).fill({ l: '' }), ..._rows4, new Array(wishLength).fill({ l: '' })];
     names = [..._names5, { name: '', length: 0 }, ..._names4, { name: '', length: 0 }];
 
 }
@@ -156,5 +156,11 @@ export default defineComponent({
 .td-w-h {
     width: 30px;
     height: 30px;
+}
+</style>
+
+<style>
+.theme-default-content {
+    max-width: unset !important;
 }
 </style>
