@@ -3,14 +3,17 @@
         <tbody class="table-center">
 
             <tr>
-                <td v-for="(v, i) in versions" :colspan="v.len"> {{ v.ver }}</td>
+                <td v-for="(v, i) in versions" :colspan="v.len" class="td-font">
+                    {{ v.ver }}</td>
+                <td></td>
             </tr>
 
             <tr v-for="(v, i) in rows">
-                <td class="td-w-h" v-for="(vv, ii) in v">
-                    <span v-if="vv.l"> {{ vv.l }}</span>
+                <td class="td-w-h" v-for="(vv, ii) in v" :style="{ background: getColor(vv.l, vv.m) }">
+                    <span v-if="vv.l" class="td-font"> {{ vv.l }}</span>
                     <img v-if="vv.char" :src="composeSrc(vv.char)">
                 </td>
+                <td :style="{ textAlign: 'left' }">{{ (names[i].name) }}</td>
             </tr>
 
         </tbody>
@@ -25,6 +28,14 @@ import { WISH } from "./wish";
 import dayjs from "dayjs";
 import { modifyChar } from './characters';
 import { composeSrc, parseDayjs, formatDayjs } from "./utils";
+
+
+
+const getColor = (index, max) => {
+    if (index === '') return 'none';
+    const hue = ((max - index) / max) * 100;
+    return `hsl(${hue}, 60%, 70%)`;
+}
 
 
 const wishLength = WISH.characters.length
@@ -141,6 +152,7 @@ export default defineComponent({
             rows,
             names,
             composeSrc,
+            getColor,
         }
     },
 })
@@ -153,9 +165,26 @@ export default defineComponent({
     text-align: center;
 }
 
+.td-font {
+    font-weight: 600;
+}
+
 .td-w-h {
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+    text-align: center;
+    position: relative;
+    padding: unset
+}
+
+.td-w-h img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
 }
 </style>
 
