@@ -44,9 +44,14 @@ jobs:
           node-version: ${{ matrix.node }}
           # cache: yarn
 
-      # 如果缓存没有命中，安装依赖
+      - uses: pnpm/action-setup@v2.2.4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: pnpm install
 
       # 运行构建脚本
       - name: Build VitePress site
@@ -54,7 +59,7 @@ jobs:
           BASE: /article/
           HOSTNAME: https://augusmeow.github.io/article/
           NODE_OPTIONS: --max_old_space_size=4096
-        run: yarn build
+        run: pnpm build
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3.1.0
