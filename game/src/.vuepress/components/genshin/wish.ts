@@ -33,7 +33,7 @@ export const WISH = {
       shortName: "Tartaglia",
       start: "2020-11-11 11:00:00 +0800",
       end: "2020-12-01 15:59:59 +0800",
-      version: 1.1,
+      version: "1.1",
       wish5star: "tartaglia",
       wish4star: ['ningguang', 'beidou', 'diona'],
       wishName: "「暂别冬都」",
@@ -45,7 +45,7 @@ export const WISH = {
       shortName: "Zhongli",
       start: "2020-12-01 18:00:00 +0800",
       end: "2020-12-22 14:59:59 +0800",
-      version: 1.1,
+      version: "1.1",
       wish5star: "zhongli",
       wish4star: ['xinyan', 'razor', 'chongyun'],
       wishName: "「陵薮市朝」",
@@ -57,7 +57,7 @@ export const WISH = {
       shortName: "Albedo",
       start: "2020-12-23 11:00:00 +0800",
       end: "2021-01-12 15:59:59 +0800",
-      version: 1.2,
+      version: "1.2",
       wish5star: "albedo",
       wish4star: ['fischl', 'bennett', 'sucrose'],
       wishName: "「深秘之息」",
@@ -69,7 +69,7 @@ export const WISH = {
       shortName: "Ganyu",
       start: "2021-01-12 18:00:00 +0800",
       end: "2021-02-02 14:59:59 +0800",
-      version: 1.2,
+      version: "1.2",
       wish5star: "ganyu",
       wish4star: ['xingqiu', 'xiangling', 'noelle'],
       wishName: "「浮生孰来」",
@@ -81,7 +81,7 @@ export const WISH = {
       shortName: "Xiao",
       start: "2021-02-03 11:00:00 +0800",
       end: "2021-02-17 15:59:59 +0800",
-      version: 1.3,
+      version: "1.3",
       wish5star: "xiao",
       wish4star: ['diona', 'xinyan', 'beidou'],
       wishName: "「烟火之邀」",
@@ -93,7 +93,7 @@ export const WISH = {
       shortName: "Keqing",
       start: "2021-02-17 18:00:00 +0800",
       end: "2021-03-02 15:59:59 +0800",
-      version: 1.3,
+      version: "1.3",
       wish5star: "keqing",
       wish4star: ['barbara', 'bennett', 'ningguang'],
       wishName: "「鱼龙灯昼」",
@@ -105,7 +105,7 @@ export const WISH = {
       shortName: "Hu Tao",
       start: "2021-03-02 18:00:00 +0800",
       end: "2021-03-16 14:59:59 +0800",
-      version: 1.3,
+      version: "1.3",
       wish5star: "hu_tao",
       wish4star: ['xingqiu', 'xiangling', 'chongyun'],
       wishName: "「赤团开时」",
@@ -119,7 +119,7 @@ export const WISH = {
       end: "2021-04-06 15:59:59 +0800",
       wish5star: "venti",
       wish4star: ["sucrose", "razor", "noelle"],
-      version: 1.4,
+      version: "1.4",
       wishName: "「杯装之诗」",
       url: "https://bbs.mihoyo.com/ys/article/4959532"
     },
@@ -135,7 +135,7 @@ export const WISH = {
         "fischl",
         "barbara"
       ],
-      version: 1.4,
+      version: "1.4",
       wishName: "「暂别冬都」",
       url: "https://bbs.mihoyo.com/ys/article/5305223"
     },
@@ -151,7 +151,7 @@ export const WISH = {
         "noelle",
         "diona"
       ],
-      version: 1.5,
+      version: "1.5",
       wishName: "「陵薮市朝」",
       url: "https://bbs.mihoyo.com/ys/article/5726195"
     },
@@ -167,7 +167,7 @@ export const WISH = {
         "beidou",
         "xinyan"
       ],
-      version: 1.5,
+      version: "1.5",
       wishName: "「浪涌之瞬」",
       url: "https://bbs.mihoyo.com/ys/article/6179333"
     },
@@ -183,7 +183,7 @@ export const WISH = {
         "sucrose",
         "barbara"
       ],
-      version: 1.6,
+      version: "1.6",
       wishName: "「闪焰的驻足」",
       url: "https://bbs.mihoyo.com/ys/article/6634463"
     },
@@ -199,7 +199,7 @@ export const WISH = {
         "razor",
         "rosaria"
       ],
-      version: 1.6,
+      version: "1.6",
       wishName: "「叶落风随」",
       url: "https://bbs.mihoyo.com/ys/article/7067772"
     },
@@ -247,7 +247,7 @@ export const WISH = {
         "sucrose",
         "kujou_sara"
       ],
-      version: 2.1,
+      version: "2.1",
       wishName: "「影寂天下人」",
       url: "https://bbs.mihoyo.com/ys/article/9004344"
     },
@@ -263,7 +263,7 @@ export const WISH = {
         "beidou",
         "xingqiu"
       ],
-      version: 2.1,
+      version: "2.1",
       wishName: "「浮岳虹珠」",
       url: "https://bbs.mihoyo.com/ys/article/9679284"
     },
@@ -279,7 +279,7 @@ export const WISH = {
         "chongyun",
         "yanfei"
       ],
-      version: 2.2,
+      version: "2.2",
       wishName: "「暂别冬都」",
       url: "https://bbs.mihoyo.com/ys/article/10755906"
     },
@@ -295,7 +295,7 @@ export const WISH = {
         "diona",
         "sayu"
       ],
-      version: 2.2,
+      version: "2.2",
       wishName: "「赤团开时」",
       url: "https://bbs.mihoyo.com/ys/article/11444616"
     },
@@ -311,7 +311,7 @@ export const WISH = {
         "noelle",
         "rosaria"
       ],
-      version: 2.3,
+      version: "2.3",
       wishName: "「深秘之息」",
       url: "https://bbs.mihoyo.com/ys/article/12233203"
     },
@@ -327,7 +327,7 @@ export const WISH = {
         "noelle",
         "rosaria"
       ],
-      version: 2.3,
+      version: "2.3",
       wishName: "「浪涌之瞬」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/12233204"
@@ -344,7 +344,7 @@ export const WISH = {
         "barbara",
         "xiangling"
       ],
-      version: 2.3,
+      version: "2.3",
       wishName: "「鬼门斗宴」",
       url: "https://bbs.mihoyo.com/ys/article/12926123"
     },
@@ -360,7 +360,7 @@ export const WISH = {
         "chongyun",
         "ningguang"
       ],
-      version: 2.4,
+      version: "2.4",
       wishName: "「出尘入世」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -376,7 +376,7 @@ export const WISH = {
         "chongyun",
         "ningguang"
       ],
-      version: 2.4,
+      version: "2.4",
       wishName: "「烟火之邀」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -393,7 +393,7 @@ export const WISH = {
         "xingqiu",
         "beidou"
       ],
-      version: 2.4,
+      version: "2.4",
       wishName: "「陵薮市朝」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -409,7 +409,7 @@ export const WISH = {
         "xingqiu",
         "beidou"
       ],
-      version: 2.4,
+      version: "2.4",
       wishName: "「浮生孰来」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -426,7 +426,7 @@ export const WISH = {
         "diona",
         "fischl"
       ],
-      version: 2.5,
+      version: "2.5",
       wishName: "「华紫樱绯」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -442,7 +442,7 @@ export const WISH = {
         "xinyan",
         "kujou_sara"
       ],
-      version: 2.5,
+      version: "2.5",
       wishName: "「影寂天下人」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -458,7 +458,7 @@ export const WISH = {
         "xinyan",
         "kujou_sara"
       ],
-      version: 2.5,
+      version: "2.5",
       wishName: "「浮岳虹珠」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -475,7 +475,7 @@ export const WISH = {
         "xiangling",
         "yunjin"
       ],
-      version: 2.6,
+      version: "2.6",
       wishName: "「苍流踏花」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -491,7 +491,7 @@ export const WISH = {
         "xiangling",
         "yunjin"
       ],
-      version: 2.6,
+      version: "2.6",
       wishName: "「杯装之诗」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -508,7 +508,7 @@ export const WISH = {
         "rosaria",
         "sayu"
       ],
-      version: 2.6,
+      version: "2.6",
       wishName: "「白鹭之庭」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -524,7 +524,7 @@ export const WISH = {
         "noelle",
         "barbara"
       ],
-      version: 2.7,
+      version: "2.7",
       wishName: "「素霓伣天」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -536,7 +536,7 @@ export const WISH = {
       end: "2022-06-21 17:59:59 +0800",
       wish5star: "xiao",
       wish4star: ["yanfei", "noelle", "barbara"],
-      version: 2.7,
+      version: "2.7",
       wishName: "「烟火之邀」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -549,7 +549,7 @@ export const WISH = {
       end: "2022-07-12 14:59:59 +0800",
       wish5star: "arataki_itto",
       wish4star: [],
-      version: 2.7,
+      version: "2.7",
       wishName: "「鬼门斗宴」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -561,7 +561,7 @@ export const WISH = {
       end: "2022-08-02 17:59:59 +0800",
       wish5star: "kaedehara_kazuha",
       wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
-      version: 2.8,
+      version: "2.8",
       wishName: "「叶落风随」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -573,7 +573,7 @@ export const WISH = {
       end: "2022-08-02 17:59:59 +0800",
       wish5star: "klee",
       wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
-      version: 2.8,
+      version: "2.8",
       wishName: "「闪焰的驻足」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -586,7 +586,7 @@ export const WISH = {
       end: "2022-08-23 14:59:59 +0800",
       wish5star: "yoimiya",
       wish4star: [],
-      version: 2.8,
+      version: "2.8",
       wishName: "「焰色天河」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -847,7 +847,7 @@ export const WISH = {
       start: "2023-03-01 11:00:00 +0800",
       end: "2023-03-21 17:59:59 +0800",
       wish5star: "dehya",
-      wish4star: ["Bennett","Barbara", "Collei"],
+      wish4star: ["Bennett", "Barbara", "Collei"],
       version: "3.5",
       wishName: "「烈阳烁金」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -859,7 +859,7 @@ export const WISH = {
       start: "2023-03-01 11:00:00 +0800",
       end: "2023-03-21 17:59:59 +0800",
       wish5star: "cyno",
-      wish4star: ["Bennett","Barbara", "Collei"],
+      wish4star: ["Bennett", "Barbara", "Collei"],
       version: "3.5",
       wishName: "「雳裁冥昭」",
       wish_2: true,
