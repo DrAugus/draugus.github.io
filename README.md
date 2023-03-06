@@ -38,7 +38,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ### Run
 
-5 sites
+5 sites, just run `pnpm i && pnpm dev`
 
 - [game](./game/)
 - [art](./art/)
@@ -46,9 +46,11 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 - [code](./code/)
 - [notes](./notes/)
 
-[game](./game), use and run [vuepress][vuepress], just run `yarn install && yarn src:dev`  
-[article](./article/), use and run [vitepress][vitepress], just run `yarn install && yarn dev`  
-for others, run `pnpm i && pnpm dev`
+powered
+
+- [game](./game), powered by [vuepress][vuepress]  
+- [article](./article/), powered by [vitepress][vitepress]  
+- for others, powered by [nuxt docus][docus]
 
 ### Upgrade
 
@@ -59,13 +61,16 @@ make sure all vuepress && plugins are up to date.
 1. vuepress
 
     ```shell
-    yarn add vuepress@next && yarn install && yarn upgrade
+    # with pnpm need add 
+    pnpm add -D vue @vuepress/client@next @vuepress/utils@next
+    # 
+    pnpm add vuepress@next && pnpm install && pnpm upgrade
     ```
 
 2. plugins
 
     ```shell
-    yarn add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && yarn install && yarn upgrade
+    pnpm add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && pnpm install && pnpm upgrade
     ```
 
 #### others

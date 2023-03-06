@@ -46,7 +46,6 @@ jobs:
         with:
           # 选择要使用的 node 版本
           node-version: ${{ matrix.node }}
-          # cache: yarn
 
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
