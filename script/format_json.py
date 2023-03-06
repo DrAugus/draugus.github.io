@@ -10,21 +10,15 @@ def format_json(sa, sb):
 
 
 # 适用于 英中 or 其他语言/中文 的双语句子
-def open_and_read(filename):
-    with open(filename, "r", encoding='utf-8') as file_handle:
-        line = file_handle.readline()
-        arr_res = []
-        while line:
-            line_str = line.strip()
-            # 英文 中文 的空格
-            # 找最后一个空格即可
-            space_index = line_str.rfind(" ", 0)
-            sa = line_str[:space_index]
-            sb = line_str[space_index+1:]
-            # split_line = line_str.split(' ')
-            arr_res.append(format_json(sa, sb))
-            line = file_handle.readline()
-        op_file.write_file(arr_res)
+def translate(line_str):
+    # 英文 中文 的空格
+    # 找最后一个空格即可
+    space_index = line_str.rfind(" ", 0)
+    sa = line_str[:space_index]
+    sb = line_str[space_index+1:]
+    # split_line = line_str.split(' ')
+    res = format_json(sa, sb)
+    return res
 
 
 def plus_mark(arr_str, mark):
@@ -40,17 +34,11 @@ def plus_mark(arr_str, mark):
 
 
 # 适用于相似单词
-def split_all_space(filename):
-    with open(filename, "r", encoding='utf-8') as file_handle:
-        line = file_handle.readline()
-        arr_res = []
-        while line:
-            line_str = line.strip()
-            arr_split_space = line_str.split(" ")
-            # print(arr_split_space)
-            arr_res.append(plus_mark(arr_split_space, '"'))
-            line = file_handle.readline()
-        op_file.write_file(arr_res)
+def split_all_space(line_str):
+    arr_split_space = line_str.split(" ")
+    # print(arr_split_space)
+    return plus_mark(arr_split_space, '"')
+
 
 
 def add_prefix(filename, str):
@@ -98,11 +86,11 @@ def change_line(filename, a):
 
 
 def invoke_similar_words():
-    split_all_space("script/test")
+    op_file.open_and_read('',split_all_space)
 
 
 def invoke_translate():
-    open_and_read("script/test")
+    op_file.open_and_read('', translate)
 
 
 def invoke_add_prefix(str):
