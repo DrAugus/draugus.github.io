@@ -1,11 +1,4 @@
-# str 为最终合并完成的 str 至少一行
-def write_file(arr):
-    if not len(arr) or not isinstance(arr, list) or arr[0].find('\n') == -1:
-        print("str must be one more rows: ", arr)
-        return
-    with open("script/.augus_output", "w") as file:
-        for aa in arr:
-            file.write(aa)
+import op_file
 
 
 # 逐行读取 按行加入 ["",""]
@@ -31,7 +24,7 @@ def open_and_read(filename):
             # split_line = line_str.split(' ')
             arr_res.append(format_json(sa, sb))
             line = file_handle.readline()
-        write_file(arr_res)
+        op_file.write_file(arr_res)
 
 
 def plus_mark(arr_str, mark):
@@ -57,7 +50,7 @@ def split_all_space(filename):
             # print(arr_split_space)
             arr_res.append(plus_mark(arr_split_space, '"'))
             line = file_handle.readline()
-        write_file(arr_res)
+        op_file.write_file(arr_res)
 
 
 def add_prefix(filename, str):
@@ -71,7 +64,7 @@ def add_prefix(filename, str):
                 continue
             arr_res.append(str + line_str + '\n')
             line = file_handle.readline()
-        write_file(arr_res)
+        op_file.write_file(arr_res)
 
 
 def replace_str(filename, a, b):
@@ -85,7 +78,7 @@ def replace_str(filename, a, b):
                 continue
             arr_res.append(line_str.replace(a, b))
             line = file_handle.readline()
-        write_file(arr_res)
+        op_file.write_file(arr_res)
 
 
 def change_line(filename, a):
@@ -101,7 +94,7 @@ def change_line(filename, a):
             for ls in line_str:
                 arr_res.append(ls + '\n')
             line = file_handle.readline()
-        write_file(arr_res)
+        op_file.write_file(arr_res)
 
 
 def invoke_similar_words():
