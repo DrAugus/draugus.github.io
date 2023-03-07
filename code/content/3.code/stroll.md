@@ -95,6 +95,8 @@ select * from pg_tables;
 
 3. 无奈使用官网的教程进行安装
 
+修改账号 使用 `pnpm login`，上面的都是基操了。主要是依赖，依赖 node 和 redis，然后下面的 miao-plugin 依赖更多，`puppeteer` 非常多依赖，，已经在项目里写入脚本
+
 #### 安装 nodejs 流程
 
 * [官网](https://nodejs.org/en/download/)复制 [linux 二进制文件](https://nodejs.org/dist/v16.15.0/node-v16.15.0-linux-x64.tar.xz) (以16.15.0为准 (includes npm 8.5.5))
