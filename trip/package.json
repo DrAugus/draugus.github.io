@@ -1,22 +1,31 @@
 {
-  "name": "trip",
-  "version": "1.0.0",
-  "description": "augus trip record",
-  "main": "index.js",
-  "author": "Augus",
-  "private": false,
-  "license": "MIT",
+  "name": "augus-trip",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "dev": "vitepress dev .",
-    "build": "vitepress build .",
-    "preview": "vitepress preview ."
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.36.0",
-    "eslint": "^8.29.0",
-    "vitepress": "^1.0.0-alpha.30",
-    "vue": "^3.2.45"
+    "@docsearch/css": "^3.3.2",
+    "@docsearch/js": "^3.3.2",
+    "@nuxt-themes/docus": "1.9.1",
+    "nuxt": "3.2.3"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "axios": "0.25.0"
+      },
+      "ignoreMissing": [
+        "postcss",
+        "postcss-*",
+        "webpack",
+        "vue",
+        "axios"
+      ]
+    }
   }
 }

@@ -20,7 +20,7 @@ jobs:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
         node: [16]
-        deploy-dir: [trip/.vitepress/dist]
+        deploy-dir: [trip/.output/public]
         deploy-user: [augusmeow]
         deploy-repo: [trip]
 
@@ -34,14 +34,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          # 选择要使用的 node 版本
           node-version: ${{ matrix.node }}
+
+      - name: Change nuxt.config.ts
+        run: mv nuxt.config.ts.example nuxt.config.ts
 
       - uses: pnpm/action-setup@v2.2.4
         name: Install pnpm
@@ -52,13 +52,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      # 运行构建脚本
-      - name: Build VitePress site
+      - name: Generate
         env:
-          BASE: /trip/
-          HOSTNAME: https://augusmeow.github.io/trip/
+          BASE: /${{ matrix.deploy-repo }}/
+          NUXT_APP_BASE_URL: /${{ matrix.deploy-repo }}/
+          HOSTNAME: https://augusmeow.github.io/
           NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm build
+        run: pnpm generate
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3.1.0
