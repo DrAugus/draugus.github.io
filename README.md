@@ -2,15 +2,16 @@
 
 ## All Site ([pilot][pilot])
 
-> cause [netlify][netlify] has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account
+> cause [netlify][netlify] has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account. And then, I deprecated [vercel][vercel] because every commit will be automatically built, I can't set trigger conditions.
 
-| site | [github pages][new-repo] (🇨🇳) | [vercel][vercel] (other countries) | source | tech|
-| :--: |:--: |:--: | :--:| :--:|
-| main site (now only game)|  [online][site0-1] [online2][site0-2] | - | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
-| variety of notes | [online][site1-1] | [online][site1-2] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
-| code | [online][site2-1] | [online][site2-2] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
-| art | [online][site3-1] | [online][site3-2] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
-| article | [online][site4-1] | - | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
+| site | [github pages][new-repo] | source | tech|
+| :--: |:--: |:--: | :--:|
+| main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
+| variety of notes | [online][site1-1] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
+| code | [online][site2-1] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
+| art | [online][site3-1] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
+| article | [online][site4-1] | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
+| trip | [online][site5-1] | [trip](./trip/) | [vitepress][vitepress] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -27,7 +28,7 @@ about nuxt.config.ts.example([art](./art/nuxt.config.ts.example) | [notes](./not
 
 - nodejs (version >= 16)
 - npm
-- yarn (`npm install -g yarn`)
+- ~~yarn (`npm install -g yarn`)~~ yarn is no longer used, all are upgraded to pnpm
 - pnpm (nuxt project required `npm install -g pnpm`)
 
 ### Git clone
@@ -38,18 +39,19 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ### Run
 
-5 sites, just run `pnpm i && pnpm dev`
+6 sites, just run `pnpm i && pnpm dev`
 
 - [game](./game/)
 - [art](./art/)
 - [article](./article/)
 - [code](./code/)
 - [notes](./notes/)
+- [trip](./trip/)
 
 powered
 
 - [game](./game), powered by [vuepress][vuepress]  
-- [article](./article/), powered by [vitepress][vitepress]  
+- [article](./article/), [trip](./trip/), powered by [vitepress][vitepress]  
 - for others, powered by [nuxt docus][docus]
 
 ### Upgrade
@@ -91,12 +93,10 @@ You don't have to think about them. Just give them to the robot.
 [site0-1]: https://draugus.github.io/
 [site0-2]: https://augusmeow.github.io/game/
 [site1-1]: https://augusmeow.github.io/notes/
-[site1-2]: https://augus-notes.vercel.app/
 [site2-1]: https://augusmeow.github.io/code/
-[site2-2]: https://augus-code.vercel.app/
 [site3-1]: https://augusmeow.github.io/art/
-[site3-2]: https://augus-art.vercel.app/
 [site4-1]: https://augusmeow.github.io/article/
+[site5-1]: https://augusmeow.github.io/trip/
 [netlify]: https://netlify.com/
 [vercel]: https://vercel.com/
 [docus]: https://docus.dev

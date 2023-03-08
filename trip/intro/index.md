@@ -10,24 +10,24 @@ Leaflet todo
 
 ## 计划
 
-下一站[无锡](./trip/china/jiangsu#无锡) [扬州](./trip/china/jiangsu#扬州)
+下一站[无锡](/china/jiangsu#无锡) [扬州](/china/jiangsu#扬州)
 
 ::list{type=info}
 
-- [无锡](./trip/china/jiangsu#无锡) [扬州](./trip/china/jiangsu#扬州)
-- [开封](./trip/china/henan#开封) [洛阳](./trip/china/henan#洛阳)
-- [武汉](./trip/china/hubei#武汉)
-- [重庆](./trip/china/chongqing)
-- [天津](./trip/china/tianjin)
-- [嘉兴](./trip/china/zhejiang#嘉兴)
-- [泉州](./trip/china/fujian#泉州)
-- [海南](./trip/china/hainan)
-- [香港](./trip/hongkong) [澳门](./trip/macao)
+- [无锡](/china/jiangsu#无锡) [扬州](/china/jiangsu#扬州)
+- [开封](/china/henan#开封) [洛阳](/china/henan#洛阳)
+- [武汉](/china/hubei#武汉)
+- [重庆](/china/chongqing)
+- [天津](/china/tianjin)
+- [嘉兴](/china/zhejiang#嘉兴)
+- [泉州](/china/fujian#泉州)
+- [海南](/china/hainan)
+- [香港](/china/hongkong) [澳门](/china/macao)
 ::
 
 ## 格式
 
-::code-group
+:::code-group
 
 ```txt [写法/省]
 # 省
@@ -71,7 +71,7 @@ Leaflet todo
 ### 多次游记
 ```
 
-::
+:::
 
 ## 预算
 
