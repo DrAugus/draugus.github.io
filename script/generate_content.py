@@ -1,7 +1,8 @@
 import os
 
 project_path = os.path.realpath(os.path.dirname(__file__))
-ls_dir = "../article/article/"
+dir_name = 'china'
+ls_dir = "../trip/intro/"
 
 # str 为最终合并完成的 str 至少一行
 def write_file(arr):
@@ -15,7 +16,7 @@ def write_file(arr):
 def generate_content(arr):
     arr_res = []
     for aa in arr:
-        new_str = f"{{ text: '{aa}', link: '/article/{aa}' }},\n"
+        new_str = f"{{ text: '{aa}', link: '/{dir_name}/{aa}' }},\n"
         arr_res.append(new_str)
     write_file(arr_res)
 
