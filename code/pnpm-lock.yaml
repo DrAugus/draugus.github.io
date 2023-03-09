@@ -3,13 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@docsearch/css': ^3.3.1
   '@docsearch/js': ^3.3.1
-  '@nuxt-themes/docus': 1.9.4
+  '@nuxt-themes/docus': 1.9.6
   nuxt: 3.2.3
 
 devDependencies:
   '@docsearch/css': 3.3.1
   '@docsearch/js': 3.3.1
-  '@nuxt-themes/docus': 1.9.4_nuxt@3.2.3
+  '@nuxt-themes/docus': 1.9.6_nuxt@3.2.3
   nuxt: 3.2.3
 
 packages:
@@ -1329,8 +1329,8 @@ packages:
       fastq: 1.14.0
     dev: true
 
-  /@nuxt-themes/docus/1.9.4_nuxt@3.2.3:
-    resolution: {integrity: sha512-kyft1/vcxkYn0JJP0VXTDQWhJgzK9deIMp2ScaD3dhUm4HessLUIV7keY6ha9cnhOHx0pwcCwQGve9M4FfSJLQ==}
+  /@nuxt-themes/docus/1.9.6_nuxt@3.2.3:
+    resolution: {integrity: sha512-ZMZbKgBo9RLX0NNcNTmG+irwCdSRkJao2JNk22gRawZqrGEgRKAGoHzzi9GI1uC1AclD22xXkwXqj/zXCp+MrQ==}
     dependencies:
       '@nuxt-themes/elements': 0.9.0
       '@nuxt-themes/tokens': 1.9.0
@@ -1384,7 +1384,7 @@ packages:
     resolution: {integrity: sha512-J6uBewdVAJveDFuZrt5o9zgXAIJrLMsocN+AbPItKiO1X9gkNMHOEc/FCSRYWqGpXK03bxsDLiHOc7t4V18B7A==}
     dependencies:
       '@nuxtjs/color-mode': 3.2.0
-      nuxt-config-schema: 0.4.4
+      nuxt-config-schema: 0.4.5
       nuxt-icon: 0.3.2
       pinceau: 0.18.1
       ufo: 1.1.1
@@ -5283,20 +5283,6 @@ packages:
       scule: 1.0.0
       typescript: 4.9.5
       vue-component-meta: 1.0.19_typescript@4.9.5
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
-    dev: true
-
-  /nuxt-config-schema/0.4.4:
-    resolution: {integrity: sha512-5NnyyH2qSgraQo6kcW/8SWqBZ/pEY/PwyepODPWYYv4ZZ8BiqC850OTmyO2oTBL4O+Xg4fR7hAwSB4g5pIMpSg==}
-    dependencies:
-      '@nuxt/kit': 3.2.3
-      changelogen: 0.4.1
-      defu: 6.1.2
-      jiti: 1.17.1
-      pathe: 1.1.0
-      untyped: 1.2.2
     transitivePeerDependencies:
       - rollup
       - supports-color
