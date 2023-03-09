@@ -11,7 +11,7 @@
 | code | [online][site2-1] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
 | art | [online][site3-1] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
 | article | [online][site4-1] | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
-| trip | [online][site5-1] | [trip](./trip/) | [vitepress][vitepress] [vue3][vue] |
+| trip | [online][site5-1] | [trip](./trip/) | [nuxt docus][docus] [vue3][vue] |
 
 > notes/code/art site are same, why?
 

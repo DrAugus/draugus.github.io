@@ -1,6 +1,6 @@
 export default defineAppConfig({
   docus: {
-    title: 'TRIP',
+    title: '旅行',
     description: 'Augus Trip',
     // image: "/4x4.png",
     socials: {
