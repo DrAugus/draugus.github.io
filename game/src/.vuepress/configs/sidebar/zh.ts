@@ -74,6 +74,8 @@ export const sidebar_zh: SidebarConfigObject = {
     ],
 
     '/game/genshin/': [
+        url_game + "/mihoyo-cookie.md",
+
         url_game + "/wish.md",
         url_game + "/timeline.md",
         url_game + "/timelinetable.md",
