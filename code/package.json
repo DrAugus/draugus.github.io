@@ -10,8 +10,8 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.9.9",
-    "@docsearch/css": "^3.3.1",
-    "@docsearch/js": "^3.3.1",
+    "@docsearch/css": "^3.3.3",
+    "@docsearch/js": "^3.3.3",
     "nuxt": "3.2.3"
   },
   "pnpm": {
