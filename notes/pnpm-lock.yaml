@@ -4,7 +4,7 @@ specifiers:
   '@docsearch/css': ^3.3.2
   '@docsearch/js': ^3.3.2
   '@nuxt-themes/docus': 1.9.9
-  '@vue-leaflet/vue-leaflet': ^0.8.1
+  '@vue-leaflet/vue-leaflet': ^0.9.0
   echarts: ^5.4.1
   leaflet: ^1.9.3
   nuxt: 3.2.3
@@ -15,7 +15,7 @@ devDependencies:
   '@docsearch/css': 3.3.2
   '@docsearch/js': 3.3.2
   '@nuxt-themes/docus': 1.9.9_nuxt@3.2.3
-  '@vue-leaflet/vue-leaflet': 0.8.1_leaflet@1.9.3
+  '@vue-leaflet/vue-leaflet': 0.9.0_leaflet@1.9.3
   echarts: 5.4.1
   leaflet: 1.9.3
   nuxt: 3.2.3
@@ -2089,16 +2089,17 @@ packages:
       vue-template-compiler: 2.7.14
     dev: true
 
-  /@vue-leaflet/vue-leaflet/0.8.1_leaflet@1.9.3:
-    resolution: {integrity: sha512-fPkySmxI86lUWY7arIV6UShK6tjXkygumLd81N5C2AH/s0gwsL37L+cOMfr+xvSG8KdBWCoHpCUNPpOMPa0IUA==}
+  /@vue-leaflet/vue-leaflet/0.9.0_leaflet@1.9.3:
+    resolution: {integrity: sha512-B5sxleSIFP0RK+7418BQirZ7oXa0t2dZrwfGI/0ABgaFLCWmHWP26w4soqrF5MlpThvhieAIUVIVuTdgXUenmA==}
     peerDependencies:
+      '@types/leaflet': ^1.5.7
       leaflet: ^1.6.0
-      vue: ^3.0.0
     peerDependenciesMeta:
-      vue:
+      '@types/leaflet':
         optional: true
     dependencies:
       leaflet: 1.9.3
+      vue: 3.2.47
     dev: true
 
   /@vue/babel-helper-vue-transform-on/1.0.2:

@@ -4,7 +4,7 @@ specifiers:
   '@algolia/client-search': 4.15.0
   '@antfu/eslint-config': ^0.36.0
   '@types/leaflet': 1.9.1
-  '@vue-leaflet/vue-leaflet': 0.8.4
+  '@vue-leaflet/vue-leaflet': 0.9.0
   '@vuepress/client': 2.0.0-beta.61
   '@vuepress/plugin-google-analytics': 2.0.0-beta.61
   '@vuepress/utils': 2.0.0-beta.61
@@ -19,7 +19,7 @@ dependencies:
   '@algolia/client-search': 4.15.0
   '@antfu/eslint-config': 0.36.0_eslint@8.35.0
   '@types/leaflet': 1.9.1
-  '@vue-leaflet/vue-leaflet': 0.8.4_leaflet@1.9.3+vue@3.2.47
+  '@vue-leaflet/vue-leaflet': 0.9.0_jxhnhateicsyxa3kxaa72tn34i
   '@vuepress/plugin-google-analytics': 2.0.0-beta.61
   dayjs: 1.11.7
   eslint: 8.35.0
@@ -756,12 +756,16 @@ packages:
       vue: 3.2.47
     dev: false
 
-  /@vue-leaflet/vue-leaflet/0.8.4_leaflet@1.9.3+vue@3.2.47:
-    resolution: {integrity: sha512-FyD75jMKzBQCW4TrzRMrIBa8OwaUXaSeaDWJvp7FIjpZzk8niHBfpP+QirA/BT9536FJXviRkmwac3Z7YOQHKQ==}
+  /@vue-leaflet/vue-leaflet/0.9.0_jxhnhateicsyxa3kxaa72tn34i:
+    resolution: {integrity: sha512-B5sxleSIFP0RK+7418BQirZ7oXa0t2dZrwfGI/0ABgaFLCWmHWP26w4soqrF5MlpThvhieAIUVIVuTdgXUenmA==}
     peerDependencies:
+      '@types/leaflet': ^1.5.7
       leaflet: ^1.6.0
-      vue: ^3.0.0
+    peerDependenciesMeta:
+      '@types/leaflet':
+        optional: true
     dependencies:
+      '@types/leaflet': 1.9.1
       leaflet: 1.9.3
       vue: 3.2.47
     dev: false
