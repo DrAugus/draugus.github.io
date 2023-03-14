@@ -279,14 +279,103 @@ length=${#array_name[*]}
 lengthn=${#array_name[n]}
 ```
 
-### 逻辑控制
+### echo
 
-- `-eq` =
-- `-ne` !=
-- `-gt` >
-- `-lt` <
-- `ge` >=
-- `le` <=
+```bash
+echo -e "OK! \n" # -e 开启转义
+echo "It is a test"
+echo -e "OK! \c" # -e 开启转义 \c 不换行
+echo "It is a test"
+echo "It is a test" > myfile # 重定向
+echo `date` # 显示命令执行结果
+```
+
+### 运算符
+
+#### 算术运算符
+
+假定变量 a 为 10，变量 b 为 20
+|运算符| 说明| 举例|
+|:----|:----|:----|
+|`+`| 加法| `expr $a + $b` 结果为 30。|
+|`-` |减法| `expr $a - $b` 结果为 -10。|
+|`*` |乘法| `expr $a \* $b` 结果为  200。|
+|`/` |除法| `expr $b / $a` 结果为 2。|
+|`%` |取余| `expr $b % $a` 结果为 0。|
+|`=` |赋值| `a=$b` 把变量 b 的值赋给 a。|
+|`==` |相等。用于比较两个数字，相同则返回 true。| `[ $a == $b ]` 返回 false。|
+|`!=` |不相等。用于比较两个数字，不相同则返回 true。| `[ $a != $b ]` 返回 true。|
+>注意：条件表达式要放在方括号之间，并且要有空格，例如: `[$a==$b]` 是错误的，必须写成 `[ $a == $b ]`。
+
+推荐用 `$()` 代替 ``:
+
+```bash
+val=`expr 10 + 20`
+val=$(expr 10 + 20)
+```
+
+#### 关系运算符
+
+> 只支持数字
+
+假定变量 a 为 10，变量 b 为 20
+
+- `-eq` = EQUAL `[ $a -eq $b ]` 返回 false
+- `-ne` != NOT EQUAL `[ $a -ne $b ]` 返回 true
+- `-gt` > GREATER THAN `[ $a -gt $b ]` 返回 false
+- `-lt` < LESS THAN `[ $a -lt $b ]` 返回 true
+- `ge` >= GREATER THAN OR EQUAL `[ $a -ge $b ]` 返回 false
+- `le` <= LESS THAN OR EQUAL `[ $a -le $b ]` 返回 true
+
+#### 布尔运算符
+
+- `!` 非
+- `-o` 或
+- `-a` 与
+
+#### 逻辑运算符
+
+`&&` `||`
+
+```bash
+command1 && command2     #命令1执行成功后，命令2才执行
+command1 || command2     #命令1执行失败后，命令2才执行
+```
+
+> 使用 `[[ ... ]]` 条件判断结构，而不是 `[ ... ]`，能够防止脚本中的许多逻辑错误。比如，`&&`、`||`、`<` 和 `>` 操作符能够正常存在于 `[[ ]]` 条件判断结构中，但是如果出现在 `[ ]` 结构中的话，会报错。
+
+#### 字符串运算符
+
+假定变量 a 为 "abc"，变量 b 为 "efg"
+|运算符| 说明| 举例|
+|:---|:---|:---|
+|`=`| 检测两个字符串是否相等，相等返回 true| `[ $a = $b ]` 返回 false|
+|`!=`| 检测两个字符串是否不相等，不相等返回 true| `[ $a != $b ]` 返回 true|
+|`-z`| 检测字符串长度是否为0，为0返回 true| `[ -z $a ]` 返回 false|
+|`-n`| 检测字符串长度是否不为0，不为0返回 true| `[ -n "$a" ]` 返回 true (`$a`注意加双引号)  |
+|`$`| 检测字符串是否不为空，不为空返回 true| `[ $a ]` 返回 true|
+
+#### 文件测试运算符
+
+文件测试运算符用于检测 Unix 文件的各种属性
+
+|操作符| 说明| 举例|
+|:---|:---|:---|
+|-b file |检测文件是否是块设备文件，如果是，则返回 true| `[ -b $file ]` 返回 false|
+|-c file| 检测文件是否是字符设备文件，如果是，则返回 true| `[ -c $file ]` 返回 false|
+|-d file| 检测文件是否是目录，如果是，则返回 true| `[ -d $file ]` 返回 false|
+|-e file| 检测文件（包括目录）是否存在，如果是，则返回 true| `[ -e $file ]` 返回 true|
+|-f file| 检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true| `[ -f $file ]` 返回 true|
+|-g file| 检测文件是否设置了 SGID 位，如果是，则返回 true| `[ -g $file ]` 返回 false|
+|-k file| 检测文件是否设置了粘着位(Sticky Bit)，如果是，则返回 true| `[ -k $file ]` 返回 false|
+|-p file| 检测文件是否是有名管道，如果是，则返回 true| `[ -p $file ]` 返回 false|
+|-u file| 检测文件是否设置了 SUID 位，如果是，则返回 true| `[ -u $file ]` 返回 false|
+|-r file| 检测文件是否可读，如果是，则返回 true| `[ -r $file ]` 返回 true|
+|-w file| 检测文件是否可写，如果是，则返回 true| `[ -w $file ]` 返回 true|
+|-x file| 检测文件是否可执行，如果是，则返回 true| `[ -x $file ]` 返回 true|
+|-s file| 检测文件是否为空（文件大小是否大于0），不为空返回 true| `[ -s $file ]` 返回 true|
+|-S file|判断某文件是否 socket|-|
+|-L file| 检测文件是否存在并且是一个符号链接|-|
 
 ### 参数获取
 
@@ -303,6 +392,60 @@ lengthn=${#array_name[n]}
   - 当执行系统自身的命令时，`$?` 对应这个命令的返回值。
   - 当执行 shell 脚本时，`$?` 对应该脚本调用 exit 命令返回的值。如果没有主动调用 exit 命令，默认返回为 0。
   - 当执行自定义的 bash 函数时，`$?` 对应该函数调用 return 命令返回的值。如果没有主动调用 return 命令，默认返回为 0。
+
+### 输入/输出重定向
+
+|命令| 说明|
+|:---|:---|
+|`command > file`| 将输出重定向到 file|
+|`command < file`| 将输入重定向到 file|
+|`command >> file`| 将输出以追加的方式重定向到 file|
+|`n > file`| 将文件描述符为 n 的文件重定向到 file|
+|`n >> file`| 将文件描述符为 n 的文件以追加的方式重定向到 file|
+|`n >& m`| 将输出文件 m 和 n 合并|
+|`n <& m`| 将输入文件 m 和 n 合并|
+|`<< tag`| 将开始标记 tag 和结束标记 tag 之间的内容作为输入|
+
+>文件描述符 0 通常是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。
+
+一般情况下，每个 Unix/Linux 命令运行时都会打开三个文件：
+
+- 标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。
+- 标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。
+- 标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。
+默认情况下，command > file 将 stdout 重定向到 file，command < file 将stdin 重定向到 file。  
+如果希望 stderr 重定向到 file，可以这样写：`command 2>file`  
+如果希望 stderr 追加到 file 文件末尾，可以这样写：`command 2>>file`  
+**2** 表示标准错误文件(stderr)。  
+如果希望将 stdout 和 stderr 合并后重定向到 file，可以这样写：
+
+```bash
+command > file 2>&1
+# 或者
+command >> file 2>&1
+```
+
+如果希望对 stdin 和 stdout 都重定向，可以这样写：`command < file1 >file2`  
+command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2。  
+
+/dev/null 文件
+
+如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：`command > /dev/null`  
+/dev/null 是一个特殊的文件，写入到它的内容都会被丢弃；如果尝试从该文件读取内容，那么什么也读不到。但是 /dev/null 文件非常有用，将命令的输出重定向到它，会起到"禁止输出"的效果。  
+如果希望屏蔽 stdout 和 stderr，可以这样写： `command > /dev/null 2>&1`  
+> 注意：0 是标准输入（STDIN），1 是标准输出（STDOUT），2 是标准错误输出（STDERR）。这里的 2 和 > 之间不可以有空格，2> 是一体的时候才表示错误输出。
+
+### 文件包含
+
+和其他语言一样，Shell 也可以包含外部脚本
+
+```bash
+. filename   # 注意点号(.)和文件名中间有一空格
+# 或
+source filename
+```
+
+> 被包含的文件 filename 不需要可执行权限。
 
 ### exit
 
