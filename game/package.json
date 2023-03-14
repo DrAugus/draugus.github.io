@@ -25,16 +25,16 @@
     "@antfu/eslint-config": "^0.36.0",
     "@types/leaflet": "1.9.2",
     "@vue-leaflet/vue-leaflet": "0.9.0",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.61",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.50-pre.1",
     "dayjs": "1.11.7",
     "eslint": "^8.36.0",
     "leaflet": "1.9.3",
     "typed.js": "2.0.132",
-    "vuepress": "2.0.0-beta.61"
+    "vuepress": "2.0.0-beta.50-pre.1"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.61",
-    "@vuepress/utils": "2.0.0-beta.61",
+    "@vuepress/client": "2.0.0-beta.50-pre.1",
+    "@vuepress/utils": "2.0.0-beta.50-pre.1",
     "vue": "^3.2.47"
   }
 }
