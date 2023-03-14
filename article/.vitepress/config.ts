@@ -13,6 +13,10 @@ export default defineConfig({
             rel: 'icon',
             href: '/favicon.ico',
         }],
+        ["link", {
+            rel: "stylesheet",
+            href: "//unpkg.com/heti/umd/heti.min.css",
+        },],
         ['meta', { name: 'theme-color', content: '#ff64b9' }],
     ],
     themeConfig: {
