@@ -7,6 +7,12 @@
   },
   "packageRules": [
     {
+      "packageNames": [
+        "vuepress",
+        "@vuepress/client",
+        "@vuepress/utils",
+        "@vuepress/plugin-google-analytics"
+      ],
       "allowedVersions": "!/pre.*$/"
     }
   ]
