@@ -54,9 +54,9 @@ powered
 - [article](./article/), [trip](./trip/), powered by [vitepress][vitepress]  
 - for others, powered by [nuxt docus][docus]
 
-### Upgrade
+## Upgrade
 
-#### [game](./game), as vuepress
+### [game](./game), as vuepress
 
 make sure all vuepress && plugins are up to date.
 
@@ -75,7 +75,7 @@ make sure all vuepress && plugins are up to date.
     pnpm add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && pnpm install && pnpm upgrade
     ```
 
-#### others
+### others
 
 You don't have to think about them. Just give them to the robot.
 
