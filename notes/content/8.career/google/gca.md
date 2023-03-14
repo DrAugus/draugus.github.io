@@ -182,7 +182,7 @@ As we mentioned in section 2, hypothetical questions in Google GCA interviews ma
 In both cases, it helps to approach the problem with a structured method. We recommend using the steps that Google lays out in the video below:
 
 ::div
-  :video-player{src="https://www.youtube.com/embed/eIMR82oO2Dc?autoplay=1"}
+  :video-player{src="https://www.youtube.com/watch?v=eIMR82oO2Dc"}
 ::
 
 - **Take a moment before responding:** Don’t rush into your answer. You can ask your interviewer for a few moments to think, or ask them to repeat the question.
@@ -190,7 +190,7 @@ In both cases, it helps to approach the problem with a structured method. We rec
 - **Share logical assumptions:** As the interviewer will not be giving you all the information needed to answer the question, you’ll have to make assumptions to narrow down the problem. Share the assumptions you’re making, so that the interviewer can accept, or steer you in a different direction.
 - **Show your work:** Communicate your thought process out loud, so that the interviewer can follow along.
 - **Consider the pros and cons:** Consider the trade-offs of your solution, and if there is a different way of going about it that may improve the outcome.
-- **Think about how you measure success: Set metrics that measure the success of your solution.
+- **Think about how you measure success:** Set metrics that measure the success of your solution.
 - **Tie it back to the role:** Consider the key outcomes and goals of the role that you’re applying for. Explain how your solution to this problem ties in with those goals.
 
 As you practice hypothetical and behavioral questions, ask yourself questions and answer them, as two people would in an interview. This will help you practice your frameworks for hypothetical questions and establish answers to common behavioral questions.
