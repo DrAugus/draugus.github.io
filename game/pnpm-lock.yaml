@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@algolia/client-search': 4.15.0
   '@antfu/eslint-config': ^0.36.0
-  '@types/leaflet': 1.9.2
+  '@types/leaflet': 1.9.3
   '@vue-leaflet/vue-leaflet': 0.9.0
   '@vuepress/client': 2.0.0-beta.61
   '@vuepress/plugin-google-analytics': 2.0.0-beta.61
@@ -18,8 +18,8 @@ specifiers:
 dependencies:
   '@algolia/client-search': 4.15.0
   '@antfu/eslint-config': 0.36.0_eslint@8.36.0
-  '@types/leaflet': 1.9.2
-  '@vue-leaflet/vue-leaflet': 0.9.0_6fejnmbsr5bxa7oe4tixuvkdie
+  '@types/leaflet': 1.9.3
+  '@vue-leaflet/vue-leaflet': 0.9.0_5alwckmlgnr46gtyjk55la4kpq
   '@vuepress/plugin-google-analytics': 2.0.0-beta.61
   dayjs: 1.11.7
   eslint: 8.36.0
@@ -569,8 +569,8 @@ packages:
     dependencies:
       '@types/node': 18.15.2
 
-  /@types/leaflet/1.9.2:
-    resolution: {integrity: sha512-vrokGIGVO8RSNXQBcWdEJ4Xy6E9kLQHZfpxIkFjSD1OhqTKOjYLFJDG6JCoAWYm/n755fdNCyrpna6/00kVajw==}
+  /@types/leaflet/1.9.3:
+    resolution: {integrity: sha512-Caa1lYOgKVqDkDZVWkto2Z5JtVo09spEaUt2S69LiugbBpoqQu92HYFMGUbYezZbnBkyOxMNPXHSgRrRY5UyIA==}
     dependencies:
       '@types/geojson': 7946.0.10
     dev: false
@@ -761,7 +761,7 @@ packages:
       vue: 3.2.47
     dev: false
 
-  /@vue-leaflet/vue-leaflet/0.9.0_6fejnmbsr5bxa7oe4tixuvkdie:
+  /@vue-leaflet/vue-leaflet/0.9.0_5alwckmlgnr46gtyjk55la4kpq:
     resolution: {integrity: sha512-B5sxleSIFP0RK+7418BQirZ7oXa0t2dZrwfGI/0ABgaFLCWmHWP26w4soqrF5MlpThvhieAIUVIVuTdgXUenmA==}
     peerDependencies:
       '@types/leaflet': ^1.5.7
@@ -770,7 +770,7 @@ packages:
       '@types/leaflet':
         optional: true
     dependencies:
-      '@types/leaflet': 1.9.2
+      '@types/leaflet': 1.9.3
       leaflet: 1.9.3
       vue: 3.2.47
     dev: false
