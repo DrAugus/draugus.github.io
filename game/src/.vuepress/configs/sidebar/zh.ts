@@ -89,6 +89,8 @@ export const sidebar_zh: SidebarConfigObject = {
         url_game + "/party.md",
         url_game + "/artifacts.md",
         url_game + "/dialog.md",
+
+        url_game + "/monster.md",
     ],
 
     '/food/': [
