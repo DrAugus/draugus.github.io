@@ -4,4 +4,5 @@ node_modules/
 .DS_Store
 __pycache__/
 .augus_output
-test
+test**
+output**
