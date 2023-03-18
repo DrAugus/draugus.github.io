@@ -14,7 +14,7 @@
     "preview": "vitepress preview ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.36.0",
+    "@antfu/eslint-config": "^0.37.0",
     "eslint": "^8.36.0",
     "vitepress": "^1.0.0-alpha.60",
     "vue": "^3.2.47"
