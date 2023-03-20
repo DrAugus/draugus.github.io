@@ -26,16 +26,22 @@
         </div>
 
         <div class="timeline-wish-event-weapon">
-          <div class="card event-item weapon" v-for="(value, i) in WISH.weapons" v-bind:style="{
-            width: wishWeapons[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
-            left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-            height: 'var(--event-height)'
-          }">
+          <div class="card event-item weapon" v-for="(value, i) in WISH.weapons" :class="[
+            i > 0 && diffWishStyle(WISH.weapons[i - 1].end, value.start) < 0 ? 'rounded-l-xl' : '',
+            i > 0 && diffWishStyle(WISH.weapons[i - 1].end, value.start) > 0 ? 'border-r-4 border-white' : '',
+            i == 0 ? 'rounded-l-xl' : '',
+            i == WISH.weapons.length - 1 ? 'rounded-r-xl' : '',
+            i < WISH.weapons.length - 1 && diffWishStyle(value.end, WISH.weapons[i + 1].start) < 0 ? 'rounded-r-xl' : '',
+          ]" v-bind:style="{
+  width: wishWeapons[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
+  left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+  height: 'var(--event-height)'
+}">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img">
                 <img v-bind:src="'/image/genshin/wish/' +
-                value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                ''" alt="">
+                  value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
+                  ''" alt="">
               </div>
               <span class="left-align timeline-character-text sticky text-shadow-weapon ">
                 「神铸赋形」活动祈愿
@@ -49,8 +55,13 @@
         <div class="timeline-wish-event-character">
           <div class="card event-item " v-for="(value, i) in WISH.characters" :class="[
             'ele-' + ElementString[CHARACTER[value.wish5star].ele],
-            i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) ? '' : 'rounded-l-xl',
-            i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) ? 'border-r-4 border-white' : 'rounded-r-xl'
+
+            !value.wish_2 && i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) < 0 ? 'rounded-l-xl' : '',
+            !value.wish_2 && i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) > 0 ? 'border-r-4 border-white' : '',
+            i == 0 ? 'rounded-l-xl' : '',
+            i == WISH.characters.length - 1 ? 'rounded-r-xl' : '',
+            !value.wish_2 && i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) < 0 ? 'rounded-r-xl' : '',
+
           ]" :style="{
   width: wishCharacters[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
@@ -59,8 +70,8 @@
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img responsive-img lazy">
                 <img v-bind:src="'/image/genshin/wish/' +
-                value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                ''" alt="">
+                  value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
+                  ''" alt="">
               </div>
               <span class="left-align timeline-character-text sticky"
                 :class="'ele-text-shadow-' + ElementString[CHARACTER[value.wish5star].ele]">
@@ -87,7 +98,6 @@
   <div class="hide-on-large-only">
     <!-- <h2>请在电脑端查看此页</h2> -->
   </div>
-
 </template>
 
 <script>
@@ -198,8 +208,11 @@ export default {
       this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
     },
     diffWishStyle(s, e) {
-      return parseDayjs(e).subtract(0, "minute")
+      if (s == e) return 0
+      let res = parseDayjs(e).subtract(0, "minute")
         .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1
+      if (res) return 1
+      return -1
     },
   },
   beforeDestroy() {

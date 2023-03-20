@@ -16,7 +16,7 @@
                     <img v-if="vv.char" :src="composeSrc(vv.char)">
                 </td>
                 <td :style="{ textAlign: 'left', whiteSpace: 'nowrap' }">
-                    {{ modifyChar((names[i].name)) }}
+                    {{ modifyChar(names[i].name) }}
                 </td>
             </tr>
 
