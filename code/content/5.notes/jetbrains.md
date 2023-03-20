@@ -1,7 +1,9 @@
 ---
-title: JetBrains
 icon: logos:jetbrains
 ---
+
+
+# JetBrains
 
 ## hotkeys
 

@@ -9,59 +9,33 @@ icon: logos:vimeo-icon
 
 ### 普通模式
 
-`h` left `j` down `k` up `l` right
-
-* `4j` 向下跳4行
-
-`w` 跳转下一个单词
-
-`b` 跳转到前一个单词开头
-
-`gg` 回到文档最上方 即 home 键
-
-`G` 回到文档最下方 即 end 键
-
-`Ctrl U` 即 PgUp
-
-`Ctrl D` 即 PgDn
-
-`f`
-
-* `fr`移动到离你最近的r
-
-`y` `yaw` yank all words
-
-* `y4j` 复制包含当前行的下四行
-* `yfr` 复制到r为止的内容
-
-`p` 粘贴
-
-`d` 删除
-
-* `dj` 删除当前行和下一行
-* `dfr` 删除到r为止的内容
-
-<span id="insert-caw">`caw` change all words 改变当前这个单词 进入输入模式</span>
-
-<span id="insert-cc">`cc` 删除当前行进入输入模式</span>
-
-* `c4j` 删除下四行进入输入模式
-
-<span id="insert-i">`i` 是在当前光标的前一个字母进行输入</span>
-
-<span id="insert-a">`a` 是在当前光标之后进行输入</span>
-
-<span id="insert-I">`I` 从这一行开头开始输入</span>
-
-<span id="insert-A">`A` 从这一行末尾开始输入</span>
-
-`o` 在当前行之后插入一行
-
-`O` 在当前行之前插入一行
-
-* 搜索 `/`正向往下搜索 `?`反向往上搜索 `n`正向向下寻找下一个 `N`反向向上寻找上一个
-* 全局替换 `%s/源字符串/目的字符串/g`
-* 撤销 `u` 撤销整行`U` 取消撤销 `ctrl + r`
+- `h` left `j` down `k` up `l` right
+  - `4j` 向下跳4行
+- `w` 跳转下一个单词
+- `b` 跳转到前一个单词开头
+- `gg` 回到文档最上方 即 home 键
+- `G` 回到文档最下方 即 end 键
+- `Ctrl U` 即 PgUp
+- `Ctrl D` 即 PgDn
+- `f`
+  - `fr`移动到离你最近的r
+- `y` `yaw` yank all words
+  - `y4j` 复制包含当前行的下四行
+  - `yfr` 复制到r为止的内容
+- `p` 粘贴
+- `d` 删除
+  - `dj` 删除当前行和下一行
+  - `dfr` 删除到r为止的内容
+- `caw` change all words 改变当前这个单词 进入输入模式
+- `cc` 删除当前行进入输入模式
+  - `c4j` 删除下四行进入输入模式
+- `i` 是在当前光标的前一个字母进行输入
+- `a` 是在当前光标之后进行输入
+- `I` 从这一行开头开始输入
+- `A` 从这一行末尾开始输入
+- `o` 在当前行之后插入一行
+- `O` 在当前行之前插入一行
+- 撤销 `u` 撤销整行`U` 取消撤销 `ctrl + r`
 
 ### 命令模式
 
@@ -69,24 +43,27 @@ icon: logos:vimeo-icon
 
 退出
 
-* `:q`退出编辑
-* `:q!`强制退出
-* `:wq`保存并退出
-* `:w`保存文件但不退出
-* `:w file`将修改另存为file文件里不退出vim
-* `:w!`强制保存文件但不退出
-* `:wq!`强制保存文件并退出
-* `:e!`放弃所有更改
+- `:q`退出编辑
+- `:q!`强制退出
+- `:wq`保存并退出
+- `:w`保存文件但不退出
+- `:w file`将修改另存为file文件里不退出vim
+- `:w!`强制保存文件但不退出
+- `:wq!`强制保存文件并退出
+- `:e!`放弃所有更改
 
 > 以:和/开头的命令都有历史纪录，可以首先键入:或/然后按上下箭头来选择某个历史命令。
 
+- 搜索 `/`正向往下搜索 `?`反向往上搜索 `n`正向向下寻找下一个 `N`反向向上寻找上一个
+- 全局替换 `%s/源字符串/目的字符串/g`
+
 ### 输入模式
 
-> 在普通模式下键入[i](#insert-i)进入输入模式
-> 其他进入方式，如 [a](#insert-a) [I](#insert-I) [A](#insert-A) [caw](#insert-caw) [cc](#insert-cc)
+> 在普通模式下键入 `i` 进入输入模式
+> 其他进入方式，如 `a` `I` `A` `caw` `cc`
 
-* 此时可以对文件内容进行编辑，左下角会显示`"-- INSERT --"`
-* 按"ESC"进入底行模式
+- 此时可以对文件内容进行编辑，左下角会显示`"-- INSERT --"`
+- 按"ESC"进入底行模式
 
 ### 可视模式
 
@@ -96,7 +73,7 @@ icon: logos:vimeo-icon
 
 y就可以直接复制选中的内容
 
-<a href = "https://blog.csdn.net/feosun/article/details/73196299" title="其他命令" target="_blank">本文已足够，如果还想看点冗余的</a>
+[本文已足够，如果还想看点冗余的](https://blog.csdn.net/feosun/article/details/73196299)
 
 ## 补充
 
@@ -130,29 +107,29 @@ set autoindent #"自动缩进"
 
 ## 替换字符串
 
-* `:s/source str/replace str/` replace current line first str
-* `:s/source str/replace str/g` replace current line all str
-* `:n,$s/source str/replace str/` replace from n to the last line all first str
-* `:%s/source str/replace str/` replace all str
+- `:s/source str/replace str/` replace current line first str
+- `:s/source str/replace str/g` replace current line all str
+- `:n,$s/source str/replace str/` replace from n to the last line all first str
+- `:%s/source str/replace str/` replace all str
 
 ## 光标移动
 
-* `0` 移动光标到当前行行首
-* `$` 移动光标到当前行行尾
-* `^` 移动光标到当前行的第一个非空字符
-* `nG` 移动光标到当前文件的第n行
-* `:n` 移动光标到当前文件的第n行 (同上)
-* `gg` 或 `:0` 移动光标到当前文件的第一行
-* `GG` 或 `:$` 移动光标到当前未经的最后一行
-* `w` 或 `W` 移动到下一单词的开头
-* `b` 或 `B` 移动到上一单词的开头
-* `e` 或 `E` 移动到光标所在单词的末尾
-* `Ctrl` + `f` 向前滚动一页
-* `Ctrl` + `b` 向后滚动一页
-* `Ctrl` + `u` 向前滚动半页
-* `Ctrl` + `d` 向后滚动半页
+- `0` 移动光标到当前行行首
+- `$` 移动光标到当前行行尾
+- `^` 移动光标到当前行的第一个非空字符
+- `nG` 移动光标到当前文件的第n行
+- `:n` 移动光标到当前文件的第n行 (同上)
+- `gg` 或 `:0` 移动光标到当前文件的第一行
+- `GG` 或 `:$` 移动光标到当前未经的最后一行
+- `w` 或 `W` 移动到下一单词的开头
+- `b` 或 `B` 移动到上一单词的开头
+- `e` 或 `E` 移动到光标所在单词的末尾
+- `Ctrl` + `f` 向前滚动一页
+- `Ctrl` + `b` 向后滚动一页
+- `Ctrl` + `u` 向前滚动半页
+- `Ctrl` + `d` 向后滚动半页
 
 ## 撤销
 
-* `u` 撤销
-* `ctrl+r` 恢复刚刚的撤销
+- `u` 撤销
+- `ctrl+r` 恢复刚刚的撤销

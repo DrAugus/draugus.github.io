@@ -1,5 +1,4 @@
 ---
-title: Excel
 icon: vscode-icons:file-type-excel2
 ---
 
