@@ -1,7 +1,8 @@
 ---
-title: Vercel
 icon: logos:vercel-icon
 ---
+
+# Vercel
 
 ## QA
 
