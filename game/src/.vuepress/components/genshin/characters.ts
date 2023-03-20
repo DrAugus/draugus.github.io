@@ -741,7 +741,7 @@ export const CHARACTER = {
     prefix: "炽鬃之狮",
     star: 5,
     event_exclusive: false,
-    intro: "",
+    intro: "横行须弥沙漠的松散佣兵组织「镀金旅团」的成员。勇敢而又强大，在佣兵们内部名声不小。",
     city: City.Inazuma,
     ele: Element.pyro,
     weapon: Weapon.claymore
@@ -755,6 +755,17 @@ export const CHARACTER = {
     intro: "",
     city: City.Liyue,
     ele: Element.dendro,
+    weapon: Weapon.catalyst
+  },
+  mika: {
+    id: "mika",
+    name: "米卡",
+    prefix: "晴霜的标绘",
+    star: 4,
+    event_exclusive: false,
+    intro: "在远征队中担当前侦骨干的年轻骑士，为人安静低调，踏实地对待着每一份经手的工作，行军餐的美味程度可圈可点。 只不过在与陌生人打交道时，总难免显露腼腆胆怯的一面。",
+    city: City.Mondstadt,
+    ele: Element.cryo,
     weapon: Weapon.catalyst
   },
 }
