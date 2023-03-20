@@ -7,6 +7,7 @@ from openpyxl import load_workbook
 
 filename = 'script/test.xlsx'
 
+outputfile = "script/output.xlsx"
 
 # 打开Excel文件
 wb = load_workbook(filename)
@@ -33,16 +34,11 @@ ncols = sheet1.max_column
 # /home/test_fps/gene/fps1/fps1_7204997026155744572.4822.flv.far
 # /home/test_fps/gene/fps5/gene_in.sh_fps5_7204997026155744572.4822.flv.far
 def classify_value(str, num, res_value):
-    if str.startswith('/home/test_fps/gene/fps/') and num > 0:
-        res_value[0][1] = 1
-    if str.startswith('/home/test_fps/gene/fps1/') and num > 0:
-        res_value[1][1] = 1
-    if str.startswith('/home/test_fps/gene/fps5/') and num > 0:
-        res_value[2][1] = 1
-    if str.startswith('/home/test_fps/gene/fps10/') and num > 0:
-        res_value[3][1] = 1
-    if str.startswith('/home/test_fps/gene/fps15/') and num > 0:
-        res_value[4][1] = 1
+    match_arr = ['fps', 'fps15', 'fps10', 'fps5', 'fps1']
+    for idx, ma in enumerate(match_arr):
+        ss = f'/home/test_fps/gene/{ma}/'
+        if str.startswith(ss) and num > 0:
+            res_value[idx][1] = 1
 
 
 # 读取Excel文件到DataFrame对象
@@ -69,10 +65,10 @@ for key, value in data_dict.items():
     res_key = key
     res_value = [
         ['fps', 0],
-        ['fps1', 0],
-        ['fps5', 0],
-        ['fps10', 0],
         ['fps15', 0],
+        ['fps10', 0],
+        ['fps5', 0],
+        ['fps1', 0],
     ]
 
     # print(f"Key: {key}")
@@ -97,14 +93,17 @@ res_df = pd.DataFrame(columns=['key']+list(set([pair[0]
                       for pairs in res_dict.values() for pair in pairs])))
 
 # 遍历字典，将数据填入DataFrame中
+dataframes = []
+
 for k, v in res_dict.items():
     values = {pair[0]: pair[1] for pair in v}
     values['key'] = k
-    res_df = res_df.append(values, ignore_index=True)
+    dataframes.append(pd.DataFrame(values, index=[0]))
+
+res_df = pd.concat(dataframes, ignore_index=True)
 
 # 将DataFrame写入Excel文件
-res_df.to_excel("script/output.xlsx", index=False)
-
+res_df.to_excel(outputfile, index=False)
 
 tttt = {
     'fps1.7096759473913548047.2704.fbl.flv':
