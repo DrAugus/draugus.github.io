@@ -1,4 +1,6 @@
 <template>
+    <!-- <button :on-click="sortOrder()">sort</button> -->
+
     <table>
         <tbody class="table-center">
 
@@ -13,7 +15,9 @@
                     <span v-if="vv.l" class="td-font"> {{ vv.l }}</span>
                     <img v-if="vv.char" :src="composeSrc(vv.char)">
                 </td>
-                <td :style="{ textAlign: 'left' }">{{ (names[i].name) }}</td>
+                <td :style="{ textAlign: 'left', whiteSpace: 'nowrap' }">
+                    {{ modifyChar((names[i].name)) }}
+                </td>
             </tr>
 
         </tbody>
@@ -44,6 +48,12 @@ const characters = WISH.characters
 let versions = []
 let rows = [[]];
 let names = [{ name: '', length: 0 }];
+
+let __rows5;
+let __rows4;
+let __names5;
+let __names4;
+
 let sort = false
 
 const process = () => {
@@ -103,6 +113,12 @@ const process = () => {
         ver,
         len,
     }))
+
+    __rows5 = _rows5;
+    __rows4 = _rows4;
+    __names5 = _names5;
+    __names4 = _names4;
+
     rows = [..._rows5, new Array(wishLength).fill({ l: '' }), ..._rows4, new Array(wishLength).fill({ l: '' })];
     names = [..._names5, { name: '', length: 0 }, ..._names4, { name: '', length: 0 }];
 
@@ -110,10 +126,31 @@ const process = () => {
 
 process();
 
-console.log(wishLength)
-console.log(versions)
-console.log(rows)
-console.log(names)
+
+const sortOrder = () => {
+    process()
+
+    sort = !sort;
+    if (!sort) {
+        rows = [...__rows5, new Array(wishLength).fill({ l: '' }), ...__rows4];
+        names = [...__names5, { name: '', length: 0 }, ...__names4];
+        return;
+    }
+    const _rows5 = [...__rows5].sort((a, b) => b[wishLength - 1].l - a[wishLength - 1].l);
+    const _rows4 = [...__rows4].sort((a, b) => b[wishLength - 1].l - a[wishLength - 1].l);
+    const _names5 = [...__names5].sort((a, b) => b.length - a.length);
+    const _names4 = [...__names4].sort((a, b) => b.length - a.length);
+
+    rows = [..._rows5, new Array(wishLength).fill({ l: '' }), ..._rows4, new Array(wishLength).fill({ l: '' })];
+    names = [..._names5, { name: '', length: 0 }, ..._names4, { name: '', length: 0 }];
+
+
+}
+
+console.log('wishLength', wishLength)
+console.log('versions', versions)
+console.log('rows', rows)
+console.log('names', names)
 
 const filterChar = () => {
     let charMap = new Map();
@@ -153,6 +190,7 @@ export default defineComponent({
             names,
             composeSrc,
             getColor,
+            sortOrder,
         }
     },
 })
