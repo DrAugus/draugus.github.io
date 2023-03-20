@@ -1,8 +1,7 @@
-# [ChatGPT]
+# [ChatGPT](https://openai.com/blog/chatgpt/)
 
 ChatGPT: Optimizing Language Models for Dialogue
 
-[try]
+[try](https://chat.openai.com/auth/login)
 
-[ChatGPT]: https://openai.com/blog/chatgpt/
-[try]: https://chat.openai.com/auth/login
+[jailbreakchat](https://www.jailbreakchat.com)
