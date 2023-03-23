@@ -13,7 +13,7 @@
     "@docsearch/js": "^3.3.3",
     "@nuxt-themes/docus": "1.9.9",
     "@vue-leaflet/vue-leaflet": "^0.9.0",
-    "echarts": "^5.4.1",
+    "echarts": "^5.4.2",
     "leaflet": "^1.9.3",
     "nuxt": "3.3.1",
     "typed.js": "^2.0.132",

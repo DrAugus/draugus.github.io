@@ -5,7 +5,7 @@ specifiers:
   '@docsearch/js': ^3.3.3
   '@nuxt-themes/docus': 1.9.9
   '@vue-leaflet/vue-leaflet': ^0.9.0
-  echarts: ^5.4.1
+  echarts: ^5.4.2
   leaflet: ^1.9.3
   nuxt: 3.3.1
   typed.js: ^2.0.132
@@ -16,11 +16,11 @@ devDependencies:
   '@docsearch/js': 3.3.3
   '@nuxt-themes/docus': 1.9.9_nuxt@3.3.1
   '@vue-leaflet/vue-leaflet': 0.9.0_leaflet@1.9.3
-  echarts: 5.4.1
+  echarts: 5.4.2
   leaflet: 1.9.3
   nuxt: 3.3.1
   typed.js: 2.0.132
-  vue-echarts: 6.5.4_echarts@5.4.1
+  vue-echarts: 6.5.4_echarts@5.4.2
 
 packages:
 
@@ -3271,11 +3271,11 @@ packages:
     dev: true
     optional: true
 
-  /echarts/5.4.1:
-    resolution: {integrity: sha512-9ltS3M2JB0w2EhcYjCdmtrJ+6haZcW6acBolMGIuf01Hql1yrIV01L1aRj7jsaaIULJslEP9Z3vKlEmnJaWJVQ==}
+  /echarts/5.4.2:
+    resolution: {integrity: sha512-2W3vw3oI2tWJdyAz+b8DuWS0nfXtSDqlDmqgin/lfzbkB01cuMEN66KWBlmur3YMp5nEDEEt5s23pllnAzB4EA==}
     dependencies:
       tslib: 2.3.0
-      zrender: 5.4.1
+      zrender: 5.4.3
     dev: true
 
   /ee-first/1.1.1:
@@ -7538,7 +7538,7 @@ packages:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
 
-  /vue-echarts/6.5.4_echarts@5.4.1:
+  /vue-echarts/6.5.4_echarts@5.4.2:
     resolution: {integrity: sha512-pLJTk2hfhauoWdmiZGXByAtcO6bpfnAS+jkJqKimSBSV5I5ckh2nka9duLlIVbTvQOEb2tFa0XiXjACQNcEfpA==}
     requiresBuild: true
     peerDependencies:
@@ -7551,7 +7551,7 @@ packages:
       vue:
         optional: true
     dependencies:
-      echarts: 5.4.1
+      echarts: 5.4.2
       resize-detector: 0.3.0
       vue-demi: 0.13.11
     dev: true
@@ -7769,8 +7769,8 @@ packages:
       readable-stream: 3.6.2
     dev: true
 
-  /zrender/5.4.1:
-    resolution: {integrity: sha512-M4Z05BHWtajY2241EmMPHglDQAJ1UyHQcYsxDNzD9XLSkPDqMq4bB28v9Pb4mvHnVQ0GxyTklZ/69xCFP6RXBA==}
+  /zrender/5.4.3:
+    resolution: {integrity: sha512-DRUM4ZLnoaT0PBVvGBDO9oWIDBKFdAVieNWxWwK0niYzJCMwGchRk21/hsE+RKkIveH3XHCyvXcJDkgLVvfizQ==}
     dependencies:
       tslib: 2.3.0
     dev: true
