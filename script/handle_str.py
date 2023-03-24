@@ -8,7 +8,8 @@ def temp_op(line_str):
     # res = '[' + line_arr[0] + ']: ./china/\n'
     # res = '|[' + line_arr[0] + ']['+ line_arr[0] +']|' + line_arr[1] 
 
-    res = '\'' + src_line_str + '\','
+    # res = '\'' + src_line_str + '\','
+    res = src_line_str + '|||'
 
     res += '\n'
     return res
