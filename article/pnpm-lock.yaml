@@ -3,13 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config': ^0.37.0
   eslint: ^8.36.0
-  vitepress: ^1.0.0-alpha.62
+  vitepress: ^1.0.0-alpha.63
   vue: ^3.2.47
 
 devDependencies:
   '@antfu/eslint-config': 0.37.0_eslint@8.36.0
   eslint: 8.36.0
-  vitepress: 1.0.0-alpha.62
+  vitepress: 1.0.0-alpha.63
   vue: 3.2.47
 
 packages:
@@ -2914,8 +2914,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.62:
-    resolution: {integrity: sha512-99RvczAQANultUykkRQeWb75pD07Fgg+dc7epqctrPmLuK/9FC2DQojC0xFNUMJJMYWCR4liCfHjKMPdOpChIA==}
+  /vitepress/1.0.0-alpha.63:
+    resolution: {integrity: sha512-7QMwjT9888S64SkmJqSmRlP417yniCj4IqawIpzYSQMnlJ5CjBWOTbzXKvmzRZkjOJGTcaYr2C88+1/z8ERG+g==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
