@@ -1,0 +1,23 @@
+{
+  "name": "food",
+  "version": "1.0.0",
+  "description": "augus food record",
+  "main": "index.js",
+  "author": "Augus",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.37.0",
+    "eslint": "^8.36.0",
+    "vitepress": "^1.0.0-alpha.63",
+    "typed.js": "2.0.132",
+    "vue": "^3.2.47"
+  }
+}

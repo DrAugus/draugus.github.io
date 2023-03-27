@@ -16,7 +16,6 @@
     "echarts": "^5.4.2",
     "leaflet": "^1.9.3",
     "nuxt": "3.3.2",
-    "typed.js": "^2.0.132",
     "vue-echarts": "^6.5.4"
   },
   "pnpm": {

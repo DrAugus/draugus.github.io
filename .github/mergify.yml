@@ -21,6 +21,7 @@ pull_request_rules:
             - check-failure~=^deploy-art
             - check-failure~=^deploy-article
             - check-failure~=^deploy-code
+            - check-failure~=^deploy-food
             - check-failure~=^deploy-notes
             - check-failure~=^deploy-trip
     actions:
@@ -36,6 +37,7 @@ pull_request_rules:
             - check-failure~=^deploy-art
             - check-failure~=^deploy-article
             - check-failure~=^deploy-code
+            - check-failure~=^deploy-food
             - check-failure~=^deploy-notes
             - check-failure~=^deploy-trip
     actions:
@@ -52,6 +54,7 @@ pull_request_rules:
             - check-failure~=^deploy-art
             - check-failure~=^deploy-article
             - check-failure~=^deploy-code
+            - check-failure~=^deploy-food
             - check-failure~=^deploy-notes
             - check-failure~=^deploy-trip
     actions:

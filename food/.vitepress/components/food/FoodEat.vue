@@ -1,5 +1,4 @@
 <template>
-
   <h2>commend cafeteria</h2>
 
   <ul>
@@ -16,17 +15,13 @@
     </template>
 
   </Card>
-
-
-
 </template>
 
 <script>
 
-import foodInfo from "~/assets/json/food.json";
-import { filterObject } from "../utils"
+import foodInfo from "../../data/food/eat.json";
 
-const takeaway = foodInfo.外卖
+const takeaway = foodInfo.main_meal
 // console.log(takeaway)
 
 let allTag = []
@@ -36,6 +31,10 @@ Object.values(takeaway).forEach((v) => {
 });
 allTag = allTag.filter(Boolean)
 // console.log(allTag)
+
+const filterObject = (obj, callback) =>
+  Object.fromEntries(Object.entries(obj)
+    .filter(([key, val]) => callback(val, key)));
 
 export default {
   name: "Food-Random",
@@ -69,6 +68,4 @@ export default {
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

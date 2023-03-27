@@ -1,5 +1,4 @@
 <template>
-
   <h2>吃什么选一个吧</h2>
 
   <span ref="choiceFromAll"></span>
@@ -7,13 +6,12 @@
   <h2>具体吃什么</h2>
 
   <span ref="choiceFromDetails"></span>
-
 </template>
 
 <script>
 
 import Typed from "typed.js";
-import foodInfo from "~/assets/json/food.json";
+import foodInfo from "../../data/food/eat.json";
 
 export default {
   name: "Food-Random",
@@ -28,21 +26,31 @@ export default {
     get() {
       let all = [];
       let details = [];
-      let allType = foodInfo.外卖.分类;
+      let allType = foodInfo;
       for (let objMainType in allType) {
-        // 大类别
-        all.push(objMainType);
-        if (allType[objMainType].constructor === Object) {
-          for (let objSubType in allType[objMainType]) {
+        // // 大类别
+        // all.push(objMainType);
+        let subObj = allType[objMainType]
+        if (subObj.constructor === Object) {
+          for (let objSubType in subObj) {
             // 小类别
             all.push(objSubType);
+            if (objSubType.constructor === Object) {
+              details = details.concat(objSubType.good)
+            }
+            else {
+              details = details.concat(objSubType)
+            }
+
+
             // 小类别里的详细推荐
-            details = details.concat(allType[objMainType][objSubType]);
+            // details = details.concat(allType[objMainType][objSubType]);
           }
         } else {
-          // 没有小类别 直接是 详细的美食推荐
-          details = details.concat(allType[objMainType]);
+          // snack
+          details = details.concat(allType.snacks);
         }
+
       }
       return {
         all,
@@ -70,6 +78,4 @@ export default {
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
