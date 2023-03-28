@@ -27,9 +27,9 @@ const getEventWish = (obj, arr) => {
     // console.log(lenWish)
     for (let i = 0; i < lenWish; ++i) {
         if (i > 5) break;
-        let title = '限定祈愿 ' + modifyChar(obj.wish5star[i])
+        let title = obj.name[i] + ' ' + modifyChar(obj.wish5star[i])
         let body = [
-            obj.ver[i] + ' ' + obj.name[i],
+            obj.ver[i] + ' ',
             modify4char(obj.wish4star[i]),
             obj.date[i]
         ]

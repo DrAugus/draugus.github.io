@@ -1,25 +1,15 @@
 <template>
-    <div class="VPFeatures VPHomeFeatures">
-        <div class="container">
-            <div class="items">
-                <!-- v 0 head v 1 body -->
-                <span class="VPLink VPFeature" v-for="(v, i) in msg">
-                    <article class="box">
-                        <h2 class="title">{{ v[0] }}</h2>
-                        <p class="details" v-for="(vv, ii) in v[1]">{{ vv }}</p>
-
-                    </article>
-                </span>
-            </div>
-        </div>
-    </div>
+    <VPHomeFeatures :features="info"></VPHomeFeatures>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { VPHomeFeatures } from 'vitepress/theme'
 
-export default defineComponent({
+export default {
     name: "HomeFeature",
+    components: {
+        VPHomeFeatures,
+    },
     props: {
         msg: {
             type: Array,
@@ -30,7 +20,34 @@ export default defineComponent({
     data() {
         return {
             // info: this.msg,
+            info: [],
         }
     },
-})
+    methods: {
+        getMsg() {
+            let dynamicFeatures = []
+            for (let v of this.msg) {
+
+                let subObj = {
+                    title: '',
+                    details: ''
+                }
+                subObj.title = v[0]
+
+
+                for (let vv of v[1]) {
+                    subObj.details += vv + '\n'
+                }
+
+                // subObj.details = v[1]
+                dynamicFeatures.push(subObj)
+            }
+            console.log(dynamicFeatures)
+            this.info = dynamicFeatures
+        }
+    },
+    mounted() {
+        this.getMsg();
+    },
+}
 </script> 
