@@ -22,7 +22,7 @@ jobs:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
         node: [16]
-        deploy-dir: [game/src/.vuepress/dist]
+        deploy-dir: [game/.vitepress/dist]
         deploy-user: [augusmeow]
         deploy-repo: [game]
 
@@ -68,7 +68,7 @@ jobs:
       # @see https://github.com/orgs/github-community/discussions/19794
       # - name: Add nojekyll
       #   run: |
-      #     cd src/.vuepress/dist
+      #     cd .vitepress/dist
       #     touch .nojekyll
 
       # 查看 workflow 的文档来获取更多信息
@@ -85,7 +85,7 @@ jobs:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
 
       - name: Change config.ts
-        run: mv ./src/.vuepress/config.ts.example ./src/.vuepress/config.ts
+        run: mv ./.vitepress/config.ts.example ./.vitepress/config.ts
 
       - name: Build VuePress site again
         env:

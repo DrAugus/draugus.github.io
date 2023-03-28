@@ -1,10 +1,8 @@
-.idea
+.idea/
+.vscode/
+
 node_modules/
-src/.vuepress/.cache/
-src/.vuepress/.temp/
-src/.vuepress/dist/
-.vscode
-.DS_Store
-__pycache__/
-.augus_output
-test
+.vitepress/cache/
+.vitepress/.cache/
+.vitepress/.temp/
+.vitepress/dist/

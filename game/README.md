@@ -1,5 +1,7 @@
 # game
 
+彻底弃用 vuepress 改用 vitepress
+
 使用 vuepress
 
 真的心累

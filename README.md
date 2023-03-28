@@ -12,6 +12,7 @@
 | art | [online][site3-1] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
 | article | [online][site4-1] | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
 | trip | [online][site5-1] | [trip](./trip/) | [nuxt docus][docus] [vue3][vue] |
+| food | [online][site6-1] | [food](./food/) | [vitepress][vitepress] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -19,6 +20,7 @@ too many records, and "code page" doesn't seem to need `components`, so code pag
 
 ## Tips
 
+> vercel canceled, below not applicable.
 about nuxt.config.ts.example([art](./art/nuxt.config.ts.example) | [notes](./notes/nuxt.config.ts.example) | [code](./code/nuxt.config.ts.example))
 > nuxt.config.ts for vercel deploy, while nuxt.config.ts.example for auto deploy by yml
 
@@ -39,7 +41,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 ### Run
 
-6 sites, just run `pnpm i && pnpm dev`
+7 sites, just run `pnpm i && pnpm dev`
 
 - [game](./game/)
 - [art](./art/)
@@ -47,11 +49,12 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 - [code](./code/)
 - [notes](./notes/)
 - [trip](./trip/)
+- [food](./food/)
 
 powered
 
 - [game](./game), powered by [vuepress][vuepress]  
-- [article](./article/), [trip](./trip/), powered by [vitepress][vitepress]  
+- [article](./article/), [food](./food/), powered by [vitepress][vitepress]
 - for others, powered by [nuxt docus][docus]
 
 ## Upgrade
@@ -97,6 +100,7 @@ You don't have to think about them. Just give them to the robot.
 [site3-1]: https://augusmeow.github.io/art/
 [site4-1]: https://augusmeow.github.io/article/
 [site5-1]: https://augusmeow.github.io/trip/
+[site6-1]: https://augusmeow.github.io/food/
 [netlify]: https://netlify.com/
 [vercel]: https://vercel.com/
 [docus]: https://docus.dev
