@@ -6,13 +6,13 @@
 
 | site | [github pages][new-repo] | source | tech|
 | :--: |:--: |:--: | :--:|
-| main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vuepress][vuepress] [vue3][vue]|
+| main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vitepress][vitepress] [vue3][vue] |
+| article | [online][site4-1] | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
+| food | [online][site6-1] | [food](./food/) | [vitepress][vitepress] [vue3][vue] |
 | variety of notes | [online][site1-1] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
 | art | [online][site3-1] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
-| article | [online][site4-1] | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
 | trip | [online][site5-1] | [trip](./trip/) | [nuxt docus][docus] [vue3][vue] |
-| food | [online][site6-1] | [food](./food/) | [vitepress][vitepress] [vue3][vue] |
 
 > notes/code/art site are same, why?
 
@@ -53,32 +53,10 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 powered
 
-- [game](./game), powered by [vuepress][vuepress]  
-- [article](./article/), [food](./food/), powered by [vitepress][vitepress]
+- [game](./game), [article](./article/), [food](./food/), powered by [vitepress][vitepress]
 - for others, powered by [nuxt docus][docus]
 
 ## Upgrade
-
-### [game](./game), as vuepress
-
-make sure all vuepress && plugins are up to date.
-
-1. vuepress
-
-    ```shell
-    # with pnpm need add 
-    pnpm add -D vue @vuepress/client@next @vuepress/utils@next
-    # 
-    pnpm add vuepress@next && pnpm install && pnpm upgrade
-    ```
-
-2. plugins
-
-    ```shell
-    pnpm add vuepress-plugin-clipboard@next @vuepress/client@next @vuepress/plugin-docsearch@next @vuepress/plugin-google-analytics@next && pnpm install && pnpm upgrade
-    ```
-
-### others
 
 You don't have to think about them. Just give them to the robot.
 
@@ -88,9 +66,7 @@ You don't have to think about them. Just give them to the robot.
 
 ## Reference
 
-- [Snap.Genshin.Docs](https://github.com/DGP-Studio/Snap.Genshin.Docs)
-- [VuePress](https://vuepress.vuejs.org/guide/deploy.html#github-pages)
-- [vuepress deploy: step by step guide](https://github.com/marketplace/actions/vuepress-deploy#step-by-step-guide)
+- [vitepress][vitepress]
 
 [pilot]:https://augusmeow.github.io/
 [site0-1]: https://draugus.github.io/
@@ -105,6 +81,5 @@ You don't have to think about them. Just give them to the robot.
 [vercel]: https://vercel.com/
 [docus]: https://docus.dev
 [vue]: https://vuejs.org
-[vuepress]: https://v2.vuepress.vuejs.org
 [vitepress]: https://vitepress.vuejs.org/
 [new-repo]: https://github.com/augusmeow/
