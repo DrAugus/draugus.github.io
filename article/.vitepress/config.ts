@@ -7,7 +7,7 @@ export default defineConfig({
     description: 'Article',
     base: "/article/",
     lastUpdated: true,
-    cleanUrls: 'without-subfolders',
+    cleanUrls: true,
     head: [
         ['link', {
             rel: 'icon',

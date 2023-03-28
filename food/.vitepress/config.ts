@@ -8,7 +8,7 @@ export default defineConfig({
     description: 'Food',
     base: "/food/",
     lastUpdated: true,
-    cleanUrls: 'without-subfolders',
+    cleanUrls: true,
     head: [
         ['link', {
             rel: 'icon',
