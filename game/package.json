@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@algolia/client-search": "4.16.0",
-    "@antfu/eslint-config": "^0.37.0",
+    "@antfu/eslint-config": "^0.38.0",
     "@types/leaflet": "1.9.3",
     "@vue-leaflet/vue-leaflet": "0.9.0",
     "dayjs": "1.11.7",
@@ -26,7 +26,7 @@
     "leaflet": "1.9.3",
     "sass": "^1.60.0",
     "typed.js": "2.0.132",
-    "vitepress": "^1.0.0-alpha.63",
+    "vitepress": "^1.0.0-alpha.64",
     "vue": "^3.2.47"
   }
 }
