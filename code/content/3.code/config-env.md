@@ -3,7 +3,7 @@ icon: vscode-icons:file-type-dependencies
 ---
 # 配环境
 
-## Ubuntu
+## LINUX
 
 ```shell
 sudo apt install git cmake python3 python3-pip
@@ -13,22 +13,21 @@ sudo apt install git cmake python3 python3-pip
 
 ### github.com slowly
 
-通过 [ipaddress] 来获得`github.com`、`github.global.ssl.fastly.net`、`codeload.github.com`这三个域名的服务器公网IP地址
+通过 [ipaddress][ipaddress] 来获得`github.com`、`github.global.ssl.fastly.net`、`codeload.github.com`这三个域名的服务器公网IP地址
 
 `vim /etc/hosts`
 
 添加如下内容
-```
+
+```txt
 140.82.114.4    github.com
 199.232.5.194   github.global.ssl.fastly.net
 ```
 
-
-
-## INSTALL
+## INSTALL APP
 
 | APP | MAC | WIN |
-| :---: | :---: | :---: | 
+| :---: | :---: | :---: |
 | [GitHub Desktop] | [link][GitHub Desktop macos] | [link][GitHub Desktop win] |
 | [Git] | [link][Git mac] | [link][Git win] |
 | [VS Code] |||
@@ -36,9 +35,6 @@ sudo apt install git cmake python3 python3-pip
 | [Git LFS] |||
 | [cmake] |||
 | Clash | [link][Clash mac] | [link][Clash win] |
-
-
-
 
 [ipaddress]: https://www.ipaddress.com/
 [GitHub Desktop]: https://desktop.github.com/

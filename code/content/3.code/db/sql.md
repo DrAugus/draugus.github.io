@@ -1,7 +1,4 @@
----
-title: SQL
-icon: vscode-icons:file-type-plsql
----
+# SQL
 
 <h3><a href = "https://www.runoob.com/sql/sql-insert-into-select.html" title="more info" target="_blank">SQL INSERT INTO SELECT 语法</a></h3>
 
