@@ -26,32 +26,21 @@ export default {
     get() {
       let all = [];
       let details = [];
-      let allType = foodInfo;
-      for (let objMainType in allType) {
-        // // 大类别
-        // all.push(objMainType);
-        let subObj = allType[objMainType]
-        if (subObj.constructor === Object) {
-          for (let objSubType in subObj) {
-            // 小类别
-            all.push(objSubType);
-            if (objSubType.constructor === Object) {
-              details = details.concat(objSubType.good)
-            }
-            else {
-              details = details.concat(objSubType)
-            }
+      const allType = foodInfo.main_meal;
 
+      let allTag = []
+      Object.values(allType).forEach((v) => {
+        let splitTag = v.tag.split(',')
+        allTag = [...allTag, ...splitTag]
+      });
+      allTag = allTag.filter(Boolean)
+      allTag = [...new Set(allTag)];
+      // console.log(allTag)
 
-            // 小类别里的详细推荐
-            // details = details.concat(allType[objMainType][objSubType]);
-          }
-        } else {
-          // snack
-          details = details.concat(allType.snacks);
-        }
+      all = allTag;
 
-      }
+      details = Object.keys(allType);
+      // console.log(details)
       return {
         all,
         details
@@ -62,7 +51,7 @@ export default {
     const typed = new Typed(this.$refs.choiceFromAll, {
       strings: this.get().all,
       startDelay: 300,
-      typeSpeed: 150,
+      typeSpeed: 200,
       loop: true,
       backSpeed: 50
     });
