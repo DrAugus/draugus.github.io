@@ -1,5 +1,5 @@
 <template>
-  <VPHomeHero name="祈愿时间轴" text="全部祈愿信息" :actions="homeActions" :tagline="homeTagline" :style="homeImgStyle" />
+  <VPHomeHero name="祈愿时间轴" text="全部祈愿信息" :actions="homeActions" :tagline="homeTagline" :style="getImgStyle()" />
 
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
@@ -43,7 +43,7 @@
               <div class="event-img">
                 <img v-bind:src="'/image/genshin/wish/' +
                   value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                  ''" alt="">
+                  ''" @error="replaceImg" alt="">
               </div>
               <span class="left-align timeline-character-text sticky text-shadow-weapon ">
                 「神铸赋形」活动祈愿
@@ -73,7 +73,7 @@
               <div class="event-img responsive-img lazy">
                 <img v-bind:src="'/image/genshin/wish/' +
                   value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                  ''" alt="">
+                  ''" @error="replaceImg" alt="">
               </div>
               <span class="left-align timeline-character-text sticky"
                 :class="'ele-text-shadow-' + ElementString[CHARACTER[value.wish5star].ele]">
@@ -192,13 +192,7 @@ for (let v of current.name) {
 }
 homeTagline = homeTagline.slice(3)
 
-// wish src
-let homeImg = current.src
-// replace char src
-homeImg = []
-for (let v of current.wish5star) {
-  homeImg.push('/image/genshin/characters/full/' + v + '.png')
-}
+
 
 export default {
   name: "GenshinTimeline",
@@ -219,7 +213,6 @@ export default {
       ElementString,
       homeActions,
       homeTagline: homeTagline,
-      homeImgStyle: {},
     };
   },
   components: {
@@ -232,21 +225,6 @@ export default {
     }, 1000);
 
     this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
-
-
-
-    let objImg = { cnt: 0, src: '' }
-    objImg.cnt = homeImg.length
-    if (homeImg.length == 1) objImg.src = homeImg[0]
-    if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
-    let _homeImgStyle = {
-      backgroundImage: objImg.src,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'right -15% bottom 85%',
-    }
-    this.homeImgStyle = _homeImgStyle
-
-
   },
   methods: {
     setCurrentPos() {
@@ -258,6 +236,28 @@ export default {
         .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1
       if (res) return 1
       return -1
+    },
+
+    getImgStyle() {
+      // wish src
+      let homeImg = current.src
+      // replace char src
+      homeImg = []
+      for (let v of current.wish5star) {
+        homeImg.push('/image/genshin/characters/full/' + v + '.png')
+      }
+      let objImg = { cnt: 0, src: '' }
+      objImg.cnt = homeImg.length
+      if (homeImg.length == 1) objImg.src = homeImg[0]
+      if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
+      return {
+        backgroundImage: objImg.src,
+        backgroundRepeat: 'no-repeat,no-repeat',
+        backgroundPosition: 'left 3%, right 3%',
+      }
+    },
+    replaceImg(event) {
+      event.target.src = '/image/genshin/wish/_1.jpg'
     },
   },
   beforeDestroy() {

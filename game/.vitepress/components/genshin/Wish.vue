@@ -1,13 +1,19 @@
 <template>
-
   <div v-if="current.able">
 
     <h2>当前祈愿</h2>
+
+    <h3 :style="getImgStyle()">
+      <span v-for="(v, i) in current.name">
+        {{ v + modifyChar(current.wish5star[i]) }}
+      </span>
+    </h3>
+
     <h3>{{ end }} 后结束</h3>
     <blockquote>祈愿周期：{{ current.date[0] }}</blockquote>
 
     <div v-for="(item, index) in current.src">
-      <img :src="item">
+      <img :src="item" @error="replaceImg">
     </div>
 
   </div>
@@ -20,22 +26,25 @@
     <h2>未来祈愿</h2>
 
     <h3>{{ begin }} 后开始</h3>
-    <blockquote>祈愿周期：{{ future.date[0] }}</blockquote>
 
-    <div v-for="(item, index) in future.src">
-      <img :src="item">
-
-    </div>
+    <ul>
+      <li v-for="(item, index) in future.wish5star">
+        <span class="f-w-600"> {{ modifyChar(item) }} </span>
+        : {{ future.date[index] }}
+        <span v-for="(vv, ii) in future.wish4star[index]">
+          {{ modifyChar(vv) }}
+        </span>
+      </li>
+    </ul>
 
   </div>
   <div v-else>
     <h2>未来祈愿，等待更新</h2>
   </div>
-
 </template>
 
 <script>
-
+import { modifyChar } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
 const findDiff = (arr) => {
@@ -64,9 +73,32 @@ export default {
       current,
       begin: new Date(),
       end: new Date(),
+      modifyChar,
     };
   },
-  methods: {},
+  methods: {
+    replaceImg(event) {
+      event.target.src = '/image/genshin/wish/_1.jpg'
+    },
+    getImgStyle() {
+      let homeImg = []
+      for (let v of current.wish5star) {
+        homeImg.push('/image/genshin/characters/full/' + v + '.png')
+      }
+      let objImg = { cnt: 0, src: '' }
+      objImg.cnt = homeImg.length
+      if (homeImg.length == 1) objImg.src = homeImg[0]
+      if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
+      return {
+        backgroundImage: objImg.src,
+        backgroundSize: 'contain, contain',
+        backgroundRepeat: 'no-repeat, no-repeat',
+        backgroundPosition: 'left, right',
+        height: '300px',
+        width: '100%',
+      }
+    },
+  },
   mounted() {
     let _this = this;
     this.timer1 = setInterval(() => {
@@ -87,5 +119,20 @@ export default {
 </script>
 
 <style scoped>
+.f-w-600 {
+  font-weight: 600;
+}
 
+.image-wrapper {
+  overflow: auto;
+  /* 解决浮动元素导致父元素高度塌陷的问题 */
+}
+
+.image-wrapper img {
+  float: left;
+  width: 50%;
+  /* 每张图片宽度为容器的一半 */
+  height: auto;
+  /* 高度自适应 */
+}
 </style>

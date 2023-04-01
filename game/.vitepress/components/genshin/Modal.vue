@@ -16,15 +16,19 @@ export default {
     return {
       showModal: false
     };
-  }
+  },
+  methods: {
+    replaceImg(event) {
+      event.target.src = '/image/genshin/characters/paimon_faq.png'
+    },
+  },
 };
 </script>
 
 <template>
-
   <div class="character" id="show-modal" @click="showModal = true">
     <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star'">
-      <img :src="'/image/genshin/characters/' + info.id + '.png'">
+      <img :src="'/image/genshin/characters/' + info.id + '.png'" @error="replaceImg">
     </div>
     <div class="character-ele">
       <img :src="'/image/genshin/elements/' + info.ele + '.png'" alt="{{1}}">

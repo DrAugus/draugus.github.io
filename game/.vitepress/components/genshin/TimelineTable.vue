@@ -20,7 +20,7 @@
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
       <td>
         <img v-bind:src="'/image/genshin/wish/' +
-          replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" alt="">
+          replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" @error="replaceImg" alt="">
       </td>
       <td>{{ CHARACTER[v.wish5star].name }} [{{ v.image }}]</td>
 
@@ -58,6 +58,10 @@ export default {
       this.char = this.char.sort(
         (a, b) => dayjs(a.start).diff(dayjs(b.start), "day", true)
       )
+    },
+
+    replaceImg(event) {
+      event.target.src = '/image/genshin/wish/_1.jpg'
     },
   },
   async mounted() {

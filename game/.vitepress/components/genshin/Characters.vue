@@ -1,19 +1,18 @@
 <template>
-
   <p> 稀有分类 <a @click="all">(全)</a></p>
-  
+
   <span v-for="(v, i) in star">
     <a @click="filterStar(v)">{{ v + "🌟" }}</a>
   </span>
 
   <p> 国家分类 <a @click="all">(全)</a></p>
-  
+
   <span v-for="(v, k) in city">
     <a @click="filterCity(k)">{{ v + " " }}</a>
   </span>
 
   <p> 元素分类 <a @click="all">(全)</a></p>
-  
+
   <div class="genshin-element">
     <div v-for="(v, k) in elementStr">
       <a @click="filterEle(k)">
@@ -23,7 +22,7 @@
   </div>
 
   <p> 武器分类 <a @click="all">(全)</a></p>
-  
+
   <span v-for="(v, k) in weapon">
     <a @click="filterWeapon(k)">{{ v + " " }}</a>
   </span>
@@ -32,7 +31,7 @@
   <p> 当前共计收录 {{ lenChar }} 名角色(不包含旅行者)</p>
   <!-- <p> 筛选了 {{ lenFilterChar }} 名角色</p> -->
   <hr>
-  
+
 
   <div class="character-info">
 
@@ -48,7 +47,6 @@
     <!-- </div> -->
 
   </div>
-
 </template>
 
 <script>
