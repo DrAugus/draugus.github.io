@@ -226,8 +226,12 @@ export default defineComponent({
 }
 </style>
 
-<style>
+<style scoped>
 .theme-default-content {
     max-width: unset !important;
+}
+
+.vp-doc th, .vp-doc td{
+    padding: unset;
 }
 </style>
