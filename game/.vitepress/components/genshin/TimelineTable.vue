@@ -1,6 +1,10 @@
 <template>
-
   <p class="center">也许有未实装、未确定的虚假信息</p>
+
+  <a @click="sortLast">最近排序</a> |
+  <a @click="sortEarly">最远排序</a>
+  <br><br>
+
 
   <table>
     <tr>
@@ -10,20 +14,18 @@
       <th>5星(up次数)</th>
 
     </tr>
-    <tr v-for="(v, i) in WISH.characters">
+    <tr v-for="(v, i) in char">
 
       <td>{{ v.version }}</td>
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
       <td>
         <img v-bind:src="'/image/genshin/wish/' +
-        replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" alt="">
+          replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" alt="">
       </td>
       <td>{{ CHARACTER[v.wish5star].name }} [{{ v.image }}]</td>
 
     </tr>
   </table>
-
-
 </template>
 
 <script>
@@ -39,17 +41,31 @@ export default {
   name: "TimelineTable",
   data() {
     return {
-      WISH,
+      char: WISH.characters,
       CHARACTER,
       replaceAndLow,
       dayjs,
       formatDayjs,
     };
   },
+  methods: {
+    sortLast() {
+      this.char = this.char.sort(
+        (a, b) => dayjs(b.start).diff(dayjs(a.start), "day", true)
+      )
+    },
+    sortEarly() {
+      this.char = this.char.sort(
+        (a, b) => dayjs(a.start).diff(dayjs(b.start), "day", true)
+      )
+    },
+  },
+  async mounted() {
 
+    // default
+    this.sortEarly()
+  },
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
