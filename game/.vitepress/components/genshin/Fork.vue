@@ -1,5 +1,4 @@
 <template>
-
   <!-- <h2>最近出场角色 情报</h2> -->
   <!-- todo 点击角色 再展示 曾经出场的 时间段 -->
 
@@ -13,24 +12,15 @@
   </select>
   <p v-if="selectedLastChar" class="choose">
     <strong>{{ selectedLastChar + ' ' }}</strong>
-    <!-- <br>
-    出场时间: <span class="date">{{ allLastChar.get(selectedLastChar).start }}</span>
-    <br>
-    结束时间: <span class="date">{{ allLastChar.get(selectedLastChar).end }}</span>
-    <br>
-    <span class="underline" v-if="allLastChar.get(selectedLastChar).durationStart2Today < 0">
-      {{ -parseInt(allLastChar.get(selectedLastChar).durationStart2Today) }} 天后出场
-    </span> -->
     <span class="underline">
-      <!-- <span v-if="allLastChar.get(selectedLastChar).durationEnd2Today < 0">当期祈愿进行时</span> -->
-      <span>距今 {{ parseInt(allLastChar.get(selectedLastChar).sortTag) }} 天</span>
+      <span>距今 {{ parseInt(resAllPastChar.get(selectedLastChar).sortTag) }} 天</span>
     </span>
     <br>
   </p>
 
   <hr>
 
-  <p v-for="(v, k) in allLastChar" :class="v[1].color">
+  <p v-for="(v, k) in resAllPastChar" :class="v[1].color">
 
     <img class="char-img" :src="v[1].src">
 
@@ -45,7 +35,6 @@
     </span>
     <br>
   </p>
-
 </template>
 
 <script>
@@ -111,9 +100,9 @@ const FORK_DESCRIBE = {
 }
 
 const EVENT = processEvent().events;
-let allChar = EVENT[0]
+const allChar = EVENT[0]
 // console.log("allChar", allChar)
-let allPastChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
+const allPastChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
 const allFutureChar = allChar.filter((v, i, a) => v.durationStart2Today < 0)
 const allCurrentChar = allChar.filter((v, i, a) => v.durationEnd2Today < 0 && v.durationStart2Today > 0)
 
@@ -212,8 +201,8 @@ const isExclusive = (wish5star) => CHARACTER[wish5star].event_exclusive;
 
 const modifyInfo = (ddl, wish5star) => {
   let info = '距今' + parseInt(ddl) + '天'
-  if (findInCurrent(wish5star)) info = '当前祈愿进行时'
-  if (findInFuture(wish5star)) info = '很快就来了'
+  if (findInCurrent(wish5star)) info += ' 当前祈愿进行时'
+  if (findInFuture(wish5star)) info += ' 很快就来了'
   if (!isExclusive(wish5star)) info += ' 但是是常驻'
   return info
 }
@@ -226,9 +215,9 @@ const showColor = (wish5star) => {
   return color
 }
 
-// console.log("allPastChar", allPastChar)
+// console.log("allChar", allChar)
 // all recent char up, done, include future
-const allLastChar = new Map(allChar.map(object => [
+const resAllChar = new Map(allChar.map(object => [
   CHARACTER[object.wish5star].name,
   {
     src: composeSrc(CHARACTER[object.wish5star].id),
@@ -242,10 +231,25 @@ const allLastChar = new Map(allChar.map(object => [
     color: showColor(object.wish5star),
   }
 ]
-
 ));
+// console.log("resAllChar", resAllChar)
 
-// console.log("allLastChar", allLastChar)
+const resAllPastChar = new Map(allPastChar.map(object => [
+  CHARACTER[object.wish5star].name,
+  {
+    src: composeSrc(CHARACTER[object.wish5star].id),
+    times: object.image,
+    start: formatDayjs(object.start),
+    end: formatDayjs(object.end),
+    durationEnd2Today: object.durationEnd2Today,
+    durationStart2Today: object.durationStart2Today,
+    sortTag: object.durationEnd2Today,
+    info: modifyInfo(object.durationEnd2Today, object.wish5star),
+    color: showColor(object.wish5star),
+  }
+]
+));
+// console.log("resAllPastChar", resAllPastChar)
 
 // 
 // every time duration, end to next start, by name 
@@ -258,7 +262,8 @@ export default {
       EVENT,
       FORK_DESCRIBE,
       sliceCharZH,
-      allLastChar,
+      resAllChar,
+      resAllPastChar,
       // displayMap,
       selectedLastChar: "",
       selectedFork: "",
@@ -266,12 +271,18 @@ export default {
   },
   methods: {
     sortLast() {
-      this.allLastChar = new Map(Array.from(this.allLastChar).sort(
+      this.resAllChar = new Map(Array.from(this.resAllChar).sort(
+        (a, b) => a[1].sortTag - b[1].sortTag
+      ))
+      this.resAllPastChar = new Map(Array.from(this.resAllPastChar).sort(
         (a, b) => a[1].sortTag - b[1].sortTag
       ))
     },
     sortEarly() {
-      this.allLastChar = new Map(Array.from(this.allLastChar).sort(
+      this.resAllChar = new Map(Array.from(this.resAllChar).sort(
+        (a, b) => b[1].sortTag - a[1].sortTag
+      ))
+      this.resAllPastChar = new Map(Array.from(this.resAllPastChar).sort(
         (a, b) => b[1].sortTag - a[1].sortTag
       ))
     },
