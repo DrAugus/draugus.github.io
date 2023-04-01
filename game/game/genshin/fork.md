@@ -1,4 +1,6 @@
-
+---
+aside: false
+---
 # 复刻祈愿
 
 <GenshinFork />

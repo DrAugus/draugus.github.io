@@ -1,4 +1,6 @@
-
+---
+aside: false
+---
 # up 次数统计
 
 <GenshinUpTimes />

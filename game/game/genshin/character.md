@@ -1,4 +1,6 @@
-
+---
+aside: false
+---
 # 原神角色
 
 <GenshinCharacters />

@@ -1,4 +1,6 @@
-
+---
+aside: false
+---
 # 近期祈愿
 
 <GenshinWish />
