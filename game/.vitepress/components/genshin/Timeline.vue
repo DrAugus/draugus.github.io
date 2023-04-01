@@ -1,4 +1,6 @@
 <template>
+  <VPHomeHero name="祈愿时间轴" text="全部祈愿信息" :actions="homeActions" :tagline="homeTagline" :style="homeImgStyle" />
+
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
     <p :style="{ textAlign: 'center' }">
@@ -101,6 +103,8 @@
 </template>
 
 <script>
+import { VPHomeHero } from 'vitepress/theme'
+
 import "./genshin.scss";
 import dayjs from "dayjs";
 import { WISH } from "./wish";
@@ -108,6 +112,7 @@ import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
 import { processEvent } from "./eventHandle";
 import { parseDayjs, ElementString } from "./utils";
+import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
 dayjs.locale("zh");
 
@@ -176,6 +181,25 @@ const wishWeaponInfo = () => {
 wishWeaponInfo();
 // console.log(durationWeapon);
 
+const homeActions = [
+  { theme: 'alt', text: '返回上级', link: '/game/genshin/' },
+  { theme: 'brand', text: '当前祈愿', link: '/game/genshin/wish' }
+]
+
+let homeTagline = ''
+for (let v of current.name) {
+  homeTagline += ' + ' + v
+}
+homeTagline = homeTagline.slice(3)
+
+// wish src
+let homeImg = current.src
+// replace char src
+homeImg = []
+for (let v of current.wish5star) {
+  homeImg.push('/image/genshin/characters/full/' + v + '.png')
+}
+
 export default {
   name: "GenshinTimeline",
   data() {
@@ -193,7 +217,13 @@ export default {
       wishWeapons,
       colorMap,
       ElementString,
+      homeActions,
+      homeTagline: homeTagline,
+      homeImgStyle: {},
     };
+  },
+  components: {
+    VPHomeHero
   },
   mounted() {
     let _this = this;
@@ -202,6 +232,21 @@ export default {
     }, 1000);
 
     this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+
+
+
+    let objImg = { cnt: 0, src: '' }
+    objImg.cnt = homeImg.length
+    if (homeImg.length == 1) objImg.src = homeImg[0]
+    if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
+    let _homeImgStyle = {
+      backgroundImage: objImg.src,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'right -15% bottom 85%',
+    }
+    this.homeImgStyle = _homeImgStyle
+
+
   },
   methods: {
     setCurrentPos() {
