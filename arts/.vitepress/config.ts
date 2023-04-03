@@ -4,9 +4,9 @@ import { sidebar } from './sidebar'
 
 export default defineConfig({
     // These are app level configs.
-    title: 'Augus Article',
-    description: 'Article',
-    base: "/article/",
+    title: 'Augus Arts',
+    description: 'Arts',
+    base: "/arts/",
     lastUpdated: true,
     cleanUrls: true,
     head: [
@@ -25,10 +25,10 @@ export default defineConfig({
         nav: navbar,
         sidebar: sidebar,
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/article' },
+            { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/arts' },
         ],
         editLink: {
-            pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/article/:path',
+            pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/arts/:path',
             text: '在 Github 编辑',
         },
         footer: {
