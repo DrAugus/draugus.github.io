@@ -6,12 +6,23 @@ def temp_op(line_str):
     line_str = line_str[1:]
     line_arr = line_str.split('|', 1)
     # res = '[' + line_arr[0] + ']: ./china/\n'
-    # res = '|[' + line_arr[0] + ']['+ line_arr[0] +']|' + line_arr[1] 
+    # res = '|[' + line_arr[0] + ']['+ line_arr[0] +']|' + line_arr[1]
 
     # res = '\'' + src_line_str + '\','
     res = src_line_str + '|||'
 
+    res = composeSide(src_line_str)
+
     res += '\n'
+    return res
+
+
+def composeSide(line_str):
+    text = line_str
+    link_pref = '/language'
+    link_suffix = '/suffix'
+    res = '{ text: \'' + text + '\', link: \'' + \
+        link_pref + link_suffix+'\' },'
     return res
 
 
