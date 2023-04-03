@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { navbar } from './navbar'
 import { sidebar } from './sidebar'
 
 export default defineConfig({
@@ -21,6 +22,7 @@ export default defineConfig({
     ],
     themeConfig: {
         logo: '/logo/logo.jpg',
+        nav: navbar,
         sidebar: sidebar,
         socialLinks: [
             { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/article' },
