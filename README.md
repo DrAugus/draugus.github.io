@@ -7,21 +7,20 @@
 | site | [github pages][new-repo] | source | tech|
 | :--: |:--: |:--: | :--:|
 | main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vitepress][vitepress] [vue3][vue] |
-| article | [online][site4-1] | [article](./article/) | [vitepress][vitepress] [vue3][vue] |
+| arts | [online][site4-1] | [arts](./arts/) | [vitepress][vitepress] [vue3][vue] |
 | food | [online][site6-1] | [food](./food/) | [vitepress][vitepress] [vue3][vue] |
 | variety of notes | [online][site1-1] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
-| art | [online][site3-1] | [art](./art/) | [nuxt docus][docus] [vue3][vue] |
 | trip | [online][site5-1] | [trip](./trip/) | [nuxt docus][docus] [vue3][vue] |
 
-> notes/code/art site are same, why?
+> notes/code site are same, why?
 
-too many records, and "code page" doesn't seem to need `components`, so code page only use markdown file. while "notes page" and "art page" may need `components`. The pages are all separated to make them clearer.
+too many records, and "code page" doesn't seem to need `components`, so code page only use markdown file. while "notes page" may need `components`. The pages are all separated to make them clearer.
 
 ## Tips
 
 > vercel canceled, below not applicable.
-about nuxt.config.ts.example([art](./art/nuxt.config.ts.example) | [notes](./notes/nuxt.config.ts.example) | [code](./code/nuxt.config.ts.example))
+about nuxt.config.ts.example([notes](./notes/nuxt.config.ts.example) | [code](./code/nuxt.config.ts.example))
 > nuxt.config.ts for vercel deploy, while nuxt.config.ts.example for auto deploy by yml
 
 ## Develop
@@ -44,8 +43,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 7 sites, just run `pnpm i && pnpm dev`
 
 - [game](./game/)
-- [art](./art/)
-- [article](./article/)
+- [arts](./arts/)
 - [code](./code/)
 - [notes](./notes/)
 - [trip](./trip/)
@@ -53,7 +51,7 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 
 powered
 
-- [game](./game), [article](./article/), [food](./food/), powered by [vitepress][vitepress]
+- [game](./game), [arts](./arts/), [food](./food/), powered by [vitepress][vitepress]
 - for others, powered by [nuxt docus][docus]
 
 ## Upgrade
@@ -73,8 +71,7 @@ You don't have to think about them. Just give them to the robot.
 [site0-2]: https://augusmeow.github.io/game/
 [site1-1]: https://augusmeow.github.io/notes/
 [site2-1]: https://augusmeow.github.io/code/
-[site3-1]: https://augusmeow.github.io/art/
-[site4-1]: https://augusmeow.github.io/article/
+[site4-1]: https://augusmeow.github.io/arts/
 [site5-1]: https://augusmeow.github.io/trip/
 [site6-1]: https://augusmeow.github.io/food/
 [netlify]: https://netlify.com/
