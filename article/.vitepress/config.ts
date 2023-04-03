@@ -43,5 +43,10 @@ export default defineConfig({
         returnToTopLabel: '返回顶部',
         langMenuLabel: '切换语言',
 
+        algolia: {
+            appId: 'TMOT9B7BHV',
+            apiKey: '8870d1a7427df92c33d2db21368d01d1',
+            indexName: 'augusmeowio'
+        },
     }
 })
