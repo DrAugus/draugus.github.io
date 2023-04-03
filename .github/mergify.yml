@@ -18,8 +18,7 @@ pull_request_rules:
       - not:
           or:
             - check-failure~=^deploy-game
-            - check-failure~=^deploy-art
-            - check-failure~=^deploy-article
+            - check-failure~=^deploy-arts
             - check-failure~=^deploy-code
             - check-failure~=^deploy-food
             - check-failure~=^deploy-notes
@@ -34,8 +33,7 @@ pull_request_rules:
       - not:
           or:
             - check-failure~=^deploy-game
-            - check-failure~=^deploy-art
-            - check-failure~=^deploy-article
+            - check-failure~=^deploy-arts
             - check-failure~=^deploy-code
             - check-failure~=^deploy-food
             - check-failure~=^deploy-notes
@@ -51,8 +49,7 @@ pull_request_rules:
       - not:
           or:
             - check-failure~=^deploy-game
-            - check-failure~=^deploy-art
-            - check-failure~=^deploy-article
+            - check-failure~=^deploy-arts
             - check-failure~=^deploy-code
             - check-failure~=^deploy-food
             - check-failure~=^deploy-notes

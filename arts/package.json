@@ -1,7 +1,7 @@
 {
-  "name": "article",
+  "name": "arts",
   "version": "1.0.0",
-  "description": "augus article record",
+  "description": "augus arts record",
   "main": "index.js",
   "author": "Augus",
   "private": false,
