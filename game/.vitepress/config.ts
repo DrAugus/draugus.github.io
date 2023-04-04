@@ -40,6 +40,7 @@ export default defineConfig({
     sidebarMenuLabel: '菜单',
     returnToTopLabel: '返回顶部',
     langMenuLabel: '切换语言',
+    outlineTitle: '本页内容',
 
     algolia: {
       appId: 'TMOT9B7BHV',
