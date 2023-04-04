@@ -45,5 +45,4 @@
 
 ## 如何初始化const和static数据成员？
 
-通常在类外初始化static数据成员，但是 static const 的整型(ool，char，int，long)可以再类声明中初始化， static
-const的其他类型也必须在类外初始化(包括整型的数组)。
+通常在类外初始化static数据成员，但是 static const 的整型(ool，char，int，long)可以再类声明中初始化， static const的其他类型也必须在类外初始化(包括整型的数组)。

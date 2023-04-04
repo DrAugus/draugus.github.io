@@ -1,9 +1,5 @@
 # 基础知识
 
-const 和 static  
-mysql的事务  
-mysql锁机制是如何实现  
-
 ## main 函数之前之后
 
 在C或C++中，main函数之前会执行一些初始化操作，例如：
