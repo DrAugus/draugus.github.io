@@ -1,9 +1,14 @@
 <template>
   <h2>推荐餐厅</h2>
 
-  <Badge v-for="(v, i) in (allTag)" :text="v" type="info" />
+  <ul>
+    <li>吃什么选一个吧: <span ref="choiceFromAll"></span></li>
+    <li>具体吃什么: <span ref="choiceFromDetails"></span></li>
+  </ul>
 
-
+  <a v-for="(v, i) in (allTag)" @click="filterTag(v)">
+    <Badge :text="v" type="info" />
+  </a>
 
   <div v-for="(v, k, i) in mainMeal">
 
@@ -32,7 +37,7 @@
 </template>
 
 <script>
-
+import Typed from "typed.js";
 import foodInfo from "../../data/food/eat.json";
 
 const mainMeal = foodInfo.main_meal
@@ -53,6 +58,9 @@ const filterObject = (obj, callback) =>
 
 export default {
   name: "Food-Eat",
+  components: {
+    Typed,
+  },
   data() {
     return {
       mainMeal,
@@ -60,14 +68,56 @@ export default {
     };
   },
   methods: {
+    get() {
+      let all = [];
+      let details = [];
+      const allType = mainMeal;
+
+      let allTag = []
+      Object.values(allType).forEach((v) => {
+        let splitTag = v.tag.split(',')
+        allTag = [...allTag, ...splitTag]
+      });
+      allTag = allTag.filter(Boolean)
+      allTag = [...new Set(allTag)];
+      // console.log(allTag)
+
+      all = allTag;
+
+      details = Object.keys(allType);
+      // console.log(details)
+      return {
+        all,
+        details
+      };
+    },
+
     filterTag(tag) {
-      this.mainMeal = filterObject(mainMeal, (v) => v.tag == tag)
+      this.mainMeal = filterObject(mainMeal, (v) => v.tag.indexOf(tag) !== -1)
       // console.log("filterTag", tag, this.mainMeal)
     },
     displayInfo(tag) {
       return tag.split(',')
     },
   },
+
+  async mounted() {
+    const typed = new Typed(this.$refs.choiceFromAll, {
+      strings: this.get().all,
+      startDelay: 300,
+      typeSpeed: 200,
+      loop: true,
+      backSpeed: 50
+    });
+    const typed2 = new Typed(this.$refs.choiceFromDetails, {
+      strings: this.get().details,
+      startDelay: 300,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50
+    });
+  },
+
 };
 
 </script>
