@@ -1,3 +1,7 @@
+---
+aside: false
+---
+
 # 看看想吃什么
 
 <FoodEat></FoodEat>
