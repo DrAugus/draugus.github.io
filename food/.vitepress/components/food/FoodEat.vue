@@ -6,9 +6,21 @@
     <li>具体吃什么: <span ref="choiceFromDetails"></span></li>
   </ul>
 
-  <a v-for="(v, i) in (allTag)" @click="filterTag(v)">
-    <Badge :text="v" type="info" />
-  </a>
+
+  <p>
+    选什么呢<br>
+    <a v-for="(v, i) in (allTag)" @click="filterTag(v)">
+      <Badge :text="v" type="info" />
+    </a>
+  </p>
+
+
+  <p>在哪里吃呢<br>
+    <a v-for="(v, i) in (places)" @click="filterPlace(v)">
+      <Badge :text="v" type="info" />
+    </a>
+  </p>
+
 
   <div v-for="(v, k, i) in mainMeal">
 
@@ -40,6 +52,9 @@
 import Typed from "typed.js";
 import foodInfo from "../../data/food/eat.json";
 
+const cleanRepeat = (arr) => [...new Set(arr.filter(Boolean))]
+
+
 const mainMeal = foodInfo.main_meal
 // console.log(mainMeal)
 
@@ -48,9 +63,15 @@ Object.values(mainMeal).forEach((v) => {
   let splitTag = v.tag.split(',')
   allTag = [...allTag, ...splitTag]
 });
-allTag = allTag.filter(Boolean)
-allTag = [...new Set(allTag)];
+allTag = cleanRepeat(allTag)
 // console.log(allTag)
+
+let places = []
+Object.values(mainMeal).forEach((v) => {
+  let split = v.place.split(',')
+  places = [...places, ...split]
+});
+places = cleanRepeat(places)
 
 const filterObject = (obj, callback) =>
   Object.fromEntries(Object.entries(obj)
@@ -65,6 +86,7 @@ export default {
     return {
       mainMeal,
       allTag,
+      places,
     };
   },
   methods: {
@@ -95,6 +117,9 @@ export default {
     filterTag(tag) {
       this.mainMeal = filterObject(mainMeal, (v) => v.tag.indexOf(tag) !== -1)
       // console.log("filterTag", tag, this.mainMeal)
+    },
+    filterPlace(p) {
+      this.mainMeal = filterObject(mainMeal, (v) => v.place.indexOf(p) !== -1)
     },
     displayInfo(tag) {
       return tag.split(',')
