@@ -2,6 +2,10 @@ import op_file
 
 
 def temp_op(line_str):
+
+    if not len(line_str):
+        return line_str + '\n'
+
     src_line_str = line_str
     line_str = line_str[1:]
     line_arr = line_str.split('|', 1)
@@ -9,9 +13,24 @@ def temp_op(line_str):
     # res = '|[' + line_arr[0] + ']['+ line_arr[0] +']|' + line_arr[1]
 
     # res = '\'' + src_line_str + '\','
-    res = src_line_str + '|||'
+    # res = '|'+src_line_str + '|||||'
 
-    res = composeSide(src_line_str)
+    # res = src_line_str.split('省')[0].split('市')[0]
+
+    # res = composeSide(src_line_str)
+
+    # 北京大学 985:1999年 北京
+
+    uni = src_line_str.split('学')[0] + '学'
+    place = src_line_str.split('年')[1]
+
+    year = src_line_str.split(':')[1].split('年')[0] + '年'
+
+    temp = '"PKU": {"id":"PKU","name":"' + uni + \
+        '", "abbr":"", "en":"", "985":"' + year + \
+        '","place":"' + place + '","tag":"'+'985,211"},'
+
+    res = temp
 
     res += '\n'
     return res

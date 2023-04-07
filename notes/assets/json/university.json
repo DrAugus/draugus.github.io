@@ -1,0 +1,392 @@
+{
+    "PKU": {
+        "id": "PKU",
+        "name": "北京大学",
+        "abbr": "北大",
+        "en": "Peking University",
+        "985": "1999年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "RUC": {
+        "id": "RUC",
+        "name": "中国人民大学",
+        "abbr": "人大",
+        "en": "Renmin University of China",
+        "985": "2003年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "THU": {
+        "id": "THU",
+        "name": "清华大学",
+        "abbr": "清华",
+        "en": "Tsinghua University",
+        "985": "1999年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "BHU": {
+        "id": "BHU",
+        "name": "北京航空航天大学",
+        "abbr": "北航",
+        "en": "Beihang University",
+        "985": "2001年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "BIT": {
+        "id": "BIT",
+        "name": "北京理工大学",
+        "abbr": "北理工",
+        "en": "Beijing Institute Of Technology",
+        "985": "2000年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "CAU": {
+        "id": "CAU",
+        "name": "中国农业大学",
+        "abbr": "中国农大",
+        "en": "China Agricultural University",
+        "985": "2004年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "BNU": {
+        "id": "BNU",
+        "name": "北京师范大学",
+        "abbr": "",
+        "en": "Beijing Normal University",
+        "985": "2002年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "MUC": {
+        "id": "MUC",
+        "name": "中央民族大学",
+        "abbr": "中央民大",
+        "en": "Minzu University of China",
+        "985": "2004年",
+        "place": "北京",
+        "link": "",
+        "tag": "985,211"
+    },
+    "NKU": {
+        "id": "NKU",
+        "name": "南开大学",
+        "abbr": "南开",
+        "en": "Nankai University",
+        "985": "2000年",
+        "place": "天津",
+        "link": "",
+        "tag": "985,211"
+    },
+    "TJU": {
+        "id": "TJU",
+        "name": "天津大学",
+        "abbr": "天大",
+        "en": "Tianjin University",
+        "985": "2000年",
+        "place": "天津",
+        "link": "",
+        "tag": "985,211"
+    },
+    "DUT": {
+        "id": "DUT",
+        "name": "大连理工大学",
+        "abbr": "大工",
+        "en": "Dalian University Of Technology",
+        "985": "2001年",
+        "place": "辽宁",
+        "link": "",
+        "tag": "985,211"
+    },
+    "NEU": {
+        "id": "NEU",
+        "name": "东北大学",
+        "abbr": "",
+        "en": "Northeastern University",
+        "985": "2002年",
+        "place": "辽宁",
+        "link": "",
+        "tag": "985,211"
+    },
+    "JLU": {
+        "id": "JLU",
+        "name": "吉林大学",
+        "abbr": "吉大",
+        "en": "Jilin University",
+        "985": "2001年",
+        "place": "吉林",
+        "link": "",
+        "tag": "985,211"
+    },
+    "HIT": {
+        "id": "HIT",
+        "name": "哈尔滨工业大学",
+        "abbr": "",
+        "en": "Harbin Institute Of Technology",
+        "985": "1999年",
+        "place": "黑龙江",
+        "link": "",
+        "tag": "985,211"
+    },
+    "FDU": {
+        "id": "FDU",
+        "name": "复旦大学",
+        "abbr": "复旦",
+        "en": "Fudan University",
+        "985": "1999年",
+        "place": "上海",
+        "link": "",
+        "tag": "985,211"
+    },
+    "TONGJI": {
+        "id": "TONGJI",
+        "name": "同济大学",
+        "abbr": "同济",
+        "en": "Tongji University",
+        "985": "2002年",
+        "place": "上海",
+        "link": "",
+        "tag": "985,211"
+    },
+    "SJTU": {
+        "id": "SJTU",
+        "name": "上海交通大学",
+        "abbr": "上海交大",
+        "en": "Shanghai Jiao Tong University",
+        "985": "1999年",
+        "place": "上海",
+        "link": "",
+        "tag": "985,211"
+    },
+    "ECNU": {
+        "id": "ECNU",
+        "name": "华东师范大学",
+        "abbr": "",
+        "en": "East China Normal University",
+        "985": "2006年",
+        "place": "上海",
+        "link": "",
+        "tag": "985,211"
+    },
+    "NJU": {
+        "id": "NJU",
+        "name": "南京大学",
+        "abbr": "南大",
+        "en": "Nanjing University",
+        "985": "1999年",
+        "place": "江苏",
+        "link": "",
+        "tag": "985,211"
+    },
+    "SEU": {
+        "id": "SEU",
+        "name": "东南大学",
+        "abbr": "东大",
+        "en": "Southeast University",
+        "985": "2001年",
+        "place": "江苏",
+        "link": "",
+        "tag": "985,211"
+    },
+    "ZJU": {
+        "id": "ZJU",
+        "name": "浙江大学",
+        "abbr": "",
+        "en": "Zhejiang University",
+        "985": "1999年",
+        "place": "浙江",
+        "link": "",
+        "tag": "985,211"
+    },
+    "USTC": {
+        "id": "USTC",
+        "name": "中国科学技术大学",
+        "abbr": "",
+        "en": "University of Science and Technology of China",
+        "985": "1999年",
+        "place": "安徽",
+        "link": "",
+        "tag": "985,211"
+    },
+    "XMU": {
+        "id": "XMU",
+        "name": "厦门大学",
+        "abbr": "厦大",
+        "en": "Xiamen University",
+        "985": "2001年",
+        "place": "福建",
+        "link": "",
+        "tag": "985,211"
+    },
+    "SDU": {
+        "id": "SDU",
+        "name": "山东大学",
+        "abbr": "山大",
+        "en": "Shandong University",
+        "985": "2001年",
+        "place": "山东",
+        "link": "",
+        "tag": "985,211"
+    },
+    "OUC": {
+        "id": "OUC",
+        "name": "中国海洋大学",
+        "abbr": "",
+        "en": "Ocean University of China",
+        "985": "2001年",
+        "place": "山东",
+        "link": "",
+        "tag": "985,211"
+    },
+    "WHU": {
+        "id": "WHU",
+        "name": "武汉大学",
+        "abbr": "武大",
+        "en": "Wuhan University",
+        "985": "2001年",
+        "place": "湖北",
+        "link": "",
+        "tag": "985,211"
+    },
+    "HUST": {
+        "id": "HUST",
+        "name": "华中科技大学",
+        "abbr": "华中大,华科大",
+        "en": "Huazhong University Of Science And Technology",
+        "985": "2001年",
+        "place": "湖北",
+        "link": "",
+        "tag": "985,211"
+    },
+    "HNU": {
+        "id": "HNU",
+        "name": "湖南大学",
+        "abbr": "",
+        "en": "Hunan University",
+        "985": "2001年",
+        "place": "湖南",
+        "link": "",
+        "tag": "985,211"
+    },
+    "CSU": {
+        "id": "CSU",
+        "name": "中南大学",
+        "abbr": "",
+        "en": "Central South University",
+        "985": "2001年",
+        "place": "湖南",
+        "link": "",
+        "tag": "985,211"
+    },
+    "NUDT": {
+        "id": "NUDT",
+        "name": "中国人民解放军国防科技大学",
+        "abbr": "国防科技大学",
+        "en": "National University of Defense Technology",
+        "985": "2006年",
+        "place": "湖南",
+        "link": "",
+        "tag": "985,211"
+    },
+    "SYU": {
+        "id": "SYU",
+        "name": "中山大学",
+        "abbr": "中大",
+        "en": "Sun Yat-sen University",
+        "985": "2001年",
+        "place": "广东",
+        "link": "",
+        "tag": "985,211"
+    },
+    "SCUT": {
+        "id": "SCUT",
+        "name": "华南理工大学",
+        "abbr": "华工",
+        "en": "South China University Of Technology",
+        "985": "2001年",
+        "place": "广东",
+        "link": "",
+        "tag": "985,211"
+    },
+    "SCU": {
+        "id": "SCU",
+        "name": "四川大学",
+        "abbr": "川大",
+        "en": "Sichuan University",
+        "985": "2001年",
+        "place": "四川",
+        "link": "",
+        "tag": "985,211"
+    },
+    "UESTC": {
+        "id": "UESTC",
+        "name": "电子科技大学",
+        "abbr": "电子科大",
+        "en": "University Of Electronic Science And Technology Of China",
+        "985": "2001年",
+        "place": "四川",
+        "link": "",
+        "tag": "985,211"
+    },
+    "CQU": {
+        "id": "CQU",
+        "name": "重庆大学",
+        "abbr": "重大",
+        "en": "Chongqing University",
+        "985": "2001年",
+        "place": "重庆",
+        "link": "",
+        "tag": "985,211"
+    },
+    "XJTU": {
+        "id": "XJTU",
+        "name": "西安交通大学",
+        "abbr": "西安交大",
+        "en": "Xi'an Jiaotong University",
+        "985": "1999年",
+        "place": "陕西",
+        "link": "",
+        "tag": "985,211"
+    },
+    "NWPU": {
+        "id": "NWPU",
+        "name": "西北工业大学",
+        "abbr": "西工大",
+        "en": "Northwestern Polytechnical University",
+        "985": "2002年",
+        "place": "陕西",
+        "link": "",
+        "tag": "985,211"
+    },
+    "NAFU": {
+        "id": "NAFU",
+        "name": "西北农林科技大学",
+        "abbr": "西农,西北农大",
+        "en": "Northwest A&F University",
+        "985": "2004年",
+        "place": "陕西",
+        "link": "",
+        "tag": "985,211"
+    },
+    "LZU": {
+        "id": "LZU",
+        "name": "兰州大学",
+        "abbr": "兰大",
+        "en": "Lanzhou University",
+        "985": "2001年",
+        "place": "甘肃",
+        "link": "",
+        "tag": "985,211"
+    }
+}
