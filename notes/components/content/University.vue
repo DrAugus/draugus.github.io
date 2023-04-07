@@ -7,7 +7,11 @@
         </tr>
         <tr v-for="(item, key, index) in data">
 
-            <td>{{ item.name + '(' + item.id + ')' }} </td>
+            <td>
+                <a :href="item.link">
+                    {{ item.name + '(' + item.id + ')' }}
+                </a>
+            </td>
             <td style="text-align:center;">{{ item.place }}</td>
             <td style="text-align:center;">{{ item.tag }}</td>
 
@@ -68,5 +72,23 @@ caption {
     color: #6c757d;
     text-align: left;
     caption-side: bottom;
+}
+
+a {
+    font-family: var(--typography-font-body);
+    font-weight: var(--prose-a-fontWeight);
+    -webkit-text-decoration: var(--prose-a-textDecoration);
+    text-decoration: var(--prose-a-textDecoration);
+    border-bottom-width: var(--prose-a-border-width);
+    border-bottom-style: var(--prose-a-border-style-static);
+    border-bottom-color: var(--prose-a-border-color-static);
+    padding-bottom: var(--prose-a-border-distance);
+    color: var(--prose-a-color-static);
+}
+
+a:hover {
+    color: var(--prose-a-color-hover);
+    border-color: var(--prose-a-border-color-hover);
+    border-style: var(--prose-a-border-style-hover);
 }
 </style>
