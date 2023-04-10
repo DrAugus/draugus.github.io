@@ -20,9 +20,8 @@ pull_request_rules:
             - check-failure~=^deploy-game
             - check-failure~=^deploy-arts
             - check-failure~=^deploy-code
-            - check-failure~=^deploy-food
+            - check-failure~=^deploy-life
             - check-failure~=^deploy-notes
-            - check-failure~=^deploy-trip
     actions:
       merge:
         method: merge
@@ -35,9 +34,8 @@ pull_request_rules:
             - check-failure~=^deploy-game
             - check-failure~=^deploy-arts
             - check-failure~=^deploy-code
-            - check-failure~=^deploy-food
+            - check-failure~=^deploy-life
             - check-failure~=^deploy-notes
-            - check-failure~=^deploy-trip
     actions:
       merge:
         method: merge
@@ -51,9 +49,8 @@ pull_request_rules:
             - check-failure~=^deploy-game
             - check-failure~=^deploy-arts
             - check-failure~=^deploy-code
-            - check-failure~=^deploy-food
+            - check-failure~=^deploy-life
             - check-failure~=^deploy-notes
-            - check-failure~=^deploy-trip
     actions:
       merge:
         method: merge

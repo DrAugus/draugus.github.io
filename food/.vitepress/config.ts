@@ -4,9 +4,9 @@ import { sidebar } from './sidebar'
 
 export default defineConfig({
     // These are app level configs.
-    title: 'Augus Food',
-    description: 'Food',
-    base: "/food/",
+    title: 'Augus 享乐',
+    description: '吃什么 去哪玩',
+    base: "/life/",
     lastUpdated: true,
     cleanUrls: true,
     head: [
@@ -25,10 +25,10 @@ export default defineConfig({
         nav: navbar,
         sidebar: sidebar,
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/food' },
+            { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/life' },
         ],
         editLink: {
-            pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/food/:path',
+            pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/life/:path',
             text: '在 Github 编辑',
         },
         footer: {
