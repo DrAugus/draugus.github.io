@@ -56,5 +56,5 @@ import dayjs from "dayjs";
 export const parseDayjs = (date: string) =>
   dayjs(date.toString(), "YYYY-MM-DD HH:mm:ss");
 export const formatDayjs = (date: string) =>
-  parseDayjs(date).format("YYYY-MM-DD HH:mm:ss");
+  parseDayjs(date).format("YYYY-MM-DD HH:mm");
 
