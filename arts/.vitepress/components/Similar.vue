@@ -1,12 +1,14 @@
 <template>
     <!-- <p>{{ odJson }}</p> -->
 
-    <List v-for="(v, i) in similarWords">
-        <span v-for="(vv, ii) in v">
-            <a href="">{{ vv }}</a>
-            {{ ' ' }}
-        </span>
-    </List>
+    <ul>
+        <li v-for="(v, i) in similarWords">
+            <span v-for="(vv, ii) in v">
+                <a href="">{{ vv }}</a>
+                {{ ' ' }}
+            </span>
+        </li>
+    </ul>
 </template>
 
 <script>
@@ -82,26 +84,26 @@ export default defineComponent({
         }
     },
     // https://nuxt.com/docs/getting-started/data-fetching#using-async-setup
-    async setup() {
-        const [{ data: odJson }, { data: repos }] = await Promise.all([
-            useFetch('https://od-api.oxforddictionaries.com/api/v2/translations/en/zh/household', {
-                query: {
-                    strictMatch: 'false'
-                },
-                headers: {
-                    Accept: "application/json",
-                    app_id: process.env.OXFORD_APP_ID || "",
-                    app_key: process.env.OXFORD_APP_KEY || "",
-                },
+    // async setup() {
+    //     const [{ data: odJson }, { data: repos }] = await Promise.all([
+    //         useFetch('https://od-api.oxforddictionaries.com/api/v2/translations/en/zh/household', {
+    //             query: {
+    //                 strictMatch: 'false'
+    //             },
+    //             headers: {
+    //                 Accept: "application/json",
+    //                 app_id: process.env.OXFORD_APP_ID || "",
+    //                 app_key: process.env.OXFORD_APP_KEY || "",
+    //             },
 
-            }),
-            useFetch(`https://api.github.com/orgs/nuxt/repos`)
-        ])
-        return {
-            odJson,
-            repos
-        }
-    },
+    //         }),
+    //         useFetch(`https://api.github.com/orgs/nuxt/repos`)
+    //     ])
+    //     return {
+    //         odJson,
+    //         repos
+    //     }
+    // },
 })
 
 </script>
