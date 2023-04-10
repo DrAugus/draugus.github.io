@@ -15,10 +15,10 @@ hero:
       link: /eat/
     - theme: alt
       text: 国内游
-      link: /china/
+      link: /trip/china/
     - theme: alt
       text: 出国游
-      link: /abroad/
+      link: /trip/abroad/
 # Could add features description here
 features:
   - title: 吃点饭吧
