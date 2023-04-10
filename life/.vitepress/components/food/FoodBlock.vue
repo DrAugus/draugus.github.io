@@ -43,7 +43,6 @@ export default {
   },
   data() {
     return {
-      title: "block",
       blockFood: foodInfo,
     };
   },
