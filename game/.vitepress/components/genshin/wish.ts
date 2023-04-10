@@ -897,7 +897,7 @@ export const WISH = {
       start: "2023-04-12 11:00:00 +0800",
       end: "2023-05-02 17:59:59 +0800",
       wish5star: "nahida",
-      wish4star: [],
+      wish4star: ["Kuki Shinobu", "Dori", "Layla"],
       version: "3.6",
       wishName: "「月草的赐慧」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -909,7 +909,7 @@ export const WISH = {
       start: "2023-04-12 11:00:00 +0800",
       end: "2023-05-02 17:59:59 +0800",
       wish5star: "nilou",
-      wish4star: [],
+      wish4star: ["Kuki Shinobu", "Dori", "Layla"],
       version: "3.6",
       wishName: "「翩舞歈莲」",
       wish_2: true,
