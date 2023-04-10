@@ -5,15 +5,17 @@ current_depth = 0
 all_filename = []
 output_filename = '.augus_output'
 exclude_path = [
+    output_filename,
     '.github', '.vscode', '.gitignore',
     'LICENSE', '.git',
     'node_modules',
     'dist', 'cache',
     '.vitepress', '.nuxt', '.output',
-    output_filename
+    # 'china','abroad'
 ]
 root_dir = os.getcwd()
-sub_dir = "life/trip/china"
+sub_dir = "life/trip/abroad"
+link_pre = "/trip/abroad"
 
 
 def list_all_files(dirs):
@@ -44,7 +46,7 @@ def format_line(filename):
         first_line = first_line.rstrip('\n')
 
     pre = 'url_life'
-    res = f"{{ text: '{first_line}', link: '{filename}' }},"
+    res = f"{{ text: '{first_line}', link: '{link_pre}{filename}' }},"
     # res = pre + ' + "' + s + '",'
     res += '\n'
     return res
