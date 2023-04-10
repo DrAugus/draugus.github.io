@@ -1,16 +1,10 @@
 export const sidebar = {
     '/article/': [
-        {
-            text: '文章',
-            collapsible: true,
-            items: [
-                { text: '猫', link: '/article/猫' },
-                { text: '庄子·秋水', link: '/article/庄子·秋水' },
-                { text: '道德经', link: '/article/道德经' },
-                { text: '逍遥游·北冥有鱼', link: '/article/逍遥游·北冥有鱼' },
-                { text: '聪明人和傻子和奴才', link: '/article/聪明人和傻子和奴才' },
-            ],
-        }
+        { text: '猫', link: '/article/猫' },
+        { text: '庄子·秋水', link: '/article/庄子·秋水' },
+        { text: '道德经', link: '/article/道德经' },
+        { text: '逍遥游·北冥有鱼', link: '/article/逍遥游·北冥有鱼' },
+        { text: '聪明人和傻子和奴才', link: '/article/聪明人和傻子和奴才' },
     ],
     '/economics/': [
         { text: '微观经济学', link: '/economics/microeconomics' },
@@ -19,7 +13,7 @@ export const sidebar = {
         { text: '中国历史', link: '/history/china' },
         {
             text: '皇室',
-            collapsible: true,
+            collapsed: true,
             items: [
                 { text: '温莎', link: '/history/royal/windsor' },
             ],
