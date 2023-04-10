@@ -6,7 +6,7 @@
 
 表格查看
 
-::details
+:::details
 
 >深度玩就是或有本地人带玩，体会本地人的生活；或有探索地很多
 
@@ -42,33 +42,31 @@
 |[浙江·绍兴][浙江·绍兴]|-|1|1|
 |||||
 
-::
-
-[北京]: ./china/beijing
-[重庆]: ./china/chongqing
-[福建·福州]: ./china/fujian/fuzhou
-[福建·厦门]: ./china/fujian/xiamen
-[广东·广州]: ./china/guangdong/guangzhou
-[广东·深圳]: ./china/guangdong/shenzhen
-[广西·柳州]: ./china/guangxi/liuzhou
-[广西·南宁]: ./china/guangxi/liuzhou
-[河南·开封]: ./china/henan/kaifeng
-[河南·洛阳]: ./china/henan/luoyang
-[河南·郑州]: ./china/henan/zhengzhou
-[香港]: ./china/hongkong
-[湖北·武汉]: ./china/hubei/wuhan
-[湖南·长沙]: ./china/hunan/changsha
-[江苏·南京]: ./china/jiangsu/nanjing
-[江苏·苏州]: ./china/jiangsu/suzhou
-[江苏·无锡]: ./china/jiangsu/wuxi
-[江苏·扬州]: ./china/jiangsu/yangzhou
-[澳门]: ./china/macao
-[上海]: ./china/shanghai
-[四川·成都]: ./china/sichuan/chengdu
-[天津]: ./china/tianjin
-[云南·大理]: ./china/yunnan/dali
-[云南·昆明]: ./china/yunnan/kunming
-[云南·丽江]: ./china/yunnan/lijiang
-[云南·西双版纳]: ./china/yunnan/xishuangbanna
-[浙江·杭州]: ./china/zhejiang/hangzhou
-[浙江·绍兴]: ./china/zhejiang/shaoxing
+[北京]: ./beijing
+[重庆]: ./chongqing
+[福建·福州]: ./fujian/fuzhou
+[福建·厦门]: ./fujian/xiamen
+[广东·广州]: ./guangdong/guangzhou
+[广东·深圳]: ./guangdong/shenzhen
+[广西·柳州]: ./guangxi/liuzhou
+[广西·南宁]: ./guangxi/liuzhou
+[河南·开封]: ./henan/kaifeng
+[河南·洛阳]: ./henan/luoyang
+[河南·郑州]: ./henan/zhengzhou
+[香港]: ./hongkong
+[湖北·武汉]: ./hubei/wuhan
+[湖南·长沙]: ./hunan/changsha
+[江苏·南京]: ./jiangsu/nanjing
+[江苏·苏州]: ./jiangsu/suzhou
+[江苏·无锡]: ./jiangsu/wuxi
+[江苏·扬州]: ./jiangsu/yangzhou
+[澳门]: ./macao
+[上海]: ./shanghai
+[四川·成都]: ./sichuan/chengdu
+[天津]: ./tianjin
+[云南·大理]: ./yunnan/dali
+[云南·昆明]: ./yunnan/kunming
+[云南·丽江]: ./yunnan/lijiang
+[云南·西双版纳]: ./yunnan/xishuangbanna
+[浙江·杭州]: ./zhejiang/hangzhou
+[浙江·绍兴]: ./zhejiang/shaoxing
