@@ -96,7 +96,7 @@ export const sidebar = {
         },
 
     ],
-    '/trip/abroad': [
+    '/trip/abroad/': [
         { text: '世界', link: '/trip/abroad/' },
         {
             text: '欧洲',
