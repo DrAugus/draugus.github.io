@@ -1,3 +1,7 @@
+---
+icon: emojione:house-with-garden
+---
+
 # 房
 
 买房
