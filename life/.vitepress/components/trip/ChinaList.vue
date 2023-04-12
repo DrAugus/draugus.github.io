@@ -22,7 +22,7 @@ let obj = {}
 // const cityInfo = Object.values(city)
 let cityInfo = [];
 Object.values(city).forEach((arr) => {
-    arr.forEach((cc) => cityInfo.push(cc));
+    arr.forEach((cc) => { if (cc.explore != "") cityInfo.push(cc) });
 });
 console.log(cityInfo)
 
