@@ -2,7 +2,7 @@
 
 欢迎来到中国
 
-## 游玩
+## 探索进度
 
 <ChinaList></ChinaList>
 

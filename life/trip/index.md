@@ -10,8 +10,6 @@
 
 ## 计划
 
-下一站[无锡](./china/jiangsu/wuxi) [扬州](./china/jiangsu/yangzhou)
-
 - [无锡](./china/jiangsu/wuxi) [扬州](./china/jiangsu/yangzhou)
 - [开封](./china/henan/kaifeng) [洛阳](./china/henan/luoyang)
 - [武汉]
@@ -20,7 +18,6 @@
 - [嘉兴]
 - [泉州]
 - [海南]
-- 深圳跳板 [香港](./china/hongkong) [澳门](./china/macao)
 
 ### 随心飞
 
@@ -42,7 +39,6 @@ links: [票价说明](https://augusmeow.github.io/notes/record/airfare-price)
 - [重庆](./china/chongqing)，杭州直飞
 - 海南·海口，杭州直飞
 - 海南·三亚，杭州直飞
-- [香港](./china/hongkong) [澳门](./china/macao)，深圳跳板，深圳高铁过去
 - 山东·烟台 山东·青岛，杭州直飞，飞不了就不去了
 - 广西·柳州 广西·桂林，杭州直飞，飞不了就飞南宁
 - [天津](./china/tianjin)，无直飞，需要北京跳板 2h，也可以考虑高铁，5.5h ¥550，或者二等卧铺更便宜13h，睡一晚过去
