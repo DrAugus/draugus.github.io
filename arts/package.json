@@ -16,7 +16,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
     "eslint": "^8.38.0",
-    "vitepress": "^1.0.0-alpha.65",
+    "vitepress": "^1.0.0-alpha.66",
     "vue": "^3.2.47"
   }
 }
