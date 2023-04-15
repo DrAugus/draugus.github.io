@@ -16,7 +16,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
     "eslint": "^8.38.0",
-    "vitepress": "^1.0.0-alpha.68",
+    "vitepress": "^1.0.0-alpha.69",
     "typed.js": "2.0.132",
     "vue": "^3.2.47"
   }
