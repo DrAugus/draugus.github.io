@@ -26,8 +26,8 @@ devDependencies:
     specifier: 2.0.132
     version: 2.0.132
   vitepress:
-    specifier: ^1.0.0-alpha.69
-    version: 1.0.0-alpha.69(@algolia/client-search@4.17.0)(sass@1.62.0)
+    specifier: ^1.0.0-alpha.70
+    version: 1.0.0-alpha.70(@algolia/client-search@4.17.0)(sass@1.62.0)
   vue:
     specifier: ^3.2.47
     version: 3.2.47
@@ -2352,6 +2352,10 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
+  /mark.js@8.11.1:
+    resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
+    dev: true
+
   /mdast-util-from-markdown@0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}
     dependencies:
@@ -3049,8 +3053,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-alpha.69(@algolia/client-search@4.17.0)(sass@1.62.0):
-    resolution: {integrity: sha512-d7Vz+S/1i/7szVUSOHJf12APtoGlHXIJXzDvXLChhlE000TVzWoYX6rUAchjJzfxdFjng3Eo96ZkPs7OJxDjMg==}
+  /vitepress@1.0.0-alpha.70(@algolia/client-search@4.17.0)(sass@1.62.0):
+    resolution: {integrity: sha512-FuyPNJdNMGl/ddYYGgMhn3wzPFUPLkUq27a3FOsLN4iFfvF+w/3Gg+V3dFd25OattrITmaFGFc/x18foEe2eAA==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
@@ -3059,6 +3063,7 @@ packages:
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.0.2(vue@3.2.47)
       body-scroll-lock: 4.0.0-beta.0
+      mark.js: 8.11.1
       minisearch: 6.0.1
       shiki: 0.14.1
       vite: 4.2.1(sass@1.62.0)
