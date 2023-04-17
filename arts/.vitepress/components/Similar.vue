@@ -4,7 +4,7 @@
     <ul>
         <li v-for="(v, i) in similarWords">
             <span v-for="(vv, ii) in v">
-                <a href="">{{ vv }}</a>
+                <a :href="'https://wordy-beta.vercel.app/?word=' + vv" target="_blank">{{ vv }}</a>
                 {{ ' ' }}
             </span>
         </li>
