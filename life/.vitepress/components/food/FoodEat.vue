@@ -1,11 +1,9 @@
 <template>
-  <h2>推荐餐厅</h2>
-
-  <ul>
-    <li>吃什么选一个吧: <span ref="choiceFromAll"></span></li>
-    <li>具体吃什么: <span ref="choiceFromDetails"></span></li>
-  </ul>
-
+  <p>在哪里吃呢<br>
+    <a v-for="(v, i) in (places)" @click="filterPlace(v)">
+      <Badge :text="v" type="tip" />
+    </a>
+  </p>
 
   <p>
     选什么呢<br>
@@ -14,18 +12,20 @@
     </a>
   </p>
 
+  <h2>推荐餐厅</h2>
 
-  <p>在哪里吃呢<br>
-    <a v-for="(v, i) in (places)" @click="filterPlace(v)">
-      <Badge :text="v" type="info" />
-    </a>
-  </p>
-
+  <ul>
+    <li>吃什么选一个吧: <span ref="choiceFromAll"></span></li>
+    <li>具体吃什么: <span ref="choiceFromDetails"></span></li>
+  </ul>
 
   <div v-for="(v, k, i) in mainMeal">
 
     <h3>{{ k }}
-      <Badge v-for="(vv, ii) in displayInfo(v.tag)" :text="vv" type="info" />
+      <Badge v-if="v.place" v-for="(vv, ii) in displayInfo(v.place)" :text="vv + modify(displayInfo(v.map)[ii])"
+        type="tip" />
+      <Badge v-if="v.tag" v-for="(vv, ii) in displayInfo(v.tag)" :text="vv" type="info" />
+
     </h3>
     <p v-if="v.good">
       <span v-if="v.good">
@@ -51,6 +51,7 @@
 <script>
 import Typed from "typed.js";
 import foodInfo from "../../data/food/eat.json";
+import OptButton from '../OptButton.vue'
 
 const cleanRepeat = (arr) => [...new Set(arr.filter(Boolean))]
 
@@ -81,6 +82,7 @@ export default {
   name: "Food-Eat",
   components: {
     Typed,
+    OptButton,
   },
   data() {
     return {
@@ -124,6 +126,10 @@ export default {
     displayInfo(tag) {
       return tag.split(',')
     },
+    modify(str) {
+      if (str) return str
+      return ""
+    }
   },
 
   async mounted() {
@@ -150,5 +156,9 @@ export default {
 <style scoped>
 .strong {
   font-weight: 500;
+}
+
+a .VPBadge:hover {
+  border-color: var(--vp-c-brand);
 }
 </style>
