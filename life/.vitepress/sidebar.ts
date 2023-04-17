@@ -82,12 +82,18 @@ export const sidebar = {
             ],
         },
         {
-            text: '浙江', collapsed: true, items: [
+            text: '浙江', collapsed: true,
+            link: "/trip/china/zhejiang/",
+            items: [
                 { text: '绍兴', link: '/trip/china/zhejiang/shaoxing' },
                 { text: '温州', link: '/trip/china/zhejiang/wenzhou' },
                 { text: '杭州', link: '/trip/china/zhejiang/hangzhou' },
                 { text: '舟山', link: '/trip/china/zhejiang/zhoushan' },
             ],
+        },
+        {
+            text: '甘肃',
+            link: "/trip/china/gansu/",
         },
 
     ],
