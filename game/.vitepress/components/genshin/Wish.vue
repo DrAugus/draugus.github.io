@@ -1,7 +1,9 @@
 <template>
   <div v-if="current.able">
 
-    <h2>当前祈愿</h2>
+    <h2>当前祈愿 
+      <Badge :text="current.ver[0]" type="warning"></Badge>
+    </h2>
 
     <h3 :style="getImgStyle()">
       <span v-for="(v, i) in current.name">
@@ -30,7 +32,8 @@
     <ul>
       <li v-for="(item, index) in future.wish5star">
         <span class="f-w-600"> {{ modifyChar(item) }} </span>
-        : {{ future.date[index] }}
+        <Badge :text="future.ver[index]"></Badge>
+        {{ future.date[index] }}
         <span v-for="(vv, ii) in future.wish4star[index]">
           {{ modifyChar(vv) }}
         </span>
