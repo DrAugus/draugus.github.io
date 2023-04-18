@@ -8,10 +8,9 @@
 | :--: |:--: |:--: | :--:|
 | main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vitepress][vitepress] [vue3][vue] |
 | arts | [online][site4-1] | [arts](./arts/) | [vitepress][vitepress] [vue3][vue] |
-| food | [online][site6-1] | [food](./food/) | [vitepress][vitepress] [vue3][vue] |
+| life | [online][site6-1] | [life](./life/) | [vitepress][vitepress] [vue3][vue] |
 | variety of notes | [online][site1-1] | [notes](./notes/) | [nuxt docus][docus] [vue3][vue] |
 | code | [online][site2-1] | [code](./code/) | [nuxt docus][docus] [vue3][vue] |
-| trip | [online][site5-1] | [trip](./trip/) | [nuxt docus][docus] [vue3][vue] |
 
 > notes/code site are same, why?
 
@@ -46,12 +45,11 @@ git clone https://github.com/DrAugus/draugus.github.io.git
 - [arts](./arts/)
 - [code](./code/)
 - [notes](./notes/)
-- [trip](./trip/)
-- [food](./food/)
+- [life](./life/)
 
 powered
 
-- [game](./game), [arts](./arts/), [food](./food/), powered by [vitepress][vitepress]
+- [game](./game), [arts](./arts/), [life](./life/), powered by [vitepress][vitepress]
 - for others, powered by [nuxt docus][docus]
 
 ## Upgrade
@@ -72,8 +70,7 @@ You don't have to think about them. Just give them to the robot.
 [site1-1]: https://augusmeow.github.io/notes/
 [site2-1]: https://augusmeow.github.io/code/
 [site4-1]: https://augusmeow.github.io/arts/
-[site5-1]: https://augusmeow.github.io/trip/
-[site6-1]: https://augusmeow.github.io/food/
+[site6-1]: https://augusmeow.github.io/life/
 [netlify]: https://netlify.com/
 [vercel]: https://vercel.com/
 [docus]: https://docus.dev
