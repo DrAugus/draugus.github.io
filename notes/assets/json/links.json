@@ -1,11 +1,5 @@
 [
   {
-    "url": "https://marabos.nl/atomics/",
-    "name": "Rust Atomics and Locks",
-    "tag": "code,rust",
-    "tip": null
-  },
-  {
     "url": "https://cloud.tencent.com/developer/article/1731875",
     "name": "实战矿马：数据异常牵出的挖矿木马(.systemd-service.sh)",
     "tag": "code",
@@ -18,30 +12,6 @@
     "tip": "一个似乎用不到的画图软件我完全可以用merid方法画图"
   },
   {
-    "url": "https://www.ipaddress.com/",
-    "name": "IP地址查询",
-    "tag": "ip,query",
-    "tip": null
-  },
-  {
-    "url": "https://chishenme.xyz/",
-    "name": "中午吃什么",
-    "tag": "tool,eat",
-    "tip": null
-  },
-  {
-    "url": "https://bing.ioliu.cn/",
-    "name": "bing壁纸",
-    "tag": "picture,wallpaper",
-    "tip": null
-  },
-  {
-    "url": "https://artsexperiments.withgoogle.com/artpalette/",
-    "name": "基于谷歌AI的智能配色工具",
-    "tag": "ai,color",
-    "tip": null
-  },
-  {
     "url": "https://www.ivsky.com/tupian/zhonghua_meishi_t3903/",
     "name": "不错的美食图片素材",
     "tag": "eat,picture",
@@ -51,18 +21,6 @@
     "url": "https://www.tsunagujapan.com/50-japanese-foods-to-try-while-you-are-in-japan/2/",
     "name": "日本推荐美食图片素材",
     "tag": "eat,picture",
-    "tip": null
-  },
-  {
-    "url": "https://simpleicons.org/",
-    "name": "Simple Icons",
-    "tag": "icon",
-    "tip": null
-  },
-  {
-    "url": "https://github.com/simple-icons/simple-icons/blob/develop/slugs.md",
-    "name": "Simple Icons 缩写",
-    "tag": "icon",
     "tip": null
   },
   {
@@ -126,12 +84,6 @@
     "tip": null
   },
   {
-    "url": "https://isocpp.org/",
-    "name": "Standard C++",
-    "tag": "code,cpp",
-    "tip": null
-  },
-  {
     "url": "http://www.free-culture.cc/",
     "name": "Free Culture",
     "tag": "book",
@@ -153,30 +105,6 @@
     "url": "https://girliemac.com/",
     "name": "girliemac",
     "tag": "developer",
-    "tip": null
-  },
-  {
-    "url": "https://www.remove.bg/",
-    "name": "Remove Image Background",
-    "tag": "tool",
-    "tip": null
-  },
-  {
-    "url": "https://oktools.net/",
-    "name": "非常好用的工具",
-    "tag": "tool",
-    "tip": null
-  },
-  {
-    "url": "https://guyujiezi.com/",
-    "name": "科学字体生成器「谷雨解字」",
-    "tag": "tool",
-    "tip": "一种基于网页字体技术可用于网页加密、反爬虫、防拷贝的在线工具"
-  },
-  {
-    "url": "https://crates.io/",
-    "name": "rust community",
-    "tag": "code,rust",
     "tip": null
   },
   {
@@ -213,12 +141,6 @@
     "url": "https://zhuanlan.zhihu.com/p/137646370",
     "name": "c++20速览",
     "tag": "code,cpp",
-    "tip": null
-  },
-  {
-    "url": "https://hk.v2ex.com/",
-    "name": "一个程序员社区似乎需要科学工具",
-    "tag": "community",
     "tip": null
   },
   {
@@ -276,39 +198,9 @@
     "tip": "blog: http://sideidea.com/article/42"
   },
   {
-    "url": "https://www.boost.org/",
-    "name": "Boost C++ libraries",
-    "tag": "code,cpp,boost",
-    "tip": "ree peer-reviewed portable C++ source libraries that are candidates for the future C++ Standard"
-  },
-  {
-    "url": "https://developer.mozilla.org/en-US/docs/Learn",
-    "name": "Learn web development",
-    "tag": "code,web",
-    "tip": null
-  },
-  {
     "url": "https://books.halfrost.com/leetcode/",
     "name": "leetcode旅程",
     "tag": "code,leetcode",
     "tip": "刷题指南?"
-  },
-  {
-    "url": "https://paimon.moe/",
-    "name": "原神",
-    "tag": "genshin,game",
-    "tip": null
-  },
-  {
-    "url": "https://linuxtools-rst.readthedocs.io/zh_CN/latest/",
-    "name": "Linux Tools Quick Tutorial",
-    "tag": "linux,tool",
-    "tip": null
-  },
-  {
-    "url": "https://changkun.de/modern-cpp/",
-    "name": "现代cpp",
-    "tag": "cpp,book",
-    "tip": null
   }
 ]
