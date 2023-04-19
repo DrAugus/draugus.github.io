@@ -9,6 +9,7 @@ import { CardLink } from './typeCard'
 const props = defineProps<{
   icon?: CardLink['icon']
   title?: CardLink['title']
+  date?: CardLink['date']
   desc?: CardLink['desc']
   link: CardLink['link']
 }>()
@@ -36,6 +37,7 @@ const svg = computed(() => {
         </div>
         <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
+      <p v-if="date" class="italic">{{ date }}</p>
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>
   </a>
@@ -119,6 +121,11 @@ const svg = computed(() => {
     font-size: 12px;
     color: var(--vp-c-text-2);
   }
+
+  .italic {
+    font-style: italic;
+  }
+
 }
 
 @media (max-width: 960px) {

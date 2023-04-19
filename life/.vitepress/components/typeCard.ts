@@ -1,10 +1,12 @@
 export interface CardLink {
-  /** 站点图标 */
+  /** 图标 */
   icon?: string | { svg: string }
-  /** 站点名称 */
+  /** 名称 */
   title: string
-  /** 站点名称 */
+  /** 名称 */
+  date?: string
+  /** 描述 */
   desc?: string
-  /** 站点链接 */
+  /** 链接 */
   link: string
 }
