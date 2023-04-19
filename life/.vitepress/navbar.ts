@@ -16,6 +16,7 @@ export const navbar = [
   },
   {
     text: '文科',
+    link: '/arts/',
     items: [
       { text: '语言', link: '/arts/language/' },
       { text: '经济', link: '/arts/economics/' },

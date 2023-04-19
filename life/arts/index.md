@@ -16,13 +16,13 @@ hero:
     - theme: alt
       text: 经济学
       link: /economics/
-    - theme: alt
+    - theme: brand
       text: 历史
       link: /history/
     - theme: alt
       text: 音乐
       link: /music/   
-    - theme: alt
+    - theme: brand
       text: 语言
       link: /language/   
     - theme: alt
