@@ -1,36 +1,68 @@
 <template>
     <p>
-        已消费<br>
         <span v-for="(v, k, i) in sum">
-            <b>{{ k + ' ' }}</b>当前已消费<b>{{ ' ¥' + v }}</b>
+            <b>{{ k + ' ' }}</b> 全年旅行支出限额
+            <Badge :text="'¥' + budget[k]"></Badge>
+            <br>
+            <blockquote>
+                当前已消费
+                <b>{{ ' ¥' + v }}
+                    <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)"></Badge>
+                </b>
+                <br>
+                剩余可支配 {{ ' ¥' + parseFloat(budget[k] - v) }}
+                <Badge :text="((budget[k] - v) / budget[k] * 100).toFixed(2) + '%'"
+                    :type="getBadge((budget[k] - v) / budget[k] * 100)"></Badge>
+            </blockquote>
         </span>
     </p>
 
+    <div v-for="(v, k, i) in vTrip">
+        {{ sum[k] }}
+        <p v-for="(vv, ii) in v">
+            <b>{{ vv.name }}</b> <br>
+            <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br>
+            <span>总计<b>{{ vv.sum }}</b>
+                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
+            </span> {{ ' 其中' + vv.intro }}
+        </p>
+    </div>
 
-    <p v-for="(v, i) in vTrip">
-        <b>{{ v.name }}</b> <br>
-        <span class="italic">{{ v.start + ' ~ ' + v.end }}</span><br>
-        <span>总计<b>{{ v.sum }}</b>. </span> {{ ' 其中' + v.intro }}
-    </p>
 
     <p>
         <span class="underline"><b>其他额外开支</b></span>
     </p>
-    <ul>
-        <li v-for="(v, i) in other">
-            {{ v.name }}: {{ v.sum }}
-        </li>
-    </ul>
-
+    <div v-for="(v, k, i) in vOther">
+        <b>{{ k + '年' }}</b>
+        <ul>
+            <li v-for="(vv, ii) in v">
+                {{ vv.name }}: {{ vv.sum }}
+                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
+            </li>
+        </ul>
+    </div>
 </template>
   
 <script>
 
 import cost from "../../data/trip/cost.json";
 
-const other = cost.other
 const trip = cost.trip
-const vTrip = Object.values(trip)
+const other = cost.other
+const budget = cost.budget
+
+let vOther = {}
+other.forEach(v => {
+    if (!vOther[v.year]) { vOther[v.year] = [] }
+    vOther[v.year].push(v)
+})
+
+let vTrip = {}
+Object.values(trip).forEach(v => {
+    let year = v.start.slice(0, 4)
+    if (!vTrip[year]) { vTrip[year] = [] }
+    vTrip[year].push(v)
+})
 
 let time = [];
 let sum = {};
@@ -38,8 +70,8 @@ Object.values(trip).forEach((arr) => {
     let t = arr.start.split('/')[0]
     if (!sum[t]) sum[t] = 0
     sum[t] += parseInt(arr.sum)
-    console.log(t)
-    console.log(arr.sum)
+    // console.log(t)
+    // console.log(arr.sum)
     time.push(t)
 });
 other.forEach((arr) => {
@@ -48,14 +80,9 @@ other.forEach((arr) => {
     time.push(t)
 });
 time = [...new Set(time)]
-console.log(time)
-console.log(sum)
-
-
-const getSum = () => {
-    let sum = 0
-
-}
+// console.log(time)
+// console.log(sum)
+// console.log(budget)
 
 export default {
     name: "Cost",
@@ -63,12 +90,25 @@ export default {
     },
     data() {
         return {
-            other,
+            vOther,
             vTrip,
             sum,
+            budget,
         };
     },
     methods: {
+        getBadge(num, neg = 0) {
+            let n = parseFloat(num)
+            let s = ['tip', 'info', 'warning', 'danger']
+            let res = 0
+            if (n > 90) res = 0
+            else if (n > 60) res = 1
+            else if (n > 30) res = 2
+            else res = 3
+            if (neg) res = s.length - res - 1
+            // console.log(n, res)
+            return s[res]
+        },
     },
 };
 
