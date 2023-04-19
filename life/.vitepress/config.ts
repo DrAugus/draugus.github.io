@@ -18,7 +18,7 @@ export default defineConfig({
             rel: "stylesheet",
             href: "//unpkg.com/heti/umd/heti.min.css",
         },],
-        ['meta', { name: 'theme-color', content: '#ff64b9' }],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
     themeConfig: {
         logo: '/logo/logo.jpg',
@@ -32,7 +32,7 @@ export default defineConfig({
             text: '在 Github 编辑',
         },
         footer: {
-            message: 'Released under the MIT License.',
+            message: '吃好喝好',
             copyright: 'Copyright © 2019-present Augus'
         },
         lastUpdatedText: '上次更新',
@@ -49,7 +49,46 @@ export default defineConfig({
         algolia: {
             appId: 'TMOT9B7BHV',
             apiKey: '8870d1a7427df92c33d2db21368d01d1',
-            indexName: 'augusmeowio'
-        },
+            indexName: 'augusmeowio',
+            placeholder: '搜索',
+            translations: {
+                button: {
+                    buttonText: '搜索',
+                    buttonAriaLabel: '搜索'
+                },
+                modal: {
+                    searchBox: {
+                        resetButtonTitle: '清除查询条件',
+                        resetButtonAriaLabel: '清除查询条件',
+                        cancelButtonText: '取消',
+                        cancelButtonAriaLabel: '取消'
+                    },
+                    startScreen: {
+                        recentSearchesTitle: '搜索历史',
+                        noRecentSearchesText: '没有搜索历史',
+                        saveRecentSearchButtonTitle: '保存至搜索历史',
+                        removeRecentSearchButtonTitle: '从搜索历史中移除',
+                        favoriteSearchesTitle: '收藏',
+                        removeFavoriteSearchButtonTitle: '从收藏中移除'
+                    },
+                    errorScreen: {
+                        titleText: '无法获取结果',
+                        helpText: '你可能需要检查你的网络连接'
+                    },
+                    footer: {
+                        selectText: '选择',
+                        navigateText: '切换',
+                        closeText: '关闭',
+                        searchByText: '搜索提供者'
+                    },
+                    noResultsScreen: {
+                        noResultsText: '无法找到相关结果',
+                        suggestedQueryText: '你可以尝试查询',
+                        reportMissingResultsText: '你认为该查询应该有结果？',
+                        reportMissingResultsLinkText: '点击反馈'
+                    }
+                }
+            }
+        }
     },
 })

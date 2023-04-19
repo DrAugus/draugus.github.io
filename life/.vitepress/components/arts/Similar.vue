@@ -13,7 +13,7 @@
 
 <script>
 import { defineComponent } from 'vue'
-import similarWords from "../data/language/similar.json";
+import similarWords from "../../data/language/similar.json";
 
 const formatJson = (json) => {
     if (!json.results) {

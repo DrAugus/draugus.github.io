@@ -1,8 +1,0 @@
-.idea/
-.vscode/
-
-node_modules/
-.vitepress/cache/
-.vitepress/.cache/
-.vitepress/.temp/
-.vitepress/dist/

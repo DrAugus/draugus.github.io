@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import chinese from "../data/language/chinese.json";
+import chinese from "../../data/language/chinese.json";
 
 export default {
   name: "Chinese",

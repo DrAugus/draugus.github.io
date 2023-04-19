@@ -1,19 +1,19 @@
 <template>
-  <Language :info="info" :words="false" :sentences="true" :language="2"></Language>
+  <Language :info="info" :words="false" :sentences="true" :language="1"></Language>
 </template>
 
 <script>
 //1 English 2 Italian
-import italian from "../data/language/italian.json";
+import english from "../../data/language/english.json";
 
 import Language from "./Language.vue";
 
 export default {
-  name: "SentenceItalian",
+  name: "SentenceEnglish",
   components: { Language },
   data() {
     return {
-      info: italian.sentence
+      info: english.sentence
     };
   }
 };

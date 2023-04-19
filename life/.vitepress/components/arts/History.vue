@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import data from '../data/history_china.json'
+import data from '../../data/history_china.json'
 
 export default {
   name: "History",
