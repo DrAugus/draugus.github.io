@@ -142,3 +142,21 @@ select create_time, case when arch_mode = 'n' then '非归档模式' else '归�
 ```sql
 select subtype$ object_type, count(1) quantity from sysobjects where subtype$ <>'' group by subtype$ union select 'column', count(1) from syscolumns;
 ```
+
+## 迁移
+
+### 从 mysql 迁移
+
+#### 方法变更
+
+||mysql|达梦|方法说明|
+|escape|`mysql_real_escape_string`|null||
+|init|`mysql_library_init`|null||
+|fetch length|`mysql_fetch_lengths`|null||
+|free ret|`mysql_free_result`|`dpi_free_con`||
+|cols|`mysql_field_count`|`dpi_number_columns`||
+|affect row|`mysql_affected_rows`|`dpi_row_count`||
+|||||
+|||||
+|||||
+|||||
