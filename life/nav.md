@@ -4,9 +4,9 @@ outline: [2, 3, 4]
 ---
 
 <script setup>
-import MNavLinks from './nav/components/MNavLinks.vue'
+import ACardLinks from './.vitepress/components/ACardLinks.vue'
 
-import { NAV_DATA } from './nav/data'
+import { NAV_DATA } from './.vitepress/components/dataNav'
 </script>
 <style src="./nav/index.scss"></style>
 
@@ -14,4 +14,4 @@ import { NAV_DATA } from './nav/data'
 
 > 参考[茂茂](https://notes.fe-mm.com/nav)
 
-<MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>
+<ACardLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>

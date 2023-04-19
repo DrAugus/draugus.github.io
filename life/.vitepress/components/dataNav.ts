@@ -1,11 +1,11 @@
-import type { NavLink } from './components/type'
+import type { CardLink } from './typeCard'
 
-type NavData = {
+type CardData = {
   title: string
-  items: NavLink[]
+  items: CardLink[]
 }
 
-export const NAV_DATA: NavData[] = [
+export const NAV_DATA: CardData[] = [
   {
     title: '常用工具',
     items: [

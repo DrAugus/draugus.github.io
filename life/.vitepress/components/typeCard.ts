@@ -1,4 +1,4 @@
-export interface NavLink {
+export interface CardLink {
   /** 站点图标 */
   icon?: string | { svg: string }
   /** 站点名称 */
