@@ -15,7 +15,7 @@
     "@vue-leaflet/vue-leaflet": "^0.9.0",
     "echarts": "^5.4.2",
     "leaflet": "^1.9.3",
-    "nuxt": "3.4.1",
+    "nuxt": "3.4.2",
     "vue-echarts": "^6.5.4"
   },
   "pnpm": {
