@@ -19,7 +19,7 @@
     "eslint": "^8.38.0",
     "sass": "^1.62.0",
     "typed.js": "2.0.132",
-    "vitepress": "^1.0.0-alpha.72",
+    "vitepress": "^1.0.0-alpha.73",
     "vue": "^3.2.47"
   }
 }
