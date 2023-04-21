@@ -7,7 +7,7 @@ hero:
   text: 人生在于食，在于游
   tagline: 周游各地 食遍天下 努力进步
   image:
-    src: /img/home.jpg
+    src: /home.png
     alt: none
   actions:
     - theme: brand

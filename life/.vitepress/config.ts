@@ -12,7 +12,7 @@ export default defineConfig({
     head: [
         ['link', {
             rel: 'icon',
-            href: '/favicon.ico',
+            href: '/logo.png',
         }],
         ["link", {
             rel: "stylesheet",
@@ -21,7 +21,7 @@ export default defineConfig({
         ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
     themeConfig: {
-        logo: '/logo/logo.jpg',
+        logo: '/logo.png',
         nav: navbar,
         sidebar: sidebar,
         socialLinks: [
