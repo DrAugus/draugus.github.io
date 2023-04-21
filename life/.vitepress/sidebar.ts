@@ -89,6 +89,8 @@ export const sidebar = {
                 { text: '温州', link: '/trip/china/zhejiang/wenzhou' },
                 { text: '杭州', link: '/trip/china/zhejiang/hangzhou' },
                 { text: '舟山', link: '/trip/china/zhejiang/zhoushan' },
+                { text: '金华', link: '/trip/china/zhejiang/jinhua' },
+                { text: '台州', link: '/trip/china/zhejiang/taizhou' },
             ],
         },
         {
