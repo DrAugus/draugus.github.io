@@ -4,7 +4,7 @@ import { computed } from 'vue'
 import { slugify } from '@mdit-vue/shared'
 
 import ACardLink from './ACardLink.vue'
-import type { CardLink } from './typeCard'
+import type { CardLink } from '../type'
 
 const props = defineProps<{
   title: string

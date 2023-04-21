@@ -6,7 +6,7 @@ outline: [2, 3, 4]
 <script setup>
 import ACardLinks from './.vitepress/components/ACardLinks.vue'
 
-import { NAV_DATA } from './.vitepress/components/dataNav'
+import { NAV_DATA } from './.vitepress/data/nav'
 </script>
 <style src="./nav/index.scss"></style>
 

@@ -1,9 +1,4 @@
-import type { CardLink } from './typeCard'
-
-type CardData = {
-  title: string
-  items: CardLink[]
-}
+import type { CardData } from '../type'
 
 export const NAV_DATA: CardData[] = [
   {

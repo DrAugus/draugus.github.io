@@ -75,7 +75,6 @@ export const sidebar = {
         },
         {
             text: '湖南', collapsed: true, items: [
-
                 { text: '长沙', link: '/trip/china/hunan/changsha' },
             ],
         },
