@@ -16,7 +16,7 @@
 - [武汉](./china/hubei/wuhan)
 - [重庆](./china/chongqing)
 - [天津](./china/tianjin)
-- [海南](./china/hainan)
+- [海南](./china/hainan/)
 
 ### 随心飞
 

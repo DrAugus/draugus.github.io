@@ -19,18 +19,10 @@ export interface CardData {
 export interface ChinaExploreRecordItem {
   // 市区拼音
   id: string
-  // 市区中文
-  name: string
-  // 链接
-  link?: string
 }
 
 export interface ChinaExploreRecord {
   // 省区/直辖市拼音
   id: string
-  // 省区/直辖市中文
-  name: string
-  // 链接
-  link?: string
   items?: ChinaExploreRecordItem[]
 }
