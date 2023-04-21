@@ -23,6 +23,12 @@ export const NAV_DATA: CardData[] = [
       },
       {
         icon: '',
+        title: '在图像中剪切圆圈',
+        desc: '在图像中剪切圆圈',
+        link: 'https://crop-circle.imageonline.co/cn/'
+      },
+      {
+        icon: '',
         title: '智能配色',
         desc: '基于谷歌AI的智能配色工具',
         link: 'https://artsexperiments.withgoogle.com/artpalette/'

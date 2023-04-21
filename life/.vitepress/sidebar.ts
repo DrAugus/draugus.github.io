@@ -1,8 +1,8 @@
 export const sidebar = {
     '/eat/': [
-        { text: '真的不能吃', link: '/eat/block' },
+        { text: '吃饭了', link: '/eat/' },
         { text: '做点什么吧', link: '/eat/cookbook' },
-        { text: '吃饭了', link: '/eat/choose' },
+        { text: '真的不能吃', link: '/eat/block' },
     ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
@@ -65,6 +65,12 @@ export const sidebar = {
             text: '广东', collapsed: true, items: [
                 { text: '广州', link: '/trip/china/guangdong/guangzhou' },
                 { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
+            ],
+        },
+        {
+            text: '海南', collapsed: true, items: [
+                { text: '海口', link: '/trip/china/hainan/haikou' },
+                { text: '三亚', link: '/trip/china/hainan/sanya' },
             ],
         },
         {

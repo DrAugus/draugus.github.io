@@ -10,14 +10,13 @@
 
 ## 计划
 
+- 浙江全市
 - [无锡](./china/jiangsu/wuxi) [扬州](./china/jiangsu/yangzhou)
 - [开封](./china/henan/kaifeng) [洛阳](./china/henan/luoyang)
-- [武汉]
+- [武汉](./china/hubei/wuhan)
 - [重庆](./china/chongqing)
 - [天津](./china/tianjin)
-- [嘉兴]
-- [泉州]
-- [海南]
+- [海南](./china/hainan)
 
 ### 随心飞
 
