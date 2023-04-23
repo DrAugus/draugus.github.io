@@ -15,6 +15,6 @@ There are certain connections and differences between the different types of dat
 
 ## practice
 
-- [LeetCode](./leetcode)
+- [LeetCode](./leetcode/)
 - [复杂度](./complexity)
 - [QA](./qa)
