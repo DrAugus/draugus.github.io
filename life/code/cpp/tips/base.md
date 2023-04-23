@@ -8,7 +8,7 @@
 
 3. class
 
-    ![1](/code/cpp_class.png)
+    ![1](/img/code/code/cpp_class.png)
 
 ## count
 

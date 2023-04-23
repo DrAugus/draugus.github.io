@@ -117,7 +117,7 @@ export NODE_OPTIONS="--max-old-space-size=(X * 1024)" # Increase to X GB
 
 ### nuxt page 500 `This page is temporarily unavailable.`
 
-![e](/code/nuxt-err1.png)
+![e](/img/code/code/nuxt-err1.png)
 
 ~~check commit info, found release 1.2.5 upgrade some deps, while this project's deps didn't upgrade. Essential reason is the deps version are inconsistent.~~
 

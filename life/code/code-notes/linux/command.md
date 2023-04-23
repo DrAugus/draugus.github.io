@@ -124,8 +124,8 @@ au(x) 输出格式
 Linux chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令
 Linux/Unix 的文件调用权限分为三级 : 文件所有者（Owner）、用户组（Group）、其它用户（Other Users）。
 
-![1](/notes/file-permissions-rwx.jpg)
-![1](/notes/rwx-standard-unix-permission-bits.png)
+![1](/img/code/notes/file-permissions-rwx.jpg)
+![1](/img/code/notes/rwx-standard-unix-permission-bits.png)
 
 ```bash
 chmod [-cfvR] [--help] [--version] mode file...

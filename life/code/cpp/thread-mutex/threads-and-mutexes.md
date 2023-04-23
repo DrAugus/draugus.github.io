@@ -14,7 +14,7 @@ Computer Science Department
 
 ## Learning About Processes
 
-![](/stanford/process.png)
+![](/img/code/stanford/process.png)
 
 ## Today's Learning Goals
 
@@ -176,7 +176,7 @@ for ( size_t i =  0; i < kNumFriends; i++) {
 }
 ```
 
-![](/stanford/threads_share_memory.png)
+![](/img/code/stanford/threads_share_memory.png)
 
 **Solution**: pass a copy of i (not by reference) so it does not change.
 
@@ -245,7 +245,7 @@ There is a *race condition* here!
 
 A mutex is a variable type that represents something like a "locked door".
 
-![](/stanford/locked_door.png)
+![](/img/code/stanford/locked_door.png)
 
 You can **lock**the door:
 

@@ -135,7 +135,7 @@ To get a default installation of Lua and LuaRocks under `/usr/local`
 出现错误
 > Could not find header file for PCRE2
 
-![](/code/install_pcre.png)
+![](/img/code/code/install_pcre.png)
 
 安装 `pcre2`
 `yum -y install pcre2-devel`

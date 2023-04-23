@@ -67,8 +67,8 @@ icon: logos:vue
 
 > Comparing the popularity of the 4 Vue frameworks on [npm trends](https://npmtrends.com/)
 
-![vue-ui-frame-npm-trends](/vue-ui-frame-npm-trends.png)
-![vue-ui-frame-npm-stats](/vue-ui-frame-npm-stats.png)
+![vue-ui-frame-npm-trends](/img/code/vue-ui-frame-npm-trends.png)
+![vue-ui-frame-npm-stats](/img/code/vue-ui-frame-npm-stats.png)
 
 ### Static Site frameworks
 
