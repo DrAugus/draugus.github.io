@@ -14,4 +14,6 @@ import { NAV_DATA } from './.vitepress/data/nav'
 
 <ACardLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>
 
+----
+
 > 参考[茂茂](https://notes.fe-mm.com/nav)
