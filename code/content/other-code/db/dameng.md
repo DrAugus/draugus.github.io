@@ -150,13 +150,15 @@ select subtype$ object_type, count(1) quantity from sysobjects where subtype$ <>
 #### 方法变更
 
 ||mysql|达梦|方法说明|
-|escape|`mysql_real_escape_string`|null||
-|init|`mysql_library_init`|null||
-|fetch length|`mysql_fetch_lengths`|null||
-|free ret|`mysql_free_result`|`dpi_free_con`||
-|cols|`mysql_field_count`|`dpi_number_columns`||
-|affect row|`mysql_affected_rows`|`dpi_row_count`||
-|||||
-|||||
-|||||
+|:----|:----|:----|:----|
+|转义 escape|`mysql_real_escape_string`|null||
+|初始化 init|`mysql_library_init`|null||
+|当前列长度 fetch length|`mysql_fetch_lengths`|null||
+|释放结果集 free ret|`mysql_free_result`|`dpi_free_con`||
+|列数 cols|`mysql_field_count`|`dpi_number_columns`||
+|影响行数 affect row|`mysql_affected_rows`|`dpi_row_count`||
+||`mysql_store_result`|null||
+||`mysql_insert_id`|null||
+||`mysql_fetch_row`|`dpi_fetch(hstmt, &row_num)`||
+||...|...||
 |||||
