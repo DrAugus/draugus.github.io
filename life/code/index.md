@@ -27,6 +27,11 @@ hero:
       link: /code/interview/   
 # Could add features description here
 features:
+  - icon: 🛌
+    title: 写点儿
+    details: 今天写什么了没
+    link: /code/github-chart   
+    linkText: 看看
   - icon: 🐣
     title: C++
     details: 什么是 `C++`？为什么不是 `Rust`？为什么不是 `Carbon`？

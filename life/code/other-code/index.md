@@ -1,7 +1,3 @@
----
-icon: fxemoji:horseracing
-title: 今天码了 🐎
----
+# 各种代码
 
-
-![DrAugus's Github chart](https://ghchart.rshah.org/draugus)
+这知识啊，都学杂了呀！

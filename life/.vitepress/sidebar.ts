@@ -392,7 +392,6 @@ export const sidebar = {
     ],
 
     '/code/other-code/': [
-        { text: '今天码了 🐎', link: '/code/other-code/' },
         { text: '非技术问题', link: '/code/other-code/non-tech.md' },
         { text: 'Python', link: '/code/other-code/python.md' },
         { text: '配环境', link: '/code/other-code/config-env.md' },

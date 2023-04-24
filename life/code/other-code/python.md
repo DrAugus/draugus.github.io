@@ -1,7 +1,4 @@
----
-icon: logos:python
-title: Python
----
+# Python
 
 ## 遇到的问题
 
