@@ -18,16 +18,24 @@ root_dir = os.getcwd()
 sub_dir = "life/code/"
 link_pre = "/code"
 
+# 一级目录
 depth1_dirs = []
 depth1_path = []
-
+# 二级目录
 depth2_dirs = []
 depth2_path = []
 
 
 def print_list(l):
+    print('len: ', len(l))
     for i in l:
         print(i)
+
+
+def print_map(m):
+    print('len: ', len(m))
+    for k in m:
+        print(f'{k}: {m[k]}')
 
 
 def list_all_files(dirs):
@@ -120,6 +128,18 @@ def dir_rm_prefix(current_dir, arr):
     return [s.replace(current_dir, "") for s in arr]
 
 
+def list2map(dir_list):
+    # list 格式为 全部文件及目录
+    res_map = {}
+    for v in dir_list:
+        if v.endswith('.md'):
+            prefix = v[:v.rfind("/") + 1]
+            if prefix not in res_map:
+                res_map[prefix] = []
+            res_map[prefix].append(v)
+    return res_map
+
+
 def write2file():
     os.chdir(os.path.join(root_dir, sub_dir))
     current_dir = os.getcwd()
@@ -128,7 +148,9 @@ def write2file():
     all_file_path = dir_rm_prefix(current_dir, all_file_path_with_prefix)
     # 把当前目录前缀也要加上
     all_file_path = [link_pre + s for s in all_file_path]
-    print_list(all_file_path)
+    # print_list(all_file_path)
+    map_file = list2map(all_file_path)
+    print_map(map_file)
 
     # print_list(all_filename)
 
@@ -139,11 +161,6 @@ def write2file():
     cmd = f"find {current_dir} -type f | wc -l"
     obj = os.popen(cmd)
     print('当前目录下所有文件个数: ', obj.read())
-
-    # 使用 with 关键字打开文件
-    # with open(output_filename, "w") as f:
-    #     # 将输出重定向到文件
-    #     print(display(all_file_path), file=f)
 
 
 if __name__ == '__main__':
