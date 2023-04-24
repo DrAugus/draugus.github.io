@@ -48,112 +48,112 @@ Zookeeper 使用场景很多，常见的有以下几种：
 
 1. 定义消息队列的结构体，包括队列的大小、队列中存储的消息数据、队列头和队列尾等信息。
 
-```cpp
-struct MessageQueue {
-    int size;
-    int head;
-    int tail;
-    vector<Message> data;
-};
-```
+    ```cpp
+    struct MessageQueue {
+        int size;
+        int head;
+        int tail;
+        vector<Message> data;
+    };
+    ```
 
 2. 定义消息队列的操作函数，包括初始化、销毁、入队、出队等操作。
 
-```cpp
-// 初始化消息队列
-void init(MessageQueue& queue, int size) {
-    queue.size = size;
-    queue.head = 0;
-    queue.tail = 0;
-    queue.data.resize(size);
-}
-
-// 销毁消息队列
-void destroy(MessageQueue& queue) {
-    queue.size = 0;
-    queue.head = 0;
-    queue.tail = 0;
-    queue.data.clear();
-}
-
-// 入队
-bool enqueue(MessageQueue& queue, const Message& message) {
-    if (queue.tail == queue.head && queue.data[queue.head].valid) {
-        // 队列已满
-        return false;
+    ```cpp
+    // 初始化消息队列
+    void init(MessageQueue& queue, int size) {
+        queue.size = size;
+        queue.head = 0;
+        queue.tail = 0;
+        queue.data.resize(size);
     }
-    queue.data[queue.tail] = message;
-    queue.tail = (queue.tail + 1) % queue.size;
 
-    return true;
-}
-
-// 出队
-bool dequeue(MessageQueue& queue, Message& message) {
-    if (queue.head == queue.tail && !queue.data[queue.head].valid) {
-        // 队列为空
-        return false;
+    // 销毁消息队列
+    void destroy(MessageQueue& queue) {
+        queue.size = 0;
+        queue.head = 0;
+        queue.tail = 0;
+        queue.data.clear();
     }
-    message = queue.data[queue.head];
-    queue.data[queue.head].valid = false;
-    queue.head = (queue.head + 1) % queue.size;
 
-    return true;
-}
-```
+    // 入队
+    bool enqueue(MessageQueue& queue, const Message& message) {
+        if (queue.tail == queue.head && queue.data[queue.head].valid) {
+            // 队列已满
+            return false;
+        }
+        queue.data[queue.tail] = message;
+        queue.tail = (queue.tail + 1) % queue.size;
+
+        return true;
+    }
+
+    // 出队
+    bool dequeue(MessageQueue& queue, Message& message) {
+        if (queue.head == queue.tail && !queue.data[queue.head].valid) {
+            // 队列为空
+            return false;
+        }
+        message = queue.data[queue.head];
+        queue.data[queue.head].valid = false;
+        queue.head = (queue.head + 1) % queue.size;
+
+        return true;
+    }
+    ```
 
 3. 使用锁机制，保证消息队列的线程安全性。
 
-```cpp
-std::mutex mtx;
+    ```cpp
+    std::mutex mtx;
 
-// 初始化消息队列
-void init(MessageQueue& queue, int size) {
-    std::lock_guardstd::mutex lock(mtx);
-    queue.size = size;
-    queue.head = 0;
-    queue.tail = 0;
-    queue.data.resize(size);
-}
-
-// 销毁消息队列
-void destroy(MessageQueue& queue) {
-    std::lock_guardstd::mutex lock(mtx);
-    queue.size = 0;
-    queue.head = 0;
-    queue.tail = 0;
-    queue.data.clear();
-}
-
-// 入队
-bool enqueue(MessageQueue& queue, const Message& message) {
-    std::lock_guardstd::mutex lock(mtx);
-    if (queue.tail == queue.head && queue.data[queue.head].valid) {
-        // 队列已满
-        return false;
+    // 初始化消息队列
+    void init(MessageQueue& queue, int size) {
+        std::lock_guardstd::mutex lock(mtx);
+        queue.size = size;
+        queue.head = 0;
+        queue.tail = 0;
+        queue.data.resize(size);
     }
 
-    queue.data[queue.tail] = message;
-    queue.tail = (queue.tail + 1) % queue.size;
-
-    return true;
-}
-
-// 出队
-bool dequeue(MessageQueue& queue, Message& message) {
-    std::lock_guardstd::mutex lock(mtx);
-    if (queue.head == queue.tail && !queue.data[queue.head].valid) {
-        // 队列为空
-        return false;
+    // 销毁消息队列
+    void destroy(MessageQueue& queue) {
+        std::lock_guardstd::mutex lock(mtx);
+        queue.size = 0;
+        queue.head = 0;
+        queue.tail = 0;
+        queue.data.clear();
     }
 
-    message = queue.data[queue.head];
-    queue.data[queue.head].valid = false;
-    queue.head = (queue.head + 1) % queue.size;
+    // 入队
+    bool enqueue(MessageQueue& queue, const Message& message) {
+        std::lock_guardstd::mutex lock(mtx);
+        if (queue.tail == queue.head && queue.data[queue.head].valid) {
+            // 队列已满
+            return false;
+        }
 
-    return true;
-}
-```
+        queue.data[queue.tail] = message;
+        queue.tail = (queue.tail + 1) % queue.size;
+
+        return true;
+    }
+
+    // 出队
+    bool dequeue(MessageQueue& queue, Message& message) {
+        std::lock_guardstd::mutex lock(mtx);
+        if (queue.head == queue.tail && !queue.data[queue.head].valid) {
+            // 队列为空
+            return false;
+        }
+
+        message = queue.data[queue.head];
+        queue.data[queue.head].valid = false;
+        queue.head = (queue.head + 1) % queue.size;
+
+        return true;
+    }
+    ```
 
 完整实现
 

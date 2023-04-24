@@ -1,7 +1,5 @@
 # QA
 
-::list{type="info"}
-
 - 操作系统如何申请以及管理内存的？
 - 进程通信中的管道实现原理是什么？
 - 简单介绍进程调度的算法
@@ -21,11 +19,8 @@
 - Linux 如何查看实时的滚动日志？
 - BIO、NIO 有什么区别？怎么判断写文件时 Buffer 已经写满？简述 Linux 的 IO模型
 - 简述 socket 中 select 与 epoll 的使用场景以及区别，epoll 中水平触发以及边缘触发有什么不同？
-::
 
 ## 线程 进程
-
-::list{type="info"}
 
 - 进程和线程之间有什么区别？
 - 进程间有哪些通信方式？
@@ -35,16 +30,12 @@
 - 进程有多少种状态？
 - 进程空间从高位到低位都有些什么？
 - Linux 进程调度中有哪些常见算法以及策略？
-::
 
 ## 锁
-
-::list{type="info"}
 
 - 简述自旋锁与互斥锁的使用场景
 - 什么情况下会发生死锁，如何解决死锁？
 - 简述乐观锁以及悲观锁的区别以及使用场景
-::
 
-[netstat]: /code/record/linux/command.md#netstat
-[lsof]: /code/record/linux/command.md#lsof
+[netstat]: /code/code-notes/linux/command.md#netstat
+[lsof]: /code/code-notes/linux/command.md#lsof

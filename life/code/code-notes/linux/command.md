@@ -470,7 +470,7 @@ crontab的命令构成为 时间+动作，其时间有分、时、日、月、�
 
 实例
 
-```config
+```
 实例1：每1分钟执行一次myCommand
 * * * * * myCommand
 实例2：每小时的第3和第15分钟执行
@@ -517,7 +517,7 @@ head -c 10M < /dev/urandom > /var/log/log-file
 
 创建一个配置文件 `vim /etc/logrotate.d/log-file`
 
-```config
+```
 /var/log/log-file {
     monthly
     rotate 5
@@ -591,7 +591,7 @@ netstat -ntulp | grep 3306   //查看所有3306端口使用情况
 curl genshin.hoyoverse.com/main/news/
 ```
 
-```out
+```
 <html>
 <head><title>301 Moved Permanently</title></head>
 <body>

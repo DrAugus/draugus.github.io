@@ -57,7 +57,7 @@ tag:
 
 #### 3、使用下面的JavaScript代码来生成Gitalk评论
 
-```javascript  
+```js  
 const initGitalk = () => {
     const gitalk = new Gitalk({
         clientID: "5301328d56cf49a6d68e",

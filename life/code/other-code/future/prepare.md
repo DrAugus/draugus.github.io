@@ -28,7 +28,7 @@
 
 ## 其他
 
-- [解释面向对象语言](../interview/cpp/concept#面向对象编程与面向过程编程的区别与联系)，[C和C++的区别](../interview/cpp/c_cpp_diff)
+- [解释面向对象语言](../../cpp/concept/#面向对象编程与面向过程编程的区别与联系)，[C和C++的区别](../../cpp/c-cpp-diff)
 - 各种排序
 - 数组中找重复值
 - Git常用命令、简单解释一下Git原理、怎么理解git是一个分布式系统
@@ -36,7 +36,7 @@
 - zookeeper介绍一下 (从CAP 数据一致性等分布式问题出发 介绍了基本原理和应用场景)
 - 主节点崩溃了, 集群会发生什么
 - 讲一下HTTP协议,为什么说是无状态的, POST/GET请求的区别, 1.X 和 2.0区别
-- [paxos](../interview/paxos)
+- [paxos](../distributed/paxos)
 - 举一个会出现StackOverflow错误的情况,并说说为什么(递归...)
 - 如何处理网页的大量请求
 - 如何处理并发造成的数据不一致问题，加锁，锁的类型有哪些
@@ -58,7 +58,7 @@
 
 - c++的基础知识
 - c++11特性
-- [设计模式](../interview/design-pattern.md),单例、适配器模式
+- [设计模式](../sys-design/design-pattern),单例、适配器模式
 - 内存管理
 - C/C++的段错误是什么
 - 写一个c++的类 实现一个string类，然后支持拷贝构造和移动构造和支持vector容器，用智能指针
