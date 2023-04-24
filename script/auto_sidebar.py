@@ -97,6 +97,11 @@ def format_line(filename):
         while line:
             if line.startswith('# '):
                 res_line = line[2:]
+
+                if '[' in res_line:
+                    res_line = res_line[:res_line.find(']')]
+                    res_line = res_line.replace('[', '')
+
                 res_line = res_line.rstrip('\n')
                 break
 
@@ -173,6 +178,8 @@ def write2file():
     map_file = list2map(all_file_path)
     # 每一个键值对是一组列表 不做细化区分
     print_map(map_file)
+
+    print('============\n\n\n')
 
     display_map(map_file)
     op_file.write_file(modify_display(map_file), output_filename)
