@@ -58,4 +58,4 @@ echo "clean:" >> Makefile
 echo -e "\trm -f myapp myapp.o" >> Makefile
 ```
 
-[shell]: ../code/shell
+[shell]: ../other-code/shell

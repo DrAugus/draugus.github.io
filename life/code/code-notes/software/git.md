@@ -176,7 +176,7 @@ Header部分只有一行，包括三个字段：type（必需）、scope（可�
 
 Body 部分是对本次 commit 的详细描述，可以分成多行。
 
-```text
+```md
 More detailed explanatory text, if necessary. Wrap it to about 72 characters or so.
 
 Further paragraphs come after blank lines.
@@ -198,13 +198,13 @@ Footer 部分只用于两种情况。
 
    如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。
 
-   ```text
-   BREAKING CHANGE: isolate scope bindings definition has changed.
-   To migrate the code follow the example below:
-   Before:
-   scope: { myAttr: 'attribute', }
-   After:
-   scope: { myAttr: '@', }
+   ```md
+   BREAKING CHANGE: isolate scope bindings definition has changed.  
+   To migrate the code follow the example below:  
+   Before:  
+   scope: { myAttr: 'attribute', }  
+   After:  
+   scope: { myAttr: '@', }  
    The removed `inject` wasn't generaly useful for directives so there should be no code using it.
    ```
 
@@ -212,13 +212,13 @@ Footer 部分只用于两种情况。
 
    如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
 
-   ```text
+   ```md
    Closes #234
    ```
 
    也可以一次关闭多个 issue 。
 
-   ```text
+   ```md
    Closes #123, #245, #992
    ```
 
