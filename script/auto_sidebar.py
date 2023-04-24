@@ -16,6 +16,9 @@ root_dir = os.getcwd()
 sub_dir = "life/code/"
 link_pre = "/trip/abroad"
 
+depth2_dirs = []
+depth2_path = []
+
 def list_all_files(dirs):
     global current_depth
     _files = []
@@ -23,6 +26,8 @@ def list_all_files(dirs):
     # 列出文件夹下的所有目录和文件
     l1 = os.listdir(dirs)
     l1 = list(filter(lambda e: e not in exclude_path, l1))
+
+    # 获取所有一级目录
     if current_depth == 0:
         # print(l1)
         depth1_dirs = []
@@ -35,10 +40,9 @@ def list_all_files(dirs):
         print(depth1_dirs)
         print(depth1_path)
 
+    # 获取所有 二级目录
     if current_depth == 1:
         # print(l1)
-        depth2_dirs = []
-        depth2_path = []
         for i in range(0, len(l1)):
             path = os.path.join(dirs, l1[i])
             if os.path.isdir(path):
@@ -48,14 +52,19 @@ def list_all_files(dirs):
         print(depth2_path)
         
     all_filename.append(l1)
-    current_depth = current_depth + 1
+    print(current_depth)
 
     for i in range(0, len(l1)):
         path = os.path.join(dirs, l1[i])
         if os.path.isdir(path):
+            # 一旦递归即 +1
+            current_depth = current_depth + 1
             _files.extend(list_all_files(path))
         if os.path.isfile(path):
             _files.append(path)
+
+    # 退出当前目录 -1
+    current_depth = current_depth - 1
 
     return _files
 
