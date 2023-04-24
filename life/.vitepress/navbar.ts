@@ -45,5 +45,12 @@ export const navbar = [
     ],
     activeMatch: '^/code',
   },
+  {
+    text: '待定',
+    items: [
+      { text: '学习', link: '/study/' },
+      { text: '职业', link: '/career/' },
+    ],
+  },
 
 ]

@@ -22,7 +22,7 @@
 
 ### 专项附加扣除信息
 
-![tax](/career/tax.jpg)
+![tax](/img/career/tax.jpg)
 
 ### QA
 

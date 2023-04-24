@@ -1,10 +1,15 @@
 <template>
+    <h2>河南高考历年分数线(仅理科)</h2>
     <EChartsModel :option="option" />
+
+    <h2>大学清单</h2>
+    <University></University>
 </template>
   
 <script>
-import EChartsModel from "./EChartsModel.vue"
-import gaokaoInfo from '~/assets/json/gaokao.json'
+import EChartsModel from "../EChartsModel.vue"
+import gaokaoInfo from '../../data/study/gaokao.json'
+import University from "./University.vue"
 
 const lineName = ['一本', '二本', '大专']
 
@@ -71,6 +76,7 @@ export default {
     name: "Gaokao",
     components: {
         EChartsModel,
+        University,
     },
     data() {
         return {

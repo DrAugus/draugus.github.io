@@ -1,6 +1,7 @@
 export const sidebar = {
     '/eat/': [
         { text: '吃饭了', link: '/eat/' },
+        { text: '零食', link: '/eat/snack' },
         { text: '做点什么吧', link: '/eat/cookbook' },
         { text: '真的不能吃', link: '/eat/block' },
     ],
@@ -452,6 +453,30 @@ export const sidebar = {
         }, {
             text: 'os', collapsed: true, items: [
                 { text: 'QA', link: '/code/other-code/os/qa.md' },
+            ]
+        },
+    ],
+
+    //
+    //
+    '/study/': [
+        { text: '高考', link: '/study/gaokao' },
+    ],
+    '/career/': [
+        { text: '简历', link: '/career/cv.md' },
+        { text: '软考高级系统架构', link: '/career/ruankao-high-lv.md' },
+        { text: '公务员区别', link: '/career/gwy-diff.md' },
+        { text: '职场人', link: '/career/' },
+        { text: '年度报税', link: '/career/tax.md' },
+        { text: '互联网工作记录', link: '/career/record-net-work.md' },
+        {
+            text: 'amazon', collapsed: true, items: [
+                { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles.md' },
+            ]
+        },
+        {
+            text: 'google', collapsed: true, items: [
+                { text: 'Google GCA interviews (what to expect & how to prepare)', link: '/career/google/gca.md' },
             ]
         },
     ],

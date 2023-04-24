@@ -15,8 +15,8 @@ exclude_path = [
     # 'china','abroad'
 ]
 root_dir = os.getcwd()
-sub_dir = "life/code/"
-link_pre = "/code"
+sub_dir = "life/career/"
+link_pre = "/career"
 
 # 一级目录
 depth1_dirs = []
