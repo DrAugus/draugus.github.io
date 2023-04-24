@@ -24,7 +24,7 @@ let cityInfo = [];
 Object.values(city).forEach((arr) => {
     arr.forEach((cc) => { if (cc.explore != "") cityInfo.push(cc) });
 });
-console.log(cityInfo)
+// console.log(cityInfo)
 
 
 export default {

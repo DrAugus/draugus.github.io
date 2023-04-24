@@ -29,27 +29,27 @@ hero:
 features:
   - icon: 🐣
     title: C++
-    details: 
+    details: 什么是 `C++`？为什么不是 `Rust`？为什么不是 `Carbon`？
     link: /code/cpp/      
-    linkText: 
+    linkText: 细说
   - icon: 🦎
     title: DSA
-    details: 
+    details: 数据结构与算法
     link: /code/dsa/
-    linkText: 
+    linkText: 狠狠学
   - icon: 🐳
     title: 其他代码
-    details: 
+    details: 各种别的代码，都会一点点
     link: /code/other-code/
-    linkText: 
+    linkText: 快速查看
   - icon: 🔬
     title: 代码笔记
-    details: 
+    details: 记录平时用到的种种
     link: /code/code-notes/   
-    linkText: 
+    linkText: 都有什么呢
   - icon: 🛀
     title: 八股文
-    details: 
+    details: 八股文，但是不得不记
     link: /code/interview/   
-    linkText:   
+    linkText: 立即考试
 ---

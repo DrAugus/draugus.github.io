@@ -22,6 +22,9 @@ hero:
     - theme: alt
       text: 文科
       link: /arts/
+    - theme: brand
+      text: 编程
+      link: /code/      
 # Could add features description here
 features:
   - title: 吃点饭吧
@@ -35,8 +38,13 @@ features:
     link: /trip/
     linkText: 看看往哪冲
   - title: 文科探秘
-    icon: ♟
+    icon: 🏮
     details: 见证者，为见证而来 | 铭记者，因铭记而生
     link: /arts/
     linkText: 了解文科 有益身心
+  - title: 代码是永恒的
+    icon: 💻
+    details: 互相学习互相学习
+    link: /code/
+    linkText: 快来看看如何编程
 ---

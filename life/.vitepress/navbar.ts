@@ -18,7 +18,7 @@ export const navbar = [
   {
     text: '文科',
     items: [
-      { text: '主页', link: '/arts/' },
+      { text: '首页', link: '/arts/' },
       { text: '语言', link: '/arts/language/' },
       { text: '经济', link: '/arts/economics/' },
       { text: '历史', link: '/arts/history/' },
@@ -36,7 +36,7 @@ export const navbar = [
   {
     text: '编程',
     items: [
-      { text: '主页', link: '/code/' },
+      { text: '首页', link: '/code/' },
       { text: 'C++', link: '/code/cpp/' },
       { text: 'DSA', link: '/code/dsa/' },
       { text: '代码笔记', link: '/code/code-notes/' },
