@@ -87,6 +87,9 @@ def list_all_files(dirs):
 
 
 def format_line(filename):
+    # print(filename)
+    filename = filename[len(link_pre):]
+
     res_line = ''
     # print(root_dir, filename)
     with open(os.path.join(root_dir, sub_dir + filename), 'r') as f:
@@ -103,29 +106,35 @@ def format_line(filename):
                 break
 
             line = f.readline()
-
-    pre = 'url_life'
-    res = f"{{ text: '{res_line}', link: '{link_pre}{filename}' }},"
-    # res = pre + ' + "' + s + '",'
-    res += '\n'
+    res = {}
+    res['text'] = res_line
+    res['link'] = f'{link_pre}{filename}'
     return res
 
 
-def display(filename):
-    if not len(filename):
-        return ""
-    display_str = ""
-    for v in filename:
-        if not isinstance(v, list):
-            display_str += format_line(v)
-            continue
-        for vv in v:
-            display_str += format_line(vv)
-    return display_str
+def display_map(m):
+    # key 无须调整，只调整 value
+    for k in m:
+        v = m[k]
+        for vv in range(len(v)):
+            filename = v[vv]
+            v[vv] = format_line(filename)
+    # print_map(m)
+    return m
 
 
-def dir_rm_prefix(current_dir, arr):
-    return [s.replace(current_dir, "") for s in arr]
+def replace_sub_str(replace_str, arr):
+    return [s.replace(replace_str, "") for s in arr]
+
+
+def add_pre(pre, arr):
+    return [pre + s for s in arr]
+
+
+def adjust_file(arr):
+    # 把当前目录前缀也要加上
+    arr = add_pre(link_pre, arr)
+    return arr
 
 
 def list2map(dir_list):
@@ -140,17 +149,36 @@ def list2map(dir_list):
     return res_map
 
 
+def modify_display(m):
+    arr = []
+    for k in m:
+        kk = f"'{k}':[\n"
+        arr.append(kk)
+        for v in m[k]:
+            vv = f'{v},\n'
+            arr.append(vv)
+        arr.append(']\n')
+    return arr
+
+
 def write2file():
     os.chdir(os.path.join(root_dir, sub_dir))
     current_dir = os.getcwd()
 
     all_file_path_with_prefix = list_all_files(current_dir)
-    all_file_path = dir_rm_prefix(current_dir, all_file_path_with_prefix)
-    # 把当前目录前缀也要加上
-    all_file_path = [link_pre + s for s in all_file_path]
+    all_file_path = replace_sub_str(current_dir, all_file_path_with_prefix)
+
+    all_file_path = adjust_file(all_file_path)
     # print_list(all_file_path)
     map_file = list2map(all_file_path)
+    # 每一个键值对是一组列表 不做细化区分
     print_map(map_file)
+
+    display_map(map_file)
+    op_file.write_file(modify_display(map_file), output_filename)
+
+    # with open('.augus_output', "w") as f:
+    #     print(display_map(map_file), file=f)
 
     # print_list(all_filename)
 
