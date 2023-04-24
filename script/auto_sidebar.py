@@ -161,8 +161,11 @@ def modify_display(m):
         arr.append(kk)
         for v in m[k]:
             vv = f'{v},\n'
+            vv = vv.replace("'text'", 'text')
+            vv = vv.replace("'link'", 'link')
+            vv = vv.replace("index.md", '')
             arr.append(vv)
-        arr.append(']\n')
+        arr.append('],\n')
     return arr
 
 

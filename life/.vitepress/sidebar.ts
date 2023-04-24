@@ -212,4 +212,249 @@ export const sidebar = {
     ],
 
     //
+
+    '/code/code-notes/': [
+        { text: 'Compile', link: '/code/code-notes/compile.md' },
+        { text: 'gcc', link: '/code/code-notes/gcc.md' },
+        { text: 'Markdown', link: '/code/code-notes/markdown.md' },
+        { text: 'vim', link: '/code/code-notes/vim.md' },
+        { text: 'Makefile', link: '/code/code-notes/Makefile.md' },
+        { text: 'GitHub', link: '/code/code-notes/github.md' },
+        { text: 'Docus', link: '/code/code-notes/docus.md' },
+        { text: 'xcode', link: '/code/code-notes/xcode.md' },
+        { text: 'svn', link: '/code/code-notes/svn.md' },
+        { text: 'CMakeLists', link: '/code/code-notes/CMakeLists.md' },
+        { text: '指南', link: '/code/code-notes/' },
+        { text: 'RBAC', link: '/code/code-notes/rbac.md' },
+        { text: 'Excel', link: '/code/code-notes/excel.md' },
+        { text: 'JetBrains', link: '/code/code-notes/jetbrains.md' },
+        { text: 'Gitlab', link: '/code/code-notes/gitlab.md' },
+        {
+            text: 'tools', collapsed: true, items: [
+                { text: 'Jenkins', link: '/code/code-notes/tools/Jenkins.md' },
+                { text: 'Algolia', link: '/code/code-notes/tools/algolia.md' },
+                { text: 'TMDB', link: '/code/code-notes/tools/tmdb.md' },
+                { text: 'Mergify', link: '/code/code-notes/tools/mergify.md' },
+                { text: 'Vercel', link: '/code/code-notes/tools/vercel.md' },
+                { text: 'gitalk', link: '/code/code-notes/tools/gitalk.md' },
+            ]
+        },
+        {
+            text: 'macos', collapsed: true, items: [
+                { text: 'mac primary', link: '/code/code-notes/macos/base.md' },
+                { text: 'solution', link: '/code/code-notes/macos/sol.md' },
+            ]
+        },
+        {
+            text: 'software', collapsed: true, items: [
+                { text: 'web tools', link: '/code/code-notes/software/webtools.md' },
+                { text: '推荐软件安装', link: '/code/code-notes/software/1.install.md' },
+                { text: 'fish cmd', link: '/code/code-notes/software/fish.md' },
+                { text: 'Tabby', link: '/code/code-notes/software/tabby.md' },
+                { text: 'Git', link: '/code/code-notes/software/git.md' },
+                { text: 'Docker', link: '/code/code-notes/software/docker.md' },
+                { text: 'VS Code', link: '/code/code-notes/software/vscode.md' },
+                { text: 'XShell', link: '/code/code-notes/software/xshell.md' },
+            ]
+        },
+        {
+            text: 'linux', collapsed: true, items: [
+                { text: 'gdb', link: '/code/code-notes/linux/gdb.md' },
+                { text: 'linux系统分类', link: '/code/code-notes/linux/sys_category.md' },
+                { text: '查看Linux的基本信息', link: '/code/code-notes/linux/sys_base_info.md' },
+                { text: 'Linux 问题收集', link: '/code/code-notes/linux/qa.md' },
+                { text: 'install', link: '/code/code-notes/linux/install.md' },
+                { text: 'linux记录  ', link: '/code/code-notes/linux/README.md' },
+                { text: 'cmd', link: '/code/code-notes/linux/command.md' },
+                { text: '指南', link: '/code/code-notes/linux/guide.md' },
+            ]
+        },
+        {
+            text: 'windows', collapsed: true, items: [
+                { text: 'chocolatey', link: '/code/code-notes/windows/chocolatey.md' },
+                { text: '虚拟机记录    ', link: '/code/code-notes/windows/VirtualBox.md' },
+                { text: 'cmd指南', link: '/code/code-notes/windows/cmd.md' },
+                { text: 'windows11更新纪要', link: '/code/code-notes/windows/windows11-update.md' },
+                { text: '壁纸', link: '/code/code-notes/windows/wallpaper.md' },
+            ]
+        },
+        {
+            text: 'openai', collapsed: true, items: [
+                { text: 'ChatGPT', link: '/code/code-notes/openai/chatgpt.md' },
+                { text: 'OpenAI', link: '/code/code-notes/openai/' },
+            ]
+        },
+    ],
+
+
+    '/code/dsa/': [
+        { text: 'QA', link: '/code/dsa/qa.md' },
+        { text: 'Recursion', link: '/code/dsa/recursion.md' },
+        { text: '算法与数据结构', link: '/code/dsa/' },
+        { text: '复杂度', link: '/code/dsa/complexity.md' },
+        {
+            text: 'leetcode', collapsed: true, items: [
+                { text: 'LeetCode', link: '/code/dsa/leetcode/' },
+                { text: 'LC1114 解题方案', link: '/code/dsa/leetcode/lc-1114.md' },
+            ]
+        },
+        {
+            text: 'linear', collapsed: true, items: [
+                { text: 'stack', link: '/code/dsa/linear/stack.md' },
+                { text: 'QA', link: '/code/dsa/linear/qa.md' },
+                { text: 'array', link: '/code/dsa/linear/array.md' },
+                { text: 'heap', link: '/code/dsa/linear/heap.md' },
+                { text: '线性结构', link: '/code/dsa/linear/' },
+                { text: 'Linked list', link: '/code/dsa/linear/linked-list.md' },
+                { text: 'queue', link: '/code/dsa/linear/queue.md' },]
+        },
+        {
+            text: 'collection', collapsed: true, items: [
+                { text: 'Hash Table', link: '/code/dsa/collection/hash.md' },
+                { text: 'QA', link: '/code/dsa/collection/qa.md' },
+                { text: '集合结构', link: '/code/dsa/collection/' },]
+        },
+        {
+            text: 'tree', collapsed: true, items: [
+                { text: 'Union-find', link: '/code/dsa/tree/union-find.md' },
+                { text: 'QA', link: '/code/dsa/tree/qa.md' },
+                { text: 'Rb tree', link: '/code/dsa/tree/rb-tree.md' },
+                { text: 'Trie', link: '/code/dsa/tree/trie.md' },
+                { text: 'B tree', link: '/code/dsa/tree/b-tree.md' },
+                { text: '树形结构', link: '/code/dsa/tree/' },
+                { text: 'Balanced Tree', link: '/code/dsa/tree/balanced-tree.md' },
+            ]
+        },
+        {
+            text: 'graph', collapsed: true, items: [
+                { text: 'QA', link: '/code/dsa/graph/qa.md' },
+                { text: '图形结构', link: '/code/dsa/graph/' },
+            ]
+        },
+    ],
+
+    '/code/interview/': [
+        { text: '算法与数据结构', link: '/code/interview/dsa.md' },
+        { text: '编译', link: '/code/interview/compile.md' },
+        { text: '程序设计', link: '/code/interview/program.md' },
+        { text: '基础知识', link: '/code/interview/basin.md' },
+        { text: '差不多得了', link: '/code/interview/' },
+        { text: '数据库', link: '/code/interview/db.md' },
+    ],
+    '/code/cpp/': [
+        { text: '特性', link: '/code/cpp/' },
+        { text: '代码风格', link: '/code/cpp/style.md' },
+        { text: '复杂声明', link: '/code/cpp/complex-declaration.md' },
+        { text: 'printf', link: '/code/cpp/printf.md' },
+        { text: '程序题', link: '/code/cpp/code.md' },
+        { text: 'C 与 C++', link: '/code/cpp/c-cpp-diff.md' },
+        {
+            text: 'concept', collapsed: true, items: [
+                { text: '类', link: '/code/cpp/concept/class.md' },
+                { text: '引用', link: '/code/cpp/concept/reference.md' },
+                { text: 'STL', link: '/code/cpp/concept/stl.md' },
+                { text: '堆栈 内存', link: '/code/cpp/concept/stack_memory.md' },
+                { text: 'const', link: '/code/cpp/concept/const.md' },
+                { text: '指针', link: '/code/cpp/concept/pointer.md' },
+                { text: '原子', link: '/code/cpp/concept/atomic.md' },
+                { text: '虚函数', link: '/code/cpp/concept/virtual.md' },
+                { text: '概念辨析', link: '/code/cpp/concept/' },
+                { text: '并发', link: '/code/cpp/concept/concurrent.md' },
+                { text: '异常', link: '/code/cpp/concept/exception.md' },
+                { text: '运算符', link: '/code/cpp/concept/operator.md' },
+                { text: 'lambda', link: '/code/cpp/concept/lambda.md' },
+            ]
+        }, {
+            text: 'tips', collapsed: true, items: [
+                { text: 'check OS with a preprocessor directive', link: '/code/cpp/tips/check-os.md' },
+                { text: '遇到的问题速查', link: '/code/cpp/tips/qa.md' },
+                { text: 'base', link: '/code/cpp/tips/base.md' },
+                { text: '一些要点', link: '/code/cpp/tips/tip.md' },
+            ]
+        }, {
+            text: 'lib', collapsed: true, items: [
+                { text: '内存检测', link: '/code/cpp/lib/asan.md' },
+                { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON.md' },
+                { text: 'actor', link: '/code/cpp/lib/actor.md' },
+                { text: 'BERT', link: '/code/cpp/lib/bert.md' },
+                { text: 'Reactor', link: '/code/cpp/lib/reactor.md' },
+                { text: 'epoll', link: '/code/cpp/lib/epoll.md' },
+            ]
+        }, {
+            text: 'thread-mutex', collapsed: true, items: [
+                { text: 'Threads and Mutexes', link: '/code/cpp/thread-mutex/threads-and-mutexes.md' },
+                { text: '各种锁', link: '/code/cpp/thread-mutex/mutex.md' },
+                { text: 'Thread', link: '/code/cpp/thread-mutex/thread.md' },
+                { text: '线程 锁', link: '/code/cpp/thread-mutex/' },
+                { text: '4 Easy Tips for Using Threads and Mutexes in C++', link: '/code/cpp/thread-mutex/4-easy-tips-on-using-threads-and-mutexes-in-cpp.md' },
+            ]
+        },
+    ],
+
+    '/code/other-code/': [
+        { text: '今天码了 🐎', link: '/code/other-code/' },
+        { text: '非技术问题', link: '/code/other-code/non-tech.md' },
+        { text: 'Python', link: '/code/other-code/python.md' },
+        { text: '配环境', link: '/code/other-code/config-env.md' },
+        { text: '疑难排查', link: '/code/other-code/problems.md' },
+        { text: '正则表达式', link: '/code/other-code/regex.md' },
+        { text: 'Rust', link: '/code/other-code/rust.md' },
+        { text: '瞎玩', link: '/code/other-code/stroll.md' },
+        { text: '一些有的没的', link: '/code/other-code/others.md' },
+        { text: '编码习惯', link: '/code/other-code/habit.md' },
+        { text: 'Shell', link: '/code/other-code/shell.md' },
+        {
+            text: 'sys-design', collapsed: true, items: [
+                { text: '设计模式', link: '/code/other-code/sys-design/design-pattern.md' },
+                { text: 'QA', link: '/code/other-code/sys-design/qa.md' },
+            ]
+        }, {
+            text: 'distributed', collapsed: true, items: [
+                { text: 'Raft论文', link: '/code/other-code/distributed/raft.md' },
+                { text: 'PAXOS', link: '/code/other-code/distributed/paxos.md' },
+                { text: 'refer', link: '/code/other-code/distributed/kafka/refer.md' },
+            ]
+        }, {
+            text: 'network', collapsed: true, items: [
+                { text: 'QA', link: '/code/other-code/network/qa.md' },
+            ]
+        }, {
+            text: 'lua', collapsed: true, items: [
+                { text: 'lua深入', link: '/code/other-code/lua/2022-07-22-lua-深入.md' },
+                { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test.md' },
+                { text: 'lua学习记录', link: '/code/other-code/lua/2021-11-01-lua学习记录.md' },
+            ],
+        }, {
+            text: 'db', collapsed: true, items: [
+                { text: 'ODPS', link: '/code/other-code/db/odps.md' },
+                { text: 'DB2', link: '/code/other-code/db/db2.md' },
+                { text: 'SQL', link: '/code/other-code/db/sql.md' },
+                { text: '达梦', link: '/code/other-code/db/dameng.md' },
+                { text: 'mongoDB使用记录', link: '/code/other-code/db/mongoDB.md' },
+                { text: '数据库', link: '/code/other-code/db/database.md' },
+            ]
+        }, {
+            text: 'future', collapsed: true, items: [
+                { text: 'Prepare', link: '/code/other-code/future/prepare.md' },
+                { text: 'Future and Goal', link: '/code/other-code/future/future.md' },
+                { text: '题库每日', link: '/code/other-code/future/practice.md' },
+            ]
+        }, {
+            text: 'front-end', collapsed: true, items: [
+                { text: 'React Native', link: '/code/other-code/front-end/react-native.md' },
+                { text: 'css', link: '/code/other-code/front-end/css.md' },
+                { text: '前端', link: '/code/other-code/front-end/qa.md' },
+                { text: 'Vue', link: '/code/other-code/front-end/vue.md' },
+                { text: 'Javascript', link: '/code/other-code/front-end/javascript.md' },
+                { text: 'Sol', link: '/code/other-code/front-end/sol.md' },
+                { text: 'VuePress', link: '/code/other-code/front-end/vuepress.md' },
+                { text: 'Nuxt', link: '/code/other-code/front-end/nuxt.md' },
+            ]
+        }, {
+            text: 'os', collapsed: true, items: [
+                { text: 'QA', link: '/code/other-code/os/qa.md' },
+            ]
+        },
+    ],
+
 }

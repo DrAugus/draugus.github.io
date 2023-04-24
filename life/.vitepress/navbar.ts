@@ -33,5 +33,17 @@ export const navbar = [
     ],
     activeMatch: '^/arts',
   },
+  {
+    text: '编程',
+    items: [
+      { text: '主页', link: '/code/' },
+      { text: 'C++', link: '/code/cpp/' },
+      { text: 'DSA', link: '/code/dsa/' },
+      { text: '代码笔记', link: '/code/code-notes/' },
+      { text: '八股文', link: '/code/interview/' },
+      { text: '其他代码', link: '/code/other-code/' },
+    ],
+    activeMatch: '^/code',
+  },
 
 ]
