@@ -1,7 +1,9 @@
 import os
+import op_file
 
 current_depth = 0
 all_filename = []
+
 output_filename = '.augus_output'
 exclude_path = [
     output_filename,
@@ -14,10 +16,19 @@ exclude_path = [
 ]
 root_dir = os.getcwd()
 sub_dir = "life/code/"
-link_pre = "/trip/abroad"
+link_pre = "/code"
+
+depth1_dirs = []
+depth1_path = []
 
 depth2_dirs = []
 depth2_path = []
+
+
+def print_list(l):
+    for i in l:
+        print(i)
+
 
 def list_all_files(dirs):
     global current_depth
@@ -30,15 +41,13 @@ def list_all_files(dirs):
     # 获取所有一级目录
     if current_depth == 0:
         # print(l1)
-        depth1_dirs = []
-        depth1_path = []
         for i in range(0, len(l1)):
             path = os.path.join(dirs, l1[i])
             if os.path.isdir(path):
                 depth1_path.append(path)
                 depth1_dirs.append(l1[i])
         print(depth1_dirs)
-        print(depth1_path)
+        print_list(depth1_path)
 
     # 获取所有 二级目录
     if current_depth == 1:
@@ -49,8 +58,8 @@ def list_all_files(dirs):
                 depth2_path.append(path)
                 depth2_dirs.append(l1[i])
         print(depth2_dirs)
-        print(depth2_path)
-        
+        print_list(depth2_path)
+
     all_filename.append(l1)
     print(current_depth)
 
@@ -70,15 +79,25 @@ def list_all_files(dirs):
 
 
 def format_line(filename):
-    first_line = ''
+    res_line = ''
     # print(root_dir, filename)
     with open(os.path.join(root_dir, sub_dir + filename), 'r') as f:
-        first_line = f.readline()
-        first_line = first_line[2:]
-        first_line = first_line.rstrip('\n')
+        line = f.readline()
+        while line:
+            if line.startswith('# '):
+                res_line = line[2:]
+                res_line = res_line.rstrip('\n')
+                break
+
+            if line.startswith('title: '):
+                res_line = line[7:]
+                res_line = res_line.rstrip('\n')
+                break
+
+            line = f.readline()
 
     pre = 'url_life'
-    res = f"{{ text: '{first_line}', link: '{link_pre}{filename}' }},"
+    res = f"{{ text: '{res_line}', link: '{link_pre}{filename}' }},"
     # res = pre + ' + "' + s + '",'
     res += '\n'
     return res
@@ -97,7 +116,7 @@ def display(filename):
     return display_str
 
 
-def prefix_dir(current_dir, arr):
+def dir_rm_prefix(current_dir, arr):
     return [s.replace(current_dir, "") for s in arr]
 
 
@@ -105,15 +124,26 @@ def write2file():
     os.chdir(os.path.join(root_dir, sub_dir))
     current_dir = os.getcwd()
 
-    lll = list_all_files(current_dir)
-    lll = prefix_dir(current_dir, lll)
+    all_file_path_with_prefix = list_all_files(current_dir)
+    all_file_path = dir_rm_prefix(current_dir, all_file_path_with_prefix)
+    # 把当前目录前缀也要加上
+    all_file_path = [link_pre + s for s in all_file_path]
+    print_list(all_file_path)
 
-    # print(all_filename)
+    # print_list(all_filename)
+
+    print('当前目录下所有文件及目录个数: ', len(all_file_path))
+    print('一级目录个数 :', len(depth1_dirs))
+    print('二级目录个数 :', len(depth2_dirs))
+
+    cmd = f"find {current_dir} -type f | wc -l"
+    obj = os.popen(cmd)
+    print('当前目录下所有文件个数: ', obj.read())
 
     # 使用 with 关键字打开文件
-    with open(output_filename, "w") as f:
-        # 将输出重定向到文件
-        print(display(lll), file=f)
+    # with open(output_filename, "w") as f:
+    #     # 将输出重定向到文件
+    #     print(display(all_file_path), file=f)
 
 
 if __name__ == '__main__':
