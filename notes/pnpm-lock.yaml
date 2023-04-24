@@ -23,8 +23,8 @@ devDependencies:
     specifier: 3.4.2
     version: 3.4.2(@types/node@18.15.11)(rollup@3.20.3)(typescript@5.0.4)
   vue-echarts:
-    specifier: ^6.5.4
-    version: 6.5.4(echarts@5.4.2)
+    specifier: ^6.5.5
+    version: 6.5.5(echarts@5.4.2)
 
 packages:
 
@@ -6826,8 +6826,8 @@ packages:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
     dev: true
 
-  /vue-echarts@6.5.4(echarts@5.4.2):
-    resolution: {integrity: sha512-pLJTk2hfhauoWdmiZGXByAtcO6bpfnAS+jkJqKimSBSV5I5ckh2nka9duLlIVbTvQOEb2tFa0XiXjACQNcEfpA==}
+  /vue-echarts@6.5.5(echarts@5.4.2):
+    resolution: {integrity: sha512-KJD1MSyoMQ33q8M4hM45OYeSC+t7LzesIXQOrkRSXv4xhOi0iN+6yEjQuIuqRB9zZGCT2J4bK3eQ+1ttdz4Uag==}
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.5
