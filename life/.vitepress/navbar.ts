@@ -50,6 +50,8 @@ export const navbar = [
     items: [
       { text: '学习', link: '/study/' },
       { text: '职业', link: '/career/' },
+      { text: '想法', link: '/thought/' },
+      { text: '牢骚', link: '/grumbling/' },
     ],
   },
 

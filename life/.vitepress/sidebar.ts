@@ -481,4 +481,20 @@ export const sidebar = {
         },
     ],
 
+    '/thought/': [
+        { text: '活得像一个机器人', link: '/thought/life-bot.md' },
+        { text: '怜悯', link: '/thought/pity.md' },
+        { text: '结婚', link: '/thought/marry.md' },
+        { text: '命运的织机', link: '/thought/portended-fate.md' },
+        { text: '想法', link: '/thought/' },
+        { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film.md' },
+    ],
+    '/grumbling/': [
+        { text: '一次淘宝经历', link: '/grumbling/1.md' },
+        { text: '牢骚', link: '/grumbling/' },
+    ],
+
+    // 待定
+
+
 }
