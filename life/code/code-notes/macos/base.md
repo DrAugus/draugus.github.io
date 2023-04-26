@@ -1,5 +1,4 @@
 ---  
-title: mac primary
 date: 2022-09-26 16:42:00
 category:
 
@@ -20,6 +19,10 @@ tag:
 
 - 第一种方法是在`finder`中按下`command+shift+.`键。
 - 第二种方法是在命令行输入如下命令`defaults write com.apple.Finder AppleShowAllFiles YES`
+
+## 桌面切换
+
+control + 左右键
 
 ## mac 多屏幕固定 dock
 
