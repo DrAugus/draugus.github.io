@@ -460,8 +460,12 @@ export const sidebar = {
     //
     //
     '/study/': [
-        { text: '高考', link: '/study/gaokao' },
+        { text: '各种考试', link: '/study/' },
+        { text: '高考', link: '/study/gaokao.md' },
+        { text: '散篇1', link: '/study/temp1.md' },
+        { text: '散篇2', link: '/study/temp2.md' },
     ],
+
     '/career/': [
         { text: '简历', link: '/career/cv.md' },
         { text: '软考高级系统架构', link: '/career/ruankao-high-lv.md' },
@@ -482,6 +486,7 @@ export const sidebar = {
     ],
 
     '/thought/': [
+        { text: '这又是什么呢', link: '/thought/temp.md' },
         { text: '活得像一个机器人', link: '/thought/life-bot.md' },
         { text: '怜悯', link: '/thought/pity.md' },
         { text: '结婚', link: '/thought/marry.md' },
@@ -489,10 +494,13 @@ export const sidebar = {
         { text: '想法', link: '/thought/' },
         { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film.md' },
     ],
+
     '/grumbling/': [
         { text: '一次淘宝经历', link: '/grumbling/1.md' },
         { text: '牢骚', link: '/grumbling/' },
+        { text: '喷子', link: '/grumbling/2.md' },
     ],
+
 
     // 待定
 
