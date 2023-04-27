@@ -52,6 +52,8 @@ export const navbar = [
       { text: '职业', link: '/career/' },
       { text: '想法', link: '/thought/' },
       { text: '牢骚', link: '/grumbling/' },
+      { text: '事故', link: '/accident/' },
+      { text: '偷乐', link: '/funny/' },
     ],
   },
 
