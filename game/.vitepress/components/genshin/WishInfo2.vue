@@ -6,39 +6,29 @@
   <br><br>
 
 
-  <table>
-    <tr>
-      <th>版本</th>
-      <th>日期</th>
-      <th>祈愿信息</th>
-      <th>5星(up次数)</th>
-
-    </tr>
-    <tr v-for="(v, i) in char">
-
-      <td>{{ v.version }}</td>
-      <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
-      <td>
-        <img v-bind:src="'/image/genshin/wish/' +
-          replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" @error="replaceImg" alt="">
-      </td>
-      <td>{{ CHARACTER[v.wish5star].name }} [{{ v.image }}]</td>
-
-    </tr>
-  </table>
+  <ul>
+    <li v-for="(v, i) in char">
+      <span class="f-w-600"> {{ modifyChar(v.wish5star) }} </span>
+      <Badge :text="v.version"></Badge>
+      {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
+      <span v-for="(vv, ii) in v.wish4star">
+        {{ modifyChar(vv) + ' ' }}
+      </span>
+    </li>
+  </ul>
 </template>
 
 <script>
 import dayjs from "dayjs";
 import { WISH } from "./wish";
-import { CHARACTER } from "./characters";
+import { modifyChar, CHARACTER } from "./characters";
 import "dayjs/locale/zh";
 import { replaceAndLow, formatDayjs } from "./utils";
 
 dayjs.locale("zh");
 
 export default {
-  name: "TimelineTable",
+  name: "WishInfo",
   data() {
     return {
       char: WISH.characters,
@@ -46,6 +36,7 @@ export default {
       replaceAndLow,
       dayjs,
       formatDayjs,
+      modifyChar,
     };
   },
   methods: {
@@ -72,4 +63,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.f-w-600 {
+  font-weight: 600;
+}
+</style>

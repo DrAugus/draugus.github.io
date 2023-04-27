@@ -22,7 +22,7 @@ export interface Characters {
   cultivate: Cultivate
 }
 
-export const modifyChar = (id: string) => !id ? '' : CHARACTER[id].name
+export const modifyChar = (id: string) => !id ? '' : CHARACTER[id]?.name
 
 // https://github.com/theBowja/genshin-db
 // todo 后续改为 db
