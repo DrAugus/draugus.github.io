@@ -1,19 +1,18 @@
 <template>
-
   <v-chart class="chart" :option="option" />
-
 </template>
   
 <script>
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { UniversalTransition } from 'echarts/features';
-import { PieChart, LineChart } from "echarts/charts";
+import { PieChart, LineChart, BarChart } from "echarts/charts";
 import {
   TitleComponent,
   ToolboxComponent,
   TooltipComponent,
   LegendComponent,
+  GridComponent,
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
 import "echarts/lib/component/grid"
@@ -21,12 +20,14 @@ import "echarts/lib/component/grid"
 use([
   UniversalTransition,
   CanvasRenderer,
+  BarChart,
   PieChart,
   LineChart,
   TitleComponent,
   ToolboxComponent,
   TooltipComponent,
   LegendComponent,
+  GridComponent,
 ]);
 
 export default {
@@ -34,7 +35,7 @@ export default {
   components: {
     VChart,
   },
-  props:{
+  props: {
     option: Object,
   },
   provide: {
