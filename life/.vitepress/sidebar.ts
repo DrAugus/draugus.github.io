@@ -7,11 +7,12 @@ export const sidebar = {
     ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
-        { text: '探索', link: '/trip/explore' },
-        { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
-        { text: '境外卡办理指南', link: '/trip/card' },
-        { text: '签证', link: '/trip/visa' },
-        { text: '护照', link: '/trip/passport' },
+        { text: '探索', link: '/trip/explore.md' },
+        { text: '护照和签证的区别', link: '/trip/passport-vs-visa.md' },
+        { text: '境外卡办理指南', link: '/trip/card.md' },
+        { text: '签证', link: '/trip/visa.md' },
+        { text: '护照', link: '/trip/passport.md' },
+        { text: '飞机', link: '/trip/airfare-price.md' },
     ],
     '/trip/china/': [
         { text: '上海', link: '/trip/china/shanghai' },

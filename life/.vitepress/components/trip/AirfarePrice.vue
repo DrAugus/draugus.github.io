@@ -3,7 +3,7 @@
 </template>
   
 <script>
-import EChartsModel from "./EChartsModel.vue"
+import EChartsModel from "../EChartsModel.vue"
 
 const opt = {
     title: {
