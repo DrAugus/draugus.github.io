@@ -7,12 +7,12 @@ export const sidebar = {
     ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
-        { text: '探索', link: '/trip/explore.md' },
-        { text: '护照和签证的区别', link: '/trip/passport-vs-visa.md' },
-        { text: '境外卡办理指南', link: '/trip/card.md' },
-        { text: '签证', link: '/trip/visa.md' },
-        { text: '护照', link: '/trip/passport.md' },
-        { text: '飞机', link: '/trip/airfare-price.md' },
+        { text: '探索', link: '/trip/explore' },
+        { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
+        { text: '境外卡办理指南', link: '/trip/card' },
+        { text: '签证', link: '/trip/visa' },
+        { text: '护照', link: '/trip/passport' },
+        { text: '飞机', link: '/trip/airfare-price' },
     ],
     '/trip/china/': [
         { text: '上海', link: '/trip/china/shanghai' },
@@ -216,73 +216,73 @@ export const sidebar = {
     //
 
     '/code/code-notes/': [
-        { text: 'Compile', link: '/code/code-notes/compile.md' },
-        { text: 'gcc', link: '/code/code-notes/gcc.md' },
-        { text: 'Markdown', link: '/code/code-notes/markdown.md' },
-        { text: 'vim', link: '/code/code-notes/vim.md' },
-        { text: 'Makefile', link: '/code/code-notes/Makefile.md' },
-        { text: 'GitHub', link: '/code/code-notes/github.md' },
-        { text: 'Docus', link: '/code/code-notes/docus.md' },
-        { text: 'xcode', link: '/code/code-notes/xcode.md' },
-        { text: 'svn', link: '/code/code-notes/svn.md' },
-        { text: 'CMakeLists', link: '/code/code-notes/CMakeLists.md' },
+        { text: 'Compile', link: '/code/code-notes/compile' },
+        { text: 'gcc', link: '/code/code-notes/gcc' },
+        { text: 'Markdown', link: '/code/code-notes/markdown' },
+        { text: 'vim', link: '/code/code-notes/vim' },
+        { text: 'Makefile', link: '/code/code-notes/Makefile' },
+        { text: 'GitHub', link: '/code/code-notes/github' },
+        { text: 'Docus', link: '/code/code-notes/docus' },
+        { text: 'xcode', link: '/code/code-notes/xcode' },
+        { text: 'svn', link: '/code/code-notes/svn' },
+        { text: 'CMakeLists', link: '/code/code-notes/CMakeLists' },
         { text: '指南', link: '/code/code-notes/' },
-        { text: 'RBAC', link: '/code/code-notes/rbac.md' },
-        { text: 'Excel', link: '/code/code-notes/excel.md' },
-        { text: 'JetBrains', link: '/code/code-notes/jetbrains.md' },
-        { text: 'Gitlab', link: '/code/code-notes/gitlab.md' },
+        { text: 'RBAC', link: '/code/code-notes/rbac' },
+        { text: 'Excel', link: '/code/code-notes/excel' },
+        { text: 'JetBrains', link: '/code/code-notes/jetbrains' },
+        { text: 'Gitlab', link: '/code/code-notes/gitlab' },
         {
             text: 'tools', collapsed: true, items: [
-                { text: 'Jenkins', link: '/code/code-notes/tools/Jenkins.md' },
-                { text: 'Algolia', link: '/code/code-notes/tools/algolia.md' },
-                { text: 'TMDB', link: '/code/code-notes/tools/tmdb.md' },
-                { text: 'Mergify', link: '/code/code-notes/tools/mergify.md' },
-                { text: 'Vercel', link: '/code/code-notes/tools/vercel.md' },
-                { text: 'gitalk', link: '/code/code-notes/tools/gitalk.md' },
+                { text: 'Jenkins', link: '/code/code-notes/tools/Jenkins' },
+                { text: 'Algolia', link: '/code/code-notes/tools/algolia' },
+                { text: 'TMDB', link: '/code/code-notes/tools/tmdb' },
+                { text: 'Mergify', link: '/code/code-notes/tools/mergify' },
+                { text: 'Vercel', link: '/code/code-notes/tools/vercel' },
+                { text: 'gitalk', link: '/code/code-notes/tools/gitalk' },
             ]
         },
         {
             text: 'macos', collapsed: true, items: [
-                { text: 'mac primary', link: '/code/code-notes/macos/base.md' },
-                { text: 'solution', link: '/code/code-notes/macos/sol.md' },
+                { text: 'mac primary', link: '/code/code-notes/macos/base' },
+                { text: 'solution', link: '/code/code-notes/macos/sol' },
             ]
         },
         {
             text: 'software', collapsed: true, items: [
-                { text: 'web tools', link: '/code/code-notes/software/webtools.md' },
-                { text: '推荐软件安装', link: '/code/code-notes/software/1.install.md' },
-                { text: 'fish cmd', link: '/code/code-notes/software/fish.md' },
-                { text: 'Tabby', link: '/code/code-notes/software/tabby.md' },
-                { text: 'Git', link: '/code/code-notes/software/git.md' },
-                { text: 'Docker', link: '/code/code-notes/software/docker.md' },
-                { text: 'VS Code', link: '/code/code-notes/software/vscode.md' },
-                { text: 'XShell', link: '/code/code-notes/software/xshell.md' },
+                { text: 'web tools', link: '/code/code-notes/software/webtools' },
+                { text: '推荐软件安装', link: '/code/code-notes/software/1.install' },
+                { text: 'fish cmd', link: '/code/code-notes/software/fish' },
+                { text: 'Tabby', link: '/code/code-notes/software/tabby' },
+                { text: 'Git', link: '/code/code-notes/software/git' },
+                { text: 'Docker', link: '/code/code-notes/software/docker' },
+                { text: 'VS Code', link: '/code/code-notes/software/vscode' },
+                { text: 'XShell', link: '/code/code-notes/software/xshell' },
             ]
         },
         {
             text: 'linux', collapsed: true, items: [
-                { text: 'gdb', link: '/code/code-notes/linux/gdb.md' },
-                { text: 'linux系统分类', link: '/code/code-notes/linux/sys_category.md' },
-                { text: '查看Linux的基本信息', link: '/code/code-notes/linux/sys_base_info.md' },
-                { text: 'Linux 问题收集', link: '/code/code-notes/linux/qa.md' },
-                { text: 'install', link: '/code/code-notes/linux/install.md' },
-                { text: 'linux记录  ', link: '/code/code-notes/linux/README.md' },
-                { text: 'cmd', link: '/code/code-notes/linux/command.md' },
-                { text: '指南', link: '/code/code-notes/linux/guide.md' },
+                { text: 'gdb', link: '/code/code-notes/linux/gdb' },
+                { text: 'linux系统分类', link: '/code/code-notes/linux/sys_category' },
+                { text: '查看Linux的基本信息', link: '/code/code-notes/linux/sys_base_info' },
+                { text: 'Linux 问题收集', link: '/code/code-notes/linux/qa' },
+                { text: 'install', link: '/code/code-notes/linux/install' },
+                { text: 'linux记录  ', link: '/code/code-notes/linux/README' },
+                { text: 'cmd', link: '/code/code-notes/linux/command' },
+                { text: '指南', link: '/code/code-notes/linux/guide' },
             ]
         },
         {
             text: 'windows', collapsed: true, items: [
-                { text: 'chocolatey', link: '/code/code-notes/windows/chocolatey.md' },
-                { text: '虚拟机记录    ', link: '/code/code-notes/windows/VirtualBox.md' },
-                { text: 'cmd指南', link: '/code/code-notes/windows/cmd.md' },
-                { text: 'windows11更新纪要', link: '/code/code-notes/windows/windows11-update.md' },
-                { text: '壁纸', link: '/code/code-notes/windows/wallpaper.md' },
+                { text: 'chocolatey', link: '/code/code-notes/windows/chocolatey' },
+                { text: '虚拟机记录    ', link: '/code/code-notes/windows/VirtualBox' },
+                { text: 'cmd指南', link: '/code/code-notes/windows/cmd' },
+                { text: 'windows11更新纪要', link: '/code/code-notes/windows/windows11-update' },
+                { text: '壁纸', link: '/code/code-notes/windows/wallpaper' },
             ]
         },
         {
             text: 'openai', collapsed: true, items: [
-                { text: 'ChatGPT', link: '/code/code-notes/openai/chatgpt.md' },
+                { text: 'ChatGPT', link: '/code/code-notes/openai/chatgpt' },
                 { text: 'OpenAI', link: '/code/code-notes/openai/' },
             ]
         },
@@ -290,170 +290,170 @@ export const sidebar = {
 
 
     '/code/dsa/': [
-        { text: 'QA', link: '/code/dsa/qa.md' },
-        { text: 'Recursion', link: '/code/dsa/recursion.md' },
+        { text: 'QA', link: '/code/dsa/qa' },
+        { text: 'Recursion', link: '/code/dsa/recursion' },
         { text: '算法与数据结构', link: '/code/dsa/' },
-        { text: '复杂度', link: '/code/dsa/complexity.md' },
+        { text: '复杂度', link: '/code/dsa/complexity' },
         {
             text: 'leetcode', collapsed: true, items: [
                 { text: 'LeetCode', link: '/code/dsa/leetcode/' },
-                { text: 'LC1114 解题方案', link: '/code/dsa/leetcode/lc-1114.md' },
+                { text: 'LC1114 解题方案', link: '/code/dsa/leetcode/lc-1114' },
             ]
         },
         {
             text: 'linear', collapsed: true, items: [
-                { text: 'stack', link: '/code/dsa/linear/stack.md' },
-                { text: 'QA', link: '/code/dsa/linear/qa.md' },
-                { text: 'array', link: '/code/dsa/linear/array.md' },
-                { text: 'heap', link: '/code/dsa/linear/heap.md' },
+                { text: 'stack', link: '/code/dsa/linear/stack' },
+                { text: 'QA', link: '/code/dsa/linear/qa' },
+                { text: 'array', link: '/code/dsa/linear/array' },
+                { text: 'heap', link: '/code/dsa/linear/heap' },
                 { text: '线性结构', link: '/code/dsa/linear/' },
-                { text: 'Linked list', link: '/code/dsa/linear/linked-list.md' },
-                { text: 'queue', link: '/code/dsa/linear/queue.md' },]
+                { text: 'Linked list', link: '/code/dsa/linear/linked-list' },
+                { text: 'queue', link: '/code/dsa/linear/queue' },]
         },
         {
             text: 'collection', collapsed: true, items: [
-                { text: 'Hash Table', link: '/code/dsa/collection/hash.md' },
-                { text: 'QA', link: '/code/dsa/collection/qa.md' },
+                { text: 'Hash Table', link: '/code/dsa/collection/hash' },
+                { text: 'QA', link: '/code/dsa/collection/qa' },
                 { text: '集合结构', link: '/code/dsa/collection/' },]
         },
         {
             text: 'tree', collapsed: true, items: [
-                { text: 'Union-find', link: '/code/dsa/tree/union-find.md' },
-                { text: 'QA', link: '/code/dsa/tree/qa.md' },
-                { text: 'Rb tree', link: '/code/dsa/tree/rb-tree.md' },
-                { text: 'Trie', link: '/code/dsa/tree/trie.md' },
-                { text: 'B tree', link: '/code/dsa/tree/b-tree.md' },
+                { text: 'Union-find', link: '/code/dsa/tree/union-find' },
+                { text: 'QA', link: '/code/dsa/tree/qa' },
+                { text: 'Rb tree', link: '/code/dsa/tree/rb-tree' },
+                { text: 'Trie', link: '/code/dsa/tree/trie' },
+                { text: 'B tree', link: '/code/dsa/tree/b-tree' },
                 { text: '树形结构', link: '/code/dsa/tree/' },
-                { text: 'Balanced Tree', link: '/code/dsa/tree/balanced-tree.md' },
+                { text: 'Balanced Tree', link: '/code/dsa/tree/balanced-tree' },
             ]
         },
         {
             text: 'graph', collapsed: true, items: [
-                { text: 'QA', link: '/code/dsa/graph/qa.md' },
+                { text: 'QA', link: '/code/dsa/graph/qa' },
                 { text: '图形结构', link: '/code/dsa/graph/' },
             ]
         },
     ],
 
     '/code/interview/': [
-        { text: '算法与数据结构', link: '/code/interview/dsa.md' },
-        { text: '编译', link: '/code/interview/compile.md' },
-        { text: '程序设计', link: '/code/interview/program.md' },
-        { text: '基础知识', link: '/code/interview/basin.md' },
+        { text: '算法与数据结构', link: '/code/interview/dsa' },
+        { text: '编译', link: '/code/interview/compile' },
+        { text: '程序设计', link: '/code/interview/program' },
+        { text: '基础知识', link: '/code/interview/basin' },
         { text: '差不多得了', link: '/code/interview/' },
-        { text: '数据库', link: '/code/interview/db.md' },
+        { text: '数据库', link: '/code/interview/db' },
     ],
     '/code/cpp/': [
         { text: '特性', link: '/code/cpp/' },
-        { text: '代码风格', link: '/code/cpp/style.md' },
-        { text: '复杂声明', link: '/code/cpp/complex-declaration.md' },
-        { text: 'printf', link: '/code/cpp/printf.md' },
-        { text: '程序题', link: '/code/cpp/code.md' },
-        { text: 'C 与 C++', link: '/code/cpp/c-cpp-diff.md' },
+        { text: '代码风格', link: '/code/cpp/style' },
+        { text: '复杂声明', link: '/code/cpp/complex-declaration' },
+        { text: 'printf', link: '/code/cpp/printf' },
+        { text: '程序题', link: '/code/cpp/code' },
+        { text: 'C 与 C++', link: '/code/cpp/c-cpp-diff' },
         {
             text: 'concept', collapsed: true, items: [
-                { text: '类', link: '/code/cpp/concept/class.md' },
-                { text: '引用', link: '/code/cpp/concept/reference.md' },
-                { text: 'STL', link: '/code/cpp/concept/stl.md' },
-                { text: '堆栈 内存', link: '/code/cpp/concept/stack_memory.md' },
-                { text: 'const', link: '/code/cpp/concept/const.md' },
-                { text: '指针', link: '/code/cpp/concept/pointer.md' },
-                { text: '原子', link: '/code/cpp/concept/atomic.md' },
-                { text: '虚函数', link: '/code/cpp/concept/virtual.md' },
+                { text: '类', link: '/code/cpp/concept/class' },
+                { text: '引用', link: '/code/cpp/concept/reference' },
+                { text: 'STL', link: '/code/cpp/concept/stl' },
+                { text: '堆栈 内存', link: '/code/cpp/concept/stack_memory' },
+                { text: 'const', link: '/code/cpp/concept/const' },
+                { text: '指针', link: '/code/cpp/concept/pointer' },
+                { text: '原子', link: '/code/cpp/concept/atomic' },
+                { text: '虚函数', link: '/code/cpp/concept/virtual' },
                 { text: '概念辨析', link: '/code/cpp/concept/' },
-                { text: '并发', link: '/code/cpp/concept/concurrent.md' },
-                { text: '异常', link: '/code/cpp/concept/exception.md' },
-                { text: '运算符', link: '/code/cpp/concept/operator.md' },
-                { text: 'lambda', link: '/code/cpp/concept/lambda.md' },
+                { text: '并发', link: '/code/cpp/concept/concurrent' },
+                { text: '异常', link: '/code/cpp/concept/exception' },
+                { text: '运算符', link: '/code/cpp/concept/operator' },
+                { text: 'lambda', link: '/code/cpp/concept/lambda' },
             ]
         }, {
             text: 'tips', collapsed: true, items: [
-                { text: 'check OS with a preprocessor directive', link: '/code/cpp/tips/check-os.md' },
-                { text: '遇到的问题速查', link: '/code/cpp/tips/qa.md' },
-                { text: 'base', link: '/code/cpp/tips/base.md' },
-                { text: '一些要点', link: '/code/cpp/tips/tip.md' },
+                { text: 'check OS with a preprocessor directive', link: '/code/cpp/tips/check-os' },
+                { text: '遇到的问题速查', link: '/code/cpp/tips/qa' },
+                { text: 'base', link: '/code/cpp/tips/base' },
+                { text: '一些要点', link: '/code/cpp/tips/tip' },
             ]
         }, {
             text: 'lib', collapsed: true, items: [
-                { text: '内存检测', link: '/code/cpp/lib/asan.md' },
-                { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON.md' },
-                { text: 'actor', link: '/code/cpp/lib/actor.md' },
-                { text: 'BERT', link: '/code/cpp/lib/bert.md' },
-                { text: 'Reactor', link: '/code/cpp/lib/reactor.md' },
-                { text: 'epoll', link: '/code/cpp/lib/epoll.md' },
+                { text: '内存检测', link: '/code/cpp/lib/asan' },
+                { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON' },
+                { text: 'actor', link: '/code/cpp/lib/actor' },
+                { text: 'BERT', link: '/code/cpp/lib/bert' },
+                { text: 'Reactor', link: '/code/cpp/lib/reactor' },
+                { text: 'epoll', link: '/code/cpp/lib/epoll' },
             ]
         }, {
             text: 'thread-mutex', collapsed: true, items: [
-                { text: 'Threads and Mutexes', link: '/code/cpp/thread-mutex/threads-and-mutexes.md' },
-                { text: '各种锁', link: '/code/cpp/thread-mutex/mutex.md' },
-                { text: 'Thread', link: '/code/cpp/thread-mutex/thread.md' },
+                { text: 'Threads and Mutexes', link: '/code/cpp/thread-mutex/threads-and-mutexes' },
+                { text: '各种锁', link: '/code/cpp/thread-mutex/mutex' },
+                { text: 'Thread', link: '/code/cpp/thread-mutex/thread' },
                 { text: '线程 锁', link: '/code/cpp/thread-mutex/' },
-                { text: '4 Easy Tips for Using Threads and Mutexes in C++', link: '/code/cpp/thread-mutex/4-easy-tips-on-using-threads-and-mutexes-in-cpp.md' },
+                { text: '4 Easy Tips for Using Threads and Mutexes in C++', link: '/code/cpp/thread-mutex/4-easy-tips-on-using-threads-and-mutexes-in-cpp' },
             ]
         },
     ],
 
     '/code/other-code/': [
-        { text: '非技术问题', link: '/code/other-code/non-tech.md' },
-        { text: 'Python', link: '/code/other-code/python.md' },
-        { text: '配环境', link: '/code/other-code/config-env.md' },
-        { text: '疑难排查', link: '/code/other-code/problems.md' },
-        { text: '正则表达式', link: '/code/other-code/regex.md' },
-        { text: 'Rust', link: '/code/other-code/rust.md' },
-        { text: '瞎玩', link: '/code/other-code/stroll.md' },
-        { text: '一些有的没的', link: '/code/other-code/others.md' },
-        { text: '编码习惯', link: '/code/other-code/habit.md' },
-        { text: 'Shell', link: '/code/other-code/shell.md' },
+        { text: '非技术问题', link: '/code/other-code/non-tech' },
+        { text: 'Python', link: '/code/other-code/python' },
+        { text: '配环境', link: '/code/other-code/config-env' },
+        { text: '疑难排查', link: '/code/other-code/problems' },
+        { text: '正则表达式', link: '/code/other-code/regex' },
+        { text: 'Rust', link: '/code/other-code/rust' },
+        { text: '瞎玩', link: '/code/other-code/stroll' },
+        { text: '一些有的没的', link: '/code/other-code/others' },
+        { text: '编码习惯', link: '/code/other-code/habit' },
+        { text: 'Shell', link: '/code/other-code/shell' },
         {
             text: 'sys-design', collapsed: true, items: [
-                { text: '设计模式', link: '/code/other-code/sys-design/design-pattern.md' },
-                { text: 'QA', link: '/code/other-code/sys-design/qa.md' },
+                { text: '设计模式', link: '/code/other-code/sys-design/design-pattern' },
+                { text: 'QA', link: '/code/other-code/sys-design/qa' },
             ]
         }, {
             text: 'distributed', collapsed: true, items: [
-                { text: 'Raft论文', link: '/code/other-code/distributed/raft.md' },
-                { text: 'PAXOS', link: '/code/other-code/distributed/paxos.md' },
-                { text: 'refer', link: '/code/other-code/distributed/kafka/refer.md' },
+                { text: 'Raft论文', link: '/code/other-code/distributed/raft' },
+                { text: 'PAXOS', link: '/code/other-code/distributed/paxos' },
+                { text: 'refer', link: '/code/other-code/distributed/kafka/refer' },
             ]
         }, {
             text: 'network', collapsed: true, items: [
-                { text: 'QA', link: '/code/other-code/network/qa.md' },
+                { text: 'QA', link: '/code/other-code/network/qa' },
             ]
         }, {
             text: 'lua', collapsed: true, items: [
-                { text: 'lua深入', link: '/code/other-code/lua/2022-07-22-lua-深入.md' },
-                { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test.md' },
-                { text: 'lua学习记录', link: '/code/other-code/lua/2021-11-01-lua学习记录.md' },
+                { text: 'lua深入', link: '/code/other-code/lua/2022-07-22-lua-深入' },
+                { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test' },
+                { text: 'lua学习记录', link: '/code/other-code/lua/2021-11-01-lua学习记录' },
             ],
         }, {
             text: 'db', collapsed: true, items: [
-                { text: 'ODPS', link: '/code/other-code/db/odps.md' },
-                { text: 'DB2', link: '/code/other-code/db/db2.md' },
-                { text: 'SQL', link: '/code/other-code/db/sql.md' },
-                { text: '达梦', link: '/code/other-code/db/dameng.md' },
-                { text: 'mongoDB使用记录', link: '/code/other-code/db/mongoDB.md' },
-                { text: '数据库', link: '/code/other-code/db/database.md' },
+                { text: 'ODPS', link: '/code/other-code/db/odps' },
+                { text: 'DB2', link: '/code/other-code/db/db2' },
+                { text: 'SQL', link: '/code/other-code/db/sql' },
+                { text: '达梦', link: '/code/other-code/db/dameng' },
+                { text: 'mongoDB使用记录', link: '/code/other-code/db/mongoDB' },
+                { text: '数据库', link: '/code/other-code/db/database' },
             ]
         }, {
             text: 'future', collapsed: true, items: [
-                { text: 'Prepare', link: '/code/other-code/future/prepare.md' },
-                { text: 'Future and Goal', link: '/code/other-code/future/future.md' },
-                { text: '题库每日', link: '/code/other-code/future/practice.md' },
+                { text: 'Prepare', link: '/code/other-code/future/prepare' },
+                { text: 'Future and Goal', link: '/code/other-code/future/future' },
+                { text: '题库每日', link: '/code/other-code/future/practice' },
             ]
         }, {
             text: 'front-end', collapsed: true, items: [
-                { text: 'React Native', link: '/code/other-code/front-end/react-native.md' },
-                { text: 'css', link: '/code/other-code/front-end/css.md' },
-                { text: '前端', link: '/code/other-code/front-end/qa.md' },
-                { text: 'Vue', link: '/code/other-code/front-end/vue.md' },
-                { text: 'Javascript', link: '/code/other-code/front-end/javascript.md' },
-                { text: 'Sol', link: '/code/other-code/front-end/sol.md' },
-                { text: 'VuePress', link: '/code/other-code/front-end/vuepress.md' },
-                { text: 'Nuxt', link: '/code/other-code/front-end/nuxt.md' },
+                { text: 'React Native', link: '/code/other-code/front-end/react-native' },
+                { text: 'css', link: '/code/other-code/front-end/css' },
+                { text: '前端', link: '/code/other-code/front-end/qa' },
+                { text: 'Vue', link: '/code/other-code/front-end/vue' },
+                { text: 'Javascript', link: '/code/other-code/front-end/javascript' },
+                { text: 'Sol', link: '/code/other-code/front-end/sol' },
+                { text: 'VuePress', link: '/code/other-code/front-end/vuepress' },
+                { text: 'Nuxt', link: '/code/other-code/front-end/nuxt' },
             ]
         }, {
             text: 'os', collapsed: true, items: [
-                { text: 'QA', link: '/code/other-code/os/qa.md' },
+                { text: 'QA', link: '/code/other-code/os/qa' },
             ]
         },
     ],
@@ -462,78 +462,79 @@ export const sidebar = {
     //
     '/study/': [
         { text: '各种考试', link: '/study/' },
-        { text: '高考', link: '/study/gaokao.md' },
-        { text: '散篇1', link: '/study/temp1.md' },
-        { text: '散篇2', link: '/study/temp2.md' },
+        { text: '高考', link: '/study/gaokao' },
+        { text: '散篇1', link: '/study/temp1' },
+        { text: '散篇2', link: '/study/temp2' },
         {
             text: '杂谈', collapsed: true, items: [
-                { text: '痛经', link: '/study/rambling/dysmenorrhoea.md' },
-                { text: '电网', link: '/study/rambling/state-grid.md' },
-                { text: '锻炼', link: '/study/rambling/exercise.md' },
-                { text: '梅花 vs 桃花 vs 樱花', link: '/study/rambling/flower.md' },
-                { text: '学位服', link: '/study/rambling/academic-dress.md' },
-                { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill.md' },
-                { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor.md' },
-                { text: '南阳——沈阳  ', link: '/study/rambling/nanyang2shenyang.md' },
-                { text: '身份证', link: '/study/rambling/id_card.md' },
+                { text: '痛经', link: '/study/rambling/dysmenorrhoea' },
+                { text: '电网', link: '/study/rambling/state-grid' },
+                { text: '锻炼', link: '/study/rambling/exercise' },
+                { text: '梅花 vs 桃花 vs 樱花', link: '/study/rambling/flower' },
+                { text: '学位服', link: '/study/rambling/academic-dress' },
+                { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill' },
+                { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor' },
+                { text: '南阳——沈阳  ', link: '/study/rambling/nanyang2shenyang' },
+                { text: '身份证', link: '/study/rambling/id_card' },
             ]
         },
         {
             text: '演讲文稿', collapsed: true, items: [
-                { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/study/speech/craig-federighi.md' },
+                { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/study/speech/craig-federighi' },
             ]
         },
     ],
 
     '/career/': [
-        { text: '简历', link: '/career/cv.md' },
-        { text: '软考高级系统架构', link: '/career/ruankao-high-lv.md' },
-        { text: '公务员区别', link: '/career/gwy-diff.md' },
+        { text: '简历', link: '/career/cv' },
+        { text: '软考高级系统架构', link: '/career/ruankao-high-lv' },
+        { text: '公务员区别', link: '/career/gwy-diff' },
         { text: '职场人', link: '/career/' },
-        { text: '年度报税', link: '/career/tax.md' },
-        { text: '互联网工作记录', link: '/career/record-net-work.md' },
+        { text: '年度报税', link: '/career/tax' },
+        { text: '互联网工作记录', link: '/career/record-net-work' },
         {
             text: 'amazon', collapsed: true, items: [
-                { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles.md' },
+                { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles' },
             ]
         },
         {
             text: 'google', collapsed: true, items: [
-                { text: 'Google GCA interviews (what to expect & how to prepare)', link: '/career/google/gca.md' },
+                { text: 'Google GCA interviews (what to expect & how to prepare)', link: '/career/google/gca' },
             ]
         },
     ],
 
     '/thought/': [
-        { text: '这又是什么呢', link: '/thought/temp.md' },
-        { text: '活得像一个机器人', link: '/thought/life-bot.md' },
-        { text: '怜悯', link: '/thought/pity.md' },
-        { text: '结婚', link: '/thought/marry.md' },
-        { text: '命运的织机', link: '/thought/portended-fate.md' },
+        { text: '这又是什么呢', link: '/thought/temp' },
+        { text: '活得像一个机器人', link: '/thought/life-bot' },
+        { text: '怜悯', link: '/thought/pity' },
+        { text: '结婚', link: '/thought/marry' },
+        { text: '命运的织机', link: '/thought/portended-fate' },
         { text: '想法', link: '/thought/' },
-        { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film.md' },
+        { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film' },
     ],
 
     '/grumbling/': [
-        { text: '一次淘宝经历', link: '/grumbling/1.md' },
+        { text: '一次淘宝经历', link: '/grumbling/1' },
         { text: '牢骚', link: '/grumbling/' },
-        { text: '喷子', link: '/grumbling/2.md' },
+        { text: '喷子', link: '/grumbling/2' },
     ],
 
 
     // 待定
 
     '/accident/': [
-        { text: '2018年重庆万州公交车坠江事故', link: '/accident/2018-Chongqing-bus-crash.md' },
-        { text: '2022年中国东方航空5735号班机空难', link: '/accident/2022-China-Eastern-Airlines-Flight-5735.md' },
+        { text: '2018年重庆万州公交车坠江事故', link: '/accident/2018-Chongqing-bus-crash' },
+        { text: '2022年中国东方航空5735号班机空难', link: '/accident/2022-China-Eastern-Airlines-Flight-5735' },
         { text: '事故', link: '/accident/' },
-        { text: '2020年贵州公交坠湖事故', link: '/accident/2020-Anshun-bus-crash.md' },
+        { text: '2020年贵州公交坠湖事故', link: '/accident/2020-Anshun-bus-crash' },
     ],
     '/funny/': [
-        { text: '西方文明为什么在近代会超越东方文明', link: '/funny/1.md' },
-        { text: '禁放烟花爆竹', link: '/funny/no-fireworks.md' },
-        { text: '三年疫情创造的246个名词', link: '/funny/covid-in-cn.md' },
-        { text: '有生之年系列', link: '/funny/lifetime_series.md' },
+        { text: '有生之年系列', link: '/funny/lifetime_series' },
+        { text: '西方文明为什么在近代会超越东方文明', link: '/funny/1' },
+        { text: '禁放烟花爆竹', link: '/funny/no-fireworks' },
+        { text: '三年疫情创造的246个名词', link: '/funny/covid-in-cn' },
+        { text: '调休', link: '/funny/tiaoxiu' },
     ],
 
 

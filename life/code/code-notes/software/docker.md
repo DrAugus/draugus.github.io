@@ -1,8 +1,11 @@
----
-icon: logos:docker-icon
----
 
 # Docker
+
+## cmd
+
+显示所有的容器，包括未运行的 `docker ps -a`  
+获取容器/镜像的元数据 `docker inspect`  
+显示运行中 docker 使用的 IP 地址 `docker inspect mycontainer1 | grep IPAddress`  
 
 ## install
 
