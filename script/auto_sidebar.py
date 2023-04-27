@@ -15,8 +15,9 @@ exclude_path = [
     # 'china','abroad'
 ]
 root_dir = os.getcwd()
-sub_dir = "life/career/"
-link_pre = "/career"
+dir_name = "trip"
+sub_dir = f"life/{dir_name}/"
+link_pre = f"/{dir_name}"
 
 # 一级目录
 depth1_dirs = []
@@ -164,6 +165,7 @@ def modify_display(m):
             vv = vv.replace("'text'", 'text')
             vv = vv.replace("'link'", 'link')
             vv = vv.replace("index.md", '')
+            vv = vv.replace(".md", '')
             arr.append(vv)
         arr.append('],\n')
     return arr
