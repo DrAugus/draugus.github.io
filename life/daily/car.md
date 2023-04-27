@@ -32,16 +32,16 @@ WARNING
 
 ### Benz
 
-![benz c](/car/benz_c.jpeg)
+![benz c](/img/car/benz_c.jpeg)
 
 ### Audi
 
 **A6L** THE BEST
 
-![audi a4](/car/audi_a4.png)
+![audi a4](/img/car/audi_a4.png)
 
 ### BMW
 
-![bmw 3](/car/bmw_3.jpeg)
+![bmw 3](/img/car/bmw_3.jpeg)
 
-![bmw x](/car/bmw_x.png)
+![bmw x](/img/car/bmw_x.png)

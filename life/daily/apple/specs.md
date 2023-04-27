@@ -74,16 +74,14 @@
 - 闪电转 USB-C 连接线
 - 资料
 
-::details
-    ::summary
-    点击查看图片
-    ::
+点击查看图片
+:::details
 
-![1](/apple/specs/airpods-max/color/green.jpg)
-![2](/apple/specs/airpods-max/color/silver.jpg)
-![3](/apple/specs/airpods-max/color/pink.jpg)
-![4](/apple/specs/airpods-max/color/sky_blue.jpg)
-![5](/apple/specs/airpods-max/color/space_gray.jpg)
-![6](/apple/specs/airpods-max/content.png)
-![7](/apple/specs/airpods-max/tip.png)
-::
+![1](/img/apple/specs/airpods-max/color/green.jpg)
+![2](/img/apple/specs/airpods-max/color/silver.jpg)
+![3](/img/apple/specs/airpods-max/color/pink.jpg)
+![4](/img/apple/specs/airpods-max/color/sky_blue.jpg)
+![5](/img/apple/specs/airpods-max/color/space_gray.jpg)
+![6](/img/apple/specs/airpods-max/content.png)
+![7](/img/apple/specs/airpods-max/tip.png)
+:::

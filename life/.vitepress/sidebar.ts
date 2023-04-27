@@ -13,6 +13,15 @@ export const sidebar = {
         { text: '日常', link: '/daily/' },
         { text: '房', link: '/daily/house' },
         { text: '小猫', link: '/daily/cat' },
+        {
+            text: '记录 Apple 使用体验', collapsed: true, items: [
+                { text: 'Apple官方日历订阅', link: '/daily/apple/calendar' },
+                { text: '价格波动', link: '/daily/apple/price' },
+                { text: '苹果究竟怎么了', link: '/daily/apple/reflect' },
+                { text: '技术规格', link: '/daily/apple/specs' },
+                { text: '设备价格', link: '/daily/apple/apple_price' },
+            ]
+        },
     ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
