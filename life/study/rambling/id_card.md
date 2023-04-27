@@ -1,6 +1,4 @@
 ---
-title: 身份证  
-icon: noto:identification-card 
 date: 2022-06-08 14:51:11  
 category: 
   - 语言     
@@ -21,12 +19,12 @@ tag:
 
 共有资料部分有以下九项，正面七项以天蓝字显示，背面二项以黑字显示。
 
-![1](/id_card/蒙古文.jpg)
-![1](/id_card/藏文.jpg)
-![1](/id_card/维吾尔文.jpg)
-![1](/id_card/朝鲜文.jpg)
-![1](/id_card/彝文.jpg)
-![1](/id_card/壮文.jpg)
+![1](/img/id_card/蒙古文.jpg)
+![1](/img/id_card/藏文.jpg)
+![1](/img/id_card/维吾尔文.jpg)
+![1](/img/id_card/朝鲜文.jpg)
+![1](/img/id_card/彝文.jpg)
+![1](/img/id_card/壮文.jpg)
 
 与民族无关，与户籍所在地有关。
 

@@ -4,7 +4,7 @@ icon: emojione-v1:bouquet-of-flowers
 
 # 梅花 vs 桃花 vs 樱花
 
-![plum_peach_cherry](/plum_peach_cherry.jpeg)
+![plum_peach_cherry](/img/plum_peach_cherry.jpeg)
 
 - 梅花:花瓣先端呈圆形。一节枝干上一朵花单独开放，无花梗。
 - 桃花:花瓣先端较尖，呈水滴状。一节枝干上两朵花对称开放，花梗较短。

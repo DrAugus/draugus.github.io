@@ -464,6 +464,28 @@ export const sidebar = {
         { text: '高考', link: '/study/gaokao.md' },
         { text: '散篇1', link: '/study/temp1.md' },
         { text: '散篇2', link: '/study/temp2.md' },
+        {
+            text: '杂谈', collapsed: true, items: [
+                { text: '痛经', link: '/study/rambling/dysmenorrhoea.md' },
+                { text: '西方文明为什么在近代会超越东方文明', link: '/study/rambling/1.md' },
+                { text: '禁放烟花爆竹', link: '/study/rambling/no-fireworks.md' },
+                { text: '电网', link: '/study/rambling/state-grid.md' },
+                { text: '锻炼', link: '/study/rambling/exercise.md' },
+                { text: '梅花 vs 桃花 vs 樱花', link: '/study/rambling/flower.md' },
+                { text: '三年疫情创造的246个名词', link: '/study/rambling/covid-in-cn.md' },
+                { text: '学位服', link: '/study/rambling/academic-dress.md' },
+                { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill.md' },
+                { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor.md' },
+                { text: '南阳——沈阳  ', link: '/study/rambling/nanyang2shenyang.md' },
+                { text: '有生之年系列', link: '/study/rambling/lifetime_series.md' },
+                { text: '身份证', link: '/study/rambling/id_card.md' },
+            ]
+        },
+        {
+            text: '演讲文稿', collapsed: true, items: [
+                { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/study/speech/craig-federighi.md' },
+            ]
+        },
     ],
 
     '/career/': [
