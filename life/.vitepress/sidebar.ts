@@ -5,6 +5,15 @@ export const sidebar = {
         { text: '做点什么吧', link: '/eat/cookbook' },
         { text: '真的不能吃', link: '/eat/block' },
     ],
+    '/daily/': [
+        { text: '买车吗', link: '/daily/car' },
+        { text: '户口', link: '/daily/hukou' },
+        { text: '月亮', link: '/daily/moon' },
+        { text: '日用价格', link: '/daily/goods-price' },
+        { text: '日常', link: '/daily/' },
+        { text: '房', link: '/daily/house' },
+        { text: '小猫', link: '/daily/cat' },
+    ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
         { text: '探索', link: '/trip/explore' },

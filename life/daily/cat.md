@@ -1,6 +1,3 @@
----
-icon: fluent-emoji-high-contrast:cat-face
----
 
 # 小猫
 
