@@ -1,8 +1,9 @@
 ---
-title: Questionable Advice from One Very Lucky Berkeley Engineer
 date: 2019-11-21
 author: Craig Federighi
 ---
+
+# Questionable Advice from One Very Lucky Berkeley Engineer
 
 Craig Federighi, ( B.S. ’91 EECS, M.S. ’93 CS) senior vice president, software engineering, Apple, Inc.
 
