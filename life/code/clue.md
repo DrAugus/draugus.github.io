@@ -1,6 +1,3 @@
----
-icon: icon-park:tips
----
 
 # 小妙招
 

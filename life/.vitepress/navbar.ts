@@ -44,6 +44,7 @@ export const navbar = [
       { text: '代码笔记', link: '/code/code-notes/' },
       { text: '八股文', link: '/code/interview/' },
       { text: '其他代码', link: '/code/other-code/' },
+      { text: '小妙招', link: '/code/clue' },
     ],
     activeMatch: '^/code',
   },
