@@ -916,13 +916,13 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "",
+      name: "Immaculate Pulse",
       image: 1,
       shortName: "Baizhu",
       start: "2023-05-02 18:00:00 +0800",
       end: "2023-05-23 14:59:59 +0800",
       wish5star: "baizhu",
-      wish4star: [],
+      wish4star: ["Kaveh", "Candace", "Fischl"],
       version: "3.6",
       wishName: "「心珠循琅」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -934,7 +934,7 @@ export const WISH = {
       start: "2023-05-02 18:00:00 +0800",
       end: "2023-05-23 14:59:59 +0800",
       wish5star: "ganyu",
-      wish4star: [],
+      wish4star: ["Kaveh", "Candace", "Fischl"],
       version: "3.6",
       wishName: "「浮生孰来」",
       wish_2: true,

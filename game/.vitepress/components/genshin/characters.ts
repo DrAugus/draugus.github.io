@@ -730,7 +730,7 @@ export const CHARACTER = {
     prefix: "天穹之镜",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "须弥著名建筑设计师，对太多事物抱有过度关怀心。美学主义者，为现实所困扰。",
     city: City.Inazuma,
     ele: Element.dendro,
     weapon: Weapon.sword
@@ -752,7 +752,7 @@ export const CHARACTER = {
     prefix: "遵生合和",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "璃月最具盛名的药庐「不卜庐」的主人，肩上常盘着名为「长生」的白蛇。用药手法不拘一格，仁心妙术济助四海。",
     city: City.Liyue,
     ele: Element.dendro,
     weapon: Weapon.catalyst
