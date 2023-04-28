@@ -6,13 +6,14 @@ export const sidebar = {
         { text: '真的不能吃', link: '/eat/block' },
     ],
     '/daily/': [
+        { text: '日常', link: '/daily/' },
+        { text: '小猫', link: '/daily/cat' },
+        { text: '日用价格', link: '/daily/goods-price' },
+        { text: '房', link: '/daily/house' },
         { text: '买车吗', link: '/daily/car' },
         { text: '户口', link: '/daily/hukou' },
         { text: '月亮', link: '/daily/moon' },
-        { text: '日用价格', link: '/daily/goods-price' },
-        { text: '日常', link: '/daily/' },
-        { text: '房', link: '/daily/house' },
-        { text: '小猫', link: '/daily/cat' },
+        { text: '通勤', link: '/daily/commuting' },
         {
             text: '记录 Apple 使用体验', collapsed: true, items: [
                 { text: 'Apple官方日历订阅', link: '/daily/apple/calendar' },
@@ -564,7 +565,7 @@ export const sidebar = {
         { text: '扁桃体炎', link: '/disease/2022-06-24-disease' },
         { text: '发烧', link: '/disease/2022-12-22-disease' },
         { text: '感冒', link: '/disease/2022-11-28-disease' },
+        { text: '牙', link: '/disease/tooth' },
     ],
-
 
 }
