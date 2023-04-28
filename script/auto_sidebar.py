@@ -155,12 +155,30 @@ def list2map(dir_list):
     return res_map
 
 
+def top_index(arr):
+    # 如果要做其他排序 也可以在这里
+    arr_index = []
+    others_index = []
+    for v in arr:
+        if not v['link']:
+            return arr
+        if 'index.md' in v['link']:
+            arr_index.append(v)
+        else:
+            others_index.append(v)
+    return arr_index + others_index
+
+
 def modify_display(m):
     arr = []
     for k in m:
         kk = f"'{k}':[\n"
         arr.append(kk)
-        for v in m[k]:
+
+        # 把 index.md 排到最前面
+        new_arr = top_index(m[k])
+
+        for v in new_arr:
             vv = f'{v},\n'
             vv = vv.replace("'text'", 'text')
             vv = vv.replace("'link'", 'link')
