@@ -1,12 +1,8 @@
----
-icon: twemoji:compass
----
+# 小外包
 
-# 外包公司
 
-::alert{type="info"}
-引自 [github](https://github.com/grancode/outsourcing/)
-::
+>引自 [github](https://github.com/grancode/outsourcing/)
+
 
 ![https://oscimg.oschina.net/oscnet/483bc3e33b3e2f3dc53dca38b68d70c4e64.jpg](https://oscimg.oschina.net/oscnet/483bc3e33b3e2f3dc53dca38b68d70c4e64.jpg)
 

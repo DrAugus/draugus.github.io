@@ -44,7 +44,19 @@ export const navbar = [
       { text: '代码笔记', link: '/code/code-notes/' },
       { text: '八股文', link: '/code/interview/' },
       { text: '其他代码', link: '/code/other-code/' },
-      { text: '小妙招', link: '/code/clue' },
+      {
+        text: '速查清单',
+        items: [
+          { text: 'Linux 命令', link: '/code/code-notes/linux/command' },
+        ],
+      },
+      {
+        text: '小小震撼',
+        items: [
+          { text: '小妙招', link: '/code/clue' },
+          { text: '小外包', link: '/code/outsourcing-co' },
+        ],
+      },
     ],
     activeMatch: '^/code',
   },
