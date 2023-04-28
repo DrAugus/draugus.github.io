@@ -555,5 +555,16 @@ export const sidebar = {
         { text: '调休', link: '/funny/tiaoxiu' },
     ],
 
+    '/disease/': [
+        { text: '病痛', link: '/disease/' },
+        { text: '中暑', link: '/disease/2022-06-14-disease' },
+        { text: '胃镜', link: '/disease/gastroscopy' },
+        { text: '眼睛变化', link: '/disease/eyes' },
+        { text: '发烧', link: '/disease/2022-12-21-disease' },
+        { text: '扁桃体炎', link: '/disease/2022-06-24-disease' },
+        { text: '发烧', link: '/disease/2022-12-22-disease' },
+        { text: '感冒', link: '/disease/2022-11-28-disease' },
+    ],
+
 
 }

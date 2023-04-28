@@ -61,6 +61,12 @@ export const navbar = [
           { text: '偷乐', link: '/funny/' },
         ],
       },
+      {
+        text: '大抵是病了',
+        items: [
+          { text: '病', link: '/disease/' },
+        ],
+      },
     ],
   },
 
