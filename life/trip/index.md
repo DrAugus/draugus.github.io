@@ -44,6 +44,22 @@ links: [票价说明](https://augusmeow.github.io/notes/record/airfare-price)
 
 [探索进度](./china/#探索进度)
 
+还想飞？往哪里飞？纯上当！就看看吧，从杭州起飞的航班，根本没有几班，虹桥更少，浦东别考虑了。义乌、宁波的航班也很多，可以考虑一下
+
+- 上海虹桥始发的有 北京 新疆 成都 南宁 深圳 广州
+- 义乌始发的有 长春 沈阳 北京 天津 太原 银川 西安 新疆 昆明 贵阳 南宁 三亚 广州 深圳 珠海 潮汕
+- 宁波始发的有 哈尔滨 沈阳 大连 北京 武汉 贵阳
+- 杭州始发的有 东三省 新疆 成都 重庆 南宁 贵阳 海口 三亚 广东地区 潮汕
+
+详细见下图
+
+:::details
+![1](/img/trip/csair-hangzhou.png)
+![1](/img/trip/csair-ningbo.png)
+![1](/img/trip/csair-shhongqiao.png)
+![1](/img/trip/csair-yiwu.png)
+:::
+
 04/23 05/06 劳动节补班  
 06/25 端午节补班  
 可出行的休息日为  
