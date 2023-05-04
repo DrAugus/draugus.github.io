@@ -24,7 +24,9 @@
             <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br>
             <span>总计<b>{{ vv.sum }}</b>
                 <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
-            </span> {{ ' 其中' + vv.intro }}
+            </span>
+            {{ ' ' }}
+            <span v-html="formateIntro(vv.intro)"></span>
         </p>
     </div>
 
@@ -108,6 +110,9 @@ export default {
             if (neg) res = s.length - res - 1
             // console.log(n, res)
             return s[res]
+        },
+        formateIntro(text) {
+            return text.replace(/\n/g, '<br/>')
         },
     },
 };
