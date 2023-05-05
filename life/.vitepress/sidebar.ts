@@ -50,27 +50,37 @@ export const sidebar = {
         { text: '天津', link: '/trip/china/tianjin' },
         { text: '重庆', link: '/trip/china/chongqing' },
         {
-            text: '河南', collapsed: true, items: [
+            text: '河南', collapsed: false, items: [
                 { text: '开封', link: '/trip/china/henan/kaifeng' },
                 { text: '郑州', link: '/trip/china/henan/zhengzhou' },
                 { text: '洛阳', link: '/trip/china/henan/luoyang' },
             ],
         },
+        {
+            text: '陕西', collapsed: false, items: [
+                { text: '西安', link: '/trip/china/shaanxi/xian' },
+            ],
+        },
+        {
+            text: '山西', collapsed: false, items: [
+                { text: '太原', link: '/trip/china/shanxi/taiyuan' },
+            ],
+        },
 
 
         {
-            text: '黑龙江', collapsed: true, items: [
+            text: '黑龙江', collapsed: false, items: [
                 { text: '哈尔滨', link: '/trip/china/heilongjiang/haerbing' },
             ],
         },
         {
-            text: '福建', collapsed: true, items: [
+            text: '福建', collapsed: false, items: [
                 { text: '福州', link: '/trip/china/fujian/fuzhou' },
                 { text: '厦门', link: '/trip/china/fujian/xiamen' },
             ],
         },
         {
-            text: '云南', collapsed: true, items: [
+            text: '云南', collapsed: false, items: [
                 { text: '大理', link: '/trip/china/yunnan/dali' },
                 { text: '西双版纳', link: '/trip/china/yunnan/xishuangbanna' },
                 { text: '昆明', link: '/trip/china/yunnan/kunming' },
@@ -78,28 +88,28 @@ export const sidebar = {
             ],
         },
         {
-            text: '湖北', collapsed: true, items: [
+            text: '湖北', collapsed: false, items: [
                 { text: '武汉', link: '/trip/china/hubei/wuhan' },
             ],
         },
         {
-            text: '广西', collapsed: true, items: [
+            text: '广西', collapsed: false, items: [
                 { text: '柳州', link: '/trip/china/guangxi/liuzhou' },
                 { text: '南宁', link: '/trip/china/guangxi/nanning' },
             ],
         },
         {
-            text: '四川', collapsed: true, items: [
+            text: '四川', collapsed: false, items: [
                 { text: '成都', link: '/trip/china/sichuan/chengdu' },
             ],
         },
         {
-            text: '贵州', collapsed: true, items: [
+            text: '贵州', collapsed: false, items: [
                 { text: '贵阳', link: '/trip/china/guizhou/guiyang' },
             ],
         },
         {
-            text: '广东', collapsed: true, items: [
+            text: '广东', collapsed: false, items: [
                 { text: '广东', link: '/trip/china/guangdong/' },
                 { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
                 { text: '广州', link: '/trip/china/guangdong/guangzhou' },
@@ -107,18 +117,18 @@ export const sidebar = {
             ],
         },
         {
-            text: '海南', collapsed: true, items: [
+            text: '海南', collapsed: false, items: [
                 { text: '海口', link: '/trip/china/hainan/haikou' },
                 { text: '三亚', link: '/trip/china/hainan/sanya' },
             ],
         },
         {
-            text: '湖南', collapsed: true, items: [
+            text: '湖南', collapsed: false, items: [
                 { text: '长沙', link: '/trip/china/hunan/changsha' },
             ],
         },
         {
-            text: '江苏', collapsed: true, items: [
+            text: '江苏', collapsed: false, items: [
                 { text: '苏州', link: '/trip/china/jiangsu/suzhou' },
                 { text: '扬州', link: '/trip/china/jiangsu/yangzhou' },
                 { text: '南京', link: '/trip/china/jiangsu/nanjing' },
@@ -126,7 +136,7 @@ export const sidebar = {
             ],
         },
         {
-            text: '浙江', collapsed: true,
+            text: '浙江', collapsed: false,
             link: "/trip/china/zhejiang/",
             items: [
                 { text: '绍兴', link: '/trip/china/zhejiang/shaoxing' },
@@ -147,14 +157,14 @@ export const sidebar = {
         { text: '世界', link: '/trip/abroad/' },
         {
             text: '欧洲',
-            collapsed: true,
+            collapsed: false,
             items: [
                 { text: '英国', link: '/trip/abroad/europe/england' },
             ],
         },
         {
             text: '亚洲',
-            collapsed: true,
+            collapsed: false,
             items: [
                 { text: '韩国', link: '/trip/abroad/asia/korean' },
                 { text: '日本', link: '/trip/abroad/asia/japan' },
@@ -332,13 +342,13 @@ export const sidebar = {
         { text: '算法与数据结构', link: '/code/dsa/' },
         { text: '复杂度', link: '/code/dsa/complexity' },
         {
-            text: 'leetcode', collapsed: true, items: [
+            text: 'leetcode', collapsed: false, items: [
                 { text: 'LeetCode', link: '/code/dsa/leetcode/' },
                 { text: 'LC1114 解题方案', link: '/code/dsa/leetcode/lc-1114' },
             ]
         },
         {
-            text: 'linear', collapsed: true, items: [
+            text: 'linear', collapsed: false, items: [
                 { text: 'stack', link: '/code/dsa/linear/stack' },
                 { text: 'QA', link: '/code/dsa/linear/qa' },
                 { text: 'array', link: '/code/dsa/linear/array' },
@@ -348,13 +358,13 @@ export const sidebar = {
                 { text: 'queue', link: '/code/dsa/linear/queue' },]
         },
         {
-            text: 'collection', collapsed: true, items: [
+            text: 'collection', collapsed: false, items: [
                 { text: 'Hash Table', link: '/code/dsa/collection/hash' },
                 { text: 'QA', link: '/code/dsa/collection/qa' },
                 { text: '集合结构', link: '/code/dsa/collection/' },]
         },
         {
-            text: 'tree', collapsed: true, items: [
+            text: 'tree', collapsed: false, items: [
                 { text: 'Union-find', link: '/code/dsa/tree/union-find' },
                 { text: 'QA', link: '/code/dsa/tree/qa' },
                 { text: 'Rb tree', link: '/code/dsa/tree/rb-tree' },
@@ -365,7 +375,7 @@ export const sidebar = {
             ]
         },
         {
-            text: 'graph', collapsed: true, items: [
+            text: 'graph', collapsed: false, items: [
                 { text: 'QA', link: '/code/dsa/graph/qa' },
                 { text: '图形结构', link: '/code/dsa/graph/' },
             ]
@@ -388,7 +398,7 @@ export const sidebar = {
         { text: '程序题', link: '/code/cpp/code' },
         { text: 'C 与 C++', link: '/code/cpp/c-cpp-diff' },
         {
-            text: 'concept', collapsed: true, items: [
+            text: 'concept', collapsed: false, items: [
                 { text: '类', link: '/code/cpp/concept/class' },
                 { text: '引用', link: '/code/cpp/concept/reference' },
                 { text: 'STL', link: '/code/cpp/concept/stl' },
@@ -404,14 +414,14 @@ export const sidebar = {
                 { text: 'lambda', link: '/code/cpp/concept/lambda' },
             ]
         }, {
-            text: 'tips', collapsed: true, items: [
+            text: 'tips', collapsed: false, items: [
                 { text: 'check OS with a preprocessor directive', link: '/code/cpp/tips/check-os' },
                 { text: '遇到的问题速查', link: '/code/cpp/tips/qa' },
                 { text: 'base', link: '/code/cpp/tips/base' },
                 { text: '一些要点', link: '/code/cpp/tips/tip' },
             ]
         }, {
-            text: 'lib', collapsed: true, items: [
+            text: 'lib', collapsed: false, items: [
                 { text: '内存检测', link: '/code/cpp/lib/asan' },
                 { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON' },
                 { text: 'actor', link: '/code/cpp/lib/actor' },
@@ -420,7 +430,7 @@ export const sidebar = {
                 { text: 'epoll', link: '/code/cpp/lib/epoll' },
             ]
         }, {
-            text: 'thread-mutex', collapsed: true, items: [
+            text: 'thread-mutex', collapsed: false, items: [
                 { text: 'Threads and Mutexes', link: '/code/cpp/thread-mutex/threads-and-mutexes' },
                 { text: '各种锁', link: '/code/cpp/thread-mutex/mutex' },
                 { text: 'Thread', link: '/code/cpp/thread-mutex/thread' },
@@ -442,28 +452,28 @@ export const sidebar = {
         { text: '编码习惯', link: '/code/other-code/habit' },
         { text: 'Shell', link: '/code/other-code/shell' },
         {
-            text: 'sys-design', collapsed: true, items: [
+            text: 'sys-design', collapsed: false, items: [
                 { text: '设计模式', link: '/code/other-code/sys-design/design-pattern' },
                 { text: 'QA', link: '/code/other-code/sys-design/qa' },
             ]
         }, {
-            text: 'distributed', collapsed: true, items: [
+            text: 'distributed', collapsed: false, items: [
                 { text: 'Raft论文', link: '/code/other-code/distributed/raft' },
                 { text: 'PAXOS', link: '/code/other-code/distributed/paxos' },
                 { text: 'refer', link: '/code/other-code/distributed/kafka/refer' },
             ]
         }, {
-            text: 'network', collapsed: true, items: [
+            text: 'network', collapsed: false, items: [
                 { text: 'QA', link: '/code/other-code/network/qa' },
             ]
         }, {
-            text: 'lua', collapsed: true, items: [
+            text: 'lua', collapsed: false, items: [
                 { text: 'lua深入', link: '/code/other-code/lua/2022-07-22-lua-深入' },
                 { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test' },
                 { text: 'lua学习记录', link: '/code/other-code/lua/2021-11-01-lua学习记录' },
             ],
         }, {
-            text: 'db', collapsed: true, items: [
+            text: 'db', collapsed: false, items: [
                 { text: 'ODPS', link: '/code/other-code/db/odps' },
                 { text: 'DB2', link: '/code/other-code/db/db2' },
                 { text: 'SQL', link: '/code/other-code/db/sql' },
@@ -472,13 +482,13 @@ export const sidebar = {
                 { text: '数据库', link: '/code/other-code/db/database' },
             ]
         }, {
-            text: 'future', collapsed: true, items: [
+            text: 'future', collapsed: false, items: [
                 { text: 'Prepare', link: '/code/other-code/future/prepare' },
                 { text: 'Future and Goal', link: '/code/other-code/future/future' },
                 { text: '题库每日', link: '/code/other-code/future/practice' },
             ]
         }, {
-            text: 'front-end', collapsed: true, items: [
+            text: 'front-end', collapsed: false, items: [
                 { text: 'React Native', link: '/code/other-code/front-end/react-native' },
                 { text: 'css', link: '/code/other-code/front-end/css' },
                 { text: '前端', link: '/code/other-code/front-end/qa' },
@@ -489,7 +499,7 @@ export const sidebar = {
                 { text: 'Nuxt', link: '/code/other-code/front-end/nuxt' },
             ]
         }, {
-            text: 'os', collapsed: true, items: [
+            text: 'os', collapsed: false, items: [
                 { text: 'QA', link: '/code/other-code/os/qa' },
             ]
         },
@@ -503,7 +513,7 @@ export const sidebar = {
         { text: '散篇1', link: '/study/temp1' },
         { text: '散篇2', link: '/study/temp2' },
         {
-            text: '杂谈', collapsed: true, items: [
+            text: '杂谈', collapsed: false, items: [
                 { text: '痛经', link: '/study/rambling/dysmenorrhoea' },
                 { text: '电网', link: '/study/rambling/state-grid' },
                 { text: '锻炼', link: '/study/rambling/exercise' },
@@ -516,7 +526,7 @@ export const sidebar = {
             ]
         },
         {
-            text: '演讲文稿', collapsed: true, items: [
+            text: '演讲文稿', collapsed: false, items: [
                 { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/study/speech/craig-federighi' },
             ]
         },
@@ -530,12 +540,12 @@ export const sidebar = {
         { text: '年度报税', link: '/career/tax' },
         { text: '互联网工作记录', link: '/career/record-net-work' },
         {
-            text: 'amazon', collapsed: true, items: [
+            text: 'amazon', collapsed: false, items: [
                 { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles' },
             ]
         },
         {
-            text: 'google', collapsed: true, items: [
+            text: 'google', collapsed: false, items: [
                 { text: 'Google GCA interviews (what to expect & how to prepare)', link: '/career/google/gca' },
             ]
         },
