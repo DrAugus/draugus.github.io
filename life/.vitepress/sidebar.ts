@@ -26,7 +26,7 @@ export const sidebar = {
     ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
-        {text: '预算', link: '/trip/budget'},
+        {text: '账单', link: '/trip/bill'},
         { text: '探索', link: '/trip/explore' },
         { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
         { text: '境外卡办理指南', link: '/trip/card' },

@@ -1,4 +1,5 @@
 <template>
+    <h2>预算</h2>
     <p>
         <span v-for="(v, k, i) in sum">
             <b>{{ k + ' ' }}</b> 全年旅行支出限额
@@ -16,6 +17,8 @@
             </blockquote>
         </span>
     </p>
+
+    <h2>支出</h2>
 
     <div v-for="(v, k, i) in vTrip">
         <p v-for="(vv, ii) in v">
