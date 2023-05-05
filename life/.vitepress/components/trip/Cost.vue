@@ -18,7 +18,6 @@
     </p>
 
     <div v-for="(v, k, i) in vTrip">
-        {{ sum[k] }}
         <p v-for="(vv, ii) in v">
             <b>{{ vv.name }}</b> <br>
             <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br>

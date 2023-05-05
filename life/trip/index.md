@@ -1,3 +1,7 @@
+---
+outline: [2, 3, 4]
+---
+
 # 规划指南
 
 > 两岸青山相对出 孤帆一片日边来
@@ -72,8 +76,8 @@ links: [票价说明](https://augusmeow.github.io/notes/record/airfare-price)
 - ~~04/08 - 04/09 2 days 未飞行~~
 - ~~04/15 - 04/16 2 days 未飞行~~
 - 04/29 - 05/03 5 days 劳动节休 2段飞行 杭州-广州 深圳-杭州
-- 05/13 - 05/14 2 days
-- 05/20 - 05/21 2 days
+- 05/13 - 05/14 2 days 
+- 05/20 - 05/21 2 days 2段飞行
 - 05/27 - 05/28 2 days
 - 06/03 - 06/04 2 days
 - 06/10 - 06/11 2 days
@@ -114,11 +118,3 @@ links: [票价说明](https://augusmeow.github.io/notes/record/airfare-price)
 ## 游记
 ### 多次游记
 ```
-
-## 预算
-
-<Cost></Cost>
-
-<script setup>
-import Cost from '../.vitepress/components/trip/Cost.vue'
-</script>
