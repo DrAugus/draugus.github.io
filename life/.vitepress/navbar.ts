@@ -7,6 +7,7 @@ export const navbar = [
     text: '旅行',
     items: [
       { text: '介绍', link: '/trip/' },
+      { text: '游记', link: '/trip/travelogue/' },
       {
         text: '去哪', items: [
           { text: '国内', link: '/trip/china/' },

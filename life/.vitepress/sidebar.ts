@@ -33,6 +33,13 @@ export const sidebar = {
         { text: '护照', link: '/trip/passport' },
         { text: '飞机', link: '/trip/airfare-price' },
     ],
+
+    '/trip/travelogue/': [
+        { text: '游记', link: '/trip/travelogue/' },
+        { text: '港珠澳广深', link: '/trip/travelogue/20230429' },
+    ],
+
+
     '/trip/china/': [
         { text: '上海', link: '/trip/china/shanghai' },
         { text: '澳门', link: '/trip/china/macao' },
@@ -91,8 +98,10 @@ export const sidebar = {
         },
         {
             text: '广东', collapsed: true, items: [
-                { text: '广州', link: '/trip/china/guangdong/guangzhou' },
-                { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
+                {text: '广东', link: '/trip/china/guangdong/'},
+                {text: '深圳', link: '/trip/china/guangdong/shenzhen'},
+                {text: '广州', link: '/trip/china/guangdong/guangzhou'},
+                {text: '珠海', link: '/trip/china/guangdong/zhuhai'},
             ],
         },
         {
