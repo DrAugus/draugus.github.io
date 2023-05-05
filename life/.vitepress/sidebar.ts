@@ -47,6 +47,13 @@ export const sidebar = {
                 { text: '洛阳', link: '/trip/china/henan/luoyang' },
             ],
         },
+
+
+        {
+            text: '黑龙江', collapsed: true, items: [
+                { text: '哈尔滨', link: '/trip/china/heilongjiang/haerbing' },
+            ],
+        },
         {
             text: '福建', collapsed: true, items: [
                 { text: '福州', link: '/trip/china/fujian/fuzhou' },
