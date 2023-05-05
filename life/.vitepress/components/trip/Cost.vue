@@ -21,6 +21,7 @@
     <h2>支出</h2>
 
     <div v-for="(v, k, i) in vTrip">
+        <h3>{{ k + '年' }}</h3>
         <p v-for="(vv, ii) in v">
             <b>{{ vv.name }}</b> <br>
             <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br>
@@ -67,6 +68,16 @@ Object.values(trip).forEach(v => {
     if (!vTrip[year]) { vTrip[year] = [] }
     vTrip[year].push(v)
 })
+// console.log(vTrip)
+
+// 倒序显示旅行
+// 对 object 中的键进行排序
+const sortedKeys = Object.keys(vTrip).sort((a, b) => b - a);
+// 对每个键对应的数组进行排序
+sortedKeys.forEach(key => {
+    vTrip[key].sort((a, b) => new Date(b.start) - new Date(a.start));
+});
+// console.log(vTrip)
 
 let time = [];
 let sum = {};

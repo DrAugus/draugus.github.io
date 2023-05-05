@@ -14,13 +14,13 @@ outline: [2, 3, 4]
 
 ## 计划
 
-- 浙江全市
-- [无锡](./china/jiangsu/wuxi) [扬州](./china/jiangsu/yangzhou)
-- [开封](./china/henan/kaifeng) [洛阳](./china/henan/luoyang)
-- [武汉](./china/hubei/wuhan)
-- [重庆](./china/chongqing)
-- [天津](./china/tianjin)
-- [海南](./china/hainan/)
+> 此计划不再包含飞机出行，需要飞机出行的地方，国内暂时没有需求，飞机计划[看这里](./suixinfei)
+
+- 浙江全市。杭州始发，高铁玩
+- 江苏全市。杭州始发，高铁玩
+- 河南 —— [开封](./china/henan/kaifeng) [洛阳](./china/henan/luoyang)，等回河南再玩
+- 湖北 —— [武汉](./china/hubei/wuhan)。杭州/郑州始发，高铁玩
+- [天津](./china/tianjin)。杭州始发，高铁玩，注意提前看二等动卧很不错的选择
 
 ## 格式
 

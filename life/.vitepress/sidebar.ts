@@ -26,13 +26,14 @@ export const sidebar = {
     ],
     '/trip/': [
         { text: '规划指南', link: '/trip/' },
-        {text: '账单', link: '/trip/bill'},
+        { text: '账单', link: '/trip/bill' },
         { text: '探索', link: '/trip/explore' },
+        { text: '随心飞', link: '/trip/suixinfei' },
+        { text: '飞机', link: '/trip/airfare-price' },
         { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
         { text: '境外卡办理指南', link: '/trip/card' },
         { text: '签证', link: '/trip/visa' },
         { text: '护照', link: '/trip/passport' },
-        { text: '飞机', link: '/trip/airfare-price' },
     ],
 
     '/trip/travelogue/': [
@@ -99,10 +100,10 @@ export const sidebar = {
         },
         {
             text: '广东', collapsed: true, items: [
-                {text: '广东', link: '/trip/china/guangdong/'},
-                {text: '深圳', link: '/trip/china/guangdong/shenzhen'},
-                {text: '广州', link: '/trip/china/guangdong/guangzhou'},
-                {text: '珠海', link: '/trip/china/guangdong/zhuhai'},
+                { text: '广东', link: '/trip/china/guangdong/' },
+                { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
+                { text: '广州', link: '/trip/china/guangdong/guangzhou' },
+                { text: '珠海', link: '/trip/china/guangdong/zhuhai' },
             ],
         },
         {
