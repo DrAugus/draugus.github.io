@@ -31,6 +31,9 @@ export default defineConfig({
             pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/life/:path',
             text: '在 Github 编辑',
         },
+
+        outline: [2, 3],
+
         footer: {
             message: '吃好喝好',
             copyright: 'Copyright © 2019-present Augus'

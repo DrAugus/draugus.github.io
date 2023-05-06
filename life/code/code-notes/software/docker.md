@@ -1,12 +1,6 @@
 
 # Docker
 
-## cmd
-
-显示所有的容器，包括未运行的 `docker ps -a`  
-获取容器/镜像的元数据 `docker inspect`  
-显示运行中 docker 使用的 IP 地址 `docker inspect mycontainer1 | grep IPAddress`  
-
 ## install
 
 ### [ubuntu](https://docs.docker.com/engine/install/ubuntu/#prerequisites)
@@ -34,7 +28,13 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
-## build
+## cmd
+
+显示所有的容器，包括未运行的 `docker ps -a`  
+获取容器/镜像的元数据 `docker inspect`  
+显示运行中 docker 使用的 IP 地址 `docker inspect mycontainer1 | grep IPAddress`  
+
+### build
 
 当你使用 `docker build` 命令构建镜像时，镜像会被保存在你本地电脑上的 Docker 镜像仓库中。通常，这个仓库位于 `/var/lib/docker` 目录中。要查看镜像仓库中所有的镜像，可以使用 `docker images` 命令。如果你想要查看镜像的详细信息，可以使用 `docker inspect` 命令。
 
@@ -56,7 +56,7 @@ dockerfile_name 可以在同一项目里放置多个 dockerfile
 docker build -t my_image -f dockerfile_name .
 ```
 
-## run
+### run
 
 运行 docker：
 
@@ -70,7 +70,7 @@ docker build -t my_image -f dockerfile_name .
 
 退出 `exit` / `Ctrl + D`
 
-## exec
+### exec
 
 在运行的容器中执行命令
 
@@ -90,7 +90,7 @@ e.g.
 docker exec -it container_id /bin/bash
 ```
 
-## save
+### save
 
 ```shell
 # 在 Linux 上将 Docker image my_image 打包为 tar 文件 my_image.tar
@@ -102,6 +102,28 @@ scp my_image.tar user@localhost:~/
 # 将 tar 文件导入到本地的 Docker 中
 docker load < my_image.tar
 ```
+
+### cp
+
+#### dockerfile 内互相拷贝
+
+参考上面的 e.g.
+
+#### 一个docker里的文件迁移到另一个docker
+
+要将一个Docker容器中的文件迁移到另一个Docker容器，你需要使用Docker的`cp`命令。首先，使用`docker ps`命令查看正在运行的Docker容器的ID。然后，使用以下命令将文件从源容器复制到目标容器：
+
+```shell
+docker cp [source_container_id]:/path/to/source/file [target_container_id]:/path/to/target/file
+```
+
+例如，如果要将一个名为`myfile.txt`的文件从源容器`4fa6e0f0c67a`复制到目标容器`8dbd9e392a96`，你可以使用以下命令：
+
+```shell
+docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
+```
+
+请注意，在上面的命令中，`/path/to/source/file`和`/path/to/target/file`都是相对于Docker容器中的根目录的路径。因此，如果文件在Docker容器中的其他目录下，你需要指定完整的路径。
 
 ## multi-stage
 
@@ -176,28 +198,6 @@ then
 docker rmi augus  #镜像存在时remove
 fi
 ```
-
-## cp
-
-### dockerfile 内互相拷贝
-
-参考上面的 e.g.
-
-### 一个docker里的文件迁移到另一个docker
-
-要将一个Docker容器中的文件迁移到另一个Docker容器，你需要使用Docker的`cp`命令。首先，使用`docker ps`命令查看正在运行的Docker容器的ID。然后，使用以下命令将文件从源容器复制到目标容器：
-
-```shell
-docker cp [source_container_id]:/path/to/source/file [target_container_id]:/path/to/target/file
-```
-
-例如，如果要将一个名为`myfile.txt`的文件从源容器`4fa6e0f0c67a`复制到目标容器`8dbd9e392a96`，你可以使用以下命令：
-
-```shell
-docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
-```
-
-请注意，在上面的命令中，`/path/to/source/file`和`/path/to/target/file`都是相对于Docker容器中的根目录的路径。因此，如果文件在Docker容器中的其他目录下，你需要指定完整的路径。
 
 ## 第一个 docker
 
