@@ -30,7 +30,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 ## cmd
 
-显示所有的容器，包括未运行的 `docker ps -a`  
+### 常用
+
+[显示所有的容器](#ps)，包括未运行的 `docker ps -a`  
 获取容器/镜像的元数据 `docker inspect`  
 显示运行中 docker 使用的 IP 地址 `docker inspect mycontainer1 | grep IPAddress`  
 
@@ -124,6 +126,23 @@ docker cp 4fa6e0f0c67a:/myfile.txt 8dbd9e392a96:/myfile.txt
 ```
 
 请注意，在上面的命令中，`/path/to/source/file`和`/path/to/target/file`都是相对于Docker容器中的根目录的路径。因此，如果文件在Docker容器中的其他目录下，你需要指定完整的路径。
+
+### ps
+
+```bash
+# default shows just running
+docker ps
+# Show all containers, include dead
+docker ps -a
+# Display total file sizes
+docker ps -s
+# Only display container IDs
+docker ps -q
+# filter
+docker ps --filter status=running
+```
+
+**status**: created, restarting, running, removing, paused, exited, dead
 
 ## multi-stage
 
