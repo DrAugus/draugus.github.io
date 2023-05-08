@@ -50,6 +50,36 @@ export const sidebar = {
         { text: '香港', link: '/trip/china/hongkong' },
         { text: '天津', link: '/trip/china/tianjin' },
         { text: '重庆', link: '/trip/china/chongqing' },
+
+        {
+            text: '江苏', collapsed: false, items: [
+                { text: '苏州', link: '/trip/china/jiangsu/suzhou' },
+                { text: '扬州', link: '/trip/china/jiangsu/yangzhou' },
+                { text: '南京', link: '/trip/china/jiangsu/nanjing' },
+                { text: '无锡', link: '/trip/china/jiangsu/wuxi' },
+            ],
+        },
+        {
+            text: '浙江', collapsed: false,
+            items: [
+                { text: '绍兴', link: '/trip/china/zhejiang/shaoxing' },
+                { text: '温州', link: '/trip/china/zhejiang/wenzhou' },
+                { text: '杭州', link: '/trip/china/zhejiang/hangzhou' },
+                { text: '舟山', link: '/trip/china/zhejiang/zhoushan' },
+                { text: '金华', link: '/trip/china/zhejiang/jinhua' },
+                { text: '台州', link: '/trip/china/zhejiang/taizhou' },
+            ],
+        },
+
+        {
+            text: '广东', collapsed: false, items: [
+                { text: '广东', link: '/trip/china/guangdong/' },
+                { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
+                { text: '广州', link: '/trip/china/guangdong/guangzhou' },
+                { text: '珠海', link: '/trip/china/guangdong/zhuhai' },
+            ],
+        },
+
         {
             text: '河南', collapsed: false, items: [
                 { text: '开封', link: '/trip/china/henan/kaifeng' },
@@ -67,6 +97,12 @@ export const sidebar = {
                 { text: '太原', link: '/trip/china/shanxi/taiyuan' },
             ],
         },
+        {
+            text: '甘肃', collapsed: false, items: [
+                {text: '甘肃', link: '/trip/china/gansu/'},
+                {text: '兰州', link: '/trip/china/gansu/lanzhou'},
+            ],
+        },
 
 
         {
@@ -75,22 +111,41 @@ export const sidebar = {
             ],
         },
         {
+            text: '吉林', collapsed: false, items: [
+                { text: '长春', link: '/trip/china/jilin/changchun' },
+            ],
+        },
+        {
+            text: '辽宁', collapsed: false, items: [
+                { text: '大连', link: '/trip/china/liaoning/dalian' },
+                { text: '沈阳', link: '/trip/china/liaoning/shenyang' },
+            ],
+        },
+
+
+        {
             text: '福建', collapsed: false, items: [
                 { text: '福州', link: '/trip/china/fujian/fuzhou' },
                 { text: '厦门', link: '/trip/china/fujian/xiamen' },
             ],
         },
         {
+            text: '湖北', collapsed: false, items: [
+                { text: '武汉', link: '/trip/china/hubei/wuhan' },
+            ],
+        },
+        {
+            text: '湖南', collapsed: false, items: [
+                { text: '长沙', link: '/trip/china/hunan/changsha' },
+            ],
+        },
+
+        {
             text: '云南', collapsed: false, items: [
                 { text: '大理', link: '/trip/china/yunnan/dali' },
                 { text: '西双版纳', link: '/trip/china/yunnan/xishuangbanna' },
                 { text: '昆明', link: '/trip/china/yunnan/kunming' },
                 { text: '丽江', link: '/trip/china/yunnan/lijiang' },
-            ],
-        },
-        {
-            text: '湖北', collapsed: false, items: [
-                { text: '武汉', link: '/trip/china/hubei/wuhan' },
             ],
         },
         {
@@ -109,48 +164,12 @@ export const sidebar = {
                 { text: '贵阳', link: '/trip/china/guizhou/guiyang' },
             ],
         },
-        {
-            text: '广东', collapsed: false, items: [
-                { text: '广东', link: '/trip/china/guangdong/' },
-                { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
-                { text: '广州', link: '/trip/china/guangdong/guangzhou' },
-                { text: '珠海', link: '/trip/china/guangdong/zhuhai' },
-            ],
-        },
+
         {
             text: '海南', collapsed: false, items: [
                 { text: '海口', link: '/trip/china/hainan/haikou' },
                 { text: '三亚', link: '/trip/china/hainan/sanya' },
             ],
-        },
-        {
-            text: '湖南', collapsed: false, items: [
-                { text: '长沙', link: '/trip/china/hunan/changsha' },
-            ],
-        },
-        {
-            text: '江苏', collapsed: false, items: [
-                { text: '苏州', link: '/trip/china/jiangsu/suzhou' },
-                { text: '扬州', link: '/trip/china/jiangsu/yangzhou' },
-                { text: '南京', link: '/trip/china/jiangsu/nanjing' },
-                { text: '无锡', link: '/trip/china/jiangsu/wuxi' },
-            ],
-        },
-        {
-            text: '浙江', collapsed: false,
-            link: "/trip/china/zhejiang/",
-            items: [
-                { text: '绍兴', link: '/trip/china/zhejiang/shaoxing' },
-                { text: '温州', link: '/trip/china/zhejiang/wenzhou' },
-                { text: '杭州', link: '/trip/china/zhejiang/hangzhou' },
-                { text: '舟山', link: '/trip/china/zhejiang/zhoushan' },
-                { text: '金华', link: '/trip/china/zhejiang/jinhua' },
-                { text: '台州', link: '/trip/china/zhejiang/taizhou' },
-            ],
-        },
-        {
-            text: '甘肃',
-            link: "/trip/china/gansu/",
         },
 
     ],
