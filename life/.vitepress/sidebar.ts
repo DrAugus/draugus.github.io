@@ -31,6 +31,7 @@ export const sidebar = {
         { text: '探索', link: '/trip/explore' },
         { text: '随心飞', link: '/trip/suixinfei' },
         { text: '飞机', link: '/trip/airfare-price' },
+        { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
         { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
         { text: '境外卡办理指南', link: '/trip/card' },
         { text: '签证', link: '/trip/visa' },
@@ -99,8 +100,8 @@ export const sidebar = {
         },
         {
             text: '甘肃', collapsed: false, items: [
-                {text: '甘肃', link: '/trip/china/gansu/'},
-                {text: '兰州', link: '/trip/china/gansu/lanzhou'},
+                { text: '甘肃', link: '/trip/china/gansu/' },
+                { text: '兰州', link: '/trip/china/gansu/lanzhou' },
             ],
         },
 
