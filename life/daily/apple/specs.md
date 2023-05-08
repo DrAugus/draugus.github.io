@@ -4,6 +4,8 @@
 
 ## AirPods Max
 
+[评测](./review#airpods-max)
+
 ### 音频技术
 
 - Apple 设计的动圈式驱动单元
