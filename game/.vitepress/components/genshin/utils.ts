@@ -1,42 +1,31 @@
-export enum Element {
-  anemo,
-  pyro,
-  cryo,
-  electro,
-  hydro,
-  geo,
-  dendro,
+export const Element = {
+  anemo: { id: "anemo", name: "风" },
+  pyro: { id: "pyro", name: "火" },
+  cryo: { id: "cryo", name: "冰" },
+  electro: { id: "electro", name: "雷" },
+  hydro: { id: "hydro", name: "水" },
+  geo: { id: "geo", name: "岩" },
+  dendro: { id: "dendro", name: "草" }
 }
 
-export const ElementString = {
-  0: 'anemo',
-  1: 'pyro',
-  2: 'cryo',
-  3: 'electro',
-  4: 'hydro',
-  5: 'geo',
-  6: 'dendro',
+export const City = {
+  Mondstadt: { id: "Mondstadt", name: "蒙德" },
+  Liyue: { id: "Liyue", name: "璃月" },
+  Inazuma: { id: "Inazuma", name: "稻妻" },
+  Sumeru: { id: "Sumeru", name: "须弥" },
+  Fontaine: { id: "Fontaine", name: "枫丹" },
+  Natlan: { id: "Natlan", name: "纳塔" },
+  Snezhnaya: { id: "Snezhnaya", name: "至冬" }
 }
 
-export enum City {
-  Mondstadt,
-  Liyue,
-  Inazuma,
-  Sumeru,
-  Fontaine,
-  Natlan,
-  Snezhnaya,
+export const Weapon = {
+  sword: { id: "sword", name: "单手剑" },
+  claymore: { id: "claymore", name: "双手剑" },
+  catalyst: { id: "catalyst", name: "法器" },
+  bow: { id: "bow", name: "弓" },
+  polearm: { id: "polearm", name: "长柄武器" },
 }
 
-export const CityZH = ["蒙德", "璃月", "稻妻", "须弥", "枫丹", "纳塔", "至冬"]
-
-export const ElementZH = ["风", "火", "冰", "雷", "水", "岩", "草"]
-
-export enum Weapon {
-  sword, claymore, catalyst, bow, polearm
-}
-
-export const WeaponZH = ["单手剑", "双手剑", "法器", "弓", "长柄武器"]
 
 export enum Artifacts {
   flower, plume, sands, goblet, circlet

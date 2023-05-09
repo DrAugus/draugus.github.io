@@ -16,7 +16,7 @@ export interface Characters {
   star: number
   event_exclusive: boolean
   intro: string
-  city: City
+  city: Object
   ele: Element
   weapon: Weapon
   cultivate: Cultivate

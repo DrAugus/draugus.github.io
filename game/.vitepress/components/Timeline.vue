@@ -56,7 +56,7 @@
         <!-- duration + 1 cause 从左边开始计算的  -->
         <div class="timeline-wish-event-character">
           <div class="card event-item " v-for="(value, i) in WISH.characters" :class="[
-            'ele-' + ElementString[CHARACTER[value.wish5star].ele],
+            'ele-' + CHARACTER[value.wish5star]?.ele?.id,
 
             !value.wish_2 && i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) < 0 ? 'rounded-l-xl' : '',
             !value.wish_2 && i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) > 0 ? 'border-r-4 border-white' : '',
@@ -76,7 +76,7 @@
                   ''" @error="replaceImg" alt="">
               </div>
               <span class="left-align timeline-character-text sticky"
-                :class="'ele-text-shadow-' + ElementString[CHARACTER[value.wish5star].ele]">
+                :class="'ele-text-shadow-' + CHARACTER[value.wish5star]?.ele?.id">
                 {{ value.wishName }} 活动祈愿
                 「{{ CHARACTER[value.wish5star].prefix }}」
                 {{ CHARACTER[value.wish5star].name }}
@@ -105,7 +105,6 @@
 <script>
 import { VPHomeHero } from 'vitepress/theme'
 
-import { ElementString } from "./genshin/utils";
 import { parseDayjs } from "./utils";
 import { processEvent } from "./eventHandle";
 import { current } from "./wishRecent";
@@ -142,7 +141,6 @@ export default {
       wishCharacters: [],
       wishWeapons: [],
       colorMap,
-      ElementString,
       homeActions: [],
       homeTagline: '',
     };

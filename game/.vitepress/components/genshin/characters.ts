@@ -1,4 +1,5 @@
-import { City, Element, ElementZH, Weapon, Artifacts } from "./utils";
+import { City, Element, Weapon, Artifacts } from "./utils";
+import { NameList } from "../type";
 
 export interface Cultivate {
   weapons: string
@@ -16,9 +17,9 @@ export interface Characters {
   star: number
   event_exclusive: boolean
   intro: string
-  city: City
+  city: NameList
   ele: Element
-  weapon: Weapon
+  weapon: NameList
   cultivate: Cultivate
 }
 

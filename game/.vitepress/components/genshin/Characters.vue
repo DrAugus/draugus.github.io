@@ -7,24 +7,24 @@
 
   <p> 国家分类 <a @click="all">(全)</a></p>
 
-  <span v-for="(v, k) in city">
-    <a @click="filterCity(k)">{{ v + " " }}</a>
+  <span v-for="(v, k, i) in city">
+    <a @click="filterCity(v.id)">{{ v.name + " " }}</a>
   </span>
 
   <p> 元素分类 <a @click="all">(全)</a></p>
 
   <div class="genshin-element">
-    <div v-for="(v, k) in elementStr">
-      <a @click="filterEle(k)">
-        <img :src="'/image/genshin/elements/' + v + '.png'" alt="{{v}}">
+    <div v-for="(v, k, i) in elementStr">
+      <a @click="filterEle(v.id)">
+        <img :src="'/image/genshin/elements/' + v.id + '.png'" alt="{{v.id}}">
       </a>
     </div>
   </div>
 
   <p> 武器分类 <a @click="all">(全)</a></p>
 
-  <span v-for="(v, k) in weapon">
-    <a @click="filterWeapon(k)">{{ v + " " }}</a>
+  <span v-for="(v, k, i) in weapon">
+    <a @click="filterWeapon(v.id)">{{ v.name + " " }}</a>
   </span>
 
   <p @click="all"> 全部角色 </p>
@@ -41,10 +41,8 @@
       id: value.id,
       intro: value.intro,
       star: value.star,
-      ele: elementStr[value.ele],
+      ele: value.ele.id,
     }"></Modal>
-
-    <!-- </div> -->
 
   </div>
 </template>
@@ -53,7 +51,7 @@
 
 import { CHARACTER } from "./characters";
 import Modal from "./Modal.vue";
-import { CityZH, ElementString, WeaponZH } from "./utils";
+import { City, Element, Weapon } from "./utils";
 import { objFilter } from "../utils";
 
 const lenChar = Object.getOwnPropertyNames(CHARACTER).length
@@ -64,9 +62,9 @@ export default {
   data() {
     return {
       info: CHARACTER,
-      elementStr: ElementString,
-      city: CityZH,
-      weapon: WeaponZH,
+      elementStr: Element,
+      city: City,
+      weapon: Weapon,
       showModal: false,
       star: [4, 5],
       lenChar,
@@ -78,13 +76,13 @@ export default {
   },
   methods: {
     filterEle(ele) {
-      this.info = objFilter(CHARACTER, details => details.ele == ele);
+      this.info = objFilter(CHARACTER, details => details.ele.id == ele);
     },
     filterWeapon(w) {
-      this.info = objFilter(CHARACTER, details => details.weapon == w);
+      this.info = objFilter(CHARACTER, details => details.weapon.id == w);
     },
     filterCity(c) {
-      this.info = objFilter(CHARACTER, details => details.city == c);
+      this.info = objFilter(CHARACTER, details => details.city.id == c);
     },
     filterStar(s) {
       this.info = objFilter(CHARACTER, details => details.star == s);
