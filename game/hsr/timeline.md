@@ -1,18 +1,17 @@
 ---
 layout: home
-title: 祈愿时间轴
+title: 跃迁时间轴
 hero:
   name: 
 ---
 
 
-<!-- <Timeline :WISH="WISH" :CHARACTER="CHARACTER" /> -->
+<Timeline :WISH="WISH" :CHARACTER="CHARACTER" :WISH_TEXT=1 />
 
 <script setup>
 
 import { WISH } from "../.vitepress/components/hsr/wish";
 import { CHARACTER } from "../.vitepress/components/hsr/characters";
-// import { ElementString } from "../.vitepress/components/hsr/utils";
 
-// import Timeline from "../.vitepress/components/Timeline.vue";
+import Timeline from "../.vitepress/components/Timeline.vue";
 </script>

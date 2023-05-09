@@ -6,13 +6,12 @@ hero:
 ---
 
 
-<Timeline :WISH="WISH" :CHARACTER="CHARACTER" />
+<Timeline :WISH="WISH" :CHARACTER="CHARACTER" :WISH_TEXT=0 />
 
 <script setup>
 
 import { WISH } from "../.vitepress/components/genshin/wish";
 import { CHARACTER } from "../.vitepress/components/genshin/characters";
-// import { ElementString } from "../.vitepress/components/genshin/utils";
 
 import Timeline from "../.vitepress/components/Timeline.vue";
 </script>

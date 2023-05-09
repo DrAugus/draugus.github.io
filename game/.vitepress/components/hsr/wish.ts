@@ -2,28 +2,28 @@
 export const WISH = {
   characters: [
     {
-      name: "Ballad in Goblets",
+      name: "",
       image: 1,
-      shortName: "Venti",
-      start: "2020-09-28 00:00:00 +0800",
-      end: "2020-10-18 17:59:59 +0800",
+      shortName: "Seele",
+      start: "2023-04-26 10:00:00 +0800",
+      end: "2023-05-17 17:59:59 +0800",
       version: "1.0",
-      wish5star: "venti",
-      wish4star: ['barbara', 'fischl', 'xiangling'],
-      wishName: "「杯装之诗」",
-      url: "https://bbs.mihoyo.com/ys/article/1748378"
+      wish5star: "seele",
+      wish4star: ['hook', 'pela', 'natasha'],
+      wishName: "「蝶立锋锷」",
+      url: ""
     },
   ],
   weapons: [
     {
-      name: "Epitome Invocation",
+      name: "Invocation",
       image: 1,
-      start: "2020-09-28 00:00:00 +0800",
-      end: "2020-10-18 18:00:00 +0800",
-      shortName: "Amos",
+      start: "2023-04-26 10:00:00 +0800",
+      end: "2023-05-17 17:59:59 +0800",
+      shortName: "",
       wish5star: ['aquila_favonia', 'amos_bow'],
       wish4star: ['the_flute', 'the_bell', 'the_widsith', 'the_stringless', 'favonius_lance'],
-      url: "https://bbs.mihoyo.com/ys/article/1748393"
+      url: ""
     },
   ]
 }

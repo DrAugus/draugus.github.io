@@ -1,5 +1,6 @@
 <template>
-  <VPHomeHero name="祈愿时间轴" text="全部祈愿信息" :actions="homeActions" :tagline="homeTagline" :style="getImgStyle()" />
+  <VPHomeHero :name="replaceText('x时间轴')" :text="replaceText('全部x信息')" :actions="homeActions" :tagline="homeTagline"
+    :style="getImgStyle()" />
 
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
@@ -46,7 +47,7 @@
                   ''" @error="replaceImg" alt="">
               </div>
               <span class="left-align timeline-character-text sticky text-shadow-weapon ">
-                「神铸赋形」活动祈愿
+                {{ replaceText('', 1) }}
               </span>
             </div>
           </div>
@@ -77,7 +78,7 @@
               </div>
               <span class="left-align timeline-character-text sticky"
                 :class="'ele-text-shadow-' + CHARACTER[value.wish5star]?.ele?.id">
-                {{ value.wishName }} 活动祈愿
+                {{ value.wishName }} {{ replaceText('活动x') }}
                 「{{ CHARACTER[value.wish5star].prefix }}」
                 {{ CHARACTER[value.wish5star].name }}
               </span>
@@ -154,7 +155,12 @@ export default {
       type: Object,
       required: true,
     },
-
+    // 0 genshin 1 hsr
+    WISH_TEXT: {
+      type: Number,
+      required: true,
+      default: 0
+    },
   },
   components: {
     VPHomeHero
@@ -200,7 +206,7 @@ export default {
 
     this.homeActions = [
       { theme: 'alt', text: '返回上级', link: '/game/genshin/' },
-      { theme: 'brand', text: '当前祈愿', link: '/game/genshin/wish' }
+      { theme: 'brand', text: this.replaceText('当前x'), link: '/game/genshin/wish' }
     ]
 
     for (let v of current.name) {
@@ -252,6 +258,26 @@ export default {
     },
     replaceImg(event) {
       event.target.src = '/image/genshin/wish/_1.jpg'
+    },
+
+    // tag 0 no handle
+    // tag 1 weapon text
+    replaceText(str, tag = 0) {
+      if (this.WISH_TEXT == 0) {
+
+        if (tag == 1) {
+          return '「神铸赋形」活动祈愿'
+        }
+
+        return str.replace('x', '祈愿')
+      } else if (this.WISH_TEXT == 1) {
+
+        if (tag == 1) {
+          return '「流光定影」活动跃迁'
+        }
+
+        return str.replace('x', '跃迁')
+      }
     },
   },
   beforeDestroy() {

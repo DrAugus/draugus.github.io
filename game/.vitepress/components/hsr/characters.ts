@@ -1,4 +1,5 @@
-import { City, Element, ElementZH, Weapon, Artifacts } from "./utils";
+import { City, Element, Weapon, Artifacts } from "./utils";
+import { NameList } from "../type";
 
 export interface Cultivate {
   weapons: string
@@ -16,9 +17,9 @@ export interface Characters {
   star: number
   event_exclusive: boolean
   intro: string
-  city: Object
+  city: NameList
   ele: Element
-  weapon: Weapon
+  weapon: NameList
   cultivate: Cultivate
 }
 
@@ -28,12 +29,45 @@ export const CHARACTER = {
   seele: {
     id: "Seele",
     name: "希儿",
-    prefix: Weapon.bow,
+    prefix: Weapon.Hunt,
     star: 5,
     event_exclusive: true,
-    intro: "稻妻出身的浪人武士。为人谦和，个性温顺。年轻潇洒的外表下埋藏着许多往事。看似随性，心中却有独属于自己的行事准则。",
+    intro: "",
     city: City.JariloVI,
-    ele: Element.anemo,
-    weapon: Weapon.sword
+    ele: Element.Quantum,
+    weapon: Weapon.Hunt
+  },
+  hook: {
+    id: "Hook",
+    name: "虎克",
+    prefix: Weapon.Destruction,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.JariloVI,
+    ele: Element.Fire,
+    weapon: Weapon.Destruction
+  },
+  pela: {
+    id: "Pela",
+    name: "佩拉",
+    prefix: Weapon.Nihility,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.JariloVI,
+    ele: Element.Ice,
+    weapon: Weapon.Nihility
+  },
+  natasha: {
+    id: "Natasha",
+    name: "娜塔莎",
+    prefix: Weapon.Abundance,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.JariloVI,
+    ele: Element.Physical,
+    weapon: Weapon.Abundance
   },
 }
