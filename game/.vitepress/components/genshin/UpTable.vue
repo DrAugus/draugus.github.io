@@ -31,7 +31,7 @@ import { WISH } from "./wish";
 // import { CHARACTER } from "./characters";
 import dayjs from "dayjs";
 import { modifyChar } from './characters';
-import { composeSrc, parseDayjs, formatDayjs } from "./utils";
+import { composeSrc } from "./utils";
 
 
 
@@ -147,10 +147,10 @@ const sortOrder = () => {
 
 }
 
-console.log('wishLength', wishLength)
-console.log('versions', versions)
-console.log('rows', rows)
-console.log('names', names)
+// console.log('wishLength', wishLength)
+// console.log('versions', versions)
+// console.log('rows', rows)
+// console.log('names', names)
 
 const filterChar = () => {
     let charMap = new Map();
@@ -231,7 +231,8 @@ export default defineComponent({
     max-width: unset !important;
 }
 
-.vp-doc th, .vp-doc td{
+.vp-doc th,
+.vp-doc td {
     padding: unset;
 }
 </style>

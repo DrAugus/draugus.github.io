@@ -1,3 +1,14 @@
+//替换空格 转小写
+export const replaceAndLow = (str: string) =>
+  str.replace(/ /g, "_").toLowerCase();
+
+//格式化日期
+import dayjs from "dayjs";
+export const parseDayjs = (date: string) =>
+  dayjs(date.toString(), "YYYY-MM-DD HH:mm:ss");
+export const formatDayjs = (date: string) =>
+  parseDayjs(date).format("YYYY-MM-DD HH:mm");
+
 export function normalizeName(name: string) {
   return name.toLowerCase().replace(/\s+/g, '')
 }
@@ -15,9 +26,9 @@ export const secondsFormat = (s) => {
 export const Deadline = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
 
 //返回始末时间之间的所有日期
-export const getDuration = (type, start, end) => {
-  const $array = [];
-  const current = new Date(start);
+export const getDuration = (type: string, start: Date, end: Date): Date[] => {
+  const $array: Date[] = [];
+  let current = new Date(start);
   end = new Date(end);
   while (current <= end) {
     $array.push(new Date(current));

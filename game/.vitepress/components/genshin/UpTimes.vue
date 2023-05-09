@@ -14,7 +14,7 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 // import { CHARACTER } from "./characters";
-import { parseDayjs } from "./utils";
+import { parseDayjs } from "../utils";
 import dayjs from "dayjs";
 import { modifyChar } from './characters';
 

@@ -23,7 +23,7 @@ import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { modifyChar, CHARACTER } from "./characters";
 import "dayjs/locale/zh";
-import { replaceAndLow, formatDayjs } from "./utils";
+import { replaceAndLow, formatDayjs } from "../utils";
 
 dayjs.locale("zh");
 

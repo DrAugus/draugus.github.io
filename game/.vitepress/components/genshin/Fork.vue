@@ -41,7 +41,8 @@
 import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { composeSrc, parseDayjs, formatDayjs } from "./utils";
+import { composeSrc } from "./utils";
+import { parseDayjs, formatDayjs } from "../utils";
 
 import "dayjs/locale/zh";
 

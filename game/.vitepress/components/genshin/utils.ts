@@ -47,14 +47,4 @@ export const composeSrc = (name: string) =>
   '/image/genshin/characters/' + name + '.png'
 
 
-//替换空格 转小写
-export const replaceAndLow = (str: string) =>
-  str.replace(/ /g, "_").toLowerCase();
-
-//格式化日期
-import dayjs from "dayjs";
-export const parseDayjs = (date: string) =>
-  dayjs(date.toString(), "YYYY-MM-DD HH:mm:ss");
-export const formatDayjs = (date: string) =>
-  parseDayjs(date).format("YYYY-MM-DD HH:mm");
 
