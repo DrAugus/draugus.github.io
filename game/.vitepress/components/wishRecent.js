@@ -1,6 +1,7 @@
-import { WISH } from "./wish";
+import { WISH } from "./genshin/wish";
 import { processEvent } from "./eventHandle";
-import { Deadline, replaceAndLow, formatDayjs } from "../utils";
+import { Deadline, replaceAndLow, formatDayjs } from "./utils";
+
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
 

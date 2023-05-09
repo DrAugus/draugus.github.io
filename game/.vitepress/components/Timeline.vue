@@ -105,8 +105,8 @@
 <script>
 import { VPHomeHero } from 'vitepress/theme'
 
-import { ElementString } from "./utils";
-import { parseDayjs } from "../utils";
+import { ElementString } from "./genshin/utils";
+import { parseDayjs } from "./utils";
 import { processEvent } from "./eventHandle";
 import { current } from "./wishRecent";
 
@@ -114,7 +114,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/zh";
 dayjs.locale("zh");
 
-import "./genshin.scss";
+import "./genshin/genshin.scss";
 
 const colorMap = {
   "denro": "#98e628",

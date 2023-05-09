@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { parseDayjs } from "../utils";
+import { parseDayjs } from "./utils";
 
 import "dayjs/locale/zh";
 
