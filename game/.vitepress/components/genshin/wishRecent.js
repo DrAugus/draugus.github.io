@@ -1,3 +1,4 @@
+import { WISH } from "./wish";
 import { processEvent } from "./eventHandle";
 import { Deadline } from "../utils";
 import { replaceAndLow, formatDayjs } from "./utils";
@@ -16,7 +17,7 @@ const ELEMENT_COLOR = {
     cryo: "#a6fdfd"//冰
 };
 
-const eventObj = processEvent();
+const eventObj = processEvent(WISH);
 
 let wishCharacters = eventObj.events[0];
 let wishLength = wishCharacters.length;

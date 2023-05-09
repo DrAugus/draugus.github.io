@@ -1,5 +1,4 @@
 import dayjs from "dayjs";
-import { WISH } from "./wish";
 import { parseDayjs } from "./utils";
 
 import "dayjs/locale/zh";
@@ -43,7 +42,7 @@ const convertToDate = (e, i, j) => {
     };
 };
 
-export const processEvent = () => {
+export const processEvent = (wishInfo) => {
 
     let dates = [];
     let years = [];
@@ -51,8 +50,8 @@ export const processEvent = () => {
     let monthList = [];
 
     let eventsDataInfo = [];
-    eventsDataInfo[0] = WISH.characters;
-    eventsDataInfo[1] = WISH.weapons;
+    eventsDataInfo[0] = wishInfo.characters;
+    eventsDataInfo[1] = wishInfo.weapons;
 
     let events = eventsDataInfo.map((e, i) => {
         if (Array.isArray(e)) {

@@ -107,12 +107,14 @@ import { VPHomeHero } from 'vitepress/theme'
 
 import "./genshin.scss";
 import dayjs from "dayjs";
-import { WISH } from "./wish";
-import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
 import { processEvent } from "./eventHandle";
 import { parseDayjs, ElementString } from "./utils";
-import { current, future, wishDeadline, wishBegin } from "./wishRecent";
+import { current } from "./wishRecent";
+
+// data
+import { WISH } from "./wish";
+import { CHARACTER } from "./characters";
 
 dayjs.locale("zh");
 
@@ -129,7 +131,7 @@ const colorMap = {
 const DUR_DAY_WIDTH = 40;
 let today = dayjs();
 
-const eventObj = processEvent();
+const eventObj = processEvent(WISH);
 
 let firstDay = eventObj.firstDay;
 let wishCharacters = eventObj.events[0];
