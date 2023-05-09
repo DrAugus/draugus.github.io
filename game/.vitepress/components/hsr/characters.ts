@@ -29,45 +29,45 @@ export const CHARACTER = {
   seele: {
     id: "Seele",
     name: "希儿",
-    prefix: Weapon.Hunt,
+    prefix: Weapon.Hunt.name,
     star: 5,
     event_exclusive: true,
     intro: "",
     city: City.JariloVI,
     ele: Element.Quantum,
-    weapon: Weapon.Hunt
+    weapon: Weapon.Hunt.id
   },
   hook: {
     id: "Hook",
     name: "虎克",
-    prefix: Weapon.Destruction,
+    prefix: Weapon.Destruction.name,
     star: 4,
     event_exclusive: false,
     intro: "",
     city: City.JariloVI,
     ele: Element.Fire,
-    weapon: Weapon.Destruction
+    weapon: Weapon.Destruction.id
   },
   pela: {
     id: "Pela",
     name: "佩拉",
-    prefix: Weapon.Nihility,
+    prefix: Weapon.Nihility.name,
     star: 4,
     event_exclusive: false,
     intro: "",
     city: City.JariloVI,
     ele: Element.Ice,
-    weapon: Weapon.Nihility
+    weapon: Weapon.Nihility.id
   },
   natasha: {
     id: "Natasha",
     name: "娜塔莎",
-    prefix: Weapon.Abundance,
+    prefix: Weapon.Abundance.name,
     star: 4,
     event_exclusive: false,
     intro: "",
     city: City.JariloVI,
     ele: Element.Physical,
-    weapon: Weapon.Abundance
+    weapon: Weapon.Abundance.id
   },
 }

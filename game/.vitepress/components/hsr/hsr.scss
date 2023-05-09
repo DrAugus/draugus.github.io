@@ -1,0 +1,140 @@
+:root {
+    --ele-Quantum: #8880FF;
+    --ele-Imaginary: #FFEB60;
+    --ele-Lightning: #DF54FF;
+    --ele-Physical: #B0AAAB;
+    --ele-Fire: #F84F35;
+    --ele-Wind: #47DE9D;
+    --ele-Ice: #47C7FD;
+    --ele-weapon: #ffb169;
+}
+
+@mixin ele-text-shadow($color) {
+    text-shadow: var($color) -1px -1px 4px, var($color) 1px -1px 4px, var($color) -1px 1px 4px, var($color) 1px 1px 4px, var($color) 0 0 10px;
+}
+
+.weapon {
+    background-color: var(--ele-weapon)
+}
+
+/*元素背景色*/
+.ele-Quantum {
+    background-color: var(--ele-Quantum)
+}
+
+.ele-Imaginary {
+    background-color: var(--ele-Imaginary)
+}
+
+.ele-Lightning {
+    background-color: var(--ele-Lightning)
+}
+
+.ele-Physical {
+    background-color: var(--ele-Physical)
+}
+
+.ele-Fire {
+    background-color: var(--ele-Fire)
+}
+
+.ele-Wind {
+    background-color: var(--ele-Wind)
+}
+
+.ele-Ice {
+    background-color: var(--ele-Ice)
+}
+
+.text-shadow-weapon {
+    @include ele-text-shadow(var(--ele-weapon))
+}
+
+.ele-text-shadow-Quantum {
+    @include ele-text-shadow(var(--ele-Quantum))
+}
+
+.ele-text-shadow-Imaginary {
+    @include ele-text-shadow(var(--ele-Imaginary))
+}
+
+.ele-text-shadow-Lightning {
+    @include ele-text-shadow(var(--ele-Lightning))
+}
+
+.ele-text-shadow-Physical {
+    @include ele-text-shadow(var(--ele-Physical))
+}
+
+.ele-text-shadow-Fire {
+    @include ele-text-shadow(var(--ele-Fire))
+}
+
+.ele-text-shadow-Wind {
+    @include ele-text-shadow(var(--ele-Wind))
+}
+
+.ele-text-shadow-Ice {
+    @include ele-text-shadow(var(--ele-Ice))
+}
+
+/*元素文本色*/
+.ele-text-Quantum {
+    color: var(--ele-Quantum);
+}
+
+.ele-text-Imaginary {
+    color: var(--ele-Imaginary)
+}
+
+.ele-text-Lightning {
+    color: var(--ele-Lightning)
+}
+
+.ele-text-Physical {
+    color: var(--ele-Physical)
+}
+
+.ele-text-Fire {
+    color: var(--ele-Fire)
+}
+
+.ele-text-Wind {
+    color: var(--ele-Wind)
+}
+
+.ele-text-Ice {
+    color: var(--ele-Ice)
+}
+
+.event-item-background-weapon {
+    background: linear-gradient(to right, var(--ele-weapon), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Quantum {
+    background: linear-gradient(to right, var(--ele-Quantum), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Imaginary {
+    background: linear-gradient(to right, var(--ele-Imaginary), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Lightning {
+    background: linear-gradient(to right, var(--ele-Lightning), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Physical {
+    background: linear-gradient(to right, var(--ele-Physical), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Fire {
+    background: linear-gradient(to right, var(--ele-Fire), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Wind {
+    background: linear-gradient(to right, var(--ele-Wind), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-Ice {
+    background: linear-gradient(to right, var(--ele-Ice), rgb(0 0 0 / 0%)) no-repeat;
+}

@@ -114,7 +114,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/zh";
 dayjs.locale("zh");
 
-import "./genshin/genshin.scss";
+import "./timeline.scss";
 
 const colorMap = {
   "denro": "#98e628",

@@ -13,5 +13,7 @@ hero:
 import { WISH } from "../.vitepress/components/hsr/wish";
 import { CHARACTER } from "../.vitepress/components/hsr/characters";
 
+import "../.vitepress/components/hsr/hsr.scss";
+
 import Timeline from "../.vitepress/components/Timeline.vue";
 </script>

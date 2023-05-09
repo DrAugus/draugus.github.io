@@ -13,5 +13,7 @@ hero:
 import { WISH } from "../.vitepress/components/genshin/wish";
 import { CHARACTER } from "../.vitepress/components/genshin/characters";
 
+import "../.vitepress/components/genshin/genshin.scss";
+
 import Timeline from "../.vitepress/components/Timeline.vue";
 </script>

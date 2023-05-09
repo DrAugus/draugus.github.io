@@ -1,11 +1,3 @@
-
-const url_code = '/code'
-const url_food = '/food'
-const url_game = '/genshin'
-const url_learn = '/learn'
-const url_life = '/life'
-const url_record = '/record'
-
 export const sidebar_zh = {
 
     '/genshin/': [
