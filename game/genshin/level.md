@@ -4,5 +4,5 @@
 <GenshinLevelExp />
 
 <script setup>
-import GenshinLevelExp from "../../.vitepress/components/genshin/LevelExp.vue";
+import GenshinLevelExp from "../.vitepress/components/genshin/LevelExp.vue";
 </script>

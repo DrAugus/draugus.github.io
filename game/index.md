@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: 复刻祈愿
-      link: /game/genshin/fork
+      link: /genshin/fork
     - theme: alt
       text: 当前祈愿
-      link: /game/genshin/wish
+      link: /genshin/wish
 features:
   - title: 绷不住
     details: 预制

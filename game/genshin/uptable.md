@@ -6,5 +6,5 @@ aside: false
 <GenshinUpTable />
 
 <script setup>
-import GenshinUpTable from "../../.vitepress/components/genshin/UpTable.vue";
+import GenshinUpTable from "../.vitepress/components/genshin/UpTable.vue";
 </script>

@@ -8,5 +8,5 @@ aside: false
 <GenshinWish />
 
 <script setup>
-import GenshinWish from "../../.vitepress/components/genshin/Wish.vue";
+import GenshinWish from "../.vitepress/components/genshin/Wish.vue";
 </script>

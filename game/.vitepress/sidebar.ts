@@ -1,14 +1,14 @@
 
 const url_code = '/code'
 const url_food = '/food'
-const url_game = '/game/genshin'
+const url_game = '/genshin'
 const url_learn = '/learn'
 const url_life = '/life'
 const url_record = '/record'
 
 export const sidebar_zh = {
 
-    '/game/genshin/': [
+    '/genshin/': [
         { text: '米哈游 cookie', link: url_game + "/mihoyo-cookie" },
         { text: '近期祈愿', link: url_game + "/wish" },
         { text: '祈愿时间轴', link: url_game + "/timeline" },

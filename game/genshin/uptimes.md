@@ -6,5 +6,5 @@ aside: false
 <GenshinUpTimes />
 
 <script setup lang="ts">
-import GenshinUpTimes from "../../.vitepress/components/genshin/UpTimes.vue";
+import GenshinUpTimes from "../.vitepress/components/genshin/UpTimes.vue";
 </script>

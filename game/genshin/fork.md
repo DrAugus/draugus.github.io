@@ -6,5 +6,5 @@ aside: false
 <GenshinFork />
 
 <script setup lang="ts">
-import GenshinFork from "../../.vitepress/components/genshin/Fork.vue";
+import GenshinFork from "../.vitepress/components/genshin/Fork.vue";
 </script>

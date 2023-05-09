@@ -6,5 +6,5 @@ aside: false
 <GenshinCharacters />
 
 <script setup>
-import GenshinCharacters from "../../.vitepress/components/genshin/Characters.vue";
+import GenshinCharacters from "../.vitepress/components/genshin/Characters.vue";
 </script>
