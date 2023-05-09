@@ -71,6 +71,7 @@ export const navbar = [
         items: [
           { text: '想法', link: '/thought/' },
           { text: '牢骚', link: '/grumbling/' },
+          { text: '女人', link: '/thought/woman' },
           { text: '事故', link: '/accident/' },
           { text: '偷乐', link: '/funny/' },
         ],

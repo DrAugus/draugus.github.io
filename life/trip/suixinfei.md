@@ -32,9 +32,7 @@
 - 宁波始发的有 哈尔滨 沈阳 大连 北京 武汉 贵阳
 - 杭州始发的有 东三省 新疆 成都 重庆 南宁 贵阳 海口 三亚 广东地区 潮汕
 
-详细见下图
-
-:::details
+:::details 详细见图
 ![1](/img/trip/csair-hangzhou.png)
 ![1](/img/trip/csair-ningbo.png)
 ![1](/img/trip/csair-shhongqiao.png)
@@ -63,8 +61,7 @@
 - 06/22 - 06/24 3 days  端午节休
 - 07/01 - 07/02 2 days
 
-表格显示
-:::details
+:::details 表格显示
 
 |时间|天数|备注|飞行次数|
 |:----:|:----:|:----:|:----:|
@@ -102,8 +99,7 @@
 其他款对比
 ![2](/img/trip/suixinfei-compare.jpg)
 
-详细规则说明
-:::details
+:::details 详细规则说明
 
 ### “畅游中国”全国版产品规则
 
