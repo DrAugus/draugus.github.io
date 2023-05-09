@@ -15,22 +15,12 @@ let wishLength = wishCharacters.length;
 
 //----------------------------
 
-let WishDetails = {
-    haveWish: true,//0无祈愿 1有祈愿
-    wishIndex: [],//索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
-    reprint: true,//双复刻标记
-    isFuture: true,//当前无祈愿 正在等待开放
-    comingIndex: []//即将到来的未开放的
-};
-
 //找出当前在哪个祈愿时间段
 const getWishObj = () => {
 
     let obj = {
-        wishIndex: [],
-        haveWish: true,
-        isFuture: false,
-        comingIndex: [],
+        wishIndex: [],//索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
+        comingIndex: []//即将到来的未开放的
     };
 
     //当前时间所处的祈愿时间段
@@ -48,8 +38,6 @@ const getWishObj = () => {
             obj.comingIndex.push(e.index2)
         }
     }
-
-    obj.reprint = obj.wishIndex.length > 1;
 
     return obj;
 
@@ -120,8 +108,14 @@ for (let v of objWish.comingIndex) {
 }
 
 // console.log(current, future);
-export const wishDeadline = () => current.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) : -1;
-export const wishBegin = () => future.able ? Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) : -1;
+export const wishDeadline = () =>
+    current.able ?
+        Deadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) :
+        -1;
+export const wishBegin = () =>
+    future.able ?
+        Deadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) :
+        -1;
 
 // console.log(wishDeadline(), wishBegin());
 
