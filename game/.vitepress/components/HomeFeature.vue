@@ -42,7 +42,7 @@ export default {
                 // subObj.details = v[1]
                 dynamicFeatures.push(subObj)
             }
-            console.log(dynamicFeatures)
+            // console.log(dynamicFeatures)
             this.info = dynamicFeatures
         }
     },

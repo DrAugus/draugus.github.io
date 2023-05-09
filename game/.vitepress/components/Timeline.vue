@@ -42,7 +42,7 @@
 }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img">
-                <img v-bind:src="'/image/genshin/wish/' +
+                <img v-bind:src="`/image/${gameName}/wish/` +
                   value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
                   ''" @error="replaceImg" alt="">
               </div>
@@ -72,7 +72,7 @@
 }">
             <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
               <div class="event-img responsive-img lazy">
-                <img v-bind:src="'/image/genshin/wish/' +
+                <img v-bind:src="`/image/${gameName}/wish/` +
                   value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
                   ''" @error="replaceImg" alt="">
               </div>
@@ -144,6 +144,7 @@ export default {
       colorMap,
       homeActions: [],
       homeTagline: '',
+      gameName: this.getGameName(),
     };
   },
   props: {
@@ -205,8 +206,8 @@ export default {
 
 
     this.homeActions = [
-      { theme: 'alt', text: '返回上级', link: '/game/genshin/' },
-      { theme: 'brand', text: this.replaceText('当前x'), link: '/game/genshin/wish' }
+      { theme: 'alt', text: '返回上级', link: '/' + this.gameName + '/' },
+      { theme: 'brand', text: this.replaceText('当前x'), link: '/' + this.gameName + '/wish' }
     ]
 
     for (let v of current.name) {
@@ -244,7 +245,7 @@ export default {
       // replace char src
       homeImg = []
       for (let v of current.wish5star) {
-        homeImg.push('/image/genshin/characters/full/' + v + '.png')
+        homeImg.push(`/image/${this.gameName}/characters/full/${v}.png`)
       }
       let objImg = { cnt: 0, src: '' }
       objImg.cnt = homeImg.length
@@ -257,7 +258,7 @@ export default {
       }
     },
     replaceImg(event) {
-      event.target.src = '/image/genshin/wish/_1.jpg'
+      event.target.src = `/image/${this.gameName}/wish/_1.jpg`
     },
 
     // tag 0 no handle
@@ -278,6 +279,11 @@ export default {
 
         return str.replace('x', '跃迁')
       }
+    },
+
+    getGameName() {
+      if (this.WISH_TEXT == 0) return 'genshin'
+      if (this.WISH_TEXT == 1) return 'hsr'
     },
   },
   beforeDestroy() {

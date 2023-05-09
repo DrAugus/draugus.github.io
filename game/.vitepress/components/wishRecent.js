@@ -7,16 +7,6 @@ import "dayjs/locale/zh";
 
 dayjs.locale("zh");
 
-const ELEMENT_COLOR = {
-    dendro: "#98e628",//草
-    geo: "#e2b032",//岩
-    electro: "#fca7ff",//雷
-    hydro: "#03ddfe",//水
-    pyro: "#fa5d3e",//火
-    anemo: "#4cf3b6",//风
-    cryo: "#a6fdfd"//冰
-};
-
 const eventObj = processEvent(WISH);
 
 let wishCharacters = eventObj.events[0];
