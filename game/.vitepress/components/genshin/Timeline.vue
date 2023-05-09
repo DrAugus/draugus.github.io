@@ -35,7 +35,7 @@
             i == WISH.weapons.length - 1 ? 'rounded-r-xl' : '',
             i < WISH.weapons.length - 1 && diffWishStyle(value.end, WISH.weapons[i + 1].start) < 0 ? 'rounded-r-xl' : '',
           ]" v-bind:style="{
-  width: wishWeapons[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
+  width: wishWeapons[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
   height: 'var(--event-height)'
 }">
@@ -65,7 +65,7 @@
             !value.wish_2 && i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) < 0 ? 'rounded-r-xl' : '',
 
           ]" :style="{
-  width: wishCharacters[i].duration * (DUR_DAY_WIDTH + 1) + 'px',
+  width: wishCharacters[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
   marginTop: value.wish_2 ? '68px' : ''
 }">
@@ -112,10 +112,6 @@ import { processEvent } from "./eventHandle";
 import { parseDayjs, ElementString } from "./utils";
 import { current } from "./wishRecent";
 
-// data
-import { WISH } from "./wish";
-import { CHARACTER } from "./characters";
-
 dayjs.locale("zh");
 
 const colorMap = {
@@ -129,104 +125,100 @@ const colorMap = {
 };
 
 const DUR_DAY_WIDTH = 40;
-let today = dayjs();
-
-const eventObj = processEvent(WISH);
-
-let firstDay = eventObj.firstDay;
-let wishCharacters = eventObj.events[0];
-let wishWeapons = eventObj.events[1];
-let wishCharacterLength = wishCharacters.length;
-let wishWeaponLength = wishWeapons.length;
-let dates = eventObj.dates;
-let monthList = eventObj.monthList;
-let todayOffset = "";
-let durationCharacter = [];
-let durationWeapon = [];
-
-// console.log(wishCharacters)
-
-// console.log(monthList)
-
-//设置时间轴
-const setTimeAxis = () => {
-  todayOffset = Math.abs(firstDay.diff(today, "day", true));
-  todayOffset = (todayOffset + 1) * (DUR_DAY_WIDTH + 1) + "px";
-  // console.log("todayOffset", todayOffset);
-};
-setTimeAxis();
-
-//祈愿角色信息
-const wishCharacterInfo = () => {
-  for (let i = 0; i < wishCharacterLength; ++i) {
-    let start = firstDay;
-    const end = parseDayjs(wishCharacters[i].start).subtract(0, "minute");
-    durationCharacter.push(end.diff(start, "day", true));
-    // console.log(i, durationCharacter);
-  }
-};
-// console.log("======== wish char ========")
-wishCharacterInfo();
-// console.log(durationCharacter)
-
-//祈愿武器信息
-const wishWeaponInfo = () => {
-  for (let i = 0; i < wishWeaponLength; ++i) {
-    let start = firstDay;
-    const end = parseDayjs(wishWeapons[i].start).subtract(0, "minute");
-    // console.log(start, end);
-    // console.log(i, end.diff(start, "day", true));
-    durationWeapon.push(end.diff(start, "day", true));
-  }
-};
-// console.log("======== wish weapon ========");
-wishWeaponInfo();
-// console.log(durationWeapon);
-
-const homeActions = [
-  { theme: 'alt', text: '返回上级', link: '/game/genshin/' },
-  { theme: 'brand', text: '当前祈愿', link: '/game/genshin/wish' }
-]
-
-let homeTagline = ''
-for (let v of current.name) {
-  homeTagline += ' + ' + v
-}
-homeTagline = homeTagline.slice(3)
-
-
 
 export default {
   name: "GenshinTimeline",
   data() {
     return {
-      monthList,
-      dates,
+      monthList: [],
+      dates: [],
       DUR_DAY_WIDTH,
-      todayOffset,
+      todayOffset: "",
       currentTime: new Date(),
-      WISH,
-      CHARACTER,
-      durationCharacter,
-      durationWeapon,
-      wishCharacters,
-      wishWeapons,
+      durationCharacter: [],
+      durationWeapon: [],
+      wishCharacters: [],
+      wishWeapons: [],
       colorMap,
       ElementString,
-      homeActions,
-      homeTagline: homeTagline,
+      homeActions: [],
+      homeTagline: '',
     };
+  },
+  props: {
+    WISH: {
+      type: Object,
+      required: true,
+    },
+    CHARACTER: {
+      type: Object,
+      required: true,
+    },
+
   },
   components: {
     VPHomeHero
   },
   mounted() {
+    const eventObj = processEvent(this.WISH);
+
+    let today = dayjs();
+
+    let firstDay = eventObj.firstDay;
+    this.wishCharacters = eventObj.events[0];
+    this.wishWeapons = eventObj.events[1];
+
+    // console.log(this.wishCharacters)
+
+    let wishCharacterLength = this.wishCharacters.length;
+    let wishWeaponLength = this.wishWeapons.length;
+
+    this.dates = eventObj.dates;
+    this.monthList = eventObj.monthList;
+
+    // 设置时间轴
+    this.todayOffset = Math.abs(firstDay.diff(today, "day", true));
+    this.todayOffset = (this.todayOffset + 1) * (DUR_DAY_WIDTH + 1) + "px";
+
+    // 祈愿角色信息
+    for (let i = 0; i < wishCharacterLength; ++i) {
+      let start = firstDay;
+      const end = parseDayjs(this.wishCharacters[i].start).subtract(0, "minute");
+      this.durationCharacter.push(end.diff(start, "day", true));
+      // console.log(i, durationCharacter);
+    }
+
+    // 祈愿武器信息
+    for (let i = 0; i < wishWeaponLength; ++i) {
+      let start = firstDay;
+      const end = parseDayjs(this.wishWeapons[i].start).subtract(0, "minute");
+      // console.log(start, end);
+      // console.log(i, end.diff(start, "day", true));
+      this.durationWeapon.push(end.diff(start, "day", true));
+    }
+
+
+    this.homeActions = [
+      { theme: 'alt', text: '返回上级', link: '/game/genshin/' },
+      { theme: 'brand', text: '当前祈愿', link: '/game/genshin/wish' }
+    ]
+
+    for (let v of current.name) {
+      this.homeTagline += ' + ' + v
+    }
+    this.homeTagline = this.homeTagline.slice(3)
+
+    // console.log(this.todayOffset)
+
+
+    // current time
     let _this = this;
     this.timer1 = setInterval(() => {
       _this.currentTime = dayjs().format("HH:mm:ss");
     }, 1000);
 
     this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+
   },
   methods: {
     setCurrentPos() {
