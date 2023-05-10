@@ -5,7 +5,7 @@
 <script>
 import HomeFeature from '../HomeFeature.vue';
 import { defineComponent } from 'vue'
-import { current, future } from '../wishRecent'
+import { current, future } from './wishRecent'
 import { modifyChar } from './characters';
 
 // title 5 star

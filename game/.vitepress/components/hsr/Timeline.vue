@@ -10,11 +10,12 @@ import { VPHomeHero } from 'vitepress/theme'
 // data
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
+// method
+import { current } from "./wishRecent";
 // css
 import "./hsr.scss";
 // utils
 import Timeline from "../Timeline.vue";
-import { current } from "../wishRecent";
 import { getTimelineHomeHero } from "../utils"
 
 const gameNum = 1

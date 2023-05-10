@@ -48,7 +48,7 @@
 
 <script>
 import { modifyChar } from './characters';
-import { current, future, wishDeadline, wishBegin } from "../wishRecent";
+import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
 export default {
   name: "Wish",
