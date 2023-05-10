@@ -11,7 +11,9 @@ export const Element = {
 export const City = {
   HertaSpaceStation: { id: "Herta Space Station", name: "空间站「黑塔」" },
   JariloVI: { id: "Jarilo-VI", name: "雅利洛-VI" },
-  TheXianzhouLuofu: { id: "The Xianzhou Luofu", name: "仙舟「罗浮」" }
+  TheXianzhouLuofu: { id: "The Xianzhou Luofu", name: "仙舟「罗浮」" },
+  AstralExpress: { id: "Astral Express", name: "星穹列车" },
+  StellaronHunters: { id: "Stellaron Hunters", name: "星核猎手" },
 }
 
 export const Weapon = {
