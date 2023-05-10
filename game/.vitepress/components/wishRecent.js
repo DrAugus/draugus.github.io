@@ -11,10 +11,10 @@ dayjs.locale("zh");
 const eventObj = processEvent(WISH);
 
 let wishCharacters = eventObj.events[0];
-console.log(wishCharacters)
+// console.log(wishCharacters)
 
 let objWish = getWishIndex(wishCharacters);
-console.log("objWish", objWish);
+// console.log("objWish", objWish);
 
 export const current = getWishInfo(wishCharacters, objWish.wishIndex);
 export const future = getWishInfo(wishCharacters, objWish.comingIndex);

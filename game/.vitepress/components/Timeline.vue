@@ -1,7 +1,4 @@
 <template>
-  <VPHomeHero :name="replaceText('x时间轴')" :text="replaceText('全部x信息')" :actions="homeActions" :tagline="homeTagline"
-    :style="getImgStyle()" />
-
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
     <p :style="{ textAlign: 'center' }">
@@ -104,11 +101,9 @@
 </template>
 
 <script>
-import { VPHomeHero } from 'vitepress/theme'
 
 import { parseDayjs, getGameName } from "./utils";
 import { processEvent } from "./eventHandle";
-import { current } from "./wishRecent";
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
@@ -164,7 +159,6 @@ export default {
     },
   },
   components: {
-    VPHomeHero
   },
   mounted() {
     const eventObj = processEvent(this.WISH);
@@ -204,17 +198,6 @@ export default {
       this.durationWeapon.push(end.diff(start, "day", true));
     }
 
-
-    this.homeActions = [
-      { theme: 'alt', text: '返回上级', link: '/' + this.gameName + '/' },
-      { theme: 'brand', text: this.replaceText('当前x'), link: '/' + this.gameName + '/wish' }
-    ]
-
-    for (let v of current.obj) {
-      this.homeTagline += ' + ' + v.name
-    }
-    this.homeTagline = this.homeTagline.slice(3)
-
     // console.log(this.todayOffset)
 
 
@@ -239,24 +222,7 @@ export default {
       return -1
     },
 
-    getImgStyle() {
-      // wish src
-      let homeImg // = current.src
-      // replace char src
-      homeImg = []
-      for (let v of current.obj) {
-        homeImg.push(`/image/${this.gameName}/characters/full/${v.wish5star}.png`)
-      }
-      let objImg = { cnt: 0, src: '' }
-      objImg.cnt = homeImg.length
-      if (homeImg.length == 1) objImg.src = homeImg[0]
-      if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
-      return {
-        backgroundImage: objImg.src,
-        backgroundRepeat: 'no-repeat,no-repeat',
-        backgroundPosition: 'left 3%, right 3%',
-      }
-    },
+
     replaceImg(event) {
       event.target.src = `/image/${this.gameName}/wish/_1.jpg`
     },
