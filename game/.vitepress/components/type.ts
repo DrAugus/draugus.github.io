@@ -37,3 +37,17 @@ export interface WishInfo {
   able: boolean
   obj: WishInfoObj[]
 }
+
+export interface HeroAction {
+  theme?: 'brand' | 'alt'
+  text: string
+  link: string
+}
+
+export interface TimelineHomeHero {
+  name: string
+  text: string
+  actions: HeroAction[]
+  tagline: string
+  style?: Object
+}

@@ -1,3 +1,51 @@
+import type { TimelineHomeHero, WishInfo } from "./type";
+
+export const getTimelineHomeHero =
+  (current: WishInfo, gameNum: number = 0) => {
+    let tl: TimelineHomeHero = {
+      name: '',
+      text: '',
+      actions: [],
+      tagline: '',
+      style: {}
+    }
+
+    tl.name = replaceText('x时间轴', gameNum)
+    tl.text = replaceText('全部x信息', gameNum)
+
+    let gameName = getGameName(gameNum)
+
+    tl.actions = [
+      { theme: 'alt', text: '返回上级', link: '/' + gameName + '/' },
+      { theme: 'brand', text: replaceText('当前x', gameNum), link: '/' + gameName + '/wish' }
+    ]
+    let homeTagline = ''
+    for (let v of current.obj) {
+      homeTagline += ' + ' + v.name
+    }
+    tl.tagline = homeTagline.slice(3)
+
+
+    // wish src
+    let homeImg // = current.src
+    // replace char src
+    homeImg = []
+    for (let v of current.obj) {
+      homeImg.push(`/image/${gameName}/characters/full/${v.wish5star}.png`)
+    }
+    let objImg = { cnt: 0, src: '' }
+    objImg.cnt = homeImg.length
+    if (homeImg.length == 1) objImg.src = homeImg[0]
+    if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
+    tl.style = {
+      backgroundImage: objImg.src,
+      backgroundRepeat: 'no-repeat,no-repeat',
+      backgroundPosition: 'left 3%, right 3%',
+    }
+
+    return tl;
+
+  }
 
 export const getGameName = (game: number) => {
   if (game === 0) return 'genshin'
