@@ -21,7 +21,7 @@
 
       <div class="timeline-day">
 
-        <div v-bind:style="{ left: todayOffset }" class="timeline-today-line-pos" ref="findNowPos">
+        <div :style="todayOffset ? { left: todayOffset } : ''" class="timeline-today-line-pos" ref="findNowPos">
           <div class="timeline-today-line-pos-text">{{ currentTime }}</div>
         </div>
 
@@ -130,7 +130,7 @@ export default {
       monthList: [],
       dates: [],
       DUR_DAY_WIDTH,
-      todayOffset: "",
+      todayOffset: null,
       currentTime: new Date(),
       durationCharacter: [],
       durationWeapon: [],
@@ -162,19 +162,21 @@ export default {
   },
   components: {
   },
+  computed: {
+  },
   mounted() {
     const eventObj = processEvent(this.WISH);
 
-    let today = dayjs();
+    const today = dayjs();
+    const firstDay = eventObj.firstDay;
 
-    let firstDay = eventObj.firstDay;
     this.wishCharacters = eventObj.events[0];
     this.wishWeapons = eventObj.events[1];
 
     // console.log(this.wishCharacters)
 
-    let wishCharacterLength = this.wishCharacters.length;
-    let wishWeaponLength = this.wishWeapons.length;
+    const wishCharacterLength = this.wishCharacters.length;
+    const wishWeaponLength = this.wishWeapons.length;
 
     this.dates = eventObj.dates;
     this.monthList = eventObj.monthList;
@@ -183,9 +185,10 @@ export default {
     this.todayOffset = Math.abs(firstDay.diff(today, "day", true));
     this.todayOffset = (this.todayOffset + 1) * (DUR_DAY_WIDTH + 1) + "px";
 
+    const start = firstDay;
+
     // 祈愿角色信息
     for (let i = 0; i < wishCharacterLength; ++i) {
-      let start = firstDay;
       const end = parseDayjs(this.wishCharacters[i].start).subtract(0, "minute");
       this.durationCharacter.push(end.diff(start, "day", true));
       // console.log(i, durationCharacter);
@@ -193,15 +196,11 @@ export default {
 
     // 祈愿武器信息
     for (let i = 0; i < wishWeaponLength; ++i) {
-      let start = firstDay;
       const end = parseDayjs(this.wishWeapons[i].start).subtract(0, "minute");
       // console.log(start, end);
       // console.log(i, end.diff(start, "day", true));
       this.durationWeapon.push(end.diff(start, "day", true));
     }
-
-    // console.log(this.todayOffset)
-
 
     // current time
     let _this = this;
@@ -209,7 +208,10 @@ export default {
       _this.currentTime = dayjs().format("HH:mm:ss");
     }, 1000);
 
-    this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+    // 在下一个 tick 中计算 offsetLeft 的值，然后更新 scrollLeft，这样可以保证 offsetLeft 的值已经计算完成
+    this.$nextTick(() => {
+      this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+    });
 
   },
   methods: {
