@@ -1,5 +1,6 @@
 <script>
-import Modal from "../Modal.vue";
+import Modal from "./Modal.vue";
+import { objFilter, replaceAndLow, getGameName } from "./utils";
 
 export default {
   props: {
@@ -7,14 +8,16 @@ export default {
       type: Object,
       default: () => {
       }
-    }
+    },
+    game: '',
   },
   components: {
     Modal
   },
   data() {
     return {
-      showModal: false
+      showModal: false,
+      replaceAndLow,
     };
   },
   methods: {
@@ -28,10 +31,10 @@ export default {
 <template>
   <div class="character" id="show-modal" @click="showModal = true">
     <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star'">
-      <img :src="'/image/genshin/characters/' + info.id + '.png'" @error="replaceImg">
+      <img :src='`/image/${game}/characters/${replaceAndLow(info.id)}.png`' @error="replaceImg">
     </div>
     <div class="character-ele">
-      <img :src="'/image/genshin/elements/' + info.ele + '.png'" alt="{{1}}">
+      <img :src="`/image/${game}/elements/${replaceAndLow(info.ele)}.png`" alt="{{1}}">
     </div>
     <div class="character-name">
       <div>
@@ -48,7 +51,7 @@ export default {
       </template>
       <template #body>
         <div class="img-half">
-          <img :src="'/image/genshin/characters/half/' + info.id + '.png'">
+          <img :src='`/image/${game}/characters/half/${info.id}.png`' @error="replaceImg">
         </div>
         <span>{{ info.intro }}</span>
       </template>

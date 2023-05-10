@@ -16,7 +16,7 @@
   <div class="genshin-element">
     <div v-for="(v, k, i) in elementStr">
       <a @click="filterEle(v.id)">
-        <img :src="'/image/genshin/elements/' + v.id + '.png'" alt="{{v.id}}">
+        <img :src="`/image/${gameName}/elements/${replaceAndLow(v.id)}.png`" :alt="v.id">
       </a>
     </div>
   </div>
@@ -35,60 +35,62 @@
 
   <div class="character-info">
 
-    <Modal v-for="(value, key, index) in info" :info="{
+    <CharModal v-for="(value, key, index) in info" :info="{
       name: value.name,
       prefix: value.prefix,
       id: value.id,
       intro: value.intro,
       star: value.star,
       ele: value.ele.id,
-    }"></Modal>
+    }" :game="gameName">
+
+    </CharModal>
 
   </div>
 </template>
 
 <script>
 
-import { CHARACTER } from "./characters";
-import Modal from "./Modal.vue";
-import { City, Element, Weapon } from "./utils";
-import { objFilter } from "../utils";
+import CharModal from "./CharModal.vue";
+import { objFilter, replaceAndLow, getGameName } from "./utils";
 
-const lenChar = Object.getOwnPropertyNames(CHARACTER).length
 // let lenFilterChar = lenChar
 export default {
   name: "Characters",
-  components: { Modal },
+  components: { CharModal },
   data() {
     return {
-      info: CHARACTER,
-      elementStr: Element,
-      city: City,
-      weapon: Weapon,
+      info: this.Character,
+      elementStr: this.Element,
+      city: this.City,
+      weapon: this.Weapon,
       showModal: false,
       star: [4, 5],
-      lenChar,
+      lenChar: this.Character ? Object.getOwnPropertyNames(this.Character).length :0,
       // lenFilterChar,
+      replaceAndLow,
+      gameName: getGameName(this.Game)
     };
   },
+  props: { Character: Object, City: Object, Element: Object, Weapon: Object, Game: 0 },
   async mounted() {
     this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
   },
   methods: {
     filterEle(ele) {
-      this.info = objFilter(CHARACTER, details => details.ele.id == ele);
+      this.info = objFilter(this.Character, details => details.ele.id == ele);
     },
     filterWeapon(w) {
-      this.info = objFilter(CHARACTER, details => details.weapon.id == w);
+      this.info = objFilter(this.Character, details => details.weapon.id == w);
     },
     filterCity(c) {
-      this.info = objFilter(CHARACTER, details => details.city.id == c);
+      this.info = objFilter(this.Character, details => details.city.id == c);
     },
     filterStar(s) {
-      this.info = objFilter(CHARACTER, details => details.star == s);
+      this.info = objFilter(this.Character, details => details.star == s);
     },
     all() {
-      this.info = CHARACTER;
+      this.info = this.Character;
     },
   }
 };

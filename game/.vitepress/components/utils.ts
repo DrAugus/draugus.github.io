@@ -85,7 +85,7 @@ export const replaceText =
 
 //替换空格 转小写
 export const replaceAndLow = (str: string) =>
-  str.replace(/ /g, "_").toLowerCase();
+  str?.replace(/ /g, "_").toLowerCase();
 
 //格式化日期
 import dayjs from "dayjs";

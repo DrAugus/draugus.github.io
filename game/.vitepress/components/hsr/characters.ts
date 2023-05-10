@@ -243,7 +243,7 @@ export const CHARACTER = {
     event_exclusive: false,
     intro: '',
     city: City.HertaSpaceStation,
-    ele: 'Fire',
+    ele: Element.Fire,
     weapon: Weapon.Harmony
   },
   arlan: {
@@ -276,7 +276,7 @@ export const CHARACTER = {
     event_exclusive: false,
     intro: '',
     city: City.AstralExpress,
-    ele: 'Fire',
+    ele: Element.Fire,
     weapon: Weapon.Erudition
   },
   dan_heng: {
