@@ -1,3 +1,5 @@
+import type { EventHandleWish, WishInfo, WishInfoObj } from './type'
+
 //替换空格 转小写
 export const replaceAndLow = (str: string) =>
   str.replace(/ /g, "_").toLowerCase();
@@ -9,9 +11,80 @@ export const parseDayjs = (date: string) =>
 export const formatDayjs = (date: string) =>
   parseDayjs(date).format("YYYY-MM-DD HH:mm");
 
-export function normalizeName(name: string) {
-  return name.toLowerCase().replace(/\s+/g, '')
+export const normalizeName = (name: string) =>
+  name.toLowerCase().replace(/\s+/g, '')
+
+
+//找出当前在哪个祈愿时间段
+export const getWishIndex = (wish: EventHandleWish[]) => {
+
+  type tObj = {
+    wishIndex: Number[] //索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
+    comingIndex: Number[] //即将到来的未开放的
+  }
+
+  let obj: tObj = {
+    wishIndex: [],
+    comingIndex: []
+  };
+
+  //当前时间所处的祈愿时间段
+  for (let e of wish) {
+    //当前时间在祈愿起始时间后
+    let startAfter = dayjs().isAfter(e.start, "second");
+    //当前时间在祈愿结束时间前
+    let endBefore = dayjs().isBefore(e.end, "second");
+    if (startAfter && endBefore) {
+      obj.wishIndex.push(e.index2);
+    }
+    //当前时间在祈愿起始时间前
+    let startBefore = dayjs().isBefore(e.start, "second");
+    if (startBefore) {
+      obj.comingIndex.push(e.index2)
+    }
+  }
+
+  return obj;
+
+};
+
+// 
+
+export const getWishObj = (wish: EventHandleWish, game: number = 0) => {
+  let picName = replaceAndLow(wish.name) + "_" + wish.image;
+  let img = "/image/genshin/wish/";
+  img += picName;
+  img += ".jpg";
+  let s = formatDayjs(wish.start);
+  let e = formatDayjs(wish.end);
+  // console.log(s, e);
+  let wish4star = wish.wish4star
+  // 有部分没有小写
+  if (Array.isArray(wish4star))
+    wish4star = wish4star?.map((v, i, arr) => replaceAndLow(v))
+  return {
+    name: wish.wishName,
+    date: s + " ~ " + e,
+    ver: wish.version,
+    src: img,
+    wish5star: wish.wish5star,
+    wish4star: wish4star
+  }
 }
+
+export const getWishInfo = (wish: EventHandleWish[], wishIndex: number[]) => {
+  let wishInfo: WishInfo = {
+    index: wishIndex,
+    able: wishIndex.length > 0,
+    obj: []
+  }
+  for (let v of wishIndex) {
+    const obj: WishInfoObj = getWishObj(wish[v])
+    wishInfo.obj.push(obj)
+  }
+  return wishInfo
+}
+
 
 //秒转换
 export const secondsFormat = (s) => {
@@ -23,7 +96,7 @@ export const secondsFormat = (s) => {
   return day + "天" + hour + "时" + minute + "分" + second + "秒";
 };
 
-export const Deadline = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
+export const getDeadline = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
 
 //返回始末时间之间的所有日期
 export const getDuration = (type: string, start: Date, end: Date): Date[] => {

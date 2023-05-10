@@ -210,8 +210,8 @@ export default {
       { theme: 'brand', text: this.replaceText('当前x'), link: '/' + this.gameName + '/wish' }
     ]
 
-    for (let v of current.name) {
-      this.homeTagline += ' + ' + v
+    for (let v of current.obj) {
+      this.homeTagline += ' + ' + v.name
     }
     this.homeTagline = this.homeTagline.slice(3)
 
@@ -241,11 +241,11 @@ export default {
 
     getImgStyle() {
       // wish src
-      let homeImg = current.src
+      let homeImg // = current.src
       // replace char src
       homeImg = []
-      for (let v of current.wish5star) {
-        homeImg.push(`/image/${this.gameName}/characters/full/${v}.png`)
+      for (let v of current.obj) {
+        homeImg.push(`/image/${this.gameName}/characters/full/${v.wish5star}.png`)
       }
       let objImg = { cnt: 0, src: '' }
       objImg.cnt = homeImg.length

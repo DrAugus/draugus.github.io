@@ -2,20 +2,20 @@
   <div v-if="current.able">
 
     <h2>当前祈愿 
-      <Badge :text="current.ver[0]" type="warning"></Badge>
+      <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
     <h3 :style="getImgStyle()">
-      <span v-for="(v, i) in current.name">
-        {{ v + modifyChar(current.wish5star[i]) }}
+      <span v-for="(v, i) in current.obj">
+        {{ v.name + modifyChar(v.wish5star) }}
       </span>
     </h3>
 
     <h3>{{ end }} 后结束</h3>
-    <blockquote>祈愿周期：{{ current.date[0] }}</blockquote>
+    <blockquote>祈愿周期：{{ current.obj[0].date }}</blockquote>
 
-    <div v-for="(item, index) in current.src">
-      <img :src="item" @error="replaceImg">
+    <div v-for="(v, i) in current.obj">
+      <img :src="v.src" @error="replaceImg">
     </div>
 
   </div>
@@ -30,11 +30,11 @@
     <h3>{{ begin }} 后开始</h3>
 
     <ul>
-      <li v-for="(item, index) in future.wish5star">
-        <span class="f-w-600"> {{ modifyChar(item) }} </span>
-        <Badge :text="future.ver[index]"></Badge>
-        {{ future.date[index] }}
-        <span v-for="(vv, ii) in future.wish4star[index]">
+      <li v-for="(v, i) in future.obj">
+        <span class="f-w-600"> {{ modifyChar(v.wish5star) }} </span>
+        <Badge :text="v.ver"></Badge>
+        {{ v.date }}
+        <span v-for="(vv, ii) in v.wish4star">
           {{ modifyChar(vv) }}
         </span>
       </li>
@@ -50,19 +50,6 @@
 import { modifyChar } from './characters';
 import { current, future, wishDeadline, wishBegin } from "../wishRecent";
 
-const findDiff = (arr) => {
-  let first = arr[0]
-  let indexArr = [0]
-  for (let i = 1; i < arr.length; ++i) {
-    if (arr[i] == first) continue
-    first = arr[i]
-    indexArr.push(i)
-  }
-  return indexArr
-}
-let futureIndex = findDiff(future.date)
-// console.log(futureIndex)
-
 export default {
   name: "Wish",
   components: {
@@ -71,7 +58,6 @@ export default {
   },
   data() {
     return {
-      futureIndex,
       future,
       current,
       begin: new Date(),
@@ -85,8 +71,8 @@ export default {
     },
     getImgStyle() {
       let homeImg = []
-      for (let v of current.wish5star) {
-        homeImg.push('/image/genshin/characters/full/' + v + '.png')
+      for (let v of current.obj) {
+        homeImg.push('/image/genshin/characters/full/' + v.wish5star + '.png')
       }
       let objImg = { cnt: 0, src: '' }
       objImg.cnt = homeImg.length

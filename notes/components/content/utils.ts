@@ -12,7 +12,7 @@ export const secondsFormat = (s) => {
   return day + "天" + hour + "时" + minute + "分" + second + "秒";
 };
 
-export const Deadline = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
+export const getDeadline = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
 
 //返回始末时间之间的所有日期
 export const getDuration = (type, start, end) => {

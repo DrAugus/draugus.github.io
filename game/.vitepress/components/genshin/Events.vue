@@ -22,16 +22,16 @@ const modify4char = (arr) => {
     })
 }
 
-const getEventWish = (obj, arr) => {
-    let lenWish = obj.index.length
+const getEventWish = (wishInfo, arr) => {
+    let lenWish = wishInfo.index.length
     // console.log(lenWish)
     for (let i = 0; i < lenWish; ++i) {
         if (i > 5) break;
-        let title = obj.name[i] + ' ' + modifyChar(obj.wish5star[i])
+        let title = wishInfo.obj[i].name + ' ' + modifyChar(wishInfo.obj[i].wish5star)
         let body = [
-            obj.ver[i] + ' ',
-            modify4char(obj.wish4star[i]),
-            obj.date[i]
+            wishInfo.obj[i].ver + ' ',
+            modify4char(wishInfo.obj[i].wish4star),
+            wishInfo.obj[i].date
         ]
         // console.log(title, body)
         arr.push([title, body])
