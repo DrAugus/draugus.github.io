@@ -6,14 +6,9 @@ hero:
 ---
 
 
-<Timeline :WISH="WISH" :CHARACTER="CHARACTER" :WISH_TEXT=1 />
+<Timeline />
 
 <script setup>
 
-import { WISH } from "../.vitepress/components/hsr/wish";
-import { CHARACTER } from "../.vitepress/components/hsr/characters";
-
-import "../.vitepress/components/hsr/hsr.scss";
-
-import Timeline from "../.vitepress/components/Timeline.vue";
+import Timeline from "../.vitepress/components/hsr/Timeline.vue";
 </script>

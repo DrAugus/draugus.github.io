@@ -1,6 +1,6 @@
 <template>
-  <VPHomeHero :name="replaceText('x时间轴', gameNum)" :text="replaceText('全部x信息', gameNum)" :actions="homeActions" :tagline="homeTagline"
-    :style="getImgStyle()" />
+  <VPHomeHero :name="replaceText('x时间轴', gameNum)" :text="replaceText('全部x信息', gameNum)" :actions="homeActions"
+    :tagline="homeTagline" :style="getImgStyle()" />
 
   <Timeline :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=gameNum />
 </template>
@@ -12,17 +12,18 @@ import { VPHomeHero } from 'vitepress/theme'
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 // css
-import "./genshin.scss";
+import "./hsr.scss";
 // utils
 import Timeline from "../Timeline.vue";
 import { current } from "../wishRecent";
-import { replaceText } from '../utils';
+import { replaceText } from "../utils"
 
-const gameNum = 0
+const gameNum = 1
 let gameName = ''
 
 if (gameNum == 0) gameName = 'genshin'
 if (gameNum == 1) gameName = 'hsr'
+
 
 const homeActions = [
   { theme: 'alt', text: '返回上级', link: '/' + gameName + '/' },

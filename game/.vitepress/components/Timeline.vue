@@ -44,7 +44,7 @@
                   ''" @error="replaceImg" alt="">
               </div>
               <span class="left-align timeline-character-text sticky text-shadow-weapon ">
-                {{ replaceText('', 1) }}
+                {{ replaceText('', gameNum, 1) }}
               </span>
             </div>
           </div>
@@ -75,7 +75,7 @@
               </div>
               <span class="left-align timeline-character-text sticky"
                 :class="'ele-text-shadow-' + CHARACTER[value.wish5star]?.ele?.id">
-                {{ value.wishName }} {{ replaceText('活动x') }}
+                {{ value.wishName }} {{ replaceText('活动x', gameNum) }}
                 「{{ CHARACTER[value.wish5star].prefix }}」
                 {{ CHARACTER[value.wish5star].name }}
               </span>
@@ -102,7 +102,7 @@
 
 <script>
 
-import { parseDayjs, getGameName } from "./utils";
+import { parseDayjs, getGameName, replaceText } from "./utils";
 import { processEvent } from "./eventHandle";
 
 import dayjs from "dayjs";
@@ -140,6 +140,8 @@ export default {
       homeActions: [],
       homeTagline: '',
       gameName: getGameName(this.WISH_TEXT),
+      gameNum: this.WISH_TEXT,
+      replaceText,
     };
   },
   props: {
@@ -225,26 +227,6 @@ export default {
 
     replaceImg(event) {
       event.target.src = `/image/${this.gameName}/wish/_1.jpg`
-    },
-
-    // tag 0 no handle
-    // tag 1 weapon text
-    replaceText(str, tag = 0) {
-      if (this.WISH_TEXT == 0) {
-
-        if (tag == 1) {
-          return '「神铸赋形」活动祈愿'
-        }
-
-        return str.replace('x', '祈愿')
-      } else if (this.WISH_TEXT == 1) {
-
-        if (tag == 1) {
-          return '「流光定影」活动跃迁'
-        }
-
-        return str.replace('x', '跃迁')
-      }
     },
 
   },

@@ -4,6 +4,29 @@ export const getGameName = (game: number) => {
   if (game === 1) return 'hsr'
 }
 
+// tag 0 no handle
+// tag 1 weapon text
+export const replaceText =
+  (str: string, game: number = 0, tag: number = 0) => {
+    if (game === 0) {
+
+      if (tag === 1) {
+        return '「神铸赋形」活动祈愿'
+      }
+
+      return str.replace('x', '祈愿')
+    } else if (game === 1) {
+
+      if (tag === 1) {
+        return '「流光定影」活动跃迁'
+      }
+
+      return str.replace('x', '跃迁')
+    }
+
+    return ''
+  };
+
 //替换空格 转小写
 export const replaceAndLow = (str: string) =>
   str.replace(/ /g, "_").toLowerCase();
