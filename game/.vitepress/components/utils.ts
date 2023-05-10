@@ -33,15 +33,23 @@ export const getTimelineHomeHero =
     for (let v of current.obj) {
       homeImg.push(`/image/${gameName}/characters/full/${v.wish5star}.png`)
     }
-    let objImg = { cnt: 0, src: '' }
-    objImg.cnt = homeImg.length
-    if (homeImg.length == 1) objImg.src = homeImg[0]
-    if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
-    tl.style = {
-      backgroundImage: objImg.src,
-      backgroundRepeat: 'no-repeat,no-repeat',
-      backgroundPosition: 'left 3%, right 3%',
+
+    if (homeImg.length == 1) {
+      tl.style = {
+        backgroundImage: `url(${homeImg[0]})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'right',
+        backgroundSize: '50%',
+      }
+    } else if (homeImg.length == 2) {
+      tl.style = {
+        backgroundImage: `url(${homeImg[0]}),url(${homeImg[1]})`,
+        backgroundRepeat: 'no-repeat,no-repeat',
+        backgroundPosition: 'left 3%, right 3%',
+        backgroundSize: '50%, 50%',
+      }
     }
+    // console.log(tl)
 
     return tl;
 
