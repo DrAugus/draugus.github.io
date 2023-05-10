@@ -1,16 +1,22 @@
 ---
-layout: home
+layoutClass: a-home-layout
 title: 祈愿时间轴
-hero:
-  name: 
+outline: false
+aside: false
+sidebar: false
+doc: false
+footer: false
 ---
 
 
-
-<Timeline  />
-
+<Timeline />
+  
 <script setup>
-
 import Timeline from "../.vitepress/components/genshin/Timeline.vue";
-
 </script>
+
+<style scoped>
+
+</style>
+
+<style src="../.vitepress/components/modifyHome.scss"></style>

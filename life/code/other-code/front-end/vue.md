@@ -4,6 +4,10 @@ icon: logos:vue
 
 # Vue
 
+## tick
+
+tick是Vue.js中的一个异步更新机制，用于在下一次DOM更新后运行一段代码。在使用Vue.js时，所有的DOM更新操作实际上都是异步的，Vue.js会将它们放到一个队列里，然后在下一个tick中统一更新。这样可以提高性能和用户体验，避免出现大量的DOM重绘和回流。使用$nextTick()方法可以让我们在下一个tick中获得DOM更新后最新的状态。
+
 ## vue组件之间相互传值的方式
 
 > [refer][props refer]
