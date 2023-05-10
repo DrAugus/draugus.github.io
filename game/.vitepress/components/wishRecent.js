@@ -1,6 +1,7 @@
 import { WISH } from "./genshin/wish";
 import { processEvent } from "./eventHandle";
-import { getDeadline, getWishIndex, getWishInfo } from "./utils";
+import { getWishIndex, getWishInfo } from "./wishInfo";
+import { getDeadline } from './utils'
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh";

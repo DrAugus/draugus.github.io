@@ -106,7 +106,7 @@
 <script>
 import { VPHomeHero } from 'vitepress/theme'
 
-import { parseDayjs } from "./utils";
+import { parseDayjs, getGameName } from "./utils";
 import { processEvent } from "./eventHandle";
 import { current } from "./wishRecent";
 
@@ -144,7 +144,7 @@ export default {
       colorMap,
       homeActions: [],
       homeTagline: '',
-      gameName: this.getGameName(),
+      gameName: getGameName(this.WISH_TEXT),
     };
   },
   props: {
@@ -281,10 +281,6 @@ export default {
       }
     },
 
-    getGameName() {
-      if (this.WISH_TEXT == 0) return 'genshin'
-      if (this.WISH_TEXT == 1) return 'hsr'
-    },
   },
   beforeDestroy() {
     if (this.timer1)
