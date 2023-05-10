@@ -51,7 +51,7 @@ export default {
       </template>
       <template #body>
         <div class="img-half">
-          <img :src='`/image/${game}/characters/half/${info.id}.png`' @error="replaceImg">
+          <img :src='`/image/${game}/characters/half/${replaceAndLow(info.id)}.png`' @error="replaceImg">
         </div>
         <span>{{ info.intro }}</span>
       </template>

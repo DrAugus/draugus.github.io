@@ -73,24 +73,24 @@ export const CHARACTER = {
   yukong: {
     id: 'Yukong',
     name: 'Yukong',
-    prefix: Weapon.Harmony,
+    prefix: Weapon.Harmony.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Imaginary,
-    weapon: Weapon.Harmony
+    weapon: Weapon.Harmony.id
   },
   luocha: {
     id: 'Luocha',
     name: 'Luocha',
-    prefix: Weapon.Abundance,
+    prefix: Weapon.Abundance.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Imaginary,
-    weapon: Weapon.Abundance
+    weapon: Weapon.Abundance.id
   },
   silver_wolf: {
     id: 'Silver Wolf',
