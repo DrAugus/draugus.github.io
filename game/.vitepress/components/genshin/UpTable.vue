@@ -16,7 +16,7 @@
                     <img v-if="vv.char" :src="composeSrc(vv.char)">
                 </td>
                 <td :style="{ textAlign: 'left', whiteSpace: 'nowrap' }">
-                    {{ modifyChar(names[i].name) }}
+                    {{ modifyChar(names[i].name, CHARACTER) }}
                 </td>
             </tr>
 
@@ -28,9 +28,9 @@
 import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
-// import { CHARACTER } from "./characters";
+import { CHARACTER } from "./characters";
 import dayjs from "dayjs";
-import { modifyChar } from './characters';
+import { modifyChar } from '../utils';
 import { composeSrc } from "./utils";
 
 

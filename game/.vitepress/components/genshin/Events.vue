@@ -6,7 +6,8 @@
 import HomeFeature from '../HomeFeature.vue';
 import { defineComponent } from 'vue'
 import { current, future } from './wishRecent'
-import { modifyChar } from './characters';
+import { modifyChar } from '../utils';
+import { CHARACTER } from './characters';
 
 // title 5 star
 // body time and 4 star
@@ -18,7 +19,7 @@ const modify4char = (arr) => {
     return arr.map((v, i, a) => {
         if (v == "") return ""
         // console.log(v)
-        return modifyChar(v)
+        return modifyChar(v, CHARACTER)
     })
 }
 
@@ -27,7 +28,7 @@ const getEventWish = (wishInfo, arr) => {
     // console.log(lenWish)
     for (let i = 0; i < lenWish; ++i) {
         if (i > 5) break;
-        let title = wishInfo.obj[i].name + ' ' + modifyChar(wishInfo.obj[i].wish5star)
+        let title = wishInfo.obj[i].name + ' ' + modifyChar(wishInfo.obj[i].wish5star, CHARACTER)
         let body = [
             wishInfo.obj[i].ver + ' ',
             modify4char(wishInfo.obj[i].wish4star),

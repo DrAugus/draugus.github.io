@@ -1,29 +1,4 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
-import { NameList } from "../type";
-
-export interface Cultivate {
-  weapons: string
-  talent: string
-  artifacts: string[]
-  main: {}
-  sub: string[]
-  tips: string
-}
-
-export interface Characters {
-  id: string,
-  name: string
-  prefix: string,
-  star: number
-  event_exclusive: boolean
-  intro: string
-  city: NameList
-  ele: Element
-  weapon: NameList
-  cultivate: Cultivate
-}
-
-export const modifyChar = (id: string) => !id ? '' : CHARACTER[id]?.name
 
 export const CHARACTER = {
   seele: {

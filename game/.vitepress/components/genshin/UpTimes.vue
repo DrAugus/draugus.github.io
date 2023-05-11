@@ -5,7 +5,7 @@
     </p>
 
     <div v-for="(v, k) in charMap">
-        {{ modifyChar(v[0]) }} : {{ v[1].length }}
+        {{ modifyChar(v[0], CHARACTER) }} : {{ v[1].length }}
     </div>
 </template>
 
@@ -13,10 +13,9 @@
 import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
-// import { CHARACTER } from "./characters";
-import { parseDayjs } from "../utils";
+import { CHARACTER } from "./characters";
+import { parseDayjs,modifyChar } from "../utils";
 import dayjs from "dayjs";
-import { modifyChar } from './characters';
 
 const filterChar = () => {
     let charMap = new Map();

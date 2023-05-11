@@ -8,11 +8,11 @@
 
   <ul>
     <li v-for="(v, i) in char">
-      <span class="f-w-600"> {{ modifyChar(v.wish5star) }} </span>
+      <span class="f-w-600"> {{ modifyChar(v.wish5star, CHARACTER) }} </span>
       <Badge :text="v.version"></Badge>
       {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
       <span v-for="(vv, ii) in v.wish4star">
-        {{ modifyChar(vv) + ' ' }}
+        {{ modifyChar(vv, CHARACTER) + ' ' }}
       </span>
     </li>
   </ul>
@@ -21,9 +21,9 @@
 <script>
 import dayjs from "dayjs";
 import { WISH } from "./wish";
-import { modifyChar, CHARACTER } from "./characters";
+import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
-import { replaceAndLow, formatDayjs } from "../utils";
+import { replaceAndLow, formatDayjs, modifyChar } from "../utils";
 
 dayjs.locale("zh");
 
