@@ -9,6 +9,7 @@ import "dayjs/locale/zh";
 dayjs.locale("zh");
 
 const eventObj = processEvent(WISH);
+const game = 1;
 
 let wishCharacters = eventObj.events[0];
 // console.log(wishCharacters)
@@ -16,8 +17,8 @@ let wishCharacters = eventObj.events[0];
 let objWish = getWishIndex(wishCharacters);
 // console.log("objWish", objWish);
 
-export const current = getWishInfo(wishCharacters, objWish.wishIndex);
-export const future = getWishInfo(wishCharacters, objWish.comingIndex);
+export const current = getWishInfo(wishCharacters, objWish.wishIndex, game);
+export const future = getWishInfo(wishCharacters, objWish.comingIndex, game);
 // console.log(current, future);
 
 export const wishDeadline = () =>

@@ -4,6 +4,36 @@ export const modifyChar =
   (id: string, char: Characters) =>
     !id ? '' : char[id]?.name
 
+export const getImgStyle =
+  (current: WishInfo, gameNum: number = 0) => {
+    let gameName = getGameName(gameNum)
+    // wish src
+    let homeImg // = current.src
+    // replace char src
+    homeImg = []
+    for (let v of current.obj) {
+      homeImg.push(`/image/${gameName}/characters/full/${v.wish5star}.png`)
+    }
+    let style = {}
+    if (homeImg.length == 1) {
+      style = {
+        backgroundImage: `url(${homeImg[0]})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'right',
+        backgroundSize: '50%',
+      }
+    } else if (homeImg.length == 2) {
+      style = {
+        backgroundImage: `url(${homeImg[0]}),url(${homeImg[1]})`,
+        backgroundRepeat: 'no-repeat,no-repeat',
+        backgroundPosition: 'left 3%, right 3%',
+        backgroundSize: '50%, 50%',
+      }
+    }
+
+    return style
+  }
+
 export const getTimelineHomeHero =
   (current: WishInfo, gameNum: number = 0) => {
     let tl: TimelineHomeHero = {
@@ -29,30 +59,8 @@ export const getTimelineHomeHero =
     }
     tl.tagline = homeTagline.slice(3)
 
+    tl.style = getImgStyle(current, gameNum)
 
-    // wish src
-    let homeImg // = current.src
-    // replace char src
-    homeImg = []
-    for (let v of current.obj) {
-      homeImg.push(`/image/${gameName}/characters/full/${v.wish5star}.png`)
-    }
-
-    if (homeImg.length == 1) {
-      tl.style = {
-        backgroundImage: `url(${homeImg[0]})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'right',
-        backgroundSize: '50%',
-      }
-    } else if (homeImg.length == 2) {
-      tl.style = {
-        backgroundImage: `url(${homeImg[0]}),url(${homeImg[1]})`,
-        backgroundRepeat: 'no-repeat,no-repeat',
-        backgroundPosition: 'left 3%, right 3%',
-        backgroundSize: '50%, 50%',
-      }
-    }
     // console.log(tl)
 
     return tl;

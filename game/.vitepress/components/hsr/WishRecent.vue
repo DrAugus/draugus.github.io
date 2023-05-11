@@ -1,18 +1,19 @@
 <template>
   <div v-if="current.able">
 
-    <h2>当前祈愿 
+    <h2>当前跃迁
       <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
-    <h3 :style="getImgStyle()">
+    <h3>
       <span v-for="(v, i) in current.obj">
         {{ v.name + modifyChar(v.wish5star, CHARACTER) }}
       </span>
     </h3>
+    <div class="bg-height" :style="imgStyle"></div>
 
     <h3>{{ end }} 后结束</h3>
-    <blockquote>祈愿周期：{{ current.obj[0].date }}</blockquote>
+    <blockquote>跃迁周期：{{ current.obj[0].date }}</blockquote>
 
     <div v-for="(v, i) in current.obj">
       <img :src="v.src" @error="replaceImg">
@@ -20,12 +21,12 @@
 
   </div>
   <div v-else>
-    <h2>现在 暂无祈愿，敬请期待</h2>
+    <h2>现在 暂无跃迁，敬请期待</h2>
   </div>
 
   <div v-if="future.able">
 
-    <h2>未来祈愿</h2>
+    <h2>未来跃迁</h2>
 
     <h3>{{ begin }} 后开始</h3>
 
@@ -42,12 +43,12 @@
 
   </div>
   <div v-else>
-    <h2>未来祈愿，等待更新</h2>
+    <h2>未来跃迁，等待更新</h2>
   </div>
 </template>
 
 <script>
-import { modifyChar } from '../utils';
+import { modifyChar, getImgStyle } from '../utils';
 import { CHARACTER } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
@@ -64,30 +65,15 @@ export default {
       begin: new Date(),
       end: new Date(),
       modifyChar,
+      CHARACTER,
+      imgStyle: getImgStyle(current, 1),
     };
   },
   methods: {
     replaceImg(event) {
       event.target.src = '/image/genshin/wish/_1.jpg'
     },
-    getImgStyle() {
-      let homeImg = []
-      for (let v of current.obj) {
-        homeImg.push('/image/genshin/characters/full/' + v.wish5star + '.png')
-      }
-      let objImg = { cnt: 0, src: '' }
-      objImg.cnt = homeImg.length
-      if (homeImg.length == 1) objImg.src = homeImg[0]
-      if (homeImg.length == 2) objImg.src = `url(${homeImg[0]}),url(${homeImg[1]})`
-      return {
-        backgroundImage: objImg.src,
-        backgroundSize: 'contain, contain',
-        backgroundRepeat: 'no-repeat, no-repeat',
-        backgroundPosition: 'left, right',
-        height: '300px',
-        width: '100%',
-      }
-    },
+
   },
   mounted() {
     let _this = this;
@@ -109,6 +95,10 @@ export default {
 </script>
 
 <style scoped>
+.bg-height {
+  height: 200px;
+}
+
 .f-w-600 {
   font-weight: 600;
 }
