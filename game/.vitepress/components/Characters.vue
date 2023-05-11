@@ -1,36 +1,41 @@
 <template>
-  <p> 稀有分类 <a @click="all">(全)</a></p>
+  <p> 稀有度 <a @click="all">(全)</a><br />
 
-  <span v-for="(v, i) in star">
-    <a @click="filterStar(v)">{{ v + "🌟" }}</a>
-  </span>
+    <span v-for="(v, i) in star">
+      <a @click="filterStar(v)">{{ v + "🌟" }}</a>
+    </span>
+  </p>
 
-  <p> 国家分类 <a @click="all">(全)</a></p>
+  <p> 世界 <a @click="all">(全)</a><br />
 
-  <span v-for="(v, k, i) in city">
-    <a @click="filterCity(v.id)">{{ v.name + " " }}</a>
-  </span>
+    <span v-for="(v, k, i) in city">
+      <a @click="filterCity(v.id)">{{ v.name + "  " }}</a>
+    </span>
+  </p>
 
-  <p> 元素分类 <a @click="all">(全)</a></p>
+  <p> 元素 <a @click="all">(全)</a><br />
 
   <div class="genshin-element">
     <div v-for="(v, k, i) in elementStr">
       <a @click="filterEle(v.id)">
-        <img :src="`/image/${gameName}/elements/${replaceAndLow(v.id)}.png`" :alt="v.id">
+        <img :src="`/image/${gameName}/elements/${replaceAndLow(v.id)}.png`" :alt="v.id" :width="25">
       </a>
     </div>
   </div>
 
-  <p> 武器分类 <a @click="all">(全)</a></p>
+  </p>
 
-  <span v-for="(v, k, i) in weapon">
-    <a @click="filterWeapon(v.id)">{{ v.name + " " }}</a>
-  </span>
+  <p> 战斗 <a @click="all">(全)</a><br />
 
+    <span v-for="(v, k, i) in weapon">
+      <a @click="filterWeapon(v.id)">{{ v.name + " " }}</a>
+    </span>
+  </p>
+  <hr>
   <p @click="all"> 全部角色 </p>
   <p> 当前共计收录 {{ lenChar }} 名角色(不包含旅行者)</p>
   <!-- <p> 筛选了 {{ lenFilterChar }} 名角色</p> -->
-  <hr>
+
 
 
   <div class="character-info">
@@ -66,7 +71,7 @@ export default {
       weapon: this.Weapon,
       showModal: false,
       star: [4, 5],
-      lenChar: this.Character ? Object.getOwnPropertyNames(this.Character).length :0,
+      lenChar: this.Character ? Object.getOwnPropertyNames(this.Character).length : 0,
       // lenFilterChar,
       replaceAndLow,
       gameName: getGameName(this.Game)
@@ -104,5 +109,4 @@ export default {
 .character-info {
   display: flex;
   flex-wrap: wrap;
-}
-</style>
+}</style>
