@@ -3,25 +3,30 @@ layout: home
 title: Augus
 titleTemplate: 游戏
 hero:
-  name: 当然是原神啦
+  name: 游戏人生
   text: 近期活动
   image:
-    src: /image/home.jpg
+    src: /image/kafka-modified.png
     alt: none
   actions:
     - theme: brand
-      text: 复刻祈愿
-      link: /genshin/fork
+      text: 原神祈愿时间轴
+      link: /genshin/timeline
+    - theme: brand
+      text: 星穹铁道跃迁时间轴
+      link: /hsr/timeline
     - theme: alt
-      text: 当前祈愿
-      link: /genshin/wish
-features:
-  - title: 绷不住
-    details: 预制
+      text: 近期祈愿
+      link: /genshin/wish-recent
+    - theme: alt
+      text: 近期跃迁
+      link: /hsr/wish-recent
 ---
 
-<GenshinEvents />
+
+
+<Events />
 
 <script setup>
-import GenshinEvents from "./.vitepress/components/genshin/Events.vue";
+import Events from "./.vitepress/components/Events.vue";
 </script>
