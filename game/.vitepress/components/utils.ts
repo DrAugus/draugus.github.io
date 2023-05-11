@@ -1,7 +1,8 @@
 import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 
 export const modifyChar =
-  (id: string, char: Characters) => !id ? '' : char[id]?.name
+  (id: string, char: Characters) =>
+    !id ? '' : char[id]?.name
 
 export const getTimelineHomeHero =
   (current: WishInfo, gameNum: number = 0) => {
