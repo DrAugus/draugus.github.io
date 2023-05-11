@@ -1,5 +1,4 @@
 <template>
-
     <p>
         次数 <a @click="sort(0)">递增</a> | <a @click="sort(1)">递减</a>
     </p>
@@ -14,7 +13,7 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { parseDayjs,modifyChar } from "../utils";
+import { parseDayjs, modifyChar } from "../utils";
 import dayjs from "dayjs";
 
 const filterChar = () => {
@@ -52,6 +51,7 @@ export default defineComponent({
         return {
             charMap,
             modifyChar,
+            CHARACTER,
         }
     },
     methods: {
