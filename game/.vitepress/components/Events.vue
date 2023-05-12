@@ -24,6 +24,7 @@ import HsrWish from "./hsr/WishRecent.vue";
 
 .event-info>div {
     width: 50%;
+    padding: 10px;
 }
 
 @media screen and (max-width: 767px) {
@@ -33,6 +34,7 @@ import HsrWish from "./hsr/WishRecent.vue";
 
     .event-info>div {
         width: 100%;
+        padding: unset;
     }
 }
 
