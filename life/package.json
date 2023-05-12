@@ -14,14 +14,14 @@
     "preview": "vitepress preview ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.5",
+    "@antfu/eslint-config": "^0.38.6",
     "@mdit-vue/shared": "^0.12.0",
     "echarts": "^5.4.2",
-    "eslint": "^8.39.0",
-    "sass": "^1.62.0",
+    "eslint": "^8.40.0",
+    "sass": "^1.62.1",
     "typed.js": "2.0.132",
-    "vitepress": "^1.0.0-alpha.73",
-    "vue": "^3.2.47",
+    "vitepress": "^1.0.0-alpha.75",
+    "vue": "^3.3.1",
     "vue-echarts": "^6.5.5"
   }
 }
