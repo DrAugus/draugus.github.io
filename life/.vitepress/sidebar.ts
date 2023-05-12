@@ -576,13 +576,14 @@ export const sidebar = {
     ],
 
     '/thought/': [
+        { text: '想法', link: '/thought/' },
+        { text: '未来', link: '/thought/future' },
         { text: '这又是什么呢', link: '/thought/temp' },
         { text: '活得像一个机器人', link: '/thought/life-bot' },
         { text: '怜悯', link: '/thought/pity' },
         { text: '结婚', link: '/thought/marry' },
         { text: '女人', link: '/thought/woman' },
         { text: '命运的织机', link: '/thought/portended-fate' },
-        { text: '想法', link: '/thought/' },
         { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film' },
     ],
 
