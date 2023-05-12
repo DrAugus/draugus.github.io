@@ -8,11 +8,12 @@
 
   <ul>
     <li v-for="(v, i) in char">
-      <span class="f-w-600"> {{ modifyChar(v.wish5star, CHARACTER) }} </span>
+      <span class="f-w-600"> {{ v.wishName + modifyChar(v.wish5star, CHARACTER) }} </span>
       <Badge :text="v.version"></Badge>
+      <Badge :text="v.image + ' up'" :type="getBadgeType(v.image)"></Badge>
       {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
       <span v-for="(vv, ii) in v.wish4star">
-        {{ modifyChar(vv, CHARACTER) + ' ' }}
+        {{ modifyChar(replaceAndLow(vv), CHARACTER) + ' ' }}
       </span>
     </li>
   </ul>
@@ -53,6 +54,14 @@ export default {
 
     replaceImg(event) {
       event.target.src = '/image/genshin/wish/_1.jpg'
+    },
+
+    getBadgeType(upTimes){
+      let up = parseInt(upTimes);
+      if (up > 6) return 'danger';
+      if (up > 4) return 'warning';
+      if (up > 2) return 'tip';
+      return 'info';
     },
   },
   async mounted() {

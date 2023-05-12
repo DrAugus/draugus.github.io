@@ -356,7 +356,7 @@ export const WISH = {
       end: "2022-01-25 17:59:59 +0800",
       wish5star: "shenhe",
       wish4star: [
-        "yunjin",
+        "yun_jin",
         "chongyun",
         "ningguang"
       ],
@@ -372,7 +372,7 @@ export const WISH = {
       end: "2022-01-25 17:59:59 +0800",
       wish5star: "xiao",
       wish4star: [
-        "yunjin",
+        "yun_jin",
         "chongyun",
         "ningguang"
       ],
@@ -473,7 +473,7 @@ export const WISH = {
       wish4star: [
         "sucrose",
         "xiangling",
-        "yunjin"
+        "yun_jin"
       ],
       version: "2.6",
       wishName: "「苍流踏花」",
@@ -489,7 +489,7 @@ export const WISH = {
       wish4star: [
         "sucrose",
         "xiangling",
-        "yunjin"
+        "yun_jin"
       ],
       version: "2.6",
       wishName: "「杯装之诗」",
@@ -548,7 +548,7 @@ export const WISH = {
       start: "2022-06-21 18:00:00 +0800",
       end: "2022-07-12 14:59:59 +0800",
       wish5star: "arataki_itto",
-      wish4star: [],
+      wish4star: ['kuki_shinobu', 'chongyun', 'gorou'],
       version: "2.7",
       wishName: "「鬼门斗宴」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -585,7 +585,7 @@ export const WISH = {
       start: "2022-08-02 18:00:00 +0800",
       end: "2022-08-23 14:59:59 +0800",
       wish5star: "yoimiya",
-      wish4star: [],
+      wish4star: ['bennett', 'xinyan', 'yun_jin'],
       version: "2.8",
       wishName: "「焰色天河」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -597,7 +597,7 @@ export const WISH = {
       start: "2022-08-24 11:00:00 +0800",
       end: "2022-09-09 17:59:59 +0800",
       wish5star: "tighnari",
-      wish4star: ["collei", "diona ", "fischl"],
+      wish4star: ["collei", "diona", "fischl"],
       version: "3.0",
       wishName: "「幽蔓狐生」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -609,7 +609,7 @@ export const WISH = {
       start: "2022-08-24 11:00:00 +0800",
       end: "2022-09-09 17:59:59 +0800",
       wish5star: "zhongli",
-      wish4star: ["collei", "diona ", "fischl"],
+      wish4star: ["collei", "diona", "fischl"],
       version: "3.0",
       wishName: "「陵薮市朝」",
       wish_2: true,
