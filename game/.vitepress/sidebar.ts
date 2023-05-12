@@ -21,8 +21,8 @@ export const sidebar_zh = {
     '/hsr/': [
         { text: '近期跃迁', link: "/hsr/wish-recent" },
         { text: '跃迁时间轴', link: "/hsr/timeline" },
-        // { text: '跃迁信息汇总(带图)', link: "/hsr/wish-all" },
-        // { text: '跃迁信息汇总', link: "/hsr/wish-all2" },
+        { text: '跃迁信息汇总(带图)', link: "/hsr/wish-all" },
+        { text: '跃迁信息汇总', link: "/hsr/wish-all2" },
         { text: '角色列表', link: "/hsr/character" },
         // { text: '复刻跃迁', link: "/hsr/fork" },
         // { text: 'up 次数统计', link: "/hsr/uptimes" },
