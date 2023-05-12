@@ -83,6 +83,15 @@ CREATE TABLE example_schema.example_table (
 
 ## 查询
 
+```sql
+-- 查询 object
+select top 10 name,id from sysobjects;
+-- 查询列类型
+SELECT DBMS_METADATA.GET_DDL('TABLE', 'sysobjects', 'SYSDBA') FROM DUAL;
+-- 或者
+DESC sysobjects;
+```
+
 查看数据库
 
 ```sql
