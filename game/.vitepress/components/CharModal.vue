@@ -112,7 +112,7 @@ export default {
 }
 
 .character-img {
-  width: 6rem;
+  /* width: 6rem; */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
