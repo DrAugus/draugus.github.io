@@ -1,6 +1,39 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  kafka: {
+    id: "Kafka",
+    name: "卡芙卡",
+    prefix: Weapon.Nihility.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.StellaronHunters,
+    ele: Element.Lightning,
+    weapon: Weapon.Nihility.id
+  },
+  blade: {
+    id: "Blade",
+    name: "刃",
+    prefix: Weapon.Destruction.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.StellaronHunters,
+    ele: Element.Wind,
+    weapon: Weapon.Destruction.id
+  },
+  fu_xuan: {
+    id: "Fu Xuan",
+    name: "符玄",
+    prefix: Weapon.Preservation.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Quantum,
+    weapon: Weapon.Preservation.id
+  },
   seele: {
     id: "Seele",
     name: "希儿",
@@ -47,7 +80,7 @@ export const CHARACTER = {
   },
   yukong: {
     id: 'Yukong',
-    name: 'Yukong',
+    name: '驭空',
     prefix: Weapon.Harmony.name,
     star: 4,
     event_exclusive: false,
@@ -58,7 +91,7 @@ export const CHARACTER = {
   },
   luocha: {
     id: 'Luocha',
-    name: 'Luocha',
+    name: '罗刹',
     prefix: Weapon.Abundance.name,
     star: 5,
     event_exclusive: false,
@@ -69,211 +102,211 @@ export const CHARACTER = {
   },
   silver_wolf: {
     id: 'Silver Wolf',
-    name: 'Silver Wolf',
-    prefix: Weapon.Nihility,
+    name: '银狼',
+    prefix: Weapon.Nihility.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.StellaronHunters,
     ele: Element.Quantum,
-    weapon: Weapon.Nihility
+    weapon: Weapon.Nihility.id
   },
   bailu: {
     id: 'Bailu',
-    name: 'Bailu',
-    prefix: Weapon.Abundance,
+    name: '白露',
+    prefix: Weapon.Abundance.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Lightning,
-    weapon: Weapon.Abundance
+    weapon: Weapon.Abundance.id
   },
   yanqing: {
     id: 'Yanqing',
-    name: 'Yanqing',
-    prefix: Weapon.Hunt,
+    name: '彦卿',
+    prefix: Weapon.Hunt.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Ice,
-    weapon: Weapon.Hunt
+    weapon: Weapon.Hunt.id
   },
   sushang: {
     id: 'Sushang',
-    name: 'Sushang',
-    prefix: Weapon.Hunt,
+    name: '素裳',
+    prefix: Weapon.Hunt.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Physical,
-    weapon: Weapon.Hunt
+    weapon: Weapon.Hunt.id
   },
   jing_yuan: {
     id: 'Jing Yuan',
-    name: 'Jing Yuan',
-    prefix: Weapon.Erudition,
+    name: '景元',
+    prefix: Weapon.Erudition.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Lightning,
-    weapon: Weapon.Erudition
+    weapon: Weapon.Erudition.id
   },
   tingyun: {
     id: 'Tingyun',
-    name: 'Tingyun',
-    prefix: Weapon.Harmony,
+    name: '停云',
+    prefix: Weapon.Harmony.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Lightning,
-    weapon: Weapon.Harmony
+    weapon: Weapon.Harmony.id
   },
   qingque: {
     id: 'Qingque',
-    name: 'Qingque',
-    prefix: Weapon.Erudition,
+    name: '青雀',
+    prefix: Weapon.Erudition.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Quantum,
-    weapon: Weapon.Erudition
+    weapon: Weapon.Erudition.id
   },
   sampo: {
     id: 'Sampo',
-    name: 'Sampo',
-    prefix: Weapon.Nihility,
+    name: '桑博',
+    prefix: Weapon.Nihility.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.JariloVI,
     ele: Element.Wind,
-    weapon: Weapon.Nihility
+    weapon: Weapon.Nihility.id
   },
   clara: {
     id: 'Clara',
-    name: 'Clara',
-    prefix: Weapon.Destruction,
+    name: '克拉拉',
+    prefix: Weapon.Destruction.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.JariloVI,
     ele: Element.Physical,
-    weapon: Weapon.Destruction
+    weapon: Weapon.Destruction.id
   },
   gepard: {
     id: 'Gepard',
-    name: 'Gepard',
-    prefix: Weapon.Preservation,
+    name: '杰帕德',
+    prefix: Weapon.Preservation.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.JariloVI,
     ele: Element.Ice,
-    weapon: Weapon.Preservation
+    weapon: Weapon.Preservation.id
   },
   serval: {
     id: 'Serval',
-    name: 'Serval',
-    prefix: Weapon.Erudition,
+    name: '希露瓦',
+    prefix: Weapon.Erudition.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.JariloVI,
     ele: Element.Lightning,
-    weapon: Weapon.Erudition
+    weapon: Weapon.Erudition.id
   },
   bronya: {
     id: 'Bronya',
-    name: 'Bronya',
-    prefix: Weapon.Harmony,
+    name: '布洛妮娅',
+    prefix: Weapon.Harmony.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.JariloVI,
     ele: Element.Wind,
-    weapon: Weapon.Harmony
+    weapon: Weapon.Harmony.id
   },
   herta: {
     id: 'Herta',
-    name: 'Herta',
-    prefix: Weapon.Erudition,
+    name: '黑塔',
+    prefix: Weapon.Erudition.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.HertaSpaceStation,
     ele: Element.Ice,
-    weapon: Weapon.Erudition
+    weapon: Weapon.Erudition.id
   },
   asta: {
     id: 'Asta',
-    name: 'Asta',
-    prefix: Weapon.Harmony,
+    name: '艾丝妲',
+    prefix: Weapon.Harmony.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.HertaSpaceStation,
     ele: Element.Fire,
-    weapon: Weapon.Harmony
+    weapon: Weapon.Harmony.id
   },
   arlan: {
     id: 'Arlan',
-    name: 'Arlan',
-    prefix: Weapon.Destruction,
+    name: '阿兰',
+    prefix: Weapon.Destruction.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.HertaSpaceStation,
     ele: Element.Lightning,
-    weapon: Weapon.Destruction
+    weapon: Weapon.Destruction.id
   },
   welt: {
     id: 'Welt',
-    name: 'Welt',
-    prefix: Weapon.Nihility,
+    name: '瓦尔特',
+    prefix: Weapon.Nihility.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.AstralExpress,
     ele: Element.Imaginary,
-    weapon: Weapon.Nihility
+    weapon: Weapon.Nihility.id
   },
   himeko: {
     id: 'Himeko',
-    name: 'Himeko',
-    prefix: Weapon.Erudition,
+    name: '姬子',
+    prefix: Weapon.Erudition.name,
     star: 5,
     event_exclusive: false,
     intro: '',
     city: City.AstralExpress,
     ele: Element.Fire,
-    weapon: Weapon.Erudition
+    weapon: Weapon.Erudition.id
   },
   dan_heng: {
     id: 'Dan Heng',
-    name: 'Dan Heng',
-    prefix: Weapon.Hunt,
+    name: '丹恒',
+    prefix: Weapon.Hunt.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.AstralExpress,
     ele: Element.Wind,
-    weapon: Weapon.Hunt
+    weapon: Weapon.Hunt.id
   },
   march_7th: {
     id: 'March 7th',
-    name: 'March 7th',
-    prefix: Weapon.Preservation,
+    name: '三月七',
+    prefix: Weapon.Preservation.name,
     star: 4,
     event_exclusive: false,
     intro: '',
     city: City.AstralExpress,
     ele: Element.Ice,
-    weapon: Weapon.Preservation
+    weapon: Weapon.Preservation.id
   },
 }
