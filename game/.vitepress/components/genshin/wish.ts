@@ -940,30 +940,28 @@ export const WISH = {
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
-
-
     {
-      name: "Born of Ocean Swell",
+      name: "Everbloom Violet",
       image: 3,
-      shortName: "Eula",
+      shortName: "Yae Miko",
       start: "2023-05-24 11:00:00 +0800",
       end: "2023-06-13 17:59:59 +0800",
-      wish5star: "eula",
+      wish5star: "yae_miko",
       wish4star: [],
       version: "3.7",
-      wishName: "「浪涌之瞬」",
+      wishName: "「华紫樱绯」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Reign of Serenity",
+      name: "Tapestry of Golden Flames",
       image: 4,
-      shortName: "Raiden Shogun",
+      shortName: "Yoimiya",
       start: "2023-05-24 11:00:00 +0800",
       end: "2023-06-13 17:59:59 +0800",
-      wish5star: "raiden_shogun",
+      wish5star: "yoimiya",
       wish4star: [],
       version: "3.7",
-      wishName: "「影寂天下人」",
+      wishName: "「焰色天河」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -980,15 +978,15 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Secretum Secretorum",
-      image: 4,
-      shortName: "Albedo",
+      name: "Caution in Confidence",
+      image: 2,
+      shortName: "Alhaitham",
       start: "2023-06-13 18:00:00 +0800",
       end: "2023-07-04 14:59:59 +0800",
-      wish5star: "albedo",
+      wish5star: "alhaitham",
       wish4star: [],
       version: "3.7",
-      wishName: "「深秘之息」",
+      wishName: "「敕诫枢谋」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
