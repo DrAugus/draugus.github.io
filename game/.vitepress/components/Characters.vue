@@ -4,6 +4,7 @@
     <span v-for="(v, i) in star">
       <a @click="filterStar(v)">{{ v + "🌟" }}</a>
     </span>
+    <a @click="filterExclusive(1)">{{ '限定' }}</a>
   </p>
 
   <p> 世界 <a @click="all">(全)</a><br />
@@ -94,6 +95,9 @@ export default {
     filterStar(s) {
       this.info = objFilter(this.Character, details => details.star == s);
     },
+    filterExclusive(e) {
+      this.info = objFilter(this.Character, details => details.event_exclusive == e);
+    },
     all() {
       this.info = this.Character;
     },
@@ -109,4 +113,5 @@ export default {
 .character-info {
   display: flex;
   flex-wrap: wrap;
-}</style>
+}
+</style>
