@@ -22,6 +22,9 @@ hero:
     - theme: alt
       text: 近期跃迁
       link: /hsr/wish-recent
+    - theme: brand
+      text: 星穹铁道每日
+      link: /hsr/daily      
 ---
 
 
