@@ -744,4 +744,15 @@ export const CHARACTER = {
     ele: Element.cryo,
     weapon: Weapon.catalyst
   },
+  kirara: {
+    id: "kirara",
+    name: "绮良良",
+    prefix: "檐宇猫游 ",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Inazuma,
+    ele: Element.dendro,
+    weapon: Weapon.sword
+  },
 }
