@@ -10,7 +10,7 @@ export const CHARACTER = {
     intro: "",
     city: City.StellaronHunters,
     ele: Element.Lightning,
-    weapon: Weapon.Nihility.id
+    weapon: Weapon.Nihility
   },
   blade: {
     id: "Blade",
@@ -21,7 +21,7 @@ export const CHARACTER = {
     intro: "",
     city: City.StellaronHunters,
     ele: Element.Wind,
-    weapon: Weapon.Destruction.id
+    weapon: Weapon.Destruction
   },
   fu_xuan: {
     id: "Fu Xuan",
@@ -32,7 +32,7 @@ export const CHARACTER = {
     intro: "",
     city: City.TheXianzhouLuofu,
     ele: Element.Quantum,
-    weapon: Weapon.Preservation.id
+    weapon: Weapon.Preservation
   },
   seele: {
     id: "Seele",
@@ -43,7 +43,7 @@ export const CHARACTER = {
     intro: "",
     city: City.JariloVI,
     ele: Element.Quantum,
-    weapon: Weapon.Hunt.id
+    weapon: Weapon.Hunt
   },
   hook: {
     id: "Hook",
@@ -54,7 +54,7 @@ export const CHARACTER = {
     intro: "",
     city: City.JariloVI,
     ele: Element.Fire,
-    weapon: Weapon.Destruction.id
+    weapon: Weapon.Destruction
   },
   pela: {
     id: "Pela",
@@ -65,7 +65,7 @@ export const CHARACTER = {
     intro: "",
     city: City.JariloVI,
     ele: Element.Ice,
-    weapon: Weapon.Nihility.id
+    weapon: Weapon.Nihility
   },
   natasha: {
     id: "Natasha",
@@ -76,7 +76,7 @@ export const CHARACTER = {
     intro: "",
     city: City.JariloVI,
     ele: Element.Physical,
-    weapon: Weapon.Abundance.id
+    weapon: Weapon.Abundance
   },
   yukong: {
     id: 'Yukong',
@@ -87,7 +87,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Imaginary,
-    weapon: Weapon.Harmony.id
+    weapon: Weapon.Harmony
   },
   luocha: {
     id: 'Luocha',
@@ -98,7 +98,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Imaginary,
-    weapon: Weapon.Abundance.id
+    weapon: Weapon.Abundance
   },
   silver_wolf: {
     id: 'Silver Wolf',
@@ -109,7 +109,7 @@ export const CHARACTER = {
     intro: '',
     city: City.StellaronHunters,
     ele: Element.Quantum,
-    weapon: Weapon.Nihility.id
+    weapon: Weapon.Nihility
   },
   bailu: {
     id: 'Bailu',
@@ -120,7 +120,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Lightning,
-    weapon: Weapon.Abundance.id
+    weapon: Weapon.Abundance
   },
   yanqing: {
     id: 'Yanqing',
@@ -131,7 +131,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Ice,
-    weapon: Weapon.Hunt.id
+    weapon: Weapon.Hunt
   },
   sushang: {
     id: 'Sushang',
@@ -142,7 +142,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Physical,
-    weapon: Weapon.Hunt.id
+    weapon: Weapon.Hunt
   },
   jing_yuan: {
     id: 'Jing Yuan',
@@ -153,7 +153,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Lightning,
-    weapon: Weapon.Erudition.id
+    weapon: Weapon.Erudition
   },
   tingyun: {
     id: 'Tingyun',
@@ -164,7 +164,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Lightning,
-    weapon: Weapon.Harmony.id
+    weapon: Weapon.Harmony
   },
   qingque: {
     id: 'Qingque',
@@ -175,7 +175,7 @@ export const CHARACTER = {
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Quantum,
-    weapon: Weapon.Erudition.id
+    weapon: Weapon.Erudition
   },
   sampo: {
     id: 'Sampo',
@@ -186,7 +186,7 @@ export const CHARACTER = {
     intro: '',
     city: City.JariloVI,
     ele: Element.Wind,
-    weapon: Weapon.Nihility.id
+    weapon: Weapon.Nihility
   },
   clara: {
     id: 'Clara',
@@ -197,7 +197,7 @@ export const CHARACTER = {
     intro: '',
     city: City.JariloVI,
     ele: Element.Physical,
-    weapon: Weapon.Destruction.id
+    weapon: Weapon.Destruction
   },
   gepard: {
     id: 'Gepard',
@@ -208,7 +208,7 @@ export const CHARACTER = {
     intro: '',
     city: City.JariloVI,
     ele: Element.Ice,
-    weapon: Weapon.Preservation.id
+    weapon: Weapon.Preservation
   },
   serval: {
     id: 'Serval',
@@ -219,7 +219,7 @@ export const CHARACTER = {
     intro: '',
     city: City.JariloVI,
     ele: Element.Lightning,
-    weapon: Weapon.Erudition.id
+    weapon: Weapon.Erudition
   },
   bronya: {
     id: 'Bronya',
@@ -230,7 +230,7 @@ export const CHARACTER = {
     intro: '',
     city: City.JariloVI,
     ele: Element.Wind,
-    weapon: Weapon.Harmony.id
+    weapon: Weapon.Harmony
   },
   herta: {
     id: 'Herta',
@@ -241,7 +241,7 @@ export const CHARACTER = {
     intro: '',
     city: City.HertaSpaceStation,
     ele: Element.Ice,
-    weapon: Weapon.Erudition.id
+    weapon: Weapon.Erudition
   },
   asta: {
     id: 'Asta',
@@ -252,7 +252,7 @@ export const CHARACTER = {
     intro: '',
     city: City.HertaSpaceStation,
     ele: Element.Fire,
-    weapon: Weapon.Harmony.id
+    weapon: Weapon.Harmony
   },
   arlan: {
     id: 'Arlan',
@@ -263,7 +263,7 @@ export const CHARACTER = {
     intro: '',
     city: City.HertaSpaceStation,
     ele: Element.Lightning,
-    weapon: Weapon.Destruction.id
+    weapon: Weapon.Destruction
   },
   welt: {
     id: 'Welt',
@@ -274,7 +274,7 @@ export const CHARACTER = {
     intro: '',
     city: City.AstralExpress,
     ele: Element.Imaginary,
-    weapon: Weapon.Nihility.id
+    weapon: Weapon.Nihility
   },
   himeko: {
     id: 'Himeko',
@@ -285,7 +285,7 @@ export const CHARACTER = {
     intro: '',
     city: City.AstralExpress,
     ele: Element.Fire,
-    weapon: Weapon.Erudition.id
+    weapon: Weapon.Erudition
   },
   dan_heng: {
     id: 'Dan Heng',
@@ -296,7 +296,7 @@ export const CHARACTER = {
     intro: '',
     city: City.AstralExpress,
     ele: Element.Wind,
-    weapon: Weapon.Hunt.id
+    weapon: Weapon.Hunt
   },
   march_7th: {
     id: 'March 7th',
@@ -307,6 +307,6 @@ export const CHARACTER = {
     intro: '',
     city: City.AstralExpress,
     ele: Element.Ice,
-    weapon: Weapon.Preservation.id
+    weapon: Weapon.Preservation
   },
 }
