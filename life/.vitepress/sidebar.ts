@@ -287,6 +287,7 @@ export const sidebar = {
     //
 
     '/code/code-notes/': [
+        { text: '指南', link: '/code/code-notes/' },
         { text: 'Compile', link: '/code/code-notes/compile' },
         { text: 'gcc', link: '/code/code-notes/gcc' },
         { text: 'Markdown', link: '/code/code-notes/markdown' },
@@ -297,13 +298,13 @@ export const sidebar = {
         { text: 'xcode', link: '/code/code-notes/xcode' },
         { text: 'svn', link: '/code/code-notes/svn' },
         { text: 'CMakeLists', link: '/code/code-notes/CMakeLists' },
-        { text: '指南', link: '/code/code-notes/' },
+        { text: 'ffmpeg', link: '/code/code-notes/ffmpeg' },
         { text: 'RBAC', link: '/code/code-notes/rbac' },
         { text: 'Excel', link: '/code/code-notes/excel' },
         { text: 'JetBrains', link: '/code/code-notes/jetbrains' },
         { text: 'Gitlab', link: '/code/code-notes/gitlab' },
         {
-            text: 'tools', collapsed: true, items: [
+            text: '工具', collapsed: true, items: [
                 { text: 'Jenkins', link: '/code/code-notes/tools/Jenkins' },
                 { text: 'Algolia', link: '/code/code-notes/tools/algolia' },
                 { text: 'TMDB', link: '/code/code-notes/tools/tmdb' },
@@ -313,13 +314,7 @@ export const sidebar = {
             ]
         },
         {
-            text: 'macos', collapsed: true, items: [
-                { text: 'mac primary', link: '/code/code-notes/macos/base' },
-                { text: 'solution', link: '/code/code-notes/macos/sol' },
-            ]
-        },
-        {
-            text: 'software', collapsed: true, items: [
+            text: '软件', collapsed: true, items: [
                 { text: 'web tools', link: '/code/code-notes/software/webtools' },
                 { text: '推荐软件安装', link: '/code/code-notes/software/1.install' },
                 { text: 'fish cmd', link: '/code/code-notes/software/fish' },
@@ -331,7 +326,13 @@ export const sidebar = {
             ]
         },
         {
-            text: 'linux', collapsed: true, items: [
+            text: 'MacOS', collapsed: true, items: [
+                { text: 'mac primary', link: '/code/code-notes/macos/base' },
+                { text: 'solution', link: '/code/code-notes/macos/sol' },
+            ]
+        },
+        {
+            text: 'Linux', collapsed: true, items: [
                 { text: 'gdb', link: '/code/code-notes/linux/gdb' },
                 { text: 'linux系统分类', link: '/code/code-notes/linux/sys_category' },
                 { text: '查看Linux的基本信息', link: '/code/code-notes/linux/sys_base_info' },
@@ -343,7 +344,7 @@ export const sidebar = {
             ]
         },
         {
-            text: 'windows', collapsed: true, items: [
+            text: 'Windows', collapsed: true, items: [
                 { text: 'chocolatey', link: '/code/code-notes/windows/chocolatey' },
                 { text: '虚拟机记录    ', link: '/code/code-notes/windows/VirtualBox' },
                 { text: 'cmd指南', link: '/code/code-notes/windows/cmd' },
@@ -352,7 +353,7 @@ export const sidebar = {
             ]
         },
         {
-            text: 'openai', collapsed: true, items: [
+            text: 'OpenAI', collapsed: true, items: [
                 { text: 'ChatGPT', link: '/code/code-notes/openai/chatgpt' },
                 { text: 'OpenAI', link: '/code/code-notes/openai/' },
             ]
