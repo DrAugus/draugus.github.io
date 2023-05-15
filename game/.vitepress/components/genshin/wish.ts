@@ -992,50 +992,24 @@ export const WISH = {
     },
 
 
-
     {
-      name: "From Ashes Reborn",
-      image: 2,
-      shortName: "Wanderer",
+      name: "Born of Ocean Swell",
+      image: 3,
+      shortName: "Eula",
       start: "2023-07-05 11:00:00 +0800",
       end: "2023-07-25 17:59:59 +0800",
-      wish5star: "wanderer",
+      wish5star: "eula",
       wish4star: [],
       version: "3.8",
-      wishName: "「余火变相」",
-      url: "https://bbs.mihoyo.com/ys/article/?"
-    },
-    {
-      name: "Farewell of Snezhnaya",
-      image: 5,
-      shortName: "Tartaglia",
-      start: "2023-07-05 11:00:00 +0800",
-      end: "2023-07-25 17:59:59 +0800",
-      wish5star: "tartaglia",
-      wish4star: [],
-      version: "3.8",
-      wishName: "「暂别冬都」",
-      wish_2: true,
-      url: "https://bbs.mihoyo.com/ys/article/?"
-    },
-    {
-      name: "Gentry of Hermitage",
-      image: 5,
-      shortName: "Zhongli",
-      start: "2023-07-25 18:00:00 +0800",
-      end: "2023-08-15 14:59:59 +0800",
-      wish5star: "zhongli",
-      wish4star: [],
-      version: "3.8",
-      wishName: "「陵薮市朝」",
+      wishName: "「浪涌之瞬」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
       name: "Sparkling Steps",
       image: 4,
       shortName: "Klee",
-      start: "2023-07-25 18:00:00 +0800",
-      end: "2023-08-15 14:59:59 +0800",
+      start: "2023-07-05 11:00:00 +0800",
+      end: "2023-07-25 17:59:59 +0800",
       wish5star: "klee",
       wish4star: [],
       version: "3.8",
@@ -1043,7 +1017,58 @@ export const WISH = {
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
+    {
+      name: "Drifting Luminescence",
+      image: 4,
+      shortName: "Sangonomiya Kokomi",
+      start: "2023-07-25 18:00:00 +0800",
+      end: "2023-08-15 14:59:59 +0800",
+      wish5star: "sangonomiya_kokomi",
+      wish4star: [],
+      version: "3.8",
+      wishName: "「浮岳虹珠」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Azure Excursion",
+      image: 3,
+      shortName: "Kamisato Ayato",
+      start: "2023-07-25 18:00:00 +0800",
+      end: "2023-08-15 14:59:59 +0800",
+      wish5star: "kamisato_ayato",
+      wish4star: [],
+      version: "3.8",
+      wishName: "「苍流踏花」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
 
+
+    // {
+    //   name: "",
+    //   image: 1,
+    //   shortName: "",
+    //   start: "2023-08-16 11:00:00 +0800",
+    //   end: "2023-09-05 17:59:59 +0800",
+    //   wish5star: "",
+    //   wish4star: [],
+    //   version: "4.0",
+    //   wishName: "",
+    //   url: "https://bbs.mihoyo.com/ys/article/?"
+    // },
+    // {
+    //   name: "Farewell of Snezhnaya",
+    //   image: 5,
+    //   shortName: "Tartaglia",
+    //   start: "2023-08-16 11:00:00 +0800",
+    //   end: "2023-09-05 17:59:59 +0800",
+    //   wish5star: "tartaglia",
+    //   wish4star: [],
+    //   version: "4.0",
+    //   wishName: "「暂别冬都」",
+    //   wish_2: true,
+    //   url: "https://bbs.mihoyo.com/ys/article/?"
+    // },
 
   ],
   weapons: [
