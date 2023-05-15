@@ -22,7 +22,7 @@ jobs:
         node: [16]
         deploy-dir: [life/.vitepress/dist]
         deploy-user: [augusmeow]
-        deploy-repo: [life]
+        deploy-repo: [life, augusmeow.github.io]
 
     runs-on: ${{ matrix.os }}
 
@@ -52,11 +52,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Change config
+        run: mv ./.vitepress/config.ts.replace ./.vitepress/config.ts
+        if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
+
       # 运行构建脚本
       - name: Build VitePress site
         env:
-          BASE: /life/
-          HOSTNAME: https://augusmeow.github.io/life/
           NODE_OPTIONS: --max_old_space_size=4096
         run: pnpm build
 
