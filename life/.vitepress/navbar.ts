@@ -1,5 +1,5 @@
 export const navbar = [
-  { text: '导航', link: 'https://augusmeow.github.io/' },
+  { text: '游戏', link: 'https://draugus.github.io/' },
   { text: '链接', link: '/nav', activeMatch: '^/nav' },
   { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
   { text: '日常', link: '/daily/', activeMatch: '^/daily' },
