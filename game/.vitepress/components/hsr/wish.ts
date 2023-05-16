@@ -15,14 +15,14 @@ export const WISH = {
       url: ""
     },
     {
-      name: "",
+      name: "Swirl of Heavenly Spear",
       image: 1,
       shortName: "Jing Yuan",
       start: "2023-05-17 18:00:00 +0800",
       end: "2023-06-07 14:59:59 +0800",
       version: "1.0",
       wish5star: "jing_yuan",
-      wish4star: [],
+      wish4star: ['sushang', 'march_7th', 'tingyun'],
       wishName: "「天戈麾斥」",
       url: ""
     },
