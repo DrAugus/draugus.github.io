@@ -1,16 +1,17 @@
 name: ci-deploy-notes
 
+# 暂时不启用
 on:
   push:
     branches:
-      - master
+      - draft
     paths:
       - "notes/**"
       - ".github/workflows/deploy-notes.yml"
   pull_request:
     types: [opened, synchronize]
     branches:
-      - master
+      - draft
     paths:
       - "notes/**"
 
