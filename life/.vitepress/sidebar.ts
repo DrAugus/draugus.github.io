@@ -9,7 +9,7 @@ export const sidebar = {
         { text: '日常', link: '/daily/' },
         { text: '小猫', link: '/daily/cat' },
         { text: '日用价格', link: '/daily/goods-price' },
-        { text: '房', link: '/daily/house' },
+        { text: '买房吗', link: '/daily/house' },
         { text: '买车吗', link: '/daily/car' },
         { text: '户口', link: '/daily/hukou' },
         { text: '月亮', link: '/daily/moon' },
@@ -49,7 +49,7 @@ export const sidebar = {
         { text: '上海', link: '/trip/travelogue/20230311' },
         { text: '南京', link: '/trip/travelogue/20230225' },
         { text: '苏州', link: '/trip/travelogue/20220906' },
-        
+
     ],
 
 
@@ -570,6 +570,7 @@ export const sidebar = {
         { text: '职场人', link: '/career/' },
         { text: '年度报税', link: '/career/tax' },
         { text: '互联网工作记录', link: '/career/record-net-work' },
+        { text: '养老金', link: '/career/pension' },
         {
             text: 'amazon', collapsed: false, items: [
                 { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles' },

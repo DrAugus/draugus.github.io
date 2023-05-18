@@ -5,6 +5,12 @@ export const NAV_DATA: CardData[] = [
     title: '常用工具',
     items: [
       {
+        // icon: '',
+        title: 'I💕IMG',
+        desc: '可批量编辑图片 的所有工具',
+        link: 'https://www.iloveimg.com/zh-cn'
+      },
+      {
         icon: 'https://tinypng.com/images/apple-touch-icon.png',
         title: 'TinyPNG',
         desc: '在线图片压缩工具',
