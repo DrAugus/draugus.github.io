@@ -33,7 +33,8 @@ export const sidebar = {
         { text: '飞机', link: '/trip/airfare-price' },
         { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
 
-        { text: '境外卡办理指南', link: '/trip/card' },
+        { text: '境外银行卡办理指南', link: '/trip/card' },
+        { text: '境外手机卡', link: '/trip/phone-number' },
         { text: '往来港澳通行证', link: '/trip/eep' },
 
         { text: '护照', link: '/trip/passport' },
@@ -44,6 +45,11 @@ export const sidebar = {
     '/trip/travelogue/': [
         { text: '游记', link: '/trip/travelogue/' },
         { text: '港珠澳广深', link: '/trip/travelogue/20230429' },
+        { text: '绍兴', link: '/trip/travelogue/20230422' },
+        { text: '上海', link: '/trip/travelogue/20230311' },
+        { text: '南京', link: '/trip/travelogue/20230225' },
+        { text: '苏州', link: '/trip/travelogue/20220906' },
+        
     ],
 
 
