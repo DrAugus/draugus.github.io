@@ -52,8 +52,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Change config
-        run: mv ./.vitepress/config.ts.replace ./.vitepress/config.ts
+      - name: Change config and Add google
+        run: |
+          mv ./.vitepress/config.ts.replace ./.vitepress/config.ts
+          echo "google-site-verification: googlea936c3462e7f8864.html" >> ./.vitepress/dist/googlea936c3462e7f8864.html
         if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
 
       # 运行构建脚本
