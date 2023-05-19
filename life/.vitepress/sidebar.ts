@@ -292,6 +292,12 @@ export const sidebar = {
 
     //
 
+    '/code/api/': [
+        { text: 'API', link: '/code/api/' },
+        { text: 'Wikipedia', link: '/code/api/wikipedia' },
+        { text: 'mihoyo', link: '/code/api/mihoyo' },
+    ],
+
     '/code/code-notes/': [
         { text: '指南', link: '/code/code-notes/' },
         { text: 'Compile', link: '/code/code-notes/compile' },
@@ -520,13 +526,16 @@ export const sidebar = {
             ]
         }, {
             text: 'front-end', collapsed: false, items: [
+                { text: '公共知识', link: '/code/other-code/front-end/public' },
                 { text: 'React Native', link: '/code/other-code/front-end/react-native' },
                 { text: 'css', link: '/code/other-code/front-end/css' },
                 { text: '前端', link: '/code/other-code/front-end/qa' },
+                { text: 'vite', link: '/code/other-code/front-end/vite' },
                 { text: 'Vue', link: '/code/other-code/front-end/vue' },
+                { text: 'VuePress', link: '/code/other-code/front-end/vuepress' },
+                { text: 'Vitepress', link: '/code/other-code/front-end/vitepress' },
                 { text: 'Javascript', link: '/code/other-code/front-end/javascript' },
                 { text: 'Sol', link: '/code/other-code/front-end/sol' },
-                { text: 'VuePress', link: '/code/other-code/front-end/vuepress' },
                 { text: 'Nuxt', link: '/code/other-code/front-end/nuxt' },
             ]
         }, {

@@ -1,4 +1,4 @@
-# mihoyo API
+# mihoyo
 
 ## API
 

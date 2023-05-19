@@ -8,5 +8,14 @@ import { defineConfig } from 'vite'
 export default defineConfig({
     ssr: {
         noExternal: ['echarts', 'vue-echarts', 'resize-detector', 'zrender'],
-    }
+    },
+    // https://vitejs.dev/config/server-options.html#server-proxy
+    server: {
+        proxy: {
+            '/api': {
+                target: 'https://en.wikipedia.org',
+                changeOrigin: true
+            }
+        }
+    },
 })

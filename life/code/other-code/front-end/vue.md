@@ -1,6 +1,3 @@
----
-icon: logos:vue
----
 
 # Vue
 
@@ -55,19 +52,50 @@ tick是Vue.js中的一个异步更新机制，用于在下一次DOM更新后运�
 </MyComponent>
 ```
 
+## fetch api
+
+```vue
+<template>
+  <div>
+    <h1>Wikipedia Page: {{ pageTitle }}</h1>
+    <div v-html="pageContent"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      pageTitle: '',
+      pageContent: ''
+    };
+  },
+  mounted() {
+    const endpoint =
+      'https://en.wikipedia.org/w/api.php?action=parse&page=Template:IPhone_models_minimal&prop=text&format=json';
+
+    fetch(endpoint)
+      .then(response => response.json())
+      .then(data => {
+        this.pageTitle = data.parse.title;
+        this.pageContent = data.parse.text['*'];
+      })
+      .catch(error => console.error(error));
+  }
+};
+</script>
+```
+
 ## frameworks
 
 ### Vue UI frameworks
 
 > [refer][vuejs-frameworks]
 
-::list
-
 - [Vuetify](https://vuetifyjs.com/) :icon{name="logos:vuetifyjs"}
 - [Bootstrap Vue](https://bootstrap-vue.org/)
 - [Quasar Framework](https://quasar.dev/)
 - [Vue Material](https://vuematerial.io/)
-::
 
 > Comparing the popularity of the 4 Vue frameworks on [npm trends](https://npmtrends.com/)
 
@@ -76,19 +104,14 @@ tick是Vue.js中的一个异步更新机制，用于在下一次DOM更新后运�
 
 ### Static Site frameworks
 
-::list
-
 - [vuepress](./vuepress)
-- vitepress
-::
+- [vitepress](./vitepress)
 
 ### SSR frameworks
 
 Server-Side Rendering
-::list
 
 - nuxtjs
-::
 
 ## about `<script>`
 

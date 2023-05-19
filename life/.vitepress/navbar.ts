@@ -40,6 +40,7 @@ export const navbar = [
     text: '编程',
     items: [
       { text: '首页', link: '/code/' },
+      { text: 'API', link: '/code/api/' },
       { text: 'C++', link: '/code/cpp/' },
       { text: 'DSA', link: '/code/dsa/' },
       { text: '代码笔记', link: '/code/code-notes/' },

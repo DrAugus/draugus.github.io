@@ -1,6 +1,3 @@
----
-icon: logos:vue
----
 
 # VuePress
 
@@ -31,23 +28,18 @@ icon: logos:vue
 
 主题将以合适的日期格式将最后更新时间显示在每一页的底部，同时显示该页面所有贡献者。
 
-::alert
+:::info
 主题会使用 `Date.toLocaleString(pageLang)` 自动根据当前语言，本地化最后更新时间的表述文字。
-::
+:::
 
-::alert{type="warning"}
-使用注意事项
-
+:::warning 使用注意事项
 由于最后更新时间是基于 `git` 的, 所以你只能在一个基于 `git` 的项目中启用它。此外，由于使用的时间戳来自 git commit，因此它将仅在给定页的第一次提交之后显示，并且仅在该页面后续提交更改时更新。
-::
+:::
 
-::alert{type="danger"}
-
-开发模式默认禁用  
-
+:::danger 开发模式默认禁用  
 由于 `git` 插件对性能有严重影响，所以默认情况下**主题不会在开发模式下启用**。  
 如有需要，请在主题选项中设置 `plugins.git: true` 或使用 `--debug` 标志运行开发指令。  
-::
+:::
 
 #### 编辑此页链接
 
@@ -89,10 +81,10 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 请确保你在使用最新的 `vuepress` V2 版本，因为一些你遇到的 bug 可能已经在新版本中修复。
 
-::alert
+:::info
 任何以 `@vuepress/plugin-` 开头的官方插件应该和 VuePress 保持相同版本。  
 如果你使用了其他第三方插件，请确保它兼容你要升级到的 VuePress 版本。
-::
+:::
 
 事实上并不是 版本不同 引起这个错误
 
