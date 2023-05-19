@@ -23,6 +23,7 @@ export const navbar = [
       { text: '首页', link: '/arts/' },
       { text: '语言', link: '/arts/language/' },
       { text: '经济', link: '/arts/economics/' },
+      { text: '社会', link: '/arts/society/' },
       { text: '历史', link: '/arts/history/' },
       { text: '乐理', link: '/arts/music/' },
       {

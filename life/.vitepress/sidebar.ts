@@ -213,6 +213,9 @@ export const sidebar = {
     '/arts/economics/': [
         { text: '微观经济学', link: '/arts/economics/microeconomics' },
     ],
+    '/arts/society/': [
+        { text: '中国人口', link: '/arts/society/population-cn' },
+    ],
     '/arts/history/': [
         { text: '中国历史', link: '/arts/history/china' },
         {
@@ -237,6 +240,13 @@ export const sidebar = {
         { text: '人名汇总', link: '/arts/language/name' },
         { text: '发音体系', link: '/arts/language/pronunciation' },
         { text: '相似', link: '/arts/language/similar' },
+        {
+            text: '英语专辑',
+            collapsed: false,
+            items: [
+                { text: '常用电话提示音', link: '/arts/language/english/dial-number' },
+            ],
+        },
     ],
     '/arts/xiwen/': [
         { text: '汤誓', link: '/arts/xiwen/汤誓' },
