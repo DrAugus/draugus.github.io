@@ -18,6 +18,15 @@
 e.g.  
 <https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=6&type=1>
 
+文章详细内容
+
+- prefix `https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull`
+
+参数 `post_id`
+
+e.g.  
+<https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=18568299>
+
 ## ID对照表
 
 ### 游戏ID

@@ -171,3 +171,8 @@ select subtype$ object_type, count(1) quantity from sysobjects where subtype$ <>
 ||`mysql_fetch_row`|`dpi_fetch(hstmt, &row_num)`||
 ||...|...||
 |||||
+
+## 官方文档
+
+- [DPI 编程指南](https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html)
+- [DMSQL 程序数据类型与操作符](https://eco.dameng.com/document/dm/zh-cn/pm/dm8_sql-data-types-operators)
