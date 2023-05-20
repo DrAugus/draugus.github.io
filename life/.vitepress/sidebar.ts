@@ -46,6 +46,7 @@ export const sidebar = {
         { text: '游记', link: '/trip/travelogue/' },
         { text: '港珠澳广深', link: '/trip/travelogue/20230429' },
         { text: '绍兴', link: '/trip/travelogue/20230422' },
+        { text: '舟山', link: '/trip/travelogue/20230415' },
         { text: '上海', link: '/trip/travelogue/20230311' },
         { text: '南京', link: '/trip/travelogue/20230225' },
         { text: '苏州', link: '/trip/travelogue/20220906' },

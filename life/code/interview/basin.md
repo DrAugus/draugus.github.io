@@ -334,7 +334,7 @@ int epoll_wait(int epfd, struct epoll_event *events,
 
 下面是一个简单的示例代码：
 
-```c++
+```cpp
 #include <queue>
 #include <iostream>
 #include <thread>

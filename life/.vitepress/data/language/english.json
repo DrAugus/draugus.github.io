@@ -195,7 +195,7 @@
     ["What are you going to make for dessert","你甜点打算做什么"],
     ["What is your favourite kind of candy","你最喜欢的是哪种糖果"],
     ["a ticket to a baseball game","一张棒球比赛的票"],
-    ["work form home","在家工作"],
+    ["work from home","在家工作"],
     ["When did you finish high school","你什么时候高中毕业"],
     ["How much do your glasses cost","你的眼镜要价多少"],
     ["We eat by the water","我们在水边吃"],
@@ -438,7 +438,7 @@
     ["Could I discuss several things with you","我能跟你一起讨论几件事吗"],
     ["I can't rent this apartment for the whole year","我不能租这个公寓租一整年"],
     ["Can we go inside and look at it","我们可以进去看看吗"],
-    ["These rooms are nice they are a good size","这些房间不错，他们的大小合适"],
+    ["These rooms are nice, they are a good size","这些房间不错，他们的大小合适"],
     ["There is a refrigerator next to the swimming pool","在游泳池旁边有一个冰箱"]
   ]
 }
