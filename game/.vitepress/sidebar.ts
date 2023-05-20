@@ -30,7 +30,7 @@ export const sidebar_zh = {
         // { text: 'up 次数统计', link: "/hsr/uptimes" },
         // { text: 'up 次数表格统计', link: "/hsr/uptable" },
         // { text: '提瓦特通用文字', link: "/hsr/language" },
-        // { text: '多少天可以满级', link: "/hsr/level" },
+        { text: '多少天可以满级', link: "/hsr/level" },
         // { text: '队伍推荐', link: "/hsr/party" },
         { text: '遗器', link: "/hsr/relics" },
         // { text: '有趣的台词', link: "/hsr/dialog" },

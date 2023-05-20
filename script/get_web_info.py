@@ -29,16 +29,20 @@ for table in tables:
         key = cells[0].text
         val1 = cells[1].text
         val2 = cells[2].text
+        val3 = cells[3].text
         if val2 == '\xa0':
             val2 = ''
-        res_obj[key] = {
-            'birth': val1,
-            'death': '',
-            'info': ''
-        }
+
+        # res_obj[key] = {
+        #     'birth': val1,
+        #     'death': '',
+        #     'info': ''
+        # }
+        res_obj[key] = val1
 
         # for idx in range(len(cells)):
         #     # 输出单元格的文本内容
         #     print(cells[idx].text)
 
 print(res_obj)
+print(res_obj.values())

@@ -6,5 +6,5 @@
 <script setup>
 import {EXP,RENEW,DAILY_TASK,PAY2WIN,EXP_CHANGE,consumeName} from "../.vitepress/components/genshin/exp.ts";
 
-import GenshinLevelExp from "../.vitepress/components/genshin/LevelExp.vue";
+import GenshinLevelExp from "../.vitepress/components/LevelExp.vue";
 </script>
