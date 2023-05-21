@@ -66,12 +66,11 @@ export const EXP = [
 ]
 
 // 6min恢复一个原脆树脂
-export const RENEW = 6;
+export const Recovery = 6;
 // 每日任务
-export const DAILY_TASK = 290*5;
+export const DailyTask = 290 * 5;
 // 氪佬 每天最多买6次 一次60树脂
-export const PAY2WIN = [0, 50, 100, 100, 150, 200, 200];
+export const Pay2Win = [0, 50, 100, 100, 150, 200, 200];
 // 经验 开拓力 比 为 5:1
-export const EXP_CHANGE = 5;
+export const ExpChange = 5;
 
-export const consumeName = "开拓力";

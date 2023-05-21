@@ -1,10 +1,10 @@
+# 满级所需时间速查
 
-# 快速查询升级所需经验值
-
-<LevelExp :EXP="EXP" :dailyTask="DAILY_TASK" :renew="RENEW" :pay2win="PAY2WIN" :expChange="EXP_CHANGE" :consumeName="consumeName" />
+<LevelExp :EXP="EXP" :dailyTask="DailyTask" :recovery="Recovery" :pay2win="Pay2Win" :expChange="ExpChange" :exploreName="ExploreName" />
 
 <script setup>
-import {EXP,RENEW,DAILY_TASK,PAY2WIN,EXP_CHANGE,consumeName} from "../.vitepress/components/hsr/exp.ts";
+import {EXP,Recovery,DailyTask,Pay2Win,ExpChange} from "../.vitepress/components/hsr/exp.ts";
+import {ExploreName} from "../.vitepress/components/hsr/utils.ts";
 
 import LevelExp from "../.vitepress/components/LevelExp.vue";
 </script>

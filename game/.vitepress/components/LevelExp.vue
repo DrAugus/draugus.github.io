@@ -15,9 +15,9 @@
   <input v-model="lv2" type="number" placeholder="输入目标等级"
     oninput="if(value>60)value=60;if(value.length>4)value=value.slice(0,4);if(value<0)value=0">
   <br /><br />
-  <input v-model="got" type="number" placeholder="输入已经获取的经验值" oninput="if(value<0)value=0">
+  <input v-model="got" type="number" :placeholder="`输入已经获取的${expName}`" oninput="if(value<0)value=0">
 
-  <h2 @click="showEXP"><a>点击</a>查询所需经验值</h2>
+  <h2 @click="showEXP"><a>点击</a>查询所需{{ expName }}</h2>
   <h3 id="expNeed">{{ expNeed }}</h3>
   <u id="prefixInfo">{{ prefixInfo }}</u><br>
   <span id="dayNeed">{{ dayNeed }}</span>
@@ -36,15 +36,16 @@ export default {
       prefixInfo: null,
       dayNeed: null,
       tipsInfo: [],
+      expName: null,
     };
   },
   props: {
-    EXP: [],
+    EXP: Array,
     dailyTask: null,
-    renew: null,
-    pay2win: [],
+    recovery: null,
+    pay2win: Array,
     expChange: null,
-    consumeName: null,
+    exploreName: Object,
   },
   methods: {
     showEXP() {
@@ -56,7 +57,7 @@ export default {
     },
     getDaySpend(exp, money) {
 
-      const TOTAL_DAY_RENEW = 24 * 60 / this.renew;
+      const TOTAL_DAY_RENEW = 24 * 60 / this.recovery;
       const resin2exp = resin => resin * this.expChange;
 
       let cost = 0;
@@ -140,9 +141,11 @@ export default {
   },
   mounted() {
     let tipsInfo = []
-    let str = `每日任务合计 <b>${this.dailyTask}</b> 经验值`
+    let expName = this.exploreName?.TrailblazeEXP?.name || this.exploreName?.AdventureEXP?.name
+    let resumeName = this.exploreName?.TrailblazePower?.name || this.exploreName?.OriginalResin?.name
+    let str = `每日任务合计 <b>${this.dailyTask}</b> ${expName}`
     tipsInfo.push(str)
-    str = `${this.consumeName}-经验值换算为 <b>1${this.consumeName}:${this.expChange}经验值</b>`
+    str = `${resumeName}-${expName}换算为 <b>1${resumeName}:${this.expChange}${expName}</b>`
     tipsInfo.push(str)
     str = `氪佬只能氪6次 ${this.pay2win}`
     tipsInfo.push(str)
@@ -150,6 +153,7 @@ export default {
     tipsInfo.push(str)
     console.log(tipsInfo)
     this.tipsInfo = tipsInfo
+    this.expName = expName
   },
 };
 

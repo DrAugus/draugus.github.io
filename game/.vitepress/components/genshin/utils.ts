@@ -18,6 +18,15 @@ export const City = {
   Snezhnaya: { id: "Snezhnaya", name: "至冬" }
 }
 
+export const ExploreName = {
+  World: { id: "World", name: "世界" },
+  Adventure: { id: "Adventure", name: "冒险" },
+  AdventureRank: { id: "Adventure Rank", name: "冒险等阶" },
+  AdventureEXP: { id: "Adventure EXP", name: "冒险阅历" },
+  Resin: { id: "Resin", name: "树脂" },
+  OriginalResin: { id: "Original Resin", name: "原脆树脂" },
+}
+
 export const Weapon = {
   sword: { id: "sword", name: "单手剑" },
   claymore: { id: "claymore", name: "双手剑" },

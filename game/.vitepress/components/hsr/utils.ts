@@ -16,6 +16,43 @@ export const City = {
   StellaronHunters: { id: "Stellaron Hunters", name: "星核猎手" },
 }
 
+export const CityItem = {
+  HertaSpaceStation: {
+    MasterControlZone: { id: "Master Control Zone", name: "主控舱段" },
+    BaseZone: { id: "Base Zone", name: "基座舱段" },
+    StorageZone: { id: "Storage Zone", name: "收容舱段" },
+    SupplyZone: { id: "Supply Zone", name: "支援舱段" },
+  },
+  JariloVI: {
+    AdministrativeDistrict: { id: "Administrative District", name: "行政区" },
+    OutlyingSnowPlains: { id: "Outlying Snow Plains", name: "城郊雪原" },
+    BackwaterPass: { id: "Backwater Pass", name: "边缘通路" },
+    SilvermaneGuardRestrictedZone: { id: "Silvermane Guard Restricted Zone", name: "铁卫禁区" },
+    CorridorOfFadingEchoes: { id: "Corridor of Fading Echoes", name: "残响回廊" },
+    EverwinterHill: { id: "Everwinter Hill", name: "永冬岭" },
+    BoulderTown: { id: "Boulder Town", name: "磐岩镇" },
+    GreatMine: { id: "Great Mine", name: "大矿区" },
+    RivetTown: { id: "Rivet Town", name: "铆钉镇" },
+    RobotSettlement: { id: "Robot Settlement", name: "机械部落" },
+  },
+  TheXianzhouLuofu: {
+    CentraStarskiffHaven: { id: "Central Starskiff Haven", name: "星槎海中枢" },
+    ExaltingSanctum: { id: "Exalting Sanctum", name: "长乐天" },
+    Cloudford: { id: "Cloudford", name: "流云渡" },
+    StargazerNavalia: { id: "Stargazer Navalia", name: "迴星港" },
+    DivinationCommission: { id: "Divination Commission", name: "太卜司" },
+    ArtisanshipCommission: { id: "Artisanship Commission", name: "工造司" },
+  },
+}
+
+export const ExploreName = {
+  Equilibrium: { id: "Equilibrium", name: "均衡" },
+  Trailblaze: { id: "Trailblaze", name: "开拓" },
+  TrailblazeLevel: { id: "Trailblaze Level", name: "开拓等级" },
+  TrailblazeEXP: { id: "Trailblaze EXP", name: "里程" },
+  TrailblazePower: { id: "Trailblaze Power", name: "开拓力" },
+}
+
 export const Weapon = {
   Hunt: { id: "The Hunt", name: "巡猎" },
   Preservation: { id: "The Preservation", name: "存护" },

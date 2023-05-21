@@ -14,12 +14,11 @@ export const EXP = [
 ];
 
 // 8min恢复一个原脆树脂
-export const RENEW = 8;
+export const Recovery = 8;
 // 每日任务1500
-export const DAILY_TASK = 1500;
+export const DailyTask = 1500;
 // 氪佬 每天最多买6次 一次60树脂
-export const PAY2WIN = [0, 50, 100, 100, 150, 200, 200];
+export const Pay2Win = [0, 50, 100, 100, 150, 200, 200];
 // 经验树脂比 为 4:1
-export const EXP_CHANGE = 4;
+export const ExpChange = 4;
 
-export const consumeName = "原脆树脂";
