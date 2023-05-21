@@ -26,6 +26,7 @@ export const sidebar_zh = {
         { text: '角色列表', link: "/hsr/character" },
         { text: '模拟宇宙', link: "/hsr/simulated-universe" },
         { text: '每日', link: "/hsr/daily" },
+        { text: '锄地', link: "/hsr/hoeing" },
         // { text: '复刻跃迁', link: "/hsr/fork" },
         // { text: 'up 次数统计', link: "/hsr/uptimes" },
         // { text: 'up 次数表格统计', link: "/hsr/uptable" },

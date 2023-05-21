@@ -14,8 +14,7 @@ exclude_path = [
     # 'china','abroad'
 ]
 root_dir = os.getcwd()
-sub_dir = "life/trip/abroad"
-link_pre = "/trip/abroad"
+sub_dir = "game/public/image/hsr/hoeing/map/"
 
 
 def list_all_files(dirs):
@@ -39,15 +38,10 @@ def list_all_files(dirs):
 
 def format_line(filename):
     first_line = ''
-    # print(root_dir, filename)
-    with open(os.path.join(root_dir, sub_dir + filename), 'r') as f:
-        first_line = f.readline()
-        first_line = first_line[2:]
-        first_line = first_line.rstrip('\n')
-
-    pre = 'url_life'
-    res = f"{{ text: '{first_line}', link: '{link_pre}{filename}' }},"
-    # res = pre + ' + "' + s + '",'
+    prefix = '![1](/image/hsr/hoeing/map/'
+    filename = filename[1:]
+    res = prefix + filename
+    res += ')'
     res += '\n'
     return res
 
@@ -75,9 +69,10 @@ def write2file():
 
     lll = list_all_files(current_dir)
     lll = prefix_dir(current_dir, lll)
+    print(lll)
 
     # 使用 with 关键字打开文件
-    with open(output_filename, "w") as f:
+    with open(output_filename, "w", encoding='utf-8') as f:
         # 将输出重定向到文件
         print(display(lll), file=f)
 
