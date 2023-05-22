@@ -219,6 +219,8 @@ export const sidebar = {
     ],
     '/arts/history/': [
         { text: '中国历史', link: '/arts/history/china' },
+        { text: '社会主义主要矛盾', link: '/arts/history/tmc' },
+        { text: '古人说话也用文言文吗', link: '/arts/history/wenyan' },
         {
             text: '皇室',
             collapsed: true,
