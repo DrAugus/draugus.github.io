@@ -941,27 +941,27 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Everbloom Violet",
-      image: 3,
-      shortName: "Yae Miko",
-      start: "2023-05-24 11:00:00 +0800",
-      end: "2023-06-13 17:59:59 +0800",
-      wish5star: "yae_miko",
-      wish4star: ['kirara'],
-      version: "3.7",
-      wishName: "「华紫樱绯」",
-      url: "https://bbs.mihoyo.com/ys/article/?"
-    },
-    {
       name: "Tapestry of Golden Flames",
       image: 4,
       shortName: "Yoimiya",
       start: "2023-05-24 11:00:00 +0800",
       end: "2023-06-13 17:59:59 +0800",
       wish5star: "yoimiya",
-      wish4star: ['kirara'],
+      wish4star: ['Kirara', 'Yun Jin', 'Chongyun'],
       version: "3.7",
       wishName: "「焰色天河」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Everbloom Violet",
+      image: 3,
+      shortName: "Yae Miko",
+      start: "2023-05-24 11:00:00 +0800",
+      end: "2023-06-13 17:59:59 +0800",
+      wish5star: "yae_miko",
+      wish4star: ['Kirara', 'Yun Jin', 'Chongyun'],
+      version: "3.7",
+      wishName: "「华紫樱绯」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
