@@ -49,6 +49,42 @@ export const WISH = {
       wishName: "",
       url: ""
     },
+    {
+      name: "",
+      image: 1,
+      shortName: "Blade",
+      start: "2023-07-19 10:00:00 +0800",
+      end: "2023-08-09 17:59:59 +0800",
+      version: "1.2",
+      wish5star: "blade",
+      wish4star: [],
+      wishName: "",
+      url: ""
+    },
+    {
+      name: "",
+      image: 1,
+      shortName: "Kafka",
+      start: "2023-08-09 18:00:00 +0800",
+      end: "2023-08-29 14:59:59 +0800",
+      version: "1.2",
+      wish5star: "kafka",
+      wish4star: [],
+      wishName: "",
+      url: ""
+    },
+    {
+      name: "",
+      image: 1,
+      shortName: "Fu Xuan",
+      start: "2023-08-30 10:00:00 +0800",
+      end: "2023-09-20 17:59:59 +0800",
+      version: "1.3",
+      wish5star: "fu_xuan",
+      wish4star: [],
+      wishName: "",
+      url: ""
+    },
   ],
   weapons: [
     {
@@ -86,6 +122,36 @@ export const WISH = {
       image: 4,
       start: "2023-06-28 18:00:00 +0800",
       end: "2023-07-18 14:59:59 +0800",
+      shortName: "",
+      wish5star: [],
+      wish4star: [],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: 5,
+      start: "2023-07-19 10:00:00 +0800",
+      end: "2023-08-09 17:59:59 +0800",
+      shortName: "",
+      wish5star: [],
+      wish4star: [],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: 6,
+      start: "2023-08-09 18:00:00 +0800",
+      end: "2023-08-29 14:59:59 +0800",
+      shortName: "",
+      wish5star: [],
+      wish4star: [],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: 7,
+      start: "2023-08-30 10:00:00 +0800",
+      end: "2023-09-20 17:59:59 +0800",
       shortName: "",
       wish5star: [],
       wish4star: [],
