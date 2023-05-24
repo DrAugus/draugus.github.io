@@ -40,7 +40,6 @@ def split_all_space(line_str):
     return plus_mark(arr_split_space, '"')
 
 
-
 def add_prefix(filename, str):
     with open(filename, "r", encoding='utf-8') as file_handle:
         line = file_handle.readline()
@@ -51,6 +50,20 @@ def add_prefix(filename, str):
                 line = file_handle.readline()
                 continue
             arr_res.append(str + line_str + '\n')
+            line = file_handle.readline()
+        op_file.write_file(arr_res)
+
+
+def add_suffix(filename, str):
+    with open(filename, "r", encoding='utf-8') as file_handle:
+        line = file_handle.readline()
+        arr_res = []
+        while line:
+            line_str = line.strip()
+            if not len(line_str):
+                line = file_handle.readline()
+                continue
+            arr_res.append(line_str + str + '\n')
             line = file_handle.readline()
         op_file.write_file(arr_res)
 
@@ -86,7 +99,7 @@ def change_line(filename, a):
 
 
 def invoke_similar_words():
-    op_file.open_and_read('',split_all_space)
+    op_file.open_and_read('', split_all_space)
 
 
 def invoke_translate():
@@ -95,6 +108,10 @@ def invoke_translate():
 
 def invoke_add_prefix(str):
     add_prefix("script/test", str)
+
+
+def invoke_add_suffix(str):
+    add_suffix("script/test", str)
 
 
 def invoke_replace_str(src, dis):
@@ -110,8 +127,9 @@ all_feature = '\n=========*****=========\n' \
     '   1: invoke_similar_words\n' \
     '   2: invoke_translate\n' \
     '   3: invoke_add_prefix\n' \
-    '   4: invoke_replace_str, replace a to b\n' \
-    '   5: invoke_change_line\n' \
+    '   4: invoke_add_suffix\n' \
+    '   5: invoke_replace_str, replace a to b\n' \
+    '   6: invoke_change_line\n' \
     '   0: nothing\n' \
     '=========*****=========\n'
 
@@ -134,6 +152,13 @@ if __name__ == '__main__':
             break
         elif judge == '4':
             while 1:
+                print("please input str you want to add suffix")
+                input_str = input()
+                invoke_add_suffix(input_str)
+                break
+            break
+        elif judge == '5':
+            while 1:
                 print("please input str a, b you want to replace")
                 print("e.g. a b")
                 input_str = input()
@@ -141,7 +166,7 @@ if __name__ == '__main__':
                 invoke_replace_str(input_str[0], input_str[1])
                 break
             break
-        elif judge == '5':
+        elif judge == '6':
             while 1:
                 print("please input str you want to split and line break")
                 input_str = input()

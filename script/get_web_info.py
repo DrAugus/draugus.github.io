@@ -8,20 +8,24 @@ html = requests.get(url).text
 # 解析网页内容
 soup = BeautifulSoup(html, 'html.parser')
 
-# 获取所有的table标签
-tables = soup.find_all('table')
-
 
 res_obj = {}
 
+# 获取所有的table标签
+tables = soup.find_all('table')
+# tables = soup.find_all('table', {'class': 'table'})
+
+print(tables)
 
 # 遍历所有的table标签，获取其内容
 for table in tables:
     # 获取所有的行
     rows = table.find_all('tr')
+    # rows = table.find_all('tr', {'class': 'tr'})
     for row in rows:
         # 获取所有的单元格
         cells = row.find_all('td')
+        # cells = row.find_all('td', {'class': 'td'})
 
         if len(cells) == 0:
             continue
