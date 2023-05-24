@@ -239,10 +239,8 @@ export const sidebar = {
         { text: '英语简单句', link: '/arts/language/english' },
         { text: '法语', link: '/arts/language/french' },
         { text: '德语', link: '/arts/language/german' },
+        { text: '日语', link: '/arts/language/japanese' },
         { text: '意大利语', link: '/arts/language/italian' },
-        { text: '人名汇总', link: '/arts/language/name' },
-        { text: '发音体系', link: '/arts/language/pronunciation' },
-        { text: '相似', link: '/arts/language/similar' },
         {
             text: '英语专辑',
             collapsed: false,
@@ -250,6 +248,9 @@ export const sidebar = {
                 { text: '常用电话提示音', link: '/arts/language/english/dial-number' },
             ],
         },
+        { text: '人名汇总', link: '/arts/language/name' },
+        { text: '发音体系', link: '/arts/language/pronunciation' },
+        { text: '相似', link: '/arts/language/similar' },
     ],
     '/arts/xiwen/': [
         { text: '汤誓', link: '/arts/xiwen/汤誓' },

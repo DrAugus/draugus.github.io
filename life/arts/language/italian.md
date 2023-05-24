@@ -1,8 +1,5 @@
----
-title: 意大利语简单句
----
 
-:SentenceItalian
+# 意大利语简单句
 
 <SentenceItalian></SentenceItalian>
 
