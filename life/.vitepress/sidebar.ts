@@ -228,6 +228,12 @@ export const sidebar = {
                 { text: '温莎', link: '/arts/history/royal/windsor' },
             ],
         },
+        {
+            text: '正史', collapsed: false,
+            items: [
+                { text: '介绍', link: '/arts/history/orthodox/' },
+            ],
+        },
     ],
     '/arts/music/': [
         { text: '乐理', link: '/arts/music/music_theory' },
@@ -609,6 +615,7 @@ export const sidebar = {
     '/thought/': [
         { text: '想法', link: '/thought/' },
         { text: '未来', link: '/thought/future' },
+        { text: '90 后都经历了什么', link: '/thought/90s' },
         { text: '这又是什么呢', link: '/thought/temp' },
         { text: '活得像一个机器人', link: '/thought/life-bot' },
         { text: '怜悯', link: '/thought/pity' },

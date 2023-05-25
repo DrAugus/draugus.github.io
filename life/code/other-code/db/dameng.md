@@ -26,6 +26,12 @@
 |v$version|可查询数据库版本|
 |v$wait_class|可查询等待（wait）情况|
 
+## 文档
+
+- [达梦社区发帖中心](https://eco.dameng.com/user-center/post)
+- [DPI 编程指南](https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html)
+- [DMSQL 程序数据类型与操作符](https://eco.dameng.com/document/dm/zh-cn/pm/dm8_sql-data-types-operators)
+
 ## 创建
 
 ### 创建数据库 (db)
@@ -71,7 +77,7 @@ CREATE SCHEMA example_schema AUTHORIZATION user_name;
 使用以下语句创建名为 `example_table` 的表：
 
 ```sql
-CREATE TABLE example_schema.example_table (
+CREATE TABLE "example_schema"."example_table" (
   id INTEGER PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   age INTEGER NOT NULL,
@@ -80,6 +86,13 @@ CREATE TABLE example_schema.example_table (
 ```
 
 这将在 `example_schema` 模式下创建一个具有 `id`、`name`、`age` 和 `email` 列的表。其中，`id` 列作为主键，`email` 列具有唯一约束条件。你可以将这些列改为适合你的应用程序的名称和数据类型。
+
+## 插入
+
+```sql
+insert into "example_schema"."example_table"(id, name, age, email) 
+values(1, 'lisa', 19, 'lihua@li.com')
+```
 
 ## 查询
 
@@ -152,6 +165,28 @@ select create_time, case when arch_mode = 'n' then '非归档模式' else '归�
 select subtype$ object_type, count(1) quantity from sysobjects where subtype$ <>'' group by subtype$ union select 'column', count(1) from syscolumns;
 ```
 
+## 技巧
+
+### 获取自增 ID
+
+> [官方 查看自增列信息](https://eco.dameng.com/document/dm/zh-cn/pm/management-table.html#9.6.2%20%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%A2%9E%E5%88%97%E4%BF%A1%E6%81%AF)
+
+1. `IDENT_CURRENT`：获得表上自增列的当前值；
+2. `IDENT_SEED`：获得表上自增列的种子信息；
+3. `IDENT_INCR`：获得表上自增列的增量信息。
+
+```sql
+CREATE TABLE "TEST_BMY"."IDENT_TABLE_T2" (
+  C1 INT IDENTITY(0, 1),
+  C2 INT
+);
+insert into "TEST_BMY"."IDENT_TABLE_T2" values(3)
+
+SELECT IDENT_CURRENT('TEST_BMY.IDENT_TABLE_T2');
+SELECT IDENT_SEED('TEST_BMY.IDENT_TABLE_T2');
+SELECT IDENT_INCR('TEST_BMY.IDENT_TABLE_T2');
+```
+
 ## 迁移
 
 ### 从 mysql 迁移
@@ -171,8 +206,3 @@ select subtype$ object_type, count(1) quantity from sysobjects where subtype$ <>
 ||`mysql_fetch_row`|`dpi_fetch(hstmt, &row_num)`||
 ||...|...||
 |||||
-
-## 官方文档
-
-- [DPI 编程指南](https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html)
-- [DMSQL 程序数据类型与操作符](https://eco.dameng.com/document/dm/zh-cn/pm/dm8_sql-data-types-operators)
