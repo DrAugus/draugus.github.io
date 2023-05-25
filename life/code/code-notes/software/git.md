@@ -7,6 +7,10 @@ icon: vscode-icons:file-type-git
 
 ## sol
 
+### 舍弃本地所有提交
+
+`git reset --hard origin/your_branch`
+
 ### could not access submodule
 
 just execute `git submodule update --init --recursive`

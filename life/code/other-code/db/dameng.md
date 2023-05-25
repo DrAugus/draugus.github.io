@@ -31,6 +31,7 @@
 - [达梦社区发帖中心](https://eco.dameng.com/user-center/post)
 - [DPI 编程指南](https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html)
 - [DMSQL 程序数据类型与操作符](https://eco.dameng.com/document/dm/zh-cn/pm/dm8_sql-data-types-operators)
+- [错误码](https://eco.dameng.com/document/dm/zh-cn/faq/faq-errorcode.html)
 
 ## 创建
 
@@ -185,6 +186,32 @@ insert into "TEST_BMY"."IDENT_TABLE_T2" values(3)
 SELECT IDENT_CURRENT('TEST_BMY.IDENT_TABLE_T2');
 SELECT IDENT_SEED('TEST_BMY.IDENT_TABLE_T2');
 SELECT IDENT_INCR('TEST_BMY.IDENT_TABLE_T2');
+```
+
+## DPI 开发
+
+:::tip 开发 demo
+具体代码实现，可以参考[此项目](https://github.com/cat-chat-meow/dameng)
+:::
+
+关于绑定变量，执行 insert 语句时
+
+```cpp
+// CITY VARCHAR
+// correct
+sdbyte sql[] = "INSERT INTO TEST001 (NAME, CITY) values('haha', ?)";
+// wrong
+sdbyte sql[] = "INSERT INTO TEST001 (NAME, CITY) values('haha', '?')";
+```
+
+但是，对于 select 绑定变量时，入参需要加引号？
+
+```cpp
+// c1 VARCHAR c2 INT
+// wrong
+sdbyte sql[] = "select c1,c2,c3 from dpi_demo where c1 = ?";
+// correct
+sdbyte sql[] = "select c1,c2,c3 from dpi_demo where c1 = '?' and c2 = ?";
 ```
 
 ## 迁移
