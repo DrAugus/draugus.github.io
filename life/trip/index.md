@@ -14,7 +14,7 @@ outline: [2, 3, 4]
 
 ## 计划
 
-即将要去的地方：[长春](./china/jilin/changchun)
+即将要去的地方：[哈尔滨](./china/heilongjiang/haerbing)
 
 > 下面的计划不再包含飞机出行，需要飞机出行的地方，国内暂时没有需求，飞机计划[看这里](./suixinfei)，高铁出行票价[看这里](./high-speed-rail-fare)
 
