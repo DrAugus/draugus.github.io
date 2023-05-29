@@ -228,8 +228,7 @@ sdbyte sql[] = "select c1,c2,c3 from dpi_demo where c1 = '?' and c2 = ?";
 |释放结果集 free ret|`mysql_free_result`|`dpi_free_con`||
 |列数 cols|`mysql_field_count`|`dpi_number_columns`||
 |影响行数 affect row|`mysql_affected_rows`|`dpi_row_count`||
-||`mysql_store_result`|null||
-||`mysql_insert_id`|null||
-||`mysql_fetch_row`|`dpi_fetch(hstmt, &row_num)`||
-||...|...||
-|||||
+|获取当前连接的结果集|`mysql_store_result`|null||
+|获取上一次插入操作的自增长 ID 值|`mysql_insert_id`|null||
+|获取每行数据|`mysql_fetch_row`|`dpi_fetch`||
+|...|...|...||
