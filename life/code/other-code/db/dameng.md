@@ -224,11 +224,40 @@ sdbyte sql[] = "select c1,c2,c3 from dpi_demo where c1 = '?' and c2 = ?";
 |:----|:----|:----|:----|
 |转义 escape|`mysql_real_escape_string`|null||
 |初始化 init|`mysql_library_init`|null||
-|当前列长度 fetch length|`mysql_fetch_lengths`|null||
+|当前列集合 fetch length|`mysql_fetch_lengths`|null|数组的每一个元素对应结果集中的一列数据，该元素的值表示该列在结果集中所查询到的数据大小|
 |释放结果集 free ret|`mysql_free_result`|`dpi_free_con`||
 |列数 cols|`mysql_field_count`|`dpi_number_columns`||
 |影响行数 affect row|`mysql_affected_rows`|`dpi_row_count`||
-|获取当前连接的结果集|`mysql_store_result`|null||
+|获取当前连接的结果集|`mysql_store_result`|`dpi_fetch_scroll`/`dpi_fetch`||
 |获取上一次插入操作的自增长 ID 值|`mysql_insert_id`|null||
 |获取每行数据|`mysql_fetch_row`|`dpi_fetch`||
 |...|...|...||
+
+:::code-group
+
+```cpp [mysql]
+MYSQL_ROW row;
+unsigned long *lengths;
+unsigned int num_fields;
+unsigned int i;
+
+row = mysql_fetch_row(result);
+if (row)
+{
+    num_fields = mysql_num_fields(result);
+    // also, can use num_fields = mysql_field_count(MYSQL *mysql).
+    lengths = mysql_fetch_lengths(result);
+    for(i = 0; i < num_fields; i++)
+    {
+        printf("Column %u is %lu bytes in length.\n",
+              i, lengths[i]);
+    }
+}
+```
+
+```cpp [dameng8]
+
+
+```
+
+:::
