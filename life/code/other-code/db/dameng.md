@@ -31,7 +31,8 @@
 - [达梦社区发帖中心](https://eco.dameng.com/user-center/post)
 - [DPI 编程指南](https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html)
 - [DMSQL 程序数据类型与操作符](https://eco.dameng.com/document/dm/zh-cn/pm/dm8_sql-data-types-operators)
-- [错误码](https://eco.dameng.com/document/dm/zh-cn/faq/faq-errorcode.html)
+- [SQL 执行错误码](https://eco.dameng.com/document/dm/zh-cn/faq/faq-errorcode.html)
+- [程序开发错误码](https://eco.dameng.com/document/dm/zh-cn/pm/programmer-appendix.html)
 
 ## 创建
 
@@ -220,18 +221,20 @@ sdbyte sql[] = "select c1,c2,c3 from dpi_demo where c1 = '?' and c2 = ?";
 
 #### 方法变更
 
-||mysql|达梦|方法说明|
-|:----|:----|:----|:----|
-|转义 escape|`mysql_real_escape_string`|null||
-|初始化 init|`mysql_library_init`|null||
-|当前列集合 fetch length|`mysql_fetch_lengths`|null|数组的每一个元素对应结果集中的一列数据，该元素的值表示该列在结果集中所查询到的数据大小|
-|释放结果集 free ret|`mysql_free_result`|`dpi_free_con`||
-|列数 cols|`mysql_field_count`|`dpi_number_columns`||
-|影响行数 affect row|`mysql_affected_rows`|`dpi_row_count`||
-|获取当前连接的结果集|`mysql_store_result`|`dpi_fetch_scroll`/`dpi_fetch`||
-|获取上一次插入操作的自增长 ID 值|`mysql_insert_id`|null||
-|获取每行数据|`mysql_fetch_row`|`dpi_fetch`||
-|...|...|...||
+||mysql|方法说明|达梦|[方法说明][dameng_dpi]|
+|:----|:----|:----|:----|:----|
+|转义 escape|`mysql_real_escape_string`||null||
+|初始化 init|`mysql_library_init`||null||
+|当前列集合 fetch length|`mysql_fetch_lengths`|数组的每一个元素对应结果集中的一列数据，该元素的值表示该列在结果集中所查询到的数据大小|null||
+|释放结果集 free ret|`mysql_free_result`||`dpi_free_con`||
+|列数 cols|`mysql_field_count`||`dpi_number_columns`||
+|查询行数/影响行数|[`mysql_affected_rows`][mysql_affected_rows]|`mysql_affected_rows()` may be called immediately after executing a statement with `mysql_real_query()` or `mysql_query()`. It returns the number of rows changed, deleted, or inserted by the last statement if it was an UPDATE, DELETE, or INSERT. For SELECT statements, `mysql_affected_rows()` works like `mysql_num_rows()`.|`dpi_row_count`||
+|获取当前连接的结果集|`mysql_store_result`||`dpi_fetch_scroll`/`dpi_fetch`||
+|获取上一次插入操作的自增长 ID 值|`mysql_insert_id`||null||
+|获取每行数据|`mysql_fetch_row`||`dpi_fetch`||
+|...|...|...|...|...|
+
+#### 开发实践
 
 :::code-group
 
@@ -261,3 +264,6 @@ if (row)
 ```
 
 :::
+
+[mysql_affected_rows]: https://dev.mysql.com/doc/c-api/5.7/en/mysql-affected-rows.html
+[dameng_dpi]: https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html
