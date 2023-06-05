@@ -67,6 +67,23 @@ export const NAV_DATA: CardData[] = [
     ]
   },
   {
+    title: '文史相关',
+    items: [
+      {
+        icon: 'http://www.guoxue.com/favicon.ico',
+        title: '国学网',
+        desc: '文史阅读总站',
+        link: 'http://www.guoxue.com'
+      },
+      {
+        icon: 'http://www.guoxue.com/favicon.ico',
+        title: '明史',
+        desc: '二十四史系列——明史',
+        link: 'http://www.guoxue.com/shibu/24shi/mingshi/lianshu.htm'
+      },
+    ]
+  },
+  {
     title: 'AI 导航',
     items: [
       {
