@@ -98,10 +98,15 @@ values(1, 'lisa', 19, 'lihua@li.com')
 
 ## 查询
 
+查询 object
+
 ```sql
--- 查询 object
 select top 10 name,id from sysobjects;
--- 查询列类型
+```
+
+查询列类型
+
+```sql
 SELECT DBMS_METADATA.GET_DDL('TABLE', 'sysobjects', 'SYSDBA') FROM DUAL;
 -- 或者
 DESC sysobjects;
@@ -178,6 +183,7 @@ select subtype$ object_type, count(1) quantity from sysobjects where subtype$ <>
 3. `IDENT_INCR`：获得表上自增列的增量信息。
 
 ```sql
+-- IDENTITY
 CREATE TABLE "TEST_BMY"."IDENT_TABLE_T2" (
   C1 INT IDENTITY(0, 1),
   C2 INT
@@ -187,7 +193,19 @@ insert into "TEST_BMY"."IDENT_TABLE_T2" values(3)
 SELECT IDENT_CURRENT('TEST_BMY.IDENT_TABLE_T2');
 SELECT IDENT_SEED('TEST_BMY.IDENT_TABLE_T2');
 SELECT IDENT_INCR('TEST_BMY.IDENT_TABLE_T2');
+-- AUTO_INCREMENT
+CREATE TABLE "SYSDBA"."TABLE_8" (
+  "ID" INT PRIMARY KEY AUTO_INCREMENT ,
+  "NAME" CHAR(10)
+);
+insert into TABLE_8(name) values('test');
+select LAST_INSERT_ID
 ```
+
+:::warning 两种方法
+建表的时候用 **IDENTITY** 则使用 `select @@IDENTITY;` 查询(类似于mysql)  
+建表使用 **PRIMARY KEY AUTO_INCREMENT** 则使用 `select LAST_INSERT_ID;` 进行查询(类似于oracle)
+:::
 
 ## DPI 开发
 

@@ -58,6 +58,12 @@ dockerfile_name 可以在同一项目里放置多个 dockerfile
 docker build -t my_image -f dockerfile_name .
 ```
 
+构建时显示完整日志。该命令将会在构建期间显示完整的日志，而不是收缩的默认输出。
+
+```bash
+docker build --progress=plain .
+```
+
 ### run
 
 运行 docker：
