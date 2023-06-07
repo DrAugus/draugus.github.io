@@ -5,17 +5,15 @@
       <li v-for="(v, i) in tipsInfo" v-html="v"></li>
     </ol>
   </blockquote>
-
-  <input v-model="money" type="number" placeholder="氪吗？每天氪多少(0-6)单？默认白嫖"
-    oninput="if(value>6)value=6;if(value.length>4)value=value.slice(0,4);if(value<0)value=0">
-  <br /><br />
-  <input v-model="lv1" type="number" placeholder="输入起始等级"
-    oninput="if(value>59)value=59;if(value.length>4)value=value.slice(0,4);if(value<0)value=0">
-  <br /><br />
-  <input v-model="lv2" type="number" placeholder="输入目标等级"
-    oninput="if(value>60)value=60;if(value.length>4)value=value.slice(0,4);if(value<0)value=0">
-  <br /><br />
-  <input v-model="got" type="number" :placeholder="`输入已经获取的${expName}`" oninput="if(value<0)value=0">
+  <div>
+    <input v-model="money" type="number" placeholder="氪吗？每天氪多少(0-6)单？默认白嫖" @input="checkInput($event, 6)">
+    <br /><br />
+    <input v-model="lv1" type="number" placeholder="输入起始等级" @input="checkInput($event, lvMax - 1)">
+    <br /><br />
+    <input v-model="lv2" type="number" placeholder="输入目标等级" @input="checkInput($event, lvMax)">
+    <br /><br />
+    <input v-model="got" type="number" :placeholder="`输入已经获取的${expName}`" @input="checkInput($event, Infinity, 0)">
+  </div>
 
   <h2 @click="showEXP"><a>点击</a>查询所需{{ expName }}</h2>
   <h3 id="expNeed">{{ expNeed }}</h3>
@@ -46,8 +44,18 @@ export default {
     pay2win: Array,
     expChange: null,
     exploreName: Object,
+    lvMax: null,
   },
   methods: {
+    checkInput($event, max, min = 0) {
+      max = parseInt(max)
+      let value = $event.target.value
+      if (value > max) value = max
+      if (value.length > 4) value = value.slice(0, 4)
+      if (value < min) value = min
+      $event.target.value = value
+    },
+
     showEXP() {
       let obj = this.getEXP(this.lv1, this.lv2, this.got, this.money);
       console.log(obj)
@@ -71,7 +79,7 @@ export default {
       let resinDayTotal = TOTAL_DAY_RENEW + resinPlus;
       let dayEXPTotal = resin2exp(resinDayTotal) + this.dailyTask;
       let daySpend = Math.ceil(exp / dayEXPTotal);
-      console.info("exp", exp, "resin", resinDayTotal, "daySpend", daySpend);
+      console.info("money", money, "exp", exp, "resin", resinDayTotal, "daySpend", daySpend);
       return {
         daySpend: daySpend,
         cost: cost
