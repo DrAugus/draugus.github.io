@@ -23,11 +23,15 @@ data_dict = json.loads(json_str)
 wrap_arr = [{}, {}]
 
 for obj in data_dict:
-    if obj['post']['subject'].startswith('Event Warp'):
+    if obj['post']['subject'].startswith('Event Warp') or \
+        '5-star character' in obj['post']['subject'] or \
+            '5-star Character' in obj['post']['subject']:
         wrap_arr[0] = obj
 
-    if not obj['post']['subject'].startswith('Event Warp') and \
-            'Event Warp' in obj['post']['subject']:
+    if (not obj['post']['subject'].startswith('Event Warp') and
+            'Event Warp' in obj['post']['subject']) or \
+            '5-star Light Cone' in obj['post']['subject'] or \
+            '5-star light cone' in obj['post']['subject']:
         wrap_arr[1] = obj
 
 post_id_arr = [0, 0]
@@ -52,7 +56,8 @@ for get_wrap in wrap_arr:
 
     image_times = '1'
 
-    modify_subject = subject.split('"')[1].lower().replace(' ', '_')
+    # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
+    modify_subject = subject.split(':')[0].lower().replace(' ', '_')
     modify_subject += '_' + image_times + img_type
     print('modify_subject', modify_subject)
 

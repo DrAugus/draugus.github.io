@@ -26,15 +26,15 @@ export const WISH = {
       url: ""
     },
     {
-      name: "",
+      name: "Contract Zero",
       image: 1,
       shortName: "Silver Wolf",
       start: "2023-06-07 10:00:00 +0800",
       end: "2023-06-28 17:59:59 +0800",
       version: "1.1",
       wish5star: "silver_wolf",
-      wish4star: [],
-      wishName: "",
+      wish4star: ['Dan Heng', 'Asta', 'Serval'],
+      wishName: "「零号协议」",
       url: ""
     },
     {
