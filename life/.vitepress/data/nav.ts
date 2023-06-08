@@ -67,6 +67,23 @@ export const NAV_DATA: CardData[] = [
     ]
   },
   {
+    title: '资料文档',
+    items: [
+      {
+        icon: '',
+        title: '开发人员速查表',
+        desc: '快速查找技术栈命令',
+        link: 'https://wangchujiang.com/reference/'
+      },
+      {
+        icon: '',
+        title: 'make',
+        desc: 'make 命令 makefile 编写指南',
+        link: 'https://wangchujiang.com/reference/docs/make.html'
+      },
+    ]
+  },
+  {
     title: '文史相关',
     items: [
       {

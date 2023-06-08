@@ -168,6 +168,7 @@ export const sidebar = {
         },
         {
             text: '四川', collapsed: false, items: [
+                { text: '四川', link: '/trip/china/sichuan/' },
                 { text: '成都', link: '/trip/china/sichuan/chengdu' },
             ],
         },

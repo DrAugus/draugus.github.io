@@ -1,8 +1,4 @@
----
-icon: flat-color-icons:make-decision
-title: Makefile
----
-
+# Makefile
 
 ## beginner
 
