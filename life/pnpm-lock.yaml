@@ -9,7 +9,7 @@ specifiers:
   typed.js: 2.0.132
   vitepress: ^1.0.0-beta.2
   vue: ^3.3.4
-  vue-echarts: ^6.5.5
+  vue-echarts: ^6.6.0
 
 devDependencies:
   '@antfu/eslint-config': 0.39.5_eslint@8.42.0
@@ -20,7 +20,7 @@ devDependencies:
   typed.js: 2.0.132
   vitepress: 1.0.0-beta.2_sass@1.63.3
   vue: 3.3.4
-  vue-echarts: 6.5.5_echarts@5.4.2+vue@3.3.4
+  vue-echarts: 6.6.0_echarts@5.4.2+vue@3.3.4
 
 packages:
 
@@ -3195,8 +3195,8 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /vue-echarts/6.5.5_echarts@5.4.2+vue@3.3.4:
-    resolution: {integrity: sha512-KJD1MSyoMQ33q8M4hM45OYeSC+t7LzesIXQOrkRSXv4xhOi0iN+6yEjQuIuqRB9zZGCT2J4bK3eQ+1ttdz4Uag==}
+  /vue-echarts/6.6.0_echarts@5.4.2+vue@3.3.4:
+    resolution: {integrity: sha512-PpXDe1wKKzOJTLM8RM4GJxpRi+9eiC0YUJR7i44/AAa0oDatvNctJcZlfq/bUV4KV+HDsCeQzaB6JocrXEy9LA==}
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.5
