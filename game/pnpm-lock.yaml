@@ -7,7 +7,7 @@ specifiers:
   dayjs: 1.11.8
   eslint: ^8.42.0
   leaflet: 1.9.4
-  sass: ^1.63.3
+  sass: ^1.63.4
   typed.js: 2.0.132
   vitepress: ^1.0.0-beta.2
   vue: ^3.3.4
@@ -19,9 +19,9 @@ devDependencies:
   dayjs: 1.11.8
   eslint: 8.42.0
   leaflet: 1.9.4
-  sass: 1.63.3
+  sass: 1.63.4
   typed.js: 2.0.132
-  vitepress: 1.0.0-beta.2_sass@1.63.3
+  vitepress: 1.0.0-beta.2_sass@1.63.4
   vue: 3.3.4
 
 packages:
@@ -793,7 +793,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.9_sass@1.63.3
+      vite: 4.3.9_sass@1.63.4
       vue: 3.3.4
     dev: true
 
@@ -2783,8 +2783,8 @@ packages:
       regexp-tree: 0.1.24
     dev: true
 
-  /sass/1.63.3:
-    resolution: {integrity: sha512-ySdXN+DVpfwq49jG1+hmtDslYqpS7SkOR5GpF6o2bmb1RL/xS+wvPmegMvMywyfsmAV6p7TgwXYGrCZIFFbAHg==}
+  /sass/1.63.4:
+    resolution: {integrity: sha512-Sx/+weUmK+oiIlI+9sdD0wZHsqpbgQg8wSwSnGBjwb5GwqFhYNwwnI+UWZtLjKvKyFlKkatRK235qQ3mokyPoQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -3048,7 +3048,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/4.3.9_sass@1.63.3:
+  /vite/4.3.9_sass@1.63.4:
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3076,12 +3076,12 @@ packages:
       esbuild: 0.17.14
       postcss: 8.4.24
       rollup: 3.23.1
-      sass: 1.63.3
+      sass: 1.63.4
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-beta.2_sass@1.63.3:
+  /vitepress/1.0.0-beta.2_sass@1.63.4:
     resolution: {integrity: sha512-DBXYjtYbm3W1IPPJ2TiCaK/XK+o/2XmL2+jslOGKm+txcbmG0kbeB+vadC5tCUZA9NdA+9Ywj3M4548c7t/SDg==}
     hasBin: true
     dependencies:
@@ -3096,7 +3096,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.2
-      vite: 4.3.9_sass@1.63.3
+      vite: 4.3.9_sass@1.63.4
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
