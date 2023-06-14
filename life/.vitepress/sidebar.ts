@@ -501,6 +501,15 @@ export const sidebar = {
         },
     ],
 
+    '/code/db/': [
+        { text: 'ODPS', link: '/code/db/odps' },
+        { text: 'DB2', link: '/code/db/db2' },
+        { text: 'SQL', link: '/code/db/sql' },
+        { text: '达梦', link: '/code/db/dameng' },
+        { text: 'mongoDB使用记录', link: '/code/db/mongoDB' },
+        { text: '数据库', link: '/code/db/database' },
+    ],
+
     '/code/other-code/': [
         { text: '非技术问题', link: '/code/other-code/non-tech' },
         { text: 'Python', link: '/code/other-code/python' },
@@ -533,15 +542,6 @@ export const sidebar = {
                 { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test' },
                 { text: 'lua学习记录', link: '/code/other-code/lua/2021-11-01-lua学习记录' },
             ],
-        }, {
-            text: 'db', collapsed: false, items: [
-                { text: 'ODPS', link: '/code/other-code/db/odps' },
-                { text: 'DB2', link: '/code/other-code/db/db2' },
-                { text: 'SQL', link: '/code/other-code/db/sql' },
-                { text: '达梦', link: '/code/other-code/db/dameng' },
-                { text: 'mongoDB使用记录', link: '/code/other-code/db/mongoDB' },
-                { text: '数据库', link: '/code/other-code/db/database' },
-            ]
         }, {
             text: 'future', collapsed: false, items: [
                 { text: 'Prepare', link: '/code/other-code/future/prepare' },

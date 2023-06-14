@@ -44,6 +44,7 @@ export const navbar = [
       { text: 'API', link: '/code/api/' },
       { text: 'C++', link: '/code/cpp/' },
       { text: 'DSA', link: '/code/dsa/' },
+      { text: '数据库', link: '/code/db/' },
       { text: '代码笔记', link: '/code/code-notes/' },
       { text: '八股文', link: '/code/interview/' },
       { text: '其他代码', link: '/code/other-code/' },
