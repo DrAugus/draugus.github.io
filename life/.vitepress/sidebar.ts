@@ -315,6 +315,47 @@ export const sidebar = {
     ],
 
     //
+    '/computer/os/': [
+        {
+            text: 'MacOS', collapsed: true, items: [
+                { text: 'mac primary', link: '/computer/os/macos/base' },
+                { text: 'solution', link: '/computer/os/macos/sol' },
+            ]
+        },
+        {
+            text: 'Linux', collapsed: true, items: [
+                { text: 'gdb', link: '/computer/os/linux/gdb' },
+                { text: 'linux系统分类', link: '/computer/os/linux/sys_category' },
+                { text: '查看Linux的基本信息', link: '/computer/os/linux/sys_base_info' },
+                { text: 'Linux 问题收集', link: '/computer/os/linux/qa' },
+                { text: 'install', link: '/computer/os/linux/install' },
+                { text: 'linux记录  ', link: '/computer/os/linux/README' },
+                { text: 'cmd', link: '/computer/os/linux/command' },
+                { text: '指南', link: '/computer/os/linux/guide' },
+            ]
+        },
+        {
+            text: 'Windows', collapsed: true, items: [
+                { text: 'chocolatey', link: '/computer/os/windows/chocolatey' },
+                { text: '虚拟机记录    ', link: '/computer/os/windows/VirtualBox' },
+                { text: 'cmd指南', link: '/computer/os/windows/cmd' },
+                { text: 'windows11更新纪要', link: '/computer/os/windows/windows11-update' },
+                { text: '壁纸', link: '/computer/os/windows/wallpaper' },
+            ]
+        },
+    ],
+    '/computer/software/': [
+        { text: 'web tools', link: '/computer/software/webtools' },
+        { text: '推荐软件安装', link: '/computer/software/1.install' },
+        { text: 'fish cmd', link: '/computer/software/fish' },
+        { text: 'Tabby', link: '/computer/software/tabby' },
+        { text: 'Git', link: '/computer/software/git' },
+        { text: 'Docker', link: '/computer/software/docker' },
+        { text: 'VS Code', link: '/computer/software/vscode' },
+        { text: 'XShell', link: '/computer/software/xshell' },
+    ],
+
+    //
 
     '/code/api/': [
         { text: 'API', link: '/code/api/' },
@@ -347,45 +388,6 @@ export const sidebar = {
                 { text: 'Mergify', link: '/code/code-notes/tools/mergify' },
                 { text: 'Vercel', link: '/code/code-notes/tools/vercel' },
                 { text: 'gitalk', link: '/code/code-notes/tools/gitalk' },
-            ]
-        },
-        {
-            text: '软件', collapsed: true, items: [
-                { text: 'web tools', link: '/code/code-notes/software/webtools' },
-                { text: '推荐软件安装', link: '/code/code-notes/software/1.install' },
-                { text: 'fish cmd', link: '/code/code-notes/software/fish' },
-                { text: 'Tabby', link: '/code/code-notes/software/tabby' },
-                { text: 'Git', link: '/code/code-notes/software/git' },
-                { text: 'Docker', link: '/code/code-notes/software/docker' },
-                { text: 'VS Code', link: '/code/code-notes/software/vscode' },
-                { text: 'XShell', link: '/code/code-notes/software/xshell' },
-            ]
-        },
-        {
-            text: 'MacOS', collapsed: true, items: [
-                { text: 'mac primary', link: '/code/code-notes/macos/base' },
-                { text: 'solution', link: '/code/code-notes/macos/sol' },
-            ]
-        },
-        {
-            text: 'Linux', collapsed: true, items: [
-                { text: 'gdb', link: '/code/code-notes/linux/gdb' },
-                { text: 'linux系统分类', link: '/code/code-notes/linux/sys_category' },
-                { text: '查看Linux的基本信息', link: '/code/code-notes/linux/sys_base_info' },
-                { text: 'Linux 问题收集', link: '/code/code-notes/linux/qa' },
-                { text: 'install', link: '/code/code-notes/linux/install' },
-                { text: 'linux记录  ', link: '/code/code-notes/linux/README' },
-                { text: 'cmd', link: '/code/code-notes/linux/command' },
-                { text: '指南', link: '/code/code-notes/linux/guide' },
-            ]
-        },
-        {
-            text: 'Windows', collapsed: true, items: [
-                { text: 'chocolatey', link: '/code/code-notes/windows/chocolatey' },
-                { text: '虚拟机记录    ', link: '/code/code-notes/windows/VirtualBox' },
-                { text: 'cmd指南', link: '/code/code-notes/windows/cmd' },
-                { text: 'windows11更新纪要', link: '/code/code-notes/windows/windows11-update' },
-                { text: '壁纸', link: '/code/code-notes/windows/wallpaper' },
             ]
         },
         {

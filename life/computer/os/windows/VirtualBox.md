@@ -1,11 +1,5 @@
 ---
-title: 虚拟机记录    
 date: 2022-04-06 09:09:09   
-category: 
-  - 编程  
-tag: 
-  - 虚拟机 
-  - linux
 ---
 
 # VirtualBox该何去何从

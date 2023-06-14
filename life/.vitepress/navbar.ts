@@ -38,6 +38,13 @@ export const navbar = [
     activeMatch: '^/arts',
   },
   {
+    text: '电脑',
+    items: [
+      { text: '操作系统', link: '/computer/os/' },
+      { text: '软件', link: '/computer/software/' },
+    ]
+  },
+  {
     text: '编程',
     items: [
       { text: '首页', link: '/code/' },
