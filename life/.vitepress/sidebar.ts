@@ -452,6 +452,9 @@ export const sidebar = {
         { text: '基础知识', link: '/code/interview/basin' },
         { text: '差不多得了', link: '/code/interview/' },
         { text: '数据库', link: '/code/interview/db' },
+        { text: '操作系统', link: '/code/interview/os' },
+        { text: '计算机网络', link: '/code/interview/network' },
+        { text: '非技术问题', link: '/code/interview/non-tech' },
     ],
     '/code/cpp/': [
         { text: '特性', link: '/code/cpp/' },
@@ -526,7 +529,6 @@ export const sidebar = {
     ],
 
     '/code/other-code/': [
-        { text: '非技术问题', link: '/code/other-code/non-tech' },
         { text: 'Python', link: '/code/other-code/python' },
         { text: '配环境', link: '/code/other-code/config-env' },
         { text: '疑难排查', link: '/code/other-code/problems' },
@@ -548,10 +550,6 @@ export const sidebar = {
                 { text: 'refer', link: '/code/other-code/distributed/kafka/refer' },
             ]
         }, {
-            text: 'network', collapsed: false, items: [
-                { text: 'QA', link: '/code/other-code/network/qa' },
-            ]
-        }, {
             text: 'lua', collapsed: false, items: [
                 { text: 'lua深入', link: '/code/other-code/lua/2022-07-22-lua-深入' },
                 { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test' },
@@ -562,10 +560,6 @@ export const sidebar = {
                 { text: 'Prepare', link: '/code/other-code/future/prepare' },
                 { text: 'Future and Goal', link: '/code/other-code/future/future' },
                 { text: '题库每日', link: '/code/other-code/future/practice' },
-            ]
-        }, {
-            text: 'os', collapsed: false, items: [
-                { text: 'QA', link: '/code/other-code/os/qa' },
             ]
         },
     ],

@@ -1,4 +1,4 @@
-# QA
+# 操作系统
 
 - 操作系统如何申请以及管理内存的？
 - 进程通信中的管道实现原理是什么？
@@ -37,5 +37,5 @@
 - 什么情况下会发生死锁，如何解决死锁？
 - 简述乐观锁以及悲观锁的区别以及使用场景
 
-[netstat]: /code/code-notes/linux/command.md#netstat
-[lsof]: /code/code-notes/linux/command.md#lsof
+[netstat]: /computer/os/linux/command.md#netstat
+[lsof]: /computer/os/linux/command.md#lsof
