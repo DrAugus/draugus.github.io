@@ -48,6 +48,7 @@ def get_due_res(times, date_arr):
 
 def test_get_due_res():
     dd = [2022, 10, 31]
+    print("test:", dd)
     res = get_due_res(1, dd)
     print("in 1 m:", res)
     res = get_due_res(3, dd)
@@ -57,7 +58,8 @@ def test_get_due_res():
     res = get_due_res(12, dd)
     print("in 12 m:", res)
 
-    dd = [2022, 6, 30]
+    dd = [2023, 3, 30]
+    print("test:", dd)
     res = get_due_res(1, dd)
     print("in 1 m:", res)
     res = get_due_res(3, dd)
@@ -68,6 +70,7 @@ def test_get_due_res():
     print("in 12 m:", res)
 
     dd = [2020, 1, 29]
+    print("test:", dd)
     res = get_due_res(1, dd)
     print("in 1 m:", res)
     res = get_due_res(3, dd)
@@ -77,8 +80,10 @@ def test_get_due_res():
     res = get_due_res(12, dd)
     print("in 12 m:", res)
 
-# test_get_due_res()
 
+# print("=========================")
+# test_get_due_res()
+# print("=========================")
 
 due_res_1m = []
 due_res_3m = []
@@ -86,10 +91,29 @@ due_res_6m = []
 due_res_12m = []
 
 for all_days in res_arr_for_cal:
-    due_res_1m.append(get_due_res(1, all_days))
-    due_res_3m.append(get_due_res(3, all_days))
-    due_res_6m.append(get_due_res(6, all_days))
-    due_res_12m.append(get_due_res(12, all_days))
+    # m1 = get_due_res(1, all_days)
+    # m3 = get_due_res(3, all_days)
+    # m6 = get_due_res(6, all_days)
+    # m12 = get_due_res(12, all_days)
+    y, m, d = all_days[0], all_days[1], all_days[2]
+
+    m1 = get_order_due_date.getExpirationDate(y, m, d)
+    m3 = get_order_due_date.getExpirationDate3(y, m, d)
+    m6 = get_order_due_date.getExpirationDate6(y, m, d)
+    m12 = get_order_due_date.getExpirationDate12(y, m, d)
+    due_res_1m.append(m1)
+    due_res_3m.append(m3)
+    due_res_6m.append(m6)
+    due_res_12m.append(m12)
+
+    test_hit = [2021, 4, 30]
+    test_hit = [2021, 9, 30]
+
+    if m1 == test_hit or \
+            m3 == test_hit or \
+            m6 == test_hit or \
+            m12 == test_hit:
+        print(all_days)
 
 
 # print("due_res_1m:", due_res_1m)
@@ -138,7 +162,7 @@ y = list(count.values())
 for key, value in count.items():
 
     # cal_count[value].append(key)
-    if value >= 8:
+    if value == 6:
         print(key, value)
 
 # print(cal_count)
