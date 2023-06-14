@@ -21,7 +21,9 @@ export const sidebar = {
                 { text: '价格波动', link: '/daily/apple/price' },
                 { text: '苹果究竟怎么了', link: '/daily/apple/reflect' },
                 { text: '技术规格', link: '/daily/apple/specs' },
-                { text: '设备价格', link: '/daily/apple/apple_price' },
+                { text: '设备价格', link: '/daily/apple/apple-price' },
+                { text: '天才吧', link: '/daily/apple/genius-bar' },
+                { text: 'iCloud', link: '/daily/apple/iCloud' },
             ]
         },
     ],
