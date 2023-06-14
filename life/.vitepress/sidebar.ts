@@ -509,6 +509,19 @@ export const sidebar = {
         { text: 'mongoDB使用记录', link: '/code/db/mongoDB' },
         { text: '数据库', link: '/code/db/database' },
     ],
+    '/code/front-end/': [
+        { text: '公共知识', link: '/code/front-end/public' },
+        { text: 'React Native', link: '/code/front-end/react-native' },
+        { text: 'css', link: '/code/front-end/css' },
+        { text: '前端', link: '/code/front-end/qa' },
+        { text: 'vite', link: '/code/front-end/vite' },
+        { text: 'Vue', link: '/code/front-end/vue' },
+        { text: 'VuePress', link: '/code/front-end/vuepress' },
+        { text: 'Vitepress', link: '/code/front-end/vitepress' },
+        { text: 'Javascript', link: '/code/front-end/javascript' },
+        { text: 'Sol', link: '/code/front-end/sol' },
+        { text: 'Nuxt', link: '/code/front-end/nuxt' },
+    ],
 
     '/code/other-code/': [
         { text: '非技术问题', link: '/code/other-code/non-tech' },
@@ -547,20 +560,6 @@ export const sidebar = {
                 { text: 'Prepare', link: '/code/other-code/future/prepare' },
                 { text: 'Future and Goal', link: '/code/other-code/future/future' },
                 { text: '题库每日', link: '/code/other-code/future/practice' },
-            ]
-        }, {
-            text: 'front-end', collapsed: false, items: [
-                { text: '公共知识', link: '/code/other-code/front-end/public' },
-                { text: 'React Native', link: '/code/other-code/front-end/react-native' },
-                { text: 'css', link: '/code/other-code/front-end/css' },
-                { text: '前端', link: '/code/other-code/front-end/qa' },
-                { text: 'vite', link: '/code/other-code/front-end/vite' },
-                { text: 'Vue', link: '/code/other-code/front-end/vue' },
-                { text: 'VuePress', link: '/code/other-code/front-end/vuepress' },
-                { text: 'Vitepress', link: '/code/other-code/front-end/vitepress' },
-                { text: 'Javascript', link: '/code/other-code/front-end/javascript' },
-                { text: 'Sol', link: '/code/other-code/front-end/sol' },
-                { text: 'Nuxt', link: '/code/other-code/front-end/nuxt' },
             ]
         }, {
             text: 'os', collapsed: false, items: [
