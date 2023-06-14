@@ -454,6 +454,7 @@ export const sidebar = {
         { text: '数据库', link: '/code/interview/db' },
         { text: '操作系统', link: '/code/interview/os' },
         { text: '计算机网络', link: '/code/interview/network' },
+        { text: '系统设计', link: '/code/interview/sys-design' },
         { text: '非技术问题', link: '/code/interview/non-tech' },
     ],
     '/code/cpp/': [
@@ -529,32 +530,36 @@ export const sidebar = {
     ],
 
     '/code/program/': [
-        { text: 'Python', link: '/code/program/python' },
-        { text: '配环境', link: '/code/program/config-env' },
-        { text: '疑难排查', link: '/code/program/problems' },
-        { text: '正则表达式', link: '/code/program/regex' },
-        { text: 'Rust', link: '/code/program/rust' },
-        { text: 'Lua', link: '/code/program/lua' },
-        { text: '瞎玩', link: '/code/program/stroll' },
-        { text: '一些有的没的', link: '/code/program/others' },
-        { text: '编码习惯', link: '/code/program/habit' },
-        { text: 'Shell', link: '/code/program/shell' },
         {
-            text: 'sys-design', collapsed: false, items: [
-                { text: '设计模式', link: '/code/program/sys-design/design-pattern' },
-                { text: 'QA', link: '/code/program/sys-design/qa' },
-            ]
-        }, {
-            text: 'distributed', collapsed: false, items: [
-                { text: 'Raft论文', link: '/code/program/distributed/raft' },
-                { text: 'PAXOS', link: '/code/program/distributed/paxos' },
-                { text: 'refer', link: '/code/program/distributed/kafka/refer' },
-            ]
-        }, {
-            text: 'future', collapsed: false, items: [
+            text: '未来', collapsed: false, items: [
                 { text: 'Prepare', link: '/code/program/future/prepare' },
                 { text: 'Future and Goal', link: '/code/program/future/future' },
                 { text: '题库每日', link: '/code/program/future/practice' },
+            ]
+        },
+        {
+            text: '编程语言', collapsed: false, items: [
+                { text: '编码习惯', link: '/code/program/lang/habit' },
+                { text: 'Python', link: '/code/program/lang/python' },
+                { text: 'Rust', link: '/code/program/lang/rust' },
+                { text: 'Lua', link: '/code/program/lang/lua' },
+                { text: 'Shell', link: '/code/program/lang/shell' },
+                { text: '正则表达式', link: '/code/program/lang/regex' },
+            ]
+        },
+        { text: '配环境', link: '/code/program/config-env' },
+        { text: '疑难排查', link: '/code/program/problems' },
+        { text: '瞎玩', link: '/code/program/stroll' },
+        { text: '一些有的没的', link: '/code/program/others' },
+        {
+            text: '系统设计', collapsed: false, items: [
+                { text: '设计模式', link: '/code/program/sys-design/design-pattern' },
+            ]
+        }, {
+            text: '分布式', collapsed: false, items: [
+                { text: 'Raft论文', link: '/code/program/distributed/raft' },
+                { text: 'PAXOS', link: '/code/program/distributed/paxos' },
+                { text: 'refer', link: '/code/program/distributed/kafka/refer' },
             ]
         },
     ],

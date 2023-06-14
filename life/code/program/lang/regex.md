@@ -1,7 +1,7 @@
 ---
 icon: file-icons:regex
-title: 正则表达式
 ---
+# 正则表达式
 
 匹配中文 `[\u4e00-\u9fa5]`  
 匹配英文 `[a-zA-Z]`  
