@@ -55,7 +55,7 @@ export const navbar = [
       { text: '前端', link: '/code/front-end/' },
       { text: '代码笔记', link: '/code/code-notes/' },
       { text: '八股文', link: '/code/interview/' },
-      { text: '其他代码', link: '/code/other-code/' },
+      { text: '编程语言', link: '/code/program/' },
       {
         text: '速查清单',
         items: [

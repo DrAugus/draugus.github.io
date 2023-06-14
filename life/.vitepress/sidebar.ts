@@ -528,38 +528,33 @@ export const sidebar = {
         { text: 'Nuxt', link: '/code/front-end/nuxt' },
     ],
 
-    '/code/other-code/': [
-        { text: 'Python', link: '/code/other-code/python' },
-        { text: '配环境', link: '/code/other-code/config-env' },
-        { text: '疑难排查', link: '/code/other-code/problems' },
-        { text: '正则表达式', link: '/code/other-code/regex' },
-        { text: 'Rust', link: '/code/other-code/rust' },
-        { text: '瞎玩', link: '/code/other-code/stroll' },
-        { text: '一些有的没的', link: '/code/other-code/others' },
-        { text: '编码习惯', link: '/code/other-code/habit' },
-        { text: 'Shell', link: '/code/other-code/shell' },
+    '/code/program/': [
+        { text: 'Python', link: '/code/program/python' },
+        { text: '配环境', link: '/code/program/config-env' },
+        { text: '疑难排查', link: '/code/program/problems' },
+        { text: '正则表达式', link: '/code/program/regex' },
+        { text: 'Rust', link: '/code/program/rust' },
+        { text: 'Lua', link: '/code/program/lua' },
+        { text: '瞎玩', link: '/code/program/stroll' },
+        { text: '一些有的没的', link: '/code/program/others' },
+        { text: '编码习惯', link: '/code/program/habit' },
+        { text: 'Shell', link: '/code/program/shell' },
         {
             text: 'sys-design', collapsed: false, items: [
-                { text: '设计模式', link: '/code/other-code/sys-design/design-pattern' },
-                { text: 'QA', link: '/code/other-code/sys-design/qa' },
+                { text: '设计模式', link: '/code/program/sys-design/design-pattern' },
+                { text: 'QA', link: '/code/program/sys-design/qa' },
             ]
         }, {
             text: 'distributed', collapsed: false, items: [
-                { text: 'Raft论文', link: '/code/other-code/distributed/raft' },
-                { text: 'PAXOS', link: '/code/other-code/distributed/paxos' },
-                { text: 'refer', link: '/code/other-code/distributed/kafka/refer' },
+                { text: 'Raft论文', link: '/code/program/distributed/raft' },
+                { text: 'PAXOS', link: '/code/program/distributed/paxos' },
+                { text: 'refer', link: '/code/program/distributed/kafka/refer' },
             ]
         }, {
-            text: 'lua', collapsed: false, items: [
-                { text: 'lua深入', link: '/code/other-code/lua/2022-07-22-lua-深入' },
-                { text: 'lua自动化测试指南', link: '/code/other-code/lua/2021-11-24-lua-auto-test' },
-                { text: 'lua学习记录', link: '/code/other-code/lua/2021-11-01-lua学习记录' },
-            ],
-        }, {
             text: 'future', collapsed: false, items: [
-                { text: 'Prepare', link: '/code/other-code/future/prepare' },
-                { text: 'Future and Goal', link: '/code/other-code/future/future' },
-                { text: '题库每日', link: '/code/other-code/future/practice' },
+                { text: 'Prepare', link: '/code/program/future/prepare' },
+                { text: 'Future and Goal', link: '/code/program/future/future' },
+                { text: '题库每日', link: '/code/program/future/practice' },
             ]
         },
     ],
