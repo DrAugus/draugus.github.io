@@ -35,56 +35,6 @@ while start_date < end_date:
 # print("res_arr_for_cal:", res_arr_for_cal)
 
 
-# times means, in 1/3/6/12 month(s)
-def get_due_res(times, date_arr):
-    res = []
-    start_arr = date_arr
-    for i in range(times):
-        y, m, d = start_arr[0], start_arr[1], start_arr[2]
-        res = get_order_due_date.getExpirationDate(y, m, d)
-        start_arr = res
-    return res
-
-
-def test_get_due_res():
-    dd = [2022, 10, 31]
-    print("test:", dd)
-    res = get_due_res(1, dd)
-    print("in 1 m:", res)
-    res = get_due_res(3, dd)
-    print("in 3 m:", res)
-    res = get_due_res(6, dd)
-    print("in 6 m:", res)
-    res = get_due_res(12, dd)
-    print("in 12 m:", res)
-
-    dd = [2023, 3, 30]
-    print("test:", dd)
-    res = get_due_res(1, dd)
-    print("in 1 m:", res)
-    res = get_due_res(3, dd)
-    print("in 3 m:", res)
-    res = get_due_res(6, dd)
-    print("in 6 m:", res)
-    res = get_due_res(12, dd)
-    print("in 12 m:", res)
-
-    dd = [2020, 1, 29]
-    print("test:", dd)
-    res = get_due_res(1, dd)
-    print("in 1 m:", res)
-    res = get_due_res(3, dd)
-    print("in 3 m:", res)
-    res = get_due_res(6, dd)
-    print("in 6 m:", res)
-    res = get_due_res(12, dd)
-    print("in 12 m:", res)
-
-
-# print("=========================")
-# test_get_due_res()
-# print("=========================")
-
 due_res_1m = []
 due_res_3m = []
 due_res_6m = []
@@ -109,11 +59,11 @@ for all_days in res_arr_for_cal:
     test_hit = [2021, 4, 30]
     test_hit = [2021, 9, 30]
 
-    if m1 == test_hit or \
-            m3 == test_hit or \
-            m6 == test_hit or \
-            m12 == test_hit:
-        print(all_days)
+    # if m1 == test_hit or \
+    #         m3 == test_hit or \
+    #         m6 == test_hit or \
+    #         m12 == test_hit:
+    #     print(all_days)
 
 
 # print("due_res_1m:", due_res_1m)
