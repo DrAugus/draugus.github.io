@@ -3,127 +3,38 @@
 import unittest
 
 
+def get_next_year_and_month(year, month, expire):
+    if expire == 1:
+        next_year = year
+        next_month = month + 1
+    if expire == 3:
+        next_year = year
+        next_month = month + 3
+        if month <= 12 and month >= 10:
+            next_year = year + 1
+            next_month = month - 9
+    if expire == 6:
+        next_year = year
+        next_month = month + 6
+        if month <= 12 and month >= 7:
+            next_year = year + 1
+            next_month = month - 6
+    if expire == 12:
+        next_year = year + 1
+        next_month = month
+    return next_year, next_month
+
+
 # 给定订购的年月日 (year, month, day)
 # 已知订购时长是一个月
 # 返回订单的到期日
 # year, month, day 均为整数，输入已保证是正确的日期。
-def getExpirationDate(year, month, day):
+def getExpirationDate(year, month, day, expire=1):
     leap_year = (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
     big_m = [1, 3, 5, 7, 8, 10, 12]
     small_m = [4, 6, 9, 11]
-    next_year = year
-    next_month = month + 1
-    next_day = day
 
-    next_month_day = 30
-
-    if month == 12:
-        next_year = year + 1
-        next_month = 1
-
-    if day > 28:
-        if next_month == 2:
-            if leap_year:
-                next_day = 29
-            # else:
-            #     next_day = 28
-        elif next_month in small_m:
-            next_month_day = 30
-        else:
-            next_month_day = 31
-
-        if day > next_month_day:
-            next_day = next_month_day
-
-    year = next_year
-    month = next_month
-    day = next_day
-
-    return [year, month, day]
-
-
-def getExpirationDate3(year, month, day):
-    leap_year = (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
-    big_m = [1, 3, 5, 7, 8, 10, 12]
-    small_m = [4, 6, 9, 11]
-    next_year = year
-    next_month = month + 3
-    next_day = day
-
-    next_month_day = 30
-
-    if month == 12:
-        next_year = year + 1
-        next_month = 3
-    if month == 11:
-        next_year = year + 1
-        next_month = 2
-    if month == 10:
-        next_year = year + 1
-        next_month = 1
-
-    if day > 28:
-        if next_month == 2:
-            if leap_year:
-                next_day = 29
-            # else:
-            #     next_day = 28
-        elif next_month in small_m:
-            next_month_day = 30
-        else:
-            next_month_day = 31
-
-        if day > next_month_day:
-            next_day = next_month_day
-
-    year = next_year
-    month = next_month
-    day = next_day
-
-    return [year, month, day]
-
-
-def getExpirationDate6(year, month, day):
-    leap_year = (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
-    big_m = [1, 3, 5, 7, 8, 10, 12]
-    small_m = [4, 6, 9, 11]
-    next_year = year
-    next_month = month + 6
-    next_day = day
-
-    next_month_day = 30
-
-    if month <= 12 and month >= 7:
-        next_year = year + 1
-        next_month = month - 6
-
-    if day > 28:
-        if next_month == 2:
-            if leap_year:
-                next_day = 29
-            # else:
-            #     next_day = 28
-        elif next_month in small_m:
-            next_month_day = 30
-        else:
-            next_month_day = 31
-
-        if day > next_month_day:
-            next_day = next_month_day
-
-    year = next_year
-    month = next_month
-    day = next_day
-
-    return [year, month, day]
-
-
-def getExpirationDate12(year, month, day):
-    leap_year = (year % 4 == 0 and year % 100 != 0) or year % 400 == 0
-    big_m = [1, 3, 5, 7, 8, 10, 12]
-    small_m = [4, 6, 9, 11]
-    next_year = year + 1
-    next_month = month
+    next_year, next_month = get_next_year_and_month(year, month, expire)
     next_day = day
 
     next_month_day = 30

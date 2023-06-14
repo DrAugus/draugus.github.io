@@ -98,9 +98,9 @@ for all_days in res_arr_for_cal:
     y, m, d = all_days[0], all_days[1], all_days[2]
 
     m1 = get_order_due_date.getExpirationDate(y, m, d)
-    m3 = get_order_due_date.getExpirationDate3(y, m, d)
-    m6 = get_order_due_date.getExpirationDate6(y, m, d)
-    m12 = get_order_due_date.getExpirationDate12(y, m, d)
+    m3 = get_order_due_date.getExpirationDate(y, m, d, 3)
+    m6 = get_order_due_date.getExpirationDate(y, m, d, 6)
+    m12 = get_order_due_date.getExpirationDate(y, m, d, 12)
     due_res_1m.append(m1)
     due_res_3m.append(m3)
     due_res_6m.append(m6)
@@ -162,7 +162,7 @@ y = list(count.values())
 for key, value in count.items():
 
     # cal_count[value].append(key)
-    if value == 6:
+    if value >= 7:
         print(key, value)
 
 # print(cal_count)
