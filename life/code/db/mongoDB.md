@@ -1,12 +1,8 @@
 ---
 date: 2021-08-19 10:23:13
-category: 
-  - 编程
-tag: 
-  - mongoDB
 ---
 
-# mongoDB使用记录
+# mongoDB
 
 ## 切换数据库
 

@@ -513,8 +513,7 @@ const sidebarCodeDB = () => [
     { text: 'DB2', link: '/code/db/db2' },
     { text: 'SQL', link: '/code/db/sql' },
     { text: '达梦', link: '/code/db/dameng' },
-    { text: 'mongoDB使用记录', link: '/code/db/mongoDB' },
-    { text: '数据库', link: '/code/db/database' },
+    { text: 'mongoDB', link: '/code/db/mongoDB' },
 ]
 const sidebarCodeFrontEnd = () => [
     { text: '公共知识', link: '/code/front-end/public' },
