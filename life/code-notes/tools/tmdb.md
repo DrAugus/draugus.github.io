@@ -1,20 +1,9 @@
 ---  
-title: TMDB
 date: 2022-10-20 11:42:00
 icon: simple-icons:themoviedatabase
-category:
-
-- 编程
-
-tag:
-
-- API
-- TMDB
-- movie
-
 ---
 
-# The Movie Database
+# The Movie Database(TMDB)
 
 first, get API.
 

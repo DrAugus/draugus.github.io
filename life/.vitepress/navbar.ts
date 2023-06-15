@@ -21,11 +21,15 @@ export const navbar = [
     text: '文科',
     items: [
       { text: '首页', link: '/arts/' },
-      { text: '语言', link: '/arts/language/' },
-      { text: '经济', link: '/arts/economics/' },
-      { text: '社会', link: '/arts/society/' },
-      { text: '历史', link: '/arts/history/' },
-      { text: '乐理', link: '/arts/music/' },
+      {
+        text: '看看',
+        items: [
+          { text: '语言', link: '/arts/language/' },
+          { text: '经济', link: '/arts/economics/' },
+          { text: '社会', link: '/arts/society/' },
+          { text: '历史', link: '/arts/history/' },
+          { text: '乐理', link: '/arts/music/' },]
+      },
       {
         text: '语文',
         items: [
@@ -53,13 +57,20 @@ export const navbar = [
       { text: 'DSA', link: '/code/dsa/' },
       { text: '数据库', link: '/code/db/' },
       { text: '前端', link: '/code/front-end/' },
-      { text: '代码笔记', link: '/code/code-notes/' },
+      {
+        text: '代码笔记',
+        items: [
+          { text: '直接进入', link: '/code-notes/' },
+          { text: '导航指示', link: '/code-notes/intro' },
+        ],
+        activeMatch: '^/code-notes',
+      },
       { text: '八股文', link: '/code/interview/' },
       { text: '编程语言', link: '/code/program/' },
       {
         text: '速查清单',
         items: [
-          { text: 'Linux 命令', link: '/code/code-notes/linux/command' },
+          { text: 'Linux 命令', link: '/computer/os/linux/command' },
         ],
       },
       {

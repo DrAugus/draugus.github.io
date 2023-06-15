@@ -363,41 +363,58 @@ export const sidebar = {
         { text: 'mihoyo', link: '/code/api/mihoyo' },
     ],
 
-    '/code/code-notes/': [
-        { text: '指南', link: '/code/code-notes/' },
-        { text: 'Compile', link: '/code/code-notes/compile' },
-        { text: 'gcc', link: '/code/code-notes/gcc' },
-        { text: 'Markdown', link: '/code/code-notes/markdown' },
-        { text: 'vim', link: '/code/code-notes/vim' },
-        { text: 'Makefile', link: '/code/code-notes/Makefile' },
-        { text: 'GitHub', link: '/code/code-notes/github' },
-        { text: 'Docus', link: '/code/code-notes/docus' },
-        { text: 'xcode', link: '/code/code-notes/xcode' },
-        { text: 'svn', link: '/code/code-notes/svn' },
-        { text: 'CMakeLists', link: '/code/code-notes/CMakeLists' },
-        { text: 'ffmpeg', link: '/code/code-notes/ffmpeg' },
-        { text: 'RBAC', link: '/code/code-notes/rbac' },
-        { text: 'Excel', link: '/code/code-notes/excel' },
-        { text: 'JetBrains', link: '/code/code-notes/jetbrains' },
-        { text: 'Gitlab', link: '/code/code-notes/gitlab' },
+
+    '/code-notes/': [
         {
-            text: '工具', collapsed: true, items: [
-                { text: 'Jenkins', link: '/code/code-notes/tools/Jenkins' },
-                { text: 'Algolia', link: '/code/code-notes/tools/algolia' },
-                { text: 'TMDB', link: '/code/code-notes/tools/tmdb' },
-                { text: 'Mergify', link: '/code/code-notes/tools/mergify' },
-                { text: 'Vercel', link: '/code/code-notes/tools/vercel' },
-                { text: 'gitalk', link: '/code/code-notes/tools/gitalk' },
-            ]
+            text: '编辑器/开发环境', collapsed: false, items: [
+                { text: 'xcode', link: '/code-notes/dev-env/xcode' },
+                { text: 'JetBrains', link: '/code-notes/dev-env/jetbrains' },
+            ],
+        }, {
+            text: '编译', collapsed: false, items: [
+                { text: 'Compile', link: '/code-notes/compile/' },
+                { text: 'gcc', link: '/code-notes/compile/gcc' },
+                { text: 'Makefile', link: '/code-notes/compile/Makefile' },
+                { text: 'CMakeLists', link: '/code-notes/compile/CMakeLists' },
+            ],
+        }, {
+            text: '构建/持续集成', collapsed: false, items: [
+                { text: 'Jenkins', link: '/code-notes/build/Jenkins' },
+                { text: 'Mergify', link: '/code-notes/build/mergify' },
+                { text: 'Vercel', link: '/code-notes/build/vercel' },
+            ],
+        }, {
+            text: '版本控制', collapsed: false, items: [
+                { text: 'GitHub', link: '/code-notes/version-ctrl/github' },
+                { text: 'svn', link: '/code-notes/version-ctrl/svn' },
+                { text: 'Gitlab', link: '/code-notes/version-ctrl/gitlab' },
+            ],
+        }, {
+            text: '文本编辑', collapsed: false, items: [
+                { text: 'Markdown', link: '/code-notes/text-edit/markdown' },
+                { text: 'vim', link: '/code-notes/text-edit/vim' },
+            ],
+        }, {
+            text: 'OpenAI', collapsed: false, items: [
+                { text: 'OpenAI', link: '/code-notes/openai/' },
+                { text: 'ChatGPT', link: '/code-notes/openai/chatgpt' },
+            ],
+        }, {
+            text: '杂项', collapsed: false, items: [
+
+                { text: '指南', link: '/code-notes/' },
+                { text: 'RBAC', link: '/code-notes/rbac' },
+                { text: 'Excel', link: '/code-notes/excel' },]
         },
         {
-            text: 'OpenAI', collapsed: true, items: [
-                { text: 'ChatGPT', link: '/code/code-notes/openai/chatgpt' },
-                { text: 'OpenAI', link: '/code/code-notes/openai/' },
-            ]
+            text: '一些工具', collapsed: false, items: [
+                { text: 'Algolia', link: '/code-notes/tools/algolia' },
+                { text: 'The Movie Database(TMDB)', link: '/code-notes/tools/tmdb' },
+                { text: 'gitalk 评论接入教程', link: '/code-notes/tools/gitalk' },
+                { text: 'ffmpeg', link: '/code-notes/tools/ffmpeg' },
+            ],
         },
     ],
-
 
     '/code/dsa/': [
         { text: 'QA', link: '/code/dsa/qa' },

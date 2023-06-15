@@ -15,7 +15,7 @@ exclude_path = [
     # 'china','abroad'
 ]
 root_dir = os.getcwd()
-dir_name = "trip"
+dir_name = "code-notes"
 sub_dir = f"life/{dir_name}/"
 link_pre = f"/{dir_name}"
 

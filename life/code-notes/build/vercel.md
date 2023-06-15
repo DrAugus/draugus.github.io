@@ -1,14 +1,9 @@
----
-icon: logos:vercel-icon
----
 
 # Vercel
 
 ## QA
 
-if open [analytics][analytics], then catch many errors
-
-::details
+:::details if open [analytics][analytics], then catch many errors
 such as,
 
 ```log
@@ -29,7 +24,7 @@ but when you change install command: pnpm install --no-frozen-lockfile, then cat
 
 see the [issue](https://github.com/nuxt/framework/issues/9314#issuecomment-1327136918)
 
-::
+:::
 
 truly answer is to **close the [analytics][analytics]**
 

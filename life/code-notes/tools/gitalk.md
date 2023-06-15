@@ -1,16 +1,8 @@
 ---
-title: gitalk
-icon: icon-park:github-one 
-date: 2021-12-30 15:39:11 
-category: 
-  - 编程    
-tag: 
-  - gitalk 
-  - 评论 
-  - 转载    
+date: 2021-12-30 15:39:11   
 ---
 
-# gitalk评论接入教程
+# gitalk 评论接入教程
 
 > [转载并修改自sf](https://segmentfault.com/a/1190000018072952)
 

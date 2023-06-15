@@ -1,7 +1,8 @@
 ---
-title: Algolia
 icon: logos:algolia
 ---
+
+# Algolia
 
 ## apply
 
