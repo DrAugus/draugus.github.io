@@ -154,12 +154,9 @@ docker ps --filter status=running
 
 ### 参数传递
 
-::list
-
 - ARG 声明传入的参数
 - FROM 分隔了不同的构建阶段
 - 不同构建阶段必须先声明 ARG 后才能使用
-::
 
 ```docker [e.g.]
 ARG COMMIT_ID

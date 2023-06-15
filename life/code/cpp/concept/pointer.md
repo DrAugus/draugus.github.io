@@ -1,13 +1,12 @@
 # 指针
 
-::alert
-Note that the `*` sign can be confusing here, as it does two different things in our code:
-::list
+:::tip Note
+that the `*` sign can be confusing here, as it does two different things in our code:
 
 - When used in declaration (`string* ptr`), it creates a pointer variable.
 - When not used in declaration, it act as a dereference operator.
-::
-::
+
+:::
 
 ```cpp
 string food = "Pizza";

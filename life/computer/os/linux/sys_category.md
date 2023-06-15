@@ -22,7 +22,6 @@
 官方镜像列表，[全球镜像站](https://www.debian.org/mirror/list.zh-cn.html)
 
 [release](https://www.debian.org/releases/) name
-::list
 
 * 下一代 Debian 正式发行版的代号为 bookworm — 测试（testing）版 — 发布日期尚未确定
 * Debian 11 (bullseye) — 当前的稳定（stable）版
@@ -38,7 +37,6 @@
 * Debian GNU/Linux 2.2（potato） — 被淘汰的稳定版
 * Debian GNU/Linux 2.1（slink） — 被淘汰的稳定版
 * Debian GNU/Linux 2.0（hamm） — 被淘汰的稳定版
-::
 
 ## sol
 

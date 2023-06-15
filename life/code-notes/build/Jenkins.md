@@ -125,11 +125,9 @@ pipeline {
 ---
 
 refer:
-::list
 
 - [Using Docker with Pipeline](https://www.jenkins.io/doc/book/pipeline/docker/)
 - [Using a Jenkinsfile](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/)
-::
 
 ```bash
 curl -d '{"msgtype": "text","text": {"content":"'"$JOB_NAME"': 镜像构建成功'"${BASIN_IMAGE}, ${DEPS_IMAGE}"'，已推送至镜像仓库"}, "at": { "atMobiles": ["'"$OWNER_PHONE"'"] }}' \ 
