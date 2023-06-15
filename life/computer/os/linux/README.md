@@ -1,20 +1,12 @@
 ---
-article: true
-title: linux记录  
-index: false
-isOriginal: true
 date: 2021-12-07 09:32:11  
-category:
-  - 编程  
-tag:
-  - linux
 ---
 
 # Linux 日常
 
-[安装pg](../../other-code/stroll.md#pg-坑)
+[安装pg](/code/program/stroll.md#pg-坑)
 
-[安装nodejs](../../other-code/stroll.md#安装-nodejs-流程)
+[安装nodejs](/code/program/stroll.md#安装-nodejs-流程)
 
 - [linux系统分类](./sys_category)
 - [查看Linux的基本信息](./sys_base_info)

@@ -48,7 +48,3 @@
 这里更推荐[清华源](https://mirrors.tuna.tsinghua.edu.cn/help/debian/)
 
 [清华源不再支持 Debian8,9](https://github.com/tuna/issues/issues/1715)
-
-### 编译问题
-
-[参考](../compile)

@@ -16,8 +16,7 @@
 
 > 截图来自 2022-11-01 14:00 各大官网
 
-::: warning 快速路限行
-[杭州限行](http://hz.bendibao.com/traffic/2014129/48928.shtm)
+::: warning [杭州快速路限行](http://hz.bendibao.com/traffic/2014129/48928.shtm)
 :::
 
 ### Benz

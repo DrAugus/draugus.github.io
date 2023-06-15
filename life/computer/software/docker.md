@@ -309,7 +309,7 @@ todo
 
 ### docker 源超时问题
 
-加上[国内源](../linux/sys_category#官方源超时)，在 dockerfile 里导入
+加上[国内源](../os/linux/sys_category#官方源超时)，在 dockerfile 里导入
 
 ```docker
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak
@@ -332,9 +332,6 @@ docker system prune
 
 ## refer
 
-::list
-
 - [Docker 从入门到实践](https://yeasy.gitbook.io/docker_practice/)
 - [Dockerfile 多阶段构建](https://yeasy.gitbook.io/docker_practice/image/multistage-builds)
 - [Multi-stage builds](https://docs.docker.com/build/building/multi-stage/)
-::

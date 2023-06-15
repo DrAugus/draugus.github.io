@@ -309,13 +309,13 @@ const sidebarArtsXiwen = () => [
 ]
 const sidebarComputerOS = () => [
     {
-        text: 'MacOS', collapsed: true, items: [
+        text: 'MacOS', collapsed: false, items: [
             { text: 'mac primary', link: '/computer/os/macos/base' },
             { text: 'solution', link: '/computer/os/macos/sol' },
         ]
     },
     {
-        text: 'Linux', collapsed: true, items: [
+        text: 'Linux', collapsed: false, items: [
             { text: 'gdb', link: '/computer/os/linux/gdb' },
             { text: 'linux系统分类', link: '/computer/os/linux/sys_category' },
             { text: '查看Linux的基本信息', link: '/computer/os/linux/sys_base_info' },
@@ -327,7 +327,7 @@ const sidebarComputerOS = () => [
         ]
     },
     {
-        text: 'Windows', collapsed: true, items: [
+        text: 'Windows', collapsed: false, items: [
             { text: 'chocolatey', link: '/computer/os/windows/chocolatey' },
             { text: '虚拟机记录    ', link: '/computer/os/windows/VirtualBox' },
             { text: 'cmd指南', link: '/computer/os/windows/cmd' },
@@ -660,14 +660,11 @@ const sidebarDisease = () => [
 export const sidebar = {
     '/eat/': sidebarEat(),
     '/daily/': sidebarDaily(),
+    // 
     '/trip/': sidebarTrip(),
-
     '/trip/travelogue/': sidebarTripTravelogue(),
-
-
     '/trip/china/': sidebarTripChina(),
     '/trip/abroad/': sidebarTripAboard(),
-
     // arts
     '/arts/article/': sidebarArtsArticle(),
     '/arts/economics/': sidebarArtsEconomics(),

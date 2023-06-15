@@ -24,9 +24,9 @@ clean:
         rm -f myapp myapp.o
 ```
 
-要生成最终的 Makefile，需要使用 configure 工具。configure 工具是一个 [shell] 脚本，它的作用是根据系统环境和项目的特定要求来生成 Makefile。
+要生成最终的 Makefile，需要使用 configure 工具。configure 工具是一个 [shell][shell] 脚本，它的作用是根据系统环境和项目的特定要求来生成 Makefile。
 
-要编写一个 configure 脚本，需要了解 [shell] 脚本语言，并且需要了解项目的特定环境和需求。一个简单的 configure 脚本示例如下所示：
+要编写一个 configure 脚本，需要了解 [shell][shell] 脚本语言，并且需要了解项目的特定环境和需求。一个简单的 configure 脚本示例如下所示：
 
 ```shell [configure]
 #!/bin/bash
@@ -54,4 +54,4 @@ echo "clean:" >> Makefile
 echo -e "\trm -f myapp myapp.o" >> Makefile
 ```
 
-[shell]: ../other-code/shell
+[shell]: /code/program/lang/shell
