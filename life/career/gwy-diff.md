@@ -1,5 +1,9 @@
 # 公务员区别
 
+> 图片来源[知乎](https://zhuanlan.zhihu.com/p/52594850)
+
+![1](/img/career/gwy-diff.jpg)
+
 > [refer](http://www.zjgwy.org/html/xwsz/zyxw/202012/21_59380.html)
 
 ## 定义

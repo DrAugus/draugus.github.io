@@ -1,30 +1,22 @@
-# 达梦
+# 达梦8
 
-|系统表||
-|:----|:----|
-|SYSOBJECTS|可查询所有对象|
-|SYSCOLUMNS|可查询表的所有列的信息|
-|dba_objects||
-|dba_tables|可查询表信息（包括系统表）|
-|dba_users|可查询系统所有用户|
-|dba_data_files|可查询数据库文件信息|
-|dba_segments|可查询模式|
-|all_tables|可查询所有用户的表|
-|user_tables|可查询当前用户所拥有的所有表|
-|user_tablespaces|可查询表空间|
+## 错误排查
 
-|系统视图||
-|:----|:----|
-|v$database|可查询数据库信息|
-|v$tablespace|可查询表空间信息|
-|v$datafile|可查询数据文件信息|
-|v$dm_arch_ini|可查询归档信息|
-|v$dm_ini|可查询参数|
-|v$instance|可查询数据库实例信息|
-|v$rlogfile|可查询日志文件信息|
-|v$systeminfo|可查询操作系统CPU和内存的信息|
-|v$version|可查询数据库版本|
-|v$wait_class|可查询等待（wait）情况|
+### -6811 结果集总数超过限制
+
+从[错误码文档](https://eco.dameng.com/document/dm/zh-cn/pm/programmer-appendix.html)来看，值域在 (-6001,-8000) 为**运行时错误**，但并没有具体引起错误的原因。检索 QA 可有如下解决方案。
+
+修改下列两个参数的阈值
+
+- `RESULT_SET_LIMIT` 一次请求可以生成的结果集最大个数
+- `SESSION_RESULT_SET_LIMIT` 会话上结果集个数的上限
+
+```sql
+select para_name,para_value from v$dm_ini where para_name in ('RESULT_SET_LIMIT','SESSION_RESULT_SET_LIMIT');
+
+SP_SET_PARA_VALUE(1,'SESSION_RESULT_SET_LIMIT',20000);
+SP_SET_PARA_VALUE(1,'RESULT_SET_LIMIT',20000);
+```
 
 ## 文档
 
@@ -32,7 +24,7 @@
 - [DPI 编程指南](https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html)
 - [DMSQL 程序数据类型与操作符](https://eco.dameng.com/document/dm/zh-cn/pm/dm8_sql-data-types-operators)
 - [SQL 执行错误码](https://eco.dameng.com/document/dm/zh-cn/faq/faq-errorcode.html)
-- [程序开发错误码](https://eco.dameng.com/document/dm/zh-cn/pm/programmer-appendix.html)
+- [DM 服务器错误码/ DPI 程序开发错误码](https://eco.dameng.com/document/dm/zh-cn/pm/programmer-appendix.html)
 
 ## 创建
 
@@ -282,6 +274,38 @@ if (row)
 ```
 
 :::
+
+## 其他
+
+### 系统表
+
+|系统表||
+|:----|:----|
+|SYSOBJECTS|可查询所有对象|
+|SYSCOLUMNS|可查询表的所有列的信息|
+|dba_objects||
+|dba_tables|可查询表信息（包括系统表）|
+|dba_users|可查询系统所有用户|
+|dba_data_files|可查询数据库文件信息|
+|dba_segments|可查询模式|
+|all_tables|可查询所有用户的表|
+|user_tables|可查询当前用户所拥有的所有表|
+|user_tablespaces|可查询表空间|
+
+### 系统视图
+
+|系统视图||
+|:----|:----|
+|v$database|可查询数据库信息|
+|v$tablespace|可查询表空间信息|
+|v$datafile|可查询数据文件信息|
+|v$dm_arch_ini|可查询归档信息|
+|v$dm_ini|可查询参数|
+|v$instance|可查询数据库实例信息|
+|v$rlogfile|可查询日志文件信息|
+|v$systeminfo|可查询操作系统CPU和内存的信息|
+|v$version|可查询数据库版本|
+|v$wait_class|可查询等待（wait）情况|
 
 [mysql_affected_rows]: https://dev.mysql.com/doc/c-api/5.7/en/mysql-affected-rows.html
 [dameng_dpi]: https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html

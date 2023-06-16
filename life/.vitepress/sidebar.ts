@@ -512,7 +512,7 @@ const sidebarCodeDB = () => [
     { text: 'ODPS', link: '/code/db/odps' },
     { text: 'DB2', link: '/code/db/db2' },
     { text: 'SQL', link: '/code/db/sql' },
-    { text: '达梦', link: '/code/db/dameng' },
+    { text: '达梦8', link: '/code/db/dameng8' },
     { text: 'mongoDB', link: '/code/db/mongoDB' },
 ]
 const sidebarCodeFrontEnd = () => [
