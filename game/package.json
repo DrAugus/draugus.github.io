@@ -19,7 +19,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.5",
     "@types/leaflet": "1.9.3",
-    "@vue-leaflet/vue-leaflet": "0.9.0",
+    "@vue-leaflet/vue-leaflet": "0.10.1",
     "dayjs": "1.11.8",
     "eslint": "^8.42.0",
     "leaflet": "1.9.4",
