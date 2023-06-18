@@ -588,19 +588,23 @@ const sidebarStudy = () => [
 ]
 const sidebarCareer = () => [
     { text: '简历', link: '/career/cv' },
-    { text: '软考高级系统架构', link: '/career/ruankao-high-lv' },
-    { text: '公务员区别', link: '/career/gwy-diff' },
-    { text: '职场人', link: '/career/' },
     { text: '年度报税', link: '/career/tax' },
     { text: '互联网工作记录', link: '/career/record-net-work' },
     { text: '养老金', link: '/career/pension' },
     {
-        text: 'amazon', collapsed: false, items: [
+        text: '证书', collapsed: false, items: [
+            { text: '软考高级系统架构', link: '/career/certificate/ruankao-high-lv' },
+            { text: '教师资格证', link: '/career/certificate/ntce' },
+            { text: '公务员区别', link: '/career/certificate/gwy-diff' },
+        ]
+    },
+    {
+        text: '亚马逊', collapsed: false, items: [
             { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles' },
         ]
     },
     {
-        text: 'google', collapsed: false, items: [
+        text: '谷歌', collapsed: false, items: [
             { text: 'Google GCA interviews (what to expect & how to prepare)', link: '/career/google/gca' },
         ]
     },
