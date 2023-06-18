@@ -180,7 +180,7 @@ def parse_all(post_id):
         if modify_c.startswith('and'):
             modify_c = modify_c[3:].strip()
         weapon_info.append(modify_c)
-    print('5-weapon only name:', weapon_info)
+    print('4-weapon only name:', weapon_info)
 
 
 parse_all(post_id)

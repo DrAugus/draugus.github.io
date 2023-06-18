@@ -966,27 +966,27 @@ export const WISH = {
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Leaves in the Wind",
-      image: 3,
-      shortName: "Kaedehara Kazuha",
-      start: "2023-06-13 18:00:00 +0800",
-      end: "2023-07-04 14:59:59 +0800",
-      wish5star: "kaedehara_kazuha",
-      wish4star: [],
-      version: "3.7",
-      wishName: "「叶落风随」",
-      url: "https://bbs.mihoyo.com/ys/article/?"
-    },
-    {
       name: "Caution in Confidence",
       image: 2,
       shortName: "Alhaitham",
       start: "2023-06-13 18:00:00 +0800",
       end: "2023-07-04 14:59:59 +0800",
       wish5star: "alhaitham",
-      wish4star: [],
+      wish4star: ['Yaoyao', 'Shikanoin Heizou', 'Xiangling'],
       version: "3.7",
       wishName: "「敕诫枢谋」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Leaves in the Wind",
+      image: 3,
+      shortName: "Kaedehara Kazuha",
+      start: "2023-06-13 18:00:00 +0800",
+      end: "2023-07-04 14:59:59 +0800",
+      wish5star: "kaedehara_kazuha",
+      wish4star: ['Yaoyao', 'Shikanoin Heizou', 'Xiangling'],
+      version: "3.7",
+      wishName: "「叶落风随」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -1490,6 +1490,8 @@ export const WISH = {
       image: 48,
       start: "2023-06-13 18:00:00 +0800",
       end: "2023-07-04 14:59:59 +0800",
+      wish5star: ['Light of Foliar Incision', 'Freedom-Sworn'],
+      wish4star: ["Wavebreaker's Fin", 'Sacrificial Greatsword', 'Favonius Codex'],
     },
     {
       name: 'Epitome Invocation',
