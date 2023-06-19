@@ -31,7 +31,7 @@ const sidebarTrip = () => [
     { text: '账单', link: '/trip/bill' },
     { text: '探索', link: '/trip/explore' },
     { text: '随心飞', link: '/trip/suixinfei' },
-    { text: '飞机', link: '/trip/airfare-price' },
+    { text: '飞机', link: '/trip/airplane' },
     { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
 
     { text: '境外银行卡办理指南', link: '/trip/card' },

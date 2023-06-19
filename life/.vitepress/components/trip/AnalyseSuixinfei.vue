@@ -285,7 +285,7 @@ const option3 = {
 
 
 export default {
-    name: "AirfarePrice",
+    name: "AnalyseSuixinfei",
     components: {
         EChartsModel,
     },

@@ -57,7 +57,7 @@ opt = {
 };
 
 export default {
-    name: "AirfarePrice",
+    name: "Population",
     components: {
         EChartsModel,
     },
