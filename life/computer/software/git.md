@@ -28,6 +28,14 @@ rebase then enter, edit file, change `pick` to `drop`, then save
 
 这个时候本地删除该 id 的操作已经完成 然后推送 `git push --force`
 
+移除 rebase
+
+```bash
+git rebase --abort
+```
+
+这个命令会撤销当前正在进行的 rebase 操作并恢复到 rebase 之前的状态
+
 ### The following untracked working tree files would be overwritten by checkout
 
 不知道怎么解决。但是日前，是因为把 remote 仓库 rename 了。后面是把本地仓库删了，重新拉取了。

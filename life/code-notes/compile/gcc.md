@@ -3,6 +3,8 @@ icon: twemoji:building-construction
 ---
 # gcc
 
+## 介绍
+
 [版本对应](https://gcc.gnu.org/onlinedocs/libstdc++/manual/abi.html)
 
 `gcc` 与 `g++` 分别是 `gnu` 的 `c/c++` 编译器 `gcc/g++` 在执行编译工作的时候，总共需要4步：
@@ -11,6 +13,16 @@ icon: twemoji:building-construction
 2. 将预处理后的文件转换成汇编语言, 生成文件 .s [编译器egcs]
 3. 有汇编变为目标代码(机器代码)生成 .o 的文件[汇编器as]
 4. 连接目标代码, 生成可执行程序 [链接器ld]
+
+## 加速编译
+
+1. `-O2`：启用级别为2的优化，通常能提高代码的运行速度。
+2. `-pipe`：使用管道连接操作，避免将文件写入磁盘，从而提高编译速度。
+3. `-j`：指定并行编译数，如-j4表示使用4个线程并行编译。
+4. `-fno-exceptions` 和 `-fno-rtti`：禁用C++异常和运行时类型信息，可以加速编译和减小代码体积。
+5. `-flto`：启用链接时优化，将多个源文件编译成单个目标文件，可以提高代码性能。
+6. `-fprofile-generate` 和 `-fprofile-use`：启用代码覆盖率统计，可以更好地优化代码。
+7. `-Wno-unused-but-set-parameter`：禁用参数初始化警告，可以减小编译时间。
 
 ## gcc 命令的常用选项
 
@@ -36,6 +48,10 @@ icon: twemoji:building-construction
 | `-UMACRO`| 取消对 MACRO 宏的定义。|
 | `-w`| 不生成任何警告信息。|
 | `-Wall`| 生成所有警告信息。|
+|`-Werror` | 表示把所有的警告信息变成编译错误（即警告信息会导致编译失败）|
+|`-Wl,-Bstatic`| 告诉编译器使用静态库链接方式(直到遇到别的标记)|
+|`-Wl,-Bdynamic`|告诉编译器使用动态库链接方式|
+|`-ldl`|链接动态链接库加载器库|
 
 ## 参数详解
 
