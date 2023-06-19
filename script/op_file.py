@@ -21,3 +21,17 @@ def open_and_read(filename, callback):
             arr_res.append(res)
             line = file_handle.readline()
         write_file(arr_res)
+
+
+def open_file(filename, callback):
+    if not len(filename):
+        filename = "script/test"
+    with open(filename, "r", encoding='utf-8') as file_handle:
+        line = file_handle.readline()
+        arr_res = []
+        while line:
+            line_str = line.strip()
+            res = callback(line_str)
+            # print('res', res)
+            arr_res.append(res)
+            line = file_handle.readline()

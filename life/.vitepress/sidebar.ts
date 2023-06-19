@@ -208,6 +208,7 @@ const sidebarArtsArticle = () => [
     { text: '道德经', link: '/arts/article/道德经' },
     { text: '逍遥游·北冥有鱼', link: '/arts/article/逍遥游·北冥有鱼' },
     { text: '聪明人和傻子和奴才', link: '/arts/article/聪明人和傻子和奴才' },
+    { text: 'A Cup of Tea', link: '/arts/article/a-cup-of-tea' },
 ]
 const sidebarArtsEconomics = () => [
     { text: '微观经济学', link: '/arts/economics/microeconomics' },
