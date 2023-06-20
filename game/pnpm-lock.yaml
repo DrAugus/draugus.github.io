@@ -9,7 +9,7 @@ specifiers:
   leaflet: 1.9.4
   sass: ^1.63.4
   typed.js: 2.0.132
-  vitepress: ^1.0.0-beta.2
+  vitepress: ^1.0.0-beta.3
   vue: ^3.3.4
 
 devDependencies:
@@ -21,7 +21,7 @@ devDependencies:
   leaflet: 1.9.4
   sass: 1.63.4
   typed.js: 2.0.132
-  vitepress: 1.0.0-beta.2_sass@1.63.4
+  vitepress: 1.0.0-beta.3_sass@1.63.4
   vue: 3.3.4
 
 packages:
@@ -3076,8 +3076,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-beta.2_sass@1.63.4:
-    resolution: {integrity: sha512-DBXYjtYbm3W1IPPJ2TiCaK/XK+o/2XmL2+jslOGKm+txcbmG0kbeB+vadC5tCUZA9NdA+9Ywj3M4548c7t/SDg==}
+  /vitepress/1.0.0-beta.3_sass@1.63.4:
+    resolution: {integrity: sha512-GR5Pvr/o343NN1M4Na1shhDYZRrQbjmLq7WE0lla0H8iDPAsHE8agTHLWfu3FWx+3q2KA29sv16+0O9RQKGjlA==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.5.0
