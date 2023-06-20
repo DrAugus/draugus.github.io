@@ -2,7 +2,7 @@
     当前可能的飞行次数不会超过 14次
     <EChartsModel :option="option3" />
 
-    以当前飞行了 6次 为基准，消耗为 ¥5098
+    以当前飞行了 8次 为基准，消耗为 ¥ curExpend
     <EChartsModel :option="option" />
 
     如果觉得不够亏？可以点开下面的看看更亏的
@@ -17,15 +17,19 @@ import EChartsModel from "../EChartsModel.vue"
 let flyTimes = []
 let averageConsume = []
 let totalConsume = []
-const startFly = 6;
+const startFly = 8;
+const curTax = 100;
+const curExpend = 5318;
+const sliceTimes = 15;
+const maxTimes = 50;
 
 const calAverageConsume = (times) =>
-    ((5098 + 130 * times) / (times + 6)).toFixed(2)
+    ((curExpend + curTax * times) / (times + startFly)).toFixed(2)
 
 const calTotalConsume = (times) =>
-    5098 + 130 * times
+    curExpend + curTax * times
 
-for (let i = 0; i <= 100 - startFly; ++i) {
+for (let i = 0; i <= maxTimes - startFly; ++i) {
     flyTimes.push(i + startFly)
     averageConsume.push(calAverageConsume(i))
     totalConsume.push(calTotalConsume(i))
@@ -75,7 +79,7 @@ const option = {
             // name: '亏麻',
             type: 'bar',
             showBackground: true,
-            colorBy: "data",
+            // colorBy: "data",
             tooltip: {
                 valueFormatter: function (value) {
                     return '¥' + value;
@@ -87,7 +91,7 @@ const option = {
             // name: '亏麻',
             type: 'line',
             showBackground: true,
-            colorBy: "data",
+            // colorBy: "data",
             tooltip: {
                 valueFormatter: function (value) {
                     return '¥' + value;
@@ -219,14 +223,14 @@ const option3 = {
             axisLabel: {
                 formatter: '{value} 次'
             },
-            data: flyTimes.slice(0, 10)
+            data: flyTimes.slice(0, sliceTimes)
 
         },
         {
             axisLabel: {
                 formatter: '{value} 次'
             },
-            data: flyTimes.slice(0, 10),
+            data: flyTimes.slice(0, sliceTimes),
             gridIndex: 1
         }
     ],
@@ -263,7 +267,7 @@ const option3 = {
             label: {
                 show: true
             },
-            data: averageConsume.slice(0, 10)
+            data: averageConsume.slice(0, sliceTimes)
         },
         {
             type: 'line',
@@ -276,7 +280,7 @@ const option3 = {
             label: {
                 show: true
             },
-            data: totalConsume.slice(0, 10),
+            data: totalConsume.slice(0, sliceTimes),
             xAxisIndex: 1,
             yAxisIndex: 1
         }

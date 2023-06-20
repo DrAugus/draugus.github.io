@@ -98,18 +98,27 @@ opt = {
             name: "<= 800km 燃油",
             type: 'bar',
             // stack: 'Total',
+            label: {
+                show: true
+            },
             data: [0, 10, 20, 50, 60, 80, 100, 80, 60, 60, 40, 30, 20],
         },
         {
             name: "> 800km 燃油",
             type: 'bar',
             // stack: 'Total',
+            label: {
+                show: true
+            },
             data: [0, 20, 40, 100, 120, 140, 200, 140, 120, 110, 80, 60, 30],
         },
         {
             name: "基建",
             type: 'bar',
             // stack: 'Total',
+            label: {
+                show: true
+            },
             data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
         },
     ]
