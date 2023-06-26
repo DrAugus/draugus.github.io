@@ -1,20 +1,10 @@
 # 日本
 
-> 日本，一個四季都適合旅遊的國家，春日賞櫻、夏日花火、秋季賞楓、冬季玩雪，總有一項適合你。櫻花開放時間很短，從沖繩到北海道根據氣溫不同依次開放，所以在日本有一種叫追櫻的說法；紅葉則是反過來，依次從北海道到沖繩慢慢變紅。日本的夏天，全國各地都舉辦焰火晚會，各具特色，精彩紛呈。冬日的北海道則別具一格，會有豐富的冰雪項目，小樽的浪漫燈飾、各類冰雪祭、乘蒸汽小火車行駛在覆蓋著流冰的海岸，盡情享受冬日雪國樂趣。
-
-實用資訊
-
-- 語言 日語
-- 時區 東9區
-- 插座 110V 50Hz 兩腳扁頭
-- 貨幣 日元
-- 緊急援助電話 警察：110，消防、救護車：119
-
 ## 怎么去
 
 ### 签证
 
-> 关于使馆，下面的表格数据源自[官网](https://www.cn.emb-japan.go.jp/itpr_zh/aboutus.html#kankatsu)
+> 关于使馆，下面的表格数据源自[官网](https://www.cn.emb-japan.go.jp/itpr_zh/aboutus.html#kankatsu)（其他领事馆官网都可从此驻华大使馆官网查询）
 
 大使馆、各总领事馆、领事办公室管辖地区
 |使馆|电话|地区|
@@ -31,6 +21,7 @@
 [申请所需资料](https://www.shanghai.cn.emb-japan.go.jp/cn/apply/hitsuyoushorui-cn.pdf)
 
 - 护照原件
+- 2张2寸白底照片
 - 签证申请表，可以到旅行社看？如果离旅行社距离远，需要邮寄。[自行打印链接](https://www.shanghai.cn.emb-japan.go.jp/files/100355825.pdf)
 - 个人信息处理方法的同意书
 - 户口本、身份证复印件
@@ -38,9 +29,21 @@
 
 旅游签需要联系旅行社
 
-- 驻华大使馆[指定的赴日旅游旅行社](https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html)
-- 驻上海领事[指定的赴日旅游旅行社](https://www.shanghai.cn.emb-japan.go.jp/apply/agency.pdf)
-- 驻广州领事[指定的赴日旅游旅行社](https://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/visa/forms/ryokousya.pdf)
+- 驻华大使馆，[签证](https://www.cn.emb-japan.go.jp/itpr_zh/consular.html)，[指定的赴日旅游旅行社](https://www.cn.emb-japan.go.jp/itpr_zh/visa_dantai_daili.html) <Badge type="warning" text="以官网为准" />
+- 驻上海领事，[签证](https://www.shanghai.cn.emb-japan.go.jp/itpr_zh/visa_c.html)，[指定的赴日旅游旅行社](https://www.shanghai.cn.emb-japan.go.jp/files/100497846.xlsx) <Badge type="warning" text="以官网为准" />
+- 驻广州领事，[签证](https://www.guangzhou.cn.emb-japan.go.jp/itpr_zh/visa.html)，[指定的赴日旅游旅行社](https://www.guangzhou.cn.emb-japan.go.jp/cgjp_cn/visa/forms/ryokousya.pdf) <Badge type="warning" text="以官网为准" />
+
+## 简单介绍
+
+> 日本，一個四季都適合旅遊的國家，春日賞櫻、夏日花火、秋季賞楓、冬季玩雪，總有一項適合你。櫻花開放時間很短，從沖繩到北海道根據氣溫不同依次開放，所以在日本有一種叫追櫻的說法；紅葉則是反過來，依次從北海道到沖繩慢慢變紅。日本的夏天，全國各地都舉辦焰火晚會，各具特色，精彩紛呈。冬日的北海道則別具一格，會有豐富的冰雪項目，小樽的浪漫燈飾、各類冰雪祭、乘蒸汽小火車行駛在覆蓋著流冰的海岸，盡情享受冬日雪國樂趣。
+
+實用資訊
+
+- 語言 日語
+- 時區 東9區
+- 插座 110V 50Hz 兩腳扁頭
+- 貨幣 日元
+- 緊急援助電話 警察：110，消防、救護車：119
 
 ## 東京
 
@@ -80,7 +83,7 @@
 
 大阪四季皆宜旅行，其中春秋兩季最佳，3月-5月春暖花開，氣候溫和，帶一件薄外套防涼即可；6-8月是梅雨季節，潮濕悶熱，需注意防曬； 9月-11月是大阪的秋季，與春季氣候相似，天黑後會比較冷；12月-次年2月是冬季，較為寒冷，需要攜帶羽絨服。 2月-3月是賞梅花的好季節；3月-4月的櫻花季和10月-11月的紅葉季風景很美。冬季還可以滑雪和賞雪景。
 
------
+## 参考链接
 
 - [trip guide](https://hk.trip.com/travel-guide)
-- [japan travel](https://www.japan-travel/hk/hk) [中文站点](https://www.japan-travel.cn)
+- [japan travel](https://www.japan-travel/hk/hk) / [中文站点](https://www.japan-travel.cn)

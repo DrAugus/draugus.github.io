@@ -30,8 +30,8 @@
 
 > 真的有吗？
 
-- 赤坂亭(人均¥380) :badge[多人] :badge[单人]
-- 绿茶(人均¥100) :badge[多人] :badge[单人]
+- 赤坂亭(人均¥380)  <Badge type="tip" text="多人" />  <Badge type="tip" text="单人" />
+- 绿茶(人均¥100) <Badge type="tip" text="多人" />  <Badge type="tip" text="单人" />
 
 ## 游记
 
