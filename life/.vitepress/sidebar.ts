@@ -592,6 +592,7 @@ const sidebarCareer = () => [
     { text: '年度报税', link: '/career/tax' },
     { text: '互联网工作记录', link: '/career/record-net-work' },
     { text: '养老金', link: '/career/pension' },
+    { text: '其他职业', link: '/career/others' },
     {
         text: '证书', collapsed: false, items: [
             { text: '软考高级系统架构', link: '/career/certificate/ruankao-high-lv' },
