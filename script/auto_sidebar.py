@@ -15,7 +15,7 @@ exclude_path = [
     # 'china','abroad'
 ]
 root_dir = os.getcwd()
-dir_name = "code-notes"
+dir_name = "trip"
 sub_dir = f"life/{dir_name}/"
 link_pre = f"/{dir_name}"
 
@@ -93,7 +93,7 @@ def format_line(filename):
 
     res_line = ''
     # print(root_dir, filename)
-    with open(os.path.join(root_dir, sub_dir + filename), 'r') as f:
+    with open(os.path.join(root_dir, sub_dir + filename), 'r', encoding='utf-8') as f:
         line = f.readline()
         while line:
             if line.startswith('# '):

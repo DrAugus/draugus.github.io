@@ -44,6 +44,7 @@ const sidebarTrip = () => [
 ]
 const sidebarTripTravelogue = () => [
     { text: '游记', link: '/trip/travelogue/' },
+    { text: '南宁', link: '/trip/travelogue/20230610' },
     { text: '长春', link: '/trip/travelogue/20230527' },
     { text: '港珠澳广深', link: '/trip/travelogue/20230429' },
     { text: '绍兴', link: '/trip/travelogue/20230422' },
