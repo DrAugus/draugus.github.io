@@ -50,7 +50,7 @@ jobs:
           version: 7
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Change config
         run: mv ./.vitepress/config.ts.replace ./.vitepress/config.ts
