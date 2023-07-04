@@ -12,7 +12,7 @@ import { NAV_DATA } from './.vitepress/data/nav'
 </script>
 <style src="./.vitepress/style/nav.scss"></style>
 
-<ACardLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>
+<ACardLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items" :target="'blank'" />
 
 ----
 

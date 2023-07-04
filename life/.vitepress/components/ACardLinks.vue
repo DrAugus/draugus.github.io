@@ -9,6 +9,7 @@ import type { CardLink } from '../type'
 const props = defineProps<{
   title: string
   items: CardLink[]
+  target?: string
 }>()
 
 const formatTitle = computed(() => {
@@ -23,7 +24,7 @@ const formatTitle = computed(() => {
   </h2>
   <div class="m-nav-links">
     <ACardLink v-for="{ icon, title, date, desc, link } in items" :key="link" :icon="icon" :title="title" :date="date"
-      :desc="desc" :link="link" />
+      :desc="desc" :link="link" :target="target" />
   </div>
 </template>
 

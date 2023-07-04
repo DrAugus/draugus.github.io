@@ -18,8 +18,8 @@ outline: [2, 3, 4]
 
 - 浙江全市。杭州始发，高铁玩
 - 江苏全市。杭州始发，高铁玩
-- 河南 —— [开封](./china/henan/kaifeng) [洛阳](./china/henan/luoyang)，等回河南再玩
-- 湖北 —— [武汉](./china/hubei/wuhan)。杭州/郑州始发，高铁玩
+- 河南 —— [开封](./china/henan/#开封) [洛阳](./china/henan/#洛阳)，等回河南再玩
+- 湖北 —— [武汉](./china/hubei/#武汉)。杭州/郑州始发，高铁玩
 - [天津](./china/tianjin)。杭州始发，高铁玩，注意提前看二等动卧很不错的选择
 
 ## 格式

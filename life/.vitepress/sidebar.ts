@@ -28,7 +28,7 @@ const sidebarDaily = () => [
 ]
 const sidebarTrip = () => [
     { text: '规划指南', link: '/trip/' },
-    { text: '账单', link: '/trip/bill' },
+    { text: '旅行账单', link: '/trip/bill' },
     { text: '探索', link: '/trip/explore' },
     { text: '随心飞', link: '/trip/suixinfei' },
     { text: '飞机', link: '/trip/airplane' },

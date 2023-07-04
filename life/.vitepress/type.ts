@@ -9,6 +9,8 @@ export interface CardLink {
   desc?: string
   /** 链接 */
   link: string
+  /** 链接 target */
+  target?: string
 }
 
 export interface CardData {
