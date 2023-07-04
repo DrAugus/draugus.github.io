@@ -4,13 +4,13 @@
         <span v-for="(v, k, i) in sum">
             <b>{{ k + ' ' }}</b> 全年旅行支出限额
             <Badge :text="'¥' + budget[k]"></Badge>
-            <br>
+            <br />
             <blockquote>
                 当前已消费
                 <b>{{ ' ¥' + v }}
                     <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)"></Badge>
                 </b>
-                <br>
+                <br />
                 剩余可支配 {{ ' ¥' + parseFloat(budget[k] - v) }}
                 <Badge :text="((budget[k] - v) / budget[k] * 100).toFixed(2) + '%'"
                     :type="getBadge((budget[k] - v) / budget[k] * 100)"></Badge>
@@ -20,16 +20,35 @@
 
     <h2>支出</h2>
 
+
     <div v-for="(v, k, i) in vTrip">
         <h3>{{ k + '年' }}</h3>
         <p v-for="(vv, ii) in v">
-            <b>{{ vv.name }}</b> <br>
-            <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br>
+            <b>{{ vv.name }}</b> <br />
+            <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br />
             <span>总计<b>{{ vv.sum }}</b>
                 <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
             </span>
-            {{ ' ' }}
-            <span v-html="vv.intro"></span>
+            <br />
+            <span v-if="vv.intro.tips">
+                温馨提示：<span v-html="vv.intro.tips"></span> <br />
+            </span>
+
+            <span v-if="vv.intro.hotels">
+                酒店：<span v-html="vv.intro.hotels"></span> <br />
+            </span>
+            <span v-if="vv.intro.transportation">
+                出行：<span v-html="vv.intro.transportation"></span> <br />
+            </span>
+            <span v-if="vv.intro.dining">
+                吃喝：<span v-html="vv.intro.dining"></span> <br />
+            </span>
+            <span v-if="vv.intro.entertainment">
+                玩了<span v-html="vv.intro.entertainment"></span> <br />
+            </span>
+            <span v-if="vv.intro.others">
+                其他：<span v-html="vv.intro.others"></span> <br />
+            </span>
         </p>
     </div>
 
