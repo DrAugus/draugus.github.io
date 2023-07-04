@@ -8,7 +8,7 @@ import ACardLinks from './.vitepress/components/ACardLinks.vue'
 
 import { NAV_DATA } from './.vitepress/data/nav'
 </script>
-<style src="./nav/index.scss"></style>
+<style src="./.vitepress/style/nav.scss"></style>
 
 # 链接收录
 
