@@ -6,7 +6,7 @@ export default defineConfig({
     // These are app level configs.
     title: 'Augus 享乐',
     description: '吃什么 去哪玩',
-    base: "/life/",
+    base: "/",
     lastUpdated: true,
     cleanUrls: true,
     head: [

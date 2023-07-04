@@ -54,7 +54,7 @@ jobs:
 
       - name: Change config
         run: mv ./.vitepress/config.ts.replace ./.vitepress/config.ts
-        if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
+        if: ${{ matrix.deploy-repo == 'life' }}
 
       # 运行构建脚本
       - name: Build VitePress site
