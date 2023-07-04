@@ -669,8 +669,8 @@ export const sidebar = {
     // 
     '/trip/': sidebarTrip(),
     '/trip/travelogue/': sidebarTripTravelogue(),
-    '/trip/china/': sidebarTripChina(),
-    '/trip/abroad/': sidebarTripAboard(),
+    // '/trip/china/': sidebarTripChina(),
+    // '/trip/abroad/': sidebarTripAboard(),
     // arts
     '/arts/article/': sidebarArtsArticle(),
     '/arts/economics/': sidebarArtsEconomics(),

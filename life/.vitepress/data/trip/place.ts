@@ -22,9 +22,39 @@ export const TRIP_DATA: CardData[] = [
             },
             {
                 icon: '',
+                title: '上海',
+                desc: '',
+                link: prefixTripChina + '/shanghai'
+            },
+            {
+                icon: '',
+                title: '北京',
+                desc: '',
+                link: prefixTripChina + '/beijing'
+            },
+            {
+                icon: '',
+                title: '香港',
+                desc: '',
+                link: prefixTripChina + '/hongkong'
+            },
+            {
+                icon: '',
                 title: '广东',
                 desc: '',
                 link: prefixTripChina + '/guangdong/'
+            },
+            {
+                icon: '',
+                title: '澳门',
+                desc: '',
+                link: prefixTripChina + '/macao'
+            },
+            {
+                icon: '',
+                title: '天津',
+                desc: '',
+                link: prefixTripChina + '/tianjin'
             },
             {
                 icon: '',
@@ -67,6 +97,12 @@ export const TRIP_DATA: CardData[] = [
                 title: '四川',
                 desc: '',
                 link: prefixTripChina + '/sichuan/'
+            },
+            {
+                icon: '',
+                title: '重庆',
+                desc: '',
+                link: prefixTripChina + '/chongqing'
             },
             {
                 icon: '',
