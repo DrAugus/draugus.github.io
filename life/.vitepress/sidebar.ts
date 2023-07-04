@@ -44,15 +44,16 @@ const sidebarTrip = () => [
 ]
 const sidebarTripTravelogue = () => [
     { text: '游记', link: '/trip/travelogue/' },
-    { text: '南宁', link: '/trip/travelogue/20230610' },
-    { text: '长春', link: '/trip/travelogue/20230527' },
-    { text: '港珠澳广深', link: '/trip/travelogue/20230429' },
-    { text: '绍兴', link: '/trip/travelogue/20230422' },
-    { text: '舟山', link: '/trip/travelogue/20230415' },
-    { text: '上海', link: '/trip/travelogue/20230311' },
-    { text: '南京', link: '/trip/travelogue/20230225' },
-    { text: '苏州', link: '/trip/travelogue/20220906' },
-
+    { text: '南宁 20230610', link: '/trip/travelogue/20230610' },
+    { text: '长春 20230527', link: '/trip/travelogue/20230527' },
+    { text: '港珠澳广深 20230429', link: '/trip/travelogue/20230429' },
+    { text: '绍兴 20230422', link: '/trip/travelogue/20230422' },
+    { text: '舟山 20230415', link: '/trip/travelogue/20230415' },
+    { text: '上海 20230311', link: '/trip/travelogue/20230311' },
+    { text: '南京 20230225', link: '/trip/travelogue/20230225' },
+    { text: '苏州 20220906', link: '/trip/travelogue/20220906' },
+    { text: '云南 20220812', link: '/trip/travelogue/20220812' },
+    { text: '长沙 20220810', link: '/trip/travelogue/20220810' },
 ]
 const sidebarTripChina = () => [
     { text: '上海', link: '/trip/china/shanghai' },
