@@ -31,23 +31,23 @@
             </span>
             <br />
             <span v-if="vv.intro.tips">
-                温馨提示：<span v-html="vv.intro.tips"></span> <br />
+                <b>温馨提示：</b><span v-html="vv.intro.tips"></span> <br />
             </span>
 
             <span v-if="vv.intro.hotels">
-                酒店：<span v-html="vv.intro.hotels"></span> <br />
+                <b>酒店：</b><span v-html="vv.intro.hotels"></span> <br />
             </span>
             <span v-if="vv.intro.transportation">
-                出行：<span v-html="vv.intro.transportation"></span> <br />
+                <b>出行：</b><span v-html="vv.intro.transportation"></span> <br />
             </span>
             <span v-if="vv.intro.dining">
-                吃喝：<span v-html="vv.intro.dining"></span> <br />
+                <b>吃喝：</b><span v-html="vv.intro.dining"></span> <br />
             </span>
             <span v-if="vv.intro.entertainment">
-                玩了<span v-html="vv.intro.entertainment"></span> <br />
+                <b>玩乐：</b><span v-html="vv.intro.entertainment"></span> <br />
             </span>
             <span v-if="vv.intro.others">
-                其他：<span v-html="vv.intro.others"></span> <br />
+                <b>其他：</b><span v-html="vv.intro.others"></span> <br />
             </span>
         </p>
     </div>
