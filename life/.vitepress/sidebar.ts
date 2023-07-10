@@ -30,20 +30,35 @@ const sidebarTrip = () => [
     { text: '规划指南', link: '/trip/' },
     { text: '旅行账单', link: '/trip/bill' },
     { text: '探索', link: '/trip/explore' },
-    { text: '随心飞', link: '/trip/suixinfei' },
-    { text: '飞机', link: '/trip/airplane' },
-    { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
 
-    { text: '境外银行卡办理指南', link: '/trip/card' },
-    { text: '境外手机卡', link: '/trip/phone-number' },
-    { text: '往来港澳通行证', link: '/trip/eep' },
+    {
+        text: '出行', collapsed: false, items: [
 
-    { text: '护照', link: '/trip/passport' },
-    { text: '签证', link: '/trip/visa' },
-    { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
+            { text: '飞机', link: '/trip/airplane' },
+            { text: '随心飞', link: '/trip/suixinfei' },
+            { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
+            { text: '酒店', link: '/trip/hotel' },
+        ]
+    },
+
+    {
+        text: '出境', collapsed: false, items: [
+
+            { text: '护照', link: '/trip/passport' },
+            { text: '签证', link: '/trip/visa' },
+            { text: '往来港澳通行证', link: '/trip/eep' },
+            { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
+            { text: '境外银行卡办理指南', link: '/trip/card' },
+            { text: '境外手机卡', link: '/trip/phone-number' },
+
+        ]
+    },
+
 ]
 const sidebarTripTravelogue = () => [
     { text: '游记', link: '/trip/travelogue/' },
+    { text: '深港珠-柳州 20230628', link: '/trip/travelogue/20230628' },
+    { text: '南阳 20230622', link: '/trip/travelogue/20230622' },
     { text: '南宁 20230610', link: '/trip/travelogue/20230610' },
     { text: '长春 20230527', link: '/trip/travelogue/20230527' },
     { text: '港珠澳广深 20230429', link: '/trip/travelogue/20230429' },

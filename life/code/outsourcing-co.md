@@ -1,8 +1,6 @@
 # 小外包
 
-
 >引自 [github](https://github.com/grancode/outsourcing/)
-
 
 ![https://oscimg.oschina.net/oscnet/483bc3e33b3e2f3dc53dca38b68d70c4e64.jpg](https://oscimg.oschina.net/oscnet/483bc3e33b3e2f3dc53dca38b68d70c4e64.jpg)
 
@@ -113,3 +111,4 @@
 - 信雅达系统工程股份有限公司
 - 北京汉克时代科技有限公司
 - 中焯信息(杭州中焯信息技术股份有限公司)：乙方，给全国各大证券公司定制软件
+- 杭州同帆科技有限公司

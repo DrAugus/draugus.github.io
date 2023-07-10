@@ -4,7 +4,7 @@
 
 从中国大陆出发，去
 
-- 港澳
+- [港澳](./eep)
 - [日本](./abroad/asia/japan#签证)
 - [韩国](./abroad/asia/korean#签证)
 
