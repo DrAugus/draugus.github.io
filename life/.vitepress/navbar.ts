@@ -1,5 +1,6 @@
 export const navbar = [
   { text: '游戏', link: 'https://draugus.github.io/' },
+  { text: '最近更新', link: '/recent' },
   { text: '链接', link: '/nav', activeMatch: '^/nav' },
   { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
   { text: '日常', link: '/daily/', activeMatch: '^/daily' },

@@ -38,6 +38,7 @@ const sidebarTrip = () => [
             { text: '随心飞', link: '/trip/suixinfei' },
             { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
             { text: '酒店', link: '/trip/hotel' },
+            { text: '机场', link: '/trip/airport' },
         ]
     },
 
@@ -608,7 +609,11 @@ const sidebarCareer = () => [
     { text: '简历', link: '/career/cv' },
     { text: '年度报税', link: '/career/tax' },
     { text: '互联网工作记录', link: '/career/record-net-work' },
+    { text: '小小互联网震撼', link: '/career/net' },
     { text: '养老金', link: '/career/pension' },
+    { text: '社保', link: '/career/social-security' },
+    { text: '个人档案 ', link: '/career/personal-profile' },
+    { text: '人社部', link: '/career/mohrss' },
     { text: '其他职业', link: '/career/others' },
     {
         text: '证书', collapsed: false, items: [
