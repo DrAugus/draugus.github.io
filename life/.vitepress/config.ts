@@ -4,7 +4,7 @@ import { sidebar } from './sidebar'
 
 export default defineConfig({
     // These are app level configs.
-    title: 'Augus 享乐',
+    title: 'Augusの享乐',
     description: '吃什么 去哪玩',
     base: "/",
     lastUpdated: true,
@@ -35,7 +35,7 @@ export default defineConfig({
         outline: [2, 3],
 
         footer: {
-            message: '吃好喝好',
+            message: '吃好喝好 快乐地活下去',
             copyright: 'Copyright © 2019-present Augus'
         },
         lastUpdatedText: '上次更新',
