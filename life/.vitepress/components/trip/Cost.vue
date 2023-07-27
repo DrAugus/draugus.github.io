@@ -26,7 +26,7 @@
         <p v-for="(vv, ii) in v">
             <b>{{ vv.name }}</b> <br />
             <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br />
-            <span>总计<b>{{ vv.sum }}</b>
+            <span><b>总计{{ ' ￥' + vv.sum }}</b>
                 <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
             </span>
             <br />
