@@ -38,27 +38,27 @@ export const WISH = {
       url: ""
     },
     {
-      name: "",
+      name: "Laic Pursuit",
       image: 1,
       shortName: "Luocha",
       start: "2023-06-28 12:00:00 +0800",
       end: "2023-07-18 14:59:59 +0800",
       version: "1.1",
       wish5star: "luocha",
-      wish4star: [],
-      wishName: "",
+      wish4star: ['Yukong', 'Pela', 'Qingque'],
+      wishName: "「寻索世间」",
       url: ""
     },
     {
-      name: "",
+      name: "A Lost Soul",
       image: 1,
       shortName: "Blade",
       start: "2023-07-19 10:00:00 +0800",
       end: "2023-08-09 17:59:59 +0800",
       version: "1.2",
       wish5star: "blade",
-      wish4star: [],
-      wishName: "",
+      wish4star: ['Arlan', 'Natasha', 'Sushang'],
+      wishName: "「业途游魂」",
       url: ""
     },
     {
@@ -123,8 +123,8 @@ export const WISH = {
       start: "2023-06-28 18:00:00 +0800",
       end: "2023-07-18 14:59:59 +0800",
       shortName: "",
-      wish5star: [],
-      wish4star: [],
+      wish5star: ["Echoes of the Coffin"],
+      wish4star: ['Good Night and Sleep Well', "Geniuses' Repose", 'Dance! Dance! Dance!'],
       url: ""
     },
     {
@@ -133,8 +133,8 @@ export const WISH = {
       start: "2023-07-19 10:00:00 +0800",
       end: "2023-08-09 17:59:59 +0800",
       shortName: "",
-      wish5star: [],
-      wish4star: [],
+      wish5star: ["The Unreachable Side"],
+      wish4star: ['A Secret Vow', 'Shared Feeling', 'Swordplay'],
       url: ""
     },
     {

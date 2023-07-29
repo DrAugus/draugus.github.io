@@ -29,13 +29,13 @@ for obj in data_dict:
 img_url = [[]]
 post_id = []
 
-for get_wrap in all_events_info:
+for get_warp in all_events_info:
     tmp_img_url = []
-    for img in get_wrap['image_list']:
+    for img in get_warp['image_list']:
         tmp_img_url.append(img['url'])
     img_url.append(tmp_img_url)
 
-    post_id.append(get_wrap['post']['post_id'])
+    post_id.append(get_warp['post']['post_id'])
 
 # clean none img arr
 img_url = list(filter(None, img_url))

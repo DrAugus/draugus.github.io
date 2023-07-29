@@ -3,6 +3,7 @@
 import json
 import requests
 from bs4 import BeautifulSoup
+import re
 
 
 def get_url_data(api_url):
@@ -13,6 +14,8 @@ def get_url_data(api_url):
 
 api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=6&type=3'
 
+api_url += '&page_size=50'
+
 data = get_url_data(api_url)
 json_str = json.dumps(data['data']['list'])
 data_dict = json.loads(json_str)
@@ -20,46 +23,52 @@ data_dict = json.loads(json_str)
 # print(data_dict)
 
 # 0 char 1 weapon
-wrap_arr = [{}, {}]
+warp_arr = [[], []]
 
 for obj in data_dict:
-    if obj['post']['subject'].startswith('Event Warp') or \
-        '5-star character' in obj['post']['subject'] or \
-            '5-star Character' in obj['post']['subject']:
-        wrap_arr[0] = obj
 
+    pattern_char = '5-star character'
+    match_char = re.search(pattern_char, obj['post']['subject'], re.IGNORECASE)
+    if obj['post']['subject'].startswith('Event Warp') or match_char:
+        warp_arr[0].append(obj)
+
+    pattern_lc = '5-star Light Cone'
+    match_lc = re.search(pattern_lc, obj['post']['subject'], re.IGNORECASE)
     if (not obj['post']['subject'].startswith('Event Warp') and
-            'Event Warp' in obj['post']['subject']) or \
-            '5-star Light Cone' in obj['post']['subject'] or \
-            '5-star light cone' in obj['post']['subject']:
-        wrap_arr[1] = obj
+            'Event Warp' in obj['post']['subject']) or match_lc:
+        warp_arr[1].append(obj)
 
-post_id_arr = [0, 0]
+post_id_arr = [[], []]
 idx = 0
 
-for get_wrap in wrap_arr:
-    subject = get_wrap['post']['subject']
-    subject_zh = get_wrap['post']['multi_language_info']['lang_subject']['zh-cn']
-    img_url = get_wrap['image_list'][0]['url']
-    post_id = get_wrap['post']['post_id']
 
-    post_id_arr[idx] = post_id
+for warp_info in warp_arr:
+
+    for get_warp in warp_info:
+
+        subject = get_warp['post']['subject']
+        subject_zh = get_warp['post']['multi_language_info']['lang_subject']['zh-cn']
+        img_url = get_warp['image_list'][0]['url']
+        post_id = get_warp['post']['post_id']
+
+        post_id_arr[idx].append(post_id)
+
+        print('subject', subject)
+        print('subject_zh', subject_zh)
+        print('img_url', img_url)
+        print('post_id', post_id)
+
+        img_type = img_url[img_url.rfind('.', 0):]
+        print('img_type', img_type)
+
+        image_times = '1'
+
+        # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
+        modify_subject = subject.split(':')[0].lower().replace(' ', '_')
+        modify_subject += '_' + image_times + img_type
+        print('modify_subject', modify_subject)
+
     idx = idx + 1
-
-    print('subject', subject)
-    print('subject_zh', subject_zh)
-    print('img_url', img_url)
-    print('post_id', post_id)
-
-    img_type = img_url[img_url.rfind('.', 0):]
-    print('img_type', img_type)
-
-    image_times = '1'
-
-    # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
-    modify_subject = subject.split(':')[0].lower().replace(' ', '_')
-    modify_subject += '_' + image_times + img_type
-    print('modify_subject', modify_subject)
 
 print('post_id_arr', post_id_arr)
 
@@ -75,7 +84,7 @@ def parse_char(post_id):
     soup = BeautifulSoup(json_str, "html.parser")
     clean_text = soup.get_text()
     # print(clean_text)
-    duration_text = clean_text.split("Event Duration: ")[
+    duration_text = clean_text.split("Event Duration")[
         1].split("Event Details:")[0].strip()
     # details_text = clean_text.split("Event Details:")[1].strip()
 
@@ -168,6 +177,8 @@ def parse_weapon(post_id):
     print('4-star only name:', four_star_info_only_name)
 
 
-parse_char(post_id_arr[0])
+for i in post_id_arr[0]:
+    parse_char(i)
 
-parse_weapon(post_id_arr[1])
+for i in post_id_arr[1]:
+    parse_weapon(i)
