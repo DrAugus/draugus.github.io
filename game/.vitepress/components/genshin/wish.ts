@@ -990,8 +990,6 @@ export const WISH = {
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
-
-
     {
       name: "Born of Ocean Swell",
       image: 3,
@@ -999,7 +997,7 @@ export const WISH = {
       start: "2023-07-05 11:00:00 +0800",
       end: "2023-07-25 17:59:59 +0800",
       wish5star: "eula",
-      wish4star: [],
+      wish4star: ['Mika', 'Razor', 'Thoma'],
       version: "3.8",
       wishName: "「浪涌之瞬」",
       url: "https://bbs.mihoyo.com/ys/article/?"
@@ -1011,7 +1009,7 @@ export const WISH = {
       start: "2023-07-05 11:00:00 +0800",
       end: "2023-07-25 17:59:59 +0800",
       wish5star: "klee",
-      wish4star: [],
+      wish4star: ['Mika', 'Razor', 'Thoma'],
       version: "3.8",
       wishName: "「闪焰的驻足」",
       wish_2: true,
@@ -1024,21 +1022,21 @@ export const WISH = {
       start: "2023-07-25 18:00:00 +0800",
       end: "2023-08-15 14:59:59 +0800",
       wish5star: "sangonomiya_kokomi",
-      wish4star: [],
+      wish4star: ['Faruzan', 'Rosaria', 'Yanfei'],
       version: "3.8",
       wishName: "「浮岳虹珠」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
-      name: "Azure Excursion",
-      image: 3,
-      shortName: "Kamisato Ayato",
+      name: "From Ashes Reborn",
+      image: 2,
+      shortName: "Wanderer",
       start: "2023-07-25 18:00:00 +0800",
       end: "2023-08-15 14:59:59 +0800",
-      wish5star: "kamisato_ayato",
-      wish4star: [],
+      wish5star: "wanderer",
+      wish4star: ['Faruzan', 'Rosaria', 'Yanfei'],
       version: "3.8",
-      wishName: "「苍流踏花」",
+      wishName: "「余火变相」",
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
@@ -1504,6 +1502,8 @@ export const WISH = {
       image: 50,
       start: "2023-07-25 18:00:00 +0800",
       end: "2023-08-15 14:59:59 +0800",
+      wish5star: ['Everlasting Moonglow', "Tulaytullah's Remembrance"],
+      wish4star: ["Lion's Roar", 'The Bell', "Dragon's Bane", 'Favonius Warbow'],
     },
   ]
 }

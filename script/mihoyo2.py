@@ -20,20 +20,25 @@ data_dict = json.loads(json_str)
 
 # print(data_dict)
 
-# 国际版 现在 写到一个页面里了
+all_events_info = []
 
 for obj in data_dict:
     if 'Event Wishes' in obj['post']['subject']:
-        get_wrap = obj
+        all_events_info.append(obj)
 
-img_url = []
+img_url = [[]]
+post_id = []
 
-for img in get_wrap['image_list']:
-    img_url.append(img['url'])
+for get_wrap in all_events_info:
+    tmp_img_url = []
+    for img in get_wrap['image_list']:
+        tmp_img_url.append(img['url'])
+    img_url.append(tmp_img_url)
 
+    post_id.append(get_wrap['post']['post_id'])
 
-post_id = get_wrap['post']['post_id']
-
+# clean none img arr
+img_url = list(filter(None, img_url))
 
 print('img_url', img_url)
 print('post_id', post_id)
@@ -88,7 +93,7 @@ def find_between_a_b(my_str, start_tag, end_tag):
     return sub_strs
 
 
-def parse_all(post_id):
+def parse_all(post_id, post_idx):
     full_article_api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=' + \
         post_id
 
@@ -130,7 +135,7 @@ def parse_all(post_id):
     img_times = ['1', '1', '1']
     for i in range(len(find_res)):
         # print(find_res[i])
-        img_type = img_url[i][img_url[i].rfind('.', 0):]
+        img_type = img_url[post_idx][i][img_url[post_idx][i].rfind('.', 0):]
         # print('img_type', img_type)
         img_name = modify_image_name(find_res[i], img_times[i], img_type)
         print('img_name:', img_name)
@@ -161,6 +166,9 @@ def parse_all(post_id):
     # 5-star weapon
     pattern_string = r'5-star weapons(.*?)will receive a huge'
     find_res = re_find_between_a_b(clean_text, pattern_string)
+    if len(find_res) == 0:
+        pattern_string = r"5-star weapon (.*?) \(.*?\)"
+        find_res = re_find_between_a_b(clean_text, pattern_string)
     find_res = find_res[0].split('and')
     print('5-weapon:', find_res)
     weapon_info = []
@@ -183,4 +191,5 @@ def parse_all(post_id):
     print('4-weapon only name:', weapon_info)
 
 
-parse_all(post_id)
+for i in range(len(post_id)):
+    parse_all(post_id[i], i)
