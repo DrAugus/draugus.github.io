@@ -1,6 +1,17 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  luka: {
+    id: "Luka",
+    name: "卢卡",
+    prefix: Weapon.Nihility.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.JariloVI,
+    ele: Element.Physical,
+    weapon: Weapon.Nihility
+  },
   kafka: {
     id: "Kafka",
     name: "卡芙卡",
@@ -94,7 +105,7 @@ export const CHARACTER = {
     name: '罗刹',
     prefix: Weapon.Abundance.name,
     star: 5,
-    event_exclusive: false,
+    event_exclusive: true,
     intro: '',
     city: City.TheXianzhouLuofu,
     ele: Element.Imaginary,
