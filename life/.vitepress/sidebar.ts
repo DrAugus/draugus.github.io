@@ -10,9 +10,11 @@ const sidebarDaily = () => [
     { text: '日用价格', link: '/daily/goods-price' },
     { text: '买房吗', link: '/daily/house' },
     { text: '买车吗', link: '/daily/car' },
+    { text: '办卡吗', link: '/daily/card' },
     { text: '户口', link: '/daily/hukou' },
     { text: '月亮', link: '/daily/moon' },
     { text: '通勤', link: '/daily/commuting' },
+    { text: '投影仪', link: '/daily/projector' },
     {
         text: '记录 Apple 使用体验', collapsed: false, items: [
             { text: 'Apple官方日历订阅', link: '/daily/apple/calendar' },
@@ -23,6 +25,7 @@ const sidebarDaily = () => [
             { text: '设备价格', link: '/daily/apple/apple-price' },
             { text: '天才吧', link: '/daily/apple/genius-bar' },
             { text: 'iCloud', link: '/daily/apple/iCloud' },
+            { text: 'Apple ID', link: '/daily/apple/id' },
         ]
     },
 ]

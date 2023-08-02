@@ -1,5 +1,20 @@
 # 日本
 
+## 游记
+
+夏季游记，[参考](../../travelogue/20230720)
+
+## 推荐去处
+
+因为本人夏季去的，日本民俗相关的，夏季，即祭典、花火。要提前关注几个网站去看当年的花火、祭典的时间、地图
+
+- [足立の花火](https://www.adachikanko.net/zh-CHS/)
+- [东京国立博物馆](https://www.tnm.jp)
+- [伏见稻荷大社 祭礼和活动](http://inari.jp/zh-cn/rite/)
+- 天神祭 [Live Japan 相关文章](https://livejapan.com/ja/in-kansai/in-pref-osaka/in-osaka-castle_tenmabashi_kyobashi/article-a2000459/)，[大阪天满宫资讯](https://osakatemmangu.or.jp/2117)，[天满宫官方网站](https://osakatemmangu.or.jp)，[2023年祭典路线](https://osakatemmangu.or.jp/wp/wp-content/uploads/2023/07/4062dc80a53466e8c0345bef7a238649-1.pdf)
+- [祇园祭介绍](https://kyoto.travel/cn/season_festivals/gion_matsuri.html)
+-
+
 ## 怎么去
 
 ### 签证
