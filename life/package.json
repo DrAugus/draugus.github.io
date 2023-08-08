@@ -18,7 +18,7 @@
     "echarts": "^5.4.3",
     "sass": "^1.64.2",
     "typed.js": "2.0.132",
-    "vitepress": "^1.0.0-rc.3",
+    "vitepress": "^1.0.0-rc.4",
     "vue": "^3.3.4",
     "vue-echarts": "^6.6.1"
   }
