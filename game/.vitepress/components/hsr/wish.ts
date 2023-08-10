@@ -54,7 +54,7 @@ export const WISH = {
       image: 1,
       shortName: "Blade",
       start: "2023-07-19 10:00:00 +0800",
-      end: "2023-08-09 17:59:59 +0800",
+      end: "2023-08-09 11:59:59 +0800",
       version: "1.2",
       wish5star: "blade",
       wish4star: ['Arlan', 'Natasha', 'Sushang'],
@@ -62,15 +62,15 @@ export const WISH = {
       url: ""
     },
     {
-      name: "",
+      name: "Nessun Dorma",
       image: 1,
       shortName: "Kafka",
-      start: "2023-08-09 18:00:00 +0800",
+      start: "2023-08-10 12:00:00 +0800",
       end: "2023-08-29 14:59:59 +0800",
       version: "1.2",
       wish5star: "kafka",
-      wish4star: [],
-      wishName: "",
+      wish4star: ['Luka', 'Sampo', 'Serval'],
+      wishName: "「夜将不眠」",
       url: ""
     },
     {
@@ -131,7 +131,7 @@ export const WISH = {
       name: "Brilliant Fixation",
       image: 5,
       start: "2023-07-19 10:00:00 +0800",
-      end: "2023-08-09 17:59:59 +0800",
+      end: "2023-08-09 11:59:59 +0800",
       shortName: "",
       wish5star: ["The Unreachable Side"],
       wish4star: ['A Secret Vow', 'Shared Feeling', 'Swordplay'],
@@ -140,11 +140,11 @@ export const WISH = {
     {
       name: "Brilliant Fixation",
       image: 6,
-      start: "2023-08-09 18:00:00 +0800",
+      start: "2023-08-09 12:00:00 +0800",
       end: "2023-08-29 14:59:59 +0800",
       shortName: "",
-      wish5star: [],
-      wish4star: [],
+      wish5star: ['Patience Is All You Need'],
+      wish4star: ['Resolution Shines As Pearls of Sweat', 'Eyes of the Prey', 'The Birth of the Self'],
       url: ""
     },
     {

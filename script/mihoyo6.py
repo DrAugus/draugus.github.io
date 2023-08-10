@@ -68,7 +68,10 @@ for warp_info in warp_arr:
         modify_subject += '_' + image_times + img_type
         print('modify_subject', modify_subject)
 
+        print('============')
+
     idx = idx + 1
+    print('============')
 
 print('post_id_arr', post_id_arr)
 
@@ -84,8 +87,19 @@ def parse_char(post_id):
     soup = BeautifulSoup(json_str, "html.parser")
     clean_text = soup.get_text()
     # print(clean_text)
-    duration_text = clean_text.split("Event Duration")[
-        1].split("Event Details:")[0].strip()
+
+    duration_text = ''
+    split_event_dur = clean_text.split("Event Duration")
+    split_event_period = clean_text.split("Event Period")
+    if len(split_event_dur) != 1:
+        # 找到 dur
+        duration_text = clean_text.split("Event Duration")[
+            1].split("Event Details:")[0].strip()
+    if len(split_event_period) != 1:
+        # 找到 period
+        duration_text = clean_text.split("Event Period")[
+            1].split("(server time)")[0].strip()
+
     # details_text = clean_text.split("Event Details:")[1].strip()
 
     print("Duration: ", duration_text)
@@ -136,8 +150,19 @@ def parse_weapon(post_id):
     soup = BeautifulSoup(json_str, "html.parser")
     clean_text = soup.get_text()
     # print(clean_text)
-    duration_text = clean_text.split("Event Duration")[
-        1].split("(server time)")[0].strip()
+
+    duration_text = ''
+    split_event_dur = clean_text.split("Event Duration")
+    split_event_period = clean_text.split("Event Period")
+    if len(split_event_dur) != 1:
+        # 找到 dur
+        duration_text = clean_text.split("Event Duration")[
+            1].split("Event Details:")[0].strip()
+    if len(split_event_period) != 1:
+        # 找到 period
+        duration_text = clean_text.split("Event Period")[
+            1].split("(server time)")[0].strip()
+
     # details_text = clean_text.split("Event Details:")[1].strip()
 
     print("Duration: ", duration_text)
