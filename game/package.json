@@ -21,7 +21,7 @@
     "@vue-leaflet/vue-leaflet": "0.10.1",
     "dayjs": "1.11.9",
     "leaflet": "1.9.4",
-    "sass": "^1.65.0",
+    "sass": "^1.65.1",
     "typed.js": "2.0.132",
     "vitepress": "^1.0.0-rc.4",
     "vue": "^3.3.4"
