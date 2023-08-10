@@ -5,7 +5,7 @@ const sidebarEat = () => [
     { text: '真的不能吃', link: '/eat/block' },
 ]
 const sidebarDaily = () => [
-    { text: '日常', link: '/daily/' },
+    // { text: '日常', link: '/daily/' },
     { text: '小猫', link: '/daily/cat' },
     { text: '日用价格', link: '/daily/goods-price' },
     { text: '买房吗', link: '/daily/house' },
@@ -62,6 +62,7 @@ const sidebarTrip = () => [
 const sidebarTripTravelogue = () => [
     { text: '游记', link: '/trip/travelogue/' },
 
+    { text: '南京 20230809', link: '/trip/travelogue/20230809' },
     { text: '青岛淄博济宁 20230803', link: '/trip/travelogue/20230803' },
     { text: '日本 20230720', link: '/trip/travelogue/20230720' },
     { text: '深港珠-柳州 20230628', link: '/trip/travelogue/20230628' },
