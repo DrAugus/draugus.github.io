@@ -1,11 +1,13 @@
 {
-  "name": "food",
+  "name": "augus-life",
+  "type": "module",
   "version": "1.0.0",
   "description": "augus food record",
-  "main": "index.js",
   "author": "Augus",
-  "private": false,
   "license": "MIT",
+  "private": false,
+  "repository": "https://github.com/DrAugus/draugus.github.io.git",
+  "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -19,6 +21,7 @@
     "sass": "^1.65.1",
     "typed.js": "2.0.132",
     "vitepress": "^1.0.0-rc.4",
+    "vite": "^4.4.9",
     "vue": "^3.3.4",
     "vue-echarts": "^6.6.1"
   }
