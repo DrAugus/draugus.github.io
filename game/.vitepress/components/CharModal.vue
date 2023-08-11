@@ -91,7 +91,7 @@ export default {
 }
 
 .character {
-  /* width: 110px !important; */
+  width: 110px !important;
   height: 150px;
   font-size: 0;
   cursor: pointer;

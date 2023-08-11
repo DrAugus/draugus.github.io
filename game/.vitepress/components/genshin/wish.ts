@@ -1042,31 +1042,58 @@ export const WISH = {
     },
 
 
-    // {
-    //   name: "",
-    //   image: 1,
-    //   shortName: "",
-    //   start: "2023-08-16 11:00:00 +0800",
-    //   end: "2023-09-05 17:59:59 +0800",
-    //   wish5star: "",
-    //   wish4star: [],
-    //   version: "4.0",
-    //   wishName: "",
-    //   url: "https://bbs.mihoyo.com/ys/article/?"
-    // },
-    // {
-    //   name: "Farewell of Snezhnaya",
-    //   image: 5,
-    //   shortName: "Tartaglia",
-    //   start: "2023-08-16 11:00:00 +0800",
-    //   end: "2023-09-05 17:59:59 +0800",
-    //   wish5star: "tartaglia",
-    //   wish4star: [],
-    //   version: "4.0",
-    //   wishName: "「暂别冬都」",
-    //   wish_2: true,
-    //   url: "https://bbs.mihoyo.com/ys/article/?"
-    // },
+    {
+      name: "",
+      image: 1,
+      shortName: "Lyney",
+      start: "2023-08-16 11:00:00 +0800",
+      end: "2023-09-05 17:59:59 +0800",
+      wish5star: "lyney",
+      wish4star: ["lynette"],
+      version: "4.0",
+      wishName: "",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Discerner of Enigmas",
+      image: 3,
+      shortName: "Yelan",
+      start: "2023-08-16 11:00:00 +0800",
+      end: "2023-09-05 17:59:59 +0800",
+      wish5star: "yelan",
+      wish4star: ["lynette"],
+      version: "4.0",
+      wishName: "「素霓伣天」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Gentry of Hermitage",
+      image: 5,
+      shortName: "Zhongli",
+      start: "2023-09-05 18:00:00 +0800",
+      end: "2023-09-26 14:59:59 +0800",
+      wish5star: "zhongli",
+      wish4star: ["freminet"],
+      version: "4.0",
+      wishName: "「陵薮市朝」",
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+    {
+      name: "Farewell of Snezhnaya",
+      image: 5,
+      shortName: "Tartaglia",
+      start: "2023-09-05 18:00:00 +0800",
+      end: "2023-09-26 14:59:59 +0800",
+      wish5star: "tartaglia",
+      wish4star: ["freminet"],
+      version: "4.0",
+      wishName: "「暂别冬都」",
+      wish_2: true,
+      url: "https://bbs.mihoyo.com/ys/article/?"
+    },
+
+
 
   ],
   weapons: [

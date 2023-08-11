@@ -4,6 +4,39 @@ import { City, Element, Weapon } from "./utils";
 // todo 后续改为 db
 
 export const CHARACTER = {
+  freminet: {
+    id: "freminet",
+    name: "菲米尼",
+    prefix: "潜怀遐梦",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.cryo,
+    weapon: Weapon.claymore
+  },
+  lynette: {
+    id: "lynette",
+    name: "琳妮特",
+    prefix: "丽影绮行",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.anemo,
+    weapon: Weapon.bow
+  },
+  lyney: {
+    id: "lyney",
+    name: "林尼",
+    prefix: "惑光幻戏",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.pyro,
+    weapon: Weapon.bow
+  },
   kaedehara_kazuha: {
     id: "kaedehara_kazuha",
     name: "枫原万叶",
@@ -750,7 +783,7 @@ export const CHARACTER = {
     prefix: "檐宇猫游 ",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "稻妻快递公司「狛荷屋」的送货员，长有两条好动的尾巴，是一只热爱人类社会的「猫又」。 ",
     city: City.Inazuma,
     ele: Element.dendro,
     weapon: Weapon.sword

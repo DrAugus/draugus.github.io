@@ -8,8 +8,6 @@
   "repository": "https://github.com/DrAugus/draugus.github.io.git",
   "main": "index.js",
   "scripts": {
-    "git:push": "git push",
-    "git:pull": "git pull",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "build": "vitepress build .",

@@ -13,6 +13,7 @@ def get_url_data(api_url):
 
 
 api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=2&type=3'
+api_url += '&page_size=50'
 
 data = get_url_data(api_url)
 json_str = json.dumps(data['data']['list'])
