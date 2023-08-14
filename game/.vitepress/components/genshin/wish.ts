@@ -1040,18 +1040,16 @@ export const WISH = {
       wish_2: true,
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
-
-
     {
-      name: "",
+      name: "Conjuring Chiaroscuro",
       image: 1,
       shortName: "Lyney",
       start: "2023-08-16 11:00:00 +0800",
       end: "2023-09-05 17:59:59 +0800",
       wish5star: "lyney",
-      wish4star: ["lynette"],
+      wish4star: ['Lynette', 'Bennett', 'Barbara'],
       version: "4.0",
-      wishName: "",
+      wishName: "「光与影的戏术」",
       url: "https://bbs.mihoyo.com/ys/article/?"
     },
     {
@@ -1061,7 +1059,7 @@ export const WISH = {
       start: "2023-08-16 11:00:00 +0800",
       end: "2023-09-05 17:59:59 +0800",
       wish5star: "yelan",
-      wish4star: ["lynette"],
+      wish4star: ['Lynette', 'Bennett', 'Barbara'],
       version: "4.0",
       wishName: "「素霓伣天」",
       wish_2: true,
@@ -1531,6 +1529,14 @@ export const WISH = {
       end: "2023-08-15 14:59:59 +0800",
       wish5star: ['Everlasting Moonglow', "Tulaytullah's Remembrance"],
       wish4star: ["Lion's Roar", 'The Bell', "Dragon's Bane", 'Favonius Warbow'],
+    },
+    {
+      name: 'Epitome Invocation',
+      image: 51,
+      start: "2023-08-16 11:00:00 +0800",
+      end: "2023-09-05 17:59:59 +0800",
+      wish5star: ['The First Great Magic', 'Aqua Simulacra'],
+      wish4star: ['Sacrificial Sword', 'Favonius Greatsword', 'Favonius Lance', 'Sacrificial Fragments', 'Sacrificial Bow'],
     },
   ]
 }

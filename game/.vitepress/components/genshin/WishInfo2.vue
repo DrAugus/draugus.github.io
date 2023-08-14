@@ -1,8 +1,9 @@
 <template>
   <p class="center">也许有未实装、未确定的虚假信息</p>
 
-  <a @click="sortLast">最近排序</a> |
-  <a @click="sortEarly">最远排序</a>
+  <a @click="sortLast">时间最近排序</a> |
+  <a @click="sortEarly">时间最远排序</a>|
+  <a @click="sortUptimes">up 次数最多</a>
   <br><br>
 
 
@@ -51,12 +52,15 @@ export default {
         (a, b) => dayjs(a.start).diff(dayjs(b.start), "day", true)
       )
     },
+    sortUptimes() {
+      this.char = this.char.sort((a, b) => b.image - a.image)
+    },
 
     replaceImg(event) {
       event.target.src = '/image/genshin/wish/_1.jpg'
     },
 
-    getBadgeType(upTimes){
+    getBadgeType(upTimes) {
       let up = parseInt(upTimes);
       if (up > 6) return 'danger';
       if (up > 4) return 'warning';

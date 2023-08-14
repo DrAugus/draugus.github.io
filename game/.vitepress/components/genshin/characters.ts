@@ -4,6 +4,28 @@ import { City, Element, Weapon } from "./utils";
 // todo 后续改为 db
 
 export const CHARACTER = {
+  neuvillette: {
+    id: "neuvillette",
+    name: "那维莱特",
+    prefix: "谕告的潮音",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.hydro,
+    weapon: Weapon.polearm
+  },
+  wriothesley: {
+    id: "wriothesley",
+    name: "莱欧斯利",
+    prefix: "寂罪的密使",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.cryo,
+    weapon: Weapon.claymore
+  },
   freminet: {
     id: "freminet",
     name: "菲米尼",
