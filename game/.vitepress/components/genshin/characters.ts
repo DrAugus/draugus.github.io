@@ -46,7 +46,7 @@ export const CHARACTER = {
     intro: "",
     city: City.Fontaine,
     ele: Element.anemo,
-    weapon: Weapon.bow
+    weapon: Weapon.sword
   },
   lyney: {
     id: "lyney",

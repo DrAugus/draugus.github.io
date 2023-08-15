@@ -1,6 +1,22 @@
 # 特性
 
-## C++ 11 有什么新特性
+## C++23 有什么新特性
+
+todo
+
+## C++20 有什么新特性
+
+todo
+
+## C++17 有什么新特性
+
+todo
+
+## C++14 有什么新特性
+
+todo
+
+## C++11 有什么新特性
 
 与之前的版本相比，C++11增加了许多新的特性，包括：
 
@@ -191,9 +207,9 @@ int main() {
 
 总之，支持函数模板的默认模板参数是C++11标准的一项重要特性，它可以简化函数模板的定义和调用，提高程序的可读性和可维护性。
 
-## from stroustrup
+## by stroustrup
 
-### C++11 features
+:::details C++11 features
 
 > C++11 feels like a new language -- stroustrup
 
@@ -239,8 +255,8 @@ And here is a list of the major standard-library components:
 - array - a fixed-constant-sized array that knows its size
 - emplace operations - construct objects right within a container to avoid copying
 - exception_ptr - enables transfer of exceptions between threads
-
-### C++17 features
+:::
+:::details  C++17 features
 
 C++17 had about 21 new language features (depending on how you count), including:
 
@@ -253,7 +269,7 @@ C++17 had about 21 new language features (depending on how you count), including
 - Guaranteed copy elision - eliminate many redundant copy operations
 - Stricter expression evaluation order - prevents some subtle order-of-evaluation mistakes
 - auto as a template argument type - type deduction for value template arguments
-- Standard attributes to catch common mistakes - [[maybe_unused]], [[nodiscard]], and [[fallthrough]]
+- Standard attributes to catch common mistakes - `[[maybe_unused]]`, `[[nodiscard]]`, and `[[fallthrough]]`
 - Hexadecimal floating-point literals
 - Constant expression if - simplify compile-time evaluated code
 
@@ -265,3 +281,4 @@ The C++17 standard-library added about 13 new features plus many minor modificat
 - file system - the ability to portably manipulate file-system paths and directories
 - string_view - a non-owning reference to an immutable sequence of characters
 - Mathematical special functions - including Laguerre and Legendre polynomials, beta func- tions, Riemann zeta function
+:::
