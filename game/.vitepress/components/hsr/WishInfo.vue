@@ -18,11 +18,13 @@
 
       <td>{{ v.version }}</td>
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
-      <td>
+      <td v-for="(vv, ii) in v.name">
         <img v-bind:src="'/image/hsr/wish/' +
-          replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" @error="replaceImg" alt="">
+          replaceAndLow(v.name[ii]) + '_' + v.image[ii] + '.jpg'" width="320" @error="replaceImg" alt="">
       </td>
-      <td>{{ CHARACTER[v.wish5star].name }} [{{ v.image }}]</td>
+      <td v-for="(vv, ii) in v.name">
+        {{ CHARACTER[v.wish5star[ii]].name }} [{{ v.image[ii] }}]
+      </td>
 
     </tr>
   </table>

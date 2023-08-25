@@ -12,7 +12,9 @@ export const getImgStyle =
     // replace char src
     homeImg = []
     for (let v of current.obj) {
-      homeImg.push(`/image/${gameName}/characters/full/${v.wish5star}.png`)
+      for(let vv of v.wish5star){
+        homeImg.push(`/image/${gameName}/characters/full/${vv}.png`)
+      }  
     }
     let style = {}
     if (homeImg.length == 1) {

@@ -37,12 +37,20 @@ export const getWishIndex = (wish: EventHandleWish[]) => {
 
 // 
 const getWishObj = (wish: EventHandleWish, game: number = 0) => {
-    let picName = replaceAndLow(wish.name) + "_" + wish.image;
-    let strGame = getGameName(game)
 
-    let img = `/image/${strGame}/wish/`;
-    img += picName;
-    img += ".jpg";
+    let strGame = getGameName(game)
+    let arrImg: string[] = []
+    let wish5starArr: string[] = []
+    for (let i = 0; i < wish.name.length; ++i) {
+        let picName = replaceAndLow(wish.name[i]) + "_" + wish.image[i];
+        let img = `/image/${strGame}/wish/`;
+        img += picName;
+        img += ".jpg";
+        arrImg.push(img)
+
+        wish5starArr.push(wish.wish5star[i])
+    }
+
     let s = formatDayjs(wish.start);
     let e = formatDayjs(wish.end);
     // console.log(s, e);
@@ -54,8 +62,8 @@ const getWishObj = (wish: EventHandleWish, game: number = 0) => {
         name: wish.wishName,
         date: s + " ~ " + e,
         ver: wish.version,
-        src: img,
-        wish5star: wish.wish5star,
+        src: arrImg,
+        wish5star: wish5starArr,
         wish4star: wish4star
     }
 }

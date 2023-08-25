@@ -2,8 +2,7 @@
   <p class="center">也许有未实装、未确定的虚假信息</p>
 
   <a @click="sortLast">时间最近排序</a> |
-  <a @click="sortEarly">时间最远排序</a>|
-  <a @click="sortUptimes">up 次数最多</a>
+  <a @click="sortEarly">时间最远排序</a>
   <br><br>
 
 
@@ -19,11 +18,13 @@
 
       <td>{{ v.version }}</td>
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
-      <td>
+      <td v-for="(vv, ii) in v.name">
         <img v-bind:src="'/image/genshin/wish/' +
-          replaceAndLow(v.name) + '_' + v.image + '.jpg'" width="320" @error="replaceImg" alt="">
+          replaceAndLow(v.name[ii]) + '_' + v.image[ii] + '.jpg'" width="320" @error="replaceImg" alt="">
       </td>
-      <td>{{ CHARACTER[v.wish5star].name }} [{{ v.image }}]</td>
+      <td v-for="(vv, ii) in v.name">
+        {{ CHARACTER[v.wish5star[ii]].name }} [{{ v.image[ii] }}]
+      </td>
 
     </tr>
   </table>

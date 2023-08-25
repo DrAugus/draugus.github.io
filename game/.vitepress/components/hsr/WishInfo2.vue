@@ -8,9 +8,14 @@
 
   <ul>
     <li v-for="(v, i) in char">
-      <span class="f-w-600"> {{ v.wishName + modifyChar(v.wish5star, CHARACTER) }} </span>
-      <Badge :text="v.version"></Badge>
-      <Badge :text="v.image + ' up'" :type="getBadgeType(v.image)"></Badge>
+      <Badge :text="'v' + v.version"></Badge>
+      <span class="f-w-600">
+        <span v-for="(vv, ii) in v.wishName">
+          {{ v.wishName[ii] + modifyChar(v.wish5star[ii], CHARACTER) }}
+          <Badge :text="v.image[ii] + ' up'" :type="getBadgeType(v.image[ii])"></Badge>
+        </span>
+      </span>
+
       {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
       <span v-for="(vv, ii) in v.wish4star">
         {{ modifyChar(replaceAndLow(vv), CHARACTER) + ' ' }}
@@ -56,7 +61,7 @@ export default {
       event.target.src = '/image/hsr/wish/_1.jpg'
     },
 
-    getBadgeType(upTimes){
+    getBadgeType(upTimes) {
       let up = parseInt(upTimes);
       if (up > 6) return 'danger';
       if (up > 4) return 'warning';

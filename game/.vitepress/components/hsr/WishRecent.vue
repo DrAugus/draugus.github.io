@@ -7,7 +7,9 @@
 
     <h3>
       <span v-for="(v, i) in current.obj">
-        {{ v.name + modifyChar(v.wish5star, CHARACTER) }}
+        <span v-for="(vv, ii) in v.name">
+          {{ v.name[ii] + modifyChar(v.wish5star[ii], CHARACTER) }}
+        </span>
       </span>
     </h3>
     <div class="bg-height" :style="imgStyle"></div>
@@ -16,7 +18,9 @@
     <blockquote>跃迁周期：{{ current.obj[0].date }}</blockquote>
 
     <div v-for="(v, i) in current.obj">
-      <img :src="v.src" @error="replaceImg">
+      <div v-for="(vv, ii) in v.src" :key="ii">
+        <img :src="vv" @error="replaceImg">
+      </div>
     </div>
 
   </div>
@@ -32,7 +36,11 @@
 
     <ul>
       <li v-for="(v, i) in future.obj">
-        <span class="f-w-600"> {{ modifyChar(v.wish5star, CHARACTER) }} </span>
+        <span class="f-w-600"> <span v-for="(vv, ii) in v.wish5star">
+            {{ modifyChar(vv, CHARACTER) }}
+            <span v-if="ii !== v.wish5star.length - 1">{{ '+ ' }}</span>
+          </span>
+        </span>
         <Badge :text="v.ver"></Badge>
         {{ v.date }}
         <span v-for="(vv, ii) in v.wish4star">

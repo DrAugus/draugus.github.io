@@ -2,16 +2,20 @@
   <p class="center">也许有未实装、未确定的虚假信息</p>
 
   <a @click="sortLast">时间最近排序</a> |
-  <a @click="sortEarly">时间最远排序</a>|
-  <a @click="sortUptimes">up 次数最多</a>
+  <a @click="sortEarly">时间最远排序</a>
   <br><br>
 
 
   <ul>
     <li v-for="(v, i) in char">
-      <span class="f-w-600"> {{ v.wishName + modifyChar(v.wish5star, CHARACTER) }} </span>
-      <Badge :text="v.version"></Badge>
-      <Badge :text="v.image + ' up'" :type="getBadgeType(v.image)"></Badge>
+      <Badge :text="'v' + v.version"></Badge>
+      <span class="f-w-600">
+        <span v-for="(vv, ii) in v.wishName">
+          {{ v.wishName[ii] + modifyChar(v.wish5star[ii], CHARACTER) }}
+          <Badge :text="v.image[ii] + ' up'" :type="getBadgeType(v.image[ii])"></Badge>
+        </span>
+      </span>
+
       {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
       <span v-for="(vv, ii) in v.wish4star">
         {{ modifyChar(replaceAndLow(vv), CHARACTER) + ' ' }}
