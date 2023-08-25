@@ -28,17 +28,17 @@ export interface Characters {
 }
 
 export interface EventHandleWish {
-  name: string
-  image: number
-  shortName: string
+  name: string[]
+  image: number[]
+  shortName: string[]
   start: string
   end: string
   version: string
-  wish5star: string
+  wish5star: string[]
   wish4star: string[]
-  wishName: string
+  wishName: string[]
   wish_2?: boolean
-  url: string
+  url: string[]
   index: number
   index2: Number
   duration: number
@@ -46,11 +46,11 @@ export interface EventHandleWish {
 }
 
 export interface WishInfoObj {
-  name: string,
+  name: string[],
   date: string,
   ver: string,
-  src: string,
-  wish5star: string,
+  src: string[],
+  wish5star: string[],
   wish4star: string[]
 }
 

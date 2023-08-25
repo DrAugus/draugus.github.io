@@ -53,34 +53,35 @@
         <!-- dur day +1 cause line width is 1 px -->
         <!-- duration + 1 cause 从左边开始计算的  -->
         <div class="timeline-wish-event-character">
-          <div class="card event-item " v-for="(value, i) in WISH.characters" :class="[
-            'ele-' + CHARACTER[value.wish5star]?.ele?.id,
+          <div v-for="(value, i) in WISH.characters">
 
-            !value.wish_2 && i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) < 0 ? 'rounded-l-xl' : '',
-            !value.wish_2 && i > 0 && diffWishStyle(WISH.characters[i - 1].end, value.start) > 0 ? 'border-r-4 border-white' : '',
-            i == 0 ? 'rounded-l-xl' : '',
-            i == WISH.characters.length - 1 ? 'rounded-r-xl' : '',
-            !value.wish_2 && i < WISH.characters.length - 1 && diffWishStyle(value.end, WISH.characters[i + 1].start) < 0 ? 'rounded-r-xl' : '',
+            <div v-for="(_multi, j) in value.name">
 
-          ]" :style="{
+
+
+              <div class="card event-item " :class="[
+                'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
+              ]" :style="{
   width: wishCharacters[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-  marginTop: value.wish_2 ? '68px' : ''
+  marginTop: j ? '68px' : ''
 }">
-            <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
-              <div class="event-img responsive-img lazy">
-                <img v-bind:src="`/image/${gameName}/wish/` +
-                  value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                  ''" @error="replaceImg" alt="">
+                <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
+                  <div class="event-img responsive-img lazy">
+                    <img v-bind:src="`/image/${gameName}/wish/` +
+                      value.name[j].concat('_' + value.image[j] + '.jpg').toLowerCase().replace(/ /g, '_') +
+                      ''" @error="replaceImg" alt="">
+                  </div>
+                  <span class="left-align timeline-character-text sticky"
+                    :class="'ele-text-shadow-' + CHARACTER[value.wish5star[j]]?.ele?.id">
+                    {{ value.wishName[j] }} {{ replaceText('活动x', gameNum) }}
+                    「{{ CHARACTER[value.wish5star[j]].prefix }}」
+                    {{ CHARACTER[value.wish5star[j]].name }}
+                  </span>
+                </div>
               </div>
-              <span class="left-align timeline-character-text sticky"
-                :class="'ele-text-shadow-' + CHARACTER[value.wish5star]?.ele?.id">
-                {{ value.wishName }} {{ replaceText('活动x', gameNum) }}
-                「{{ CHARACTER[value.wish5star].prefix }}」
-                {{ CHARACTER[value.wish5star].name }}
-              </span>
-            </div>
 
+            </div>
           </div>
         </div>
 
