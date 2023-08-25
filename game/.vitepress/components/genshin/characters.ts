@@ -4,6 +4,94 @@ import { City, Element, Weapon } from "./utils";
 // todo 后续改为 db
 
 export const CHARACTER = {
+  navia: {
+    id: "navia",
+    name: "娜维娅",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.geo,
+    weapon: Weapon.claymore
+  },
+  liu_ping: {
+    id: "liu_ping",
+    name: "流萍",
+    prefix: "",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Liyue,
+    ele: Element.hydro,
+    weapon: Weapon.polearm
+  },
+  liu_yun: {
+    id: "liu_yun",
+    name: "流云",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Liyue,
+    ele: Element.anemo,
+    weapon: Weapon.polearm
+  },
+  bennu: {
+    id: "bennu",
+    name: "bennu",
+    prefix: "",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.hydro,
+    weapon: Weapon.polearm
+  },
+  arlecchino: {
+    id: "arlecchino",
+    name: "「仆人」阿蕾奇诺",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Snezhnaya,
+    ele: Element.pyro,
+    weapon: Weapon.polearm
+  },
+  charlotte: {
+    id: "charlotte",
+    name: "夏洛蒂",
+    prefix: "",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.cryo,
+    weapon: Weapon.polearm
+  },
+  furina_de_fontaine: {
+    id: "furina_de_fontaine",
+    name: "芙宁娜",
+    prefix: "",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.hydro,
+    weapon: Weapon.polearm
+  },
+  myrianelle: {
+    id: "myrianelle",
+    name: "myrianelle",
+    prefix: "",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.pyro,
+    weapon: Weapon.polearm
+  },
   neuvillette: {
     id: "neuvillette",
     name: "那维莱特",
@@ -19,8 +107,8 @@ export const CHARACTER = {
     id: "wriothesley",
     name: "莱欧斯利",
     prefix: "寂罪的密使",
-    star: 4,
-    event_exclusive: false,
+    star: 5,
+    event_exclusive: true,
     intro: "",
     city: City.Fontaine,
     ele: Element.cryo,
@@ -43,7 +131,7 @@ export const CHARACTER = {
     prefix: "丽影绮行",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "总是藏在阴影中的魔术助手，自称「多功能魔术助理机关」。寡言少语，罕有表情，行动如猫一样难以预料。",
     city: City.Fontaine,
     ele: Element.anemo,
     weapon: Weapon.sword
@@ -54,7 +142,7 @@ export const CHARACTER = {
     prefix: "惑光幻戏",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "闻名枫丹的天才魔术师，以精妙的手法和言语牵动着观众的心。伶牙俐齿，演技精湛，心思如猫一样难以猜透。",
     city: City.Fontaine,
     ele: Element.pyro,
     weapon: Weapon.bow
