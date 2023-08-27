@@ -13,25 +13,25 @@
   <p v-if="selectedLastChar" class="choose">
     <strong>{{ selectedLastChar + ' ' }}</strong>
     <span class="underline">
-      <span>距今 {{ parseInt(resAllPastChar.get(selectedLastChar).sortTag) }} 天</span>
+      <span>{{ getSelectDuration(selectedLastChar) }} </span>
     </span>
     <br>
   </p>
 
   <hr>
 
-  <p v-for="(v, k) in resAllPastChar" :class="v[1].color">
+  <p v-for="(v, k) in displayRes">
 
-    <img class="char-img" :src="v[1].src">
+    <img class="char-img" :src="v.src">
 
-    <strong>{{ v[0] + ' ' }}</strong>
+    <strong>{{ v.nameZH }}</strong>
     <!-- <br> -->
     <!-- 出场时间: <span class="date">{{ v[1].start }}</span>
     <br>
     结束时间: <span class="date">{{ v[1].end }}</span>
     <br> -->
     <span class="underline">
-      <span>{{ v[1].info }} </span>
+      <span>{{ v.duration }} </span>
     </span>
     <br>
   </p>
@@ -42,53 +42,13 @@ import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 import { composeSrc } from "./utils";
-import { parseDayjs, formatDayjs } from "../utils";
+import { parseDayjs, formatDayjs, compareDayjs, filterObject, currentDayjs, beforeToday, afterToday, durationTodayDay } from "../utils";
 
 import "dayjs/locale/zh";
 
 dayjs.locale("zh"); // use locale globally
 // dayjs().locale('zh').format() // use locale in a specific instance
 
-// refer eventHandle
-const convertToDate = (e, i, j) => {
-  e.start = e.start.replace(/-/g, "/");
-  e.end = e.end.replace(/-/g, "/");
-
-  let start = parseDayjs(e.start).subtract(0, "minute"),
-    end = parseDayjs(e.end).subtract(0, "minute");
-
-  // to today, every event, end time to now
-  const durationEnd2Today = dayjs().diff(end, "day", true);
-  const durationStart2Today = dayjs().diff(start, "day", true);
-
-  return {
-    ...e,
-    index: i,
-    index2: j,
-    start,
-    end,
-    durationEnd2Today,
-    durationStart2Today
-  };
-};
-
-const processEvent = () => {
-  let eventsDataInfo = [];
-  eventsDataInfo[0] = WISH.characters;
-  eventsDataInfo[1] = WISH.weapons;
-
-  let events = eventsDataInfo.map((e, i) => {
-    if (Array.isArray(e)) {
-      return e.map((item, j) => convertToDate(item, i, j));
-    }
-
-    return convertToDate(e, i, i);
-  });
-
-  return {
-    events,
-  };
-};
 
 const FORK_DESCRIBE = {
   1: "首次出场",
@@ -100,97 +60,86 @@ const FORK_DESCRIBE = {
   7: "六次复刻"
 }
 
-const EVENT = processEvent().events;
-const allChar = EVENT[0]
-// console.log("allChar", allChar)
-const allPastChar = allChar.filter((v, i, a) => v.durationEnd2Today > 0)
-const allFutureChar = allChar.filter((v, i, a) => v.durationStart2Today < 0)
-const allCurrentChar = allChar.filter((v, i, a) => v.durationEnd2Today < 0 && v.durationStart2Today > 0)
-
-// console.log("allPastChar", allPastChar)
-// console.log("allFutureChar", allFutureChar)
-// console.log("allCurrentChar", allCurrentChar)
-
-const sliceChar = [...new Set(allPastChar.map(obj => obj.wish5star))];
-const sliceFutureChar = [...new Set(allFutureChar.map(obj => obj.wish5star))];
-const sliceCurrentChar = [...new Set(allCurrentChar.map(obj => obj.wish5star))];
-const sliceFutureCharIndex = [...new Set(allFutureChar.map(obj => obj.index2))];
-const sliceCurrentCharIndex = [...new Set(allCurrentChar.map(obj => obj.index2))];
-// console.log("sliceChar", sliceChar)
-// console.log("sliceFutureChar", sliceFutureChar)
-// console.log("sliceCurrentChar", sliceCurrentChar)
-// console.log(sliceFutureCharIndex)
-const sliceCharZH = sliceChar.map(v => CHARACTER[v].name)
-
-// 防止当前与未来重复
-let aa = [...new Set([...sliceFutureChar, ...sliceCurrentChar])]
-// console.log(aa)
+// const sliceAllChar = [...new Set(allPastChar.map(obj => obj.wish5star))];
 
 
+// 此处不过滤常驻角色，因为有的常驻 up 过
+const all5star = Object.values(CHARACTER).filter(character => character.star === 5).map(obj => obj.id);
+console.log('all5star', all5star)
+const all4star = Object.values(CHARACTER).filter(character => character.star === 4).map(obj => obj.id);
+// console.log(all4star)
 
-// -------------------------------------------------------
+const sliceCharZH = all5star.map(v => CHARACTER[v].name)
+console.log('sliceCharZH', sliceCharZH)
 
-// first slice
-const sliceCharInfo = allPastChar.map(object => {
-  return {
-    name: object.wish5star,
-    times: object.image,
-    start: formatDayjs(object.start),
-    end: formatDayjs(object.end),
-    durationEnd2Today: object.durationEnd2Today,
-    durationStart2Today: object.durationStart2Today,
-  };
-})
+// [char]: [wish1, wish2, ...]
+// only save: name, image, shortName, start, end, version
+let modify5starWishData = {}
 
-// console.log("===sliceCharInfo===")
-// console.log(sliceCharInfo)
 
-// second filter
-const filterCharInfo = () => {
-  let allCharMap = new Map();
-  for (let v of sliceChar) {
-    allCharMap.set(v, sliceCharInfo.filter(d => d.name === v))
-  }
-  // console.log(allCharMap)
-  return allCharMap
-}
+const modify5starWish = (char) => {
+  for (let c of char) {
+    modify5starWishData[c] = []
+    for (let w of WISH.characters) {
+      let idx = w.wish5star.indexOf(c)
+      if (idx !== -1) {
+        let obj = {}
+        obj.name = w.name[idx]
+        obj.image = w.image[idx]
+        obj.shortName = w.wish5star[idx]
+        obj.start = w.start
+        obj.end = w.end
+        obj.version = w.version
 
-const mapCharInfo = filterCharInfo();
-
-// third format
-const formatCharInfo = (arr) => {
-  let twiceDur = [];
-  for (let i = 1; i < arr.length; ++i) {
-    let dur = dayjs(arr[i].start).diff(arr[i - 1].end, "day", true);
-    twiceDur.push(parseInt(dur))
-  }
-  let toNow = []
-  for (let v of arr) {
-    toNow.push(parseInt(v.durationEnd2Today))
-  }
-  return {
-    twiceDur,
-    toNow,
-    len: arr.length,
+        modify5starWishData[c].push(obj)
+      }
+    }
   }
 }
 
-// fourth display
-const displayCharInfo = () => {
-  let displayMap = new Map();
-  mapCharInfo.forEach((v, k) => {
-    displayMap.set(
-      CHARACTER[k].name,
-      formatCharInfo(v)
-    )
-  })
-  // console.log(displayMap)
-  return displayMap
+modify5starWish(all5star)
+// filter null
+modify5starWishData = filterObject(modify5starWishData, v => v.length)
+// 以防万一，还是排个序吧
+// 既然排序，直接倒序了，后面全部取第一个
+Object.values(modify5starWishData).forEach(function (value) {
+  if (Array.isArray(value)) {
+    value.sort((a, b) => b.image - a.image)
+  }
+});
+// 至此不再修改此数据
+console.log('modify5starWishData', modify5starWishData)
+
+// // 取最新的 obj 形式，不方便
+// let modify5starWishInfo = {}
+// Object.values(modify5starWishData).forEach(function (v) {
+//   modify5starWishInfo[v[0].shortName] = v[0]
+// });
+// console.log('modify5starWishInfo', modify5starWishInfo)
+// modify5starWishInfo = Object.fromEntries(Object.entries(modify5starWishInfo).sort(([, a], [, b]) => compareDayjs(a.end, b.end)));
+// console.log('modify5starWishInfo', modify5starWishInfo)
+
+// 取最新的 数组形式
+let modify5starWishInfo = []
+Object.values(modify5starWishData).forEach(function (v) {
+  modify5starWishInfo.push(v[0])
+});
+modify5starWishInfo = modify5starWishInfo.sort((a, b) => compareDayjs(a.end, b.end))
+console.log('modify5starWishInfo', modify5starWishInfo)
+
+// 为 modify5starWishInfo 加一个新的字段 duration 
+for (let v of modify5starWishInfo) {
+  if (currentDayjs(v.start, v.end)) {
+    v.duration = 0
+  } else {
+    if (beforeToday(v.end)) {
+      v.duration = durationTodayDay(v.end)
+    } else if (afterToday(v.start)) {
+      v.duration = durationTodayDay(v.start)
+    }
+  }
 }
 
-// const displayMap = displayCharInfo()
-
-// -------------------------------------------------------
 
 const findInCurrent = (wish5star) => sliceCurrentChar.indexOf(wish5star) != -1;
 
@@ -198,15 +147,27 @@ const findInFuture = (wish5star) => sliceFutureChar.indexOf(wish5star) != -1;
 
 const isExclusive = (wish5star) => CHARACTER[wish5star].event_exclusive;
 
+const dayTip = (dur) => {
+  let tip = ''
 
-
-const modifyInfo = (ddl, wish5star) => {
-  let info = '距今' + parseInt(ddl) + '天'
-  if (findInCurrent(wish5star)) info += ' 当前祈愿进行时'
-  if (findInFuture(wish5star)) info += ' 很快就来了'
-  if (!isExclusive(wish5star)) info += ' 但是是常驻'
-  return info
+  if (dur > 0) tip = ` ${parseInt(dur)}天后登场`
+  else if (dur < 0) tip = ` 距今${-parseInt(dur)}天`
+  else tip = ' 当前祈愿进行时'
+  return tip
 }
+
+let displayRes = []
+for (let v of modify5starWishInfo) {
+  let obj = {}
+  obj.shortName = v.shortName
+  obj.nameZH = CHARACTER[v.shortName].name
+  obj.src = composeSrc(v.shortName)
+  obj.version = v.version
+  obj.duration = dayTip(v.duration)
+  obj.tag = v.duration // 排序用 由远至近-由大到小
+  displayRes.push(obj)
+}
+console.log('displayRes', displayRes)
 
 const showColor = (wish5star) => {
   let color = ''
@@ -216,77 +177,33 @@ const showColor = (wish5star) => {
   return color
 }
 
-// console.log("allChar", allChar)
-// all recent char up, done, include future
-const resAllChar = new Map(allChar.map(object => [
-  CHARACTER[object.wish5star].name,
-  {
-    src: composeSrc(CHARACTER[object.wish5star].id),
-    times: object.image,
-    start: formatDayjs(object.start),
-    end: formatDayjs(object.end),
-    durationEnd2Today: object.durationEnd2Today,
-    durationStart2Today: object.durationStart2Today,
-    sortTag: object.durationEnd2Today,
-    info: modifyInfo(object.durationEnd2Today, object.wish5star),
-    color: showColor(object.wish5star),
-  }
-]
-));
-// console.log("resAllChar", resAllChar)
-
-const resAllPastChar = new Map(allPastChar.map(object => [
-  CHARACTER[object.wish5star].name,
-  {
-    src: composeSrc(CHARACTER[object.wish5star].id),
-    times: object.image,
-    start: formatDayjs(object.start),
-    end: formatDayjs(object.end),
-    durationEnd2Today: object.durationEnd2Today,
-    durationStart2Today: object.durationStart2Today,
-    sortTag: object.durationEnd2Today,
-    info: modifyInfo(object.durationEnd2Today, object.wish5star),
-    color: showColor(object.wish5star),
-  }
-]
-));
-// console.log("resAllPastChar", resAllPastChar)
-
-// 
-// every time duration, end to next start, by name 
-// 
 
 export default {
   name: "Fork",
   data() {
     return {
-      EVENT,
       FORK_DESCRIBE,
       sliceCharZH,
-      resAllChar,
-      resAllPastChar,
-      // displayMap,
+      displayRes,
       selectedLastChar: "",
       selectedFork: "",
     };
   },
   methods: {
     sortLast() {
-      this.resAllChar = new Map(Array.from(this.resAllChar).sort(
-        (a, b) => a[1].sortTag - b[1].sortTag
-      ))
-      this.resAllPastChar = new Map(Array.from(this.resAllPastChar).sort(
-        (a, b) => a[1].sortTag - b[1].sortTag
-      ))
+      this.displayRes = this.displayRes.sort((a, b) => a.tag - b.tag)
     },
     sortEarly() {
-      this.resAllChar = new Map(Array.from(this.resAllChar).sort(
-        (a, b) => b[1].sortTag - a[1].sortTag
-      ))
-      this.resAllPastChar = new Map(Array.from(this.resAllPastChar).sort(
-        (a, b) => b[1].sortTag - a[1].sortTag
-      ))
+      this.displayRes = this.displayRes.sort((a, b) => b.tag - a.tag)
     },
+    getSelectDuration(select) {
+      // let idx = this.displayRes.findIndex(obj=> obj.nameZH === select)
+      // return this.displayRes[idx].duration
+
+      let target = this.displayRes.find(obj => obj.nameZH === select)
+      if (target) return target.duration
+      return '未找到'
+    }
   },
   async mounted() {
     this.selectedFork = ""

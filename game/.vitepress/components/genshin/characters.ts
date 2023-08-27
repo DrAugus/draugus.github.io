@@ -50,7 +50,7 @@ export const CHARACTER = {
   },
   arlecchino: {
     id: "arlecchino",
-    name: "「仆人」阿蕾奇诺",
+    name: "阿蕾奇诺",
     prefix: "",
     star: 5,
     event_exclusive: true,

@@ -12,9 +12,9 @@ export const getImgStyle =
     // replace char src
     homeImg = []
     for (let v of current.obj) {
-      for(let vv of v.wish5star){
+      for (let vv of v.wish5star) {
         homeImg.push(`/image/${gameName}/characters/full/${vv}.png`)
-      }  
+      }
     }
     let style = {}
     if (homeImg.length == 1) {
@@ -103,6 +103,7 @@ export const replaceAndLow = (str: string) =>
 
 //格式化日期
 import dayjs from "dayjs";
+const today = dayjs();
 export const parseDayjs = (date: string) =>
   dayjs(date.toString(), "YYYY-MM-DD HH:mm:ss");
 export const formatDayjs = (date: string) =>
@@ -111,6 +112,23 @@ export const formatDayjs = (date: string) =>
 export const normalizeName = (name: string) =>
   name.toLowerCase().replace(/\s+/g, '')
 
+export const compareDayjs = (a: string, b: string) => {
+  if (parseDayjs(a).isBefore(parseDayjs(b))) {
+    return -1;
+  }
+  if (parseDayjs(a).isAfter(parseDayjs(b))) {
+    return 1;
+  }
+  return 0;
+};
+
+export const currentDayjs = (s: string, e: string) => parseDayjs(s).isBefore(today) && parseDayjs(e).isAfter(today)
+
+export const beforeToday = (t: string) => parseDayjs(t).isBefore(today)
+export const afterToday = (t: string) => parseDayjs(t).isAfter(today)
+
+export const durationDay = (s: string, e: string) => parseDayjs(e).diff(parseDayjs(s), "day", true);
+export const durationTodayDay = (t: string) => parseDayjs(t).diff(today, "day", true);
 
 //秒转换
 export const secondsFormat = (s) => {
