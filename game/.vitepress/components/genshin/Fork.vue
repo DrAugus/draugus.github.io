@@ -20,21 +20,20 @@
 
   <hr>
 
-  <p v-for="(v, k) in displayRes">
-
-    <img class="char-img" :src="v.src">
-
-    <strong>{{ v.nameZH }}</strong>
-    <!-- <br> -->
-    <!-- 出场时间: <span class="date">{{ v[1].start }}</span>
-    <br>
-    结束时间: <span class="date">{{ v[1].end }}</span>
-    <br> -->
-    <span class="underline">
-      <span>{{ v.duration }} </span>
-    </span>
-    <br>
-  </p>
+  <div>
+    <div v-for="(v, k) in displayRes" :key="k">
+      <div class="char-container">
+        <div class="char-avatar">
+          <img :src="v.src" @error="replaceImg">
+        </div>
+        <div class="char-info">
+          <div class="char-name">{{ v.nameZH }}</div>
+          <div class="char-version">{{ 'ver' + v.version }}</div>
+          <div class="char-duration">{{ v.duration }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -203,7 +202,10 @@ export default {
       let target = this.displayRes.find(obj => obj.nameZH === select)
       if (target) return target.duration
       return '未找到'
-    }
+    },
+    replaceImg(event) {
+      event.target.src = '/image/genshin/characters/paimon_faq.png'
+    },
   },
   async mounted() {
     this.selectedFork = ""
@@ -244,4 +246,46 @@ export default {
   width: 36px;
   border-radius: 9999px;
 }
+
+.char-container {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: #e5e5e5;
+  padding: 10px;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+
+.char-avatar {
+  width: 80px;
+  /* background-color: #ccc; */
+  /* height: 80px; */
+  border-radius: 9999px;
+  margin-left: 20px;
+}
+
+.char-info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.char-name {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.char-version {
+  font-size: 16px;
+  color: #999;
+}
+
+.char-duration {
+  font-size: 14px;
+  color: #999;
+}
 </style>
+
