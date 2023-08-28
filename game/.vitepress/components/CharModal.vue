@@ -34,12 +34,10 @@ export default {
       <img :src='`/image/${game}/characters/${replaceAndLow(info.id)}.png`' @error="replaceImg">
     </div>
     <div class="character-ele">
-      <img :src="`/image/${game}/elements/${replaceAndLow(info.ele)}.png`" alt="{{1}}">
+      <img :src="`/image/${game}/elements/${replaceAndLow(info.ele.id)}.png`" alt="{{1}}">
     </div>
     <div class="character-name">
-      <div>
-        <p>{{ info.name }}</p>
-      </div>
+      {{ info.name }}
     </div>
   </div>
 
@@ -47,7 +45,7 @@ export default {
     <!-- use the modal component, pass in the prop -->
     <modal :show="showModal" @close="showModal = false">
       <template #header>
-        <h3>{{ info.prefix + " · " + info.name }}</h3>
+        <span class="slot-char-name">{{ `${info.prefix} · ${info.name}（${info.ele.name}）` }}</span>
       </template>
       <template #body>
         <div class="img-half">
@@ -64,11 +62,11 @@ export default {
 
 <style>
 .bg-5-star {
-  background-color: rgb(255 177 63 / .5);
+  background-color: #b47b48;
 }
 
 .bg-4-star {
-  background-color: rgb(210 143 214 / .5);
+  background-color: #77609a;
 }
 
 .img-half {
@@ -91,8 +89,8 @@ export default {
 }
 
 .character {
-  width: 110px !important;
-  height: 150px;
+  width: 100px !important;
+  /* height: 150px; */
   font-size: 0;
   cursor: pointer;
   margin: 5px;
@@ -119,28 +117,37 @@ export default {
 
 .character-ele {
   position: absolute;
-  padding: 4px;
-  margin: -10px;
   top: 0;
-  right: 0;
-  background-color: rgb(0 0 0 /.5);
-  border-radius: 9999px;
+  left: 0;
 }
 
 .character-ele img {
-  width: 1rem;
-  height: 1rem;
+  width: 30px;
+  height: 30px;
+}
+
+.slot-char-name {
+  text-align: center;
+  /* width: 100%; */
+  /* color: #121212; */
+  background-color: #c0c5c5;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 5px;
 }
 
 .character-name {
-  position: relative;
-  height: 30px;
+  /* position: relative; */
+  /* margin-top: 5px; */
+  text-align: center;
   /* width: 100%; */
   /* color: #121212; */
-  background-color: rgb(153, 200, 196);
+  background-color: #c0c5c5;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
-
+  font-size: 18px;
+  font-weight: 800;
 }
 
 .character-name div {

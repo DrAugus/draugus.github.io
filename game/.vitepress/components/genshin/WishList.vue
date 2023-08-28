@@ -214,7 +214,7 @@ export default {
   /* height: 300px; */
   padding-bottom: 5px;
   margin-right: 5px;
-  /* 添加间距 */
+
   margin-bottom: 5px;
   /* 添加间距 */
   border-radius: 10px;
@@ -227,7 +227,9 @@ export default {
   /* border-radius: 50%; */
   /* background-color: #b47b48; */
   position: relative;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .tt1-image-corner {

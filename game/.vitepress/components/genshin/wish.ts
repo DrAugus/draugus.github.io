@@ -1159,5 +1159,47 @@ export const WISH = {
       wish5star: ["The First Great Magic", "Aqua Simulacra"],
       wish4star: ["Sacrificial Sword", "Favonius Greatsword", "Favonius Lance", "Sacrificial Fragments", "Sacrificial Bow"],
     },
+    {
+      name: "Epitome Invocation",
+      image: 52,
+      start: "2023-09-05 18:00:00 +0800",
+      end: "2023-09-26 14:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 53,
+      start: "2023-09-27 11:00:00 +0800",
+      end: "2023-10-17 17:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 54,
+      start: "2023-10-17 18:00:00 +0800",
+      end: "2023-11-07 14:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 55,
+      start: "2023-11-08 11:00:00 +0800",
+      end: "2023-11-28 17:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 56,
+      start: "2023-11-28 18:00:00 +0800",
+      end: "2023-12-19 14:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 57,
+      start: "2023-12-20 11:00:00 +0800",
+      end: "2024-01-09 17:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 58,
+      start: "2024-01-09 18:00:00 +0800",
+      end: "2024-01-30 14:59:59 +0800",
+    },
   ]
 }
