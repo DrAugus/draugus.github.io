@@ -88,23 +88,25 @@ const process = () => {
         }
 
 
-        const char = wish.wish5star
+        const chars = wish.wish5star
 
+        for (let char of chars) {
+            if (_chars5[char] === undefined) {
+                _chars5[char] = {
+                    pos: pos5,
+                    length: 0,
+                };
+                _names5[pos5] = { name: char, length: 0 };
+                _rows5[pos5] = [...new Array(len).fill({ l: '' }), { char, l: 0 }];
+                pos5++;
+            } else {
+                _rows5[_chars5[char].pos][len] = { char, l: 0 };
+                _names5[_chars5[char].pos].length = 0;
+                _chars5[char].length = 0;
 
-        if (_chars5[char] === undefined) {
-            _chars5[char] = {
-                pos: pos5,
-                length: 0,
-            };
-            _names5[pos5] = { name: char, length: 0 };
-            _rows5[pos5] = [...new Array(len).fill({ l: '' }), { char, l: 0 }];
-            pos5++;
-        } else {
-            _rows5[_chars5[char].pos][len] = { char, l: 0 };
-            _names5[_chars5[char].pos].length = 0;
-            _chars5[char].length = 0;
-
+            }
         }
+
 
         len++;
     }
