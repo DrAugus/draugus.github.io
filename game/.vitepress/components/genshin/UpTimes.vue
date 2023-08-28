@@ -3,8 +3,8 @@
         次数 <a @click="sort(0)">递增</a> | <a @click="sort(1)">递减</a>
     </p>
 
-    <div v-for="(v, k) in charMap">
-        {{ modifyChar(v[0], CHARACTER) }} : {{ v[1].length }}
+    <div v-for="(v, k) in modify5starWishInfo">
+        {{ v.name }} : {{ v.times }}
     </div>
 </template>
 
@@ -13,8 +13,7 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { parseDayjs, modifyChar,filterObject } from "../utils";
-import dayjs from "dayjs";
+import { modifyChar, filterObject } from "../utils";
 
 
 
@@ -51,51 +50,37 @@ modify5starWishData = filterObject(modify5starWishData, v => v.length)
 console.log('modify5starWishData', modify5starWishData)
 
 
-const filterChar = () => {
-    let charMap = new Map();
-    for (let wish of WISH.characters) {
-        //当前时间在祈愿起始时间前
-        let start = parseDayjs(wish.start)
-        let end = parseDayjs(wish.end)
-        let startBefore = dayjs().isBefore(start, "second");
-        if (startBefore) break;
 
-        let wish5star = wish.wish5star;
-        let obj = {
-            start: start,
-            end: end,
-            ver: wish.version
-        };
-        if (charMap.has(wish5star)) {
-            let obj2 = charMap.get(wish5star);
-            charMap.set(wish5star, [...obj2, obj]);
-        } else {
-            charMap.set(wish5star, [obj]);
-        }
-    }
-    // console.log("charMap", charMap);
-    return charMap;
-}
+let modify5starWishInfo = []
+Object.values(modify5starWishData).forEach(function (v) {
+    let shortName = v[0].shortName
+    let obj = {}
 
-let charMap = filterChar();
+    obj.id = shortName
+    obj.name = CHARACTER[shortName].name
+    obj.times = v.length
+
+    modify5starWishInfo.push(obj)
+});
+console.log('modify5starWishInfo', modify5starWishInfo)
+
 
 export default defineComponent({
     name: "GenshinUpTimes",
     props: {},
     data() {
         return {
-            charMap,
-            modifyChar,
-            CHARACTER,
+            modify5starWishInfo,
         }
     },
     methods: {
         sort(type) {
-            this.charMap = (Array.from(charMap).sort((a, b) =>
+            this.modify5starWishInfo = (this.modify5starWishInfo.sort((a, b) =>
                 !type ?
-                    a[1].length - b[1].length :
-                    b[1].length - a[1].length
+                    a.times - b.times :
+                    b.times - a.times
             ))
+
         },
     },
 })

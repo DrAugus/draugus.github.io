@@ -64,12 +64,12 @@ const FORK_DESCRIBE = {
 
 // 此处不过滤常驻角色，因为有的常驻 up 过
 const all5star = Object.values(CHARACTER).filter(character => character.star === 5).map(obj => obj.id);
-console.log('all5star', all5star)
+// console.log('all5star', all5star)
 const all4star = Object.values(CHARACTER).filter(character => character.star === 4).map(obj => obj.id);
 // console.log(all4star)
 
 const sliceCharZH = all5star.map(v => CHARACTER[v].name)
-console.log('sliceCharZH', sliceCharZH)
+// console.log('sliceCharZH', sliceCharZH)
 
 // [char]: [wish1, wish2, ...]
 // only save: name, image, shortName, start, end, version
@@ -107,7 +107,7 @@ Object.values(modify5starWishData).forEach(function (value) {
   }
 });
 // 至此不再修改此数据
-console.log('modify5starWishData', modify5starWishData)
+// console.log('modify5starWishData', modify5starWishData)
 
 // // 取最新的 obj 形式，不方便
 // let modify5starWishInfo = {}
@@ -124,7 +124,7 @@ Object.values(modify5starWishData).forEach(function (v) {
   modify5starWishInfo.push(v[0])
 });
 modify5starWishInfo = modify5starWishInfo.sort((a, b) => compareDayjs(a.end, b.end))
-console.log('modify5starWishInfo', modify5starWishInfo)
+// console.log('modify5starWishInfo', modify5starWishInfo)
 
 // 为 modify5starWishInfo 加一个新的字段 duration 
 for (let v of modify5starWishInfo) {
@@ -166,7 +166,7 @@ for (let v of modify5starWishInfo) {
   obj.tag = v.duration // 排序用 由远至近-由大到小
   displayRes.push(obj)
 }
-console.log('displayRes', displayRes)
+// console.log('displayRes', displayRes)
 
 const showColor = (wish5star) => {
   let color = ''
