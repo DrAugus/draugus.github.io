@@ -1,7 +1,5 @@
 <template>
-  <!-- <h2>最近出场角色 情报</h2> -->
-  <!-- todo 点击角色 再展示 曾经出场的 时间段 -->
-
+  <br />
   <a @click="sortLast">最近排序</a> |
   <a @click="sortEarly">最远排序</a>
   <br><br>
@@ -9,32 +7,30 @@
   <div v-for="(v, i) in wishChar" :key="i">
 
     <div class="wish-container">
-      <span class="tt1-ver">{{ v.version }}</span>
+      <span class="wish-version" v-bind:title="getWishDate(v.start, v.end)">{{ v.version }}</span>
       <div class="outer-container">
 
-
         <div v-for="(vv, ii) in v.wish5star" :key="ii">
-          <div class="tt1-container">
-            <div class="tt1-avatar" :style="{ backgroundColor: '#b47b48' }">
+          <div class="char-container">
+            <div class="char-avatar" :style="{ backgroundColor: '#b47b48' }">
               <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
-              <div class="tt1-image-corner"
-                :style="{ backgroundImage: `url(/image/genshin/elements/${getCharEle(vv)}.png)` }"></div>
+              <div class="ele-corner" :style="{ backgroundImage: `url(/image/genshin/elements/${getCharEle(vv)}.png)` }">
+              </div>
             </div>
-            <div class="tt1-description">
+            <div class="char-name">
               <span class="wish-name">{{ getCharNameZh(vv) }}</span>
             </div>
           </div>
         </div>
 
         <div v-for="(vv, ii) in v.wish4star" :key="ii">
-          <div class="tt1-container">
-            <div class="tt1-avatar" :style="{ backgroundColor: '#77609a' }">
+          <div class="char-container">
+            <div class="char-avatar" :style="{ backgroundColor: '#77609a' }">
               <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
-              <div class="tt1-image-corner"
-                :style="{ backgroundImage: `url(/image/genshin/elements/${getCharEle(vv)}.png)` }"></div>
-
+              <div class="ele-corner" :style="{ backgroundImage: `url(/image/genshin/elements/${getCharEle(vv)}.png)` }">
+              </div>
             </div>
-            <div class="tt1-description">
+            <div class="char-name">
               <span class="wish-name">{{ getCharNameZh(vv) }}</span>
             </div>
           </div>
@@ -50,15 +46,13 @@
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 import { composeSrc } from "./utils";
-import { replaceAndLow, compareDayjs } from "../utils";
-
+import { replaceAndLow, compareDayjs, formatDayjs } from "../utils";
 
 const wishChar = WISH.characters
 
 
-
 export default {
-  name: "Fork",
+  name: "WishList",
   data() {
     return {
       wishChar,
@@ -84,10 +78,11 @@ export default {
     getCharEle(id) {
       return CHARACTER[replaceAndLow(id)]?.ele.id
     },
+    getWishDate(s, e) {
+      return formatDayjs(s) + ' ~ ' + formatDayjs(e)
+    },
   },
   async mounted() {
-    this.selectedFork = ""
-    this.selectedLastChar = ""
     // default
     this.sortEarly()
   }
@@ -95,97 +90,27 @@ export default {
 </script>
   
 <style scoped>
-.underline {
-  text-decoration: underline;
-}
-
-.date {
-  font-family: 'Lora', 'Times New Roman', serif;
-  font-style: italic;
-}
-
-.choose {
-  color: rgb(242, 109, 109);
-}
-
-.always-here {
-  color: rgb(106, 177, 52);
-}
-
-.fork-current {
-  color: rgb(177, 80, 48);
-}
-
-.fork-future {
-  color: rgb(69, 183, 236);
-}
-
-.wish-img {
-  width: 36px;
-  border-radius: 9999px;
-}
-
 .wish-container {
   display: flex;
   width: 100%;
   /* height: 100px; */
   background-color: #e5e5e5;
   padding: 10px;
-  /* border-radius: 9999px; */
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
-.wish-avatar {
-  display: flex;
-  flex-wrap: wrap;
-  /* 允许换行 */
-  justify-content: space-between;
 
-  width: 80px;
-  /* background-color: #ccc; */
-  /* height: 50%; */
-  /* border-radius: 9999px; */
-  margin-left: 20px;
-}
-
-.wish-info {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-}
 
 .wish-name {
   font-size: 18px;
   font-weight: 800;
 }
 
-.wish-version {
-  font-size: 16px;
-  color: #999;
-}
-
-.wish-duration {
-  font-size: 14px;
-  color: #999;
-}
-
-
-
-.avatar-container {
-  display: flex;
-  flex-wrap: wrap;
-  /* 允许换行 */
-  justify-content: space-between;
-  /* 水平间距均匀分布 */
-}
 
 .avatar {
   width: 20%;
-  /* 每个头像容器占据20%的宽度，一行最多显示5个 */
   margin-bottom: 20px;
-  /* 下方的间距 */
   max-width: 100%;
   max-height: 100%;
 }
@@ -194,9 +119,13 @@ export default {
   text-align: center;
 }
 
-.tt1-ver {
+.wish-version {
   display: flex;
   width: 10%;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 
@@ -206,7 +135,7 @@ export default {
   width: 95%;
 }
 
-.tt1-container {
+.char-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,14 +143,12 @@ export default {
   /* height: 300px; */
   padding-bottom: 5px;
   margin-right: 5px;
-
   margin-bottom: 5px;
-  /* 添加间距 */
   border-radius: 10px;
   background-color: lightgray;
 }
 
-.tt1-avatar {
+.char-avatar {
   width: 100px;
   height: 100px;
   /* border-radius: 50%; */
@@ -232,7 +159,7 @@ export default {
   border-top-right-radius: 10px;
 }
 
-.tt1-image-corner {
+.ele-corner {
   position: absolute;
   top: 0;
   left: 0;
@@ -242,9 +169,44 @@ export default {
   background-size: cover;
 }
 
-.tt1-description {
+.char-name {
   margin-top: 5px;
   text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .char-container {
+    width: 55px;
+    padding-bottom: unset;
+  }
+
+  .char-avatar {
+    width: 55px;
+    height: 55px;
+  }
+
+
+  .ele-corner {
+    width: 15px;
+    height: 15px;
+  }
+
+  .wish-name {
+    font-size: 8px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .char-name {
+    margin-top: unset;
+  }
+
+  .wish-version {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
 }
 </style>
   
