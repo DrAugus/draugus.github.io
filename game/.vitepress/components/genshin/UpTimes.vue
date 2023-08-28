@@ -13,8 +13,43 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { parseDayjs, modifyChar } from "../utils";
+import { parseDayjs, modifyChar,filterObject } from "../utils";
 import dayjs from "dayjs";
+
+
+
+const all5star = Object.values(CHARACTER).filter(character => character.star === 5).map(obj => obj.id);
+// console.log('all5star', all5star)
+
+let modify5starWishData = {}
+
+
+const modify5starWish = (char) => {
+    for (let c of char) {
+        modify5starWishData[c] = []
+        for (let w of WISH.characters) {
+            let idx = w.wish5star.indexOf(c)
+            if (idx !== -1) {
+                let obj = {}
+                obj.name = w.name[idx]
+                obj.image = w.image[idx]
+                obj.shortName = w.wish5star[idx]
+                obj.start = w.start
+                obj.end = w.end
+                obj.version = w.version
+
+                modify5starWishData[c].push(obj)
+            }
+        }
+    }
+}
+
+modify5starWish(all5star)
+// filter null
+modify5starWishData = filterObject(modify5starWishData, v => v.length)
+
+console.log('modify5starWishData', modify5starWishData)
+
 
 const filterChar = () => {
     let charMap = new Map();

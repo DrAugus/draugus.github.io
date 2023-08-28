@@ -3,6 +3,7 @@ export const sidebar_zh = {
     '/genshin/': [
         { text: '米哈游 cookie', link: "/genshin/mihoyo-cookie" },
         { text: '近期祈愿', link: "/genshin/wish-recent" },
+        { text: '祈愿列表', link: "/genshin/wish-list" },
         { text: '祈愿时间轴', link: "/genshin/timeline" },
         { text: '祈愿信息汇总(带图)', link: "/genshin/wish-all" },
         { text: '祈愿信息汇总', link: "/genshin/wish-all2" },
