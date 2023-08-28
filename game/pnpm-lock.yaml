@@ -24,8 +24,8 @@ devDependencies:
     specifier: 2.0.132
     version: 2.0.132
   vitepress:
-    specifier: ^1.0.0-rc.8
-    version: 1.0.0-rc.8(@algolia/client-search@4.19.1)(sass@1.66.1)(search-insights@2.7.0)
+    specifier: ^1.0.0-rc.9
+    version: 1.0.0-rc.9(@algolia/client-search@4.19.1)(sass@1.66.1)(search-insights@2.7.0)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -949,8 +949,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.8(@algolia/client-search@4.19.1)(sass@1.66.1)(search-insights@2.7.0):
-    resolution: {integrity: sha512-InoW3VdY0KDrFi/Nffy9hoL5wd7ScWaCiHx6im4TCCvNP01N7AF0Wq5MX+4b3HIZGS6I9b3ltbP1pGvqHP79Mg==}
+  /vitepress@1.0.0-rc.9(@algolia/client-search@4.19.1)(sass@1.66.1)(search-insights@2.7.0):
+    resolution: {integrity: sha512-HqMcWqJnxk/8aIN9LqhvEbKkBYop8qGs3/qw3Tt1AwdIRoTGOw5sk7g84J5j1H0p9Axvk87c9xrtMum4G/VVjQ==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.5.2
