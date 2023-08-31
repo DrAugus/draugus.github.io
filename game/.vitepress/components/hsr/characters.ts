@@ -1,6 +1,17 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  dan_heng_imbibitor_lunae: {
+    id: 'Dan Heng•Imbibitor Lunae',
+    name: '丹恒•饮月',
+    prefix: Weapon.Destruction.name,
+    star: 5,
+    event_exclusive: true,
+    intro: '',
+    city: City.TheXianzhouLuofu,
+    ele: Element.Imaginary,
+    weapon: Weapon.Destruction
+  },
   luka: {
     id: "Luka",
     name: "卢卡",

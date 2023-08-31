@@ -74,17 +74,30 @@ export const WISH = {
       url: ['']
     },
     {
+      name: ['Epochal Spectrum'],
+      image: [1],
+      shortName: ['Dan Heng•Imbibitor Lunae'],
+      start: '2023-08-30 10:00:00 +0800',
+      end: '2023-09-20 17:59:59 +0800',
+      version: '1.3',
+      wish5star: ['dan_heng_imbibitor_lunae'],
+      wish4star: ['Yukong', 'Asta', 'March 7th'],
+      wishName: ['「濯世垂虹」'],
+      url: ['']
+    },
+    {
       name: [''],
       image: [1],
       shortName: ['Fu Xuan'],
-      start: '2023-08-30 10:00:00 +0800',
-      end: '2023-09-20 17:59:59 +0800',
+      start: '2023-09-20 18:00:00 +0800',
+      end: '2023-10-10 17:59:59 +0800',
       version: '1.3',
       wish5star: ['fu_xuan'],
       wish4star: [],
       wishName: [''],
       url: ['']
-    }],
+    },
+  ],
   weapons: [
     {
       name: "Brilliant Fixation",

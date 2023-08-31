@@ -634,10 +634,10 @@ export const WISH = {
       start: "2023-09-05 18:00:00 +0800",
       end: "2023-09-26 14:59:59 +0800",
       wish5star: ["zhongli", "tartaglia"],
-      wish4star: ["freminet"],
+      wish4star: ['Freminet', 'Sayu', 'Noelle'],
       version: "4.0",
       wishName: ["「陵薮市朝」", "「暂别冬都」"],
-      url: ["", ""]
+      url: ["?", "?"]
     },
     {
       name: ["", "Azure Excursion"],
