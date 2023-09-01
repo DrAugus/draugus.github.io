@@ -1,8 +1,52 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  guinaifen: {
+    id: "Guinaifen",
+    name: "桂乃芬",
+    prefix: Weapon.Nihility.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Fire,
+    weapon: Weapon.Nihility
+  },
+  topaz_numby: {
+    id: "Topaz & Numby",
+    name: "托帕&账账",
+    prefix: Weapon.Hunt.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Fire,
+    weapon: Weapon.Hunt
+  },
+  jingliu: {
+    id: "Jingliu",
+    name: "镜流",
+    prefix: Weapon.Destruction.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Ice,
+    weapon: Weapon.Destruction
+  },
+  lynx: {
+    id: "Lynx",
+    name: "玲可",
+    prefix: Weapon.Abundance.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.JariloVI,
+    ele: Element.Quantum,
+    weapon: Weapon.Abundance
+  },
   dan_heng_imbibitor_lunae: {
-    id: 'Dan Heng•Imbibitor Lunae',
+    id: 'Dan Heng · Imbibitor Lunae',
     name: '丹恒•饮月',
     prefix: Weapon.Destruction.name,
     star: 5,
@@ -49,8 +93,8 @@ export const CHARACTER = {
     id: "Fu Xuan",
     name: "符玄",
     prefix: Weapon.Preservation.name,
-    star: 4,
-    event_exclusive: false,
+    star: 5,
+    event_exclusive: true,
     intro: "",
     city: City.TheXianzhouLuofu,
     ele: Element.Quantum,

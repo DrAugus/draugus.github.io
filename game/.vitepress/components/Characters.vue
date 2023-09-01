@@ -15,7 +15,8 @@
     <div class="filter-title"> 世界</div>
     <div class="filter-info">
       <span v-for="(v, k, i) in city">
-        <a @click="filterCity(v.id)">{{ v.name + " " }}</a>
+        <a @click="filterCity(v.id)">{{ v.name }}</a>
+        <span v-if="i !== Object.getOwnPropertyNames(city).length - 1">{{ ' · ' }}</span>
       </span>
     </div>
   </div>
@@ -37,7 +38,14 @@
     <div class="filter-title"> 战斗</div>
     <div class="filter-info">
       <span v-for="(v, k, i) in weapon">
-        <a @click="filterWeapon(v.id)">{{ v.name + " " }}</a>
+        <a @click="filterWeapon(v.id)">
+
+          <span v-if="Game">
+            <img :src="`/image/${gameName}/elements/${(v.id).replace('The ', '').toLowerCase()}.png`" :width="30"
+              alt="{{1}}">
+          </span>
+          {{ v.name }}</a>
+        <span v-if="i !== Object.getOwnPropertyNames(weapon).length - 1">{{ ' · ' }}</span>
       </span>
     </div>
   </div>
@@ -59,7 +67,8 @@
       intro: value.intro,
       star: value.star,
       ele: value.ele,
-    }" :game="gameName">
+      weapon: value.weapon,
+    }" :game="Game">
 
     </CharModal>
 
@@ -140,6 +149,7 @@ export default {
 }
 
 .filter-info {
+  display: flex;
   width: 80%;
   font-weight: 600;
   justify-content: center;

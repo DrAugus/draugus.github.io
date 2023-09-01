@@ -9,7 +9,7 @@ export default {
       default: () => {
       }
     },
-    game: '',
+    game: null,
   },
   components: {
     Modal
@@ -18,6 +18,7 @@ export default {
     return {
       showModal: false,
       replaceAndLow,
+      gameName: getGameName(this.game)
     };
   },
   methods: {
@@ -30,11 +31,14 @@ export default {
 
 <template>
   <div class="character" id="show-modal" @click="showModal = true">
-    <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star'">
-      <img :src='`/image/${game}/characters/${replaceAndLow(info.id)}.png`' @error="replaceImg">
+    <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star', game ? 'char-img2' : 'char-img1'">
+      <img :src='`/image/${gameName}/characters/${replaceAndLow(info.id)}.png`' object-fit: contain @error="replaceImg">
     </div>
     <div class="character-ele">
-      <img :src="`/image/${game}/elements/${replaceAndLow(info.ele.id)}.png`" alt="{{1}}">
+      <img :src="`/image/${gameName}/elements/${replaceAndLow(info.ele.id)}.png`" alt="{{1}}">
+    </div>
+    <div v-if="game" class="character-weapon">
+      <img :src="`/image/${gameName}/elements/${(info.weapon.id).replace('The ', '').toLowerCase()}.png`" alt="{{1}}">
     </div>
     <div class="character-name">
       {{ info.name }}
@@ -49,7 +53,7 @@ export default {
       </template>
       <template #body>
         <div class="img-half">
-          <img :src='`/image/${game}/characters/half/${replaceAndLow(info.id)}.png`' @error="replaceImg">
+          <img :src='`/image/${gameName}/characters/half/${replaceAndLow(info.id)}.png`' @error="replaceImg">
         </div>
         <span>{{ info.intro }}</span>
       </template>
@@ -89,7 +93,7 @@ export default {
 }
 
 .character {
-  width: 100px !important;
+  /* width: 100px !important; */
   /* height: 150px; */
   font-size: 0;
   cursor: pointer;
@@ -109,10 +113,26 @@ export default {
   transition-property: transform, -webkit-transform;
 }
 
+.char-img1 {
+  width: 100px;
+  height: 100px;
+}
+
+.char-img2 {
+  width: 105px;
+  height: 120px;
+}
+
 .character-img {
-  /* width: 6rem; */
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+}
+
+.character-img img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
 }
 
 .character-ele {
@@ -122,6 +142,17 @@ export default {
 }
 
 .character-ele img {
+  width: 30px;
+  height: 30px;
+}
+
+.character-weapon {
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+
+.character-weapon img {
   width: 30px;
   height: 30px;
 }
