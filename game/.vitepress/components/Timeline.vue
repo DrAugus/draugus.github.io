@@ -27,17 +27,14 @@
 
         <div class="timeline-wish-event-weapon">
           <div class="card event-item weapon" v-for="(value, i) in WISH.weapons" :class="[
-            i > 0 && diffWishStyle(WISH.weapons[i - 1].end, value.start) < 0 ? 'rounded-l-xl' : '',
-            i > 0 && diffWishStyle(WISH.weapons[i - 1].end, value.start) > 0 ? 'border-r-4 border-white' : '',
-            i == 0 ? 'rounded-l-xl' : '',
-            i == WISH.weapons.length - 1 ? 'rounded-r-xl' : '',
-            i < WISH.weapons.length - 1 && diffWishStyle(value.end, WISH.weapons[i + 1].start) < 0 ? 'rounded-r-xl' : '',
+            getBorderRadius(wishWeapons, i)
           ]" v-bind:style="{
   width: wishWeapons[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
   height: 'var(--event-height)'
 }">
-            <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
+            <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
+              style="height: 100%">
               <div class="event-img">
                 <img v-bind:src="`/image/${gameName}/wish/` +
                   value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
@@ -61,12 +58,15 @@
 
               <div class="card event-item " :class="[
                 'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
+                getBorderRadius(wishCharacters, i),
               ]" :style="{
+
   width: wishCharacters[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
   marginTop: j ? '68px' : ''
 }">
-                <div class="card-image waves-effect waves-block waves-light" style="height: 100%">
+                <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishCharacters, i)]"
+                  style="height: 100%">
                   <div class="event-img responsive-img lazy">
                     <img v-bind:src="`/image/${gameName}/wish/` +
                       value.name[j].concat('_' + value.image[j] + '.jpg').toLowerCase().replace(/ /g, '_') +
@@ -219,12 +219,44 @@ export default {
     setCurrentPos() {
       this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
     },
+    // 保证 e 在 s 之后
+    // start - end
     diffWishStyle(s, e) {
       if (s == e) return 0
       let res = parseDayjs(e).subtract(0, "minute")
         .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1
       if (res) return 1
       return -1
+    },
+    getBorderRadius(wishInfo, i) {
+      const len = wishInfo.length
+      if (!len) return ''
+      let style = ''
+      if (i === 0) {
+        style += 'rounded-l-xl '
+      } else if (i === len - 1) {
+        style += 'rounded-r-xl '
+      } else {
+        let diff = this.diffWishStyle(wishInfo[i].end, wishInfo[i + 1].start)
+        if (diff === 1) {
+          style += 'border-r-4 border-white '
+        } else if (diff === -1) {
+          style += 'rounded-r-xl '
+        }
+
+        let diff2 = this.diffWishStyle(wishInfo[i - 1].end, wishInfo[i].start)
+        if (diff2 === 1) {
+          style += 'border-r-4 border-white '
+        } else if (diff2 === -1) {
+          style += 'rounded-l-xl '
+        }
+      }
+
+      if (style.includes('rounded-r-xl')) {
+        style = style.replace('border-r-4 border-white ', '');
+      }
+
+      return style
     },
 
 
@@ -290,8 +322,8 @@ export default {
 }
 
 .rounded-l-xl {
-  border-top-left-radius: 12px;
-  border-bottom-left-radius: 12px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
 }
 
 .border-r-4 {
@@ -304,27 +336,13 @@ export default {
 }
 
 .rounded-r-xl {
-  border-top-right-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .sticky {
   position: -webkit-sticky;
   position: sticky;
-}
-
-@media only screen and (max-width: 600px) {
-
-  .hide-on-small-only,
-  .hide-on-small-and-down {
-    /* display: none !important; */
-  }
-}
-
-@media only screen and (min-width: 993px) {
-  .hide-on-large-only {
-    /* display: none !important; */
-  }
 }
 </style>
 
