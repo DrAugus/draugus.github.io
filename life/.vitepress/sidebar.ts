@@ -12,8 +12,9 @@ const sidebarDaily = () => [
     { text: '买车吗', link: '/daily/car' },
     { text: '办卡吗', link: '/daily/card' },
     { text: '户口', link: '/daily/hukou' },
-    { text: '月亮', link: '/daily/moon' },
+    { text: '租房', link: '/daily/rent' },
     { text: '通勤', link: '/daily/commuting' },
+    { text: '月亮', link: '/daily/moon' },
     { text: '投影仪', link: '/daily/projector' },
     {
         text: '记录 Apple 使用体验', collapsed: false, items: [

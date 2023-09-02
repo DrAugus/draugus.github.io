@@ -53,7 +53,7 @@
 
 
   <h3> <a @click="all"> 全部角色 </a></h3>
-  <span> 当前共计收录 {{ lenChar }} 名角色(不包含旅行者)</span> <br />
+  <span> 当前共计收录 {{ lenChar }} 名角色(不包含{{ protagonist }})</span> <br />
   <span v-if="lenChar !== lenFilterChar"> 筛选了 {{ lenFilterChar }} 名角色</span>
 
 
@@ -94,7 +94,8 @@ export default {
       lenChar: this.Character ? Object.getOwnPropertyNames(this.Character).length : 0,
       lenFilterChar: this.Character ? Object.getOwnPropertyNames(this.Character).length : 0,
       replaceAndLow,
-      gameName: getGameName(this.Game)
+      gameName: getGameName(this.Game),
+      protagonist: this.Game ? '开拓者' : '旅行者',
     };
   },
   props: { Character: Object, City: Object, Element: Object, Weapon: Object, Game: 0 },

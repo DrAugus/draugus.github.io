@@ -169,5 +169,15 @@ export const WISH = {
       wish4star: [],
       url: ""
     },
+    {
+      name: "Brilliant Fixation",
+      image: 8,
+      start: '2023-09-20 18:00:00 +0800',
+      end: '2023-10-10 17:59:59 +0800',
+      shortName: "",
+      wish5star: [],
+      wish4star: [],
+      url: ""
+    },
   ]
 }
