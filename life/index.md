@@ -10,12 +10,10 @@ hero:
     src: /home.png
     alt: none
   actions:
-    - theme: brand
-      text: 最近更新
-      link: /recent
-    - theme: alt
-      text: 吃点儿
-      link: /eat/
+    # - theme: brand
+    #   text: 最近更新
+    #   link: /recent
+
     - theme: brand
       text: 旅行
       link: /trip/      
@@ -26,6 +24,9 @@ hero:
       text: 游记
       link: /trip/travelogue/
     - theme: alt
+      text: 吃点儿
+      link: /eat/      
+    - theme: alt
       text: 文科
       link: /arts/
     - theme: alt
@@ -33,11 +34,6 @@ hero:
       link: /code/      
 # Could add features description here
 features:
-  - title: 吃点饭吧
-    icon: 🥂
-    details: 吃饭真的太重要了
-    link: /eat/
-    linkText: 今天吃啥呢
   - title: 旅行
     icon: 🚀
     details: 旅行是旅行计划也是旅行记录
@@ -63,4 +59,9 @@ features:
     details: 互相学习互相学习
     link: /code/
     linkText: 快来看看如何编程
+  - title: 吃点饭吧
+    icon: 🥂
+    details: 吃饭真的太重要了
+    link: /eat/
+    linkText: 今天吃啥呢    
 ---
