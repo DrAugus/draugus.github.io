@@ -6,7 +6,7 @@ specifiers:
   sass: ^1.66.1
   typed.js: 2.0.132
   vite: ^4.4.9
-  vitepress: ^1.0.0-rc.11
+  vitepress: ^1.0.0-rc.12
   vue: ^3.3.4
   vue-echarts: ^6.6.1
 
@@ -16,7 +16,7 @@ devDependencies:
   sass: 1.66.1
   typed.js: 2.0.132
   vite: 4.4.9_sass@1.66.1
-  vitepress: 1.0.0-rc.11_sass@1.66.1
+  vitepress: 1.0.0-rc.12_sass@1.66.1
   vue: 3.3.4
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.4
 
@@ -896,8 +896,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /shiki/0.14.3:
-    resolution: {integrity: sha512-U3S/a+b0KS+UkTyMjoNojvTgrBHjgp7L6ovhFVZsXmBGnVdQ4K4U9oK0z63w538S91ATngv1vXigHCSWOwnr+g==}
+  /shiki/0.14.4:
+    resolution: {integrity: sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==}
     dependencies:
       ansi-sequence-parser: 1.1.0
       jsonc-parser: 3.2.0
@@ -974,8 +974,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-rc.11_sass@1.66.1:
-    resolution: {integrity: sha512-HUnfYOadqwLSahtgQxKt9/wiNHdd80BaUfQ+DIMpfq03Iv9CWX1SCBK4gxK/bMWns3Q0ArhXajQbU/fmBwYUMg==}
+  /vitepress/1.0.0-rc.12_sass@1.66.1:
+    resolution: {integrity: sha512-mZknN5l9lgbBjXwumwdOQQDM+gPivswFEykEQeenY0tv7eocS+bb801IpFZT3mFV6YRhSddmbutHlFgPPADjEg==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.5.2
@@ -986,7 +986,7 @@ packages:
       focus-trap: 7.5.2
       mark.js: 8.11.1
       minisearch: 6.1.0
-      shiki: 0.14.3
+      shiki: 0.14.4
       vite: 4.4.9_sass@1.66.1
       vue: 3.3.4
     transitivePeerDependencies:
