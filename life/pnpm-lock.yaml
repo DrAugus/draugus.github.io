@@ -6,7 +6,7 @@ specifiers:
   sass: ^1.66.1
   typed.js: 2.0.132
   vite: ^4.4.9
-  vitepress: ^1.0.0-rc.12
+  vitepress: ^1.0.0-rc.13
   vue: ^3.3.4
   vue-echarts: ^6.6.1
 
@@ -16,7 +16,7 @@ devDependencies:
   sass: 1.66.1
   typed.js: 2.0.132
   vite: 4.4.9_sass@1.66.1
-  vitepress: 1.0.0-rc.12_sass@1.66.1
+  vitepress: 1.0.0-rc.13_sass@1.66.1
   vue: 3.3.4
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.4
 
@@ -974,8 +974,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-rc.12_sass@1.66.1:
-    resolution: {integrity: sha512-mZknN5l9lgbBjXwumwdOQQDM+gPivswFEykEQeenY0tv7eocS+bb801IpFZT3mFV6YRhSddmbutHlFgPPADjEg==}
+  /vitepress/1.0.0-rc.13_sass@1.66.1:
+    resolution: {integrity: sha512-TnVydQOZE38rtXu9gHCb7EGdN03jTcmYkDdhCqox6+pfKYgiyfm1qk2Uy8BZatnM9wXpa64f+T5p30R8P/9Z+A==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.5.2
