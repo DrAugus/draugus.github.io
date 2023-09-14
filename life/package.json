@@ -18,7 +18,7 @@
   "devDependencies": {
     "@mdit-vue/shared": "^0.12.1",
     "echarts": "^5.4.3",
-    "sass": "^1.66.1",
+    "sass": "^1.67.0",
     "typed.js": "2.0.132",
     "vitepress": "^1.0.0-rc.13",
     "vite": "^4.4.9",
