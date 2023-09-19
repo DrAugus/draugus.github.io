@@ -101,7 +101,7 @@ export const CHARACTER = {
     intro: "",
     city: City.Fontaine,
     ele: Element.hydro,
-    weapon: Weapon.polearm
+    weapon: Weapon.catalyst
   },
   wriothesley: {
     id: "wriothesley",
@@ -112,7 +112,7 @@ export const CHARACTER = {
     intro: "",
     city: City.Fontaine,
     ele: Element.cryo,
-    weapon: Weapon.claymore
+    weapon: Weapon.catalyst
   },
   freminet: {
     id: "freminet",
