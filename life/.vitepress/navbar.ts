@@ -11,7 +11,7 @@ export const navbar = [
     activeMatch: '^/trip',
   },
   { text: '日常', link: '/daily/', activeMatch: '^/daily' },
-  { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
+  // { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
   {
     text: '文科',
     items: [

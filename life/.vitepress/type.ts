@@ -28,3 +28,19 @@ export interface ChinaExploreRecord {
   id: string
   items?: ChinaExploreRecordItem[]
 }
+
+export interface EatDishes {
+  name: string
+  info: string
+  judge: string
+  price: number
+  lv: number
+}
+
+export interface EatRestaurant {
+  name: string
+  type: {}
+  // 0 可以吃 1推荐吃
+  lv: number
+  item: EatDishes[]
+}
