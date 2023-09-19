@@ -1,6 +1,6 @@
 ---
 layoutClass: m-nav-layout
-outline: [2, 3, 4]
+outline: [2, 4]
 ---
 
 # 链接收录

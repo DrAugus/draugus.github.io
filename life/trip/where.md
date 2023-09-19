@@ -1,6 +1,6 @@
 ---
 layoutClass: m-trip-place-layout
-outline: [2, 3, 4]
+outline: [2, 4]
 sidebar: false
 ---
 
