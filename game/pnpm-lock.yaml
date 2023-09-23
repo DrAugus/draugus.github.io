@@ -6,11 +6,11 @@ settings:
 
 devDependencies:
   '@types/leaflet':
-    specifier: 1.9.4
-    version: 1.9.4
+    specifier: 1.9.5
+    version: 1.9.5
   '@vue-leaflet/vue-leaflet':
     specifier: 0.10.1
-    version: 0.10.1(@types/leaflet@1.9.4)(leaflet@1.9.4)
+    version: 0.10.1(@types/leaflet@1.9.5)(leaflet@1.9.4)
   dayjs:
     specifier: 1.11.10
     version: 1.11.10
@@ -442,8 +442,8 @@ packages:
     resolution: {integrity: sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==}
     dev: true
 
-  /@types/leaflet@1.9.4:
-    resolution: {integrity: sha512-kfwgQf4eOxoe/tD9CaKQrBKHbc7VpyfJOG5sxsQtkH+ML9xYa8hUC3UMa0wU1pKfciJtO0pU9g9XbWhPo7iBCA==}
+  /@types/leaflet@1.9.5:
+    resolution: {integrity: sha512-C+aD2/DueS+cVltMBPUHQPhgM99E3eXG4kw8/USIUxUxdqTiIGnifdDpnD/491CGsMzQ4bMvGtxUJBArFnhQSw==}
     dependencies:
       '@types/geojson': 7946.0.10
     dev: true
@@ -452,7 +452,7 @@ packages:
     resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==}
     dev: true
 
-  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.4)(leaflet@1.9.4):
+  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.5)(leaflet@1.9.4):
     resolution: {integrity: sha512-RNEDk8TbnwrJl8ujdbKgZRFygLCxd0aBcWLQ05q/pGv4+d0jamE3KXQgQBqGAteE1mbQsk3xoNcqqUgaIGfWVg==}
     peerDependencies:
       '@types/leaflet': ^1.5.7
@@ -461,7 +461,7 @@ packages:
       '@types/leaflet':
         optional: true
     dependencies:
-      '@types/leaflet': 1.9.4
+      '@types/leaflet': 1.9.5
       leaflet: 1.9.4
       vue: 3.3.4
     dev: true
