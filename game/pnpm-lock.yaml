@@ -6,11 +6,11 @@ settings:
 
 devDependencies:
   '@types/leaflet':
-    specifier: 1.9.5
-    version: 1.9.5
+    specifier: 1.9.6
+    version: 1.9.6
   '@vue-leaflet/vue-leaflet':
     specifier: 0.10.1
-    version: 0.10.1(@types/leaflet@1.9.5)(leaflet@1.9.4)
+    version: 0.10.1(@types/leaflet@1.9.6)(leaflet@1.9.4)
   dayjs:
     specifier: 1.11.10
     version: 1.11.10
@@ -24,8 +24,8 @@ devDependencies:
     specifier: 2.0.132
     version: 2.0.132
   vitepress:
-    specifier: ^1.0.0-rc.18
-    version: 1.0.0-rc.18(@algolia/client-search@4.19.1)(sass@1.68.0)(search-insights@2.7.0)
+    specifier: ^1.0.0-rc.20
+    version: 1.0.0-rc.20(@algolia/client-search@4.19.1)(sass@1.68.0)(search-insights@2.7.0)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -442,17 +442,32 @@ packages:
     resolution: {integrity: sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==}
     dev: true
 
-  /@types/leaflet@1.9.5:
-    resolution: {integrity: sha512-C+aD2/DueS+cVltMBPUHQPhgM99E3eXG4kw8/USIUxUxdqTiIGnifdDpnD/491CGsMzQ4bMvGtxUJBArFnhQSw==}
+  /@types/leaflet@1.9.6:
+    resolution: {integrity: sha512-HakGTK5LBBWegNWsAmTlG55zN1zszYec7aG47/z6SzT90bW2vqjmbqk3YKAbrtveO+G7fSTKTYqVbIwAFnTrbg==}
     dependencies:
       '@types/geojson': 7946.0.10
+    dev: true
+
+  /@types/linkify-it@3.0.3:
+    resolution: {integrity: sha512-pTjcqY9E4nOI55Wgpz7eiI8+LzdYnw3qxXCfHyBDdPbYvbyLgWLJGh8EdPvqawwMK1Uo1794AUkkR38Fr0g+2g==}
+    dev: true
+
+  /@types/markdown-it@13.0.1:
+    resolution: {integrity: sha512-SUEb8Frsxs3D5Gg9xek6i6EG6XQ5s+O+ZdQzIPESZVZw3Pv3CPQfjCJBI+RgqZd1IBeu18S0Rn600qpPnEK37w==}
+    dependencies:
+      '@types/linkify-it': 3.0.3
+      '@types/mdurl': 1.0.2
+    dev: true
+
+  /@types/mdurl@1.0.2:
+    resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
     dev: true
 
   /@types/web-bluetooth@0.0.17:
     resolution: {integrity: sha512-4p9vcSmxAayx72yn70joFoL44c9MO/0+iVEBIQXe3v2h2SiAsEIo/G5v6ObFWvNKRFjbrVadNf9LqEEZeQPzdA==}
     dev: true
 
-  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.5)(leaflet@1.9.4):
+  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.6)(leaflet@1.9.4):
     resolution: {integrity: sha512-RNEDk8TbnwrJl8ujdbKgZRFygLCxd0aBcWLQ05q/pGv4+d0jamE3KXQgQBqGAteE1mbQsk3xoNcqqUgaIGfWVg==}
     peerDependencies:
       '@types/leaflet': ^1.5.7
@@ -461,7 +476,7 @@ packages:
       '@types/leaflet':
         optional: true
     dependencies:
-      '@types/leaflet': 1.9.5
+      '@types/leaflet': 1.9.6
       leaflet: 1.9.4
       vue: 3.3.4
     dev: true
@@ -949,17 +964,21 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.18(@algolia/client-search@4.19.1)(sass@1.68.0)(search-insights@2.7.0):
-    resolution: {integrity: sha512-v56RMvZ6dCQU23P1EcnDKT9+qTdmBIZRdu72r4JU9V3qcFsrFPdkL6gAyN1+JWgPon5yoZDEKB5prAjy2vQShg==}
+  /vitepress@1.0.0-rc.20(@algolia/client-search@4.19.1)(sass@1.68.0)(search-insights@2.7.0):
+    resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
+      postcss: ^8.4.30
     peerDependenciesMeta:
       markdown-it-mathjax3:
+        optional: true
+      postcss:
         optional: true
     dependencies:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2(@algolia/client-search@4.19.1)(search-insights@2.7.0)
+      '@types/markdown-it': 13.0.1
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.4.1(vue@3.3.4)
       '@vueuse/integrations': 10.4.1(focus-trap@7.5.2)(vue@3.3.4)
