@@ -19,6 +19,7 @@ const sidebarDaily = () => [
     {
         text: '记录 Apple 使用体验', collapsed: false, items: [
             { text: 'Apple官方日历订阅', link: '/daily/apple/calendar' },
+            { text: 'iPhone', link: '/daily/apple/iphone' },
             { text: '评测', link: '/daily/apple/review' },
             { text: '价格波动', link: '/daily/apple/price' },
             { text: '苹果究竟怎么了', link: '/daily/apple/reflect' },
