@@ -36,9 +36,8 @@
             <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
               style="height: 100%">
               <div class="event-img">
-                <img v-bind:src="`/image/${gameName}/wish/` +
-                  value.name.concat('_' + value.image + '.jpg').toLowerCase().replace(/ /g, '_') +
-                  ''" @error="replaceImg" alt="">
+                <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, value.image)}`" @error="replaceImg"
+                  alt="">
               </div>
               <span class="left-align timeline-character-text sticky text-shadow-weapon ">
                 {{ replaceText('', gameNum, 1) }}
@@ -68,9 +67,8 @@
                 <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishCharacters, i)]"
                   style="height: 100%">
                   <div class="event-img responsive-img lazy">
-                    <img v-bind:src="`/image/${gameName}/wish/` +
-                      value.name[j].concat('_' + value.image[j] + '.jpg').toLowerCase().replace(/ /g, '_') +
-                      ''" @error="replaceImg" alt="">
+                    <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name[j], value.image[j])}`"
+                      @error="replaceImg" alt="">
                   </div>
                   <span class="left-align timeline-character-text sticky"
                     :class="'ele-text-shadow-' + CHARACTER[value.wish5star[j]]?.ele?.id">
@@ -103,7 +101,7 @@
 
 <script>
 
-import { parseDayjs, getGameName, replaceText } from "./utils";
+import { parseDayjs, getGameName, combineWishPic, replaceText } from "./utils";
 import { processEvent } from "./eventHandle";
 
 import dayjs from "dayjs";
@@ -142,6 +140,7 @@ export default {
       homeTagline: '',
       gameName: getGameName(this.WISH_TEXT),
       gameNum: this.WISH_TEXT,
+      combineWishPic,
       replaceText,
     };
   },

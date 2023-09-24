@@ -19,8 +19,8 @@
       <td>{{ v.version }}</td>
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
       <td v-for="(vv, ii) in v.name">
-        <img v-bind:src="'/image/genshin/wish/' +
-          replaceAndLow(v.name[ii]) + '_' + v.image[ii] + '.jpg'" width="320" @error="replaceImg" alt="">
+        <img v-bind:src="`/image/hsr/wish/${combineWishPic(v.name[ii], v.image[ii])}`" width="320" @error="replaceImg"
+          alt="">
       </td>
       <td v-for="(vv, ii) in v.name">
         {{ CHARACTER[v.wish5star[ii]].name }} [{{ v.image[ii] }}]
@@ -35,7 +35,7 @@ import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
-import { replaceAndLow, formatDayjs } from "../utils";
+import { combineWishPic, formatDayjs } from "../utils";
 
 dayjs.locale("zh");
 
@@ -45,7 +45,7 @@ export default {
     return {
       char: WISH.characters,
       CHARACTER,
-      replaceAndLow,
+      combineWishPic,
       dayjs,
       formatDayjs,
     };

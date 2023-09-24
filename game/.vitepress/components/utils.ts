@@ -99,7 +99,15 @@ export const replaceText =
 
 //替换空格 转小写
 export const replaceAndLow = (str: string) =>
-  str?.replace(/ /g, "_").replace(/·/g, "_").replace(/&/g, "_").replace(/___/g, "_").toLowerCase();
+  str?.replace(/ /g, "_")
+    .replace(/·/g, "_")
+    .replace(/&/g, "_")
+    .replace(/,/g, "_")
+    .replace(/__/g, "_").toLowerCase();
+
+
+export const combineWishPic = (wishName: string, wishImage: number) =>
+  replaceAndLow(wishName) + "_" + wishImage + '.jpg';
 
 //格式化日期
 import dayjs from "dayjs";

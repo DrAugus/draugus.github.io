@@ -1,6 +1,6 @@
 import type { EventHandleWish, WishInfo, WishInfoObj } from './type'
 import dayjs from "dayjs";
-import { formatDayjs, replaceAndLow, getGameName } from './utils';
+import { formatDayjs, replaceAndLow, combineWishPic, getGameName } from './utils';
 
 // 找出当前在哪个祈愿时间段
 export const getWishIndex = (wish: EventHandleWish[]) => {
@@ -42,12 +42,7 @@ const getWishObj = (wish: EventHandleWish, game: number = 0) => {
     let arrImg: string[] = []
     let wish5starArr: string[] = []
     for (let i = 0; i < wish.name.length; ++i) {
-        let picName = replaceAndLow(wish.name[i]) + "_" + wish.image[i];
-        let img = `/image/${strGame}/wish/`;
-        img += picName;
-        img += ".jpg";
-        arrImg.push(img)
-
+        arrImg.push(`/image/${strGame}/wish/${combineWishPic(wish.name[i], wish.image[i])}`)
         wish5starArr.push(wish.wish5star[i])
     }
 

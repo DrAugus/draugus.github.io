@@ -1162,6 +1162,8 @@ export const WISH = {
       image: 52,
       start: "2023-09-05 18:00:00 +0800",
       end: "2023-09-26 14:59:59 +0800",
+      wish5star: ['Vortex Vanquisher', 'Polar Star'],
+      wish4star: ['The Flute', 'Sacrificial Greatsword', "Dragon's Bane", 'The Widsith', 'Rust'],
     },
     {
       name: "Epitome Invocation",
