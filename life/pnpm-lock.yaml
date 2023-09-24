@@ -6,7 +6,7 @@ specifiers:
   sass: ^1.68.0
   typed.js: 2.0.132
   vite: ^4.4.9
-  vitepress: ^1.0.0-rc.18
+  vitepress: ^1.0.0-rc.20
   vue: ^3.3.4
   vue-echarts: ^6.6.1
 
@@ -16,7 +16,7 @@ devDependencies:
   sass: 1.68.0
   typed.js: 2.0.132
   vite: 4.4.9_sass@1.68.0
-  vitepress: 1.0.0-rc.18_sass@1.68.0
+  vitepress: 1.0.0-rc.20_sass@1.68.0
   vue: 3.3.4
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.4
 
@@ -442,6 +442,13 @@ packages:
 
   /@types/markdown-it/13.0.0:
     resolution: {integrity: sha512-mPTaUl5glYfzdJFeCsvhXQwZKdyszNAZcMm5ZTP5SfpTu+vIbog7J3z8Fa4x/Fzv5TB4R6OA/pHBYIYmkYOWGQ==}
+    dependencies:
+      '@types/linkify-it': 3.0.2
+      '@types/mdurl': 1.0.2
+    dev: true
+
+  /@types/markdown-it/13.0.1:
+    resolution: {integrity: sha512-SUEb8Frsxs3D5Gg9xek6i6EG6XQ5s+O+ZdQzIPESZVZw3Pv3CPQfjCJBI+RgqZd1IBeu18S0Rn600qpPnEK37w==}
     dependencies:
       '@types/linkify-it': 3.0.2
       '@types/mdurl': 1.0.2
@@ -974,17 +981,21 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-rc.18_sass@1.68.0:
-    resolution: {integrity: sha512-v56RMvZ6dCQU23P1EcnDKT9+qTdmBIZRdu72r4JU9V3qcFsrFPdkL6gAyN1+JWgPon5yoZDEKB5prAjy2vQShg==}
+  /vitepress/1.0.0-rc.20_sass@1.68.0:
+    resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
+      postcss: ^8.4.30
     peerDependenciesMeta:
       markdown-it-mathjax3:
+        optional: true
+      postcss:
         optional: true
     dependencies:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2
+      '@types/markdown-it': 13.0.1
       '@vue/devtools-api': 6.5.0
       '@vueuse/core': 10.4.1_vue@3.3.4
       '@vueuse/integrations': 10.4.1_focus-trap@7.5.2+vue@3.3.4
