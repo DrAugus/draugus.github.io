@@ -6,7 +6,7 @@ specifiers:
   sass: ^1.68.0
   typed.js: 2.0.132
   vite: ^4.4.9
-  vitepress: ^1.0.0-rc.17
+  vitepress: ^1.0.0-rc.18
   vue: ^3.3.4
   vue-echarts: ^6.6.1
 
@@ -16,7 +16,7 @@ devDependencies:
   sass: 1.68.0
   typed.js: 2.0.132
   vite: 4.4.9_sass@1.68.0
-  vitepress: 1.0.0-rc.17_sass@1.68.0
+  vitepress: 1.0.0-rc.18_sass@1.68.0
   vue: 3.3.4
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.4
 
@@ -974,8 +974,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-rc.17_sass@1.68.0:
-    resolution: {integrity: sha512-OPyP/VExNUk1aiErOgLE7Vv9Tgr9i9DZHDlDzqBcLfvDpXq33CDfn42JSzpsKGA020HOFOnV+t3/S1i/T5n7bg==}
+  /vitepress/1.0.0-rc.18_sass@1.68.0:
+    resolution: {integrity: sha512-v56RMvZ6dCQU23P1EcnDKT9+qTdmBIZRdu72r4JU9V3qcFsrFPdkL6gAyN1+JWgPon5yoZDEKB5prAjy2vQShg==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
