@@ -1,5 +1,18 @@
 <template>
-    <EChartsModel :option="option" />
+    <div>
+        <span>
+            {{ " " }}
+            <button class="custom-button all-button" @click="filterModel(-1)">
+                全部型号
+            </button>
+        </span>
+        <span v-for="(v, i) in iphoneModelName">
+            {{ " " }}
+            <button class="custom-button" @click="filterModel(i)">
+                {{ v }}
+            </button>
+        </span>
+    </div>
 
     <table>
         <tr>
@@ -14,6 +27,8 @@
             </td>
         </tr>
     </table>
+
+    <EChartsModel :option="option" />
 </template>
   
 <script>
@@ -21,7 +36,7 @@ import EChartsModel from "./EChartsModel.vue"
 
 import iphoneObj from '../data/iphone.json'
 
-// console.log(iphoneObj)
+
 
 const iphoneCapacity = iphoneObj.capacity
 const year = iphoneObj.year
@@ -40,9 +55,6 @@ keys.forEach(key => {
     });
 });
 
-// console.log("iphoneModel", iphoneModel);
-// console.log("iphonePrice", iphonePrice);
-
 
 const iphonePriceByModel = {};
 for (let cap of iphoneCapacity) {
@@ -53,8 +65,6 @@ for (let cap of iphoneCapacity) {
         iphonePriceByModel[cap].push(!objPrice[cap] ? 0 : objPrice[cap])
     }
 }
-
-// console.log("iphonePriceByModel", iphonePriceByModel);
 
 
 const getCapacityName = (num) => {
@@ -74,7 +84,7 @@ const getCapacityName = (num) => {
 
 const convertedCapacityName = iphoneCapacity.map(number => getCapacityName(number));
 
-// console.log("convertedCapacityName", convertedCapacityName);
+
 
 
 var app = {};
@@ -180,7 +190,7 @@ option = {
         }
     },
     legend: {
-        data: ['Forest', 'Steppe', 'Desert', 'Wetland']
+        data: convertedCapacityName
     },
     toolbox: {
         show: true,
@@ -258,6 +268,60 @@ option = {
     ]
 };
 
+// console.log(iphoneObj)
+
+// console.log("iphoneModel", iphoneModel);
+// console.log("iphonePrice", iphonePrice);
+// console.log("iphoneCapacity", iphoneCapacity);
+
+// console.log("iphonePriceByModel", iphonePriceByModel);
+// console.log("convertedCapacityName", convertedCapacityName);
+
+
+
+// const numberValues = iphoneModel.filter(item => !isNaN(Number(item)));
+// console.log(numberValues);
+// const numberIndices = iphoneModel.map((item, index) => {
+//     if (!isNaN(Number(item))) {
+//         return index;
+//     }
+// }).filter(index => index !== undefined);
+// console.log(numberIndices);
+
+const miniModels = [];
+const numModels = [];
+const plusModels = [];
+const proModels = [];
+const proMaxModels = [];
+
+
+for (let i = 0; i < iphoneModel.length; i++) {
+    if (iphoneModel[i].includes("mini")) {
+        miniModels.push({ value: iphoneModel[i], index: i });
+    }
+    if (!isNaN(iphoneModel[i])) {
+        numModels.push({ value: iphoneModel[i], index: i });
+    }
+    if (iphoneModel[i].includes("Plus")) {
+        plusModels.push({ value: iphoneModel[i], index: i });
+    }
+    if (iphoneModel[i].includes("Pro") && !iphoneModel[i].includes("Pro Max")) {
+        proModels.push({ value: iphoneModel[i], index: i });
+    }
+    if (iphoneModel[i].includes("Pro Max")) {
+        proMaxModels.push({ value: iphoneModel[i], index: i });
+    }
+}
+
+const indices = (obj) => obj.map(item => item.index);
+const extractedValues = (sourceArr, indexArr) => indexArr.map(index => sourceArr[index]);
+
+// console.log("Models with 'mini':", miniModels);
+// console.log("Models only number:", numModels);
+// console.log("Models with 'Plus':", plusModels);
+// console.log("Models with 'Pro':", proModels);
+// console.log("Models with 'Pro Max':", proMaxModels);
+
 
 export default {
     name: "Airfare",
@@ -271,7 +335,40 @@ export default {
             capacityName: convertedCapacityName,
             iphoneModel: iphoneModel,
             iphonePrice: iphonePrice,
+            iphoneModelName: ['mini', '数字版', 'Plus', 'Pro', 'Pro Max'],
         };
+    },
+    methods: {
+        // 0 mini 1 number 2 plus 3 pro 4 pm
+        filterModel(model) {
+            if (model === -1) {
+                this.iphoneModel = iphoneModel
+                this.iphonePrice = iphonePrice
+                return
+            }
+
+            const models = [miniModels, numModels, plusModels, proModels, proMaxModels]
+            const indexModels = models.map(obj => indices(obj));
+
+            // console.log("indexModels", indexModels)
+            // console.log("extracted iphoneModel", extractedValues(iphoneModel, indexModels[model]))
+            // console.log("extracted iphonePrice", extractedValues(iphonePrice, indexModels[model]))
+
+
+            this.iphoneModel = extractedValues(iphoneModel, indexModels[model])
+            this.iphonePrice = extractedValues(iphonePrice, indexModels[model])
+
+            const result = {};
+            for (const key in iphonePriceByModel) {
+                result[key] = indexModels[model].map(index => iphonePriceByModel[key][index]);
+            }
+
+            for (let i in 4) {
+                option.series[i].data = result[iphoneCapacity[i]]
+            }
+            this.option = option
+
+        },
     },
 };
 </script>
@@ -279,6 +376,28 @@ export default {
 <style scoped>
 .table-text-center {
     text-align: center;
+}
+
+.custom-button {
+    background-color: #ff6633;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.custom-button:hover {
+    background-color: #ff9966;
+}
+
+.all-button {
+    background-color: #3374ff;
+}
+
+.all-button:hover {
+    background-color: #33d6ff;
 }
 </style>
   
