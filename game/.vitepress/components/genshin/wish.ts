@@ -640,13 +640,13 @@ export const WISH = {
       url: ["?", "?"]
     },
     {
-      name: ["", "Moment of Bloom"],
+      name: ["Decree of the Deeps", "Moment of Bloom"],
       image: [1, 4],
       shortName: ["Neuvillette", "Hu Tao"],
       start: "2023-09-27 11:00:00 +0800",
       end: "2023-10-17 17:59:59 +0800",
       wish5star: ["neuvillette", "hu_tao"],
-      wish4star: [],
+      wish4star: ['Fischl', 'Xingqiu', 'Diona'],
       version: "4.1",
       wishName: ["", "「赤团开时」"],
       url: ["?", "?"]
@@ -1170,12 +1170,16 @@ export const WISH = {
       image: 53,
       start: "2023-09-27 11:00:00 +0800",
       end: "2023-10-17 17:59:59 +0800",
+      wish5star: ['Tome of the Eternal Flow', 'Staff of Homa'],
+      wish4star: ["The Dockhand's Assistant", 'Portable Power Saw', 'Mitternachts Waltz'],
     },
     {
       name: "Epitome Invocation",
       image: 54,
       start: "2023-10-17 18:00:00 +0800",
       end: "2023-11-07 14:59:59 +0800",
+      wish5star: [],
+      wish4star: [],
     },
     {
       name: "Epitome Invocation",

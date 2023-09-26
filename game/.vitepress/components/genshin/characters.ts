@@ -98,7 +98,7 @@ export const CHARACTER = {
     prefix: "谕告的潮音",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "枫丹的最高审判官，看起来难以亲近，或许是天性使然，或者是为了掩盖秘密。",
     city: City.Fontaine,
     ele: Element.hydro,
     weapon: Weapon.catalyst
@@ -120,7 +120,7 @@ export const CHARACTER = {
     prefix: "潜怀遐梦",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "不善言谈的少年，精于潜水之道，内心就如他爱不释手的童话故事那般纯真。",
     city: City.Fontaine,
     ele: Element.cryo,
     weapon: Weapon.claymore

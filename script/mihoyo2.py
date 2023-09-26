@@ -41,7 +41,9 @@ for get_warp in all_events_info:
 # clean none img arr
 img_url = list(filter(None, img_url))
 
-print('img_url', img_url)
+print('img_url')
+for mm in img_url:
+    print(mm)
 print('post_id', post_id)
 
 

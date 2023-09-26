@@ -19,7 +19,7 @@
       <td>{{ v.version }}</td>
       <td>{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
       <td v-for="(vv, ii) in v.name">
-        <img v-bind:src="`/image/hsr/wish/${combineWishPic(v.name[ii], v.image[ii])}`" width="320" @error="replaceImg"
+        <img v-bind:src="`/image/genshin/wish/${combineWishPic(v.name[ii], v.image[ii])}`" width="320" @error="replaceImg"
           alt="">
       </td>
       <td v-for="(vv, ii) in v.name">
