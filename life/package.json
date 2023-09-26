@@ -16,7 +16,7 @@
     "preview": "vitepress preview ."
   },
   "devDependencies": {
-    "@mdit-vue/shared": "^0.12.1",
+    "@mdit-vue/shared": "^1.0.0",
     "echarts": "^5.4.3",
     "sass": "^1.68.0",
     "typed.js": "2.0.132",
