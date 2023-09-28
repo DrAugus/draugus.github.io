@@ -5,7 +5,7 @@ titleTemplate: 吃什么 去哪玩
 hero:
   name: 乐享人生
   text: 人生在于食，在于游
-  tagline: 周游各地 食遍天下 加油进步
+  tagline: 周游各地，食遍天下，加油进步 <br/>我活着是为了什么
   image:
     src: /home.png
     alt: none
