@@ -97,6 +97,30 @@ export const WISH = {
       wishName: ['「穷观妙算」'],
       url: ['']
     },
+    {
+      name: [''],
+      image: [1],
+      shortName: ['Jingliu'],
+      start: '2023-10-11 10:00:00 +0800',
+      end: '2023-10-29 11:59:59 +0800',
+      version: '1.4',
+      wish5star: ['jingliu'],
+      wish4star: ['tingyun', 'Qingque', 'Sampo'],
+      wishName: ['「月有薄蚀」'],
+      url: ['']
+    },
+    {
+      name: ['', 'Butterfly on Swordtip'],
+      image: [1, 2],
+      shortName: ['Topaz & Numby', 'Seele'],
+      start: '2023-10-29 10:00:00 +0800',
+      end: '2023-11-15 17:59:59 +0800',
+      version: '1.4',
+      wish5star: ['topaz_numby', 'seele'],
+      wish4star: ['guinaifen', 'Luka', 'Sushang'],
+      wishName: ['「落日条款」', '「蝶立锋锷」'],
+      url: ['']
+    },
   ],
   weapons: [
     {
@@ -177,6 +201,26 @@ export const WISH = {
       shortName: "",
       wish5star: ["She Already Shut Her Eyes"],
       wish4star: ['Perfect Timing', 'Under the Blue Sky', 'Trend of the Universal Market'],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: 9,
+      start: '2023-10-11 10:00:00 +0800',
+      end: '2023-10-29 11:59:59 +0800',
+      shortName: "",
+      wish5star: [],
+      wish4star: [],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: 10,
+      start: '2023-10-29 10:00:00 +0800',
+      end: '2023-11-15 17:59:59 +0800',
+      shortName: "",
+      wish5star: [],
+      wish4star: [],
       url: ""
     },
   ]
