@@ -11,14 +11,14 @@
       <Badge :text="'v' + v.version"></Badge>
       <span class="f-w-600">
         <span v-for="(vv, ii) in v.wishName">
-          {{ v.wishName[ii] + modifyChar(v.wish5star[ii], CHARACTER) }}
+          {{ v.wishName[ii] + getCharName(v.wish5star[ii], CHARACTER) }}
           <Badge :text="v.image[ii] + ' up'" :type="getBadgeType(v.image[ii])"></Badge>
         </span>
       </span>
 
       {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
       <span v-for="(vv, ii) in v.wish4star">
-        {{ modifyChar(replaceAndLow(vv), CHARACTER) + ' ' }}
+        {{ getCharName(replaceAndLow(vv), CHARACTER) + ' ' }}
       </span>
     </li>
   </ul>
@@ -29,7 +29,7 @@ import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 import "dayjs/locale/zh";
-import { replaceAndLow, formatDayjs, modifyChar } from "../utils";
+import { replaceAndLow, formatDayjs, getCharName } from "../utils";
 
 dayjs.locale("zh");
 
@@ -42,7 +42,7 @@ export default {
       replaceAndLow,
       dayjs,
       formatDayjs,
-      modifyChar,
+      getCharName,
     };
   },
   methods: {

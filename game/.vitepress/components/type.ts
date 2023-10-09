@@ -49,6 +49,7 @@ export interface WishInfoObj {
   name: string[],
   date: string,
   ver: string,
+  image: number[]
   src: string[],
   wish5star: string[],
   wish4star: string[]

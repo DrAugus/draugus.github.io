@@ -5,13 +5,31 @@
       <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
-    <h3>
-      <span v-for="(v, i) in current.obj">
+
+
+    <span v-for="(v, i) in current.obj">
+      <h3>
+        下列限定5星角色的祈愿获取概率将大幅提升！ <br />
         <span v-for="(vv, ii) in v.name">
-          {{ v.name[ii] + modifyChar(v.wish5star[ii], CHARACTER) }}
+          <span :class="'ele-text-' + getCharElement(v.wish5star[ii], CHARACTER).id">
+            {{ v.name[ii] + '祈愿：' + combineChar(v.wish5star[ii], CHARACTER) }}
+          </span>
+          <Badge :text="v.image[ii] == 1 ? '首次up' : `第${v.image[ii]}次up`" :type="v.image[ii] == 1 ? 'tip' : 'warning'">
+          </Badge>
+          <br />
+        </span>
+      </h3>
+      四星角色
+      <span v-for="(vv, ii) in v.wish4star">
+        <span :class="'ele-text-' + getCharElement(vv, CHARACTER).id">
+          {{ '「' + combineChar(vv, CHARACTER) + '」' }}
         </span>
       </span>
-    </h3>
+      的祈愿获取概率将大幅提升！
+
+
+    </span>
+
     <div class="bg-height" :style="imgStyle"></div>
 
     <h3>{{ end }} 后结束</h3>
@@ -38,14 +56,14 @@
       <li v-for="(v, i) in future.obj">
         <span class="f-w-600">
           <span v-for="(vv, ii) in v.wish5star">
-            {{ modifyChar(vv, CHARACTER) }}
+            {{ getCharName(vv, CHARACTER) }}
             <span v-if="ii !== v.wish5star.length - 1">{{ '+ ' }}</span>
           </span>
         </span>
         <Badge :text="v.ver"></Badge>
         {{ v.date }}
         <span v-for="(vv, ii) in v.wish4star">
-          {{ modifyChar(vv, CHARACTER) }}
+          {{ getCharName(vv, CHARACTER) }}
         </span>
       </li>
     </ul>
@@ -57,9 +75,11 @@
 </template>
 
 <script>
-import { modifyChar, getImgStyle } from '../utils';
+import { getCharName, combineChar, getCharElement, getImgStyle } from '../utils';
 import { CHARACTER } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
+
+import "./genshin.scss";
 
 export default {
   name: "Wish",
@@ -73,7 +93,9 @@ export default {
       current,
       begin: new Date(),
       end: new Date(),
-      modifyChar,
+      getCharName,
+      getCharElement,
+      combineChar,
       CHARACTER,
       imgStyle: getImgStyle(current, 0),
     };

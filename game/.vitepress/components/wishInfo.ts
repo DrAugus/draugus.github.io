@@ -57,6 +57,7 @@ const getWishObj = (wish: EventHandleWish, game: number = 0) => {
         name: wish.wishName,
         date: s + " ~ " + e,
         ver: wish.version,
+        image: wish.image,
         src: arrImg,
         wish5star: wish5starArr,
         wish4star: wish4star

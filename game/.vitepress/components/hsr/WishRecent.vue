@@ -8,7 +8,7 @@
     <h3>
       <span v-for="(v, i) in current.obj">
         <span v-for="(vv, ii) in v.name">
-          {{ v.name[ii] + modifyChar(v.wish5star[ii], CHARACTER) }}
+          {{ v.name[ii] + getCharName(v.wish5star[ii], CHARACTER) }}
         </span>
       </span>
     </h3>
@@ -37,14 +37,14 @@
     <ul>
       <li v-for="(v, i) in future.obj">
         <span class="f-w-600"> <span v-for="(vv, ii) in v.wish5star">
-            {{ modifyChar(vv, CHARACTER) }}
+            {{ getCharName(vv, CHARACTER) }}
             <span v-if="ii !== v.wish5star.length - 1">{{ '+ ' }}</span>
           </span>
         </span>
         <Badge :text="v.ver"></Badge>
         {{ v.date }}
         <span v-for="(vv, ii) in v.wish4star">
-          {{ modifyChar(vv, CHARACTER) }}
+          {{ getCharName(vv, CHARACTER) }}
         </span>
       </li>
     </ul>
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { modifyChar, getImgStyle } from '../utils';
+import { getCharName, getImgStyle } from '../utils';
 import { CHARACTER } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
@@ -72,7 +72,7 @@ export default {
       current,
       begin: new Date(),
       end: new Date(),
-      modifyChar,
+      getCharName,
       CHARACTER,
       imgStyle: getImgStyle(current, 1),
     };

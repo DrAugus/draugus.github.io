@@ -1,8 +1,20 @@
 import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 
-export const modifyChar =
+export const getCharName =
   (id: string, char: Characters) =>
     !id ? '' : char[id]?.name
+
+export const getCharPrefix =
+  (id: string, char: Characters) =>
+    !id ? '' : char[id]?.prefix
+
+export const getCharElement =
+  (id: string, char: Characters) =>
+    !id ? '' : char[id]?.ele
+
+export const combineChar =
+  (id: string, char: Characters) =>
+    !id ? '' : (`${getCharPrefix(id, char)} · ${getCharName(id, char)}(${getCharElement(id, char).name})`)
 
 export const getImgStyle =
   (current: WishInfo, gameNum: number = 0) => {

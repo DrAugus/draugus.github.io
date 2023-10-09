@@ -13,7 +13,7 @@ import { defineComponent } from 'vue'
 
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { modifyChar, filterObject } from "../utils";
+import { getCharName, filterObject } from "../utils";
 
 
 

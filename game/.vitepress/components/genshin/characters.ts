@@ -362,7 +362,7 @@ export const CHARACTER = {
   fischl: {
     id: "fischl",
     name: "菲谢尔",
-    prefix: "断罪皇女",
+    prefix: "断罪皇女！！",
     star: 4,
     event_exclusive: false,
     intro: "自称「断罪之皇女」，与名为奥兹的漆黑夜鸦同行的神秘少女。目前正以调查员身份供职于冒险家协会。通过自己的特殊能力加上奇妙的个性，还有本人不愿意承认的努力，菲谢尔成为了冒险家协会调查员中的新星，且成功赢得了大家的认可。",

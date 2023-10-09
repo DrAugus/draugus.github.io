@@ -648,7 +648,7 @@ export const WISH = {
       wish5star: ["neuvillette", "hu_tao"],
       wish4star: ['Fischl', 'Xingqiu', 'Diona'],
       version: "4.1",
-      wishName: ["", "「赤团开时」"],
+      wishName: ["「渊海界令」", "「赤团开时」"],
       url: ["?", "?"]
     },
     {
