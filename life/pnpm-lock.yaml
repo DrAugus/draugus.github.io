@@ -12,17 +12,17 @@ devDependencies:
     specifier: ^5.4.3
     version: 5.4.3
   sass:
-    specifier: ^1.69.1
-    version: 1.69.1
+    specifier: ^1.69.2
+    version: 1.69.2
   typed.js:
     specifier: 2.0.132
     version: 2.0.132
   vite:
     specifier: ^4.4.11
-    version: 4.4.11(sass@1.69.1)
+    version: 4.4.11(sass@1.69.2)
   vitepress:
     specifier: ^1.0.0-rc.20
-    version: 1.0.0-rc.20(@algolia/client-search@4.19.1)(sass@1.69.1)(search-insights@2.8.3)
+    version: 1.0.0-rc.20(@algolia/client-search@4.19.1)(sass@1.69.2)(search-insights@2.8.3)
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -891,8 +891,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /sass@1.69.1:
-    resolution: {integrity: sha512-nc969GvTVz38oqKgYYVHM/Iq7Yl33IILy5uqaH2CWSiSUmRCvw+UR7tA3845Sp4BD5ykCUimvrT3k1EjTwpVUA==}
+  /sass@1.69.2:
+    resolution: {integrity: sha512-48lDtG/9OuSQZ9oNmJMUXI2QdCakAWrAGjpX/Fy6j4Og8dEAyE598x5GqCqnHkwV7+I5w8DJpqjm581q5HNh3w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -947,7 +947,7 @@ packages:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
 
-  /vite@4.4.11(sass@1.69.1):
+  /vite@4.4.11(sass@1.69.2):
     resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -978,12 +978,12 @@ packages:
       esbuild: 0.18.11
       postcss: 8.4.31
       rollup: 3.28.0
-      sass: 1.69.1
+      sass: 1.69.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress@1.0.0-rc.20(@algolia/client-search@4.19.1)(sass@1.69.1)(search-insights@2.8.3):
+  /vitepress@1.0.0-rc.20(@algolia/client-search@4.19.1)(sass@1.69.2)(search-insights@2.8.3):
     resolution: {integrity: sha512-CykMUJ8JLxLcGWek0ew3wln4RYbsOd1+0YzXITTpajggpynm2S331TNkJVOkHrMRc6GYe3y4pS40GfgcW0ZwAw==}
     hasBin: true
     peerDependencies:
@@ -1005,7 +1005,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.4
-      vite: 4.4.11(sass@1.69.1)
+      vite: 4.4.11(sass@1.69.2)
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
