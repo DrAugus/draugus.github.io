@@ -12,17 +12,17 @@ C++ 的 atomic 类型提供了一种简单的方法来执行原子操作，它�
 
 int main() {
   std::atomic<int> a(0);
-  std::cout << "a = " << a << std::endl; // 输出 a 的值
+  std::cout << "a = " << a << std::endl; // 输出 a 的值 0
 
   a++; // 原子加法
-  std::cout << "a = " << a << std::endl; // 输出 a 的值
+  std::cout << "a = " << a << std::endl; // 输出 a 的值 1
 
   a--; // 原子减法
-  std::cout << "a = " << a << std::endl; // 输出 a 的值
+  std::cout << "a = " << a << std::endl; // 输出 a 的值 0
 
   int b = 1;
   a.compare_exchange_strong(b, 2); // 原子比较并交换
-  std::cout << "a = " << a << std::endl; // 输出 a 的值
+  std::cout << "a = " << a << std::endl; // 输出 a 的值 0
   return 0;
 }
 ```

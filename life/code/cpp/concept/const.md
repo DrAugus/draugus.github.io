@@ -46,3 +46,11 @@
 ## 如何初始化const和static数据成员？
 
 通常在类外初始化static数据成员，但是 static const 的整型(ool，char，int，long)可以再类声明中初始化， static const的其他类型也必须在类外初始化(包括整型的数组)。
+
+## static const 和 const static 有什么区别
+
+`static const`和`const static`在C++中没有区别。这两种表达方式都表明了一个变量是静态的（只初始化一次）且是常量（只读的，不能被修改）。
+
+在C++中，修饰符（例如`static`和`const`）的顺序不影响其含义。因此，无论你是用`static const`还是`const static`，都表示相同的意思。
+
+但是，通常`const`会被放在类型前面，例如`const int`，因此`static const`更常见。这也是推荐的书写方法，因为它与`const`本身被放在类型前面的一般惯用法相一致。
