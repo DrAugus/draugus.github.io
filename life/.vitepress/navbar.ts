@@ -37,6 +37,7 @@ export const navbar = [
     ],
     activeMatch: '^/arts',
   },
+  { text: '理科', link: '/science/', activeMatch: '^/science' },
   {
     text: '电脑',
     items: [
@@ -83,7 +84,9 @@ export const navbar = [
     text: '待定',
     items: [
       { text: '学习', link: '/study/' },
+      { text: '高考', link: '/study/gaokao' },
       { text: '职业', link: '/career/' },
+      { text: '证书', link: '/career/certificate/' },
       {
         text: '差不多得了',
         items: [

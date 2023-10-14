@@ -341,6 +341,9 @@ const sidebarArtsXiwen = () => [
     { text: '尽忠报国全粤义民申谕英夷告示', link: '/arts/xiwen/尽忠报国全粤义民申谕英夷告示' },
     { text: '谕南京等处文武官员军民人等告示', link: '/arts/xiwen/谕南京等处文武官员军民人等告示' },
 ]
+const sidebarScience = () => [
+    { text: '离散数学', link: '/science/discrete-math' },
+]
 const sidebarComputerOS = () => [
     {
         text: 'MacOS', collapsed: false, items: [
@@ -371,8 +374,8 @@ const sidebarComputerOS = () => [
     },
 ]
 const sidebarComputerSoftware = () => [
+    { text: '推荐软件安装', link: '/computer/software/' },
     { text: 'web tools', link: '/computer/software/webtools' },
-    { text: '推荐软件安装', link: '/computer/software/1.install' },
     { text: 'fish cmd', link: '/computer/software/fish' },
     { text: 'Tabby', link: '/computer/software/tabby' },
     { text: 'Git', link: '/computer/software/git' },
@@ -597,22 +600,17 @@ const sidebarCodeProgram = () => [
     },
 ]
 const sidebarStudy = () => [
-    { text: '各种考试', link: '/study/' },
-    { text: '高考', link: '/study/gaokao' },
+    { text: '随便学学', link: '/study/' },
     { text: '散篇1', link: '/study/temp1' },
     { text: '散篇2', link: '/study/temp2' },
-    {
-        text: '杂谈', collapsed: false, items: [
-            { text: '痛经', link: '/study/rambling/dysmenorrhoea' },
-            { text: '电网', link: '/study/rambling/state-grid' },
-            { text: '锻炼', link: '/study/rambling/exercise' },
-            { text: '梅花 vs 桃花 vs 樱花', link: '/study/rambling/flower' },
-            { text: '学位服', link: '/study/rambling/academic-dress' },
-            { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill' },
-            { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor' },
-            { text: '身份证', link: '/study/rambling/id_card' },
-        ]
-    },
+    { text: '痛经', link: '/study/rambling/dysmenorrhoea' },
+    { text: '电网', link: '/study/rambling/state-grid' },
+    { text: '锻炼', link: '/study/rambling/exercise' },
+    { text: '梅花 vs 桃花 vs 樱花', link: '/study/rambling/flower' },
+    { text: '学位服', link: '/study/rambling/academic-dress' },
+    { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill' },
+    { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor' },
+    { text: '身份证', link: '/study/rambling/id_card' },
 ]
 const sidebarCareer = () => [
     { text: '简历', link: '/career/cv' },
@@ -711,6 +709,8 @@ export const sidebar = {
     '/arts/language/': sidebarArtsLang(),
     '/arts/speech/': sidebarArtsSpeech(),
     '/arts/xiwen/': sidebarArtsXiwen(),
+    //
+    '/science/': sidebarScience(),
     //
     '/computer/os/': sidebarComputerOS(),
     '/computer/software/': sidebarComputerSoftware(),
