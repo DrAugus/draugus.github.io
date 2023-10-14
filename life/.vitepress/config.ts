@@ -18,7 +18,7 @@ export default defineConfig({
             rel: "stylesheet",
             href: "//unpkg.com/heti/umd/heti.min.css",
         },],
-        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
     themeConfig: {
         logo: '/logo.png',
@@ -93,5 +93,8 @@ export default defineConfig({
                 }
             }
         }
+    },
+    markdown: {
+        math: true
     },
 })

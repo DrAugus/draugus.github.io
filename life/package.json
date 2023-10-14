@@ -18,10 +18,11 @@
   "devDependencies": {
     "@mdit-vue/shared": "^1.0.0",
     "echarts": "^5.4.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "sass": "^1.69.3",
     "typed.js": "2.0.132",
-    "vitepress": "^1.0.0-rc.21",
     "vite": "^4.4.11",
+    "vitepress": "^1.0.0-rc.21",
     "vue": "^3.3.4",
     "vue-echarts": "^6.6.1"
   }
