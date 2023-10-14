@@ -32,6 +32,7 @@ export const navbar = [
           { text: '文章', link: '/arts/article/' },
         ],
       },
+      { text: '演讲', link: '/arts/speech/' },
       { text: '一言', link: '/arts/one-word' },
     ],
     activeMatch: '^/arts',

@@ -33,6 +33,7 @@ const sidebarDaily = () => [
 ]
 const sidebarTrip = () => [
     { text: '规划指南', link: '/trip/' },
+    { text: '出行提醒', link: '/trip/tips' },
     { text: '出门检查', link: '/trip/check' },
     { text: '旅行账单', link: '/trip/bill' },
     { text: '探索', link: '/trip/explore' },
@@ -45,6 +46,7 @@ const sidebarTrip = () => [
             { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
             { text: '酒店', link: '/trip/hotel' },
             { text: '机场', link: '/trip/airport' },
+            { text: '火车站', link: '/trip/railway' },
         ]
     },
 
@@ -265,6 +267,9 @@ const sidebarArtsHistory = () => [
 const sidebarArtsMusic = () => [
     { text: '乐理', link: '/arts/music/music_theory' },
     { text: '连音', link: '/arts/music/tuplet' },
+]
+const sidebarArtsSpeech = () => [
+    { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/arts/speech/craig-federighi' },
 ]
 const sidebarArtsLang = () => [
     { text: '中文', link: '/arts/language/chinese' },
@@ -605,13 +610,7 @@ const sidebarStudy = () => [
             { text: '学位服', link: '/study/rambling/academic-dress' },
             { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill' },
             { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor' },
-            { text: '南阳——沈阳  ', link: '/study/rambling/nanyang2shenyang' },
             { text: '身份证', link: '/study/rambling/id_card' },
-        ]
-    },
-    {
-        text: '演讲文稿', collapsed: false, items: [
-            { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/study/speech/craig-federighi' },
         ]
     },
 ]
@@ -710,6 +709,7 @@ export const sidebar = {
     '/arts/history/': sidebarArtsHistory(),
     '/arts/music/': sidebarArtsMusic(),
     '/arts/language/': sidebarArtsLang(),
+    '/arts/speech/': sidebarArtsSpeech(),
     '/arts/xiwen/': sidebarArtsXiwen(),
     //
     '/computer/os/': sidebarComputerOS(),
