@@ -7,7 +7,7 @@ specifiers:
   sass: ^1.69.3
   typed.js: 2.0.132
   vite: ^4.4.11
-  vitepress: ^1.0.0-rc.21
+  vitepress: ^1.0.0-rc.22
   vue: ^3.3.4
   vue-echarts: ^6.6.1
 
@@ -18,7 +18,7 @@ devDependencies:
   sass: 1.69.3
   typed.js: 2.0.132
   vite: 4.4.11_sass@1.69.3
-  vitepress: 1.0.0-rc.21_6eqxwf4foyvymfylwyxhuucwbm
+  vitepress: 1.0.0-rc.22_6eqxwf4foyvymfylwyxhuucwbm
   vue: 3.3.4
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.4
 
@@ -556,7 +556,7 @@ packages:
       - vue
     dev: true
 
-  /@vueuse/integrations/10.5.0_focus-trap@7.5.3+vue@3.3.4:
+  /@vueuse/integrations/10.5.0_focus-trap@7.5.4+vue@3.3.4:
     resolution: {integrity: sha512-fm5sXLCK0Ww3rRnzqnCQRmfjDURaI4xMsx+T+cec0ngQqHx/JgUtm8G0vRjwtonIeTBsH1Q8L3SucE+7K7upJQ==}
     peerDependencies:
       async-validator: '*'
@@ -599,7 +599,7 @@ packages:
     dependencies:
       '@vueuse/core': 10.5.0_vue@3.3.4
       '@vueuse/shared': 10.5.0_vue@3.3.4
-      focus-trap: 7.5.3
+      focus-trap: 7.5.4
       vue-demi: 0.14.6_vue@3.3.4
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -843,8 +843,8 @@ packages:
       to-regex-range: 5.0.1
     dev: true
 
-  /focus-trap/7.5.3:
-    resolution: {integrity: sha512-7UsT/eSJcTPF0aZp73u7hBRTABz26knRRTJfoTGFCQD5mUImLIIOwWWCrtoQdmWa7dykBi6H+Cp5i3S/kvsMeA==}
+  /focus-trap/7.5.4:
+    resolution: {integrity: sha512-N7kHdlgsO/v+iD/dMoJKtsSqs5Dz/dXZVebRgJw23LDk+jMi/974zyiOYDziY2JPp8xivq9BmUGwIJMiuSBi7w==}
     dependencies:
       tabbable: 6.2.0
     dev: true
@@ -1194,8 +1194,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress/1.0.0-rc.21_6eqxwf4foyvymfylwyxhuucwbm:
-    resolution: {integrity: sha512-eHX057NgAqmrj6FIqh7Sqsbk/kftrFMBUpCKjuQIZ+c+bYTbmzXsXrHSbT5b4WWy4vLx1993a+H3wIRy2dHi8g==}
+  /vitepress/1.0.0-rc.22_6eqxwf4foyvymfylwyxhuucwbm:
+    resolution: {integrity: sha512-n7le5iikCFgWMuX7sKfzDGJGlrsYQ5trG3S97BghNz2alOTr4Xp+GrB6ShwogUTX9gNgeNmrACjokhW55LNeBA==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
@@ -1211,8 +1211,8 @@ packages:
       '@types/markdown-it': 13.0.2
       '@vue/devtools-api': 6.5.1
       '@vueuse/core': 10.5.0_vue@3.3.4
-      '@vueuse/integrations': 10.5.0_focus-trap@7.5.3+vue@3.3.4
-      focus-trap: 7.5.3
+      '@vueuse/integrations': 10.5.0_focus-trap@7.5.4+vue@3.3.4
+      focus-trap: 7.5.4
       mark.js: 8.11.1
       markdown-it-mathjax3: 4.3.2
       minisearch: 6.1.0
