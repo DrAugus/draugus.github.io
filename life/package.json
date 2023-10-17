@@ -19,7 +19,7 @@
     "@mdit-vue/shared": "^1.0.0",
     "echarts": "^5.4.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "sass": "^1.69.3",
+    "sass": "^1.69.4",
     "typed.js": "2.0.132",
     "vite": "^4.4.11",
     "vitepress": "^1.0.0-rc.22",
