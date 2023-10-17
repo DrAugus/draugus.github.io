@@ -4,7 +4,7 @@ specifiers:
   '@mdit-vue/shared': ^1.0.0
   echarts: ^5.4.3
   markdown-it-mathjax3: ^4.3.2
-  sass: ^1.69.3
+  sass: ^1.69.4
   typed.js: 2.0.132
   vite: ^4.4.11
   vitepress: ^1.0.0-rc.22
@@ -15,10 +15,10 @@ devDependencies:
   '@mdit-vue/shared': 1.0.0
   echarts: 5.4.3
   markdown-it-mathjax3: 4.3.2
-  sass: 1.69.3
+  sass: 1.69.4
   typed.js: 2.0.132
-  vite: 4.4.11_sass@1.69.3
-  vitepress: 1.0.0-rc.22_6eqxwf4foyvymfylwyxhuucwbm
+  vite: 4.4.11_sass@1.69.4
+  vitepress: 1.0.0-rc.22_s7ghtvs2ukcco2zgsq4vgbwq6i
   vue: 3.3.4
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.4
 
@@ -1080,8 +1080,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /sass/1.69.3:
-    resolution: {integrity: sha512-X99+a2iGdXkdWn1akFPs0ZmelUzyAQfvqYc2P/MPTrJRuIRoTffGzT9W9nFqG00S+c8hXzVmgxhUuHFdrwxkhQ==}
+  /sass/1.69.4:
+    resolution: {integrity: sha512-+qEreVhqAy8o++aQfCJwp0sklr2xyEzkm9Pp/Igu9wNPoe7EZEQ8X/MBvvXggI2ql607cxKg/RKOwDj6pp2XDA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -1158,7 +1158,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /vite/4.4.11_sass@1.69.3:
+  /vite/4.4.11_sass@1.69.4:
     resolution: {integrity: sha512-ksNZJlkcU9b0lBwAGZGGaZHCMqHsc8OpgtoYhsQ4/I2v5cnpmmmqe5pM4nv/4Hn6G/2GhTdj0DhZh2e+Er1q5A==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -1189,12 +1189,12 @@ packages:
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
-      sass: 1.69.3
+      sass: 1.69.4
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress/1.0.0-rc.22_6eqxwf4foyvymfylwyxhuucwbm:
+  /vitepress/1.0.0-rc.22_s7ghtvs2ukcco2zgsq4vgbwq6i:
     resolution: {integrity: sha512-n7le5iikCFgWMuX7sKfzDGJGlrsYQ5trG3S97BghNz2alOTr4Xp+GrB6ShwogUTX9gNgeNmrACjokhW55LNeBA==}
     hasBin: true
     peerDependencies:
@@ -1217,7 +1217,7 @@ packages:
       markdown-it-mathjax3: 4.3.2
       minisearch: 6.1.0
       shiki: 0.14.5
-      vite: 4.4.11_sass@1.69.3
+      vite: 4.4.11_sass@1.69.4
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
