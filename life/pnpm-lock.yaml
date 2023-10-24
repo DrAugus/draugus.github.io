@@ -7,7 +7,7 @@ specifiers:
   sass: ^1.69.4
   typed.js: 2.0.132
   vite: ^4.5.0
-  vitepress: ^1.0.0-rc.23
+  vitepress: ^1.0.0-rc.24
   vue: ^3.3.6
   vue-echarts: ^6.6.1
 
@@ -18,7 +18,7 @@ devDependencies:
   sass: 1.69.4
   typed.js: 2.0.132
   vite: 4.5.0_sass@1.69.4
-  vitepress: 1.0.0-rc.23_s7ghtvs2ukcco2zgsq4vgbwq6i
+  vitepress: 1.0.0-rc.24_s7ghtvs2ukcco2zgsq4vgbwq6i
   vue: 3.3.6
   vue-echarts: 6.6.1_echarts@5.4.3+vue@3.3.6
 
@@ -462,6 +462,17 @@ packages:
 
   /@types/web-bluetooth/0.0.18:
     resolution: {integrity: sha512-v/ZHEj9xh82usl8LMR3GarzFY1IrbXJw5L4QfQhokjRV91q+SelFqxQWSep1ucXEZ22+dSTwLFkXeur25sPIbw==}
+    dev: true
+
+  /@vitejs/plugin-vue/4.3.1_vite@4.5.0+vue@3.3.6:
+    resolution: {integrity: sha512-tUBEtWcF7wFtII7ayNiLNDTCE1X1afySEo+XNVMNkFXaThENyCowIEX095QqbJZGTgoOcSVDJGlnde2NG4jtbQ==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^4.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 4.5.0_sass@1.69.4
+      vue: 3.3.6
     dev: true
 
   /@vue/compiler-core/3.3.6:
@@ -1201,8 +1212,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress/1.0.0-rc.23_s7ghtvs2ukcco2zgsq4vgbwq6i:
-    resolution: {integrity: sha512-0YoBt8aFgbRt2JtYaCeTqq4W21q5lbGso+g1ZwkYYS35ExJxORssRJunhFuUcby8QeN4BP/88QDgsVSIVLAfXQ==}
+  /vitepress/1.0.0-rc.24_s7ghtvs2ukcco2zgsq4vgbwq6i:
+    resolution: {integrity: sha512-RpnL8cnOGwiRlBbrYQUm9sYkJbtyOt/wYXk2diTcokY4yvks/5lq9LuSt+MURWB6ZqwpSNHvTmxgaSfLoG0/OA==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
@@ -1216,6 +1227,7 @@ packages:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2
       '@types/markdown-it': 13.0.4
+      '@vitejs/plugin-vue': 4.3.1_vite@4.5.0+vue@3.3.6
       '@vue/devtools-api': 6.5.1
       '@vueuse/core': 10.5.0_vue@3.3.6
       '@vueuse/integrations': 10.5.0_focus-trap@7.5.4+vue@3.3.6
