@@ -269,8 +269,7 @@ if (row)
 ```
 
 ```cpp [dameng8]
-
-
+// todo
 ```
 
 :::
@@ -281,31 +280,31 @@ if (row)
 
 |系统表||
 |:----|:----|
-|SYSOBJECTS|可查询所有对象|
-|SYSCOLUMNS|可查询表的所有列的信息|
-|dba_objects||
-|dba_tables|可查询表信息（包括系统表）|
-|dba_users|可查询系统所有用户|
-|dba_data_files|可查询数据库文件信息|
-|dba_segments|可查询模式|
-|all_tables|可查询所有用户的表|
-|user_tables|可查询当前用户所拥有的所有表|
-|user_tablespaces|可查询表空间|
+|`SYSOBJECTS`|可查询所有对象|
+|`SYSCOLUMNS`|可查询表的所有列的信息|
+|`dba_objects`||
+|`dba_tables`|可查询表信息（包括系统表）|
+|`dba_users`|可查询系统所有用户|
+|`dba_data_files`|可查询数据库文件信息|
+|`dba_segments`|可查询模式|
+|`all_tables`|可查询所有用户的表|
+|`user_tables`|可查询当前用户所拥有的所有表|
+|`user_tablespaces`|可查询表空间|
 
 ### 系统视图
 
 |系统视图||
 |:----|:----|
-|v$database|可查询数据库信息|
-|v$tablespace|可查询表空间信息|
-|v$datafile|可查询数据文件信息|
-|v$dm_arch_ini|可查询归档信息|
-|v$dm_ini|可查询参数|
-|v$instance|可查询数据库实例信息|
-|v$rlogfile|可查询日志文件信息|
-|v$systeminfo|可查询操作系统CPU和内存的信息|
-|v$version|可查询数据库版本|
-|v$wait_class|可查询等待（wait）情况|
+|`v$database`|可查询数据库信息|
+|`v$tablespace`|可查询表空间信息|
+|`v$datafile`|可查询数据文件信息|
+|`v$dm_arch_ini`|可查询归档信息|
+|`v$dm_ini`|可查询参数|
+|`v$instance`|可查询数据库实例信息|
+|`v$rlogfile`|可查询日志文件信息|
+|`v$systeminfo`|可查询操作系统CPU和内存的信息|
+|`v$version`|可查询数据库版本|
+|`v$wait_class`|可查询等待（wait）情况|
 
 [mysql_affected_rows]: https://dev.mysql.com/doc/c-api/5.7/en/mysql-affected-rows.html
 [dameng_dpi]: https://eco.dameng.com/document/dm/zh-cn/pm/dpi-rogramming-guide.html
