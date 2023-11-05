@@ -65,13 +65,13 @@ export const CHARACTER = {
     prefix: "",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "充满活力的蒸汽鸟报记者，每时每刻都在为「真相」而奔走。",
     city: City.Fontaine,
     ele: Element.cryo,
     weapon: Weapon.polearm
   },
-  furina_de_fontaine: {
-    id: "furina_de_fontaine",
+  furina: {
+    id: "furina",
     name: "芙宁娜",
     prefix: "",
     star: 5,
@@ -109,7 +109,7 @@ export const CHARACTER = {
     prefix: "寂罪的密使",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "梅洛彼得堡的管理人，荣获枫丹最高荣誉市民称号「公爵」。处世低调，沉稳可靠。",
     city: City.Fontaine,
     ele: Element.cryo,
     weapon: Weapon.catalyst

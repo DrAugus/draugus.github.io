@@ -98,7 +98,7 @@ export const WISH = {
       url: ['']
     },
     {
-      name: [''],
+      name: ['Gentle Eclipse of the Moon'],
       image: [1],
       shortName: ['Jingliu'],
       start: '2023-10-11 10:00:00 +0800',
