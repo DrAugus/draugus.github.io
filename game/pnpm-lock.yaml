@@ -21,8 +21,8 @@ devDependencies:
     specifier: ^1.69.5
     version: 1.69.5
   typed.js:
-    specifier: 2.0.132
-    version: 2.0.132
+    specifier: 2.1.0
+    version: 2.1.0
   vitepress:
     specifier: ^1.0.0-rc.25
     version: 1.0.0-rc.25(@algolia/client-search@4.19.1)(sass@1.69.5)(search-insights@2.7.0)
@@ -928,8 +928,8 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /typed.js@2.0.132:
-    resolution: {integrity: sha512-6lWs7dqLtfvZZtNLUJte5RYkT0rj2ACOwkeWghxSnyChSu/ZHX2NlT1KHc2daqVx3073wLIJYlCL2aHcjWYCAQ==}
+  /typed.js@2.1.0:
+    resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==}
     dev: true
 
   /vite@4.5.0(sass@1.69.5):

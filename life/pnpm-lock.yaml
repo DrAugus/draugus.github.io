@@ -5,7 +5,7 @@ specifiers:
   echarts: ^5.4.3
   markdown-it-mathjax3: ^4.3.2
   sass: ^1.69.5
-  typed.js: 2.0.132
+  typed.js: 2.1.0
   vite: ^4.5.0
   vitepress: ^1.0.0-rc.25
   vue: ^3.3.8
@@ -16,7 +16,7 @@ devDependencies:
   echarts: 5.4.3
   markdown-it-mathjax3: 4.3.2
   sass: 1.69.5
-  typed.js: 2.0.132
+  typed.js: 2.1.0
   vite: 4.5.0_sass@1.69.5
   vitepress: 1.0.0-rc.25_3tahjxo2r54smtdpc2mr6z5wmy
   vue: 3.3.8
@@ -1163,8 +1163,8 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
-  /typed.js/2.0.132:
-    resolution: {integrity: sha512-6lWs7dqLtfvZZtNLUJte5RYkT0rj2ACOwkeWghxSnyChSu/ZHX2NlT1KHc2daqVx3073wLIJYlCL2aHcjWYCAQ==}
+  /typed.js/2.1.0:
+    resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==}
     dev: true
 
   /uc.micro/1.0.6:
