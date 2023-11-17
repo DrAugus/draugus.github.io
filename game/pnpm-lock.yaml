@@ -24,8 +24,8 @@ devDependencies:
     specifier: 2.1.0
     version: 2.1.0
   vitepress:
-    specifier: ^1.0.0-rc.26
-    version: 1.0.0-rc.26(@algolia/client-search@4.19.1)(sass@1.69.5)(search-insights@2.7.0)
+    specifier: ^1.0.0-rc.27
+    version: 1.0.0-rc.27(@algolia/client-search@4.19.1)(sass@1.69.5)(search-insights@2.7.0)
   vue:
     specifier: ^3.3.8
     version: 3.3.8
@@ -807,7 +807,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /csstype@3.1.2:
@@ -864,14 +864,6 @@ packages:
     dependencies:
       tabbable: 6.2.0
     dev: true
-
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
-    engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -1084,8 +1076,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.26(@algolia/client-search@4.19.1)(sass@1.69.5)(search-insights@2.7.0):
-    resolution: {integrity: sha512-bAeph87NheD7bM/+E1AsJx8N6bGnP+5k0gZmtXbSgKAzNSFZBgAPcl7CoWzETST5pPpH/ZGRPhWSefcBX9Yfjg==}
+  /vitepress@1.0.0-rc.27(@algolia/client-search@4.19.1)(sass@1.69.5)(search-insights@2.7.0):
+    resolution: {integrity: sha512-1qs1a5qPQxNOJN451HmNtKewxSIOk52qv1EdWtsO6V6kvrNxF2FFR3Inhj0W56Jcs8AKIdzKDKHNYIJhcyz3AA==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
