@@ -345,6 +345,7 @@ const sidebarScience = () => [
     { text: '离散数学', link: '/science/discrete-math' },
 ]
 const sidebarComputerOS = () => [
+    { text: '配环境', link: '/computer/nipeima' },
     {
         text: 'MacOS', collapsed: false, items: [
             { text: 'mac primary', link: '/computer/os/macos/base' },

@@ -1,19 +1,4 @@
----  
-title: chocolatey
-icon: simple-icons:chocolatey
-date: 2022-07-20 17:52:11
-category:
-
-- 编程
-
-tag:
-
-- chocolatey
-- 工具
-- 包
-
----
-
+# Chocolatey
 
 ## [Install]
 

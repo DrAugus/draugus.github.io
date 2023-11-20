@@ -1,0 +1,26 @@
+# 配环境
+
+## Linux
+
+todo
+
+## Mac
+
+todo
+
+## Windows
+
+一台新机器，首先要安装的也是必需的，是下面这些软件
+
+- 压缩软件：bandizip [官网](https://www.bandisoft.com/bandizip/) [下载页](https://www.bandisoft.com/bandizip/dl.php?web)
+- VPN 软件：clash [第三方下载链接](https://zmssr.lanzoum.com/ie1is16ec5uj) <Badge type="tip" text="开发者必备" />
+- 访问 Github：[FastGithub](https://github.com/WangGithubUser/FastGitHub/releases/)
+
+上面的软件安装优先级很高，安装完毕之后，便于继续安装下面的软件
+
+- 包管理：Chocolatey [详细查看本文档](./os/windows/chocolatey) (The Package Manager for Windows - Modern Software Automation)  <Badge type="warning" text="非必需" />
+- Node.js：[官网](https://nodejs.org/)，安装可以勾选 Chocolatey，并且会自动安装 Python
+- 代码工具 VS Code：[官网](https://code.visualstudio.com/)
+- 版本控制 SVN：TortoiseSVN [下载页/汉化页](https://tortoisesvn.net/downloads.html)
+- 版本控制 Git：[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，直接进入 Windows 版本[下载页](https://git-scm.com/download/win)
+- 终端 Tabby：[官网](https://tabby.sh/)

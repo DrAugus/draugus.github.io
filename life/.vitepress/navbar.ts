@@ -41,6 +41,7 @@ export const navbar = [
   {
     text: '电脑',
     items: [
+      { text: '配环境', link: '/computer/nipeima' },
       { text: '操作系统', link: '/computer/os/' },
       { text: '软件', link: '/computer/software/' },
     ]
