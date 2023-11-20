@@ -1,12 +1,4 @@
----
-icon: vscode-icons:file-type-shell
-title: XShell
-date: 2021-10-21 14:32:44
-category: 
-  - XShell
-tag: 
-  - XShell
----
+# XShell
 
 ## 全局设置配色方案
 

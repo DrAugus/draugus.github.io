@@ -1,14 +1,4 @@
----
-title: windows11更新纪要
-date: 2021-10-05 13:16:44
-category: 
-  - windows
-tag: 
-  - windows 
-  - 更新
----
-
-# win11
+# win11 更新纪要
 
 介绍win11更新路上的绊脚石
 

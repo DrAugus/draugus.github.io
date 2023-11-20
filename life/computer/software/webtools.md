@@ -1,8 +1,4 @@
----
-icon: logos:web-dev-icon
----
-
-# web tools
+# Web Tools
 
 - node
 - npm

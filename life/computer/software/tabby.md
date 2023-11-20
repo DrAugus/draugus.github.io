@@ -1,7 +1,3 @@
----
-icon: icon-park:terminal
----
-
 # Tabby
 
 ## plugins

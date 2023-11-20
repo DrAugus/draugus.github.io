@@ -1,13 +1,4 @@
----
-title: cmd指南
-date: 2021-10-30 21:38:01
-category: 
-  - windows
-tag: 
-  - windows 
-  - cmd
-excerpt: cmd命令 & 恢复cmd默认配色
----
+# CMD
 
 ## CMD 命令
 

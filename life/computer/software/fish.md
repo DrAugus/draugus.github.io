@@ -1,7 +1,3 @@
----
-icon: noto:fishing-pole
----
-
 # fish cmd
 
 ## switch to fish as your [default]

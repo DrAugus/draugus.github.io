@@ -1,16 +1,3 @@
----  
-date: 2022-09-26 16:42:00
-category:
-
-- 编程
-
-tag:
-
-- mac
-- 工具
-
----
-
 # Mac Basin
 
 ## [截屏](https://support.apple.com/zh-cn/HT201361)

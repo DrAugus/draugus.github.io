@@ -344,7 +344,7 @@ const sidebarArtsXiwen = () => [
 const sidebarScience = () => [
     { text: '离散数学', link: '/science/discrete-math' },
 ]
-const sidebarComputerOS = () => [
+const sidebarComputer = () => [
     { text: '配环境', link: '/computer/nipeima' },
     {
         text: 'MacOS', collapsed: false, items: [
@@ -355,11 +355,11 @@ const sidebarComputerOS = () => [
     {
         text: 'Linux', collapsed: false, items: [
             { text: 'gdb', link: '/computer/os/linux/gdb' },
-            { text: 'linux系统分类', link: '/computer/os/linux/sys_category' },
-            { text: '查看Linux的基本信息', link: '/computer/os/linux/sys_base_info' },
+            { text: 'linux 系统分类', link: '/computer/os/linux/sys_category' },
+            { text: '查看 Linux 的基本信息', link: '/computer/os/linux/sys_base_info' },
             { text: 'Linux 问题收集', link: '/computer/os/linux/qa' },
             { text: 'install', link: '/computer/os/linux/install' },
-            { text: 'linux记录  ', link: '/computer/os/linux/README' },
+            { text: 'linux 记录  ', link: '/computer/os/linux/README' },
             { text: 'cmd', link: '/computer/os/linux/command' },
             { text: '指南', link: '/computer/os/linux/guide' },
         ]
@@ -368,21 +368,23 @@ const sidebarComputerOS = () => [
         text: 'Windows', collapsed: false, items: [
             { text: 'chocolatey', link: '/computer/os/windows/chocolatey' },
             { text: '虚拟机记录    ', link: '/computer/os/windows/VirtualBox' },
-            { text: 'cmd指南', link: '/computer/os/windows/cmd' },
-            { text: 'windows11更新纪要', link: '/computer/os/windows/windows11-update' },
+            { text: 'cmd 指南', link: '/computer/os/windows/cmd' },
+            { text: 'windows11 更新纪要', link: '/computer/os/windows/windows11-update' },
             { text: '壁纸', link: '/computer/os/windows/wallpaper' },
         ]
     },
-]
-const sidebarComputerSoftware = () => [
-    { text: '推荐软件安装', link: '/computer/software/' },
-    { text: 'web tools', link: '/computer/software/webtools' },
-    { text: 'fish cmd', link: '/computer/software/fish' },
-    { text: 'Tabby', link: '/computer/software/tabby' },
-    { text: 'Git', link: '/computer/software/git' },
-    { text: 'Docker', link: '/computer/software/docker' },
-    { text: 'VS Code', link: '/computer/software/vscode' },
-    { text: 'XShell', link: '/computer/software/xshell' },
+    {
+        text: '软件', collapsed: false, items: [
+            { text: '推荐软件安装', link: '/computer/software/' },
+            { text: 'web tools', link: '/computer/software/webtools' },
+            { text: 'fish cmd', link: '/computer/software/fish' },
+            { text: 'Tabby', link: '/computer/software/tabby' },
+            { text: 'Git', link: '/computer/software/git' },
+            { text: 'Docker', link: '/computer/software/docker' },
+            { text: 'VS Code', link: '/computer/software/vscode' },
+            { text: 'XShell', link: '/computer/software/xshell' },
+        ]
+    },
 ]
 const sidebarCodeAPI = () => [
     { text: 'API', link: '/code/api/' },
@@ -713,8 +715,7 @@ export const sidebar = {
     //
     '/science/': sidebarScience(),
     //
-    '/computer/os/': sidebarComputerOS(),
-    '/computer/software/': sidebarComputerSoftware(),
+    '/computer/': sidebarComputer(),
     //
     '/code/api/': sidebarCodeAPI(),
     '/code-notes/': sidebarCodeNotes(),

@@ -1,8 +1,3 @@
----
-icon: vscode-icons:file-type-git
----
-
-
 # Git
 
 ## sol
