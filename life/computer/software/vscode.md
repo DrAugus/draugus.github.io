@@ -13,3 +13,5 @@
 
 **run**  
 `command + shift + b`
+
+保存自动格式化代码：setting 里搜索 format，勾选 format on save

@@ -2,7 +2,14 @@
 
 ## Linux
 
-todo
+### Debian 系列
+
+> ssh 远程连接：本机配置 ssh，[生成 ssh](../computer/os/linux/command#ssh-keygen)，复制到服务器的`~/.ssh/authorized_keys`路径
+
+推荐安装 [fish](./software/fish) 命令行，[官网](https://fishshell.com/)  
+
+- 版本控制 Git：`apt-get install git`，git [config](../computer/software/git#config)，[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，[Git 命令参考](../computer/software/git)
+- 安装 [nodejs](./software/webtools#node)
 
 ## Mac
 
@@ -22,5 +29,5 @@ todo
 - Node.js：[官网](https://nodejs.org/)，安装可以勾选 Chocolatey，并且会自动安装 Python
 - 代码工具 VS Code：[官网](https://code.visualstudio.com/)
 - 版本控制 SVN：TortoiseSVN [下载页/汉化页](https://tortoisesvn.net/downloads.html)
-- 版本控制 Git：[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，直接进入 Windows 版本[下载页](https://git-scm.com/download/win)
+- 版本控制 Git：[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，直接进入 Windows 版本[下载页](https://git-scm.com/download/win)，[Git 命令参考](../computer/software/git)
 - 终端 Tabby：[官网](https://tabby.sh/)

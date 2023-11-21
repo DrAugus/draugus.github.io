@@ -1,8 +1,52 @@
----
-icon: file-icons:tortoisesvn
----
-
 # svn
+
+## 常用命令
+
+### checkout
+
+```bash
+svn checkout PATH [DES PATH]
+# 简写
+svn co ...
+```
+
+### update
+
+```bash
+svn update [-r] [version] [path]
+# 简写
+svn up
+```
+
+### add
+
+同 git add：`svn add .`
+
+### lock
+
+```bash
+svn lock -m "lock message" [--force] path
+svn unlock path
+```
+
+### commit
+
+```bash
+svn commit -m "commit message" [-N] [--no-unlock] path
+svn commit -m "add test file for my test"  test.js
+# 简写
+svn  ci
+```
+
+### status
+
+### log
+
+### info
+
+### diff
+
+### help
 
 ## externals
 

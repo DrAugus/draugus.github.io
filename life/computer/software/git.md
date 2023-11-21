@@ -90,6 +90,8 @@ git push --recurse-submodules=on-demand
 ```shell
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
+# show list
+git config --global -l 
 ```
 
 ## push
