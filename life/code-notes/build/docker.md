@@ -305,7 +305,7 @@ todo
 
 ### docker 源超时问题
 
-加上[国内源](../os/linux/sys_category#官方源超时)，在 dockerfile 里导入
+加上[国内源](../../os/linux/sys_category#官方源超时)，在 dockerfile 里导入
 
 ```docker
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak

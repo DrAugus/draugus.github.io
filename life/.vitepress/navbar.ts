@@ -39,14 +39,6 @@ export const navbar = [
   },
   { text: '理科', link: '/science/', activeMatch: '^/science' },
   {
-    text: '电脑',
-    items: [
-      { text: '配环境', link: '/computer/nipeima' },
-      { text: '操作系统', link: '/computer/os/' },
-      { text: '软件', link: '/computer/software/' },
-    ]
-  },
-  {
     text: '编程',
     items: [
       { text: '首页', link: '/code/' },
@@ -58,6 +50,7 @@ export const navbar = [
       {
         text: '代码笔记',
         items: [
+          { text: '配环境', link: '/code-notes/nipeima' },
           { text: '直接进入', link: '/code-notes/' },
           { text: '导航指示', link: '/code-notes/intro' },
         ],
@@ -68,7 +61,7 @@ export const navbar = [
       {
         text: '速查清单',
         items: [
-          { text: 'Linux 命令', link: '/computer/os/linux/command' },
+          { text: 'Linux 命令', link: '/os/linux/command' },
         ],
       },
       {

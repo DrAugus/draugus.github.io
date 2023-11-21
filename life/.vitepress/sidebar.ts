@@ -344,44 +344,32 @@ const sidebarArtsXiwen = () => [
 const sidebarScience = () => [
     { text: '离散数学', link: '/science/discrete-math' },
 ]
-const sidebarComputer = () => [
-    { text: '配环境', link: '/computer/nipeima' },
+const sidebarOS = () => [
     {
         text: 'MacOS', collapsed: false, items: [
-            { text: 'mac primary', link: '/computer/os/macos/base' },
-            { text: 'solution', link: '/computer/os/macos/sol' },
+            { text: 'mac primary', link: '/os/macos/base' },
+            { text: 'solution', link: '/os/macos/sol' },
         ]
     },
     {
         text: 'Linux', collapsed: false, items: [
-            { text: 'gdb', link: '/computer/os/linux/gdb' },
-            { text: 'linux 系统分类', link: '/computer/os/linux/sys_category' },
-            { text: '查看 Linux 的基本信息', link: '/computer/os/linux/sys_base_info' },
-            { text: 'Linux 问题收集', link: '/computer/os/linux/qa' },
-            { text: 'install', link: '/computer/os/linux/install' },
-            { text: 'linux 记录  ', link: '/computer/os/linux/README' },
-            { text: 'cmd', link: '/computer/os/linux/command' },
-            { text: '指南', link: '/computer/os/linux/guide' },
+            { text: 'gdb', link: '/os/linux/gdb' },
+            { text: 'linux 系统分类', link: '/os/linux/sys_category' },
+            { text: '查看 Linux 的基本信息', link: '/os/linux/sys_base_info' },
+            { text: 'Linux 问题收集', link: '/os/linux/qa' },
+            { text: 'install', link: '/os/linux/install' },
+            { text: 'linux 记录  ', link: '/os/linux/README' },
+            { text: 'cmd', link: '/os/linux/command' },
+            { text: '指南', link: '/os/linux/guide' },
         ]
     },
     {
         text: 'Windows', collapsed: false, items: [
-            { text: 'chocolatey', link: '/computer/os/windows/chocolatey' },
-            { text: '虚拟机记录    ', link: '/computer/os/windows/VirtualBox' },
-            { text: 'cmd 指南', link: '/computer/os/windows/cmd' },
-            { text: 'windows11 更新纪要', link: '/computer/os/windows/windows11-update' },
-            { text: '壁纸', link: '/computer/os/windows/wallpaper' },
-        ]
-    },
-    {
-        text: '软件', collapsed: false, items: [
-            { text: '推荐软件安装', link: '/computer/software/' },
-            { text: 'web tools', link: '/computer/software/webtools' },
-            { text: 'fish cmd', link: '/computer/software/fish' },
-            { text: 'Tabby', link: '/computer/software/tabby' },
-            { text: 'Docker', link: '/computer/software/docker' },
-            { text: 'VS Code', link: '/computer/software/vscode' },
-            { text: 'XShell', link: '/computer/software/xshell' },
+            { text: 'chocolatey', link: '/os/windows/chocolatey' },
+            { text: '虚拟机记录    ', link: '/os/windows/VirtualBox' },
+            { text: 'cmd 指南', link: '/os/windows/cmd' },
+            { text: 'windows11 更新纪要', link: '/os/windows/windows11-update' },
+            { text: '壁纸', link: '/os/windows/wallpaper' },
         ]
     },
 ]
@@ -392,10 +380,13 @@ const sidebarCodeAPI = () => [
 ]
 const sidebarCodeNotes = () => [
     { text: '指南', link: '/code-notes/' },
+    { text: '配环境', link: '/code-notes/nipeima' },
     {
         text: '编辑器/开发环境', collapsed: false, items: [
-            { text: 'xcode', link: '/code-notes/dev-env/xcode' },
+            { text: 'VSCode', link: '/code-notes/dev-env/vscode' },
+            { text: 'Xcode', link: '/code-notes/dev-env/xcode' },
             { text: 'JetBrains', link: '/code-notes/dev-env/jetbrains' },
+            { text: 'Cocos', link: '/code-notes/dev-env/cocos' },
         ],
     }, {
         text: '编译', collapsed: false, items: [
@@ -406,6 +397,7 @@ const sidebarCodeNotes = () => [
         ],
     }, {
         text: '构建/持续集成', collapsed: false, items: [
+            { text: 'Docker', link: '/code-notes/build/docker' },
             { text: 'Jenkins', link: '/code-notes/build/Jenkins' },
             { text: 'Mergify', link: '/code-notes/build/mergify' },
             { text: 'Vercel', link: '/code-notes/build/vercel' },
@@ -416,6 +408,12 @@ const sidebarCodeNotes = () => [
             { text: 'GitHub', link: '/code-notes/version-ctrl/github' },
             { text: 'Gitlab', link: '/code-notes/version-ctrl/gitlab' },
             { text: 'svn', link: '/code-notes/version-ctrl/svn' },
+        ],
+    }, {
+        text: '命令行工具', collapsed: false, items: [
+            { text: 'fish cmd', link: '/code-notes/cmd-line-tools/fish' },
+            { text: 'Tabby', link: '/code-notes/cmd-line-tools/tabby' },
+            { text: 'XShell', link: '/code-notes/cmd-line-tools/xshell' },
         ],
     }, {
         text: '文本编辑', collapsed: false, items: [
@@ -555,6 +553,7 @@ const sidebarCodeDB = () => [
     { text: 'mongoDB', link: '/code/db/mongoDB' },
 ]
 const sidebarCodeFrontEnd = () => [
+    { text: 'web tools', link: '/code/front-end/webtools' },
     { text: '公共知识', link: '/code/front-end/public' },
     { text: 'React Native', link: '/code/front-end/react-native' },
     { text: 'css', link: '/code/front-end/css' },
@@ -714,7 +713,7 @@ export const sidebar = {
     //
     '/science/': sidebarScience(),
     //
-    '/computer/': sidebarComputer(),
+    '/os/': sidebarOS(),
     //
     '/code/api/': sidebarCodeAPI(),
     '/code-notes/': sidebarCodeNotes(),
