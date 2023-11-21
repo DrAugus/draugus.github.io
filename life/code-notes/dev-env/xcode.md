@@ -18,9 +18,9 @@ Minimum requirements and supported SDKs
 
 ### error: unable to find utility "simctl"
 
-:::error unable to find utility "simctl"
-xcrun: error: unable to find utility "simctl", not a developer tool or in PATH
-error Could not get the simulator list from Xcode. Please open Xcode and try running project directly from there to resolve the remaining issues.
+:::danger unable to find utility "simctl"
+xcrun: error: unable to find utility "simctl", not a developer tool or in PATH  
+error Could not get the simulator list from Xcode. Please open Xcode and try running project directly from there to resolve the remaining issues.  
 Error: Command failed: xcrun simctl list --json devices
 :::
 

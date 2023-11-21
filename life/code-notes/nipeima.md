@@ -1,6 +1,8 @@
 # 配环境
 
-> 开发环境配置
+:::tip 简单参考一下
+当你获得一台**全新机器**，根据系统不同，可以参考下方的开发环境配置
+:::
 
 ## Linux
 
@@ -11,13 +13,18 @@
 推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
 
 - 版本控制 Git：`apt-get install git`，git [config](../code-notes/version-ctrl/git#config)，[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，[Git 命令参考](../code-notes/version-ctrl/git)
-- 安装 [nodejs](../code/front-end/webtools#node)
+- 生成 ssh [pubkey](./version-ctrl/github#generate-ssh) 放入 Github 以访问 Github，直接使用 `git clone git@github.com:name/repo`
+- 安装 [nodejs](../code/front-end/webtools#node)，安装 yarn、pnpm 皆可从左侧链接内查看
+
+todo
 
 ## Mac
 
 基础安装 [homebrew](https://brew.sh): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
+
+todo
 
 ## Windows
 
