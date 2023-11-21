@@ -379,7 +379,6 @@ const sidebarComputer = () => [
             { text: 'web tools', link: '/computer/software/webtools' },
             { text: 'fish cmd', link: '/computer/software/fish' },
             { text: 'Tabby', link: '/computer/software/tabby' },
-            { text: 'Git', link: '/computer/software/git' },
             { text: 'Docker', link: '/computer/software/docker' },
             { text: 'VS Code', link: '/computer/software/vscode' },
             { text: 'XShell', link: '/computer/software/xshell' },
@@ -392,6 +391,7 @@ const sidebarCodeAPI = () => [
     { text: 'mihoyo', link: '/code/api/mihoyo' },
 ]
 const sidebarCodeNotes = () => [
+    { text: '指南', link: '/code-notes/' },
     {
         text: '编辑器/开发环境', collapsed: false, items: [
             { text: 'xcode', link: '/code-notes/dev-env/xcode' },
@@ -412,9 +412,10 @@ const sidebarCodeNotes = () => [
         ],
     }, {
         text: '版本控制', collapsed: false, items: [
+            { text: 'Git', link: '/code-notes/version-ctrl/git' },
             { text: 'GitHub', link: '/code-notes/version-ctrl/github' },
-            { text: 'svn', link: '/code-notes/version-ctrl/svn' },
             { text: 'Gitlab', link: '/code-notes/version-ctrl/gitlab' },
+            { text: 'svn', link: '/code-notes/version-ctrl/svn' },
         ],
     }, {
         text: '文本编辑', collapsed: false, items: [
@@ -428,10 +429,8 @@ const sidebarCodeNotes = () => [
         ],
     }, {
         text: '杂项', collapsed: false, items: [
-
-            { text: '指南', link: '/code-notes/' },
-            { text: 'RBAC', link: '/code-notes/rbac' },
-            { text: 'Excel', link: '/code-notes/excel' },]
+            { text: 'RBAC', link: '/code-notes/others/rbac' },
+            { text: 'Excel', link: '/code-notes/others/excel' },]
     },
     {
         text: '一些工具', collapsed: false, items: [

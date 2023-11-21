@@ -1,7 +1,3 @@
----
-icon: twemoji:newspaper
----
-
 # 指南
 
 学无止境  
