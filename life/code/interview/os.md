@@ -37,5 +37,5 @@
 - 什么情况下会发生死锁，如何解决死锁？
 - 简述乐观锁以及悲观锁的区别以及使用场景
 
-[netstat]: /os/linux/command.md#netstat
-[lsof]: /os/linux/command.md#lsof
+[netstat]: /code/os/linux/command.md#netstat
+[lsof]: /code/os/linux/command.md#lsof

@@ -44,6 +44,7 @@ export const navbar = [
       { text: '首页', link: '/code/' },
       { text: 'API', link: '/code/api/' },
       { text: 'C++', link: '/code/cpp/' },
+      { text: '操作系统', link: '/code/os/' },
       { text: 'DSA', link: '/code/dsa/' },
       { text: '数据库', link: '/code/db/' },
       { text: '前端', link: '/code/front-end/' },
@@ -61,7 +62,7 @@ export const navbar = [
       {
         text: '速查清单',
         items: [
-          { text: 'Linux 命令', link: '/os/linux/command' },
+          { text: 'Linux 命令', link: '/code/os/linux/command' },
         ],
       },
       {

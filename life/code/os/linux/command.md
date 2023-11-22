@@ -230,9 +230,8 @@ chown [-cfhvR] [--help] [--version] user[:group] file...
 
 ## find
 
-::alert{type="info"}
-**Linux 查找当前目录下 包含特定字符串 的所有文件**
-::
+:::info Linux 查找当前目录下 包含特定字符串 的所有文件
+:::
 
 使用 Linux 经常会遇到这种情况：只知道文件中包含某些特定的字符串，但是不知道具体的文件名。需要根据“特定的字符串”反向查找文件。
 

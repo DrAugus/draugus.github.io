@@ -344,32 +344,32 @@ const sidebarArtsXiwen = () => [
 const sidebarScience = () => [
     { text: '离散数学', link: '/science/discrete-math' },
 ]
-const sidebarOS = () => [
+const sidebarCodeOS = () => [
     {
         text: 'MacOS', collapsed: false, items: [
-            { text: 'mac primary', link: '/os/macos/base' },
-            { text: 'solution', link: '/os/macos/sol' },
+            { text: 'mac primary', link: '/code/os/macos/base' },
+            { text: 'solution', link: '/code/os/macos/sol' },
         ]
     },
     {
         text: 'Linux', collapsed: false, items: [
-            { text: 'gdb', link: '/os/linux/gdb' },
-            { text: 'linux 系统分类', link: '/os/linux/sys_category' },
-            { text: '查看 Linux 的基本信息', link: '/os/linux/sys_base_info' },
-            { text: 'Linux 问题收集', link: '/os/linux/qa' },
-            { text: 'install', link: '/os/linux/install' },
-            { text: 'linux 记录  ', link: '/os/linux/README' },
-            { text: 'cmd', link: '/os/linux/command' },
-            { text: '指南', link: '/os/linux/guide' },
+            { text: 'gdb', link: '/code/os/linux/gdb' },
+            { text: 'linux 系统分类', link: '/code/os/linux/sys_category' },
+            { text: '查看 Linux 的基本信息', link: '/code/os/linux/sys_base_info' },
+            { text: 'Linux 问题收集', link: '/code/os/linux/qa' },
+            { text: 'install', link: '/code/os/linux/install' },
+            { text: 'linux 记录  ', link: '/code/os/linux/README' },
+            { text: 'cmd', link: '/code/os/linux/command' },
+            { text: '指南', link: '/code/os/linux/guide' },
         ]
     },
     {
         text: 'Windows', collapsed: false, items: [
-            { text: 'chocolatey', link: '/os/windows/chocolatey' },
-            { text: '虚拟机记录    ', link: '/os/windows/VirtualBox' },
-            { text: 'cmd 指南', link: '/os/windows/cmd' },
-            { text: 'windows11 更新纪要', link: '/os/windows/windows11-update' },
-            { text: '壁纸', link: '/os/windows/wallpaper' },
+            { text: 'chocolatey', link: '/code/os/windows/chocolatey' },
+            { text: '虚拟机记录    ', link: '/code/os/windows/VirtualBox' },
+            { text: 'cmd 指南', link: '/code/os/windows/cmd' },
+            { text: 'windows11 更新纪要', link: '/code/os/windows/windows11-update' },
+            { text: '壁纸', link: '/code/os/windows/wallpaper' },
         ]
     },
 ]
@@ -713,8 +713,7 @@ export const sidebar = {
     //
     '/science/': sidebarScience(),
     //
-    '/os/': sidebarOS(),
-    //
+    '/code/os/': sidebarCodeOS(),
     '/code/api/': sidebarCodeAPI(),
     '/code-notes/': sidebarCodeNotes(),
     '/code/dsa/': sidebarCodeDSA(),

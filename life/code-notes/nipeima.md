@@ -8,7 +8,7 @@
 
 ### Debian 系列
 
-> ssh 远程连接：本机配置 ssh，[生成 ssh](../os/linux/command#ssh-keygen)，复制到服务器的`~/.ssh/authorized_keys`路径
+> ssh 远程连接：本机配置 ssh，[生成 ssh](../code/os/linux/command#ssh-keygen)，复制到服务器的`~/.ssh/authorized_keys`路径
 
 推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
 
@@ -36,7 +36,7 @@ todo
 
 上面的软件安装优先级很高，安装完毕之后，便于继续安装下面的软件
 
-- 包管理：Chocolatey [详细查看本文档](../os/windows/chocolatey) (The Package Manager for Windows - Modern Software Automation)  <Badge type="warning" text="非必需" />
+- 包管理：Chocolatey [详细查看本文档](../code/os/windows/chocolatey) (The Package Manager for Windows - Modern Software Automation)  <Badge type="warning" text="非必需" />
 - Node.js：[官网](https://nodejs.org/)，安装可以勾选 Chocolatey，并且会自动安装 Python
 - 代码工具 VS Code：[官网](https://code.visualstudio.com/)
 - 版本控制 SVN：TortoiseSVN [下载页/汉化页](https://tortoisesvn.net/downloads.html)
