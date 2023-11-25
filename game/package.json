@@ -21,7 +21,7 @@
     "leaflet": "1.9.4",
     "sass": "^1.69.5",
     "typed.js": "2.1.0",
-    "vitepress": "^1.0.0-rc.30",
+    "vitepress": "^1.0.0-rc.31",
     "vue": "^3.3.8"
   }
 }
