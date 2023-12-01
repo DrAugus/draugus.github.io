@@ -18,6 +18,19 @@
 - 鼠标右键 + WASD：摄像机漫游。
 - Ctrl+Shift+F：摄像机聚焦到当前选中节点。
 
+### 设置节点的可见性     <Badge type="info">[官方文档](https://docs.cocos.com/creator/3.4/manual/zh/concepts/scene/node-component.html#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7)</Badge>
+
+引擎采用更加通用的节点，和相机相匹配。当节点设置的 Layer 属性包含在相机的 Visibility 属性 中时，节点便可以被相机看见，同时支持 3D 组件与 2D 组件的混合渲染。以便更灵活地控制节点组件的可见性，使分组显示多样化。
+
+节点的 Layer 属性是全局且唯一的，但是不同的节点可以设置相同的 Layer 属性，使其被同一个相机所观察。开发者可以使用引擎内置的 Layer 属性，也可以使用自定义的 Layer 属性，点击下图中的 Edit 按钮即可前往 项目设置 -> Layers 页面进行设置。详情请参考 层级 文档。
+
+项目实践为，3D 物体在 2D 物体的层级上方。**Canvas** 为 2D 界面，设置其 Layer 为 **UI_2D** ，**Canvas-3d-front** 为 3D 界面，设置其 Layer 为 **Mahjong**，并同时挂载主摄，隐藏所有 canvas 组件子节点中的摄像头。将主摄的 visibility 调整为所有想要显示的 Layer，本次实践中为 Popup、Mahjong、UI_3D、UI_2D、DEFAULT 等。项目的 Layer 层级设置如图所示。
+
+![1](/img/code/cocos/canvas.png)
+![1](/img/code/cocos/canvas-front-3d.png)
+![1](/img/code/cocos/camera-visibility.png)
+![1](/img/code/cocos/layers.png)
+
 ## QA
 
 ### 加载项目遇到 Loading Resources 卡住不动
