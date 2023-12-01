@@ -11,7 +11,7 @@ def get_url_data(api_url):
     data = response.json()
     return data
 
-
+# type=3 公告
 api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=2&type=3'
 api_url += '&page_size=50'
 

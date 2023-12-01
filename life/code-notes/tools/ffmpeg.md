@@ -4,6 +4,7 @@
 # 将一个视频分割为 两个视频
 ffmpeg -i input_video.mp4 -t 00:02:30 -c copy output_part1.mp4
 ffmpeg -i input_video.mp4 -ss 00:02:30 -c copy output_part2.mp4
+ffmpeg -ss 01:30:00 -t 00:30:00 -i input.mp4 -c copy output.mp4
 # 将四个视频合并为 一个视频 注意添加线程数 防止电脑死机
 ffmpeg -i 1.mp4 -i 2.mp4 -i 3.mp4 -i 4.mp4 -filter_complex "concat=n=4:v=1:a=1" -threads 4 output.mp4
 ```

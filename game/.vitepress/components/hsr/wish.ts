@@ -121,6 +121,18 @@ export const WISH = {
       wishName: ['「落日条款」', '「蝶立锋锷」'],
       url: ['']
     },
+    {
+      name: ['Bloom in Gloom'],
+      image: [1],
+      shortName: ['Huohuo'],
+      start: '2023-11-15 10:00:00 +0800',
+      end: '2023-12-06 11:59:59 +0800',
+      version: '1.5',
+      wish5star: ['huohuo'],
+      wish4star: ['Dan Heng', 'Arlan', 'Serval'],
+      wishName: ['「令奉贞凶」'],
+      url: ['']
+    },
   ],
   weapons: [
     {
@@ -221,6 +233,16 @@ export const WISH = {
       shortName: "",
       wish5star: ['Worrisome, Blissful', 'In the Night'],
       wish4star: ['The Moles Welcome You', 'Resolution Shines As Pearls of Sweat', 'Only Silence Remains'],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: 11,
+      start: '2023-11-15 10:00:00 +0800',
+      end: '2023-12-06 11:59:59 +0800',
+      shortName: "",
+      wish5star: ["Night of Fright"],
+      wish4star: ['Shared Feeling', 'Subscribe for More!', 'Trend of the Universal Market'],
       url: ""
     },
   ]

@@ -16,8 +16,11 @@ api_prefix = 'https://bbs-api-os.hoyolab.com/community/post/wapi/'
 
 api_url_news_list = api_prefix + 'getNewsList'
 api_url_post_full = api_prefix + 'getPostFull'
-
-api_url_news_list += '?gids=6&type=3'
+# https://augusmeow.github.io/code/api/mihoyo
+# type: 1 公告 2 活动 3 资讯
+# 之前跃迁都是 type=3 hoyolab 放在了资讯里
+# 1.5版本 放到了公告里 type=1
+api_url_news_list += '?gids=6&type=1'
 api_url_news_list += '&page_size=50'
 
 print(api_url_news_list)

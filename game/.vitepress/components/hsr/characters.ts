@@ -1,6 +1,72 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  xueyi: {
+    id: "Xueyi",
+    name: "雪衣",
+    prefix: Weapon.Destruction.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Quantum,
+    weapon: Weapon.Destruction
+  },
+  dr_ratio: {
+    id: "Dr Ratio",
+    name: "真理医生",
+    prefix: Weapon.Hunt.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Imaginary,
+    weapon: Weapon.Hunt
+  },
+  ruan_mei: {
+    id: "Ruan Mei",
+    name: "阮·梅",
+    prefix: Weapon.Harmony.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.HertaSpaceStation,
+    ele: Element.Ice,
+    weapon: Weapon.Harmony
+  },
+  hanya: {
+    id: "Hanya",
+    name: "寒鸦",
+    prefix: Weapon.Harmony.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Physical,
+    weapon: Weapon.Harmony
+  },
+  argenti: {
+    id: "Argenti",
+    name: "银枝",
+    prefix: Weapon.Erudition.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Physical,
+    weapon: Weapon.Erudition
+  },
+  huohuo: {
+    id: "Huohuo",
+    name: "藿藿",
+    prefix: Weapon.Abundance.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.TheXianzhouLuofu,
+    ele: Element.Wind,
+    weapon: Weapon.Abundance
+  },
   guinaifen: {
     id: "Guinaifen",
     name: "桂乃芬",

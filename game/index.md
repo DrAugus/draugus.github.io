@@ -11,18 +11,27 @@ hero:
     alt: none
   actions:
     - theme: brand
+      text: 原神祈愿列表
+      link: /genshin/wish-list  
+    - theme: brand
       text: 原神祈愿时间轴
       link: /genshin/timeline
     - theme: brand
-      text: 星穹铁道跃迁时间轴
-      link: /hsr/timeline
-    - theme: alt
       text: 近期祈愿
       link: /genshin/wish-recent
     - theme: alt
+      text: 星穹铁道跃迁时间轴
+      link: /hsr/timeline      
+    - theme: alt
       text: 近期跃迁
       link: /hsr/wish-recent
-    - theme: brand
+    - theme: alt
+      text: 原神角色列表
+      link: /genshin/character       
+    - theme: alt
+      text: 星穹铁道角色列表
+      link: /hsr/character                 
+    - theme: alt
       text: 星穹铁道每日
       link: /hsr/daily      
 ---

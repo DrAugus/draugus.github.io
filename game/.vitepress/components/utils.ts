@@ -115,7 +115,9 @@ export const replaceAndLow = (str: string) =>
     .replace(/·/g, "_")
     .replace(/&/g, "_")
     .replace(/,/g, "_")
-    .replace(/__/g, "_").toLowerCase();
+    .replace(/__/g, "_")
+    .replace(/__/g, "_")
+    .toLowerCase();
 
 
 export const combineWishPic = (wishName: string, wishImage: number) =>

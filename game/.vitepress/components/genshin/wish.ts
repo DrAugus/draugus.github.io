@@ -663,31 +663,31 @@ export const WISH = {
       wishName: ["「劫中泛滥」", "「杯装之诗」"],
       url: ["?", "?"]
     },
-    // {
-    //   name: ["", "Secretum Secretorum"],
-    //   image: [1, 4],
-    //   shortName: ["Furina", "Albedo"],
-    //   start: "2023-11-08 11:00:00 +0800",
-    //   end: "2023-11-28 17:59:59 +0800",
-    //   wish5star: ["furina", "albedo"],
-    //   wish4star: ["charlotte"],
-    //   version: "4.2",
-    //   wishName: ["", "「深秘之息」"],
-    //   url: ["?", "?"]
-    // },
-    // {
-    //   name: ["Moment of Bloom", "Immaculate Pulse"],
-    //   image: [4, 2],
-    //   shortName: ["Hu Tao", "Baizhu"],
-    //   start: "2023-11-28 18:00:00 +0800",
-    //   end: "2023-12-19 14:59:59 +0800",
-    //   version: "4.2",
-    //   wish5star: ["hu_tao", "baizhu"],
-    //   wish4star: [],
-    //   wishName: ["「赤团开时」", "「心珠循琅」"],
-    //   url: ["?", "?"
-    //   ]
-    // },
+    {
+      name: ['Chanson of Many Waters', 'Immaculate Pulse'],
+      image: [1, 2],
+      shortName: ['Furina', 'Baizhu'],
+      start: "2023-11-08 11:00:00 +0800",
+      end: "2023-11-28 17:59:59 +0800",
+      wish5star: ['furina', 'baizhu'],
+      wish4star: ['Charlotte', 'Collei', 'Beidou'],
+      version: "4.1",
+      wishName: ["「众水的颂诗」", "「心珠循琅」"],
+      url: ["?", "?"]
+    },
+    {
+      name: ['Twilight Arbiter', 'Azure Excursion'],
+      image: [3, 3],
+      shortName: ['Cyno', 'Kamisato Ayato'],
+      start: "2023-11-28 18:00:00 +0800",
+      end: "2023-12-19 14:59:59 +0800",
+      version: "4.2",
+      wish5star: ['cyno', 'kamisato_ayato'],
+      wish4star: ['Kirara', 'Kuki Shinobu', 'Xiangling'],
+      wishName: ["「雳裁冥昭」", "「苍流踏花」"],
+      url: ["?", "?"
+      ]
+    },
     // {
     //   name: ["Ballad in Goblets", "The Herons Court"],
     //   image: [5, 4],
@@ -1186,12 +1186,16 @@ export const WISH = {
       image: 55,
       start: "2023-11-08 11:00:00 +0800",
       end: "2023-11-28 17:59:59 +0800",
+      wish5star: ['Splendor of Tranquil Waters', "Jadefall's Splendor"],
+      wish4star: ['Sacrificial Sword', 'The Bell', "Dragon's Bane", 'Sacrificial Fragments', 'The Stringless'],
     },
     {
       name: "Epitome Invocation",
       image: 56,
       start: "2023-11-28 18:00:00 +0800",
       end: "2023-12-19 14:59:59 +0800",
+      wish5star: ['Staff of the Scarlet Sands', 'Haran Geppaku Futsu'],
+      wish4star: ["Lion's Roar", 'Favonius Greatsword', 'Favonius Lance', 'The Widsith', 'Favonius Warbow'],
     },
     {
       name: "Epitome Invocation",

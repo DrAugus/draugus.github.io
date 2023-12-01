@@ -62,21 +62,21 @@ export const CHARACTER = {
   charlotte: {
     id: "charlotte",
     name: "夏洛蒂",
-    prefix: "",
+    prefix: "朗镜索真",
     star: 4,
     event_exclusive: false,
     intro: "充满活力的蒸汽鸟报记者，每时每刻都在为「真相」而奔走。",
     city: City.Fontaine,
     ele: Element.cryo,
-    weapon: Weapon.polearm
+    weapon: Weapon.catalyst
   },
   furina: {
     id: "furina",
     name: "芙宁娜",
-    prefix: "",
+    prefix: "不休独舞",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "「众水、众方、众民与众律法的女王」，深受民众喜爱。<br/>热衷于欧庇克莱歌剧院上演的每一场审判，也总是在意着「观众」的眼光。",
     city: City.Fontaine,
     ele: Element.hydro,
     weapon: Weapon.polearm
