@@ -235,6 +235,7 @@ const sidebarTripAboard = () => [
 const sidebarArtsArticle = () => [
     { text: '猫', link: '/arts/article/猫' },
     { text: '庄子·秋水', link: '/arts/article/庄子·秋水' },
+    { text: '归去来兮辞', link: '/arts/article/归去来兮辞' },
     { text: '道德经', link: '/arts/article/道德经' },
     { text: '逍遥游·北冥有鱼', link: '/arts/article/逍遥游·北冥有鱼' },
     { text: '聪明人和傻子和奴才', link: '/arts/article/聪明人和傻子和奴才' },
@@ -284,6 +285,7 @@ const sidebarArtsLang = () => [
         collapsed: false,
         items: [
             { text: '常用电话提示音', link: '/arts/language/english/dial-number' },
+            { text: '词组 俚语', link: '/arts/language/english/phrase' },
         ],
     },
     { text: '人名汇总', link: '/arts/language/name' },
