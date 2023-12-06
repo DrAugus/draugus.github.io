@@ -6,7 +6,7 @@ specifiers:
   markdown-it-mathjax3: ^4.3.2
   sass: ^1.69.5
   typed.js: 2.1.0
-  vite: ^5.0.5
+  vite: ^5.0.6
   vitepress: ^1.0.0-rc.31
   vue: ^3.3.10
   vue-echarts: ^6.6.2
@@ -17,7 +17,7 @@ devDependencies:
   markdown-it-mathjax3: 4.3.2
   sass: 1.69.5
   typed.js: 2.1.0
-  vite: 5.0.5_sass@1.69.5
+  vite: 5.0.6_sass@1.69.5
   vitepress: 1.0.0-rc.31_3tahjxo2r54smtdpc2mr6z5wmy
   vue: 3.3.10
   vue-echarts: 6.6.2_echarts@5.4.3+vue@3.3.10
@@ -580,14 +580,14 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@vitejs/plugin-vue/4.5.0_vite@5.0.5+vue@3.3.10:
+  /@vitejs/plugin-vue/4.5.0_vite@5.0.6+vue@3.3.10:
     resolution: {integrity: sha512-a2WSpP8X8HTEww/U00bU4mX1QpLINNuz/2KMNpLsdu3BzOpak3AGI1CJYBTXcc4SPhaD0eNRUp7IyQK405L5dQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0 || ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.5_sass@1.69.5
+      vite: 5.0.6_sass@1.69.5
       vue: 3.3.10
     dev: true
 
@@ -1542,8 +1542,8 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite/5.0.5_sass@1.69.5:
-    resolution: {integrity: sha512-OekeWqR9Ls56f3zd4CaxzbbS11gqYkEiBtnWFFgYR2WV8oPJRRKq0mpskYy/XaoCL3L7VINDhqqOMNDiYdGvGg==}
+  /vite/5.0.6_sass@1.69.5:
+    resolution: {integrity: sha512-MD3joyAEBtV7QZPl2JVVUai6zHms3YOmLR+BpMzLlX2Yzjfcc4gTgNi09d/Rua3F4EtC8zdwPU8eQYyib4vVMQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1593,7 +1593,7 @@ packages:
       '@docsearch/css': 3.5.2
       '@docsearch/js': 3.5.2
       '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 4.5.0_vite@5.0.5+vue@3.3.10
+      '@vitejs/plugin-vue': 4.5.0_vite@5.0.6+vue@3.3.10
       '@vue/devtools-api': 6.5.1
       '@vueuse/core': 10.6.1_vue@3.3.10
       '@vueuse/integrations': 10.6.1_lndb7k3spzmup2deehvidozihq
@@ -1604,7 +1604,7 @@ packages:
       mrmime: 1.0.1
       shikiji: 0.7.4
       shikiji-transformers: 0.7.4
-      vite: 5.0.5_sass@1.69.5
+      vite: 5.0.6_sass@1.69.5
       vue: 3.3.10
     transitivePeerDependencies:
       - '@algolia/client-search'
