@@ -42,3 +42,7 @@ todo
 - 版本控制 SVN：TortoiseSVN [下载页/汉化页](https://tortoisesvn.net/downloads.html)
 - 版本控制 Git：[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，直接进入 Windows 版本[下载页](https://git-scm.com/download/win)，[Git 命令参考](../code-notes/version-ctrl/git)
 - 终端 Tabby：[官网](https://tabby.sh/)
+
+其他软件
+
+- 视频软件：[PotPlayer](https://potplayer.info/download/)

@@ -32,8 +32,20 @@
 
 > 真的有吗？
 
-- 赤坂亭(人均¥380)  <Badge type="tip" text="多人" />  <Badge type="tip" text="单人" />
-- 绿茶(人均¥100) <Badge type="tip" text="多人" />  <Badge type="tip" text="单人" />
+- 赤坂亭  <Badge type="warning" text="人均¥380" />  <Badge type="tip" text="日料" /> <Badge type="tip" text="烧烤" /><Badge type="tip" text="肉" />
+- 夏星酒馆(剑桥公社店)<Badge type="warning" text="人均¥90" />  <Badge type="tip" text="韩国料理" />
+- 辣得香湘菜馆 <Badge type="warning" text="人均¥76" /> <Badge type="tip" text="湘菜" />  
+- 吃饭皇帝大<Badge type="warning" text="人均¥95" /> <Badge type="tip" text="湘菜" />
+- 喜樘海鲜餐厅<Badge type="warning" text="人均¥135" /> <Badge type="tip" text="海鲜" />
+- 東大方 <Badge type="warning" text="人均¥103" /><Badge type="tip" text="浙菜" />
+- 湘绯·杭城拾佳湘菜 <Badge type="warning" text="人均¥89" /><Badge type="tip" text="湘菜" />
+- 隐食·喜樂餐厅 <Badge type="warning" text="人均¥113" /><Badge type="tip" text="创意菜" />
+- 鲁员外地锅鸡地锅鱼<Badge type="warning" text="人均¥77" /><Badge type="tip" text="地锅鸡" />
+- 三两好友深夜食堂 <Badge type="warning" text="人均¥107" /><Badge type="tip" text="海鲜" /> <Badge type="tip" text="烤乳猪" />
+- 牛大倌黄牛肉火锅<Badge type="warning" text="人均¥70" /> <Badge type="tip" text="牛肉火锅" />
+- 东海鲜生海鲜酒楼<Badge type="warning" text="人均¥85" /><Badge type="tip" text="海鲜" />
+- 313羊庄铁锅烀<Badge type="warning" text="人均¥118" />   <Badge type="tip" text="烤全羊" /><Badge type="tip" text="烧烤龙虾" /><Badge type="tip" text="牛羊肉火锅" />
+- 绿茶<Badge type="warning" text="人均¥100" /> <Badge type="tip" text="杭帮菜" />  <Badge type="tip" text="融合菜" />
 
 ### 游记
 

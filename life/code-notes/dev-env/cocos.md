@@ -7,6 +7,8 @@
 - [MeshRenderer 组件参考](https://docs.cocos.com/creator/3.4/manual/zh/engine/renderable/model-component.html)
 - [加载资源](https://docs.cocos.com/creator/3.4/manual/zh/asset/dynamic-load-resources.html)
 - 关于重力：[物理世界和元素](https://docs.cocos.com/creator/3.4/manual/zh/physics/physics.html#%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E5%92%8C%E5%85%83%E7%B4%A0) —— 物理世界中的每个元素都可以理解为一个独立的**刚体**，在 Cocos Creator 3.x 中可以通过为游戏对象添加 [Collider 碰撞组件](https://docs.cocos.com/creator/3.4/manual/zh/physics/physics-collider.html) 或者 [RigidBody 刚体组件](https://docs.cocos.com/creator/3.4/manual/zh/physics/physics-rigidbody.html) 让物理元素具备物理特性。物理系统将为这些元素进行物理计算，比如计算各物体是否产生碰撞，以及物体的受力情况。当计算完成后，物理系统会将物理世界更新到场景世界中，仿真还原真实世界中的物理行为。
+- [生命周期](https://docs.cocos.com/creator/3.4/manual/zh/scripting/life-cycle-callbacks.html)
+- [节点时间系统](https://docs.cocos.com/creator/3.4/manual/zh/engine/event/event-node.html)：`Event.EventMouse`，`Event.EventTouch`
 
 ## 技巧
 
@@ -20,16 +22,36 @@
 
 ### 设置节点的可见性     <Badge type="info">[官方文档](https://docs.cocos.com/creator/3.4/manual/zh/concepts/scene/node-component.html#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7)</Badge>
 
+有很多文档
+
+- [设置节点的可见性](https://docs.cocos.com/creator/3.4/manual/zh/concepts/scene/node-component.html#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7)
+- [相机分组渲染](https://docs.cocos.com/creator/3.4/manual/zh/editor/components/camera-component.html#%E7%9B%B8%E6%9C%BA%E5%88%86%E7%BB%84%E6%B8%B2%E6%9F%93)
+- [渲染排序规则](https://docs.cocos.com/creator/3.4/manual/zh/ui-system/components/engine/priority.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+
 引擎采用更加通用的节点，和相机相匹配。当节点设置的 Layer 属性包含在相机的 Visibility 属性 中时，节点便可以被相机看见，同时支持 3D 组件与 2D 组件的混合渲染。以便更灵活地控制节点组件的可见性，使分组显示多样化。
 
 节点的 Layer 属性是全局且唯一的，但是不同的节点可以设置相同的 Layer 属性，使其被同一个相机所观察。开发者可以使用引擎内置的 Layer 属性，也可以使用自定义的 Layer 属性，点击下图中的 Edit 按钮即可前往 项目设置 -> Layers 页面进行设置。详情请参考 层级 文档。
 
-项目实践为，3D 物体在 2D 物体的层级上方。**Canvas** 为 2D 界面，设置其 Layer 为 **UI_2D** ，**Canvas-3d-front** 为 3D 界面，设置其 Layer 为 **Mahjong**，并同时挂载主摄，隐藏所有 canvas 组件子节点中的摄像头。将主摄的 visibility 调整为所有想要显示的 Layer，本次实践中为 Popup、Mahjong、UI_3D、UI_2D、DEFAULT 等。项目的 Layer 层级设置如图所示。
+**项目实践**为，3D 物体在 2D 物体的层级上方。**Canvas** 为 2D 界面，设置其 Layer 为 **UI_2D** 并且所有子节点都为 **UI_2D**。**Canvas-3d-front** 为 3D 界面，设置其 Layer 为 **Mahjong**，其所有子节点也为 **Mahjong** Layer。不启用主摄。项目的 Layer 层级设置如图所示。最关键的是要调整好 **Priority** 属性，值越小越优先渲染，将最外层的数值调到最大。
 
-![1](/img/code/cocos/canvas.png)
-![1](/img/code/cocos/canvas-front-3d.png)
-![1](/img/code/cocos/camera-visibility.png)
+:::tip 需要注意
+如果有动态生成的节点或者子节点，需要在代码里控制写入对应的 Layer，否则无法显示。其会按照 **Default** Layer 进行显示。本项目实践中，在 **Canvas-3d-front** 中有大量自动生成的节点，故而在其内的摄像头 **Visibility** 中将 **Default** layer 也进行了勾选（如下图）。
+:::
+
+Project Layers
 ![1](/img/code/cocos/layers.png)
+
+**Canvas** Layer **UI_2D**
+![1](/img/code/cocos/canvas.png)
+
+**Canvas-3d-front** Layer **Mahjong**
+![1](/img/code/cocos/canvas-front-3d.png)
+
+**Canvas** camera **Visibility** and **ClearFlags**
+![1](/img/code/cocos/canvas-2d-camera.png)
+
+**Canvas-3d-front** camera **Visibility** and **ClearFlags**
+![1](/img/code/cocos/canvas-3d-camera.png)
 
 ## QA
 
