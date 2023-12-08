@@ -16,7 +16,7 @@
     "preview": "vitepress preview ."
   },
   "devDependencies": {
-    "@mdit-vue/shared": "^1.0.0",
+    "@mdit-vue/shared": "^2.0.0",
     "echarts": "^5.4.3",
     "markdown-it-mathjax3": "^4.3.2",
     "sass": "^1.69.5",
