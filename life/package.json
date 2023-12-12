@@ -24,6 +24,6 @@
     "vite": "^5.0.7",
     "vitepress": "^1.0.0-rc.31",
     "vue": "^3.3.11",
-    "vue-echarts": "^6.6.2"
+    "vue-echarts": "^6.6.3"
   }
 }
