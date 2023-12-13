@@ -9,7 +9,7 @@ specifiers:
   vite: ^5.0.8
   vitepress: ^1.0.0-rc.31
   vue: ^3.3.11
-  vue-echarts: ^6.6.3
+  vue-echarts: ^6.6.4
 
 devDependencies:
   '@mdit-vue/shared': 2.0.0
@@ -20,7 +20,7 @@ devDependencies:
   vite: 5.0.8_sass@1.69.5
   vitepress: 1.0.0-rc.31_3tahjxo2r54smtdpc2mr6z5wmy
   vue: 3.3.11
-  vue-echarts: 6.6.3_echarts@5.4.3+vue@3.3.11
+  vue-echarts: 6.6.4_echarts@5.4.3+vue@3.3.11
 
 packages:
 
@@ -1658,8 +1658,8 @@ packages:
       vue: 3.3.11
     dev: true
 
-  /vue-echarts/6.6.3_echarts@5.4.3+vue@3.3.11:
-    resolution: {integrity: sha512-ogeMZ88QV62h+6Rmfi1ZAScKGX0TrCESTtoSUDNanrVH3lsvquVGNb43805J6pVhNqsgXXf4b5oweFjRw1Mqlw==}
+  /vue-echarts/6.6.4_echarts@5.4.3+vue@3.3.11:
+    resolution: {integrity: sha512-WtTAdwcLgbCsblOlbOfOr9tOHrR6ufEfoZwPbXHp/HVRXCLlh/GaAIXtqdjGSr/YtCEQNkaW0FpR2c9ukzxVmw==}
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.5
