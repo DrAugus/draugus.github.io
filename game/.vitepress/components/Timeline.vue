@@ -26,22 +26,27 @@
         </div>
 
         <div class="timeline-wish-event-weapon">
-          <div class="card event-item weapon" v-for="(value, i) in WISH.weapons" :class="[
-            getBorderRadius(wishWeapons, i)
-          ]" v-bind:style="{
+          <div v-for="(value, i) in WISH.weapons">
+            <div v-for="(_multi, j) in value.image">
+              <div class="card event-item weapon" :class="[
+                getBorderRadius(wishWeapons, i)
+              ]" v-bind:style="{
   width: wishWeapons[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-  height: 'var(--event-height)'
+  height: 'var(--event-height)',
+  marginTop: j ? '10px + var(--event-height)*3' : ''
 }">
-            <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
-              style="height: 100%">
-              <div class="event-img">
-                <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, value.image)}`" @error="replaceImg"
-                  alt="">
+                <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
+                  style="height: 100%">
+                  <div class="event-img">
+                    <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, value.image)}`"
+                      @error="replaceImg" alt="">
+                  </div>
+                  <span class="left-align timeline-character-text sticky text-shadow-weapon ">
+                    {{ replaceText('', gameNum, 1) }}
+                  </span>
+                </div>
               </div>
-              <span class="left-align timeline-character-text sticky text-shadow-weapon ">
-                {{ replaceText('', gameNum, 1) }}
-              </span>
             </div>
           </div>
         </div>
@@ -52,8 +57,6 @@
           <div v-for="(value, i) in WISH.characters">
 
             <div v-for="(_multi, j) in value.name">
-
-
 
               <div class="card event-item " :class="[
                 'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
@@ -221,33 +224,33 @@ export default {
     // 保证 e 在 s 之后
     // start - end
     diffWishStyle(s, e) {
-      if (s == e) return 0
+      if (s == e) return 0;
       let res = parseDayjs(e).subtract(0, "minute")
-        .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1
-      if (res) return 1
-      return -1
+        .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1;
+      if (res) return 1;
+      return -1;
     },
     getBorderRadius(wishInfo, i) {
-      const len = wishInfo.length
-      if (!len) return ''
-      let style = ''
+      const len = wishInfo.length;
+      if (!len) return '';
+      let style = '';
       if (i === 0) {
-        style += 'rounded-l-xl '
+        style += 'rounded-l-xl ';
       } else if (i === len - 1) {
-        style += 'rounded-r-xl '
+        style += 'rounded-r-xl ';
       } else {
-        let diff = this.diffWishStyle(wishInfo[i].end, wishInfo[i + 1].start)
+        let diff = this.diffWishStyle(wishInfo[i].end, wishInfo[i + 1].start);
         if (diff === 1) {
-          style += 'border-r-4 border-white '
+          style += 'border-r-4 border-white ';
         } else if (diff === -1) {
-          style += 'rounded-r-xl '
+          style += 'rounded-r-xl ';
         }
 
-        let diff2 = this.diffWishStyle(wishInfo[i - 1].end, wishInfo[i].start)
+        let diff2 = this.diffWishStyle(wishInfo[i - 1].end, wishInfo[i].start);
         if (diff2 === 1) {
-          style += 'border-r-4 border-white '
+          style += 'border-r-4 border-white ';
         } else if (diff2 === -1) {
-          style += 'rounded-l-xl '
+          style += 'rounded-l-xl ';
         }
       }
 
@@ -255,12 +258,12 @@ export default {
         style = style.replace('border-r-4 border-white ', '');
       }
 
-      return style
+      return style;
     },
 
 
     replaceImg(event) {
-      event.target.src = `/image/${this.gameName}/wish/_1.jpg`
+      event.target.src = `/image/${this.gameName}/wish/_1.jpg`;
     },
 
   },

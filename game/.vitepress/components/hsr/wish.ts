@@ -133,6 +133,18 @@ export const WISH = {
       wishName: ['「令奉贞凶」'],
       url: ['']
     },
+    {
+      name: ['Thorns of Scented Crown', 'Contract Zero'],
+      image: [1, 2],
+      shortName: ['Argenti', 'Silver Wolf'],
+      start: '2023-12-06 12:00:00 +0800',
+      end: '2023-12-26 14:59:59 +0800',
+      version: '1.5',
+      wish5star: ['Argenti', 'silver_wolf'],
+      wish4star: ['Hanya', 'Lynx', 'Asta'],
+      wishName: ['「荆冠芳勋」', '「零号协议」'],
+      url: ['']
+    },
   ],
   weapons: [
     {
@@ -227,7 +239,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 10,
+      image: [10, 11],
       start: '2023-10-27 10:00:00 +0800',
       end: '2023-11-14 15:59:59 +0800',
       shortName: "",
@@ -237,7 +249,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 11,
+      image: 12,
       start: '2023-11-15 10:00:00 +0800',
       end: '2023-12-06 11:59:59 +0800',
       shortName: "",
@@ -245,5 +257,15 @@ export const WISH = {
       wish4star: ['Shared Feeling', 'Subscribe for More!', 'Trend of the Universal Market'],
       url: ""
     },
+    {
+      name: "Brilliant Fixation",
+      image: [13, 14],
+      start: '2023-12-06 12:00:00 +0800',
+      end: '2023-12-26 14:59:59 +0800',
+      shortName: "",
+      wish5star: ['An Instant Before A Gaze', 'Incessant Rain'],
+      wish4star: ['Under the Blue Sky', 'Post-Op Conversation', 'The Birth of the Self'],
+      url: ""
+    },
   ]
-}
+};
