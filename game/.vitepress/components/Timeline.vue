@@ -34,12 +34,13 @@
   width: wishWeapons[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
   left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
   height: 'var(--event-height)',
-  marginTop: j ? '10px + var(--event-height)*3' : ''
+  marginTop: j ? '184px' : ''
 }">
                 <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
                   style="height: 100%">
                   <div class="event-img">
-                    <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, value.image)}`"
+                    <img
+                      v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, Array.isArray(value.image) ? value.image[j] : value.image)}`"
                       @error="replaceImg" alt="">
                   </div>
                   <span class="left-align timeline-character-text sticky text-shadow-weapon ">

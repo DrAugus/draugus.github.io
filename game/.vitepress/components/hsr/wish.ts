@@ -140,7 +140,7 @@ export const WISH = {
       start: '2023-12-06 12:00:00 +0800',
       end: '2023-12-26 14:59:59 +0800',
       version: '1.5',
-      wish5star: ['Argenti', 'silver_wolf'],
+      wish5star: ['argenti', 'silver_wolf'],
       wish4star: ['Hanya', 'Lynx', 'Asta'],
       wishName: ['「荆冠芳勋」', '「零号协议」'],
       url: ['']
@@ -149,7 +149,7 @@ export const WISH = {
   weapons: [
     {
       name: "Brilliant Fixation",
-      image: 1,
+      image: [1],
       start: "2023-04-26 10:00:00 +0800",
       end: "2023-05-17 17:59:59 +0800",
       shortName: "in_the_night",
@@ -159,7 +159,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 2,
+      image: [2],
       start: "2023-05-17 18:00:00 +0800",
       end: "2023-06-06 14:59:59 +0800",
       shortName: "",
@@ -169,7 +169,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 3,
+      image: [3],
       start: "2023-06-07 10:00:00 +0800",
       end: "2023-06-28 11:59:59 +0800",
       shortName: "",
@@ -179,7 +179,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 4,
+      image: [4],
       start: "2023-06-28 12:00:00 +0800",
       end: "2023-07-18 14:59:59 +0800",
       shortName: "",
@@ -189,7 +189,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 5,
+      image: [5],
       start: "2023-07-19 10:00:00 +0800",
       end: "2023-08-09 11:59:59 +0800",
       shortName: "",
@@ -199,7 +199,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 6,
+      image: [6],
       start: "2023-08-09 12:00:00 +0800",
       end: "2023-08-29 14:59:59 +0800",
       shortName: "",
@@ -209,7 +209,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 7,
+      image: [7],
       start: "2023-08-30 10:00:00 +0800",
       end: "2023-09-20 11:59:59 +0800",
       shortName: "",
@@ -219,7 +219,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 8,
+      image: [8],
       start: '2023-09-20 12:00:00 +0800',
       end: '2023-10-10 14:59:59 +0800',
       shortName: "",
@@ -229,7 +229,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 9,
+      image: [9],
       start: '2023-10-11 10:00:00 +0800',
       end: '2023-10-27 11:59:59 +0800',
       shortName: "",
@@ -249,7 +249,7 @@ export const WISH = {
     },
     {
       name: "Brilliant Fixation",
-      image: 12,
+      image: [12],
       start: '2023-11-15 10:00:00 +0800',
       end: '2023-12-06 11:59:59 +0800',
       shortName: "",
