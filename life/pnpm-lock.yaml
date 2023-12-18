@@ -9,7 +9,7 @@ specifiers:
   vite: ^5.0.10
   vitepress: ^1.0.0-rc.32
   vue: ^3.3.12
-  vue-echarts: ^6.6.4
+  vue-echarts: ^6.6.5
 
 devDependencies:
   '@mdit-vue/shared': 2.0.0
@@ -20,7 +20,7 @@ devDependencies:
   vite: registry.npmmirror.com/vite/5.0.10_sass@1.69.5
   vitepress: registry.npmmirror.com/vitepress/1.0.0-rc.32_3tahjxo2r54smtdpc2mr6z5wmy
   vue: registry.npmmirror.com/vue/3.3.12
-  vue-echarts: 6.6.4_echarts@5.4.3+vue@3.3.12
+  vue-echarts: registry.npmmirror.com/vue-echarts/6.6.5_echarts@5.4.3+vue@3.3.12
 
 packages:
 
@@ -389,10 +389,6 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /resize-detector/0.3.0:
-    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
-    dev: true
-
   /sass/1.69.5:
     resolution: {integrity: sha512-qg2+UCJibLr2LCVOt3OlPhr/dqVHWOa9XtZf2OjbLs/T4VPSJ00udtgJxH3neXZm+QqX8B+3cU7RaLqp1iVfcQ==}
     engines: {node: '>=14.0.0'}
@@ -451,38 +447,6 @@ packages:
   /valid-data-url/3.0.1:
     resolution: {integrity: sha512-jOWVmzVceKlVVdwjNSenT4PbGghU0SBIizAev8ofZVgivk/TVHXSbNL8LP6M3spZvkR9/QolkyJavGSX5Cs0UA==}
     engines: {node: '>=10'}
-    dev: true
-
-  /vue-demi/0.13.11_vue@3.3.12:
-    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: registry.npmmirror.com/vue/3.3.12
-    dev: true
-
-  /vue-echarts/6.6.4_echarts@5.4.3+vue@3.3.12:
-    resolution: {integrity: sha512-WtTAdwcLgbCsblOlbOfOr9tOHrR6ufEfoZwPbXHp/HVRXCLlh/GaAIXtqdjGSr/YtCEQNkaW0FpR2c9ukzxVmw==}
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.5
-      echarts: ^5.4.1
-      vue: ^2.6.12 || ^3.1.1
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      echarts: 5.4.3
-      resize-detector: 0.3.0
-      vue: registry.npmmirror.com/vue/3.3.12
-      vue-demi: 0.13.11_vue@3.3.12
     dev: true
 
   /web-resource-inliner/6.0.1:
@@ -1772,6 +1736,12 @@ packages:
     version: 6.4.0
     dev: true
 
+  registry.npmmirror.com/resize-detector/0.3.0:
+    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/resize-detector/-/resize-detector-0.3.0.tgz}
+    name: resize-detector
+    version: 0.3.0
+    dev: true
+
   registry.npmmirror.com/rollup/4.4.1:
     resolution: {integrity: sha512-idZzrUpWSblPJX66i+GzrpjKE3vbYrlWirUHteoAbjKReZwa0cohAErOYA5efoMmNCdvG9yrJS+w9Kl6csaH4w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rollup/-/rollup-4.4.1.tgz}
     name: rollup
@@ -2020,6 +1990,24 @@ packages:
       - universal-cookie
     dev: true
 
+  registry.npmmirror.com/vue-demi/0.13.11_vue@3.3.12:
+    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.13.11.tgz}
+    id: registry.npmmirror.com/vue-demi/0.13.11
+    name: vue-demi
+    version: 0.13.11
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.3.12
+    dev: true
+
   registry.npmmirror.com/vue-demi/0.14.6_vue@3.3.12:
     resolution: {integrity: sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.14.6.tgz}
     id: registry.npmmirror.com/vue-demi/0.14.6
@@ -2036,6 +2024,26 @@ packages:
         optional: true
     dependencies:
       vue: registry.npmmirror.com/vue/3.3.12
+    dev: true
+
+  registry.npmmirror.com/vue-echarts/6.6.5_echarts@5.4.3+vue@3.3.12:
+    resolution: {integrity: sha512-LO+jQrBu3OZMMp1O00VOdeU1Lnc1tqY1UFmTha8G5ntOsz7NxLYs3+S3l32E53dHdax+YlEh8ZWMHMZGAuELig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-echarts/-/vue-echarts-6.6.5.tgz}
+    id: registry.npmmirror.com/vue-echarts/6.6.5
+    name: vue-echarts
+    version: 6.6.5
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.5
+      echarts: ^5.4.1
+      vue: ^2.6.12 || ^3.1.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      echarts: 5.4.3
+      resize-detector: registry.npmmirror.com/resize-detector/0.3.0
+      vue: registry.npmmirror.com/vue/3.3.12
+      vue-demi: registry.npmmirror.com/vue-demi/0.13.11_vue@3.3.12
     dev: true
 
   registry.npmmirror.com/vue/3.3.12:
