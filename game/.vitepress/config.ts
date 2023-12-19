@@ -14,7 +14,7 @@ export default defineConfig({
       rel: 'icon',
       href: '/favicon.ico',
     }],
-    ['meta', { name: 'theme-color', content: '#3c8772' }],
+    // ['meta', { name: 'theme-color', content: '#3c8772' }],
   ],
   themeConfig: {
     logo: '/logo/logo.jpg',

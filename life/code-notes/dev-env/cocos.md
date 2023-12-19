@@ -2,7 +2,7 @@
 
 ## 重要链接
 
-- 编辑器界面操作：[场景编辑器](https://docs.cocos.com/creator/3.4/manual/zh/editor/scene/)（可以参考下方[技巧](#技巧)）
+- 编辑器界面操作：[场景编辑器](https://docs.cocos.com/creator/3.4/manual/zh/editor/scene/)（可以参考下方[技巧](#场景编辑快捷键)）
 - [3D 相机文档](https://docs.cocos.com/creator/3.4/manual/zh/editor/components/camera-component.html)
 - [MeshRenderer 组件参考](https://docs.cocos.com/creator/3.4/manual/zh/engine/renderable/model-component.html)
 - [加载资源](https://docs.cocos.com/creator/3.4/manual/zh/asset/dynamic-load-resources.html)
@@ -12,6 +12,8 @@
 
 ## 技巧
 
+### 场景编辑快捷键
+
 在 3D 视图下，可以通过以下操作来移动和定位 场景编辑器 的视图：
 
 - 鼠标左键 + Alt：以视图中心点为中心旋转。
@@ -19,6 +21,41 @@
 - 鼠标滚轮：以视图中心点为中心缩放视图。
 - 鼠标右键 + WASD：摄像机漫游。
 - Ctrl+Shift+F：摄像机聚焦到当前选中节点。
+
+### 世界坐标转换
+
+```ts
+// 找到其他节点下父节点的坐标，建议找到坐标在 (0, 0, 0) 的 parent 节点
+let worldPos = someNode.parent.parent.getComponent(UITransform).convertToWorldSpaceAR(someNode.position);
+// 转化到当前坐标系下
+let startPos = curNode.parent.getComponent(UITransform).convertToNodeSpaceAR(worldPos);
+```
+
+### 代码控制更新尺寸
+
+`updateRenderData`: 立即刷新 **Label** <Badge type="info">[官方文档（并没有解释）](https://docs.cocos.com/creator/3.4/api/zh/ui/Class/Label?id=updaterenderdata)</Badge>
+
+```ts
+updateSprite() {
+    const padding = 10;
+    const lenBG = 61;
+    let label = this.node.getChildByName('Label').getComponent(Label);
+    let sprite = this.node.getComponent(Sprite);
+    if (label && sprite) {
+        this.textHuCondition.updateRenderData(true);
+        let labelSize = label.node.getComponent(UITransform).contentSize;
+        sprite.node.getComponent(UITransform).setContentSize(lenBG + labelSize.width + padding * 2,
+            sprite.node.getComponent(UITransform).contentSize.height);
+    }
+}
+```
+
+`updateLayout`: 立即刷新 **Layout** <Badge type="info">[官方文档](https://docs.cocos.com/creator/3.4/api/zh/ui/Class/Layout?id=updatelayout)</Badge>
+
+```ts
+let layout = this.node.getComponent(Layout);
+layout.updateLayout();
+```
 
 ### 设置节点的可见性     <Badge type="info">[官方文档](https://docs.cocos.com/creator/3.4/manual/zh/concepts/scene/node-component.html#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7)</Badge>
 
