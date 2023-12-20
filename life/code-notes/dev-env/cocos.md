@@ -57,6 +57,43 @@ let layout = this.node.getComponent(Layout);
 layout.updateLayout();
 ```
 
+### 修改位置后随着动画一起乱飘
+
+```ts
+protected updateArrow(active: boolean, count: number = 0) {        
+    let aniNode = this.node;
+    if (!active) {
+        Tween.stopAllByTarget(aniNode);
+        return;
+    }
+    let oldPos = aniNode.position.clone();
+    if (active) {
+        if (!count) {
+            oldPos.x = 0;
+        } else {
+            if (count % 2) {
+                oldPos.x = 0;
+            } else {
+                oldPos.x = 1.5;
+            }
+        }
+    }
+    oldPos = v3(oldPos.x, 3.8, oldPos.z);
+    aniNode.setPosition(oldPos); // 如果不设置位置就会随着动画乱飘，是不是可以当作其他需求的 feature？
+    let aniTime = 0.7;
+    tween(aniNode)
+        .sequence(
+            tween(aniNode)
+                .to(aniTime, { position: v3(oldPos.x, oldPos.y - 0.2, oldPos.z), scale: v3(0.9, 0.9, 0.9) })
+                .start(),
+            tween(aniNode)
+                .to(aniTime, { position: v3(oldPos.x, oldPos.y, oldPos.z), scale: v3(1, 1, 1) })
+                .start())
+        .repeatForever()
+        .start();
+}            
+```
+
 ### 设置节点的可见性     <Badge type="info">[官方文档](https://docs.cocos.com/creator/3.4/manual/zh/concepts/scene/node-component.html#%E8%AE%BE%E7%BD%AE%E8%8A%82%E7%82%B9%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7)</Badge>
 
 有很多文档
