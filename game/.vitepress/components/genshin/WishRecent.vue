@@ -5,11 +5,11 @@
       <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
+    <blockquote>祈愿周期：{{ current.obj[0].date }}</blockquote>
 
-
-    <span v-for="(v, i) in current.obj">
+    <div v-for="(v, i) in current.obj">
       <h3>
-        下列限定5星角色的祈愿获取概率将大幅提升！ <br />
+        活动期间，下列限定五星角色的祈愿获取概率将大幅提升！ <br />
         <span v-for="(vv, ii) in v.name">
           <span :class="'ele-text-' + getCharElement(v.wish5star[ii], CHARACTER).id">
             {{ v.name[ii] + '祈愿：' + combineChar(v.wish5star[ii], CHARACTER) }}
@@ -28,12 +28,12 @@
       的祈愿获取概率将大幅提升！
 
 
-    </span>
+    </div>
 
-    <div class="bg-height" :style="imgStyle"></div>
+    <!-- <div class="bg-height" :style="imgStyle"></div> -->
 
     <h3>{{ end }} 后结束</h3>
-    <blockquote>祈愿周期：{{ current.obj[0].date }}</blockquote>
+
 
     <div v-for="(v, i) in current.obj">
       <div v-for="(vv, ii) in v.src" :key="ii">
@@ -102,7 +102,7 @@ export default {
   },
   methods: {
     replaceImg(event) {
-      event.target.src = '/image/genshin/wish/_1.jpg'
+      event.target.src = '/image/genshin/wish/_1.jpg';
     },
 
   },

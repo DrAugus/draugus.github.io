@@ -4,16 +4,16 @@ import { City, Element, Weapon } from "./utils";
 // todo 后续改为 db
 
 export const CHARACTER = {
-  navia: {
-    id: "navia",
-    name: "娜维娅",
+  arlecchino: {
+    id: "arlecchino",
+    name: "阿蕾奇诺",
     prefix: "",
     star: 5,
     event_exclusive: true,
     intro: "",
-    city: City.Fontaine,
-    ele: Element.geo,
-    weapon: Weapon.claymore
+    city: City.Snezhnaya,
+    ele: Element.pyro,
+    weapon: Weapon.polearm
   },
   liu_ping: {
     id: "liu_ping",
@@ -26,10 +26,10 @@ export const CHARACTER = {
     ele: Element.hydro,
     weapon: Weapon.polearm
   },
-  liu_yun: {
-    id: "liu_yun",
-    name: "流云",
-    prefix: "",
+  xian_yun: {
+    id: "xian_yun",
+    name: "闲云",
+    prefix: "鸾音鹤信",
     star: 5,
     event_exclusive: true,
     intro: "",
@@ -37,27 +37,27 @@ export const CHARACTER = {
     ele: Element.anemo,
     weapon: Weapon.polearm
   },
-  bennu: {
-    id: "bennu",
-    name: "bennu",
-    prefix: "",
+  gaming: {
+    id: "gaming",
+    name: "嘉明",
+    prefix: "骏猊頕首",
     star: 4,
     event_exclusive: false,
     intro: "",
-    city: City.Fontaine,
-    ele: Element.hydro,
-    weapon: Weapon.polearm
+    city: City.Liyue,
+    ele: Element.pyro,
+    weapon: Weapon.catalyst
   },
-  arlecchino: {
-    id: "arlecchino",
-    name: "阿蕾奇诺",
-    prefix: "",
+  navia: {
+    id: "navia",
+    name: "娜维娅",
+    prefix: "明花蔓舵",
     star: 5,
     event_exclusive: true,
-    intro: "",
-    city: City.Snezhnaya,
-    ele: Element.pyro,
-    weapon: Weapon.polearm
+    intro: "总是露出灿烂笑容的刺玫会会长，致力于为枫丹人解决各类难题。",
+    city: City.Fontaine,
+    ele: Element.geo,
+    weapon: Weapon.claymore
   },
   charlotte: {
     id: "charlotte",
@@ -898,4 +898,4 @@ export const CHARACTER = {
     ele: Element.dendro,
     weapon: Weapon.sword
   },
-}
+};

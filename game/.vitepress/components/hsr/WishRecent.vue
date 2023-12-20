@@ -5,17 +5,29 @@
       <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
-    <h3>
-      <span v-for="(v, i) in current.obj">
+    <blockquote>跃迁周期：{{ current.obj[0].date }}</blockquote>
+    <div v-for="(v, i) in current.obj">
+      <h3>
+        活动期间，下列限定五星角色跃迁成功概率限时提升 <br />
+
         <span v-for="(vv, ii) in v.name">
           {{ v.name[ii] + getCharName(v.wish5star[ii], CHARACTER) }}
+          <Badge :text="v.image[ii] == 1 ? '首次up' : `第${v.image[ii]}次up`" :type="v.image[ii] == 1 ? 'tip' : 'warning'">
+          </Badge>
+          <br />
         </span>
+
+      </h3>
+      四星角色
+      <span v-for="(vv, ii) in v.wish4star">
+        {{ '「' + getCharName(vv, CHARACTER) + '」' }}
       </span>
-    </h3>
-    <div class="bg-height" :style="imgStyle"></div>
+      跃迁成功概率限时提升
+    </div>
+    <!-- <div class="bg-height" :style="imgStyle"></div> -->
 
     <h3>{{ end }} 后结束</h3>
-    <blockquote>跃迁周期：{{ current.obj[0].date }}</blockquote>
+
 
     <div v-for="(v, i) in current.obj">
       <div v-for="(vv, ii) in v.src" :key="ii">
@@ -79,7 +91,7 @@ export default {
   },
   methods: {
     replaceImg(event) {
-      event.target.src = '/image/genshin/wish/_1.jpg'
+      event.target.src = '/image/genshin/wish/_1.jpg';
     },
 
   },

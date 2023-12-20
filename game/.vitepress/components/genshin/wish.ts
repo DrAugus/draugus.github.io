@@ -688,18 +688,18 @@ export const WISH = {
       url: ["?", "?"
       ]
     },
-    // {
-    //   name: ["Ballad in Goblets", "The Herons Court"],
-    //   image: [5, 4],
-    //   shortName: ["Venti", "Kamisato Ayaka"],
-    //   start: "2023-12-20 11:00:00 +0800",
-    //   end: "2024-01-09 17:59:59 +0800",
-    //   wish5star: ["venti", "kamisato_ayaka"],
-    //   wish4star: [],
-    //   version: "4.3",
-    //   wishName: ["「杯装之诗」", "「白鹭之庭」"],
-    //   url: ["?", "?"]
-    // },
+    {
+      name: ["In the Name of the Rosula", "The Herons Court"],
+      image: [1, 4],
+      shortName: ["Navia", "Kamisato Ayaka"],
+      start: "2023-12-20 11:00:00 +0800",
+      end: "2024-01-09 17:59:59 +0800",
+      wish5star: ["navia", "kamisato_ayaka"],
+      wish4star: ['Sucrose', 'Rosaria', 'Candace'],
+      version: "4.3",
+      wishName: ["「刺玫的铭誓」", "「白鹭之庭」"],
+      url: ["?", "?"]
+    },
     // {
     //   name: ["", "Twilight Arbiter"],
     //   image: [1, 3],
@@ -1202,6 +1202,8 @@ export const WISH = {
       image: 57,
       start: "2023-12-20 11:00:00 +0800",
       end: "2024-01-09 17:59:59 +0800",
+      wish5star: ['Verdict', 'Mistsplitter Reforged'],
+      wish4star: ['Akuoumaru', "Mouun's Moon", "The Flute", "Dragon's Bane", 'Favonius Codex'],
     },
     {
       name: "Epitome Invocation",

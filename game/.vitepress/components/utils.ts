@@ -2,51 +2,51 @@ import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 
 export const getCharName =
   (id: string, char: Characters) =>
-    !id ? '' : char[id]?.name
+    !id ? '' : char[id]?.name;
 
 export const getCharPrefix =
   (id: string, char: Characters) =>
-    !id ? '' : char[id]?.prefix
+    !id ? '' : char[id]?.prefix;
 
 export const getCharElement =
   (id: string, char: Characters) =>
-    !id ? '' : char[id]?.ele
+    !id ? '' : char[id]?.ele;
 
 export const combineChar =
   (id: string, char: Characters) =>
-    !id ? '' : (`${getCharPrefix(id, char)} · ${getCharName(id, char)}(${getCharElement(id, char).name})`)
+    !id ? '' : (`${getCharPrefix(id, char)} · ${getCharName(id, char)}(${getCharElement(id, char).name})`);
 
 export const getImgStyle =
   (current: WishInfo, gameNum: number = 0) => {
-    let gameName = getGameName(gameNum)
+    let gameName = getGameName(gameNum);
     // wish src
-    let homeImg // = current.src
+    let homeImg; // = current.src
     // replace char src
-    homeImg = []
+    homeImg = [];
     for (let v of current.obj) {
       for (let vv of v.wish5star) {
-        homeImg.push(`/image/${gameName}/characters/full/${vv}.png`)
+        homeImg.push(`/image/${gameName}/characters/full/${vv}.png`);
       }
     }
-    let style = {}
+    let style = {};
     if (homeImg.length == 1) {
       style = {
         backgroundImage: `url(${homeImg[0]})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'right',
         backgroundSize: '50%',
-      }
+      };
     } else if (homeImg.length == 2) {
       style = {
         backgroundImage: `url(${homeImg[0]}),url(${homeImg[1]})`,
         backgroundRepeat: 'no-repeat,no-repeat',
         backgroundPosition: 'left 3%, right 3%',
         backgroundSize: '50%, 50%',
-      }
+      };
     }
 
-    return style
-  }
+    return style;
+  };
 
 export const getTimelineHomeHero =
   (current: WishInfo, gameNum: number = 0) => {
@@ -56,35 +56,35 @@ export const getTimelineHomeHero =
       actions: [],
       tagline: '',
       style: {}
-    }
+    };
 
-    tl.name = replaceText('x时间轴', gameNum)
-    tl.text = replaceText('全部x信息', gameNum)
+    tl.name = replaceText('x时间轴', gameNum);
+    tl.text = replaceText('全部x信息', gameNum);
 
-    let gameName = getGameName(gameNum)
+    let gameName = getGameName(gameNum);
 
     tl.actions = [
       { theme: 'alt', text: '返回上级', link: '/' + gameName + '/' },
       { theme: 'brand', text: replaceText('当前x', gameNum), link: '/' + gameName + '/wish' }
-    ]
-    let homeTagline = ''
+    ];
+    let homeTagline = '';
     for (let v of current.obj) {
-      homeTagline += ' + ' + v.name
+      homeTagline += ' + ' + v.name;
     }
-    tl.tagline = homeTagline.slice(3)
+    tl.tagline = homeTagline.slice(3);
 
-    tl.style = getImgStyle(current, gameNum)
+    // tl.style = getImgStyle(current, gameNum)
 
     // console.log(tl)
 
     return tl;
 
-  }
+  };
 
 export const getGameName = (game: number) => {
-  if (game === 0) return 'genshin'
-  if (game === 1) return 'hsr'
-}
+  if (game === 0) return 'genshin';
+  if (game === 1) return 'hsr';
+};
 
 // tag 0 no handle
 // tag 1 weapon text
@@ -93,20 +93,20 @@ export const replaceText =
     if (game === 0) {
 
       if (tag === 1) {
-        return '「神铸赋形」活动祈愿'
+        return '「神铸赋形」活动祈愿';
       }
 
-      return str.replace('x', '祈愿')
+      return str.replace('x', '祈愿');
     } else if (game === 1) {
 
       if (tag === 1) {
-        return '「流光定影」活动跃迁'
+        return '「流光定影」活动跃迁';
       }
 
-      return str.replace('x', '跃迁')
+      return str.replace('x', '跃迁');
     }
 
-    return ''
+    return '';
   };
 
 //替换空格 转小写
@@ -132,7 +132,7 @@ export const formatDayjs = (date: string) =>
   parseDayjs(date).format("YYYY-MM-DD HH:mm");
 
 export const normalizeName = (name: string) =>
-  name.toLowerCase().replace(/\s+/g, '')
+  name.toLowerCase().replace(/\s+/g, '');
 
 export const compareDayjs = (a: string, b: string) => {
   if (parseDayjs(a).isBefore(parseDayjs(b))) {
@@ -144,10 +144,10 @@ export const compareDayjs = (a: string, b: string) => {
   return 0;
 };
 
-export const currentDayjs = (s: string, e: string) => parseDayjs(s).isBefore(today) && parseDayjs(e).isAfter(today)
+export const currentDayjs = (s: string, e: string) => parseDayjs(s).isBefore(today) && parseDayjs(e).isAfter(today);
 
-export const beforeToday = (t: string) => parseDayjs(t).isBefore(today)
-export const afterToday = (t: string) => parseDayjs(t).isAfter(today)
+export const beforeToday = (t: string) => parseDayjs(t).isBefore(today);
+export const afterToday = (t: string) => parseDayjs(t).isAfter(today);
 
 export const durationDay = (s: string, e: string) => parseDayjs(e).diff(parseDayjs(s), "day", true);
 export const durationTodayDay = (t: string) => parseDayjs(t).diff(today, "day", true);
