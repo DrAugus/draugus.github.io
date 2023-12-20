@@ -671,7 +671,7 @@ export const WISH = {
       end: "2023-11-28 17:59:59 +0800",
       wish5star: ['furina', 'baizhu'],
       wish4star: ['Charlotte', 'Collei', 'Beidou'],
-      version: "4.1",
+      version: "4.2",
       wishName: ["「众水的颂诗」", "「心珠循琅」"],
       url: ["?", "?"]
     },
