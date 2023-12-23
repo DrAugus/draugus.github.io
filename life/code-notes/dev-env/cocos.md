@@ -57,7 +57,33 @@ let layout = this.node.getComponent(Layout);
 layout.updateLayout();
 ```
 
-### 修改位置后随着动画一起乱飘
+### 动画相关
+
+#### 物体跳动
+
+```ts
+let aniNode = this.node;
+let pos = aniNode.position;
+let x = pos.x;
+let y = pos.y;
+let z = pos.z;
+let offset = 1;
+tween(aniNode)
+    .sequence(
+        tween(aniNode).to(0.018, { position: v3(x + (5 + offset), y + (offset + 7), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x - (6 + offset), y + (offset + 7), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x - (13 + offset), y + (offset + 3), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x + (3 + offset), y - (6 + offset), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x - (5 + offset), y + (offset + 5), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x + (2 + offset), y - (8 + offset), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x - (8 + offset), y - (10 + offset), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x + (3 + offset), y + (offset + 10), z) }).start(),
+        tween(aniNode).to(0.018, { position: v3(x + (0 + offset), y + (offset + 0), z) }).start()
+    ).repeatForever()
+    .start();
+```
+
+#### 修改位置后随着动画一起乱飘
 
 ```ts
 protected updateArrow(active: boolean, count: number = 0) {        
