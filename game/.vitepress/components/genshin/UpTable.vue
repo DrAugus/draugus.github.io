@@ -13,10 +13,13 @@
             <tr v-for="(v, i) in rows">
                 <td class="td-w-h" v-for="(vv, ii) in v" :style="{ background: getColor(vv.l, vv.m) }">
                     <span v-if="vv.l" class="td-font"> {{ vv.l }}</span>
-                    <img v-if="vv.char" :src="composeSrc(vv.char)">
+                    <img v-if="vv.char" :src="composeCharSrc(0, vv.char)">
                 </td>
                 <td :style="{ textAlign: 'left', whiteSpace: 'nowrap' }">
                     {{ getCharName(names[i].name, CHARACTER) }}
+                </td>
+                <td :style="{ textAlign: 'center', whiteSpace: 'nowrap' }">
+                    {{ i + 1 }}
                 </td>
             </tr>
 
@@ -30,9 +33,7 @@ import { defineComponent } from 'vue'
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 import dayjs from "dayjs";
-import { getCharName } from '../utils';
-import { composeSrc } from "./utils";
-
+import { getCharName, composeCharSrc, replaceAndLow } from '../utils';
 
 
 const getColor = (index, max) => {
@@ -88,9 +89,7 @@ const process = () => {
         }
 
 
-        const chars = wish.wish5star
-
-        for (let char of chars) {
+        for (let char of wish.wish5star) {
             if (_chars5[char] === undefined) {
                 _chars5[char] = {
                     pos: pos5,
@@ -104,6 +103,23 @@ const process = () => {
                 _names5[_chars5[char].pos].length = 0;
                 _chars5[char].length = 0;
 
+            }
+        }
+
+        for (let char of wish.wish4star) {
+            const modifyChar = replaceAndLow(char)
+            if (_chars4[modifyChar] === undefined) {
+                _chars4[modifyChar] = {
+                    pos: pos4,
+                    length: 0,
+                };
+                _names4[pos4] = { name: modifyChar, length: 0 };
+                _rows4[pos4] = [...new Array(len).fill({ l: '' }), { char, l: 0 }];
+                pos4++;
+            } else {
+                _rows4[_chars4[modifyChar].pos][len] = { char, l: 0 };
+                _names4[_chars4[modifyChar].pos].length = 0;
+                _chars4[modifyChar].length = 0;
             }
         }
 
@@ -190,7 +206,7 @@ export default defineComponent({
             versions,
             rows,
             names,
-            composeSrc,
+            composeCharSrc,
             getColor,
             sortOrder,
             CHARACTER,

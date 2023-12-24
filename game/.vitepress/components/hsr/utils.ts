@@ -66,7 +66,3 @@ export const Weapon = {
 export enum Artifacts {
   flower, plume, sands, goblet, circlet
 }
-
-export const composeSrc = (name: string) =>
-  '/image/genshin/characters/' + name + '.png'
-

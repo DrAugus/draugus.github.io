@@ -45,8 +45,7 @@
 
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { composeSrc } from "./utils";
-import { replaceAndLow, compareDayjs, formatDayjs } from "../utils";
+import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs } from "../utils";
 
 const wishChar = WISH.characters
 
@@ -70,7 +69,7 @@ export default {
       event.target.src = '/image/genshin/characters/paimon_faq.png'
     },
     getCharAvatar(id) {
-      return composeSrc(replaceAndLow(id))
+      return composeCharSrc(0, id)
     },
     getCharNameZh(id) {
       return CHARACTER[replaceAndLow(id)]?.name

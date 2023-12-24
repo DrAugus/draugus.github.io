@@ -40,8 +40,7 @@
 import dayjs from "dayjs";
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
-import { composeSrc } from "./utils";
-import { parseDayjs, formatDayjs, compareDayjs, filterObject, currentDayjs, beforeToday, afterToday, durationTodayDay } from "../utils";
+import { parseDayjs, formatDayjs, compareDayjs, filterObject, currentDayjs, beforeToday, afterToday, durationTodayDay, composeCharSrc } from "../utils";
 
 import "dayjs/locale/zh";
 
@@ -160,7 +159,7 @@ for (let v of modify5starWishInfo) {
   let obj = {}
   obj.shortName = v.shortName
   obj.nameZH = CHARACTER[v.shortName].name
-  obj.src = composeSrc(v.shortName)
+  obj.src = composeCharSrc(0, v.shortName)
   obj.version = v.version
   obj.duration = dayTip(v.duration)
   obj.tag = v.duration // 排序用 由远至近-由大到小

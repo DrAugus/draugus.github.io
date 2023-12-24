@@ -4,28 +4,39 @@ import { City, Element, Weapon } from "./utils";
 // todo 后续改为 db
 
 export const CHARACTER = {
-  arlecchino: {
-    id: "arlecchino",
-    name: "阿蕾奇诺",
-    prefix: "",
-    star: 5,
-    event_exclusive: true,
-    intro: "",
-    city: City.Snezhnaya,
-    ele: Element.pyro,
-    weapon: Weapon.polearm
-  },
-  liu_ping: {
-    id: "liu_ping",
-    name: "流萍",
-    prefix: "",
-    star: 4,
-    event_exclusive: false,
-    intro: "",
-    city: City.Liyue,
-    ele: Element.hydro,
-    weapon: Weapon.polearm
-  },
+  // arlecchino: {
+  //   id: "arlecchino",
+  //   name: "阿蕾奇诺",
+  //   prefix: "",
+  //   star: 5,
+  //   event_exclusive: true,
+  //   intro: "",
+  //   city: City.Snezhnaya,
+  //   ele: Element.pyro,
+  //   weapon: Weapon.polearm
+  // },
+  // liu_ping: {
+  //   id: "liu_ping",
+  //   name: "流萍",
+  //   prefix: "",
+  //   star: 4,
+  //   event_exclusive: false,
+  //   intro: "",
+  //   city: City.Liyue,
+  //   ele: Element.hydro,
+  //   weapon: Weapon.polearm
+  // },
+  // myrianelle: {
+  //   id: "myrianelle",
+  //   name: "myrianelle",
+  //   prefix: "",
+  //   star: 4,
+  //   event_exclusive: false,
+  //   intro: "",
+  //   city: City.Fontaine,
+  //   ele: Element.pyro,
+  //   weapon: Weapon.polearm
+  // },
   xian_yun: {
     id: "xian_yun",
     name: "闲云",
@@ -79,17 +90,6 @@ export const CHARACTER = {
     intro: "「众水、众方、众民与众律法的女王」，深受民众喜爱。<br/>热衷于欧庇克莱歌剧院上演的每一场审判，也总是在意着「观众」的眼光。",
     city: City.Fontaine,
     ele: Element.hydro,
-    weapon: Weapon.polearm
-  },
-  myrianelle: {
-    id: "myrianelle",
-    name: "myrianelle",
-    prefix: "",
-    star: 4,
-    event_exclusive: false,
-    intro: "",
-    city: City.Fontaine,
-    ele: Element.pyro,
     weapon: Weapon.polearm
   },
   neuvillette: {

@@ -2,7 +2,7 @@ import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 
 export const getCharName =
   (id: string, char: Characters) =>
-    !id ? '' : char[id]?.name;
+    !id ? '' : char[replaceAndLow(id)]?.name;
 
 export const getCharPrefix =
   (id: string, char: Characters) =>
@@ -119,6 +119,8 @@ export const replaceAndLow = (str: string) =>
     .replace(/__/g, "_")
     .toLowerCase();
 
+export const composeCharSrc = (game: number, name: string) =>
+  `/image/${getGameName(game)}/characters/${replaceAndLow(name)}.png`
 
 export const combineWishPic = (wishName: string, wishImage: number) =>
   replaceAndLow(wishName) + "_" + wishImage + '.jpg';
