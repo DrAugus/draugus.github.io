@@ -2,15 +2,55 @@
 
 ## 杭州
 
-关于杭州地铁，在**打铁关**换乘时，5号线换1号线，尽头上楼，不要去坐电梯上楼再下楼；1号线换5号线，尽头下楼，不要上楼再下楼。
+### 美食
 
-| 景点 | 交通 | 游玩 | 开放 | 预约 | 票价 | 平台 | 推荐 |
-|:----|:----|:----|:----|:----:|----:|----:|----:|
-|||||||||
+吃的
 
-**西湖景点盘点**  
-**太子湾**赏花，参考时间3/10-4/16，预计三月中下旬进入盛花期。全天按每2小时分设为5个预约时段，其中8:00—10:00，10:00—12:00，12:00—14:00，14:00—16:00四个时间段可预约人数为各1万人，16:00—17:00可预约人数为5千人。
-![taiziwan](/img/trip/xihu-taiziwan.jpg)
+- 夏星酒馆<Badge type="warning" text="人均 ¥90" />  <Badge type="tip" text="韩国料理" />
+- 赤坂亭  <Badge type="warning" text="人均 ¥380" />  <Badge type="tip" text="日料" /> <Badge type="tip" text="烧烤" /><Badge type="tip" text="肉" />
+- 荆九爷爆炒桥头三嫩  <Badge type="warning" text="人均 ¥76" />  <Badge type="tip" text="川菜" />
+- 胡集酒肆·唐潮西域菜  <Badge type="warning" text="人均 ¥97" />  <Badge type="tip" text="新疆菜" />
+- 蛙小侠   <Badge type="warning" text="人均 ¥80" />  <Badge type="tip" text="川湘菜" /><Badge type="tip" text="蛙" />
+- 小牛家村·贵州黄牛肉火锅  <Badge type="warning" text="人均 ¥77" />  <Badge type="tip" text="牛肉火锅" />
+- AJIYA味屋日式烧肉 <Badge type="warning" text="人均 ¥180" />  <Badge type="tip" text="日式烤肉" />
+- 牛New寿喜烧<Badge type="warning" text="人均 ¥170" />  <Badge type="tip" text="牛肉" /><Badge type="tip" text="自助" />
+- 一绪に寿喜烧 <Badge type="warning" text="人均 ¥170" />  <Badge type="tip" text="牛肉" /><Badge type="tip" text="自助" />
+- 木屋烧烤 <Badge type="warning" text="人均 ¥108" />  <Badge type="tip" text="烤串" />
+- 黔老头·贵州酸汤牛肉火锅 <Badge type="warning" text="人均 ¥90" />  <Badge type="tip" text="牛肉火锅" />
+- 串王阿三 <Badge type="warning" text="人均 ¥90" />  <Badge type="tip" text="烤串" />
+- 炉边酒叙·东北菜·冰煮羊·精酿啤酒·夜宵  <Badge type="warning" text="人均 ¥92" />  <Badge type="tip" text="烤串" />
+- 桂语山房 <Badge type="warning" text="人均 ¥800" />  <Badge type="tip" text="杭帮菜" />
+- 辣得香湘菜馆 <Badge type="warning" text="人均 ¥76" /> <Badge type="tip" text="湘菜" />  
+- 吃饭皇帝大<Badge type="warning" text="人均 ¥95" /> <Badge type="tip" text="湘菜" />
+- 喜樘海鲜餐厅<Badge type="warning" text="人均 ¥135" /> <Badge type="tip" text="海鲜" />
+- 東大方 <Badge type="warning" text="人均 ¥103" /><Badge type="tip" text="浙菜" />
+- 湘绯·杭城拾佳湘菜 <Badge type="warning" text="人均 ¥89" /><Badge type="tip" text="湘菜" />
+- 隐食·喜樂餐厅 <Badge type="warning" text="人均 ¥113" /><Badge type="tip" text="创意菜" />
+- 鲁员外地锅鸡地锅鱼<Badge type="warning" text="人均 ¥77" /><Badge type="tip" text="地锅鸡" />
+- 三两好友深夜食堂 <Badge type="warning" text="人均 ¥107" /><Badge type="tip" text="海鲜" /> <Badge type="tip" text="烤乳猪" />
+- 牛大倌黄牛肉火锅<Badge type="warning" text="人均 ¥70" /> <Badge type="tip" text="牛肉火锅" />
+- 东海鲜生海鲜酒楼<Badge type="warning" text="人均 ¥85" /><Badge type="tip" text="海鲜" />
+- 313羊庄铁锅烀<Badge type="warning" text="人均 ¥118" />   <Badge type="tip" text="烤全羊" /><Badge type="tip" text="烧烤龙虾" /><Badge type="tip" text="牛羊肉火锅" />
+- 绿茶<Badge type="warning" text="人均 ¥100" /> <Badge type="tip" text="杭帮菜" />  <Badge type="tip" text="融合菜" />
+
+酒吧
+
+- 酒隐（预调酒）  <Badge type="tip" text="莫斯科骡子" /><Badge type="warning" text="￥78" /><Badge type="tip" text="房东的猫" /><Badge type="warning" text="￥88" /><Badge type="tip" text="碎桃" /><Badge type="warning" text="￥88" /><Badge type="tip" text="吉娃娃" /><Badge type="warning" text="￥118" />
+- TASTE ROOM（啤酒）
+
+千万别吃
+
+- 厨创东北大厨 <Badge type="warning" text="人均 ¥80" /> <Badge type="tip" text="东北菜" />
+- sunny garden 意大利菜 非常难吃 已经倒闭
+
+### 交通
+
+地铁快速换乘指南
+
+- 5号线转10号线 往金星方向  3、4车厢2车门
+- 10转5 1车厢
+- 19转10 黄龙体育中心方向 4车厢 逸盛路方向 6车厢
+- 5转1 5-2附近 上楼梯
 
 ### 游玩
 
@@ -28,24 +68,9 @@
 - 湘湖，还是别去了(未来可期？那就未来再去)
 - 各种寺庙，法喜寺、灵隐寺
 
-### 美食
-
-> 真的有吗？
-
-- 赤坂亭  <Badge type="warning" text="人均¥380" />  <Badge type="tip" text="日料" /> <Badge type="tip" text="烧烤" /><Badge type="tip" text="肉" />
-- 夏星酒馆(剑桥公社店)<Badge type="warning" text="人均¥90" />  <Badge type="tip" text="韩国料理" />
-- 辣得香湘菜馆 <Badge type="warning" text="人均¥76" /> <Badge type="tip" text="湘菜" />  
-- 吃饭皇帝大<Badge type="warning" text="人均¥95" /> <Badge type="tip" text="湘菜" />
-- 喜樘海鲜餐厅<Badge type="warning" text="人均¥135" /> <Badge type="tip" text="海鲜" />
-- 東大方 <Badge type="warning" text="人均¥103" /><Badge type="tip" text="浙菜" />
-- 湘绯·杭城拾佳湘菜 <Badge type="warning" text="人均¥89" /><Badge type="tip" text="湘菜" />
-- 隐食·喜樂餐厅 <Badge type="warning" text="人均¥113" /><Badge type="tip" text="创意菜" />
-- 鲁员外地锅鸡地锅鱼<Badge type="warning" text="人均¥77" /><Badge type="tip" text="地锅鸡" />
-- 三两好友深夜食堂 <Badge type="warning" text="人均¥107" /><Badge type="tip" text="海鲜" /> <Badge type="tip" text="烤乳猪" />
-- 牛大倌黄牛肉火锅<Badge type="warning" text="人均¥70" /> <Badge type="tip" text="牛肉火锅" />
-- 东海鲜生海鲜酒楼<Badge type="warning" text="人均¥85" /><Badge type="tip" text="海鲜" />
-- 313羊庄铁锅烀<Badge type="warning" text="人均¥118" />   <Badge type="tip" text="烤全羊" /><Badge type="tip" text="烧烤龙虾" /><Badge type="tip" text="牛羊肉火锅" />
-- 绿茶<Badge type="warning" text="人均¥100" /> <Badge type="tip" text="杭帮菜" />  <Badge type="tip" text="融合菜" />
+**西湖景点盘点**  
+**太子湾**赏花，参考时间3/10-4/16，预计三月中下旬进入盛花期。全天按每2小时分设为5个预约时段，其中8:00—10:00，10:00—12:00，12:00—14:00，14:00—16:00四个时间段可预约人数为各1万人，16:00—17:00可预约人数为5千人。
+![taiziwan](/img/trip/xihu-taiziwan.jpg)
 
 ### 游记
 
@@ -64,7 +89,8 @@
 
 **运河游船**  
 可以提前一天在携程上购买(110)，也可当日在乘船点购买(120)，乘船点在  
-三次航班 19:00 19:30 20:20
+三次航班 19:00 19:30 20:20 真不建议坐  
+推荐坐水上巴士 2块钱
 
 ## 金华
 

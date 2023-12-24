@@ -42,4 +42,5 @@
 
 ## 美食
 
-已推送手机地图指南
+- GREEN & SAFE(新天地店)   <Badge type="warning" text="人均 ¥200" />  <Badge type="tip" text="西餐" />
+- Va Bene贝尼西餐厅   <Badge type="warning" text="人均 ¥368" />  <Badge type="tip" text="牛排" />

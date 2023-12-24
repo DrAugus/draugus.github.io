@@ -10,10 +10,6 @@ hero:
     src: /home.png
     alt: none
   actions:
-    # - theme: brand
-    #   text: 最近更新
-    #   link: /recent
-
     - theme: brand
       text: 旅行
       link: /trip/      
@@ -24,8 +20,8 @@ hero:
       text: 游记
       link: /trip/travelogue/
     - theme: alt
-      text: 吃点儿
-      link: /eat/      
+      text: 语言学习
+      link: /arts/language/      
     - theme: alt
       text: 文科
       link: /arts/
@@ -59,9 +55,9 @@ features:
     details: 互相学习互相学习
     link: /code/
     linkText: 快来看看如何编程
-  - title: 吃点饭吧
+  - title: 语言学习
     icon: 🥂
-    details: 吃饭真的太重要了
-    link: /eat/
-    linkText: 今天吃啥呢    
+    details: 日语英语德语法语意大利语
+    link: /arts/language/  
+    linkText: 开始练习吧    
 ---
