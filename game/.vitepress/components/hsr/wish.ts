@@ -145,6 +145,18 @@ export const WISH = {
       wishName: ['「荆冠芳勋」', '「零号协议」'],
       url: ['']
     },
+    {
+      name: ['Floral Triptych', 'A Lost Soul'],
+      image: [1, 2],
+      shortName: ['Ruan Mei', 'Blade'],
+      start: '2023-12-27 10:00:00 +0800',
+      end: '2024-01-24 11:59:59 +0800',
+      version: '1.6',
+      wish5star: ['ruan_mei', 'blade'],
+      wish4star: ['Xueyi', 'Tingyun', 'March 7th'],
+      wishName: ['「疏影三迭」', '「业途游魂」'],
+      url: ['']
+    },
   ],
   weapons: [
     {
@@ -264,6 +276,16 @@ export const WISH = {
       end: '2023-12-26 14:59:59 +0800',
       shortName: "",
       wish5star: ['An Instant Before A Gaze', 'Incessant Rain'],
+      wish4star: ['Under the Blue Sky', 'Post-Op Conversation', 'The Birth of the Self'],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: [15, 16],
+      start: '2023-12-27 10:00:00 +0800',
+      end: '2024-01-24 11:59:59 +0800',
+      shortName: "",
+      wish5star: ['The Unreachable Side', '"Past Self in Mirror', '"The Unreachable Side'],
       wish4star: ['Under the Blue Sky', 'Post-Op Conversation', 'The Birth of the Self'],
       url: ""
     },

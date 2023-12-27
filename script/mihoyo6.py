@@ -9,6 +9,17 @@ import re
 import utils
 
 
+from enum import Enum
+
+# 定义全局枚举类型
+
+
+class WishType(Enum):
+    INVALID = 0
+    CHARACTER = 1
+    WEAPON = 2
+
+
 api_prefix = 'https://bbs-api-os.hoyolab.com/community/post/wapi/'
 
 api_url_news_list = api_prefix + 'getNewsList'
@@ -121,23 +132,34 @@ def get_timestamp(text):
     return utils.clean_list_none(arr)
 
 
-def get_wish5star(text):
+def get_wish5star(text: str, wish_type: WishType):
     arr = []
+    find_tag: str = ''
+    if wish_type == WishType.CHARACTER:
+        find_tag = '5-Star Character'
+    elif wish_type == WishType.WEAPON:
+        find_tag = '5-Star Light Cone'
 
     def append_match(find_des):
-        arr.extend(utils.find_substrs(find_des, '5-Star Character', ')'))
+        arr.extend(utils.find_substrs(find_des, find_tag, ')'))
 
     got_insert_info(text, append_match)
 
     return utils.clean_list_none(arr)
 
 
-def get_wish4star(text):
+def get_wish4star(text: str, wish_type: WishType):
     arr = []
+    find_tag: str = ''
+    if wish_type == WishType.CHARACTER:
+        find_tag = '4-Star Characters'
+    elif wish_type == WishType.WEAPON:
+        find_tag = '4-star Light Cones'
 
-    def extract_characters(text: str):
-        # 使用一个正则表达式模式匹配所有的角色及其类型
-        pattern = r"4-Star Characters\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
+    def extract_characters(text: str, find_tag: str):
+        # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
+        pattern = fr"{
+            find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
 
         # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
         matches = re.findall(pattern, text)
@@ -150,16 +172,17 @@ def get_wish4star(text):
             return None
 
     def append_match(find_des):
-        if extract_characters(find_des) != None:
-            arr.extend(extract_characters(find_des))
+        if extract_characters(find_des, find_tag) != None:
+            arr.extend(extract_characters(find_des, find_tag))
 
     got_insert_info(text, append_match)
 
     return utils.clean_list_none(arr)
 
 
+# wish_type 0 character 1 weapon
 @utils.log_args
-def parse_char(post_id):
+def parse_wish(post_id, wish_type: WishType):
     full_article_api_url = api_url_post_full + '?post_id=' + post_id
     print("full_article_api_url: ", full_article_api_url)
 
@@ -180,7 +203,7 @@ def parse_char(post_id):
     # print("Details: ", details_text)
 
     # 提取5-star角色的名称和描述信息
-    character_info = get_wish5star(clean_text)
+    character_info = get_wish5star(clean_text, wish_type)
     character_info = [info for info in character_info if len(info) < 50]
     # str.strip()方法用于移除字符串头尾指定的字符，默认为空格或换行符
     character_info = [name.strip() for name in character_info]
@@ -192,7 +215,7 @@ def parse_char(post_id):
     print('5-star only name:', character_info_only_name)
 
     # 提取4-star角色的名称和描述信息
-    character_info = get_wish4star(clean_text)
+    character_info = get_wish4star(clean_text, wish_type)
     print('4-star:', character_info)
 
     character_info_only_name = [info.split(
@@ -202,79 +225,8 @@ def parse_char(post_id):
     print('4-star only name:', character_info_only_name)
 
 
-def parse_weapon(post_id):
-    return
-    full_article_api_url = api_url_post_full + '?post_id=' + post_id
-    print(full_article_api_url)
-
-    full_data = utils.get_url_data(full_article_api_url)
-    json_str = json.dumps(full_data['data']['post']['post']['content'])
-    # print(json_str)
-    # 清洗标签
-    soup = BeautifulSoup(json_str, "html.parser")
-    clean_text = soup.get_text()
-    clean_text = unicode_conversion(clean_text)
-    # print(clean_text)
-
-    duration_text = utils.find_unique_timestamps(clean_text)
-    print("Duration: ", duration_text)
-    # print("Details: ", details_text)
-
-    # 提取5-star角色的名称和描述信息
-    character_info = utils.find_substrs(clean_text, '5-Star Light Cone', ')')
-    character_info = [info for info in character_info if len(info) < 50]
-    # str.strip()方法用于移除字符串头尾指定的字符，默认为空格或换行符
-    character_info = [name.strip() for name in character_info]
-    # 使用set去除重复
-    character_info = list(set(character_info))
-    print('5-star:', character_info)
-
-    character_info_only_name = [info.split('(')[0] for info in character_info]
-    character_info_only_name = [name.strip()
-                                for name in character_info_only_name]
-    print('5-star only name:', character_info_only_name)
-
-    # 提取4-star角色的名称和描述信息
-    character_info_4star = clean_text.split('4-star Light Cones')
-    for info in character_info_4star:
-        find_char_index = utils.find_nth_occurrence(info, ')', 3)
-        if find_char_index != -1:
-            character_info = info[:find_char_index]
-            # 提取4-star角色列表并按照逗号分隔
-            four_star_info = character_info.split(')')
-            four_star_info_modify = []
-            for v in four_star_info:
-                if len(v):
-                    four_star_info_modify.append(v + ')')
-
-            print('4-star:', four_star_info_modify)
-
-            character_info_only_name = [info.split(
-                '(')[0] for info in four_star_info_modify]
-            character_info_only_name = [name.strip()
-                                        for name in character_info_only_name]
-            print('4-star only name:', character_info_only_name)
-
-    # character_info = utils.find_substrs(clean_text, 'Drop Rate Boost: 4-Star Light Cones','Among the above Light Cones')
-    # # 找到三个 Name(Attribute: Type) 类型就不找了 以 ）为标记
-    # find_char_index = utils.find_nth_occurrence(character_info[0], ')', 3)
-    # character_info = character_info[0][:find_char_index]
-    # # 提取4-star角色列表并按照逗号分隔
-    # four_star_info = character_info.split(')')
-    # four_star_info_modify = []
-    # for v in four_star_info:
-    #     if len(v):
-    #         four_star_info_modify.append(v + ')')
-
-    # print('4-star:', four_star_info_modify)
-
-    # character_info_only_name = [info.split('(')[0] for info in four_star_info_modify]
-    # character_info_only_name = [name.strip() for name in character_info_only_name]
-    # print('4-star only name:', character_info_only_name)
-
-
 for i in post_id_arr[0]:
-    parse_char(i)
+    parse_wish(i, WishType.CHARACTER)
 
 for i in post_id_arr[1]:
-    parse_weapon(i)
+    parse_wish(i, WishType.WEAPON)

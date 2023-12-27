@@ -83,6 +83,52 @@ tween(aniNode)
     .start();
 ```
 
+#### 物体碰撞
+
+```ts
+const separateMergeAni = () => {
+    // 剔除最后一个元素，可能有值
+    let count = arr.slice(0, -1).filter(ctrl => ctrl).length;
+    let mid = Math.ceil(count / 2);
+    // console.log("separateMergeAni", count, arr);
+    for (let index = 0; index < arr.length; ++index) {
+        let ctrl = arr[index];
+        if (!ctrl) {
+            // 不考虑最后一个，遇到空就退出
+            // console.log("movefinish");
+            // movefinish();
+            break;
+        }
+        console.log(ctrl);
+        let oldPos = ctrl.node.position.clone();
+        if (index < mid) {
+            tween(ctrl.node)
+                .to(moveTime / 3, { position: v3(oldPos.x - 100, oldPos.y, oldPos.z) }, { easing: "cubicIn" })
+                .to(moveTime / 3, { position: v3(oldPos.x - 150, oldPos.y, oldPos.z) })
+                .to(moveTime / 24, { position: oldPos }, { easing: "cubicOut" })
+                .call(() => {
+                    if (index == count - 1) {
+                        // movefinish();
+                    }
+                })
+                .start();
+        } else {
+            tween(ctrl.node)
+                .to(moveTime / 3, { position: v3(oldPos.x + 100, oldPos.y, oldPos.z) }, { easing: "cubicIn" })
+                .to(moveTime / 3, { position: v3(oldPos.x + 150, oldPos.y, oldPos.z) })
+                .to(moveTime / 24, { position: oldPos }, { easing: "cubicOut" })
+                .call(() => {
+                    if (index == count - 1) {
+                        // movefinish();
+                    }
+                })
+                .start();
+        }
+    }
+};
+//
+```
+
 #### 修改位置后随着动画一起乱飘
 
 ```ts
