@@ -9,7 +9,7 @@ specifiers:
   vite: ^5.0.10
   vitepress: ^1.0.0-rc.33
   vue: ^3.3.13
-  vue-echarts: ^6.6.7
+  vue-echarts: ^6.6.8
 
 devDependencies:
   '@mdit-vue/shared': 2.0.0
@@ -20,7 +20,7 @@ devDependencies:
   vite: registry.npmmirror.com/vite/5.0.10_sass@1.69.5
   vitepress: registry.npmmirror.com/vitepress/1.0.0-rc.33_3tahjxo2r54smtdpc2mr6z5wmy
   vue: registry.npmmirror.com/vue/3.3.13
-  vue-echarts: registry.npmmirror.com/vue-echarts/6.6.7_echarts@5.4.3+vue@3.3.13
+  vue-echarts: registry.npmmirror.com/vue-echarts/6.6.8_echarts@5.4.3+vue@3.3.13
 
 packages:
 
@@ -1809,11 +1809,11 @@ packages:
       vue: registry.npmmirror.com/vue/3.4.0-rc.2
     dev: true
 
-  registry.npmmirror.com/vue-echarts/6.6.7_echarts@5.4.3+vue@3.3.13:
-    resolution: {integrity: sha512-nfPJ/n9ub14KctfPF0jYyTLb5Ll4qFcChzkHFoI2q+ONjgWI/cVVXFO+OQKVA0qKJBrKuIOrDz3pJxbEzUMwIQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-echarts/-/vue-echarts-6.6.7.tgz}
-    id: registry.npmmirror.com/vue-echarts/6.6.7
+  registry.npmmirror.com/vue-echarts/6.6.8_echarts@5.4.3+vue@3.3.13:
+    resolution: {integrity: sha512-3EGrxKGCGjHnkhudRQQ4fkK5iJxxXNQ1fXvSWA/7mzR/oV7BBSHYvC3gDbG/WIW0A/Fcx2H8k5H3NDyWgjyi8g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-echarts/-/vue-echarts-6.6.8.tgz}
+    id: registry.npmmirror.com/vue-echarts/6.6.8
     name: vue-echarts
-    version: 6.6.7
+    version: 6.6.8
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': ^1.0.5
