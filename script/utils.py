@@ -77,11 +77,36 @@ def find_substrs(text, start_str, end_str):
 
 
 # 查找子串在字符串中第n次出现的方法
-def find_nth_occurrence(string, substring, occurrence):
+def find_nth_occurrence_1(string: str, substring: str, occurrence: int) -> int:
     if (occurrence == 1):
         return string.find(substring)
     else:
-        return string.find(substring, find_nth_occurrence(string, substring, occurrence - 1) + 1)
+        return string.find(substring, find_nth_occurrence_1(string, substring, occurrence - 1) + 1)
+
+
+# 查找子串2在字符串中从子串1开始之后 第n次出现的方法
+def find_nth_occurrence_2(text_full: str, start_str: str, find_str: str, occurrence: int) -> int:
+    # 检查起始字符串是否存在于文本中
+    start_index = text_full.find(start_str)
+    if start_index == -1:
+        return -1  # 如果起始字符串不在文本中，返回-1
+
+    # 将搜索的起点设置为起始字符串之后
+    search_start_point = start_index + len(start_str)
+
+    # 查找指定数量的find_str
+    while occurrence > 0:
+        # 从指定位置开始查找 find_str
+        find_index = text_full.find(find_str, search_start_point)
+        if find_index == -1:
+            return -1  # 如果找不到更多的 find_str，返回-1
+
+        # 减少 occurrence 的数量，并将搜索起点移动到刚找到的 find_str 之后
+        occurrence -= 1
+        search_start_point = find_index + len(find_str)
+
+    # 返回最后一个找到的find_str的索引位置
+    return find_index - len(find_str)
 
 
 def match_char_event_warp_name_string(text):

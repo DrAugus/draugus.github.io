@@ -286,7 +286,7 @@ export const WISH = {
       end: '2024-01-24 11:59:59 +0800',
       shortName: "",
       wish5star: ['The Unreachable Side', '"Past Self in Mirror', '"The Unreachable Side'],
-      wish4star: ['Under the Blue Sky', 'Post-Op Conversation', 'The Birth of the Self'],
+      wish4star: ['Planetary Rendezvous', 'Day One of My New Life', 'A Secret Vow'],
       url: ""
     },
   ]

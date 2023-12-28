@@ -10,6 +10,7 @@
 - [生命周期](https://docs.cocos.com/creator/3.4/manual/zh/scripting/life-cycle-callbacks.html)
 - [节点时间系统](https://docs.cocos.com/creator/3.4/manual/zh/engine/event/event-node.html)：`Event.EventMouse`，`Event.EventTouch`
 - [着色器相关语法](https://docs.cocos.com/creator/3.4/manual/zh/shader/effect-syntax.html): 即材质 materials 里面的 mesh
+- [缓动系统](https://docs.cocos.com/creator/3.4/manual/zh/tween/): tween
 
 ## 技巧
 

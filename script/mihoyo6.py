@@ -132,6 +132,30 @@ def get_timestamp(text):
     return utils.clean_list_none(arr)
 
 
+def re_find(text_full: str, find_tag: str) -> list:
+    arr = []
+
+    def append_match(find_des):
+        if find_tag in find_des:
+            arr.append(find_des)
+
+    got_insert_info(text_full, append_match)
+    got_new_str: str = ''
+    for vv in arr:
+        find_index = utils.find_nth_occurrence_2(vv, find_tag, ')', 3)
+        start_index = vv.find(find_tag)
+        if find_index != -1:
+            got_new_str = vv[start_index+len(find_tag):find_index]
+            break
+    if got_new_str != '':
+        got_new_str = got_new_str.replace('\n', '')
+        res = got_new_str.split(')')
+        # print(res)
+        return res
+
+    return []
+
+
 def get_wish5star(text: str, wish_type: WishType):
     arr = []
     find_tag: str = ''
@@ -154,7 +178,7 @@ def get_wish4star(text: str, wish_type: WishType):
     if wish_type == WishType.CHARACTER:
         find_tag = '4-Star Characters'
     elif wish_type == WishType.WEAPON:
-        find_tag = '4-star Light Cones'
+        find_tag = '4-Star Light Cones'
 
     def extract_characters(text: str, find_tag: str):
         # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
@@ -177,7 +201,14 @@ def get_wish4star(text: str, wish_type: WishType):
 
     got_insert_info(text, append_match)
 
-    return utils.clean_list_none(arr)
+    res = utils.clean_list_none(arr)
+
+    # 没找着
+    if isinstance(res, list) and not len(res):
+        # print(">>>>>>> 没找到没找到没找到")
+        res = re_find(text, find_tag)
+
+    return res
 
 
 # wish_type 0 character 1 weapon
