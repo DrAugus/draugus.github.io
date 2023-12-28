@@ -9,6 +9,7 @@
 - 关于重力：[物理世界和元素](https://docs.cocos.com/creator/3.4/manual/zh/physics/physics.html#%E7%89%A9%E7%90%86%E4%B8%96%E7%95%8C%E5%92%8C%E5%85%83%E7%B4%A0) —— 物理世界中的每个元素都可以理解为一个独立的**刚体**，在 Cocos Creator 3.x 中可以通过为游戏对象添加 [Collider 碰撞组件](https://docs.cocos.com/creator/3.4/manual/zh/physics/physics-collider.html) 或者 [RigidBody 刚体组件](https://docs.cocos.com/creator/3.4/manual/zh/physics/physics-rigidbody.html) 让物理元素具备物理特性。物理系统将为这些元素进行物理计算，比如计算各物体是否产生碰撞，以及物体的受力情况。当计算完成后，物理系统会将物理世界更新到场景世界中，仿真还原真实世界中的物理行为。
 - [生命周期](https://docs.cocos.com/creator/3.4/manual/zh/scripting/life-cycle-callbacks.html)
 - [节点时间系统](https://docs.cocos.com/creator/3.4/manual/zh/engine/event/event-node.html)：`Event.EventMouse`，`Event.EventTouch`
+- [着色器相关语法](https://docs.cocos.com/creator/3.4/manual/zh/shader/effect-syntax.html): 即材质 materials 里面的 mesh
 
 ## 技巧
 

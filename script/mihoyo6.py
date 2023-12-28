@@ -197,6 +197,10 @@ def parse_wish(post_id, wish_type: WishType):
     arr_str_char_event_warp_name = get_arr_str_event_warp_name(
         'Character Event Warp', clean_text)
     print("arr_str_char_event_warp_name is ", arr_str_char_event_warp_name)
+    arr_str_char_event_warp_name = [modify_name.lower().replace(
+        " ", "_") for modify_name in arr_str_char_event_warp_name]
+    print("arr_str_char_event_warp_name modify is ",
+          arr_str_char_event_warp_name)
 
     duration_text = get_timestamp(clean_text)
     print("Duration: ", duration_text)
