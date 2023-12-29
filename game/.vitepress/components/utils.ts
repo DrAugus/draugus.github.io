@@ -110,17 +110,18 @@ export const replaceText =
   };
 
 //替换空格 转小写
-export const replaceAndLow = (str: string) =>
-  str?.replace(/ /g, "_")
-    .replace(/·/g, "_")
-    .replace(/&/g, "_")
-    .replace(/,/g, "_")
-    .replace(/__/g, "_")
-    .replace(/__/g, "_")
-    .toLowerCase();
+export const replaceAndLow = (inputString: string): string => {
+  if (!inputString) return '';
+  let newStr = inputString.replace(/[`·.,& ]/g, '_');
+  while (newStr.includes('__')) {
+    newStr = newStr.replace(/__/g, '_');
+  }
+  newStr = newStr.toLowerCase();
+  return newStr;
+};
 
 export const composeCharSrc = (game: number, name: string) =>
-  `/image/${getGameName(game)}/characters/${replaceAndLow(name)}.png`
+  `/image/${getGameName(game)}/characters/${replaceAndLow(name)}.png`;
 
 export const combineWishPic = (wishName: string, wishImage: number) =>
   replaceAndLow(wishName) + "_" + wishImage + '.jpg';

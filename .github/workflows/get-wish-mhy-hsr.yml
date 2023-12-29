@@ -1,0 +1,41 @@
+name: Python script workflow
+on:
+  # test push, del later
+  push:
+    branches:
+      - master
+  schedule:
+    # This is run at midnight UTC on Tuesday and Wednesday
+    - cron:  '0 0 * * 2,3'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./script
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v4
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' 
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Execute Python script
+      run: |
+        python mihoyo6.py 
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add auto/mhy6.json
+        git commit -m "Add changes" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.DEPLOY_GH }}
+        branch: ${{ github.head_ref }}

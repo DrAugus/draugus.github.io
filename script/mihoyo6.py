@@ -117,7 +117,7 @@ def get_arr_str_event_warp_name(sub_str, text):
                 utils.match_char_event_warp_name_string(find_des))
 
     got_insert_info(text, append_match)
-
+    # print(arr)
     return utils.clean_list_none(arr)
 
 
@@ -130,6 +130,62 @@ def get_timestamp(text):
     got_insert_info(text, append_match)
 
     return utils.clean_list_none(arr)
+
+
+def get_duration(text):
+    arr = []
+
+    def append_match(find_des: str):
+
+        def got_dur(start: str, end: str):
+            if start != None and end != None:
+                arr.append({
+                    'start_time': start,
+                    'end_time': end
+                })
+
+        # 大版本更新时
+        # update – 2024/01/17 11:59:00(server time)
+        if 'update' in find_des and 'server time' in find_des:
+            version_match = re.search(r"Version (\d+\.\d+)", find_des)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time_match = re.search(
+                r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+            if time_match:
+                time = time_match.group(1)
+            else:
+                time = None
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+                return
+
+        # 小版本更新时
+        # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
+        if 'Event Duration' in find_des and 'server time' in find_des:
+            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
+            pattern = r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})'
+            # 使用正则表达式搜索所有匹配的时间
+            matches = re.findall(pattern, find_des)
+            # 检查是否找到了两个匹配的时间，表示开始和结束时间
+            if matches and len(matches) == 2:
+                start_time, end_time = matches
+                got_dur(start_time, end_time)
+                # print(f"start_time:{start_time} end_time:{end_time}")
+            else:
+                start_time, end_time = None
+                # print("Could not extract start and end times from the string.")
+
+        got_dur(None, None)
+
+    got_insert_info(text, append_match)
+
+    return arr
 
 
 def re_find(text_full: str, find_tag: str) -> list:
@@ -208,10 +264,22 @@ def get_wish4star(text: str, wish_type: WishType):
         # print(">>>>>>> 没找到没找到没找到")
         res = re_find(text, find_tag)
 
-    return res
+    return utils.clean_list_none(res)
 
+
+def get_only_name(character_info: list) -> list:
+    character_info_only_name = [info.split('(')[0] for info in character_info]
+    character_info_only_name = [name.strip()
+                                for name in character_info_only_name]
+    character_info_only_name = [utils.clear_non_letters(
+        clear) for clear in character_info_only_name]
+    character_info_only_name = utils.clean_list_none(character_info_only_name)
+    # print('only name:', character_info_only_name)
+    return character_info_only_name
 
 # wish_type 0 character 1 weapon
+
+
 @utils.log_args
 def parse_wish(post_id, wish_type: WishType):
     full_article_api_url = api_url_post_full + '?post_id=' + post_id
@@ -228,40 +296,63 @@ def parse_wish(post_id, wish_type: WishType):
     arr_str_char_event_warp_name = get_arr_str_event_warp_name(
         'Character Event Warp', clean_text)
     print("arr_str_char_event_warp_name is ", arr_str_char_event_warp_name)
-    arr_str_char_event_warp_name = [modify_name.lower().replace(
+    arr_str_char_event_warp_name_modify = [modify_name.lower().replace(
         " ", "_") for modify_name in arr_str_char_event_warp_name]
     print("arr_str_char_event_warp_name modify is ",
-          arr_str_char_event_warp_name)
+          arr_str_char_event_warp_name_modify)
 
-    duration_text = get_timestamp(clean_text)
+    timestamp_text = get_timestamp(clean_text)
+    print("Timestamp: ", timestamp_text)
+
+    duration_text = get_duration(clean_text)
     print("Duration: ", duration_text)
-    # print("Details: ", details_text)
 
+    # str.strip()方法用于移除字符串头尾指定的字符，默认为空格或换行符
     # 提取5-star角色的名称和描述信息
     character_info = get_wish5star(clean_text, wish_type)
-    character_info = [info for info in character_info if len(info) < 50]
-    # str.strip()方法用于移除字符串头尾指定的字符，默认为空格或换行符
-    character_info = [name.strip() for name in character_info]
     print('5-star:', character_info)
-
-    character_info_only_name = [info.split('(')[0] for info in character_info]
-    character_info_only_name = [name.strip()
-                                for name in character_info_only_name]
+    character_info_only_name = get_only_name(character_info)
     print('5-star only name:', character_info_only_name)
 
     # 提取4-star角色的名称和描述信息
-    character_info = get_wish4star(clean_text, wish_type)
-    print('4-star:', character_info)
+    character_info4 = get_wish4star(clean_text, wish_type)
+    print('4-star:', character_info4)
+    character_info_only_name4 = get_only_name(character_info4)
+    print('4-star only name:', character_info_only_name4)
 
-    character_info_only_name = [info.split(
-        '(')[0] for info in character_info]
-    character_info_only_name = [name.strip()
-                                for name in character_info_only_name]
-    print('4-star only name:', character_info_only_name)
+    return {
+        'name': arr_str_char_event_warp_name if wish_type == WishType.CHARACTER else "Brilliant Fixation",
+        'image': [1, 1] if len(character_info_only_name) == 2 else [1],
+        'shortName': character_info_only_name,
+        'start': duration_text[0]['start_time'] + ' +0800',
+        'end': duration_text[1]['end_time'] + ' +0800',
+        'version': 'xxx',
+        'wish5star': [utils.replace_characters(char) for char in character_info_only_name],
+        'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4],
+        'wishName': [],
+        'url': ['']
+    }
 
+
+all_info = []
+
+# 只取最新的
+only_last = True
 
 for i in post_id_arr[0]:
-    parse_wish(i, WishType.CHARACTER)
+    dict_char = parse_wish(i, WishType.CHARACTER)
+    all_info.append(dict_char)
+    if only_last:
+        break
 
 for i in post_id_arr[1]:
-    parse_wish(i, WishType.WEAPON)
+    dict_weapon = parse_wish(i, WishType.WEAPON)
+    all_info.append(dict_weapon)
+    if only_last:
+        break
+
+
+filename = 'script/auto/mhy6.json'
+with open(filename, 'w') as file:
+    # 将字典写入文件
+    json.dump(all_info, file)

@@ -115,3 +115,23 @@ def match_char_event_warp_name_string(text):
     if match:
         return match.group(1)
     return None
+
+
+def replace_characters(input_string: str) -> str:
+    new_str = re.sub(r'[·.,& ]', '_', input_string)
+    while '__' in new_str:
+        new_str = new_str.replace('__', '_')
+    new_str = new_str.lower()
+    return new_str
+
+
+# 找到第一个和最后一个英文字母，并提取这两个字母及其之间的内容
+def clear_non_letters(input_str)->str:
+
+    match = re.search(r'[a-zA-Z].*[a-zA-Z]', input_str)
+
+    # 如果匹配成功，从原字符串中提取匹配内容，否则返回原字符串
+    if match:
+        return match.group()
+    else:
+        return input_str

@@ -1,5 +1,9 @@
 # Python
 
+## requirements
+
+如果你想让你的项目在更多的环境中稳定运行，最好指定所有依赖包的版本。你可以通过运行`pip freeze > requirements.txt`来自动生成当前环境中所有包及其版本的列表，然后再从这个生成的列表中移除不需要的标准库项。如果你不确定当前项目中用到了哪些包，这个方法会很有用。
+
 ## 遇到的问题
 
 ### ValueError: check_hostname requires server_hostname

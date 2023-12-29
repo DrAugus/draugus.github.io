@@ -1,0 +1,14 @@
+beautifulsoup4==4.12.2
+bs4==0.0.1
+certifi==2023.11.17
+charset-normalizer==3.3.2
+idna==3.6
+Js2Py==0.74
+numpy==1.26.2
+pyjsparser==2.7.1
+requests==2.31.0
+six==1.16.0
+soupsieve==2.5
+tzdata==2023.3
+tzlocal==5.2
+urllib3==2.1.0
