@@ -9,6 +9,6 @@ pyjsparser==2.7.1
 requests==2.31.0
 six==1.16.0
 soupsieve==2.5
-tzdata==2023.3
+tzdata==2023.4
 tzlocal==5.2
 urllib3==2.1.0
