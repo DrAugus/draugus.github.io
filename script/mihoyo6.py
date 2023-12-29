@@ -2,6 +2,7 @@
 # hoyolab interface
 
 import json
+import os
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -351,8 +352,8 @@ for i in post_id_arr[1]:
     if only_last:
         break
 
-
-filename = 'script/auto/mhy6.json'
+current_path = os.path.dirname(__file__)
+filename = current_path + '/auto/mhy6.json'
 with open(filename, 'w') as file:
     # 将字典写入文件
     json.dump(all_info, file)
