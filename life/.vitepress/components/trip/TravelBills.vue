@@ -20,12 +20,11 @@
 
     <h2>支出</h2>
 
-
     <div v-for="(v, k, i) in vTrip">
         <h3>{{ k + '年' }}</h3>
         <p v-for="(vv, ii) in v">
             <b>{{ vv.name }}</b> <br />
-            <span class="italic">{{ vv.start + ' ~ ' + vv.end }}</span><br />
+            <span class="italic">{{ modifyDate(vv.start) + ' ~ ' + modifyDate(vv.end) }}</span><br />
             <span><b>总计{{ ' ￥' + vv.sum }}</b>
                 <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
             </span>
@@ -68,26 +67,27 @@
 </template>
   
 <script>
-
-import cost from "../../data/trip/cost.json";
-
 import { TRAVEL_BILLS, LARGE_TRAVEL_PACKAGE, TRAVEL_BUDGET } from "../../data/trip/bill";
 
-const trip = cost.trip
-const other = cost.other
-const budget = TRAVEL_BUDGET
+const modifyDate = (date) =>
+    date.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    });
+
 
 let vOther = {}
-other.forEach(v => {
-    if (!vOther[v.year]) { vOther[v.year] = [] }
-    vOther[v.year].push(v)
+LARGE_TRAVEL_PACKAGE.forEach(obj => {
+    if (!vOther[obj.year]) { vOther[obj.year] = [] }
+    vOther[obj.year].push(obj)
 })
 
 let vTrip = {}
-Object.values(trip).forEach(v => {
-    let year = v.start.slice(0, 4)
+TRAVEL_BILLS.forEach(obj => {
+    let year = obj.start.getFullYear()
     if (!vTrip[year]) { vTrip[year] = [] }
-    vTrip[year].push(v)
+    vTrip[year].push(obj)
 })
 // console.log(vTrip)
 
@@ -100,23 +100,19 @@ sortedKeys.forEach(key => {
 });
 // console.log(vTrip)
 
-let time = [];
+
+// 
 let sum = {};
-Object.values(trip).forEach((arr) => {
-    let t = arr.start.split('/')[0]
-    if (!sum[t]) sum[t] = 0
-    sum[t] += parseInt(arr.sum)
-    // console.log(t)
-    // console.log(arr.sum)
-    time.push(t)
+TRAVEL_BILLS.forEach(obj => {
+    let year = obj.start.getFullYear()
+    if (!sum[year]) sum[year] = 0
+    sum[year] += obj.sum
 });
-other.forEach((arr) => {
-    let t = arr.year
-    sum[t] += parseInt(arr.sum)
-    time.push(t)
+LARGE_TRAVEL_PACKAGE.forEach(obj => {
+    let year = obj.year
+    if (!sum[year]) sum[year] = 0
+    sum[year] += obj.sum
 });
-time = [...new Set(time)]
-// console.log(time)
 // console.log(sum)
 // console.log(budget)
 
@@ -129,13 +125,14 @@ export default {
             vOther,
             vTrip,
             sum,
-            budget,
+            budget: TRAVEL_BUDGET,
+            modifyDate,
         };
     },
     methods: {
         getBadge(num, neg = 0) {
             let n = parseFloat(num)
-            let s = ['tip', 'info', 'warning', 'danger']
+            let s = ['info', 'tip', 'warning', 'danger']
             let res = 0
             if (n > 90) res = 0
             else if (n > 60) res = 1
