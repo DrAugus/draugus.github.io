@@ -1,94 +1,61 @@
 <template>
     <EChartsModel :option="option" />
+
+    <details class="details custom-block">
+        <summary>详细文字</summary>
+        <p v-for="(value, index) in details" :class="index == 0 ? 'cur-color' : ''">
+            {{ value }}
+        </p>
+    </details>
+
+    <details class="details custom-block">
+        <summary>表格显示</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align:center;">日期</th>
+                    <th style="text-align:center;">&lt;= 800km 燃油 ￥</th>
+                    <th style="text-align:center;">&gt; 800km 燃油 ￥</th>
+                    <th style="text-align:center;">基建 ￥</th>
+                    <th style="text-align:center;">总税费 ¥</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(value, index) in dateUpdate" :class="index == 0 ? 'cur-bg-color' : ''">
+                    <td style="text-align:center;">{{ value }}</td>
+                    <td style="text-align:center;">{{ below800km[index] }}</td>
+                    <td style="text-align:center;">{{ above800km[index] }}</td>
+                    <td style="text-align:center;">{{ taxAirport[index] }}</td>
+                    <td style="text-align:center;">{{ taxTotal[index] }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </details>
 </template>
   
 <script>
 import EChartsModel from "../EChartsModel.vue";
+import { AIRFARE_DATA } from "../../data/trip/airfare";
+
+const modifyDate = (date) => `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
+
+let getAllDate = AIRFARE_DATA.map(obj => modifyDate(obj.date))
+const getAllDateModify = AIRFARE_DATA.map(obj => obj.dateModify)
+getAllDate.forEach((date, index) => {
+    getAllDate[index] = date + getAllDateModify[index]
+})
+
+const dateUpdate = getAllDate
+const below800km = AIRFARE_DATA.map(obj => obj.costBelow800km)
+const above800km = AIRFARE_DATA.map(obj => obj.costAbove800km)
+const taxAirport = AIRFARE_DATA.map(obj => obj.taxAirport)
+const details = AIRFARE_DATA.map(obj => obj.details)
+const taxTotal = taxAirport.map((value, index) => {
+    return (value + below800km[index]) + '/' + (value + above800km[index])
+})
+// console.log("taxTotal", taxTotal)
 
 let opt = {
-    title: {
-        text: '机票价格波动'
-    },
-    tooltip: {
-        trigger: 'axis'
-    },
-    legend: {
-        data: ['<= 800km 燃油', '> 800km 燃油', '基建']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    toolbox: {
-        feature: {
-            saveAsImage: {}
-        }
-    },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: [
-            "2022年2月5日前", "2022年2月5日起", "2022年3月5日起",
-            "2022年4月5日起", "2022年5月5日起", "2022年6月5日起",
-            "2022年7月5日起", "2022年8月5日起", "2022年9月5日起",
-            "2022年11月5日起", "2023年1月5日起", "2023年4月5日起"
-        ]
-    },
-    yAxis: {
-        type: 'value'
-    },
-    series: [
-        {
-            name: "<= 800km 燃油",
-            type: 'line',
-            // stack: 'Total',
-            data: [0, 10, 20, 50, 60, 80, 100, 80, 60, 60, 40, 30],
-        },
-        {
-            name: "> 800km 燃油",
-            type: 'line',
-            // stack: 'Total',
-            data: [0, 20, 40, 100, 120, 140, 200, 140, 120, 110, 80, 60],
-        },
-        {
-            name: "基建",
-            type: 'line',
-            // stack: 'Total',
-            data: [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50],
-        },
-    ]
-};
-
-const dateUpdate = [
-    "2022年2月5日前", "2022年2月5日起", "2022年3月5日起",
-    "2022年4月5日起", "2022年5月5日起", "2022年6月5日起",
-    "2022年7月5日起", "2022年8月5日起", "2022年9月5日起",
-    "2022年11月5日起", "2023年1月5日起", "2023年4月5日起",
-    "2023年6月5日起", "2023年8月5日起", "2023年9月5日起",
-    "2023年10月5日起", "2023年11月5日起", "2023年12月5日起"
-];
-const below800km = [
-    0, 10, 20, 50, 60, 80,
-    100, 80, 60, 60, 40, 30,
-    20, 30, 60, 70, 60, 50
-];
-const above800km = [
-    0, 20, 40, 100, 120, 140,
-    200, 140, 120, 110, 80, 60,
-    30, 60, 110, 130, 110, 90
-];
-
-const lengthUpdate = dateUpdate.length;
-if (lengthUpdate != below800km.length && lengthUpdate != above800km.length) {
-    console.error("ERROR DATA!!!");
-}
-
-// 基建
-const tax = new Array(lengthUpdate).fill(50);
-
-opt = {
     title: {
         text: '机票价格波动'
     },
@@ -162,7 +129,7 @@ opt = {
             label: {
                 show: true
             },
-            data: tax,
+            data: taxAirport,
         },
     ]
 };
@@ -175,8 +142,23 @@ export default {
     data() {
         return {
             option: opt,
+            dateUpdate: [...dateUpdate].reverse(),
+            details: [...details].reverse(),
+            below800km: [...below800km].reverse(),
+            above800km: [...above800km].reverse(),
+            taxAirport: [...taxAirport].reverse(),
+            taxTotal: [...taxTotal].reverse(),
         };
     },
 };
 </script>
   
+<style scoped>
+.cur-bg-color {
+    background-color: #ffa9aa;
+}
+
+.cur-color {
+    color: #ff3739;
+}
+</style>

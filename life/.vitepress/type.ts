@@ -44,3 +44,12 @@ export interface EatRestaurant {
   lv: number
   item: EatDishes[]
 }
+
+export interface AirfareInfo {
+  date: Date
+  dateModify: string
+  costBelow800km: number
+  costAbove800km: number
+  taxAirport: number
+  details: string
+}

@@ -10,6 +10,23 @@
 
 pip安装lib时报错`ValueError: check_hostname requires server_hostname`，是由网络代理导致，关掉VPN即可解决
 
+### No such file or directory
+
+使用 `os.path.dirname(__file__)`
+
+```py
+import os
+print("当前路径 -  %s" %os.getcwd())
+current_path = os.path.dirname(__file__)
+def read_file() :
+  with open(current_path + "/your_file.txt" , encoding = 'utf-8') as f_obj :
+    content = f_obj.readline()
+    print("文件内容 -  %s" %content)
+ 
+if __name__ == '__main__' :
+  read_file()
+```
+
 ## python 提取字符串中的指定字符 正则表达式
 
 ```py

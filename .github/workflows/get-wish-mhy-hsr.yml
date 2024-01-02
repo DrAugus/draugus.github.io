@@ -48,5 +48,12 @@ jobs:
         token: ${{ secrets.DEPLOY_GH }}
         title: Automated changes
         commit-message: Add changes
+        committer: GitHub <noreply@github.com>
+        author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         branch: create-pull-request/patch
         base: master    
+        labels: |
+          report
+          automated pr
+        assignees: DrAugus
+        reviewers: DrAugus  
