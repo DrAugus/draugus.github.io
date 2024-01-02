@@ -71,9 +71,11 @@
 
 import cost from "../../data/trip/cost.json";
 
+import { TRAVEL_BILLS, LARGE_TRAVEL_PACKAGE, TRAVEL_BUDGET } from "../../data/trip/bill";
+
 const trip = cost.trip
 const other = cost.other
-const budget = cost.budget
+const budget = TRAVEL_BUDGET
 
 let vOther = {}
 other.forEach(v => {
@@ -119,7 +121,7 @@ time = [...new Set(time)]
 // console.log(budget)
 
 export default {
-    name: "Cost",
+    name: "TravelBills",
     components: {
     },
     data() {

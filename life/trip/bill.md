@@ -1,7 +1,7 @@
 # 旅行账单
 
-<Cost></Cost>
+<TravelBills></TravelBills>
 
 <script setup>
-import Cost from '../.vitepress/components/trip/Cost.vue'
+import TravelBills from '../.vitepress/components/trip/TravelBills.vue'
 </script>

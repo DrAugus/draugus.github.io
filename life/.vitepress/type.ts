@@ -53,3 +53,28 @@ export interface AirfareInfo {
   taxAirport: number
   details: string
 }
+
+export interface TravelBillIntroItem {
+  tips: string
+  hotels: string
+  transportation: string
+  dining: string
+  entertainment: string
+  others: string
+}
+
+export interface TravelBill {
+  name: string
+  start: Date
+  end: Date
+  sum: number
+  city: string
+  intro: TravelBillIntroItem
+}
+
+export interface LargeTravelPackage {
+  name: string
+  sum: number
+  year: number
+  intro: string
+}
