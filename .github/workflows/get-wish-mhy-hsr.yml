@@ -48,5 +48,5 @@ jobs:
         token: ${{ secrets.DEPLOY_GH }}
         title: Automated changes
         commit-message: Add changes
-        branch: ${{ github.head_ref }}
+        branch: create-pull-request/patch
         base: master    
