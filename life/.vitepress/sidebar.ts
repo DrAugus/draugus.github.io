@@ -33,17 +33,15 @@ const sidebarDaily = () => [
 ]
 const sidebarTrip = () => [
     { text: '规划指南', link: '/trip/' },
-    { text: '出行提醒', link: '/trip/tips' },
     { text: '出门检查', link: '/trip/check' },
     { text: '旅行账单', link: '/trip/bill' },
-    { text: '探索', link: '/trip/explore' },
+    // { text: '探索', link: '/trip/explore' },
 
     {
         text: '出行', collapsed: false, items: [
-
+            { text: '赶路日记', link: '/trip/rush-diary' },
             { text: '飞机', link: '/trip/airplane' },
             { text: '随心飞', link: '/trip/suixinfei' },
-            { text: '高铁票价', link: '/trip/high-speed-rail-fare' },
             { text: '酒店', link: '/trip/hotel' },
             { text: '机场', link: '/trip/airport' },
             { text: '火车站', link: '/trip/railway' },

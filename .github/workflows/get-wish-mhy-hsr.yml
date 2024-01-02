@@ -56,4 +56,5 @@ jobs:
           report
           automated pr
         assignees: DrAugus
-        reviewers: DrAugus  
+        # Review cannot be requested from pull request author.
+        # reviewers: DrAugus  
