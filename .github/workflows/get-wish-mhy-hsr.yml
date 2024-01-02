@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "script/**"
+      - ".github/workflows/get-wish-mhy-hsr.yml"      
   schedule:
     # This is run at midnight UTC on Tuesday and Wednesday
     - cron:  '0 0 * * 2,3'
@@ -34,8 +37,16 @@ jobs:
         git config --local user.name "GitHub Action"
         git add auto/mhy6.json
         git commit -m "Add changes" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.DEPLOY_GH }}
+    #     branch: ${{ github.head_ref }}
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
       with:
-        github_token: ${{ secrets.DEPLOY_GH }}
+        token: ${{ secrets.DEPLOY_GH }}
+        title: Automated changes
+        commit-message: Add changes
         branch: ${{ github.head_ref }}
+        base: master    
