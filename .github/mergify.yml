@@ -17,9 +17,9 @@ pull_request_rules:
       # https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692
       - not:
           or:
-            - check-failure~=^deploy-game
-            - check-failure~=^deploy-life
-            - check-failure~=^deploy-notes
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
     actions:
       merge:
         method: merge
@@ -29,9 +29,9 @@ pull_request_rules:
       - author=renovate[bot]
       - not:
           or:
-            - check-failure~=^deploy-game
-            - check-failure~=^deploy-life
-            - check-failure~=^deploy-notes
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
     actions:
       merge:
         method: merge
@@ -42,9 +42,9 @@ pull_request_rules:
       - head~=^requires-io
       - not:
           or:
-            - check-failure~=^deploy-game
-            - check-failure~=^deploy-life
-            - check-failure~=^deploy-notes
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
     actions:
       merge:
         method: merge
