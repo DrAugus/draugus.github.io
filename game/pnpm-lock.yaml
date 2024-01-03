@@ -18,14 +18,14 @@ devDependencies:
     specifier: 1.9.4
     version: 1.9.4
   sass:
-    specifier: ^1.69.6
-    version: 1.69.6
+    specifier: ^1.69.7
+    version: 1.69.7
   typed.js:
     specifier: 2.1.0
     version: 2.1.0
   vitepress:
     specifier: ^1.0.0-rc.34
-    version: 1.0.0-rc.34(@algolia/client-search@4.19.1)(sass@1.69.6)(search-insights@2.7.0)
+    version: 1.0.0-rc.34(@algolia/client-search@4.19.1)(sass@1.69.7)(search-insights@2.7.0)
   vue:
     specifier: ^3.4.3
     version: 3.4.3
@@ -574,7 +574,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.0.10(sass@1.69.6)
+      vite: 5.0.10(sass@1.69.7)
       vue: 3.4.3
     dev: true
 
@@ -987,8 +987,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /sass@1.69.6:
-    resolution: {integrity: sha512-qbRr3k9JGHWXCvZU77SD2OTwUlC+gNT+61JOLcmLm+XqH4h/5D+p4IIsxvpkB89S9AwJOyb5+rWNpIucaFxSFQ==, tarball: https://registry.npmmirror.com/sass/-/sass-1.69.6.tgz}
+  /sass@1.69.7:
+    resolution: {integrity: sha512-rzj2soDeZ8wtE2egyLXgOOHQvaC2iosZrkF6v3EUG+tBwEvhqUCzm0VP3k9gHF9LXbSrRhT5SksoI56Iw8NPnQ==, tarball: https://registry.npmmirror.com/sass/-/sass-1.69.7.tgz}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -1043,7 +1043,7 @@ packages:
     resolution: {integrity: sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==}
     dev: true
 
-  /vite@5.0.10(sass@1.69.6):
+  /vite@5.0.10(sass@1.69.7):
     resolution: {integrity: sha512-2P8J7WWgmc355HUMlFrwofacvr98DAjoE52BfdbwQtyLH06XKwaL/FMnmKM2crF0iX4MpmMKoDlNCB1ok7zHCw==, tarball: https://registry.npmmirror.com/vite/-/vite-5.0.10.tgz}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -1074,12 +1074,12 @@ packages:
       esbuild: 0.19.5
       postcss: 8.4.32
       rollup: 4.4.1
-      sass: 1.69.6
+      sass: 1.69.7
     optionalDependencies:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.34(@algolia/client-search@4.19.1)(sass@1.69.6)(search-insights@2.7.0):
+  /vitepress@1.0.0-rc.34(@algolia/client-search@4.19.1)(sass@1.69.7)(search-insights@2.7.0):
     resolution: {integrity: sha512-TUbTiSdAZFni2XlHlpx61KikgkQ5uG4Wtmw2R0SXhIOG6qGqzDJczAFjkMc4i45I9c3KyatwOYe8oEfCnzVYwQ==, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.34.tgz}
     hasBin: true
     peerDependencies:
@@ -1105,7 +1105,7 @@ packages:
       shikiji: 0.9.15
       shikiji-core: 0.9.15
       shikiji-transformers: 0.9.15
-      vite: 5.0.10(sass@1.69.6)
+      vite: 5.0.10(sass@1.69.7)
       vue: 3.4.3
     transitivePeerDependencies:
       - '@algolia/client-search'
