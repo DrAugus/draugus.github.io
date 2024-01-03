@@ -24,8 +24,8 @@ devDependencies:
     specifier: 2.1.0
     version: 2.1.0
   vitepress:
-    specifier: ^1.0.0-rc.34
-    version: 1.0.0-rc.34(@algolia/client-search@4.19.1)(sass@1.69.7)(search-insights@2.7.0)
+    specifier: ^1.0.0-rc.35
+    version: 1.0.0-rc.35(@algolia/client-search@4.19.1)(sass@1.69.7)(search-insights@2.7.0)
   vue:
     specifier: ^3.4.4
     version: 3.4.4
@@ -922,11 +922,6 @@ packages:
     resolution: {integrity: sha512-ihFnidEeU8iXzcVHy74dhkxh/dn8Dc08ERl0xwoMMGqp4+LvRSCgicb+zGqWthVokQKvCSxITlh3P08OzdTYCQ==, tarball: https://registry.npmmirror.com/minisearch/-/minisearch-6.3.0.tgz}
     dev: true
 
-  /mrmime@2.0.0:
-    resolution: {integrity: sha512-eu38+hdgojoyq63s+yTpN4XMBdt5l8HhMhc4VKLO9KM5caLIBvUm4thi7fFaxyTmCKeNnXZ5pAlBwCUnhA09uw==, tarball: https://registry.npmmirror.com/mrmime/-/mrmime-2.0.0.tgz}
-    engines: {node: '>=10'}
-    dev: true
-
   /nanoid@3.3.7:
     resolution: {integrity: sha512-eSRppjcPIatRIMC1U6UngP8XFcz8MQWGQdt1MTBQ7NaAmvXDfvNxbvWV3x2y6CdEUciCSsDHDQZbhYaB8QEo2g==, tarball: https://registry.npmmirror.com/nanoid/-/nanoid-3.3.7.tgz}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -1002,20 +997,20 @@ packages:
     engines: {node: '>=8.16.0'}
     dev: true
 
-  /shikiji-core@0.9.15:
-    resolution: {integrity: sha512-7hqIcUKS15OMs/61Qp2GvO1fSajBB36bDqi8vexIg5kp80V6v6SGtBrlq+nLlo7erMG2d1kvIuTIq1bwKI6fEg==, tarball: https://registry.npmmirror.com/shikiji-core/-/shikiji-core-0.9.15.tgz}
+  /shikiji-core@0.9.17:
+    resolution: {integrity: sha512-r1FWTXk6SO2aYqfWgcsJ11MuVQ1ymPSdXzJjK7q8EXuyqu8yc2N5qrQy5+BL6gTVOaF4yLjbxFjF+KTRM1Sp8Q==, tarball: https://registry.npmmirror.com/shikiji-core/-/shikiji-core-0.9.17.tgz}
     dev: true
 
-  /shikiji-transformers@0.9.15:
-    resolution: {integrity: sha512-k0sQ6tX26/cdb8QV9CCwwr7QjRp6/AVP9C0oNIXNld3of+xCrpf74kD74piybG6vMfzBoHGsz/s60RVBJOUaYQ==, tarball: https://registry.npmmirror.com/shikiji-transformers/-/shikiji-transformers-0.9.15.tgz}
+  /shikiji-transformers@0.9.17:
+    resolution: {integrity: sha512-2CCG9qSLS6Bn/jbeUTEuvC6YSuP8gm8VyX5VjmCvDKyCPGhlLJbH1k/kg9wfRt7cJqpYjhdMDgT5rkdYrOZnsA==, tarball: https://registry.npmmirror.com/shikiji-transformers/-/shikiji-transformers-0.9.17.tgz}
     dependencies:
-      shikiji: 0.9.15
+      shikiji: 0.9.17
     dev: true
 
-  /shikiji@0.9.15:
-    resolution: {integrity: sha512-+inN4cN+nY7b0uCPOiqFHAk+cn2DEdM3AIQgPhAV7QKqhww/o7OGS5xvLh3SNnjke9C/HispALqGOQGYHVq7KQ==, tarball: https://registry.npmmirror.com/shikiji/-/shikiji-0.9.15.tgz}
+  /shikiji@0.9.17:
+    resolution: {integrity: sha512-0z/1NfkhBkm3ijrfFeHg3G9yDNuHhXdAGbQm7tRxj4WQ5z2y0XDbnagFyKyuV2ebCTS1Mwy1I3n0Fzcc/4xdmw==, tarball: https://registry.npmmirror.com/shikiji/-/shikiji-0.9.17.tgz}
     dependencies:
-      shikiji-core: 0.9.15
+      shikiji-core: 0.9.17
     dev: true
 
   /source-map-js@1.0.2:
@@ -1079,8 +1074,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.0-rc.34(@algolia/client-search@4.19.1)(sass@1.69.7)(search-insights@2.7.0):
-    resolution: {integrity: sha512-TUbTiSdAZFni2XlHlpx61KikgkQ5uG4Wtmw2R0SXhIOG6qGqzDJczAFjkMc4i45I9c3KyatwOYe8oEfCnzVYwQ==, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.34.tgz}
+  /vitepress@1.0.0-rc.35(@algolia/client-search@4.19.1)(sass@1.69.7)(search-insights@2.7.0):
+    resolution: {integrity: sha512-+2VnFwtYIiKWWAnMjWg7ik0PfsUdrNoZIZKeu5dbJtrkzKO/mTvlA3owiT5VBKJsZAgI17B5UV37aYfUvGrN6g==, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.35.tgz}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4.3.2
@@ -1101,10 +1096,9 @@ packages:
       focus-trap: 7.5.4
       mark.js: 8.11.1
       minisearch: 6.3.0
-      mrmime: 2.0.0
-      shikiji: 0.9.15
-      shikiji-core: 0.9.15
-      shikiji-transformers: 0.9.15
+      shikiji: 0.9.17
+      shikiji-core: 0.9.17
+      shikiji-transformers: 0.9.17
       vite: 5.0.10(sass@1.69.7)
       vue: 3.4.4
     transitivePeerDependencies:
