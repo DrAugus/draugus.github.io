@@ -28,6 +28,9 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
+    # only me, deploy
+    if: github.actor == 'DrAugus'
+
     defaults:
       run:
         working-directory: ./game
