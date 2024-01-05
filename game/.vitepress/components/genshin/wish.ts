@@ -700,18 +700,18 @@ export const WISH = {
       wishName: ["「刺玫的铭誓」", "「白鹭之庭」"],
       url: ["?", "?"]
     },
-    // {
-    //   name: ["", "Twilight Arbiter"],
-    //   image: [1, 3],
-    //   shortName: ["Arlecchino", "Cyno"],
-    //   start: "2024-01-09 18:00:00 +0800",
-    //   end: "2024-01-30 14:59:59 +0800",
-    //   wish5star: ["arlecchino", "cyno"],
-    //   wish4star: [],
-    //   version: "4.3",
-    //   wishName: ["", "「雳裁冥昭」"],
-    //   url: ["?", "?"]
-    // },
+    {
+      name: ['Reign of Serenity', 'Tapestry of Golden Flames'],
+      image: [4, 5],
+      shortName: ['Raiden Shogun', 'Yoimiya'],
+      start: "2024-01-09 18:00:00 +0800",
+      end: "2024-01-30 14:59:59 +0800",
+      wish5star: ['raiden_shogun', 'yoimiya'],
+      wish4star: ['Chevreuse', 'Kujou Sara', 'Bennett'],
+      version: "4.3",
+      wishName: ["「影寂天下人」", "「焰色天河」"],
+      url: ["?", "?"]
+    },
   ],
   weapons: [
     {
@@ -1210,6 +1210,8 @@ export const WISH = {
       image: 58,
       start: "2024-01-09 18:00:00 +0800",
       end: "2024-01-30 14:59:59 +0800",
+      wish5star: ['Engulfing Lightning', 'Thundering Pulse'],
+      wish4star: ['Favonius Sword', 'Rainslasher', 'Eye of Perception', 'Rust'],
     },
   ]
 };

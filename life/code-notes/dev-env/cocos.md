@@ -203,6 +203,20 @@ Project Layers
 
 ## QA
 
+### ScrollView 中的 scrollbar 不显示
+
+摘要：ScrollView 中的 scrollbar 不显示的问题 从 3.4 开始到 3.7 一直没修复。3.7 修复了。  
+详细问题描述：<https://forum.cocos.org/t/topic/138245>  
+修复链接：<https://github.com/cocos/cocos-engine/pull/13343> <https://github.com/cocos/cocos-engine/pull/13840>
+
+### AssertionError [ERR_ASSERTION]
+
+报错详细信息：AssertionError [ERR_ASSERTION]: Something went wrong: module A depends on B, but B is not correctly generated.  
+版本：v3.4.2  
+出现诱因：移动 prefab 和 脚本  
+
+修复：重启 cocos 无效。删除本地自动生成的文件夹即可修复，比如`temp/`，`local/`，`library/`之类的目录
+
 ### 加载项目遇到 Loading Resources 卡住不动
 
 新的空项目仍然会出现此问题，怀疑是 Cocos Dashboard(v2.1.1) 使用了自定义安装路径，使用默认安装路径就未出现此问题。  

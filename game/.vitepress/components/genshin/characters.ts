@@ -26,17 +26,6 @@ export const CHARACTER = {
   //   ele: Element.hydro,
   //   weapon: Weapon.polearm
   // },
-  // myrianelle: {
-  //   id: "myrianelle",
-  //   name: "myrianelle",
-  //   prefix: "",
-  //   star: 4,
-  //   event_exclusive: false,
-  //   intro: "",
-  //   city: City.Fontaine,
-  //   ele: Element.pyro,
-  //   weapon: Weapon.polearm
-  // },
   xian_yun: {
     id: "xian_yun",
     name: "闲云",
@@ -56,6 +45,17 @@ export const CHARACTER = {
     event_exclusive: false,
     intro: "",
     city: City.Liyue,
+    ele: Element.pyro,
+    weapon: Weapon.catalyst
+  },
+  chevreuse: {
+    id: "Chevreuse",
+    name: "夏沃蕾",
+    prefix: "明律决罚",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Fontaine,
     ele: Element.pyro,
     weapon: Weapon.catalyst
   },
