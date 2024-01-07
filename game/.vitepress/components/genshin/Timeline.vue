@@ -1,6 +1,6 @@
 <template>
   <AugusHome :name=tl.name :text=tl.text :tagline=tl.tagline :style=tl.style>
-    <Timeline :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=gameNum />
+    <Timeline :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
   </AugusHome>
 </template>
 
@@ -16,10 +16,8 @@ import "./genshin.scss";
 // utils
 import Timeline from "../Timeline.vue";
 import AugusHome from '../AugusHome.vue'
-import { getTimelineHomeHero } from "../utils"
+import { GameName, getTimelineHomeHero } from "../utils"
 
-const gameNum = 0
-
-const tl = getTimelineHomeHero(current, gameNum)
+const tl = getTimelineHomeHero(current, GameName.Genshin)
 
 </script>

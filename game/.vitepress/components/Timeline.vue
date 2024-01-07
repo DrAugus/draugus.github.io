@@ -105,7 +105,7 @@
 
 <script>
 
-import { parseDayjs, getGameName, combineWishPic, replaceText } from "./utils";
+import { parseDayjs, getGameName, combineWishPic, replaceText, GameName } from "./utils";
 import { processEvent } from "./eventHandle";
 
 import dayjs from "dayjs";
@@ -161,7 +161,7 @@ export default {
     WISH_TEXT: {
       type: Number,
       required: true,
-      default: 0
+      default: GameName.Genshin
     },
   },
   components: {

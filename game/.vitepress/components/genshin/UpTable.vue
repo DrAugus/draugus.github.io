@@ -1,5 +1,5 @@
 <template>
-    <UpTable :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=gameNum />
+    <UpTable :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
 </template>
   
 <script setup>
@@ -8,9 +8,10 @@
 import { WISH } from "./wish";
 import { CHARACTER } from "./characters";
 // utils
+import { GameName } from "../utils";
+
 import UpTable from "../UpTable.vue";
 
-const gameNum = 0
 
 </script>
   

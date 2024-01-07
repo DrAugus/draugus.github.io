@@ -1,5 +1,10 @@
 import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 
+export enum GameName {
+  Genshin,
+  HSR,
+}
+
 export const getCharName =
   (id: string, char: Characters) =>
     !id ? '' : char[replaceAndLow(id)]?.name;
@@ -82,8 +87,8 @@ export const getTimelineHomeHero =
   };
 
 export const getGameName = (game: number) => {
-  if (game === 0) return 'genshin';
-  if (game === 1) return 'hsr';
+  if (game === GameName.Genshin) return 'genshin';
+  if (game === GameName.HSR) return 'hsr';
 };
 
 // tag 0 no handle

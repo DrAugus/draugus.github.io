@@ -31,7 +31,7 @@
 import { defineComponent } from 'vue'
 
 import dayjs from "dayjs";
-import { getCharName, composeCharSrc, replaceAndLow } from './utils';
+import { getCharName, composeCharSrc, replaceAndLow, GameName } from './utils';
 
 
 const getColor = (index, max) => {
@@ -60,7 +60,7 @@ export default defineComponent({
         WISH_TEXT: {
             type: Number,
             required: true,
-            default: 0
+            default: GameName.Genshin
         },
     },
     data() {
