@@ -10,7 +10,7 @@ import { CHARACTER } from "./characters";
 // utils
 import UpTable from "../UpTable.vue";
 
-const gameNum = 0
+const gameNum = 1
 
 </script>
   

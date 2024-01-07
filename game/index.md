@@ -5,7 +5,7 @@ titleTemplate: 游戏
 hero:
   name: 游戏人生
   text: 近期活动
-  tagline: 原神 星穹铁道
+  tagline: 原神 崩坏·星穹铁道
   image:
     src: /image/kafka-modified.png
     alt: none
