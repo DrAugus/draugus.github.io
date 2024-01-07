@@ -102,13 +102,6 @@ def unicode_conversion(s):
     return bytes(s, "latin1").decode("unicode_escape")
 
 
-def got_insert_info(text, callback):
-    for vv in text:
-        find_des = vv.get("insert")
-        if isinstance(find_des, str):
-            callback(find_des)
-
-
 def get_arr_str_event_warp_name(sub_str, text):
     arr = []
 
@@ -117,76 +110,9 @@ def get_arr_str_event_warp_name(sub_str, text):
             arr.append(
                 utils.match_char_event_warp_name_string(find_des))
 
-    got_insert_info(text, append_match)
+    utils.got_insert_info(text, append_match)
     # print(arr)
     return utils.clean_list_none(arr)
-
-
-def get_timestamp(text):
-    arr = []
-
-    def append_match(find_des):
-        arr.extend(utils.find_unique_timestamps(find_des))
-
-    got_insert_info(text, append_match)
-
-    return utils.clean_list_none(arr)
-
-
-def get_duration(text):
-    arr = []
-
-    def append_match(find_des: str):
-
-        def got_dur(start: str, end: str):
-            if start != None and end != None:
-                arr.append({
-                    'start_time': start,
-                    'end_time': end
-                })
-
-        # 大版本更新时
-        # update – 2024/01/17 11:59:00(server time)
-        if 'update' in find_des and 'server time' in find_des:
-            version_match = re.search(r"Version (\d+\.\d+)", find_des)
-            if version_match:
-                version = version_match.group(1)
-            else:
-                version = None
-
-            time_match = re.search(
-                r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
-            if time_match:
-                time = time_match.group(1)
-            else:
-                time = None
-
-            if version != None and time != None:
-                # print(f'version:{version}', f'time:{time}')
-                got_dur(version, time)
-                return
-
-        # 小版本更新时
-        # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
-        if 'Event Duration' in find_des and 'server time' in find_des:
-            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})'
-            # 使用正则表达式搜索所有匹配的时间
-            matches = re.findall(pattern, find_des)
-            # 检查是否找到了两个匹配的时间，表示开始和结束时间
-            if matches and len(matches) == 2:
-                start_time, end_time = matches
-                got_dur(start_time, end_time)
-                # print(f"start_time:{start_time} end_time:{end_time}")
-            else:
-                start_time, end_time = None
-                # print("Could not extract start and end times from the string.")
-
-        got_dur(None, None)
-
-    got_insert_info(text, append_match)
-
-    return arr
 
 
 def re_find(text_full: str, find_tag: str) -> list:
@@ -196,7 +122,7 @@ def re_find(text_full: str, find_tag: str) -> list:
         if find_tag in find_des:
             arr.append(find_des)
 
-    got_insert_info(text_full, append_match)
+    utils.got_insert_info(text_full, append_match)
     got_new_str: str = ''
     for vv in arr:
         find_index = utils.find_nth_occurrence_2(vv, find_tag, ')', 3)
@@ -224,7 +150,7 @@ def get_wish5star(text: str, wish_type: WishType):
     def append_match(find_des):
         arr.extend(utils.find_substrs(find_des, find_tag, ')'))
 
-    got_insert_info(text, append_match)
+    utils.got_insert_info(text, append_match)
 
     return utils.clean_list_none(arr)
 
@@ -239,8 +165,7 @@ def get_wish4star(text: str, wish_type: WishType):
 
     def extract_characters(text: str, find_tag: str):
         # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
-        pattern = fr"{
-            find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
+        pattern = fr"{find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
 
         # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
         matches = re.findall(pattern, text)
@@ -256,7 +181,7 @@ def get_wish4star(text: str, wish_type: WishType):
         if extract_characters(find_des, find_tag) != None:
             arr.extend(extract_characters(find_des, find_tag))
 
-    got_insert_info(text, append_match)
+    utils.got_insert_info(text, append_match)
 
     res = utils.clean_list_none(arr)
 
@@ -267,16 +192,6 @@ def get_wish4star(text: str, wish_type: WishType):
 
     return utils.clean_list_none(res)
 
-
-def get_only_name(character_info: list) -> list:
-    character_info_only_name = [info.split('(')[0] for info in character_info]
-    character_info_only_name = [name.strip()
-                                for name in character_info_only_name]
-    character_info_only_name = [utils.clear_non_letters(
-        clear) for clear in character_info_only_name]
-    character_info_only_name = utils.clean_list_none(character_info_only_name)
-    # print('only name:', character_info_only_name)
-    return character_info_only_name
 
 # wish_type 0 character 1 weapon
 
@@ -302,23 +217,23 @@ def parse_wish(post_id, wish_type: WishType):
     print("arr_str_char_event_warp_name modify is ",
           arr_str_char_event_warp_name_modify)
 
-    timestamp_text = get_timestamp(clean_text)
+    timestamp_text = utils.get_timestamp(clean_text)
     print("Timestamp: ", timestamp_text)
 
-    duration_text = get_duration(clean_text)
+    duration_text = utils.get_duration(clean_text)
     print("Duration: ", duration_text)
 
     # str.strip()方法用于移除字符串头尾指定的字符，默认为空格或换行符
     # 提取5-star角色的名称和描述信息
     character_info = get_wish5star(clean_text, wish_type)
     print('5-star:', character_info)
-    character_info_only_name = get_only_name(character_info)
+    character_info_only_name = utils.get_only_name(character_info)
     print('5-star only name:', character_info_only_name)
 
     # 提取4-star角色的名称和描述信息
     character_info4 = get_wish4star(clean_text, wish_type)
     print('4-star:', character_info4)
-    character_info_only_name4 = get_only_name(character_info4)
+    character_info_only_name4 = utils.get_only_name(character_info4)
     print('4-star only name:', character_info_only_name4)
 
     return {
@@ -326,7 +241,7 @@ def parse_wish(post_id, wish_type: WishType):
         'image': [1, 1] if len(character_info_only_name) == 2 else [1],
         'shortName': character_info_only_name,
         'start': duration_text[0]['start_time'] + ' +0800',
-        'end': duration_text[1]['end_time'] + ' +0800',
+        'end': duration_text[0]['end_time'] + ' +0800',
         'version': 'xxx',
         'wish5star': [utils.replace_characters(char) for char in character_info_only_name],
         'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4],

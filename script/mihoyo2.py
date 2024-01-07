@@ -1,15 +1,19 @@
 # 2 means genshin
 
 import json
+import os
 import requests
 from bs4 import BeautifulSoup
 import re
+
+import utils
 
 
 def get_url_data(api_url):
     response = requests.get(api_url)
     data = response.json()
     return data
+
 
 # type=3 公告
 api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=2&type=3'
@@ -96,28 +100,114 @@ def find_between_a_b(my_str, start_tag, end_tag):
     return sub_strs
 
 
-def parse_all(post_id, post_idx):
+def get_arr_str_event_wish_name(text, start_tag, end_tag):
+    arr = []
+
+    def append_match(find_des):
+        arr.extend(find_between_a_b(find_des, start_tag, end_tag))
+
+    utils.got_insert_info(text, append_match)
+    # print(arr)
+    return utils.clean_list_none(arr)
+
+
+def get_wish5star(text: str):
+    arr = []
+    find_tag: list[str] = ['5-star character', '5-star weapons']
+
+    def append_match(find_des):
+        for vv in find_tag:
+            arr.extend(utils.find_substrs(find_des, vv, ')'))
+
+    utils.got_insert_info(text, append_match)
+
+    return utils.clean_list_none(arr)
+
+
+def get_wish4star(text: str):
+    arr = []
+    find_tag: list[str] = ['4-star characters', '4-star weapons']
+
+    def extract_characters(text: str, find_tag: str):
+        # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
+        pattern = fr"{find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
+
+        # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
+        matches = re.findall(pattern, text)
+
+        # 由于 findall 返回列表的列表，我们需要使用列表展开来获取单个组。
+        if matches:
+            character_list = [match for group in matches for match in group]
+            return character_list
+        else:
+            return None
+
+    def append_match(find_des):
+        for vv in find_tag:
+            if extract_characters(find_des, vv) != None:
+                arr.extend(extract_characters(find_des, vv))
+
+    utils.got_insert_info(text, append_match)
+
+    res = utils.clean_list_none(arr)
+
+    # 没找着
+    if isinstance(res, list) and not len(res):
+        # print(">>>>>>> 没找到没找到没找到")
+        res = []
+        for vv in find_tag:
+            res.extend(re_find(text, vv))
+
+    return utils.clean_list_none(res)
+
+
+def re_find(text_full: str, find_tag: str) -> list:
+    arr = []
+
+    def append_match(find_des):
+        if find_tag in find_des:
+            arr.append(find_des)
+
+    utils.got_insert_info(text_full, append_match)
+    got_new_str: str = ''
+    for vv in arr:
+        find_index = utils.find_nth_occurrence_2(vv, find_tag, ')', 3)
+        start_index = vv.find(find_tag)
+        if find_index != -1:
+            got_new_str = vv[start_index+len(find_tag):find_index]
+            break
+    if got_new_str != '':
+        got_new_str = got_new_str.replace('\n', '')
+        res = got_new_str.split(')')
+        # print(res)
+        return res
+
+    return []
+
+
+@utils.log_args
+def parse_wish(post_id, post_idx):
     full_article_api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=' + \
         post_id
+    print("full_article_api_url: ", full_article_api_url)
 
     full_data = get_url_data(full_article_api_url)
-    json_str = json.dumps(full_data['data']['post']['post']['content'])
-    # print(json_str)
-    # 清洗标签
-    soup = BeautifulSoup(json_str, "html.parser")
-    clean_text = soup.get_text()
-    clean_text = clean_text.replace('\\', '')
+    got_content = full_data['data']['post']['post']['structured_content']
+
+    clean_text = utils.str_to_dict(got_content)
+    print("clean_text type is ", type(clean_text))
+    if clean_text == None:
+        return
 
     print('=====================')
     # print(clean_text)
     print('=====================')
 
-    duration_text = clean_text.split("Event Wish Duration")[
-        1].split("Event Wish Details")[0].strip()
-    # details_text = clean_text.split("Event Details:")[1].strip()
+    timestamp_text = utils.get_timestamp(clean_text)
+    print("Timestamp: ", timestamp_text)
 
+    duration_text = utils.get_duration(clean_text)
     print("Duration: ", duration_text)
-    # print("Details: ", details_text)
 
     # 通过查找特定字符串来获取5-star角色 弃用
     # find_sub = '5-Star character'
@@ -132,67 +222,64 @@ def parse_all(post_id, post_idx):
     # WISH NAME
     start_tag = 'Event Wish "'
     end_tag = '" - Boosted Drop Rate'
-    find_res = find_between_a_b(clean_text, start_tag, end_tag)
-    print('wish name:', find_res)
-    print('find_res len:', len(find_res))
+    wish_name = get_arr_str_event_wish_name(clean_text, start_tag, end_tag)
+    print('wish name:', wish_name)
+    print('wish name len:', len(wish_name))
     img_times = ['1', '1', '1']
-    for i in range(len(find_res)):
+    for i in range(len(wish_name)):
         # print(find_res[i])
         img_type = img_url[post_idx][i][img_url[post_idx][i].rfind('.', 0):]
         # print('img_type', img_type)
-        img_name = modify_image_name(find_res[i], img_times[i], img_type)
+        img_name = modify_image_name(wish_name[i], img_times[i], img_type)
         print('img_name:', img_name)
 
     # 5-star char
-    pattern_string = r'5-star character(.*?)will receive a huge'
-    find_res = re_find_between_a_b(clean_text, pattern_string)
-    print('5-star:', find_res)
-    character_info = []
-    for c_info in find_res:
-        modify_c = c_info.split('"')[2].split('(')[0].strip()
-        character_info.append(modify_c)
-    print('5-star only name:', character_info)
-    character_info = [str.lower().replace(' ', '_') for str in character_info]
-    print('5-star modify:', character_info)
+    # pattern_string = r'5-star character(.*?)will receive a huge'
+    # find_res = re_find_between_a_b(clean_text, pattern_string)
+    # character_info = find_res
+    # print('5-star:', character_info)
+    # character_info_only_name = utils.get_only_name(character_info)
+    # print('5-star only name:', character_info_only_name)
 
-    # 4-star char
-    pattern_string = r'4-star characters(.*?)will receive a huge'
-    find_res = re_find_between_a_b(clean_text, pattern_string)
-    find_res = find_res[0].split(',')
-    print('4-star:', find_res)
-    character_info = []
-    for c_info in find_res:
-        modify_c = c_info.split('"')[2].split('(')[0].strip()
-        character_info.append(modify_c)
-    print('4-star only name:', character_info)
+    # 提取5-star角色的名称和描述信息
+    character_info = get_wish5star(clean_text)
+    print('5-star:', character_info)
+    character_info_only_name = utils.get_only_name(character_info)
+    print('5-star only name:', character_info_only_name)
 
-    # 5-star weapon
-    pattern_string = r'5-star weapons(.*?)will receive a huge'
-    find_res = re_find_between_a_b(clean_text, pattern_string)
-    if len(find_res) == 0:
-        pattern_string = r"5-star weapon (.*?) \(.*?\)"
-        find_res = re_find_between_a_b(clean_text, pattern_string)
-    find_res = find_res[0].split('and')
-    print('5-weapon:', find_res)
-    weapon_info = []
-    for c_info in find_res:
-        modify_c = c_info.split('(')[0].strip()
-        weapon_info.append(modify_c)
-    print('5-weapon only name:', weapon_info)
+    # 提取4-star角色的名称和描述信息
+    character_info4 = get_wish4star(clean_text)
+    print('4-star:', character_info4)
+    character_info_only_name4 = utils.get_only_name(character_info4)
+    print('4-star only name:', character_info_only_name4)
 
-    # 4-star weapon
-    pattern_string = r'4-star weapons(.*?)will receive a huge'
-    find_res = re_find_between_a_b(clean_text, pattern_string)
-    find_res = find_res[0].split(',')
-    print('4-weapon:', find_res)
-    weapon_info = []
-    for c_info in find_res:
-        modify_c = c_info.split('(')[0].strip()
-        if modify_c.startswith('and'):
-            modify_c = modify_c[3:].strip()
-        weapon_info.append(modify_c)
-    print('4-weapon only name:', weapon_info)
+    return {
+        'name': wish_name,
+        'image': [1, 1],
+        'shortName': character_info_only_name,
+        'start': duration_text[0]['start_time'] + ' +0800'if len(duration_text) else '',
+        'end':   duration_text[0]['end_time'] + ' +0800'if len(duration_text) else '',
+        'version': 'xxx',
+        'wish5star': [utils.replace_characters(char) for char in character_info_only_name],
+        'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4],
+        'wishName': [],
+        'url': ['']
+    }
 
+
+all_info = []
+
+# 只取最新的
+only_last = True
 
 for i in range(len(post_id)):
-    parse_all(post_id[i], i)
+    dict_wish = parse_wish(post_id[i], i)
+    all_info.append(dict_wish)
+    if only_last:
+        break
+
+current_path = os.path.dirname(__file__)
+filename = current_path + '/auto/mhy2.json'
+with open(filename, 'w') as file:
+    # 将字典写入文件
+    json.dump(all_info, file)

@@ -80,7 +80,6 @@ export default defineComponent({
         // console.log('modify5starWishData', modify5starWishData)
 
 
-
         let modify5starWishInfo = [];
         Object.values(modify5starWishData).forEach((v) => {
             let shortName = v[0].shortName;
@@ -93,7 +92,7 @@ export default defineComponent({
             modify5starWishInfo.push(obj);
         });
         this.modify5starWishInfo = modify5starWishInfo
-        console.log('modify5starWishInfo', modify5starWishInfo)
+        // console.log('modify5starWishInfo', modify5starWishInfo)
 
     }
 })

@@ -126,7 +126,7 @@ def replace_characters(input_string: str) -> str:
 
 
 # 找到第一个和最后一个英文字母，并提取这两个字母及其之间的内容
-def clear_non_letters(input_str)->str:
+def clear_non_letters(input_str) -> str:
 
     match = re.search(r'[a-zA-Z].*[a-zA-Z]', input_str)
 
@@ -135,3 +135,122 @@ def clear_non_letters(input_str)->str:
         return match.group()
     else:
         return input_str
+
+
+def got_insert_info(text, callback):
+    for vv in text:
+        find_des = vv.get("insert")
+        if isinstance(find_des, str):
+            callback(find_des)
+
+
+def get_only_name(character_info: list) -> list:
+    character_info_only_name = [info.split('(')[0] for info in character_info]
+    character_info_only_name = [name.strip()
+                                for name in character_info_only_name]
+    character_info_only_name = [clear_non_letters(
+        clear) for clear in character_info_only_name]
+    character_info_only_name = clean_list_none(character_info_only_name)
+    # print('only name:', character_info_only_name)
+    return character_info_only_name
+
+
+def get_timestamp(text):
+    arr = []
+
+    def append_match(find_des):
+        arr.extend(find_unique_timestamps(find_des))
+
+    got_insert_info(text, append_match)
+
+    return clean_list_none(arr)
+
+
+def get_duration(text):
+    arr = []
+
+    def append_match(find_des: str):
+
+        def got_dur(start: str, end: str):
+            if start != None and end != None:
+                arr.append({
+                    'start_time': start,
+                    'end_time': end
+                })
+
+        time_match = re.search(
+            r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+        if time_match:
+            version_match = re.search(r"Version (\d+\.\d+)", find_des)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time_match = re.search(
+                r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+            if time_match:
+                time = time_match.group(1)
+            else:
+                time = None
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+                return
+
+            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
+            pattern = r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})'
+            # 使用正则表达式搜索所有匹配的时间
+            matches = re.findall(pattern, find_des)
+            # 检查是否找到了两个匹配的时间，表示开始和结束时间
+            if matches and len(matches) == 2:
+                start_time, end_time = matches
+                got_dur(start_time, end_time)
+                # print(f"start_time:{start_time} end_time:{end_time}")
+            else:
+                start_time, end_time = None
+                # print("Could not extract start and end times from the string.")
+
+        # 大版本更新时
+        # update – 2024/01/17 11:59:00(server time)
+        if 'update' in find_des and 'server time' in find_des:
+            version_match = re.search(r"Version (\d+\.\d+)", find_des)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time_match = re.search(
+                r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+            if time_match:
+                time = time_match.group(1)
+            else:
+                time = None
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+                return
+
+        # 小版本更新时
+        # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
+        if 'Event Duration' in find_des and 'server time' in find_des:
+            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
+            pattern = r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})'
+            # 使用正则表达式搜索所有匹配的时间
+            matches = re.findall(pattern, find_des)
+            # 检查是否找到了两个匹配的时间，表示开始和结束时间
+            if matches and len(matches) == 2:
+                start_time, end_time = matches
+                got_dur(start_time, end_time)
+                # print(f"start_time:{start_time} end_time:{end_time}")
+            else:
+                start_time, end_time = None
+                # print("Could not extract start and end times from the string.")
+
+        got_dur(None, None)
+
+    got_insert_info(text, append_match)
+
+    return arr
