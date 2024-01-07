@@ -3,8 +3,8 @@ aside: false
 ---
 # 复刻祈愿
 
-<GenshinFork />
+<Fork />
 
 <script setup lang="ts">
-import GenshinFork from "../.vitepress/components/genshin/Fork.vue";
+import Fork from "../.vitepress/components/hsr/Fork.vue";
 </script>

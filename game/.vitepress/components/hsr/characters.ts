@@ -2,7 +2,8 @@ import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
   xueyi: {
-    id: "Xueyi",
+    key: "Xueyi",
+    id: "xueyi",
     name: "雪衣",
     prefix: Weapon.Destruction.name,
     star: 4,
@@ -13,7 +14,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   dr_ratio: {
-    id: "Dr Ratio",
+    key: "Dr Ratio",
+    id: "dr_ratio",
     name: "真理医生",
     prefix: Weapon.Hunt.name,
     star: 5,
@@ -24,7 +26,8 @@ export const CHARACTER = {
     weapon: Weapon.Hunt
   },
   ruan_mei: {
-    id: "Ruan Mei",
+    key: "Ruan Mei",
+    id: "ruan_mei",
     name: "阮·梅",
     prefix: Weapon.Harmony.name,
     star: 5,
@@ -35,7 +38,8 @@ export const CHARACTER = {
     weapon: Weapon.Harmony
   },
   hanya: {
-    id: "Hanya",
+    key: "Hanya",
+    id: "hanya",
     name: "寒鸦",
     prefix: Weapon.Harmony.name,
     star: 4,
@@ -46,7 +50,8 @@ export const CHARACTER = {
     weapon: Weapon.Harmony
   },
   argenti: {
-    id: "Argenti",
+    key: "Argenti",
+    id: "argenti",
     name: "银枝",
     prefix: Weapon.Erudition.name,
     star: 5,
@@ -57,7 +62,8 @@ export const CHARACTER = {
     weapon: Weapon.Erudition
   },
   huohuo: {
-    id: "Huohuo",
+    key: "Huohuo",
+    id: "huohuo",
     name: "藿藿",
     prefix: Weapon.Abundance.name,
     star: 5,
@@ -68,7 +74,8 @@ export const CHARACTER = {
     weapon: Weapon.Abundance
   },
   guinaifen: {
-    id: "Guinaifen",
+    key: "Guinaifen",
+    id: "guinaifen",
     name: "桂乃芬",
     prefix: Weapon.Nihility.name,
     star: 4,
@@ -79,7 +86,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   topaz_numby: {
-    id: "Topaz & Numby",
+    key: "Topaz & Numby",
+    id: "topaz_numby",
     name: "托帕&账账",
     prefix: Weapon.Hunt.name,
     star: 5,
@@ -90,7 +98,8 @@ export const CHARACTER = {
     weapon: Weapon.Hunt
   },
   jingliu: {
-    id: "Jingliu",
+    key: "Jingliu",
+    id: "jingliu",
     name: "镜流",
     prefix: Weapon.Destruction.name,
     star: 5,
@@ -101,7 +110,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   lynx: {
-    id: "Lynx",
+    key: "Lynx",
+    id: "lynx",
     name: "玲可",
     prefix: Weapon.Abundance.name,
     star: 4,
@@ -112,7 +122,8 @@ export const CHARACTER = {
     weapon: Weapon.Abundance
   },
   dan_heng_imbibitor_lunae: {
-    id: 'Dan Heng · Imbibitor Lunae',
+    key: 'Dan Heng · Imbibitor Lunae',
+    id: "dan_heng_imbibitor_lunae",
     name: '丹恒•饮月',
     prefix: Weapon.Destruction.name,
     star: 5,
@@ -123,7 +134,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   luka: {
-    id: "Luka",
+    key: "Luka",
+    id: "luka",
     name: "卢卡",
     prefix: Weapon.Nihility.name,
     star: 4,
@@ -134,7 +146,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   kafka: {
-    id: "Kafka",
+    key: "Kafka",
+    id: "kafka",
     name: "卡芙卡",
     prefix: Weapon.Nihility.name,
     star: 5,
@@ -145,7 +158,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   blade: {
-    id: "Blade",
+    key: "Blade",
+    id: "blade",
     name: "刃",
     prefix: Weapon.Destruction.name,
     star: 5,
@@ -156,7 +170,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   fu_xuan: {
-    id: "Fu Xuan",
+    key: "Fu Xuan",
+    id: "fu_xuan",
     name: "符玄",
     prefix: Weapon.Preservation.name,
     star: 5,
@@ -167,7 +182,8 @@ export const CHARACTER = {
     weapon: Weapon.Preservation
   },
   seele: {
-    id: "Seele",
+    key: "Seele",
+    id: "seele",
     name: "希儿",
     prefix: Weapon.Hunt.name,
     star: 5,
@@ -178,7 +194,8 @@ export const CHARACTER = {
     weapon: Weapon.Hunt
   },
   hook: {
-    id: "Hook",
+    key: "Hook",
+    id: "hook",
     name: "虎克",
     prefix: Weapon.Destruction.name,
     star: 4,
@@ -189,7 +206,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   pela: {
-    id: "Pela",
+    key: "Pela",
+    id: "pela",
     name: "佩拉",
     prefix: Weapon.Nihility.name,
     star: 4,
@@ -200,7 +218,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   natasha: {
-    id: "Natasha",
+    key: "Natasha",
+    id: "natasha",
     name: "娜塔莎",
     prefix: Weapon.Abundance.name,
     star: 4,
@@ -211,7 +230,8 @@ export const CHARACTER = {
     weapon: Weapon.Abundance
   },
   yukong: {
-    id: 'Yukong',
+    key: 'Yukong',
+    id: "yukong",
     name: '驭空',
     prefix: Weapon.Harmony.name,
     star: 4,
@@ -222,7 +242,8 @@ export const CHARACTER = {
     weapon: Weapon.Harmony
   },
   luocha: {
-    id: 'Luocha',
+    key: 'Luocha',
+    id: "luocha",
     name: '罗刹',
     prefix: Weapon.Abundance.name,
     star: 5,
@@ -233,7 +254,8 @@ export const CHARACTER = {
     weapon: Weapon.Abundance
   },
   silver_wolf: {
-    id: 'Silver Wolf',
+    key: 'Silver Wolf',
+    id: "silver_wolf",
     name: '银狼',
     prefix: Weapon.Nihility.name,
     star: 5,
@@ -244,7 +266,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   bailu: {
-    id: 'Bailu',
+    key: 'Bailu',
+    id: "bailu",
     name: '白露',
     prefix: Weapon.Abundance.name,
     star: 5,
@@ -255,7 +278,8 @@ export const CHARACTER = {
     weapon: Weapon.Abundance
   },
   yanqing: {
-    id: 'Yanqing',
+    key: 'Yanqing',
+    id: "yanqing",
     name: '彦卿',
     prefix: Weapon.Hunt.name,
     star: 5,
@@ -266,7 +290,8 @@ export const CHARACTER = {
     weapon: Weapon.Hunt
   },
   sushang: {
-    id: 'Sushang',
+    key: 'Sushang',
+    id: "sushang",
     name: '素裳',
     prefix: Weapon.Hunt.name,
     star: 4,
@@ -277,7 +302,8 @@ export const CHARACTER = {
     weapon: Weapon.Hunt
   },
   jing_yuan: {
-    id: 'Jing Yuan',
+    key: 'Jing Yuan',
+    id: "jing_yuan",
     name: '景元',
     prefix: Weapon.Erudition.name,
     star: 5,
@@ -288,7 +314,8 @@ export const CHARACTER = {
     weapon: Weapon.Erudition
   },
   tingyun: {
-    id: 'Tingyun',
+    key: 'Tingyun',
+    id: "tingyun",
     name: '停云',
     prefix: Weapon.Harmony.name,
     star: 4,
@@ -299,7 +326,8 @@ export const CHARACTER = {
     weapon: Weapon.Harmony
   },
   qingque: {
-    id: 'Qingque',
+    key: 'Qingque',
+    id: "qingque",
     name: '青雀',
     prefix: Weapon.Erudition.name,
     star: 4,
@@ -310,7 +338,8 @@ export const CHARACTER = {
     weapon: Weapon.Erudition
   },
   sampo: {
-    id: 'Sampo',
+    key: 'Sampo',
+    id: "sampo",
     name: '桑博',
     prefix: Weapon.Nihility.name,
     star: 4,
@@ -321,7 +350,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   clara: {
-    id: 'Clara',
+    key: 'Clara',
+    id: "clara",
     name: '克拉拉',
     prefix: Weapon.Destruction.name,
     star: 5,
@@ -332,7 +362,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   gepard: {
-    id: 'Gepard',
+    key: 'Gepard',
+    id: "gepard",
     name: '杰帕德',
     prefix: Weapon.Preservation.name,
     star: 5,
@@ -343,7 +374,8 @@ export const CHARACTER = {
     weapon: Weapon.Preservation
   },
   serval: {
-    id: 'Serval',
+    key: 'Serval',
+    id: "serval",
     name: '希露瓦',
     prefix: Weapon.Erudition.name,
     star: 4,
@@ -354,7 +386,8 @@ export const CHARACTER = {
     weapon: Weapon.Erudition
   },
   bronya: {
-    id: 'Bronya',
+    key: 'Bronya',
+    id: "bronya",
     name: '布洛妮娅',
     prefix: Weapon.Harmony.name,
     star: 5,
@@ -365,7 +398,8 @@ export const CHARACTER = {
     weapon: Weapon.Harmony
   },
   herta: {
-    id: 'Herta',
+    key: 'Herta',
+    id: "herta",
     name: '黑塔',
     prefix: Weapon.Erudition.name,
     star: 4,
@@ -376,7 +410,8 @@ export const CHARACTER = {
     weapon: Weapon.Erudition
   },
   asta: {
-    id: 'Asta',
+    key: 'Asta',
+    id: "asta",
     name: '艾丝妲',
     prefix: Weapon.Harmony.name,
     star: 4,
@@ -387,7 +422,8 @@ export const CHARACTER = {
     weapon: Weapon.Harmony
   },
   arlan: {
-    id: 'Arlan',
+    key: 'Arlan',
+    id: "arlan",
     name: '阿兰',
     prefix: Weapon.Destruction.name,
     star: 4,
@@ -398,7 +434,8 @@ export const CHARACTER = {
     weapon: Weapon.Destruction
   },
   welt: {
-    id: 'Welt',
+    key: 'Welt',
+    id: "welt",
     name: '瓦尔特',
     prefix: Weapon.Nihility.name,
     star: 5,
@@ -409,7 +446,8 @@ export const CHARACTER = {
     weapon: Weapon.Nihility
   },
   himeko: {
-    id: 'Himeko',
+    key: 'Himeko',
+    id: "himeko",
     name: '姬子',
     prefix: Weapon.Erudition.name,
     star: 5,
@@ -420,7 +458,8 @@ export const CHARACTER = {
     weapon: Weapon.Erudition
   },
   dan_heng: {
-    id: 'Dan Heng',
+    key: 'Dan Heng',
+    id: "dan_heng",
     name: '丹恒',
     prefix: Weapon.Hunt.name,
     star: 4,
@@ -431,7 +470,8 @@ export const CHARACTER = {
     weapon: Weapon.Hunt
   },
   march_7th: {
-    id: 'March 7th',
+    key: 'March 7th',
+    id: "march_7th",
     name: '三月七',
     prefix: Weapon.Preservation.name,
     star: 4,

@@ -1,7 +1,7 @@
 <template>
-  <Fork :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
+    <UpTimes :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.HSR />
 </template>
-
+  
 <script setup>
 
 // data
@@ -10,6 +10,7 @@ import { CHARACTER } from "./characters";
 // utils
 import { GameName } from "../utils";
 
-import Fork from "../Fork.vue";
+import UpTimes from "../UpTimes.vue";
 
 </script>
+  

@@ -3,8 +3,8 @@ aside: false
 ---
 # up 次数统计
 
-<GenshinUpTimes />
+<UpTimes />
 
 <script setup lang="ts">
-import GenshinUpTimes from "../.vitepress/components/genshin/UpTimes.vue";
+import UpTimes from "../.vitepress/components/hsr/UpTimes.vue";
 </script>

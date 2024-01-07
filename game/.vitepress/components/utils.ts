@@ -91,6 +91,11 @@ export const getGameName = (game: number) => {
   if (game === GameName.HSR) return 'hsr';
 };
 
+export const getWishName = (gameName: GameName) => {
+  if (gameName === GameName.Genshin) return '祈愿';
+  if (gameName === GameName.HSR) return '跃迁';
+}
+
 // tag 0 no handle
 // tag 1 weapon text
 export const replaceText =

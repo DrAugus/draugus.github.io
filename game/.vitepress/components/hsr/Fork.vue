@@ -1,5 +1,5 @@
 <template>
-  <Fork :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
+  <Fork :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.HSR />
 </template>
 
 <script setup>
