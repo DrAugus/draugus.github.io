@@ -65,6 +65,7 @@ const sidebarTrip = () => [
 const sidebarTripTravelogue = () => [
     { text: '游记', link: '/trip/travelogue/' },
 
+    { text: '桂林 20230902', link: '/trip/travelogue/20230902' },
     { text: '南京 20230809', link: '/trip/travelogue/20230809' },
     { text: '青岛淄博济宁 20230803', link: '/trip/travelogue/20230803' },
     { text: '日本 20230720', link: '/trip/travelogue/20230720' },
