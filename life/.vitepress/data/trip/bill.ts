@@ -3,6 +3,62 @@ import { LargeTravelPackage, TravelBill } from "../../type"
 
 export const TRAVEL_BILLS: TravelBill[] = [
     {
+        name: "柳州",
+        start: new Date("2023/10/20"),
+        end: new Date("2023/10/22"),
+        sum: 0,
+        city: "柳州",
+        intro: {
+            tips: "",
+            hotels: "",
+            transportation: "",
+            dining: "",
+            entertainment: "",
+            others: ""
+        }
+    }, {
+        name: "桂林",
+        start: new Date("2023/09/02"),
+        end: new Date("2023/09/06"),
+        sum: 0,
+        city: "桂林",
+        intro: {
+            tips: "",
+            hotels: "",
+            transportation: "",
+            dining: "",
+            entertainment: "",
+            others: ""
+        }
+    }, {
+        name: "南京",
+        start: new Date("2023/08/09"),
+        end: new Date("2023/08/09"),
+        sum: 0,
+        city: "南京",
+        intro: {
+            tips: "",
+            hotels: "",
+            transportation: "",
+            dining: "",
+            entertainment: "",
+            others: ""
+        }
+    }, {
+        name: "青岛淄博济宁",
+        start: new Date("2023/08/03"),
+        end: new Date("2023/08/06"),
+        sum: 0,
+        city: "青岛,淄博,济宁",
+        intro: {
+            tips: "",
+            hotels: "",
+            transportation: "",
+            dining: "",
+            entertainment: "",
+            others: ""
+        }
+    }, {
         name: "日本",
         start: new Date("2023/07/20"),
         end: new Date("2023/07/27"),
