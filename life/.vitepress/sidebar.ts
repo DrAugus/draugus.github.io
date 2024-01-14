@@ -70,7 +70,6 @@ const sidebarTripTravelogue = () => [
     { text: '青岛淄博济宁 20230803', link: '/trip/travelogue/20230803' },
     { text: '日本 20230720', link: '/trip/travelogue/20230720' },
     { text: '深港珠-柳州 20230628', link: '/trip/travelogue/20230628' },
-    { text: '南阳 20230622', link: '/trip/travelogue/20230622' },
     { text: '南宁 20230610', link: '/trip/travelogue/20230610' },
     { text: '长春 20230527', link: '/trip/travelogue/20230527' },
     { text: '港珠澳广深 20230429', link: '/trip/travelogue/20230429' },

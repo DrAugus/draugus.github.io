@@ -56,9 +56,13 @@ export interface AirfareInfo {
 
 export interface TravelBillIntroItem {
   tips: string
+  // 酒店
   hotels: string
+  // 交通
   transportation: string
+  // 吃喝
   dining: string
+  // 玩乐
   entertainment: string
   others: string
 }

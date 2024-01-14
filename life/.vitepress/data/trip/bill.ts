@@ -6,13 +6,13 @@ export const TRAVEL_BILLS: TravelBill[] = [
         name: "柳州",
         start: new Date("2023/10/20"),
         end: new Date("2023/10/22"),
-        sum: 0,
+        sum: 1385,
         city: "柳州",
         intro: {
             tips: "",
             hotels: "",
-            transportation: "",
-            dining: "",
+            transportation: "总计1273。高铁592，48*2，48，515，打车22",
+            dining: "吃喝97，高铁饭15",
             entertainment: "",
             others: ""
         }
@@ -20,43 +20,43 @@ export const TRAVEL_BILLS: TravelBill[] = [
         name: "桂林",
         start: new Date("2023/09/02"),
         end: new Date("2023/09/06"),
-        sum: 0,
+        sum: 3101,
         city: "桂林",
         intro: {
             tips: "",
-            hotels: "",
-            transportation: "",
-            dining: "",
-            entertainment: "",
-            others: ""
+            hotels: "总计496。124*4",
+            transportation: "总计915。飞机 825，打车10，机场大巴20*2+20+20",
+            dining: "1123",
+            entertainment: "景区索道55，龙脊摄影30，",
+            others: "过路费33，租车2天3h322，汽车充电20+20+35+54"
         }
     }, {
         name: "南京",
         start: new Date("2023/08/09"),
         end: new Date("2023/08/09"),
-        sum: 0,
+        sum: 604,
         city: "南京",
         intro: {
             tips: "",
             hotels: "",
-            transportation: "",
-            dining: "",
-            entertainment: "",
+            transportation: "总计325。高铁 117*2，91",
+            dining: "吃喝194，火车饭15",
+            entertainment: "总统府35*2",
             others: ""
         }
     }, {
         name: "青岛淄博济宁",
         start: new Date("2023/08/03"),
         end: new Date("2023/08/06"),
-        sum: 0,
+        sum: 3929,
         city: "青岛,淄博,济宁",
         intro: {
-            tips: "",
-            hotels: "",
-            transportation: "",
-            dining: "",
-            entertainment: "",
-            others: ""
+            tips: "均为双人",
+            hotels: "总计632。316+203+113",
+            transportation: "共计：2477。高铁581*2，26*2，125*2，82*2，27*2，374*2，打车17",
+            dining: "吃喝657，高铁饭15",
+            entertainment: "教堂10*2",
+            others: "租车1天158"
         }
     }, {
         name: "日本",
@@ -160,27 +160,13 @@ export const TRAVEL_BILLS: TravelBill[] = [
         name: "南宁",
         start: new Date("2023/06/10"),
         end: new Date("2023/06/11"),
-        sum: 0,
+        sum: 994,
         city: "南宁",
         intro: {
             tips: "",
-            hotels: "",
-            transportation: "",
-            dining: "",
-            entertainment: "",
-            others: ""
-        }
-    }, {
-        name: "南阳",
-        start: new Date("2023/06/22"),
-        end: new Date("2023/06/26"),
-        sum: 0,
-        city: "南阳",
-        intro: {
-            tips: "",
-            hotels: "",
-            transportation: "",
-            dining: "",
+            hotels: "145+158",
+            transportation: "机票130*2，升头等舱159，打车55，机场大巴20*2",
+            dining: "177",
             entertainment: "",
             others: ""
         }
@@ -211,6 +197,7 @@ export const LARGE_TRAVEL_PACKAGE: LargeTravelPackage[] = [
 ]
 
 export const TRAVEL_BUDGET = {
-    "2023": 50000
+    "2023": 50000,
+    "2024": 30000,
 }
 

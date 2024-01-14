@@ -132,12 +132,12 @@ export default {
     methods: {
         getBadge(num, neg = 0) {
             let n = parseFloat(num)
-            let s = ['info', 'tip', 'warning', 'danger']
+            let s = ['tip', 'warning', 'danger']
             let res = 0
             if (n > 90) res = 0
             else if (n > 60) res = 1
             else if (n > 30) res = 2
-            else res = 3
+            else res = 2
             if (neg) res = s.length - res - 1
             // console.log(n, res)
             return s[res]
