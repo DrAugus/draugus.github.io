@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitepress'
-import { navbar } from './navbar'
-import { sidebar } from './sidebar'
+import { defineConfig } from 'vitepress';
+import { navbar } from './navbar';
+import { sidebar } from './sidebar';
 
 export default defineConfig({
     // These are app level configs.
@@ -95,6 +95,13 @@ export default defineConfig({
         }
     },
     markdown: {
+        container: {
+            tipLabel: '提示',
+            warningLabel: '警告',
+            dangerLabel: '危险',
+            infoLabel: '信息',
+            detailsLabel: '详细信息'
+        },
         math: true
     },
-})
+});

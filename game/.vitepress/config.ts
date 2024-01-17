@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitepress'
-import { navbar_zh } from './navbar'
-import { sidebar_zh } from './sidebar'
+import { defineConfig } from 'vitepress';
+import { navbar_zh } from './navbar';
+import { sidebar_zh } from './sidebar';
 
 export default defineConfig({
   // These are app level configs.
@@ -47,5 +47,14 @@ export default defineConfig({
       apiKey: '8870d1a7427df92c33d2db21368d01d1',
       indexName: 'augusmeowio'
     },
+  },
+  markdown: {
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
+    },
   }
-})
+});

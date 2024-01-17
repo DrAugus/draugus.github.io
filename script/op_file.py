@@ -9,7 +9,7 @@ def write_file(arr, filename=current_path+"/.augus_output"):
     if not len(arr) or not isinstance(arr, list) or arr[0].find('\n') == -1:
         print("str must be one more rows: ", arr)
         return
-    with open(filename, "w") as file:
+    with open(filename, "w", encoding='utf-8') as file:
         for aa in arr:
             file.write(aa)
 
@@ -61,10 +61,11 @@ def read_one_line():
             if 'id:' in line:
                 newline = line.replace('id:', 'key:')
                 arr = newline.split('"')
-                if(len(arr) == 1):
+                if (len(arr) == 1):
                     arr = arr[0].split('\'')
-                newline = arr[0] + '"'+  utils.replace_characters(arr[1]) +'"'+ arr[2]
+                newline = arr[0] + '"' + \
+                    utils.replace_characters(arr[1]) + '"' + arr[2]
                 file.write(newline)
 
 
-read_one_line()
+# read_one_line()

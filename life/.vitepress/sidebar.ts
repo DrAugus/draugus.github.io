@@ -1,9 +1,12 @@
+import { modifyTravelogue } from "./data/trip/travelogue";
+import { LinkName } from "./type";
+
 const sidebarEat = () => [
     { text: '吃饭了', link: '/eat/' },
     { text: '零食', link: '/eat/snack' },
     { text: '做点什么吧', link: '/eat/cookbook' },
     { text: '真的不能吃', link: '/eat/block' },
-]
+];
 const sidebarDaily = () => [
     // { text: '日常', link: '/daily/' },
     { text: '小猫', link: '/daily/cat' },
@@ -30,7 +33,7 @@ const sidebarDaily = () => [
             { text: 'Apple ID', link: '/daily/apple/id' },
         ]
     },
-]
+];
 const sidebarTrip = () => [
     { text: '规划指南', link: '/trip/' },
     { text: '出门检查', link: '/trip/check' },
@@ -61,26 +64,12 @@ const sidebarTrip = () => [
         ]
     },
 
-]
-const sidebarTripTravelogue = () => [
-    { text: '游记', link: '/trip/travelogue/' },
+];
 
-    { text: '桂林 20230902', link: '/trip/travelogue/20230902' },
-    { text: '南京 20230809', link: '/trip/travelogue/20230809' },
-    { text: '青岛淄博济宁 20230803', link: '/trip/travelogue/20230803' },
-    { text: '日本 20230720', link: '/trip/travelogue/20230720' },
-    { text: '深港珠-柳州 20230628', link: '/trip/travelogue/20230628' },
-    { text: '南宁 20230610', link: '/trip/travelogue/20230610' },
-    { text: '长春 20230527', link: '/trip/travelogue/20230527' },
-    { text: '港珠澳广深 20230429', link: '/trip/travelogue/20230429' },
-    { text: '绍兴 20230422', link: '/trip/travelogue/20230422' },
-    { text: '舟山 20230415', link: '/trip/travelogue/20230415' },
-    { text: '上海 20230311', link: '/trip/travelogue/20230311' },
-    { text: '南京 20230225', link: '/trip/travelogue/20230225' },
-    { text: '苏州 20220906', link: '/trip/travelogue/20220906' },
-    { text: '云南 20220812', link: '/trip/travelogue/20220812' },
-    { text: '长沙 20220810', link: '/trip/travelogue/20220810' },
-]
+
+const sidebarTripTravelogue = (): LinkName[] => [
+    { text: '游记', link: '/trip/travelogue/' },
+].concat(...modifyTravelogue());
 const sidebarTripChina = () => [
     { text: '上海', link: '/trip/china/shanghai' },
     { text: '澳门', link: '/trip/china/macao' },
@@ -211,7 +200,7 @@ const sidebarTripChina = () => [
         ],
     },
 
-]
+];
 const sidebarTripAboard = () => [
     { text: '世界', link: '/trip/abroad/' },
     {
@@ -229,7 +218,7 @@ const sidebarTripAboard = () => [
             { text: '日本', link: '/trip/abroad/asia/japan' },
         ],
     },
-]
+];
 const sidebarArtsArticle = () => [
     { text: '猫', link: '/arts/article/猫' },
     { text: '庄子·秋水', link: '/arts/article/庄子·秋水' },
@@ -238,13 +227,13 @@ const sidebarArtsArticle = () => [
     { text: '逍遥游·北冥有鱼', link: '/arts/article/逍遥游·北冥有鱼' },
     { text: '聪明人和傻子和奴才', link: '/arts/article/聪明人和傻子和奴才' },
     { text: 'A Cup of Tea', link: '/arts/article/a-cup-of-tea' },
-]
+];
 const sidebarArtsEconomics = () => [
     { text: '微观经济学', link: '/arts/economics/microeconomics' },
-]
+];
 const sidebarArtsSociety = () => [
     { text: '中国人口', link: '/arts/society/population-cn' },
-]
+];
 const sidebarArtsHistory = () => [
     { text: '中国历史', link: '/arts/history/china' },
     { text: '社会主义主要矛盾', link: '/arts/history/tmc' },
@@ -262,14 +251,14 @@ const sidebarArtsHistory = () => [
             { text: '介绍', link: '/arts/history/orthodox/' },
         ],
     },
-]
+];
 const sidebarArtsMusic = () => [
     { text: '乐理', link: '/arts/music/music_theory' },
     { text: '连音', link: '/arts/music/tuplet' },
-]
+];
 const sidebarArtsSpeech = () => [
     { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/arts/speech/craig-federighi' },
-]
+];
 const sidebarArtsLang = () => [
     { text: '中文', link: '/arts/language/chinese' },
     { text: '英语单词', link: '/arts/language/english-words' },
@@ -289,7 +278,7 @@ const sidebarArtsLang = () => [
     { text: '人名汇总', link: '/arts/language/name' },
     { text: '发音体系', link: '/arts/language/pronunciation' },
     { text: '相似', link: '/arts/language/similar' },
-]
+];
 const sidebarArtsXiwen = () => [
     { text: '汤誓', link: '/arts/xiwen/汤誓' },
     { text: '牧誓', link: '/arts/xiwen/牧誓' },
@@ -340,10 +329,10 @@ const sidebarArtsXiwen = () => [
     { text: '宣谕云、贵文武官员军民人等诏', link: '/arts/xiwen/宣谕云、贵文武官员军民人等诏' },
     { text: '尽忠报国全粤义民申谕英夷告示', link: '/arts/xiwen/尽忠报国全粤义民申谕英夷告示' },
     { text: '谕南京等处文武官员军民人等告示', link: '/arts/xiwen/谕南京等处文武官员军民人等告示' },
-]
+];
 const sidebarScience = () => [
     { text: '离散数学', link: '/science/discrete-math' },
-]
+];
 const sidebarCodeOS = () => [
     {
         text: 'MacOS', collapsed: false, items: [
@@ -372,12 +361,12 @@ const sidebarCodeOS = () => [
             { text: '壁纸', link: '/code/os/windows/wallpaper' },
         ]
     },
-]
+];
 const sidebarCodeAPI = () => [
     { text: 'API', link: '/code/api/' },
     { text: 'Wikipedia', link: '/code/api/wikipedia' },
     { text: 'mihoyo', link: '/code/api/mihoyo' },
-]
+];
 const sidebarCodeNotes = () => [
     { text: '指南', link: '/code-notes/' },
     { text: '配环境', link: '/code-notes/nipeima' },
@@ -438,7 +427,7 @@ const sidebarCodeNotes = () => [
             { text: 'ffmpeg', link: '/code-notes/tools/ffmpeg' },
         ],
     },
-]
+];
 const sidebarCodeDSA = () => [
     { text: 'QA', link: '/code/dsa/qa' },
     { text: 'Recursion', link: '/code/dsa/recursion' },
@@ -483,7 +472,7 @@ const sidebarCodeDSA = () => [
             { text: '图形结构', link: '/code/dsa/graph/' },
         ]
     },
-]
+];
 const sidebarCodeInterview = () => [
     { text: '算法与数据结构', link: '/code/interview/dsa' },
     { text: '编译', link: '/code/interview/compile' },
@@ -495,7 +484,7 @@ const sidebarCodeInterview = () => [
     { text: '计算机网络', link: '/code/interview/network' },
     { text: '系统设计', link: '/code/interview/sys-design' },
     { text: '非技术问题', link: '/code/interview/non-tech' },
-]
+];
 const sidebarCodeCpp = () => [
     { text: '特性', link: '/code/cpp/' },
     { text: '代码风格', link: '/code/cpp/style' },
@@ -544,14 +533,14 @@ const sidebarCodeCpp = () => [
             { text: '4 Easy Tips for Using Threads and Mutexes in C++', link: '/code/cpp/thread-mutex/4-easy-tips-on-using-threads-and-mutexes-in-cpp' },
         ]
     },
-]
+];
 const sidebarCodeDB = () => [
     { text: 'SQL', link: '/code/db/sql' },
     { text: 'ODPS', link: '/code/db/odps' },
     { text: 'DB2', link: '/code/db/db2' },
     { text: '达梦8', link: '/code/db/dameng8' },
     { text: 'mongoDB', link: '/code/db/mongoDB' },
-]
+];
 const sidebarCodeFrontEnd = () => [
     { text: 'web tools', link: '/code/front-end/webtools' },
     { text: '公共知识', link: '/code/front-end/public' },
@@ -565,7 +554,7 @@ const sidebarCodeFrontEnd = () => [
     { text: 'Javascript', link: '/code/front-end/javascript' },
     { text: 'Sol', link: '/code/front-end/sol' },
     { text: 'Nuxt', link: '/code/front-end/nuxt' },
-]
+];
 const sidebarCodeProgram = () => [
     {
         text: '未来', collapsed: false, items: [
@@ -599,7 +588,7 @@ const sidebarCodeProgram = () => [
             { text: 'refer', link: '/code/program/distributed/kafka/refer' },
         ]
     },
-]
+];
 const sidebarStudy = () => [
     { text: '随便学学', link: '/study/' },
     { text: '散篇1', link: '/study/temp1' },
@@ -612,7 +601,7 @@ const sidebarStudy = () => [
     { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill' },
     { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor' },
     { text: '身份证', link: '/study/rambling/id_card' },
-]
+];
 const sidebarCareer = () => [
     { text: '简历', link: '/career/cv' },
     { text: '年度报税', link: '/career/tax' },
@@ -641,7 +630,7 @@ const sidebarCareer = () => [
             { text: 'Google GCA interviews (what to expect & how to prepare)', link: '/career/google/gca' },
         ]
     },
-]
+];
 
 
 const sidebarThought = () => [
@@ -656,13 +645,13 @@ const sidebarThought = () => [
     { text: '女人', link: '/thought/woman' },
     { text: '命运的织机', link: '/thought/portended-fate' },
     { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film' },
-]
+];
 
 const sidebarGrumbling = () => [
     { text: '一次淘宝经历', link: '/grumbling/1' },
     { text: '牢骚', link: '/grumbling/' },
     { text: '喷子', link: '/grumbling/2' },
-]
+];
 
 
 const sidebarAccident = () => [
@@ -670,7 +659,7 @@ const sidebarAccident = () => [
     { text: '2022年中国东方航空5735号班机空难', link: '/accident/2022-China-Eastern-Airlines-Flight-5735' },
     { text: '事故', link: '/accident/' },
     { text: '2020年贵州公交坠湖事故', link: '/accident/2020-Anshun-bus-crash' },
-]
+];
 
 const sidebarFunny = () => [
     { text: '有生之年系列', link: '/funny/lifetime_series' },
@@ -678,7 +667,7 @@ const sidebarFunny = () => [
     { text: '禁放烟花爆竹', link: '/funny/no-fireworks' },
     { text: '三年疫情创造的246个名词', link: '/funny/covid-in-cn' },
     { text: '调休', link: '/funny/tiaoxiu' },
-]
+];
 
 const sidebarDisease = () => [
     { text: '病痛', link: '/disease/' },
@@ -690,7 +679,7 @@ const sidebarDisease = () => [
     { text: '发烧', link: '/disease/2022-12-22-disease' },
     { text: '感冒', link: '/disease/2022-11-28-disease' },
     { text: '牙', link: '/disease/tooth' },
-]
+];
 
 
 export const sidebar = {
@@ -732,4 +721,4 @@ export const sidebar = {
     '/funny/': sidebarFunny(),
     '/disease/': sidebarDisease(),
 
-}
+};
