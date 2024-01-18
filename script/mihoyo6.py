@@ -29,36 +29,51 @@ api_url_post_full = api_prefix + 'getPostFull'
 # type: 1 公告 2 活动 3 资讯
 # 之前跃迁都是 type=3 hoyolab 放在了资讯里
 # 1.5版本 放到了公告里 type=1
-api_url_news_list += '?gids=6&type=1'
+# 英文官网非常乱，从此之后三个type里全都找，一会放公告一会放活动一会放资讯
+api_url_news_list += '?gids=6'
 api_url_news_list += '&page_size=50'
 
-print(api_url_news_list)
+api_url_news_list += '&type='
 
-data = utils.get_url_data(api_url_news_list)
-data_dict = utils.str_to_dict(data['data']['list'])
+list_api_url_news_list = [
+    api_url_news_list + '1',
+    api_url_news_list + '2',
+    api_url_news_list + '3',
+]
+
+print(list_api_url_news_list)
+
+data_dict = []
+for url in list_api_url_news_list:
+    one_data = utils.get_url_data(url)
+    one_data_dict = utils.str_to_dict(one_data['data']['list'])
+    data_dict.append(one_data_dict)
+    print("one_data_dict type is ", type(one_data_dict))
 
 # print(data_dict)
-print("data_dict type is ", type(data_dict))
 
 # 0 char 1 weapon
 warp_arr = [[], []]
 
-for obj in data_dict:
+for one_dict in data_dict:
+    for obj in one_dict:
 
-    pattern_char = '5-star character'
-    pattern_char2 = 'Character Event Warp'
-    match_char = re.search(pattern_char, obj['post']['subject'], re.IGNORECASE)
-    match_char2 = re.search(
-        pattern_char2, obj['post']['subject'], re.IGNORECASE)
-    if match_char or match_char2:
-        warp_arr[0].append(obj)
+        pattern_char = '5-star character'
+        pattern_char2 = 'Character Event Warp'
+        match_char = re.search(
+            pattern_char, obj['post']['subject'], re.IGNORECASE)
+        match_char2 = re.search(
+            pattern_char2, obj['post']['subject'], re.IGNORECASE)
+        if match_char or match_char2:
+            warp_arr[0].append(obj)
 
-    pattern_lc = '5-star Light Cone'
-    pattern_lc2 = 'Light Cone Event Warp'
-    match_lc = re.search(pattern_lc, obj['post']['subject'], re.IGNORECASE)
-    match_lc2 = re.search(pattern_lc2, obj['post']['subject'], re.IGNORECASE)
-    if match_lc or match_lc2:
-        warp_arr[1].append(obj)
+        pattern_lc = '5-star Light Cone'
+        pattern_lc2 = 'Light Cone Event Warp'
+        match_lc = re.search(pattern_lc, obj['post']['subject'], re.IGNORECASE)
+        match_lc2 = re.search(
+            pattern_lc2, obj['post']['subject'], re.IGNORECASE)
+        if match_lc or match_lc2:
+            warp_arr[1].append(obj)
 
 post_id_arr = [[], []]
 idx = 0
@@ -165,7 +180,8 @@ def get_wish4star(text: str, wish_type: WishType):
 
     def extract_characters(text: str, find_tag: str):
         # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
-        pattern = fr"{find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
+        pattern = fr"{
+            find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
 
         # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
         matches = re.findall(pattern, text)
@@ -240,8 +256,8 @@ def parse_wish(post_id, wish_type: WishType):
         'name': arr_str_char_event_warp_name if wish_type == WishType.CHARACTER else "Brilliant Fixation",
         'image': [1, 1] if len(character_info_only_name) == 2 else [1],
         'shortName': character_info_only_name,
-        'start': duration_text[0]['start_time'] + ' +0800',
-        'end': duration_text[0]['end_time'] + ' +0800',
+        'start': duration_text[0]['start_time'] + ' +0800' if len(duration_text) else "",
+        'end': duration_text[0]['end_time'] + ' +0800' if len(duration_text) else "",
         'version': 'xxx',
         'wish5star': [utils.replace_characters(char) for char in character_info_only_name],
         'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4],
@@ -253,7 +269,7 @@ def parse_wish(post_id, wish_type: WishType):
 all_info = []
 
 # 只取最新的
-only_last = True
+only_last = False
 
 for i in post_id_arr[0]:
     dict_char = parse_wish(i, WishType.CHARACTER)
