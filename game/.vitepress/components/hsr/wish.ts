@@ -150,12 +150,24 @@ export const WISH = {
       image: [1, 2],
       shortName: ['Ruan Mei', 'Blade'],
       start: '2023-12-27 10:00:00 +0800',
-      end: '2024-01-24 11:59:59 +0800',
+      end: '2024-01-17 11:59:00 +0800',
       version: '1.6',
       wish5star: ['ruan_mei', 'blade'],
       wish4star: ['Xueyi', 'Tingyun', 'March 7th'],
       wishName: ['「疏影三迭」', '「业途游魂」'],
       url: ['']
+    },
+    {
+      name: ["Panta Rhei", "Nessun Dorma"],
+      image: [1, 2],
+      shortName: ["Dr. Ratio", "Kafka"],
+      start: "2024/01/17 12:00:00 +0800",
+      end: "2024/02/05 14:59:00 +0800",
+      version: "1.6",
+      wish5star: ["dr_ratio", "kafka"],
+      wish4star: ["hook", "sushang", "natasha"],
+      wishName: ['「万物皆流」', '「夜将不眠」'],
+      url: [""]
     },
   ],
   weapons: [
@@ -283,10 +295,20 @@ export const WISH = {
       name: "Brilliant Fixation",
       image: [15, 16],
       start: '2023-12-27 10:00:00 +0800',
-      end: '2024-01-24 11:59:59 +0800',
+      end: '2024-01-17 11:59:00 +0800',
       shortName: "",
-      wish5star: ['The Unreachable Side', '"Past Self in Mirror', '"The Unreachable Side'],
+      wish5star: ['Past Self in Mirror', 'The Unreachable Side'],
       wish4star: ['Planetary Rendezvous', 'Day One of My New Life', 'A Secret Vow'],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: [17, 18],
+      start: "2024/01/17 12:00:00 +0800",
+      end: "2024/02/05 14:59:00 +0800",
+      shortName: "",
+      wish5star: ['Patience Is All You Need', 'Baptism of Pure Thought'],
+      wish4star: ['Only Silence Remains', 'Perfect Timing', "Landau's Choice"],
       url: ""
     },
   ]
