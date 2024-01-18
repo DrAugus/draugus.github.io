@@ -4,7 +4,7 @@ specifiers:
   '@mdit-vue/shared': ^2.0.0
   echarts: ^5.4.3
   markdown-it-mathjax3: ^4.3.2
-  sass: ^1.69.7
+  sass: ^1.70.0
   typed.js: 2.1.0
   vite: ^5.0.11
   vitepress: ^1.0.0-rc.39
@@ -15,10 +15,10 @@ devDependencies:
   '@mdit-vue/shared': 2.0.0
   echarts: 5.4.3
   markdown-it-mathjax3: 4.3.2
-  sass: registry.npmmirror.com/sass/1.69.7
+  sass: registry.npmmirror.com/sass/1.70.0
   typed.js: 2.1.0
-  vite: registry.npmmirror.com/vite/5.0.11_sass@1.69.7
-  vitepress: registry.npmmirror.com/vitepress/1.0.0-rc.39_jtkbryyqaxwzs4n242ex5ktp5e
+  vite: registry.npmmirror.com/vite/5.0.11_sass@1.70.0
+  vitepress: registry.npmmirror.com/vitepress/1.0.0-rc.39_ckymzcq5vgmh2emk5c647sa5hm
   vue: registry.npmmirror.com/vue/3.4.14
   vue-echarts: registry.npmmirror.com/vue-echarts/6.6.8_echarts@5.4.3+vue@3.4.14
 
@@ -1027,7 +1027,7 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmmirror.com/vite/5.0.11_sass@1.69.7
+      vite: registry.npmmirror.com/vite/5.0.11_sass@1.70.0
       vue: registry.npmmirror.com/vue/3.4.14
     dev: true
 
@@ -1524,10 +1524,10 @@ packages:
       fsevents: registry.npmmirror.com/fsevents/2.3.3
     dev: true
 
-  registry.npmmirror.com/sass/1.69.7:
-    resolution: {integrity: sha512-rzj2soDeZ8wtE2egyLXgOOHQvaC2iosZrkF6v3EUG+tBwEvhqUCzm0VP3k9gHF9LXbSrRhT5SksoI56Iw8NPnQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.69.7.tgz}
+  registry.npmmirror.com/sass/1.70.0:
+    resolution: {integrity: sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.70.0.tgz}
     name: sass
-    version: 1.69.7
+    version: 1.70.0
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -1587,7 +1587,7 @@ packages:
       is-number: registry.npmmirror.com/is-number/7.0.0
     dev: true
 
-  registry.npmmirror.com/vite/5.0.11_sass@1.69.7:
+  registry.npmmirror.com/vite/5.0.11_sass@1.70.0:
     resolution: {integrity: sha512-XBMnDjZcNAw/G1gEiskiM1v6yzM4GE5aMGvhWTlHAYYhxb7S3/V1s3m2LDHa8Vh6yIWYYB0iJwsEaS523c4oYA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-5.0.11.tgz}
     id: registry.npmmirror.com/vite/5.0.11
     name: vite
@@ -1621,12 +1621,12 @@ packages:
       esbuild: registry.npmmirror.com/esbuild/0.19.5
       postcss: registry.npmmirror.com/postcss/8.4.32
       rollup: registry.npmmirror.com/rollup/4.4.1
-      sass: registry.npmmirror.com/sass/1.69.7
+      sass: registry.npmmirror.com/sass/1.70.0
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.3
     dev: true
 
-  registry.npmmirror.com/vitepress/1.0.0-rc.39_jtkbryyqaxwzs4n242ex5ktp5e:
+  registry.npmmirror.com/vitepress/1.0.0-rc.39_ckymzcq5vgmh2emk5c647sa5hm:
     resolution: {integrity: sha512-EcgoRlAAp37WOxUOYv45oxyhLrcy3Upey+mKpqW3ldsg6Ol4trPndRBk2GO0QiSvEKlb9BMerk49D/bFICN6kg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vitepress/-/vitepress-1.0.0-rc.39.tgz}
     id: registry.npmmirror.com/vitepress/1.0.0-rc.39
     name: vitepress
@@ -1655,7 +1655,7 @@ packages:
       shikiji: registry.npmmirror.com/shikiji/0.9.19
       shikiji-core: registry.npmmirror.com/shikiji-core/0.9.19
       shikiji-transformers: registry.npmmirror.com/shikiji-transformers/0.9.19
-      vite: registry.npmmirror.com/vite/5.0.11_sass@1.69.7
+      vite: registry.npmmirror.com/vite/5.0.11_sass@1.70.0
       vue: registry.npmmirror.com/vue/3.4.14
     transitivePeerDependencies:
       - '@algolia/client-search'
