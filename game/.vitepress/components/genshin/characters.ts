@@ -54,10 +54,10 @@ export const CHARACTER = {
     prefix: "明律决罚",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "威名赫赫的特巡队队长，时刻都恪守着心中的「正义」。",
     city: City.Fontaine,
     ele: Element.pyro,
-    weapon: Weapon.catalyst
+    weapon: Weapon.polearm
   },
   navia: {
     id: "navia",

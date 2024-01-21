@@ -6,33 +6,39 @@
   <br><br>
 
 
-  <ul>
-    <li v-for="(v, i) in char">
-      <Badge :text="'v' + v.version"></Badge>
-      <span class="f-w-600">
-        <span v-for="(vv, ii) in v.wishName">
-          {{ v.wishName[ii] + getCharName(v.wish5star[ii], CHARACTER) }}
-          <Badge :text="v.image[ii] + ' up'" :type="getBadgeType(v.image[ii])"></Badge>
-        </span>
-      </span>
+  <table>
+    <tr>
+      <th class="table-center">版本</th>
+      <th class="table-center">日期</th>
+      <th colspan="2" class="table-center"> {{ getWishName(WISH_TEXT) }}信息</th>
+      <th colspan="2" class="table-center">5星(up次数)</th>
 
-      {{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}
-      <span v-for="(vv, ii) in v.wish4star">
-        {{ getCharName(replaceAndLow(vv), CHARACTER) + ' ' }}
-      </span>
-    </li>
-  </ul>
+    </tr>
+    <tr v-for="(v, i) in char">
+
+      <td class="table-center">{{ v.version }}</td>
+      <td class="table-center">{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
+      <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
+        <img v-bind:src="`/image/${getGameName(WISH_TEXT)}/wish/${combineWishPic(v.name[ii], v.image[ii])}`" width="320"
+          @error="replaceImg" alt="">
+      </td>
+      <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
+        {{ CHARACTER[v.wish5star[ii]].name }} [{{ v.image[ii] }}]
+      </td>
+
+    </tr>
+  </table>
 </template>
 
 <script>
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
-import { GameName, replaceAndLow, formatDayjs, getCharName, getGameName } from "./utils";
+import { combineWishPic, formatDayjs, getGameName, getWishName, GameName } from "./utils";
 
 dayjs.locale("zh");
 
 export default {
-  name: "WishInfo",
+  name: "WishInfoPic",
   props: {
     WISH: {
       type: Object,
@@ -52,10 +58,11 @@ export default {
   data() {
     return {
       char: this.WISH.characters,
-      replaceAndLow,
+      getWishName,
+      getGameName,
+      combineWishPic,
       dayjs,
       formatDayjs,
-      getCharName,
     };
   },
   methods: {
@@ -76,17 +83,8 @@ export default {
     replaceImg(event) {
       event.target.src = `/image/${getGameName(this.WISH_TEXT)}/wish/_1.jpg`
     },
-
-    getBadgeType(upTimes) {
-      let up = parseInt(upTimes);
-      if (up > 6) return 'danger';
-      if (up > 4) return 'warning';
-      if (up > 2) return 'tip';
-      return 'info';
-    },
   },
   async mounted() {
-
     // default
     this.sortEarly()
   },
@@ -94,7 +92,11 @@ export default {
 </script>
 
 <style scoped>
-.f-w-600 {
-  font-weight: 600;
+.table-center {
+  text-align: center;
+}
+
+img {
+  margin: 0 auto;
 }
 </style>

@@ -6,5 +6,5 @@ aside: false
 <WishInfo />
 
 <script setup>
-import WishInfo from "../.vitepress/components/hsr/WishInfo2.vue";
+import WishInfo from "../.vitepress/components/hsr/WishInfo.vue";
 </script>
