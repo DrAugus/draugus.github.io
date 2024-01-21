@@ -45,10 +45,25 @@ const convertToDate = (e, i, j) => {
 
 export const processEvent = (wishInfo: WishAll) => {
 
-    let dates = [];
-    let years = [];
-    let yearList = [];
-    let monthList = [];
+    let dates: [number, string][] = [];
+    let years: {
+        [key: string]: {
+            [key: string]: {
+                total: number;
+                offset: number;
+            };
+        };
+    } = {};
+    let yearList: [string, {
+        [key: string]: {
+            total: number;
+            offset: number;
+        };
+    }][] = [];
+    let monthList: [string, {
+        total: number;
+        offset: number;
+    }][] = [];
 
     let eventsDataInfo: Wish[][] = [];
     eventsDataInfo[0] = wishInfo.characters;
@@ -99,10 +114,10 @@ export const processEvent = (wishInfo: WishAll) => {
     const dayTotal = Math.abs(Math.ceil(firstDay.diff(lastEventTime, "day", true))) + 2 * TIMELINE_PADDING;
 
     for (let i = 0; i < dayTotal; i++) {
-        const year = firstDay.add(i, "day").format("YYYY");
-        const month = firstDay.add(i, "day").format("MMMM");
+        const year: string = firstDay.add(i, "day").format("YYYY");
+        const month: string = firstDay.add(i, "day").format("MMMM");
         if (years[year] === undefined) {
-            years[year] = [];
+            years[year] = {};
         }
         if (years[year][month] === undefined) {
             years[year][month] = {
@@ -113,9 +128,17 @@ export const processEvent = (wishInfo: WishAll) => {
         years[year][month].total++;
     }
 
-    yearList = Object.entries(years);
+    yearList = Object.entries(years) as [string, {
+        [key: string]: {
+            total: number;
+            offset: number;
+        };
+    }][];
     for (let i = 0; i < yearList.length; i++) {
-        let obj = Object.entries(yearList[i][1]);
+        let obj = Object.entries(yearList[i][1]) as [string, {
+            total: number;
+            offset: number;
+        }][];
         monthList = monthList.concat(obj);
     }
 
@@ -123,7 +146,7 @@ export const processEvent = (wishInfo: WishAll) => {
         monthList[i][1].offset = i - 1 >= 0 ? monthList[i - 1][1].total + monthList[i - 1][1].offset : 0;
     }
 
-    dates = [...new Array(dayTotal)].map((_, i) => {
+    dates = [...new Array(dayTotal)].map((_, i): [number, string] => {
         const cur = firstDay.add(i, 'day');
         return [cur.date(), cur.format('dd')];
     });
