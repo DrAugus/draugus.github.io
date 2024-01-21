@@ -86,9 +86,9 @@ export const getTimelineHomeHero =
 
   };
 
-export const getGameName = (game: number) => {
-  if (game === GameName.Genshin) return 'genshin';
-  if (game === GameName.HSR) return 'hsr';
+export const getGameName = (gameName: GameName) => {
+  if (gameName === GameName.Genshin) return 'genshin';
+  if (gameName === GameName.HSR) return 'hsr';
 };
 
 export const getWishName = (gameName: GameName) => {

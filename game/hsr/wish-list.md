@@ -1,7 +1,7 @@
 ---
 aside: false
 ---
-# 祈愿列表
+# 跃迁列表
 
 <WishList />
 
