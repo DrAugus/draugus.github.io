@@ -1,7 +1,10 @@
+import { WishAll } from "../type";
+
+// 说明：
 // 20 + 21= 41 days one version /42days/
 // ver2.6 下半因上海疫情封城拖延
 // 3.0 3.1 3.2 三个版本时间缩短 或许跟上面有关系吧 均为34天 16+18 /35days/
-export const WISH = {
+export const WISH: WishAll = {
   characters: [
     {
       name: ["Ballad in Goblets"],

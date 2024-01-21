@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { parseDayjs } from "./utils";
 
 import "dayjs/locale/zh";
+import { Wish, WishAll } from "./type";
 
 dayjs.locale("zh"); // use locale globally
 // dayjs().locale('zh').format() // use locale in a specific instance
@@ -42,14 +43,14 @@ const convertToDate = (e, i, j) => {
     };
 };
 
-export const processEvent = (wishInfo) => {
+export const processEvent = (wishInfo: WishAll) => {
 
     let dates = [];
     let years = [];
     let yearList = [];
     let monthList = [];
 
-    let eventsDataInfo = [];
+    let eventsDataInfo: Wish[][] = [];
     eventsDataInfo[0] = wishInfo.characters;
     eventsDataInfo[1] = wishInfo.weapons;
 

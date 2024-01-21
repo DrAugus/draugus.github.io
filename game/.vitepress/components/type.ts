@@ -40,7 +40,7 @@ export interface EventHandleWish {
   wish_2?: boolean
   url: string[]
   index: number
-  index2: Number
+  index2: number
   duration: number
   offset: number
 }
@@ -73,4 +73,22 @@ export interface TimelineHomeHero {
   actions: HeroAction[]
   tagline: string
   style?: Object
+}
+
+export interface WishAll {
+  characters: Wish[],
+  weapons: Wish[],
+}
+
+export interface Wish {
+  name: string[] | string,
+  image: number[] | number,
+  shortName?: string[] | string,
+  start: string
+  end: string
+  version?: string
+  wish5star?: string[],
+  wish4star?: string[]
+  wishName?: string[],
+  url?: string[] | string,
 }

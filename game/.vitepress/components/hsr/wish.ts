@@ -1,5 +1,7 @@
+import { WishAll } from "../type";
+
 // 21 + 20 = 41 days one version /42days/
-export const WISH = {
+export const WISH: WishAll = {
   characters: [
     {
       name: ['Butterfly on Swordtip'],

@@ -6,8 +6,8 @@ import { formatDayjs, replaceAndLow, combineWishPic, getGameName } from './utils
 export const getWishIndex = (wish: EventHandleWish[]) => {
 
     type tObj = {
-        wishIndex: Number[] // 索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
-        comingIndex: Number[] // 即将到来的未开放的
+        wishIndex: number[] // 索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
+        comingIndex: number[] // 即将到来的未开放的
     }
 
     let obj: tObj = {
