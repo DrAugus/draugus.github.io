@@ -79,9 +79,14 @@ export const navbar = [
     text: '待定',
     items: [
       { text: '学习', link: '/study/' },
-      { text: '高考', link: '/study/gaokao' },
       { text: '职业', link: '/career/' },
       { text: '证书', link: '/career/certificate/' },
+      {
+        text: '求学',
+        items: [
+          { text: '高考', link: '/pursuing-education/gaokao' },
+        ],
+      },
       {
         text: '差不多得了',
         items: [
@@ -102,4 +107,4 @@ export const navbar = [
   },
   { text: '链接', link: '/nav', activeMatch: '^/nav' },
 
-]
+];

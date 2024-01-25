@@ -24,6 +24,16 @@
 - 鼠标右键 + WASD：摄像机漫游。
 - Ctrl+Shift+F：摄像机聚焦到当前选中节点。
 
+### 控制台不同颜色输出
+
+使用原生 `console.log` 函数
+
+```ts
+console.log("%c Hello %s", "color: #999; font-size: 2em;", " World");
+```
+
+参考：<https://forum.cocos.org/t/topic/50436/7>
+
 ### 世界坐标转换
 
 ```ts
@@ -221,6 +231,12 @@ Project Layers
 
 新的空项目仍然会出现此问题，怀疑是 Cocos Dashboard(v2.1.1) 使用了自定义安装路径，使用默认安装路径就未出现此问题。  
 另外，如果同时下载两个 Creator 版本，会出现“下载失败”的报错。
+
+### 打出的包出现代码错误
+
+论坛有相关问题：<https://forum.cocos.org/t/topic/115270>
+
+[es6 to es5](https://github.com/cocos/cocos-engine/issues/16697)
 
 ## 问题
 

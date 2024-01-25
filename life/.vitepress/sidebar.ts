@@ -589,6 +589,9 @@ const sidebarCodeProgram = () => [
         ]
     },
 ];
+const sidebarPursuingEducation = () => [
+    { text: '高考', link: '/pursuing-education/gaokao' },
+];
 const sidebarStudy = () => [
     { text: '随便学学', link: '/study/' },
     { text: '散篇1', link: '/study/temp1' },
@@ -712,6 +715,7 @@ export const sidebar = {
     '/code/front-end/': sidebarCodeFrontEnd(),
     '/code/program/': sidebarCodeProgram(),
     //
+    '/pursuing-education/': sidebarPursuingEducation(),
     '/study/': sidebarStudy(),
     '/career/': sidebarCareer(),
     '/thought/': sidebarThought(),
