@@ -211,6 +211,12 @@ Project Layers
 **Canvas-3d-front** camera **Visibility** and **ClearFlags**
 ![1](/img/code/cocos/canvas-3d-camera.png)
 
+### 变量监控
+
+```ts
+(window as any).arr = null;
+```
+
 ## QA
 
 ### ScrollView 中的 scrollbar 不显示

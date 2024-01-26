@@ -47,7 +47,7 @@ jobs:
       uses: peter-evans/create-pull-request@v5
       with:
         token: ${{ secrets.DEPLOY_GH }}
-        title: Automated changes
+        title: Got mhy wish info
         commit-message: Add changes
         committer: GitHub <noreply@github.com>
         author: GitHub <noreply@github.com>

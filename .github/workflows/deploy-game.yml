@@ -44,6 +44,9 @@ jobs:
           # if your docs needs submodules, uncomment the following line
           # submodules: true
 
+      - name: Change .npmrc
+        run: mv ./.npmrc-github ./.npmrc
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
