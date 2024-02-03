@@ -61,7 +61,7 @@ const msg = [
 ]
 
 export default defineComponent({
-    name: "Events",
+    name: "GenshinEvents",
     components: {
         HomeFeature,
     },

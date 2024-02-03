@@ -26,8 +26,8 @@ export const CHARACTER = {
   //   ele: Element.hydro,
   //   weapon: Weapon.polearm
   // },
-  xian_yun: {
-    id: "xian_yun",
+  xianyun: {
+    id: "xianyun",
     name: "闲云",
     prefix: "鸾音鹤信",
     star: 5,

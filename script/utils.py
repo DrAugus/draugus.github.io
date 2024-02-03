@@ -57,7 +57,7 @@ def str_to_dict(text):
 
 def find_unique_timestamps(text):
     # 正则表达式匹配两种格式的时间字符串
-    pattern = r'\b\d{4}[/-]\d{2}[/-]\d{2} \d{2}:\d{2}:\d{2}\b'
+    pattern = r'\b\d{4}[/-]\d{2}[/-]\d{2}\s+\d{2}:\d{2}:\d{2}\b'
 
     # 在文本中查找所有匹配的时间字符串
     matches = re.findall(pattern, text)
@@ -144,6 +144,16 @@ def got_insert_info(text, callback):
             callback(find_des)
 
 
+def get_char_name(input_string):
+    pattern = r'"(.*?)"\s(.*?)\s\((.*?)\)'
+    matches = re.finditer(pattern, input_string)
+    result = []
+    for match in matches:
+        prefix_name, name, type = match.groups()
+        result.append((prefix_name, name, type))
+    return result
+
+
 def get_only_name(character_info: list) -> list:
     character_info_only_name = [info.split('(')[0] for info in character_info]
     character_info_only_name = [name.strip()
@@ -179,7 +189,7 @@ def get_duration(text):
                 })
 
         time_match = re.search(
-            r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+            r"(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})", find_des)
         if time_match:
             version_match = re.search(r"Version (\d+\.\d+)", find_des)
             if version_match:
@@ -188,7 +198,7 @@ def get_duration(text):
                 version = None
 
             time_match = re.search(
-                r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+                r"(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})", find_des)
             if time_match:
                 time = time_match.group(1)
             else:
@@ -200,7 +210,7 @@ def get_duration(text):
                 return
 
             # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})'
+            pattern = r'(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})'
             # 使用正则表达式搜索所有匹配的时间
             matches = re.findall(pattern, find_des)
             # 检查是否找到了两个匹配的时间，表示开始和结束时间
@@ -222,7 +232,7 @@ def get_duration(text):
                 version = None
 
             time_match = re.search(
-                r"(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})", find_des)
+                r"(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})", find_des)
             if time_match:
                 time = time_match.group(1)
             else:
@@ -237,7 +247,7 @@ def get_duration(text):
         # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
         if 'Event Duration' in find_des and 'server time' in find_des:
             # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{2}/\d{2} \d{2}:\d{2}:\d{2})'
+            pattern = r'(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})'
             # 使用正则表达式搜索所有匹配的时间
             matches = re.findall(pattern, find_des)
             # 检查是否找到了两个匹配的时间，表示开始和结束时间

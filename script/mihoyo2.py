@@ -111,6 +111,17 @@ def get_arr_str_event_wish_name(text, start_tag, end_tag):
     return utils.clean_list_none(arr)
 
 
+def get_wish_char(text: str):
+    arr = []
+
+    def append_match(find_des):
+        arr.extend(utils.get_char_name(find_des))
+
+    utils.got_insert_info(text, append_match)
+
+    return arr
+
+
 def get_wish5star(text: str):
     arr = []
     find_tag: list[str] = ['5-star character', '5-star weapons']
@@ -241,27 +252,50 @@ def parse_wish(post_id, post_idx):
     # character_info_only_name = utils.get_only_name(character_info)
     # print('5-star only name:', character_info_only_name)
 
-    # 提取5-star角色的名称和描述信息
-    character_info = get_wish5star(clean_text)
-    print('5-star:', character_info)
-    character_info_only_name = utils.get_only_name(character_info)
-    print('5-star only name:', character_info_only_name)
+    all_char_info = get_wish_char(clean_text)
+    print('all char:', all_char_info)
+    only_name = []
+    for v in all_char_info:
+        char_prefix, char_name, char_type = v
+        if len(char_name) < 30:
+            only_name.append(char_name)
+    print('all char only name:', only_name)
+    # count_5star = len(all_char_info) / 4
+    # character_info = []
+    # for i in range(0, count_5star):
+    #     character_info.append(all_char_info[i*4])
+    # print('5-star:', character_info)
+    # character_info_only_name = utils.get_only_name(character_info)
+    # print('5-star only name:', character_info_only_name)
 
-    # 提取4-star角色的名称和描述信息
-    character_info4 = get_wish4star(clean_text)
-    print('4-star:', character_info4)
-    character_info_only_name4 = utils.get_only_name(character_info4)
-    print('4-star only name:', character_info_only_name4)
+    # character_info4 = []
+    # character_info4.append(
+    #     all_char_info[1], all_char_info[2], all_char_info[3])
+    # print('4-star:', character_info4)
+    # character_info_only_name4 = utils.get_only_name(character_info4)
+    # print('4-star only name:', character_info_only_name4)
+
+    # # 提取5-star角色的名称和描述信息
+    # character_info = get_wish5star(clean_text)
+    # print('5-star:', character_info)
+    # character_info_only_name = utils.get_only_name(character_info)
+    # print('5-star only name:', character_info_only_name)
+
+    # # 提取4-star角色的名称和描述信息
+    # character_info4 = get_wish4star(clean_text)
+    # print('4-star:', character_info4)
+    # character_info_only_name4 = utils.get_only_name(character_info4)
+    # print('4-star only name:', character_info_only_name4)
 
     return {
         'name': wish_name,
         'image': [1, 1],
-        'shortName': character_info_only_name,
+        'shortName': only_name,
         'start': duration_text[0]['start_time'] + ' +0800'if len(duration_text) else '',
         'end':   duration_text[0]['end_time'] + ' +0800'if len(duration_text) else '',
         'version': 'xxx',
-        'wish5star': [utils.replace_characters(char) for char in character_info_only_name],
-        'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4],
+        'wish5star': [utils.replace_characters(char) for char in only_name],
+        'wish4star':  [utils.replace_characters(char) for char in only_name],
         'wishName': [],
         'url': ['']
     }
@@ -270,7 +304,7 @@ def parse_wish(post_id, post_idx):
 all_info = []
 
 # 只取最新的
-only_last = True
+only_last = False
 
 for i in range(len(post_id)):
     dict_wish = parse_wish(post_id[i], i)

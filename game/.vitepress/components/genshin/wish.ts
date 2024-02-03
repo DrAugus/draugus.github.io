@@ -715,6 +715,30 @@ export const WISH: WishAll = {
       wishName: ["「影寂天下人」", "「焰色天河」"],
       url: ["?", "?"]
     },
+    {
+      name: ['The Crane Soars Skyward', "The Moongrass' Enlightenment"],
+      image: [1, 3],
+      shortName: ['Xianyun', 'Nahida'],
+      start: "2024-01-31 11:00:00 +0800",
+      end: "2024-02-20 17:59:59 +0800",
+      wish5star: ["xianyun", "nahida",],
+      wish4star: ["gaming", "faruzan", "noelle",],
+      version: "4.4",
+      wishName: ["「云府鹤行」", "「月草的赐慧」"],
+      url: ["?", "?"]
+    },
+    {
+      name: ['Invitation to Mundane Life', 'Everbloom Violet'],
+      image: [5, 4],
+      shortName: ['Xiao', 'Yae Miko'],
+      start: "2024-02-20 18:00:00 +0800",
+      end: "2024-03-12 14:59:59 +0800",
+      wish5star: ["xiao", "yae_miko",],
+      wish4star: ["yaoyao", "xinyan", "ningguang"],
+      version: "4.4",
+      wishName: ["「烟火之邀」", "「华紫樱绯」"],
+      url: ["?", "?"]
+    },
   ],
   weapons: [
     {
@@ -1215,6 +1239,18 @@ export const WISH: WishAll = {
       end: "2024-01-30 14:59:59 +0800",
       wish5star: ['Engulfing Lightning', 'Thundering Pulse'],
       wish4star: ['Favonius Sword', 'Rainslasher', 'Eye of Perception', 'Rust'],
+    },
+    {
+      name: "Epitome Invocation",
+      image: 59,
+      start: "2024-01-31 11:00:00 +0800",
+      end: "2024-02-20 17:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 60,
+      start: "2024-02-20 18:00:00 +0800",
+      end: "2024-03-12 14:59:59 +0800",
     },
   ]
 };
