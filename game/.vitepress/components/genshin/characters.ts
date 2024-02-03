@@ -32,7 +32,7 @@ export const CHARACTER = {
     prefix: "鸾音鹤信",
     star: 5,
     event_exclusive: true,
-    intro: "",
+    intro: "新搬入璃月港的神秘女子，声称自己内向文静、不擅交际。",
     city: City.Liyue,
     ele: Element.anemo,
     weapon: Weapon.polearm
@@ -43,7 +43,7 @@ export const CHARACTER = {
     prefix: "骏猊頕首",
     star: 4,
     event_exclusive: false,
-    intro: "",
+    intro: "剑匣镖局的金牌镖师，威水舞兽队的话事人，热情健谈，善与人交。",
     city: City.Liyue,
     ele: Element.pyro,
     weapon: Weapon.catalyst
