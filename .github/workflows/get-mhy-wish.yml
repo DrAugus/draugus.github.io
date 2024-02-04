@@ -30,13 +30,14 @@ jobs:
         pip install -r requirements.txt
     - name: Execute Python script
       run: |
-        python mihoyo2.py 
+        python mihoyo2.py
+        python mihoyo2_old.py 
         python mihoyo6.py         
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add auto/mhy2.json auto/mhy6.json
+        git add auto/mhy2.json auto/mhy2old.json auto/mhy6.json
         git commit -m "Add changes" -a
     # - name: Push changes
     #   uses: ad-m/github-push-action@master

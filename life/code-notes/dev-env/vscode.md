@@ -15,3 +15,6 @@
 `command + shift + b`
 
 保存自动格式化代码：setting 里搜索 format，勾选 format on save
+
+**清除没有用到的 import 语句**  
+`option+shift+O` (`Alt+shift+O`)
