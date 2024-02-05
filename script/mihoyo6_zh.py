@@ -5,12 +5,14 @@ import json
 import requests
 from bs4 import BeautifulSoup
 import re
+import os
 
 
 def get_url_data(api_url):
     response = requests.get(api_url)
     data = response.json()
     return data
+
 
 api_prefix = 'https://bbs-api.miyoushe.com/post/wapi/'
 
@@ -47,7 +49,6 @@ print(api_url_news_list)
 # },
 
 
-
 # 0 char 1 weapon
 warp_arr = [[], []]
 
@@ -66,6 +67,7 @@ for obj in data_dict:
 post_id_arr = [[], []]
 idx = 0
 
+output = ''
 
 for warp_info in warp_arr:
 
@@ -75,19 +77,20 @@ for warp_info in warp_arr:
         # 先去除可能的转义字符
         subject = subject.replace('\\\\', '\\')
         data_subject = json.loads(subject)
-        inserts = [item["insert"] for item in data_subject if "insert" in item and isinstance(item["insert"], str)]
+        inserts = [item["insert"] for item in data_subject if "insert" in item and isinstance(
+            item["insert"], str)]
         merged_string = "".join(inserts)
         # print(merged_string)
 
         matches = re.findall(r'「(.*?)」', merged_string, re.DOTALL)
+        output += str(matches) + '\n'
         print(matches)
-
 
         img_url = get_warp['post']['images']
 
-
         # print('subject', subject)
         # print('subject_zh', subject_zh)
+        output += 'img_url' + str(img_url) + '\n'
         print('img_url', img_url)
         # print('post_id', post_id)
 
@@ -100,10 +103,15 @@ for warp_info in warp_arr:
         # modify_subject += '_' + image_times + img_type
         # print('modify_subject', modify_subject)
 
+        output += '================\n'
         print('============')
 
     idx = idx + 1
+    output += '================\n'
     print('============')
 
-print('post_id_arr', post_id_arr)
 
+current_path = os.path.dirname(__file__)
+filename = current_path + '/auto/mhy6zh'
+with open(filename, 'w',encoding="utf-8") as file:
+    file.write(output)
