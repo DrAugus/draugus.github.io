@@ -27,24 +27,17 @@
 
         <div class="timeline-wish-event-weapon">
           <div v-for="(value, i) in WISH.weapons">
-            <div v-for="(_multi, j) in value.image">
-              <div class="card event-item weapon" :class="[
-                getBorderRadius(wishWeapons, i)
-              ]" v-bind:style="{
-  width: wishWeapons[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
-  left: (durationWeapon[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-  height: 'var(--event-height)',
-  marginTop: j ? '184px' : ''
-}">
+            <div v-for="(_multi, j) in modifyImage(value.image)">
+              <div class="card event-item weapon" :class="[getBorderRadius(wishWeapons, i)]"
+                v-bind:style="getStyleWeapon(i, j)">
                 <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
                   style="height: 100%">
                   <div class="event-img">
-                    <img
-                      v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, Array.isArray(value.image) ? value.image[j] : value.image)}`"
-                      @error="replaceImg" alt="">
+                    <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, _multi)}`" @error="replaceImg"
+                      alt="">
                   </div>
                   <span class="left-align timeline-character-text sticky text-shadow-weapon ">
-                    {{ replaceText('', gameNum, 1) }}
+                    {{ replaceText('', gameNum, j + 1) }}
                   </span>
                 </div>
               </div>
@@ -62,12 +55,7 @@
               <div class="card event-item " :class="[
                 'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
                 getBorderRadius(wishCharacters, i),
-              ]" :style="{
-
-  width: wishCharacters[i]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
-  left: (durationCharacter[i] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-  marginTop: j ? '68px' : ''
-}">
+              ]" :style="getStyleCharacter(i, j)">
                 <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishCharacters, i)]"
                   style="height: 100%">
                   <div class="event-img responsive-img lazy">
@@ -146,6 +134,7 @@ export default {
       gameNum: this.WISH_TEXT,
       combineWishPic,
       replaceText,
+      lenWeaponImage: [],
     };
   },
   props: {
@@ -204,6 +193,9 @@ export default {
       // console.log(start, end);
       // console.log(i, end.diff(start, "day", true));
       this.durationWeapon.push(end.diff(start, "day", true));
+
+      let image = this.wishWeapons[i].image;
+      this.lenWeaponImage.push(Array.isArray(image) ? image.length : 1);
     }
 
     // current time
@@ -267,6 +259,45 @@ export default {
       event.target.src = `/image/${this.gameName}/wish/_1.jpg`;
     },
 
+    getStyleWeapon(indexWeapon, indexImage) {
+
+      let lenImage = this.lenWeaponImage[indexWeapon];
+      let marginTop = '';
+      if (lenImage == 2) {
+        // 间距 0，1
+        marginTop = `calc((var(--event-height) + var(--event-height-dur)) * ${indexImage})`;
+      }
+
+      return {
+        width: this.wishWeapons[indexWeapon]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
+        left: (this.durationWeapon[indexWeapon] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+        height: 'var(--event-height)',
+        marginTop: marginTop
+      };
+    },
+    getStyleCharacter(indexChar, indexImage) {
+      let lenImage = this.lenWeaponImage[indexChar];
+      // 原神武器池和角色池长度不一样 lenImage 可能为空
+      if (!lenImage) {
+        lenImage = 1;
+      }
+      // 间距 0，1 或者 1，2
+      let marginTop = `calc((var(--event-height) + var(--event-height-dur)) * ${lenImage - 1 + indexImage})`;
+
+      return {
+        width: this.wishCharacters[indexChar]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
+        left: (this.durationCharacter[indexChar] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+        marginTop: marginTop
+      };
+    },
+
+    modifyImage(image) {
+      if (Array.isArray(image)) {
+        return image;
+      }
+      let arr = [image];
+      return arr;
+    },
   },
   beforeDestroy() {
     if (this.timer1)

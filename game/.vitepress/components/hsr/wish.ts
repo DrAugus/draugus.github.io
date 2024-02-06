@@ -332,7 +332,7 @@ export const WISH: WishAll = {
       end: "2024/02/29 11:59:00 +0800",
       shortName: "",
       wish5star: ["Reforged Remembrance", "Brighter Than the Sun"],
-      wish4star: [],
+      wish4star: ["Indelible Promise", "Dance! Dance! Dance", "Resolution Shines As Pearls of Sweat"],
       url: ""
     },
   ]

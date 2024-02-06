@@ -721,8 +721,8 @@ export const WISH: WishAll = {
       shortName: ['Xianyun', 'Nahida'],
       start: "2024-01-31 11:00:00 +0800",
       end: "2024-02-20 17:59:59 +0800",
-      wish5star: ["xianyun", "nahida",],
-      wish4star: ["gaming", "faruzan", "noelle",],
+      wish5star: ["xianyun", "nahida"],
+      wish4star: ["gaming", "faruzan", "noelle"],
       version: "4.4",
       wishName: ["「云府鹤行」", "「月草的赐慧」"],
       url: ["?", "?"]
@@ -733,7 +733,7 @@ export const WISH: WishAll = {
       shortName: ['Xiao', 'Yae Miko'],
       start: "2024-02-20 18:00:00 +0800",
       end: "2024-03-12 14:59:59 +0800",
-      wish5star: ["xiao", "yae_miko",],
+      wish5star: ["xiao", "yae_miko"],
       wish4star: ["yaoyao", "xinyan", "ningguang"],
       version: "4.4",
       wishName: ["「烟火之邀」", "「华紫樱绯」"],
@@ -758,7 +758,7 @@ export const WISH: WishAll = {
       end: "2020-11-09 17:59:59 +0800",
       shortName: "Lost Prayer",
       wish5star: ["lost_prayer_to_the_sacred_winds", "wolfs_gravestone"],
-      wish4star: ["sacrificial_sword", "sacrificial_bow", "sacrificial_greatsword", "sacrificial_fragments", "dragons_bane",],
+      wish4star: ["sacrificial_sword", "sacrificial_bow", "sacrificial_greatsword", "sacrificial_fragments", "dragons_bane"],
       url: "2277850"
     },
     {
@@ -788,7 +788,7 @@ export const WISH: WishAll = {
       end: "2021-01-12 16:00:00 +0800",
       shortName: "Summit",
       wish5star: ["summit_shaper", "skyward_atlas"],
-      wish4star: ["favonius_sword", "favonius_greatsword", "favonius_lance", "sacrificial_fragments", "the_stringless",],
+      wish4star: ["favonius_sword", "favonius_greatsword", "favonius_lance", "sacrificial_fragments", "the_stringless"],
       url: "3236902"
     },
     {
@@ -1028,7 +1028,7 @@ export const WISH: WishAll = {
       end: "2022-06-21 17:59:59 +0800",
       shortName: "Aqua",
       wish5star: ["aqua_simulacra", "primordial_jade_winged-spear"],
-      wish4star: ["lithic_spear", "sacrificial_sword", "favonius_greatsword", "eye_of_perception", "sacrificial_bow",],
+      wish4star: ["lithic_spear", "sacrificial_sword", "favonius_greatsword", "eye_of_perception", "sacrificial_bow"],
       url: "https://ys.mihoyo.com/main/news/detail/"
     },
     {

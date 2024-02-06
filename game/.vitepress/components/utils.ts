@@ -97,7 +97,8 @@ export const getWishName = (gameName: GameName) => {
 }
 
 // tag 0 no handle
-// tag 1 weapon text
+// tag 1 weapon text weapon1
+// tag 2 weapon text weapon2
 export const replaceText =
   (str: string, game: number = 0, tag: number = 0) => {
     if (game === 0) {
@@ -111,6 +112,9 @@ export const replaceText =
 
       if (tag === 1) {
         return '「流光定影」活动跃迁';
+      }
+      if (tag === 2) {
+        return '「溯回忆象」活动跃迁';
       }
 
       return str.replace('x', '跃迁');
