@@ -259,8 +259,8 @@ def parse_wish(post_id, wish_type: WishType):
         'start': duration_text[0]['start_time'] + ' +0800' if len(duration_text) else "",
         'end': duration_text[0]['end_time'] + ' +0800' if len(duration_text) else "",
         'version': 'xxx',
-        'wish5star': [utils.replace_characters(char) for char in character_info_only_name],
-        'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4],
+        'wish5star': [utils.replace_characters(char) for char in character_info_only_name] if wish_type == WishType.CHARACTER else character_info_only_name,
+        'wish4star':  [utils.replace_characters(char) for char in character_info_only_name4] if wish_type == WishType.CHARACTER else character_info_only_name4,
         'wishName': [],
         'url': ['']
     }

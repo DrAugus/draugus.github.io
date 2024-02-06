@@ -171,6 +171,18 @@ export const WISH: WishAll = {
       wishName: ['「万物皆流」', '「夜将不眠」'],
       url: [""]
     },
+    {
+      name: ["Ripples in Reflection", "Epochal Spectrum"],
+      image: [1, 2],
+      shortName: ["Black Swan", "Dan Heng•Imbibitor Lunae"],
+      start: '2024/02/06 10:00:00 +0800',
+      end: "2024/02/29 11:59:00 +0800",
+      version: "2.0",
+      wish5star: ["black_swan", "dan_heng_imbibitor_lunae"],
+      wish4star: ["misha", "tingyun", "guinaifen"],
+      wishName: ['「镜映婆娑」', '「濯世垂虹」'],
+      url: [""]
+    },
   ],
   weapons: [
     {
@@ -311,6 +323,16 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ['Patience Is All You Need', 'Baptism of Pure Thought'],
       wish4star: ['Only Silence Remains', 'Perfect Timing', "Landau's Choice"],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: [19, 20],
+      start: '2024/02/06 10:00:00 +0800',
+      end: "2024/02/29 11:59:00 +0800",
+      shortName: "",
+      wish5star: ["Reforged Remembrance", "Brighter Than the Sun"],
+      wish4star: [],
       url: ""
     },
   ]
