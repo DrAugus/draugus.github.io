@@ -126,6 +126,8 @@ def get_arr_str_event_warp_name(sub_str, text):
                 utils.match_char_event_warp_name_string(find_des))
 
     utils.got_insert_info(text, append_match)
+    if isinstance(arr, list) and len(arr) > 2:
+        arr = arr[:2]
     # print(arr)
     return utils.clean_list_none(arr)
 
@@ -167,6 +169,9 @@ def get_wish5star(text: str, wish_type: WishType):
 
     utils.got_insert_info(text, append_match)
 
+    if isinstance(arr, list) and len(arr) > 2:
+        arr = arr[:2]
+
     return utils.clean_list_none(arr)
 
 
@@ -198,6 +203,9 @@ def get_wish4star(text: str, wish_type: WishType):
             arr.extend(extract_characters(find_des, find_tag))
 
     utils.got_insert_info(text, append_match)
+
+    if isinstance(arr, list) and len(arr) > 3:
+        arr = arr[:3]
 
     res = utils.clean_list_none(arr)
 

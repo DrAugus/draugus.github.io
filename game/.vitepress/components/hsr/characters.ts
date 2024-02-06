@@ -1,6 +1,30 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  misha: {
+    key: "Misha",
+    id: "misha",
+    name: "米沙",
+    prefix: Weapon.Destruction.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Ice,
+    weapon: Weapon.Destruction
+  },
+  black_swan: {
+    key: "Black Swan",
+    id: "black_swan",
+    name: "黑天鹅",
+    prefix: Weapon.Nihility.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Wind,
+    weapon: Weapon.Nihility
+  },
   xueyi: {
     key: "Xueyi",
     id: "xueyi",
@@ -481,4 +505,4 @@ export const CHARACTER = {
     ele: Element.Ice,
     weapon: Weapon.Preservation
   },
-}
+};

@@ -6,15 +6,16 @@ export const Element = {
   Fire: { id: "Fire", name: "火" },
   Wind: { id: "Wind", name: "风" },
   Imaginary: { id: "Imaginary", name: "虚数" }
-}
+};
 
 export const City = {
+  AstralExpress: { id: "Astral Express", name: "星穹列车" },
+  StellaronHunters: { id: "Stellaron Hunters", name: "星核猎手" },
   HertaSpaceStation: { id: "Herta Space Station", name: "空间站「黑塔」" },
   JariloVI: { id: "Jarilo-VI", name: "雅利洛-VI" },
   TheXianzhouLuofu: { id: "The Xianzhou Luofu", name: "仙舟「罗浮」" },
-  AstralExpress: { id: "Astral Express", name: "星穹列车" },
-  StellaronHunters: { id: "Stellaron Hunters", name: "星核猎手" },
-}
+  Penacony: { id: "Penacony", name: "匹诺康尼" },
+};
 
 export const CityItem = {
   HertaSpaceStation: {
@@ -43,7 +44,7 @@ export const CityItem = {
     DivinationCommission: { id: "Divination Commission", name: "太卜司" },
     ArtisanshipCommission: { id: "Artisanship Commission", name: "工造司" },
   },
-}
+};
 
 export const ExploreName = {
   Equilibrium: { id: "Equilibrium", name: "均衡" },
@@ -51,7 +52,7 @@ export const ExploreName = {
   TrailblazeLevel: { id: "Trailblaze Level", name: "开拓等级" },
   TrailblazeEXP: { id: "Trailblaze EXP", name: "里程" },
   TrailblazePower: { id: "Trailblaze Power", name: "开拓力" },
-}
+};
 
 export const Weapon = {
   Hunt: { id: "The Hunt", name: "巡猎" },
@@ -61,7 +62,7 @@ export const Weapon = {
   Erudition: { id: "The Erudition", name: "智识" },
   Abundance: { id: "The Abundance", name: "丰饶" },
   Nihility: { id: "The Nihility", name: "虚无" }
-}
+};
 
 export enum Artifacts {
   flower, plume, sands, goblet, circlet
