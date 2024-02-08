@@ -5,6 +5,12 @@ export const NAV_DATA: CardData[] = [
     title: '常用工具',
     items: [
       {
+        icon: 'https://api.iconify.design/file-icons:latex.svg',
+        title: 'LaTeX',
+        desc: 'LaTeX公式编辑器',
+        link: 'https://www.latexlive.com/'
+      },
+      {
         // icon: '',
         title: 'I💕IMG',
         desc: '可批量编辑图片 的所有工具',

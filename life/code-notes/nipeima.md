@@ -46,3 +46,4 @@ todo
 其他软件
 
 - 视频软件：[PotPlayer](https://potplayer.info/download/)
+- 查看电脑配置: [图拉丁吧工具箱](https://www.tbtool.cn/)
