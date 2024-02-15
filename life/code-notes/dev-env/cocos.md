@@ -2,6 +2,12 @@
 
 ## 重要链接
 
+自己书写的：
+
+- 简书文章：<https://www.jianshu.com/c/ee98d3de1966>
+
+官方链接
+
 - 编辑器界面操作：[场景编辑器](https://docs.cocos.com/creator/3.4/manual/zh/editor/scene/)（可以参考下方[技巧](#场景编辑快捷键)）
 - [3D 相机文档](https://docs.cocos.com/creator/3.4/manual/zh/editor/components/camera-component.html)
 - [MeshRenderer 组件参考](https://docs.cocos.com/creator/3.4/manual/zh/engine/renderable/model-component.html)
