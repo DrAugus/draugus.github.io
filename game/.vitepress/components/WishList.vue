@@ -175,6 +175,14 @@ export default {
   border-top-right-radius: 10px;
 }
 
+.char-avatar img {
+  object-position: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .ele-corner {
   position: absolute;
   top: 0;

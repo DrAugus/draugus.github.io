@@ -31,7 +31,7 @@ export default {
 
 <template>
   <div class="character" id="show-modal" @click="showModal = true">
-    <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star', game ? 'char-img2' : 'char-img1'">
+    <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star', 'char-img1'">
       <img :src='`/image/${gameName}/characters/${replaceAndLow(info.id)}.png`' object-fit: contain @error="replaceImg">
     </div>
     <div class="character-ele">
@@ -129,9 +129,10 @@ export default {
 }
 
 .character-img img {
-  height: 100%;
+  object-position: center;
   -o-object-fit: cover;
   object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 

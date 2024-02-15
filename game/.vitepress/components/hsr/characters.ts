@@ -1,6 +1,54 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  gallagher: {
+    key: "Gallagher",
+    id: "gallagher",
+    name: "加拉赫",
+    prefix: Weapon.Abundance.name,
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Fire,
+    weapon: Weapon.Abundance
+  },
+  aventurine: {
+    key: "Aventurine",
+    id: "aventurine",
+    name: "砂金",
+    prefix: Weapon.Preservation.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Imaginary,
+    weapon: Weapon.Preservation
+  },
+  acheron: {
+    key: "Acheron",
+    id: "acheron",
+    name: "黄泉",
+    prefix: Weapon.Nihility.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Lightning,
+    weapon: Weapon.Nihility
+  },
+  sparkle: {
+    key: "Sparkle",
+    id: "sparkle",
+    name: "花火",
+    prefix: Weapon.Harmony.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Quantum,
+    weapon: Weapon.Harmony
+  },
   misha: {
     key: "Misha",
     id: "misha",
