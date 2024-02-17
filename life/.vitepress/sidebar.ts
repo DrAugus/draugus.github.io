@@ -474,11 +474,10 @@ const sidebarCodeDSA = () => [
     },
 ];
 const sidebarCodeInterview = () => [
-    { text: '算法与数据结构', link: '/code/interview/dsa' },
-    { text: '编译', link: '/code/interview/compile' },
-    { text: '程序设计', link: '/code/interview/program' },
     { text: '基础知识', link: '/code/interview/basin' },
-    { text: '差不多得了', link: '/code/interview/' },
+    { text: '程序设计', link: '/code/interview/program' },
+    { text: '编译', link: '/code/interview/compile' },
+    { text: '算法与数据结构', link: '/code/interview/dsa' },
     { text: '数据库', link: '/code/interview/db' },
     { text: '操作系统', link: '/code/interview/os' },
     { text: '计算机网络', link: '/code/interview/network' },
@@ -496,7 +495,6 @@ const sidebarCodeCpp = () => [
         text: 'concept', collapsed: false, items: [
             { text: '类', link: '/code/cpp/concept/class' },
             { text: '引用', link: '/code/cpp/concept/reference' },
-            { text: 'STL', link: '/code/cpp/concept/stl' },
             { text: '堆栈 内存', link: '/code/cpp/concept/stack_memory' },
             { text: 'const', link: '/code/cpp/concept/const' },
             { text: '指针', link: '/code/cpp/concept/pointer' },
@@ -517,6 +515,16 @@ const sidebarCodeCpp = () => [
         ]
     }, {
         text: 'lib', collapsed: false, items: [
+            { text: 'all libs', link: '/code/cpp/lib/' },
+            { text: 'STL', link: '/code/cpp/lib/stl' },
+            { text: 'Boost', link: '/code/cpp/lib/Boost' },
+            { text: 'LuaJIT', link: '/code/cpp/lib/LuaJIT' },
+            { text: 'protobuf', link: '/code/cpp/lib/protobuf' },
+            { text: 'cppzmq', link: '/code/cpp/lib/cppzmq' },
+            { text: 'libev', link: '/code/cpp/lib/libev' },
+            { text: 'libevent', link: '/code/cpp/lib/libevent' },
+            { text: 'libuv', link: '/code/cpp/lib/libuv' },
+            { text: 'libjson', link: '/code/cpp/lib/libjson' },
             { text: '内存检测', link: '/code/cpp/lib/asan' },
             { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON' },
             { text: 'actor', link: '/code/cpp/lib/actor' },
