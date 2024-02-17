@@ -260,9 +260,11 @@ export default defineComponent({
 .td-w-h img {
     width: 100%;
     height: 100%;
-    max-width: 100%;
+    object-position: center;
+    -o-object-fit: cover;
+    object-fit: cover;
     display: block;
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 </style>
 
