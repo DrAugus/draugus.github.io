@@ -430,46 +430,53 @@ const sidebarCodeNotes = () => [
 ];
 const sidebarCodeDSA = () => [
     { text: 'QA', link: '/code/dsa/qa' },
-    { text: 'Recursion', link: '/code/dsa/recursion' },
+    { text: '递归', link: '/code/dsa/recursion' },
     { text: '算法与数据结构', link: '/code/dsa/' },
     { text: '复杂度', link: '/code/dsa/complexity' },
     {
-        text: 'leetcode', collapsed: false, items: [
+        text: 'Leetcode', collapsed: false, items: [
             { text: 'LeetCode', link: '/code/dsa/leetcode/' },
             { text: 'LC1114 解题方案', link: '/code/dsa/leetcode/lc-1114' },
         ]
     },
     {
-        text: 'linear', collapsed: false, items: [
-            { text: 'stack', link: '/code/dsa/linear/stack' },
-            { text: 'QA', link: '/code/dsa/linear/qa' },
-            { text: 'array', link: '/code/dsa/linear/array' },
-            { text: 'heap', link: '/code/dsa/linear/heap' },
+        text: '例子', collapsed: false, items: [
+            { text: '基于权重的随机选择算法', link: '/code/dsa/eg/weighted-random-choice' },
+        ]
+    },
+    {
+        text: 'Linear', collapsed: false, items: [
             { text: '线性结构', link: '/code/dsa/linear/' },
+            { text: 'QA', link: '/code/dsa/linear/qa' },
+            { text: 'Stack', link: '/code/dsa/linear/stack' },
+            { text: 'Array', link: '/code/dsa/linear/array' },
+            { text: 'Heap', link: '/code/dsa/linear/heap' },
             { text: 'Linked list', link: '/code/dsa/linear/linked-list' },
-            { text: 'queue', link: '/code/dsa/linear/queue' },]
+            { text: 'Queue', link: '/code/dsa/linear/queue' },
+        ]
     },
     {
-        text: 'collection', collapsed: false, items: [
-            { text: 'Hash Table', link: '/code/dsa/collection/hash' },
+        text: 'Collection', collapsed: false, items: [
+            { text: '集合结构', link: '/code/dsa/collection/' },
             { text: 'QA', link: '/code/dsa/collection/qa' },
-            { text: '集合结构', link: '/code/dsa/collection/' },]
+            { text: 'Hash Table', link: '/code/dsa/collection/hash' },
+        ]
     },
     {
-        text: 'tree', collapsed: false, items: [
-            { text: 'Union-find', link: '/code/dsa/tree/union-find' },
+        text: 'Tree', collapsed: false, items: [
+            { text: '树形结构', link: '/code/dsa/tree/' },
             { text: 'QA', link: '/code/dsa/tree/qa' },
             { text: 'Rb tree', link: '/code/dsa/tree/rb-tree' },
             { text: 'Trie', link: '/code/dsa/tree/trie' },
             { text: 'B tree', link: '/code/dsa/tree/b-tree' },
-            { text: '树形结构', link: '/code/dsa/tree/' },
+            { text: 'Union-find', link: '/code/dsa/tree/union-find' },
             { text: 'Balanced Tree', link: '/code/dsa/tree/balanced-tree' },
         ]
     },
     {
-        text: 'graph', collapsed: false, items: [
-            { text: 'QA', link: '/code/dsa/graph/qa' },
+        text: 'Graph', collapsed: false, items: [
             { text: '图形结构', link: '/code/dsa/graph/' },
+            { text: 'QA', link: '/code/dsa/graph/qa' },
         ]
     },
 ];
