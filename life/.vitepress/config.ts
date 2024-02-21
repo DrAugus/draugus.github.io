@@ -29,7 +29,7 @@ export default defineConfig({
         ],
         editLink: {
             pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/life/:path',
-            text: '在 Github 编辑',
+            text: '在 GitHub 编辑',
         },
 
         outline: [2, 3],

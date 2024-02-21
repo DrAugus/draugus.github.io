@@ -25,7 +25,7 @@ export default defineConfig({
     ],
     editLink: {
       pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/game/:path',
-      text: '在 Github 编辑',
+      text: '在 GitHub 编辑',
     },
     footer: {
       message: 'Released under the MIT License.',

@@ -36,6 +36,7 @@ const svg = computed(() => {
         <div v-else-if="icon && typeof icon === 'string'" class="icon">
           <img :src="withBase(icon)" :alt="title" onerror="this.parentElement.style.display='none'" />
         </div>
+        <div v-else class="icon">😛</div>
         <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
       <p v-if="date" class="italic">{{ date }}</p>

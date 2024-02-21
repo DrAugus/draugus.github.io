@@ -1,4 +1,4 @@
-import type { CardData } from '../type'
+import type { CardData } from '../type';
 
 export const NAV_DATA: CardData[] = [
   {
@@ -184,6 +184,53 @@ export const NAV_DATA: CardData[] = [
     ]
   },
   {
+    title: '撰写文档の框架',
+    items: [
+      {
+        icon: 'https://vitepress.dev/vitepress-logo-mini.svg',
+        title: 'Vitepress',
+        desc: 'VitePress Vite & Vue Powered Static Site Generator. Simple, powerful, and fast. Meet the modern SSG framework you\'ve always wanted.',
+        link: 'https://vitepress.dev/'
+      },
+      {
+        icon: 'https://docusaurus.io/img/docusaurus.svg',
+        title: 'Docusaurus',
+        desc: 'Build optimized websites quickly, focus on your content',
+        link: 'https://docusaurus.io/'
+      },
+      {
+        icon: 'https://api.iconify.design/devicon:gitbook.svg',
+        title: 'GitBook',
+        desc: 'Engineering knowledge. Right where you work.',
+        link: 'https://www.gitbook.com/'
+      },
+      {
+        icon: 'https://jekyllrb.com/img/logo-2x.png',
+        title: 'Jekyll',
+        desc: 'Transform your plain text into static websites and blogs.',
+        link: 'https://jekyllrb.com/'
+      },
+      {
+        icon: 'https://gohugo.io/images/hugo-logo-wide.svg',
+        title: 'Hugo',
+        desc: 'The world\'s fastest framework for building websites',
+        link: 'https://gohugo.io/'
+      },
+      {
+        icon: 'https://astro.build/favicon.svg',
+        title: 'Astro',
+        desc: '一个现代化的轻量级静态站点生成器',
+        link: 'https://astro.build'
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
+        title: 'dumi',
+        desc: '基于 Umi 为组件研发而生的静态站点框架',
+        link: 'https://d.umijs.org'
+      },
+    ]
+  },
+  {
     title: 'React 生态',
     items: [
       {
@@ -353,19 +400,19 @@ export const NAV_DATA: CardData[] = [
     title: 'CSS 相关',
     items: [
       {
-        icon: 'https://postcss.org/assets/logo-3e39b0aa.svg',
+        icon: 'https://api.iconify.design/logos:postcss.svg',
         title: 'PostCSS',
         desc: '一个用 JavaScript 转换 CSS 的工具',
         link: 'https://postcss.org'
       },
       {
-        icon: 'https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg',
+        icon: 'https://api.iconify.design/logos:sass.svg',
         title: 'Sass',
         desc: '一个成熟，稳定，功能强大的专业级 CSS 扩展语言',
         link: 'https://sass-lang.com'
       },
       {
-        icon: 'https://www.tailwindcss.cn/apple-touch-icon.png',
+        icon: 'https://api.iconify.design/logos:tailwindcss-icon.svg',
         title: 'TailwindCSS 中文网',
         desc: '一个功能类优先的 CSS 框架',
         link: 'https://www.tailwindcss.cn'
@@ -446,13 +493,13 @@ export const NAV_DATA: CardData[] = [
         link: 'https://echarts.apache.org/zh/index.html'
       },
       {
-        icon: 'https://antv.vision/icons/icon-72x72.png',
+        icon: '',
         title: 'AntV',
         desc: '蚂蚁集团全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。',
         link: 'https://antv.vision/zh/'
       },
       {
-        icon: 'https://d3js.org/favicon.png',
+        icon: 'https://api.iconify.design/logos:d3.svg',
         title: 'D3.js',
         desc: '一个遵循 Web 标准用于可视化数据的 JavaScript 库',
         link: 'https://d3js.org'
@@ -520,43 +567,14 @@ export const NAV_DATA: CardData[] = [
     ]
   },
   {
-    title: '站点生成器',
-    items: [
-      {
-        icon: 'https://astro.build/favicon.svg',
-        title: 'Astro',
-        desc: '一个现代化的轻量级静态站点生成器',
-        link: 'https://astro.build'
-      },
-      {
-        icon: 'https://cn.vuejs.org/logo.svg',
-        title: 'VitePress',
-        desc: '由 Vite 和 Vue 驱动的静态网站生成器',
-        link: 'https://vitepress.dev'
-      },
-      {
-        icon: 'https://cn.vuejs.org/logo.svg',
-        title: 'VuePress',
-        desc: 'Vue 驱动的静态网站生成器',
-        link: 'https://vuepress.vuejs.org/zh'
-      },
-      {
-        icon: 'https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png',
-        title: 'dumi',
-        desc: '基于 Umi 为组件研发而生的静态站点框架',
-        link: 'https://d.umijs.org'
-      },
-      {
-        icon: 'https://docusaurus.io/zh-CN/img/docusaurus.ico',
-        title: 'Docusaurus',
-        desc: '基于 React 的静态网站生成器',
-        link: 'https://docusaurus.io/zh-CN'
-      }
-    ]
-  },
-  {
     title: '图标库',
     items: [
+      {
+        icon: '',
+        title: 'Icon',
+        desc: 'all icons built by @antfu',
+        link: 'https://icones.js.org/'
+      },
       {
         icon: 'https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg',
         title: 'iconfont',
@@ -574,7 +592,7 @@ export const NAV_DATA: CardData[] = [
         title: 'Emoji searcher',
         desc: 'Emoji 表情大全',
         link: ''
-      }
+      },
     ]
   },
   {
@@ -587,7 +605,7 @@ export const NAV_DATA: CardData[] = [
         link: 'https://developer.mozilla.org/zh-CN'
       },
       {
-        icon: 'https://static.runoob.com/images/favicon.ico',
+        icon: '',
         title: '菜鸟教程',
         desc: '学的不仅是技术，更是梦想！',
         link: 'https://www.runoob.com'
@@ -604,7 +622,7 @@ export const NAV_DATA: CardData[] = [
     title: '社区',
     items: [
       {
-        title: 'Github',
+        title: 'GitHub',
         icon: {
           svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>'
         },
@@ -695,13 +713,13 @@ export const NAV_DATA: CardData[] = [
         link: 'https://momoyu.cc'
       },
       {
-        icon: 'https://static.hdslb.com/mobile/img/512.png',
+        icon: 'https://api.iconify.design/arcticons:bilibili.svg',
         title: '哔哩哔哩',
         // desc: '',
         link: 'https://www.bilibili.com'
       },
       {
-        icon: 'https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png',
+        icon: 'https://api.iconify.design/logos:youtube-icon.svg',
         title: 'YouTube',
         // desc: '',
         link: 'https://www.youtube.com'
@@ -720,4 +738,4 @@ export const NAV_DATA: CardData[] = [
       }
     ]
   }
-]
+];

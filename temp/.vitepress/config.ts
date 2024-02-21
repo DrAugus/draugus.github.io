@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 
 export default defineConfig({
     // These are app level configs.
@@ -23,7 +23,7 @@ export default defineConfig({
         ],
         // editLink: {
         //   pattern: 'https://github.com/DrAugus/resume/:path',
-        //   text: '在 Github 编辑',
+        //   text: '在 GitHub 编辑',
         // },
         footer: {
             //   message: 'Released under the MIT License.',
@@ -40,4 +40,4 @@ export default defineConfig({
         langMenuLabel: '切换语言',
         outlineTitle: '本页内容',
     }
-})
+});

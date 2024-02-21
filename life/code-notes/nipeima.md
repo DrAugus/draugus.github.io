@@ -13,7 +13,7 @@
 推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
 
 - 版本控制 Git：`apt-get install git`，git [config](../code-notes/version-ctrl/git#config)，[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，[Git 命令参考](../code-notes/version-ctrl/git)
-- 生成 ssh [pubkey](./version-ctrl/github#generate-ssh) 放入 Github 以访问 Github，直接使用 `git clone git@github.com:name/repo`
+- 生成 ssh [pubkey](./version-ctrl/github#generate-ssh) 放入 GitHub 以访问 GitHub，直接使用 `git clone git@github.com:name/repo`
 - 安装 [nodejs](../code/front-end/webtools#node)，安装 yarn、pnpm 皆可从左侧链接内查看
 
 todo
@@ -32,7 +32,7 @@ todo
 
 - 压缩软件：bandizip [官网](https://www.bandisoft.com/bandizip/) [下载页](https://www.bandisoft.com/bandizip/dl.php?web)
 - VPN 软件：clash [第三方下载链接](https://zmssr.lanzoum.com/ie1is16ec5uj) <Badge type="tip" text="开发者必备" />
-- 访问 Github：[FastGithub](https://github.com/WangGithubUser/FastGitHub/releases/)
+- 访问 GitHub：[FastGithub](https://github.com/WangGithubUser/FastGitHub/releases/)，解决 GitHub 打不开，GitHub 加速神器
 
 上面的软件安装优先级很高，安装完毕之后，便于继续安装下面的软件
 
