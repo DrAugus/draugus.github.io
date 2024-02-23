@@ -521,6 +521,13 @@ const sidebarCodeCpp = () => [
             { text: '一些要点', link: '/code/cpp/tips/tip' },
         ]
     }, {
+        text: 'temp', collapsed: true, items: [
+            { text: '内存检测', link: '/code/cpp/lib/asan' },
+            { text: 'epoll', link: '/code/cpp/lib/epoll' },
+            { text: 'BERT', link: '/code/cpp/lib/bert' },
+            { text: 'Reactor', link: '/code/cpp/lib/reactor' },
+        ]
+    }, {
         text: 'lib', collapsed: false, items: [
             { text: 'all libs', link: '/code/cpp/lib/' },
             { text: 'STL', link: '/code/cpp/lib/stl' },
@@ -530,12 +537,8 @@ const sidebarCodeCpp = () => [
             { text: 'cppzmq', link: '/code/cpp/lib/cppzmq' },
             { text: 'libevent', link: '/code/cpp/lib/libevent' },
             { text: 'libuv', link: '/code/cpp/lib/libuv' },
-            { text: '内存检测', link: '/code/cpp/lib/asan' },
             { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON' },
             { text: 'actor', link: '/code/cpp/lib/actor' },
-            { text: 'BERT', link: '/code/cpp/lib/bert' },
-            { text: 'Reactor', link: '/code/cpp/lib/reactor' },
-            { text: 'epoll', link: '/code/cpp/lib/epoll' },
         ]
     }, {
         text: 'thread-mutex', collapsed: false, items: [
@@ -555,6 +558,7 @@ const sidebarCodeDB = () => [
     { text: 'mongoDB', link: '/code/db/mongoDB' },
 ];
 const sidebarCodeFrontEnd = () => [
+    { text: 'Sol', link: '/code/front-end/sol' },
     { text: 'web tools', link: '/code/front-end/webtools' },
     { text: '公共知识', link: '/code/front-end/public' },
     { text: 'React Native', link: '/code/front-end/react-native' },
@@ -564,8 +568,9 @@ const sidebarCodeFrontEnd = () => [
     { text: 'Vue', link: '/code/front-end/vue' },
     { text: 'VuePress', link: '/code/front-end/vuepress' },
     { text: 'Vitepress', link: '/code/front-end/vitepress' },
+    { text: 'Typescript', link: '/code/front-end/typescript' },
     { text: 'Javascript', link: '/code/front-end/javascript' },
-    { text: 'Sol', link: '/code/front-end/sol' },
+    { text: 'Next.js', link: '/code/front-end/nextjs' },
     { text: 'Nuxt', link: '/code/front-end/nuxt' },
 ];
 const sidebarCodeProgram = () => [

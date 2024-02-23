@@ -2,9 +2,6 @@
 
 LuaJIT is a Just-In-Time (JIT) compiler for the Lua programming language.
 
-- Repo: <https://github.com/LuaJIT/LuaJIT>
-- Project Homepage: <https://luajit.org/>
-
 实践：<https://github.com/DrAugus/lua>
 
 sample

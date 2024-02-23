@@ -7,7 +7,7 @@ export const NAV_DATA: CardData[] = [
       {
         icon: 'https://api.iconify.design/file-icons:latex.svg',
         title: 'LaTeX',
-        desc: 'LaTeX公式编辑器',
+        desc: 'LaTeX 公式在线编辑器',
         link: 'https://www.latexlive.com/'
       },
       {

@@ -1,7 +1,5 @@
 # Boost
 
-官网：<https://www.boost.org/>
-
 thread
 
 system

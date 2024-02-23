@@ -2,11 +2,6 @@
 
 Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.
 
-- Repo: <https://github.com/protocolbuffers/protobuf>
-- Project Homepage: <https://protobuf.dev/>
-- Cpp Install: <https://github.com/protocolbuffers/protobuf/blob/main/src/README.md>
-- Cpp Tutorial: <https://protobuf.dev/getting-started/cpptutorial/>
-
 ```proto
 syntax = "proto2";
 

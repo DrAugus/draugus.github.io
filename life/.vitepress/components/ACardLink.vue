@@ -1,35 +1,69 @@
 <!-- https://github.com/maomao1996/mm-notes/tree/master/docs/nav -->
 <script setup lang="ts">
-import { computed } from 'vue'
-import { withBase } from 'vitepress'
-import { slugify } from '@mdit-vue/shared'
+import { computed } from 'vue';
+import { withBase } from 'vitepress';
+import { slugify } from '@mdit-vue/shared';
 
-import { CardLink } from '../type'
+import { CardLink, LinkName } from '../type';
 
 const props = defineProps<{
-  icon?: CardLink['icon']
-  title?: CardLink['title']
-  date?: CardLink['date']
-  desc?: CardLink['desc']
-  link: CardLink['link']
-  target: CardLink['target']
-}>()
+  icon?: CardLink['icon'];
+  title?: CardLink['title'];
+  date?: CardLink['date'];
+  desc?: CardLink['desc'];
+  link: CardLink['link'];
+  target: CardLink['target'];
+}>();
 
 const formatTitle = computed(() => {
   if (!props.title) {
-    return ''
+    return '';
   }
-  return slugify(props.title)
-})
+  return slugify(props.title);
+});
 
 const svg = computed(() => {
-  if (typeof props.icon === 'object') return props.icon.svg
-  return ''
-})
+  if (typeof props.icon === 'object') return props.icon.svg;
+  return '';
+});
+
+
+const descInfo = (obj: LinkName) => {
+
+  const link = obj.link;
+  let splitDot = link.split('.');
+  // rm https://www
+  splitDot = splitDot.slice(1);
+  let res = '';
+  for (let i = 0; i < splitDot.length; ++i) {
+    let v = splitDot[i];
+    res += v;
+    if (v.indexOf('/') != -1 || i == splitDot.length - 1) {
+      if (v.endsWith('/')) {
+        res = res.slice(0, -1);
+      }
+      break;
+    }
+    res += '.';
+  }
+
+  let target = '_blank';
+
+  if (obj.text === 'Repo') {
+    res = link.replace('https://', '');
+  }
+
+  let textInfo = `<b>${obj.text}</b>: `;
+  let linkInfo = `<a href="${obj.link}" target='${target}' rel='noreferrer' > ${res}</a>`;
+
+  return textInfo + linkInfo;
+};
+
+
 </script>
 
 <template>
-  <a v-if="link" class="m-nav-link" :href="link" :target="!target ? '' : '_blank'" rel="noreferrer">
+  <a class="m-nav-link" :href="link ? link : ''" :target="!link ? '' : !target ? '' : '_blank'" rel="noreferrer">
     <article class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
@@ -40,7 +74,22 @@ const svg = computed(() => {
         <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
       <p v-if="date" class="italic">{{ date }}</p>
-      <p v-if="desc" class="desc">{{ desc }}</p>
+      <div v-if="desc">
+        <p v-if="typeof desc === 'string'" class="desc" v-html="desc"></p>
+        <div v-else-if="'desc instanceof LibsInfo'" class="desc">
+          <ul>
+            <li v-if="desc.intro" class="desc intro" v-html="'<b>Intro: </b>' + desc.intro"> </li>
+            <li v-if="desc.repo" class="desc" v-html="descInfo(desc.repo)"> </li>
+            <li v-if="desc.homepage" class="desc" v-html="descInfo(desc.homepage)"> </li>
+            <li v-if="desc.guide" class="desc" v-html="descInfo(desc.guide)"> </li>
+            <div v-if="desc.others">
+              <li v-for="(v, i) in desc.others" class="desc" v-html="descInfo(v)"> </li>
+            </div>
+          </ul>
+        </div>
+
+      </div>
+
     </article>
   </a>
 </template>
@@ -124,6 +173,10 @@ const svg = computed(() => {
     line-height: 1.5;
     font-size: 12px;
     color: var(--vp-c-text-2);
+  }
+
+  .intro {
+    -webkit-line-clamp: 5;
   }
 
   .italic {
