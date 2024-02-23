@@ -65,13 +65,7 @@ export const navbar = [
           { text: 'Linux 命令', link: '/code/os/linux/command' },
         ],
       },
-      {
-        text: '小小震撼',
-        items: [
-          { text: '小妙招', link: '/code/clue' },
-          { text: '小外包', link: '/code/outsourcing-co' },
-        ],
-      },
+      { text: '小小震撼', link: '/code/shock/' },
     ],
     activeMatch: '^/code',
   },

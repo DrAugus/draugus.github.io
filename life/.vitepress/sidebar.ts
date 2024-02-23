@@ -607,6 +607,11 @@ const sidebarCodeProgram = () => [
         ]
     },
 ];
+const sidebarCodeShock = () => [
+    { text: '小妙招', link: '/code/shock/clue' },
+    { text: '小外包', link: '/code/shock/outsourcing-co' },
+];
+
 const sidebarPursuingEducation = () => [
     { text: '高考', link: '/pursuing-education/gaokao' },
 ];
@@ -732,6 +737,7 @@ export const sidebar = {
     '/code/db/': sidebarCodeDB(),
     '/code/front-end/': sidebarCodeFrontEnd(),
     '/code/program/': sidebarCodeProgram(),
+    '/code/shock/': sidebarCodeShock(),
     //
     '/pursuing-education/': sidebarPursuingEducation(),
     '/study/': sidebarStudy(),
