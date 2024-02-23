@@ -112,9 +112,21 @@ export const TRIP_DATA: CardData[] = [
             },
             {
                 icon: '',
+                title: '安徽',
+                desc: '',
+                link: prefixTripChina + '/anhui/'
+            },
+            {
+                icon: '',
                 title: '福建',
                 desc: '',
                 link: prefixTripChina + '/fujian/'
+            },
+            {
+                icon: '',
+                title: '江西',
+                desc: '',
+                link: prefixTripChina + '/jiangxi/'
             },
             {
                 icon: '',
