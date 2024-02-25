@@ -1,4 +1,4 @@
-import { modifyTravelogue } from "./data/trip/travelogue";
+import { modifyTravelogue } from "./data/trip/travelogueToSiderbar";
 import { LinkName } from "./type";
 
 const sidebarEat = () => [

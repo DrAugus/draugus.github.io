@@ -17,13 +17,3 @@ export const dataTravelogue: LinkName[] = [
     { text: '南京', link: '/trip/travelogue/20230809' },
     { text: '桂林', link: '/trip/travelogue/20230902' },
 ];
-
-export const modifyTravelogue = (): LinkName[] =>
-    dataTravelogue
-        .slice(0)
-        .reverse()
-        .map((v, i) => {
-            let arrLink = v.link.split('/');
-            v.text = arrLink[arrLink.length - 1] + ' ' + v.text;
-            return v;
-        });
