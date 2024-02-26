@@ -1,5 +1,5 @@
 ---
-layoutClass: m-nav-layout
+layoutClass: layout-card
 outline: [2, 4]
 ---
 
@@ -10,7 +10,7 @@ import ACardLinks from './.vitepress/components/ACardLinks.vue'
 
 import { NAV_DATA } from './.vitepress/data/nav'
 </script>
-<style src="./.vitepress/style/nav.scss"></style>
+<style src="./.vitepress/style/layout-card.scss"></style>
 
 <ACardLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items" :target="'blank'" />
 

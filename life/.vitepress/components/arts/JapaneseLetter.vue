@@ -1,5 +1,5 @@
 <template>
-    <h2>五十音</h2>
+    <h2 :id="slugify('五十音')">五十音</h2>
 
     <table>
         <tr>
@@ -18,7 +18,7 @@
     </table>
 
 
-    <h2>ALL</h2>
+    <h2 :id="slugify('ALL')">ALL</h2>
 
     <details>
         <summary>
@@ -52,61 +52,50 @@
     </details>
 </template>
   
-<script>
+<script setup lang="ts">
 import japanese from "../../data/language/japanese.json";
+import { computed } from 'vue';
+import { slugify } from '@mdit-vue/shared';
 
-const hira = japanese.hira
-const kana = japanese.kana
-const pron = japanese.pron
-const pronAll = japanese.pron_all.flat()
+const hira: string[] = japanese.hira;
+const kana: string[] = japanese.kana;
+const pron: string[] = japanese.pron;
+const pronAll: string[] = japanese.pron_all.flat();
 
-let hira2d = []
-let kana2d = []
-let pron2d = []
-const sliceSize = 5
-for (let i = 0; i < hira.length; i += sliceSize) {
-    hira2d.push(hira.slice(i, i + sliceSize));
-    kana2d.push(kana.slice(i, i + sliceSize));
-    pron2d.push(pron.slice(i, i + sliceSize));
-}
-// console.log('hira2d', hira2d)
-// console.log('kana2d', kana2d)
-// console.log('pron2d', pron2d)
-
-
-
-let col1 = []
-let row1 = []
-
-for (let i in hira) {
-    if (i < 5) row1.push(hira[i])
-    if (i % 5 === 0) col1.push(hira[i])
-}
-
-// console.log(col1, row1)
-
-export default {
-    name: "Japanese",
-    data() {
-        return {
-            hira,
-            hira2d,
-            kana2d,
-            pron2d,
-            pronAll,
-            col1,
-            row1,
-        };
-    },
-    methods: {
-        getImgSrc(dir, s) {
-            let pre = "/img/language/japanese/" + dir
-            let res = `${pre}/${s}.png`
-            return res
-        },
-    },
+let hira2d: string[][] = [];
+let kana2d: string[][] = [];
+let pron2d: string[][] = [];
+const sliceSize = 5;
+const getChar = () => {
+    for (let i = 0; i < hira.length; i += sliceSize) {
+        hira2d.push(hira.slice(i, i + sliceSize));
+        kana2d.push(kana.slice(i, i + sliceSize));
+        pron2d.push(pron.slice(i, i + sliceSize));
+    }
+    // console.log('hira2d', hira2d)
+    // console.log('kana2d', kana2d)
+    // console.log('pron2d', pron2d)
 };
+getChar();
 
+let col1: string[] = [];
+let row1: string[] = [];
+const getTable = () => {
+    for (let i in hira) {
+        const index = Number(i);
+        if (index < 5) row1.push(hira[index]);
+        if (index % 5 === 0) col1.push(hira[index]);
+    }
+    // console.log(col1, row1)
+};
+getTable();
+
+
+const getImgSrc = (dir, s) => {
+    let pre = "/img/language/japanese/" + dir;
+    let res = `${pre}/${s}.png`;
+    return res;
+};
 
 </script>
   

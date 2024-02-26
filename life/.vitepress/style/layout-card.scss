@@ -1,4 +1,4 @@
-.m-trip-place-layout {
+.layout-card {
   /* 覆盖全局的 vp-layout-max-width（仅当前页面使用） */
   --vp-layout-max-width: 1660px;
 
@@ -6,6 +6,7 @@
   .container {
     max-width: var(--vp-layout-max-width) !important;
   }
+
   .content-container,
   .content {
     max-width: 100% !important;
@@ -26,6 +27,7 @@
     .custom-block-title {
       display: none;
     }
+
     p {
       margin: 0;
     }

@@ -1,5 +1,4 @@
 ---
-layoutClass: m-nav-layout
 outline: [2, 4]
 ---
 # 游记
@@ -11,6 +10,5 @@ import ACardLinks from '../../.vitepress/components/ACardLinks.vue'
 
 import { TRAVELOGUE_DATA } from '../../.vitepress/data/trip/travelogueCard'
 </script>
-<style src="../../.vitepress/style/nav.scss"></style>
 
 <ACardLinks v-for="{title, items} in TRAVELOGUE_DATA" :title="title" :items="items" />
