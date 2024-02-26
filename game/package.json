@@ -15,7 +15,8 @@
     "preview": "vitepress preview ."
   },
   "devDependencies": {
-    "@types/leaflet": "1.9.8",
+   "@mdit-vue/shared": "^2.0.0",
+	  "@types/leaflet": "1.9.8",
     "@vue-leaflet/vue-leaflet": "0.10.1",
     "dayjs": "1.11.10",
     "leaflet": "1.9.4",
