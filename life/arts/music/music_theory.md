@@ -4,8 +4,7 @@
 
 > The University of Edinburgh - [Fundamentals of Music Theory](https://www.coursera.org/learn/edinburgh-music-theory/home/welcome)
 
-Concept
-::alert
+:::tip Concept
 
 Bear in mind that the COURSERA site uses American terminology, whereas we are teaching this course using UK music theory language. It is good to be familiar with both. The following translations should help!
 
@@ -16,7 +15,7 @@ Bear in mind that the COURSERA site uses American terminology, whereas we are te
 - Half notes = Minims
 - Whole notes = Semibreves
 
-::
+:::
 
 ## Week 1
 

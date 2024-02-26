@@ -1,5 +1,5 @@
 <template>
-    <h2>预算</h2>
+    <TitleFormat :title="'预算'" :number="2"></TitleFormat>
     <p>
         <span v-for="(v, k, i) in sum">
             <b>{{ k + ' ' }}</b> 全年旅行支出限额
@@ -11,14 +11,14 @@
                     <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)"></Badge>
                 </b>
                 <br />
-                剩余可支配 {{ ' ¥' + parseFloat(budget[k] - v) }}
+                剩余可支配 {{ ' ¥' + (budget[k] - v) }}
                 <Badge :text="((budget[k] - v) / budget[k] * 100).toFixed(2) + '%'"
                     :type="getBadge((budget[k] - v) / budget[k] * 100)"></Badge>
             </blockquote>
         </span>
     </p>
 
-    <h2>支出</h2>
+    <TitleFormat :title="'支出'" :number="2"></TitleFormat>
 
     <div v-for="(v, k, i) in vTrip">
         <h3>{{ k + '年' }}</h3>
@@ -66,8 +66,10 @@
     </div>
 </template>
   
-<script>
+<script setup lang="ts">
 import { TRAVEL_BILLS, LARGE_TRAVEL_PACKAGE, TRAVEL_BUDGET } from "../../data/trip/bill";
+import { LargeTravelPackage, TravelBill } from "../../type";
+import TitleFormat from "../TitleFormat.vue";
 
 const modifyDate = (date) =>
     date.toLocaleDateString('zh-CN', {
@@ -77,74 +79,74 @@ const modifyDate = (date) =>
     });
 
 
-let vOther = {}
+let vOther: {
+    [key: number]: LargeTravelPackage[];
+} = {};
 LARGE_TRAVEL_PACKAGE.forEach(obj => {
-    if (!vOther[obj.year]) { vOther[obj.year] = [] }
-    vOther[obj.year].push(obj)
-})
+    if (!vOther[obj.year]) { vOther[obj.year] = []; }
+    vOther[obj.year].push(obj);
+});
 
-let vTrip = {}
+let vTrip: {
+    [key: number]: TravelBill[];
+} = {};
 TRAVEL_BILLS.forEach(obj => {
-    let year = obj.start.getFullYear()
-    if (!vTrip[year]) { vTrip[year] = [] }
-    vTrip[year].push(obj)
-})
+    let year = obj.start.getFullYear();
+    if (!vTrip[year]) { vTrip[year] = []; }
+    vTrip[year].push(obj);
+});
 // console.log(vTrip)
 
 // 倒序显示旅行
-// 对 object 中的键进行排序
-const sortedKeys = Object.keys(vTrip).sort((a, b) => b - a);
+// 对 object 中的键进行排序，即按年排序
+const sortedKeys = Object.keys(vTrip).sort((a, b) => Number(b) - Number(a));
 // 对每个键对应的数组进行排序
 sortedKeys.forEach(key => {
-    vTrip[key].sort((a, b) => new Date(b.start) - new Date(a.start));
+    vTrip[key].sort((a: TravelBill, b: TravelBill) => {
+        if (new Date(b.start) > new Date(a.start))
+            return -1;
+        if (new Date(b.start) < new Date(a.start))
+            return 1;
+        return 0;
+    });
 });
 // console.log(vTrip)
 
 
 // 
-let sum = {};
+let sum: {
+    [key: number]: number;
+} = {};
 TRAVEL_BILLS.forEach(obj => {
-    let year = obj.start.getFullYear()
-    if (!sum[year]) sum[year] = 0
-    sum[year] += obj.sum
+    let year = obj.start.getFullYear();
+    if (!sum[year]) sum[year] = 0;
+    sum[year] += obj.sum;
 });
 LARGE_TRAVEL_PACKAGE.forEach(obj => {
-    let year = obj.year
-    if (!sum[year]) sum[year] = 0
-    sum[year] += obj.sum
+    let year = obj.year;
+    if (!sum[year]) sum[year] = 0;
+    sum[year] += obj.sum;
 });
-// console.log(sum)
+// console.log(sum);
 // console.log(budget)
 
-export default {
-    name: "TravelBills",
-    components: {
-    },
-    data() {
-        return {
-            vOther,
-            vTrip,
-            sum,
-            budget: TRAVEL_BUDGET,
-            modifyDate,
-        };
-    },
-    methods: {
-        getBadge(num, neg = 0) {
-            let n = parseFloat(num)
-            let s = ['tip', 'warning', 'danger']
-            let res = 0
-            if (n > 90) res = 0
-            else if (n > 60) res = 1
-            else if (n > 30) res = 2
-            else res = 2
-            if (neg) res = s.length - res - 1
-            // console.log(n, res)
-            return s[res]
-        },
-    },
+
+const getBadge = (num, neg = 0) => {
+    let n = parseFloat(num);
+    let s = ['tip', 'warning', 'danger'];
+    let res = 0;
+    if (n > 90) res = 0;
+    else if (n > 60) res = 1;
+    else if (n > 30) res = 2;
+    else res = 2;
+    if (neg) res = s.length - res - 1;
+    // console.log(n, res)
+    return s[res];
 };
 
+const budget: {
+    [key: number]: number;
+} = TRAVEL_BUDGET;
 </script>
   
 <style scoped>

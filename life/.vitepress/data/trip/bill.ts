@@ -197,7 +197,7 @@ export const LARGE_TRAVEL_PACKAGE: LargeTravelPackage[] = [
 ]
 
 export const TRAVEL_BUDGET = {
-    "2023": 50000,
-    "2024": 30000,
+    2023: 50000,
+    2024: 30000,
 }
 

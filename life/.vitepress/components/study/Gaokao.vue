@@ -1,8 +1,8 @@
 <template>
-    <h2>河南高考历年分数线(仅理科)</h2>
+    <TitleFormat :title="'河南高考历年分数线(仅理科)'" :number="2"></TitleFormat>
     <EChartsModel :option="option" />
 
-    <h2>大学清单</h2>
+    <TitleFormat :title="'大学清单'" :number="2"></TitleFormat>
     <University></University>
 </template>
   
@@ -10,6 +10,7 @@
 import EChartsModel from "../EChartsModel.vue"
 import gaokaoInfo from '../../data/study/gaokao.json'
 import University from "./University.vue"
+import TitleFormat from "../TitleFormat.vue";
 
 const lineName = ['一本', '二本', '大专']
 
@@ -75,9 +76,10 @@ const opt = {
 export default {
     name: "Gaokao",
     components: {
-        EChartsModel,
-        University,
-    },
+    EChartsModel,
+    University,
+    TitleFormat
+},
     data() {
         return {
             option: opt,

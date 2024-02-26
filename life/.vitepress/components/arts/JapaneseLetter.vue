@@ -1,5 +1,5 @@
 <template>
-    <h2 :id="slugify('五十音')">五十音</h2>
+    <TitleFormat :title="'五十音'" :number="2"></TitleFormat>
 
     <table>
         <tr>
@@ -17,8 +17,7 @@
         </tr>
     </table>
 
-
-    <h2 :id="slugify('ALL')">ALL</h2>
+    <TitleFormat :title="'ALL'" :number="2"></TitleFormat>
 
     <details>
         <summary>
@@ -56,6 +55,7 @@
 import japanese from "../../data/language/japanese.json";
 import { computed } from 'vue';
 import { slugify } from '@mdit-vue/shared';
+import TitleFormat from "../TitleFormat.vue";
 
 const hira: string[] = japanese.hira;
 const kana: string[] = japanese.kana;
