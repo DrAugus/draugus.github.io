@@ -44,6 +44,15 @@
 - 厨创东北大厨 <Badge type="warning" text="人均 ¥80" /> <Badge type="tip" text="东北菜" />
 - sunny garden 意大利菜 非常难吃 已经倒闭
 
+### 娱乐
+
+#### 影院
+
+- 杭州万达影城（余杭万达广场）<Badge type="tip" text="杜比" />
+- 杭州CGV（奥体印象城）<Badge type="tip" text="杜比" />
+- 杭州浙影时代·新远西湖文化广场店(IMAX激光)(原新远国际影城) <Badge type="tip" text="IMAX Commercial Laser" />
+- 杭州万象影城(万象城店) <Badge type="tip" text="IMAX Commercial Laser" />
+
 ### 交通
 
 地铁快速换乘指南

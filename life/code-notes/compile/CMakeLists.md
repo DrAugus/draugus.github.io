@@ -92,6 +92,17 @@ WHILE()
 ENDWHILE()
 ```
 
+## Module
+
+### fmt
+
+```cmake
+set(fmt_DIR ${PROJECT_SOURCE_DIR}/3rd/fmt/build)
+find_package(fmt)
+add_executable(${name} ${file})
+target_link_libraries(${name} fmt::fmt)
+```
+
 ## others
 
 ### 导入库文件

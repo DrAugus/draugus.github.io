@@ -94,4 +94,25 @@ jobs:
 
 也即本网站的[最终方案](https://github.com/DrAugus/draugus.github.io/blob/master/.github/workflows/autopr.yml)
 
+### Tips
+
+条件判断，多个 job 时，指定某个特定条件下运行某个 job
+
+```yml
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+jobs:
+  # Build job
+  build:
+    # something
+  # Deployment job
+  deploy:      
+    # something
+    if: github.event_name == 'push'    
+```
+
 [generate ssh]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent

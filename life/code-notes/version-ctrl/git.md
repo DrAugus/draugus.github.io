@@ -73,6 +73,18 @@ git push --recurse-submodules=check
 git push --recurse-submodules=on-demand
 ```
 
+移除子模块
+
+```bash
+# 删除子模块关联信息（.gitmodules文件中的条目和.git/config中的相应配置）
+git submodule deinit <submodule_path>
+# 清理子模块工作目录中的所有文件（物理删除）
+rm -rf .git/modules/<submodule_path> # 如果是旧版本Git可能需要手动删除缓存
+rm -rf <submodule_path>
+# 将子模块相关的提交从历史记录中移除（可选，但通常建议这样做以保持仓库简洁）
+git rm --cached <submodule_path> # 从索引中移除子模块
+```
+
 [refer](https://cloud.tencent.com/developer/article/2143377)
 
 ## remote

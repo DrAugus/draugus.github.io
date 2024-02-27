@@ -336,28 +336,29 @@ const sidebarScience = () => [
 const sidebarCodeOS = () => [
     {
         text: 'MacOS', collapsed: false, items: [
-            { text: 'mac primary', link: '/code/os/macos/base' },
-            { text: 'solution', link: '/code/os/macos/sol' },
+            { text: 'Mac Primary', link: '/code/os/macos/base' },
+            { text: 'Solution', link: '/code/os/macos/sol' },
         ]
     },
     {
         text: 'Linux', collapsed: false, items: [
-            { text: 'gdb', link: '/code/os/linux/gdb' },
-            { text: 'linux 系统分类', link: '/code/os/linux/sys_category' },
+            { text: 'Install', link: '/code/os/linux/install' },
+            { text: 'GDB', link: '/code/os/linux/gdb' },
+            { text: 'Linux 系统分类', link: '/code/os/linux/sys_category' },
             { text: '查看 Linux 的基本信息', link: '/code/os/linux/sys_base_info' },
             { text: 'Linux 问题收集', link: '/code/os/linux/qa' },
-            { text: 'install', link: '/code/os/linux/install' },
-            { text: 'linux 记录  ', link: '/code/os/linux/README' },
-            { text: 'cmd', link: '/code/os/linux/command' },
+            { text: 'Linux 记录  ', link: '/code/os/linux/README' },
+            { text: 'CMD', link: '/code/os/linux/command' },
             { text: '指南', link: '/code/os/linux/guide' },
         ]
     },
     {
         text: 'Windows', collapsed: false, items: [
-            { text: 'chocolatey', link: '/code/os/windows/chocolatey' },
-            { text: '虚拟机记录    ', link: '/code/os/windows/VirtualBox' },
-            { text: 'cmd 指南', link: '/code/os/windows/cmd' },
-            { text: 'windows11 更新纪要', link: '/code/os/windows/windows11-update' },
+            { text: 'Chocolatey', link: '/code/os/windows/chocolatey' },
+            { text: 'WSL', link: '/code/os/windows/wsl' },
+            { text: 'VirtualBox', link: '/code/os/windows/VirtualBox' },
+            { text: 'CMD 指南', link: '/code/os/windows/cmd' },
+            { text: 'Windows11 更新纪要', link: '/code/os/windows/windows11-update' },
             { text: '壁纸', link: '/code/os/windows/wallpaper' },
         ]
     },
@@ -695,16 +696,26 @@ const sidebarFunny = () => [
     { text: '调休', link: '/funny/tiaoxiu' },
 ];
 
+const recordPrefix = '/disease/record/';
 const sidebarDisease = () => [
     { text: '病痛', link: '/disease/' },
-    { text: '中暑', link: '/disease/2022-06-14-disease' },
     { text: '胃镜', link: '/disease/gastroscopy' },
     { text: '眼睛变化', link: '/disease/eyes' },
-    { text: '发烧', link: '/disease/2022-12-21-disease' },
-    { text: '扁桃体炎', link: '/disease/2022-06-24-disease' },
-    { text: '发烧', link: '/disease/2022-12-22-disease' },
-    { text: '感冒', link: '/disease/2022-11-28-disease' },
     { text: '牙', link: '/disease/tooth' },
+    {
+        text: '记录-自己的', collapsed: false, items: [
+            { text: '2024/02/23 发烧', link: `${recordPrefix}/self/2024-02-23` },
+            { text: '2022/12/21 发烧', link: `${recordPrefix}/self/2022-12-21` },
+            { text: '2022/11/28 感冒', link: `${recordPrefix}/self/2022-11-28` },
+            { text: '2022/06/14 中暑', link: `${recordPrefix}/self/2022-06-14` },
+        ]
+    },
+    {
+        text: '记录-别人的', collapsed: false, items: [
+            { text: '2022/12/22 发烧', link: `${recordPrefix}/others/2022-12-22` },
+            { text: '2022/06/24 扁桃体炎', link: `${recordPrefix}/others/2022-06-24` },
+        ]
+    },
 ];
 
 
