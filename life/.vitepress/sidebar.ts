@@ -644,7 +644,7 @@ const sidebarCareer = () => [
             { text: '软考高级系统架构', link: '/career/certificate/ruankao-high-lv' },
             { text: '教师资格证', link: '/career/certificate/ntce' },
             { text: '全国会计专业技术资格', link: '/career/certificate/cpa' },
-            { text: '公务员区别', link: '/career/certificate/gwy-diff' },
+            { text: '公务员考试', link: '/career/certificate/gwy' },
         ]
     },
     {

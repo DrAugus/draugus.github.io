@@ -95,3 +95,17 @@ export interface LargeTravelPackage {
   year: number,
   intro: string,
 }
+
+export interface Certificate {
+  // 证书名
+  title: string,
+  // 证书具体项目
+  details?: string,
+  // 简单介绍
+  intro?: string,
+  // 先修知识
+  pre?: string,
+  // 学习周期
+  cycle?: string,
+  link: string,
+}
