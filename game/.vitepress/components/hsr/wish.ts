@@ -183,6 +183,18 @@ export const WISH: WishAll = {
       wishName: ['「镜映婆娑」', '「濯世垂虹」'],
       url: [""]
     },
+    {
+      name: ["Sparkling Splendor", "Swirl of Heavenly Spear"],
+      image: [1, 2],
+      shortName: ["Sparkle", "Jing Yuan"],
+      start: '2024/02/29 12:00:00 +0800',
+      end: "2024/03/26 14:59:00 +0800",
+      version: "2.0",
+      wish5star: ["sparkle", "jing_yuan"],
+      wish4star: ["hanya", "qingque", "sampo"],
+      wishName: ['「焰锦游鱼」', '「天戈麾斥」'],
+      url: [""]
+    },
   ],
   weapons: [
     {
@@ -333,6 +345,16 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ["Reforged Remembrance", "Brighter Than the Sun"],
       wish4star: ["Indelible Promise", "Dance! Dance! Dance", "Resolution Shines As Pearls of Sweat"],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: [21, 22],
+      start: '2024/02/29 12:00:00 +0800',
+      end: "2024/03/26 14:59:00 +0800",
+      shortName: "",
+      wish5star: ["Earthly Escapade", "Before Dawn"],
+      wish4star: ["Geniuses' Repose", "Planetary Rendezvous", "Under the Blue Sky"],
       url: ""
     },
   ]

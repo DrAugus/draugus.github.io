@@ -260,8 +260,13 @@ def parse_wish(post_id, wish_type: WishType):
     character_info_only_name4 = utils.get_only_name(character_info4)
     print('4-star only name:', character_info_only_name4)
 
+    name = arr_str_char_event_warp_name if wish_type == WishType.CHARACTER else "Brilliant Fixation"
+    name_lower = [utils.replace_characters(
+        char) for char in character_info_only_name]
+
     return {
-        'name': arr_str_char_event_warp_name if wish_type == WishType.CHARACTER else "Brilliant Fixation",
+        'name': name,
+        'name_lower': name_lower,
         'image': [1, 1] if len(character_info_only_name) == 2 else [1],
         'shortName': character_info_only_name,
         'start': duration_text[0]['start_time'] + ' +0800' if len(duration_text) else "",
