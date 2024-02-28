@@ -113,5 +113,5 @@ for warp_info in warp_arr:
 
 current_path = os.path.dirname(__file__)
 filename = current_path + '/auto/mhy6zh'
-with open(filename, 'w',encoding="utf-8") as file:
+with open(filename, 'w', encoding="utf-8") as file:
     file.write(output)

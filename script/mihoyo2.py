@@ -141,7 +141,8 @@ def get_wish4star(text: str):
 
     def extract_characters(text: str, find_tag: str):
         # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
-        pattern = fr"{find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
+        pattern = fr"{
+            find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
 
         # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
         matches = re.findall(pattern, text)
@@ -314,6 +315,6 @@ for i in range(len(post_id)):
 
 current_path = os.path.dirname(__file__)
 filename = current_path + '/auto/mhy2.json'
-with open(filename, 'w') as file:
+with open(filename, 'w', encoding='utf-8') as file:
     # 将字典写入文件
     json.dump(all_info, file)
