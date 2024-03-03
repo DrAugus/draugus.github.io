@@ -332,6 +332,7 @@ const sidebarArtsXiwen = () => [
 ];
 const sidebarScience = () => [
     { text: '离散数学', link: '/science/discrete-math' },
+    { text: '概率论', link: '/science/probability-theory' },
 ];
 const sidebarCodeOS = () => [
     {
@@ -705,6 +706,7 @@ const sidebarDisease = () => [
     {
         text: '记录-自己的', collapsed: false, items: [
             { text: '2024/02/23 发烧', link: `${recordPrefix}/self/2024-02-23` },
+            { text: '2024/01/25 感冒', link: `${recordPrefix}/self/2024-01-25` },
             { text: '2022/12/21 发烧', link: `${recordPrefix}/self/2022-12-21` },
             { text: '2022/11/28 感冒', link: `${recordPrefix}/self/2022-11-28` },
             { text: '2022/06/14 中暑', link: `${recordPrefix}/self/2022-06-14` },
