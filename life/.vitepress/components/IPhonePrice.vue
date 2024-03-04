@@ -2,13 +2,13 @@
     <div>
         <span>
             {{ " " }}
-            <button class="custom-button all-button" @click="filterModel(-1)">
+            <button class="custom-button all-button" @click="filterModel('')">
                 全部型号
             </button>
         </span>
-        <span v-for="(v, i) in iphoneModelName">
+        <span v-for="(v, i) in iPhoneModelName">
             {{ " " }}
-            <button class="custom-button" @click="filterModel(i)">
+            <button class="custom-button" @click="filterModel(v)">
                 {{ v }}
             </button>
         </span>
@@ -20,29 +20,33 @@
             <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
         </tr>
 
-        <tr v-for="(item, index) in iphoneModel" :key="index">
+        <tr v-for="(item, index) in iPhoneModelRef" :key="index">
             <td> {{ 'iPhone ' + item }} </td>
             <td class="table-text-center" v-for="(vv, ii) in capacity" :key="ii">
-                {{ iphonePrice[index][vv] ? '￥' + iphonePrice[index][vv] : '-' }}
+                {{ iPhonePriceRef[index][vv] ? '￥' + iPhonePriceRef[index][vv] : '-' }}
             </td>
         </tr>
     </table>
 
-    <EChartsModel :option="option" />
+
+    <details class="details custom-block">
+        <summary>图表</summary>
+        <EChartsModel :option="option" />
+    </details>
 </template>
   
-<script>
-import EChartsModel from "./EChartsModel.vue"
+<script setup lang="ts">
+import { onMounted, reactive, ref } from 'vue';
+import EChartsModel from "./EChartsModel.vue";
 
-import iphoneObj from '../data/iphone.json'
+import iPhoneObj from '../data/iPhone.json';
+import { isStringNumeric } from "../utils";
 
+const iPhoneCapacity = iPhoneObj.capacity;
+const year = iPhoneObj.year;
 
-
-const iphoneCapacity = iphoneObj.capacity
-const year = iphoneObj.year
-
-let iphoneModel = [];
-let iphonePrice = []
+let iPhoneModel: string[] = [];
+let iPhonePrice: number[] = [];
 
 
 let keys = Object.keys(year);
@@ -50,19 +54,19 @@ let keys = Object.keys(year);
 keys.forEach(key => {
     let subKeys = Object.keys(year[key]);
     subKeys.forEach(subKey => {
-        iphoneModel.push(year[key][subKey].name);
-        iphonePrice.push(year[key][subKey].price)
+        iPhoneModel.push(year[key][subKey].name);
+        iPhonePrice.push(year[key][subKey].price);
     });
 });
 
 
-const iphonePriceByModel = {};
-for (let cap of iphoneCapacity) {
-    if (!iphonePriceByModel[cap]) {
-        iphonePriceByModel[cap] = []
+const iPhonePriceByModel = {};
+for (let cap of iPhoneCapacity) {
+    if (!iPhonePriceByModel[cap]) {
+        iPhonePriceByModel[cap] = [];
     }
-    for (let objPrice of iphonePrice) {
-        iphonePriceByModel[cap].push(!objPrice[cap] ? 0 : objPrice[cap])
+    for (let objPrice of iPhonePrice) {
+        iPhonePriceByModel[cap].push(!objPrice[cap] ? 0 : objPrice[cap]);
     }
 }
 
@@ -73,23 +77,23 @@ const getCapacityName = (num) => {
     let unitIndex = Math.floor(exponent / 10);
 
 
-    let result = 2 ** num
+    let result = 2 ** num;
     if (result === 1024) {
         result = 1;
         unitIndex++;
     }
     const unit = powers[unitIndex];
     return `${result}${unit}`;
-}
+};
 
-const convertedCapacityName = iphoneCapacity.map(number => getCapacityName(number));
-
-
+const convertedCapacityName = iPhoneCapacity.map(number => getCapacityName(number));
 
 
-var app = {};
 
-var option;
+
+var app: any = {};
+
+var option: any;
 
 const posList = [
     'left',
@@ -209,7 +213,7 @@ option = {
         {
             type: 'category',
             axisTick: { show: false },
-            data: iphoneModel
+            data: iPhoneModel
         }
     ],
     xAxis: [
@@ -227,7 +231,7 @@ option = {
             emphasis: {
                 focus: 'series'
             },
-            data: iphonePriceByModel[iphoneCapacity[0]]
+            data: iPhonePriceByModel[iPhoneCapacity[0]]
         },
         {
             name: convertedCapacityName[1],
@@ -236,7 +240,7 @@ option = {
             emphasis: {
                 focus: 'series'
             },
-            data: iphonePriceByModel[iphoneCapacity[1]]
+            data: iPhonePriceByModel[iPhoneCapacity[1]]
         },
         {
             name: convertedCapacityName[2],
@@ -245,7 +249,7 @@ option = {
             emphasis: {
                 focus: 'series'
             },
-            data: iphonePriceByModel[iphoneCapacity[2]]
+            data: iPhonePriceByModel[iPhoneCapacity[2]]
         },
         {
             name: convertedCapacityName[3],
@@ -254,7 +258,7 @@ option = {
             emphasis: {
                 focus: 'series'
             },
-            data: iphonePriceByModel[iphoneCapacity[3]]
+            data: iPhonePriceByModel[iPhoneCapacity[3]]
         },
         {
             name: convertedCapacityName[4],
@@ -263,113 +267,127 @@ option = {
             emphasis: {
                 focus: 'series'
             },
-            data: iphonePriceByModel[iphoneCapacity[4]]
+            data: iPhonePriceByModel[iPhoneCapacity[4]]
         },
     ]
 };
 
-// console.log(iphoneObj)
+// console.log(iPhoneObj)
 
-// console.log("iphoneModel", iphoneModel);
-// console.log("iphonePrice", iphonePrice);
-// console.log("iphoneCapacity", iphoneCapacity);
+// console.log("iPhoneModel", iPhoneModel);
+// console.log("iPhonePrice", iPhonePrice);
+// console.log("iPhoneCapacity", iPhoneCapacity);
 
-// console.log("iphonePriceByModel", iphonePriceByModel);
+// console.log("iPhonePriceByModel", iPhonePriceByModel);
 // console.log("convertedCapacityName", convertedCapacityName);
 
 
 
-// const numberValues = iphoneModel.filter(item => !isNaN(Number(item)));
+// const numberValues = iPhoneModel.filter(item => !isNaN(Number(item)));
 // console.log(numberValues);
-// const numberIndices = iphoneModel.map((item, index) => {
+// const numberIndices = iPhoneModel.map((item, index) => {
 //     if (!isNaN(Number(item))) {
 //         return index;
 //     }
 // }).filter(index => index !== undefined);
 // console.log(numberIndices);
 
-const miniModels = [];
-const numModels = [];
-const plusModels = [];
-const proModels = [];
-const proMaxModels = [];
+type ModelInfo = {
+    value: string,
+    index: number,
+};
+
+// key num value {model, index}
+let allModels: Map<string, ModelInfo[]> = new Map();
+
+let iPhoneModelName = ['mini', '数字版', 'Plus', 'Pro', 'Pro Max'];
+iPhoneModel.forEach(value => {
+    let numbers = value.match(/\d+/g);
+    if (numbers) {
+        const key = numbers[0];
+        if (iPhoneModelName.indexOf(key) == -1) {
+            iPhoneModelName.push(key);
+        }
+    }
+});
 
 
-for (let i = 0; i < iphoneModel.length; i++) {
-    if (iphoneModel[i].includes("mini")) {
-        miniModels.push({ value: iphoneModel[i], index: i });
+function pushToModel(name: string, value: string, i: number) {
+    let curValue = allModels.get(name);
+    if (!curValue) {
+        curValue = [];
     }
-    if (!isNaN(iphoneModel[i])) {
-        numModels.push({ value: iphoneModel[i], index: i });
-    }
-    if (iphoneModel[i].includes("Plus")) {
-        plusModels.push({ value: iphoneModel[i], index: i });
-    }
-    if (iphoneModel[i].includes("Pro") && !iphoneModel[i].includes("Pro Max")) {
-        proModels.push({ value: iphoneModel[i], index: i });
-    }
-    if (iphoneModel[i].includes("Pro Max")) {
-        proMaxModels.push({ value: iphoneModel[i], index: i });
-    }
+    curValue.push({ value, index: i });
+    allModels.set(name, curValue);
+}
+
+
+for (let i = 0; i < iPhoneModel.length; i++) {
+    const value = iPhoneModel[i];
+    iPhoneModelName.forEach(name => {
+
+        if (name === '数字版') {
+            if (isStringNumeric(value)) {
+                pushToModel(name, value, i);
+            }
+        } else if (name === 'Pro') {
+            if (value.includes(name) && !value.includes("Pro Max")) {
+                pushToModel(name, value, i);
+            }
+        } else {
+            if (value.includes(name)) {
+                pushToModel(name, value, i);
+            }
+        }
+
+    });
 }
 
 const indices = (obj) => obj.map(item => item.index);
 const extractedValues = (sourceArr, indexArr) => indexArr.map(index => sourceArr[index]);
 
-// console.log("Models with 'mini':", miniModels);
-// console.log("Models only number:", numModels);
-// console.log("Models with 'Plus':", plusModels);
-// console.log("Models with 'Pro':", proModels);
-// console.log("Models with 'Pro Max':", proMaxModels);
+// console.log("Models:", allModels);
 
 
-export default {
-    name: "Airfare",
-    components: {
-        EChartsModel,
-    },
-    data() {
-        return {
-            option: option,
-            capacity: iphoneCapacity,
-            capacityName: convertedCapacityName,
-            iphoneModel: iphoneModel,
-            iphonePrice: iphonePrice,
-            iphoneModelName: ['mini', '数字版', 'Plus', 'Pro', 'Pro Max'],
-        };
-    },
-    methods: {
-        // 0 mini 1 number 2 plus 3 pro 4 pm
-        filterModel(model) {
-            if (model === -1) {
-                this.iphoneModel = iphoneModel
-                this.iphonePrice = iphonePrice
-                return
-            }
+const capacity = iPhoneCapacity;
+const capacityName = convertedCapacityName;
 
-            const models = [miniModels, numModels, plusModels, proModels, proMaxModels]
-            const indexModels = models.map(obj => indices(obj));
+let iPhoneModelRef = ref(iPhoneModel);
+let iPhonePriceRef = ref(iPhonePrice);
 
-            // console.log("indexModels", indexModels)
-            // console.log("extracted iphoneModel", extractedValues(iphoneModel, indexModels[model]))
-            // console.log("extracted iphonePrice", extractedValues(iphonePrice, indexModels[model]))
+const filterModel = (model: string) => {
+    if (model === '') {
+        iPhoneModelRef.value = iPhoneModel;
+        iPhonePriceRef.value = iPhonePrice;
+        return;
+    }
+
+    const itModelsInfo = allModels.get(model)?.values();
+    let indexModels: number[] = [];
+    if (itModelsInfo) {
+        indexModels = [...itModelsInfo].map(item => item.index);
+    }
+
+    // console.log("indexModels", indexModels);
+
+    iPhoneModelRef.value = extractedValues(iPhoneModel, indexModels);
+    iPhonePriceRef.value = extractedValues(iPhonePrice, indexModels);
+    // console.log("iPhoneModelRef", iPhoneModelRef);
+    // console.log("iPhonePriceRef", iPhonePriceRef);
+
+    const result = {};
+    for (const key in iPhonePriceByModel) {
+        result[key] = indexModels.map(index => iPhonePriceByModel[key][index]);
+    }
+
+    // console.log(iPhonePriceByModel, result);
+
+    for (let i = 0; i <= iPhoneCapacity.length; i++) {
+        option.series[i].data = result[iPhoneCapacity[i]];
+    }
+    option = option;
 
 
-            this.iphoneModel = extractedValues(iphoneModel, indexModels[model])
-            this.iphonePrice = extractedValues(iphonePrice, indexModels[model])
-
-            const result = {};
-            for (const key in iphonePriceByModel) {
-                result[key] = indexModels[model].map(index => iphonePriceByModel[key][index]);
-            }
-
-            for (let i in 4) {
-                option.series[i].data = result[iphoneCapacity[i]]
-            }
-            this.option = option
-
-        },
-    },
 };
 </script>
 
