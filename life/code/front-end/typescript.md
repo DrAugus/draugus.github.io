@@ -62,4 +62,8 @@ function removeSubArrayWithDuplicates<T>(source: T[], toRemove: T[]): T[] {
     });
     return tmpSource;
 }
+
+function getEnumKey(enumObj: any, enumValue: any): string | undefined {  
+    return Object.keys(enumObj).find(key => enumObj[key] === enumValue);  
+}
 ```

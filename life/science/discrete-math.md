@@ -1,5 +1,12 @@
 # 离散数学
 
+<style>
+/* .MathJax{
+  overflow-x: auto;
+  overflow-y: hidden;
+} */
+</style>
+
 :::tip 要学到的
 离散数学基础: 集合、偏序集、良序、数学归纳法、级数、递归、递推
 :::

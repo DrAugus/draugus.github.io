@@ -368,6 +368,7 @@ const sidebarCodeAPI = () => [
     { text: 'API', link: '/code/api/' },
     { text: 'Wikipedia', link: '/code/api/wikipedia' },
     { text: 'mihoyo', link: '/code/api/mihoyo' },
+    { text: '高德地图', link: '/code/api/amap' },
 ];
 const sidebarCodeNotes = () => [
     { text: '指南', link: '/code-notes/' },
