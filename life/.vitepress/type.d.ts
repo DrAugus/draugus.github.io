@@ -46,12 +46,14 @@ export interface ChinaExploreRecordItem {
   // 市区拼音
   id: string,
   info: ExploreInfo[];
+  resident?: boolean,
 }
 
 export interface ChinaExploreRecord {
   // 省区/直辖市拼音
   id: string,
   info?: ExploreInfo[];
+  resident?: boolean,
   items?: ChinaExploreRecordItem[],
 }
 

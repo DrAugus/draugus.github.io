@@ -73,7 +73,43 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
             },
         ]
     },
-    { id: '上海' },
+    {
+        id: '上海', info: [
+            {
+                date: {
+                    start: new Date('2021/10/02'),
+                },
+                intro: "游玩"
+            },
+            {
+                date: {
+                    start: new Date('2022/09/07'),
+                },
+                intro: "高铁转车，苏州-杭州"
+            }, {
+                date: {
+                    start: new Date('2023/03/11'),
+                    end: new Date('2023/03/12'),
+                },
+                intro: "游玩"
+            }, {
+                date: {
+                    start: new Date('2023/06/22'),
+                },
+                intro: "浦东坐飞机"
+            }, {
+                date: {
+                    start: new Date('2023/06/26'),
+                },
+                intro: "浦东坐飞机"
+            }, {
+                date: {
+                    start: new Date('2023/10/06'),
+                },
+                intro: "高铁转车"
+            },
+        ]
+    },
     { id: '天津' },
     {
         id: '福建',
@@ -106,15 +142,71 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
     {
         id: '广东',
         items: [
-            { id: '广州', info: [] },
-            { id: '深圳', info: [] },
+            {
+                id: '广州', info: [
+                    {
+                        date: {
+                            start: new Date('2023/04/29'),
+                            end: new Date('2023/05/01'),
+                        },
+                        intro: "游玩"
+                    }, {
+                        date: {
+                            start: new Date('2023/06/30'),
+                        },
+                        intro: "高铁转车"
+                    }
+                ]
+            },
+            {
+                id: '深圳', info: [{
+                    date: {
+                        start: new Date('2023/05/01'),
+                        end: new Date('2023/05/03'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2023/06/28'),
+                    },
+                    intro: "转车去香港"
+                }]
+            },
         ]
     },
     {
         id: '广西',
         items: [
-            { id: '柳州', info: [] },
-            { id: '南宁', info: [] },
+            {
+                id: '柳州', info: [{
+                    date: {
+                        start: new Date('2023/06/30'),
+                        end: new Date('2023/07/02'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2023/10/20'),
+                        end: new Date('2023/10/22'),
+                    },
+                    intro: "游玩"
+                },]
+            },
+            {
+                id: '南宁', info: [{
+                    date: {
+                        start: new Date('2022/05/27'),
+                        end: new Date('2022/05/29'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2023/06/10'),
+                        end: new Date('2023/06/12'),
+                    },
+                    intro: "游玩"
+                },]
+            },
         ]
     },
     {
@@ -126,36 +218,149 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
     {
         id: '江苏',
         items: [
-            { id: '南京', info: [] },
-            { id: 'suzhou', info: [] },
-            { id: 'wuxi', info: [] },
-            { id: 'yangzhou', info: [] },
+            {
+                id: '南京', info: [{
+                    date: {
+                        start: new Date('2023/02/25'),
+                        end: new Date('2023/02/26'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2023/08/09'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/01/01'),
+                    },
+                    intro: "送机"
+                },]
+            },
+            {
+                id: '苏州', info: [{
+                    date: {
+                        start: new Date('2016/08/02'),
+                        end: new Date('2016/08/05'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2022/09/06'),
+                        end: new Date('2022/09/07'),
+                    },
+                    intro: "游玩"
+                },]
+            },
+            { id: '无锡', info: [] },
+            { id: '扬州', info: [] },
         ]
     },
     {
-        id: 'sichuan',
+        id: '四川',
         items: [
-            { id: 'chengdu', info: [] },
+            {
+                id: '成都',
+                info: [{
+                    date: {
+                        start: new Date('2020/07/28'),
+                        end: new Date('2021/04/28'),
+                    },
+                    intro: "工作"
+                },],
+                resident: true
+            },
         ]
     },
     {
-        id: 'yunnan',
+        id: '辽宁',
         items: [
-            { id: 'dali', info: [] },
-            { id: 'kunming', info: [] },
-            { id: 'lijiang', info: [] },
-            { id: 'xishuangbanna', info: [] },
+            {
+                id: '沈阳',
+                info: [{
+                    date: {
+                        start: new Date('2014/09/01'),
+                        end: new Date('2020/07/28'),
+                    },
+                    intro: "学习，工作"
+                },],
+                resident: true
+            },
         ]
     },
     {
-        id: 'sichuan',
+        id: '云南',
         items: [
-            { id: 'hangzhou', info: [] },
-            { id: 'jinhua', info: [] },
-            { id: 'shaoxing', info: [] },
-            { id: 'taizhou', info: [] },
-            { id: 'wenzhou', info: [] },
-            { id: 'zhoushan', info: [] },
+            {
+                id: '大理白族自治州', info: [{
+                    date: {
+                        start: new Date('2022/08/14'),
+                        end: new Date('2022/08/15'),
+                    },
+                    intro: "游玩"
+                },]
+            },
+            {
+                id: '昆明', info: [{
+                    date: {
+                        start: new Date('2022/08/13'),
+                        end: new Date('2022/08/15'),
+                    },
+                    intro: "游玩"
+                },]
+            },
+            { id: '丽江', info: [] },
+            {
+                id: '西双版纳傣族自治州', info: [{
+                    date: {
+                        start: new Date('2022/08/12'),
+                        end: new Date('2022/08/13'),
+                    },
+                    intro: "游玩"
+                },]
+            },
+        ]
+    },
+    {
+        id: '浙江',
+        items: [
+            {
+                id: '杭州',
+                resident: true,
+                info: [{
+                    date: {
+                        start: new Date('2021/04/03'),
+                        end: new Date('2021/04/05'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2021/04/28'),
+                    },
+                    intro: "工作"
+                },]
+            },
+            {
+                id: '绍兴', info: [{
+                    date: {
+                        start: new Date('2021/10/03'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2023/04/22'),
+                    },
+                    intro: "游玩"
+                },]
+            },
+            {
+                id: '舟山', info: [{
+                    date: {
+                        start: new Date('2023/04/15'),
+                    },
+                    intro: "游玩"
+                },]
+            },
         ]
     },
 ];

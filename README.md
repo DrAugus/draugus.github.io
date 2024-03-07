@@ -7,7 +7,7 @@
 | site | [github pages][new-repo] | source | tech|
 | :--: |:--: |:--: | :--:|
 | main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vitepress][vitepress] [vue3][vue] |
-| life | [online][site6-1] | [life](./life/) | [vitepress][vitepress] [vue3][vue] |
+| life | [online][site6-1] [online2][pilot] | [life](./life/) | [vitepress][vitepress] [vue3][vue] |
 
 ## Develop
 

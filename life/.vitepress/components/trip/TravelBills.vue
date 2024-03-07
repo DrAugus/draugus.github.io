@@ -8,7 +8,8 @@
             <blockquote>
                 当前已消费
                 <b>{{ ' ¥' + v }}
-                    <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)"></Badge>
+                    <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)">
+                    </Badge>
                 </b>
                 <br />
                 剩余可支配 {{ ' ¥' + (budget[k] - v) }}
@@ -21,12 +22,13 @@
     <TitleFormat :title="'支出'" :number="2"></TitleFormat>
 
     <div v-for="(v, k, i) in vTrip">
-        <h3>{{ k + '年' }}</h3>
+        <TitleFormat :title="k + '年'" :number="3"></TitleFormat>
         <p v-for="(vv, ii) in v">
             <b>{{ vv.name }}</b> <br />
             <span class="italic">{{ modifyDate(vv.start) + ' ~ ' + modifyDate(vv.end) }}</span><br />
             <span><b>总计{{ ' ￥' + vv.sum }}</b>
-                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
+                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)">
+                </Badge>
             </span>
             <br />
             <span v-if="vv.intro.tips">
@@ -60,12 +62,13 @@
         <ul>
             <li v-for="(vv, ii) in v">
                 {{ vv.name }}: {{ vv.sum }}
-                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)"></Badge>
+                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)">
+                </Badge>
             </li>
         </ul>
     </div>
 </template>
-  
+
 <script setup lang="ts">
 import { TRAVEL_BILLS, LARGE_TRAVEL_PACKAGE, TRAVEL_BUDGET } from "../../data/trip/bill";
 import { LargeTravelPackage, TravelBill } from "../../type";
@@ -148,7 +151,7 @@ const budget: {
     [key: number]: number;
 } = TRAVEL_BUDGET;
 </script>
-  
+
 <style scoped>
 .italic {
     font-style: italic;
@@ -158,4 +161,3 @@ const budget: {
     text-decoration: underline;
 }
 </style>
-  

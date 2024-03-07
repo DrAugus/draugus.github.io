@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
 // import AMapLoader from "@amap/amap-jsapi-loader";
 
@@ -68,14 +68,31 @@ function extractCityAndTimes(data) {
   return data.reduce((acc, item) => {
     // 检查当前项是否有 info 字段  
     if (item.info) {
-      acc.push({ city: item.id, times: item.info.length });
+      let obj = {
+        city: item.id,
+        times: item.info.length,
+        resident: false
+      };
+      if (item.resident) {
+        obj.resident = item.resident;
+      }
+      acc.push(obj);
     }
     // 检查当前项是否有 items 字段，并遍历 items  
     if (item.items) {
       item.items.forEach(subItem => {
         // 检查子项是否有 info 字段  
         if (subItem.info && subItem.info.length) {
-          acc.push({ city: subItem.id, times: subItem.info.length });
+
+          let obj = {
+            city: subItem.id,
+            times: subItem.info.length,
+            resident: false
+          };
+          if (subItem.resident) {
+            obj.resident = subItem.resident;
+          }
+          acc.push(obj);
         }
       });
     }
@@ -84,16 +101,18 @@ function extractCityAndTimes(data) {
 }
 
 const cityVisitedTimes = extractCityAndTimes(visitedData);
-console.log(cityVisitedTimes);
+// console.log(cityVisitedTimes);
 
 const getMarkers = (AMap) => {
   let markers = [];
   for (let cityInfo of cityVisitedTimes) {
 
     const city = cityInfo.city;
+    const content = city + ': ' + (cityInfo.resident ? "永居" : cityInfo.times);
 
     let curCityData = findInCities(city);
-    let number = 100;
+    let number = cityInfo.times;
+    if (cityInfo.resident) number += 100;
     if (curCityData && number) {
       let color = getColorByNumber(number);
       textStyle.backgroundColor = color;
@@ -102,7 +121,7 @@ const getMarkers = (AMap) => {
         position: [curCityData.x, curCityData.y],
         zIndex: number,
         text: {
-          content: city + ': ' + cityInfo.times,
+          content: content,
           direction: 'center',
           style: textStyle,
         }
