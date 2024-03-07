@@ -78,6 +78,7 @@ export interface TimelineHomeHero {
 export interface WishAll {
   characters: Wish[],
   weapons: Wish[],
+  chronicled?: Wish[];
 }
 
 export interface Wish {
@@ -87,8 +88,13 @@ export interface Wish {
   start: string,
   end: string,
   version?: string,
-  wish5star?: string[],
+  wish5star?: string[] | WishMixed,
   wish4star?: string[],
   wishName?: string[],
   url?: string[] | string,
+}
+
+export interface WishMixed {
+  characters: string[],
+  weapons: string[],
 }

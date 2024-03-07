@@ -5,6 +5,23 @@ import { WishAll } from "../type";
 // ver2.6 下半因上海疫情封城拖延
 // 3.0 3.1 3.2 三个版本时间缩短 或许跟上面有关系吧 均为34天 16+18 /35days/
 export const WISH: WishAll = {
+  chronicled: [
+    {
+      name: [""],
+      image: [1],
+      shortName: [],
+      start: "2024-03-13 11:00:00 +0800",
+      end: "2024-04-02 17:59:59 +0800",
+      version: "4.5",
+      wish5star: {
+        characters: [],
+        weapons: []
+      },
+      wish4star: [],
+      wishName: [],
+      url: []
+    },
+  ],
   characters: [
     {
       name: ["Ballad in Goblets"],
@@ -1252,5 +1269,5 @@ export const WISH: WishAll = {
       start: "2024-02-20 18:00:00 +0800",
       end: "2024-03-12 14:59:59 +0800",
     },
-  ]
+  ],
 };
