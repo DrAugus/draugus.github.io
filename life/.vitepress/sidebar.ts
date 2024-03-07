@@ -38,7 +38,7 @@ const sidebarTrip = () => [
     { text: '规划指南', link: '/trip/' },
     { text: '出门检查', link: '/trip/check' },
     { text: '旅行账单', link: '/trip/bill' },
-    // { text: '探索', link: '/trip/explore' },
+    { text: '探索', link: '/trip/explore' },
 
     {
         text: '出行', collapsed: false, items: [

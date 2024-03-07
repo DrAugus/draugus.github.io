@@ -31,14 +31,27 @@ export interface CardData {
   items: CardLink[],
 }
 
+interface DateRange {
+  start: Date,
+  // 无 end 则只有一天
+  end?: Date,
+}
+
+interface ExploreInfo {
+  date: DateRange,
+  intro: string,
+}
+
 export interface ChinaExploreRecordItem {
   // 市区拼音
   id: string,
+  info: ExploreInfo[];
 }
 
 export interface ChinaExploreRecord {
   // 省区/直辖市拼音
   id: string,
+  info?: ExploreInfo[];
   items?: ChinaExploreRecordItem[],
 }
 

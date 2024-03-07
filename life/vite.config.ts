@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 // refer
 //  https://github.com/ecomfe/vue-echarts/issues/652#issuecomment-1250203941
@@ -7,7 +7,11 @@ import { defineConfig } from 'vite'
 //   
 export default defineConfig({
     ssr: {
-        noExternal: ['echarts', 'vue-echarts', 'resize-detector', 'zrender'],
+        noExternal: [
+            'echarts', 'vue-echarts',
+            'resize-detector', 'zrender',
+            '@amap/amap-jsapi-loader', 'AMapLoader'
+        ],
     },
     // https://vitejs.dev/config/server-options.html#server-proxy
     server: {
@@ -18,4 +22,4 @@ export default defineConfig({
             }
         }
     },
-})
+});

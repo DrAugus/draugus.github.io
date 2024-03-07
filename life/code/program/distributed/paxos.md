@@ -76,7 +76,7 @@ paxos的工作, 就是把一堆运行的机器协同起来, 让多个机器成�
 
 如果磁盘在复制前损坏：数据丢失
 
-```sequence
+```txt
 autonumber
 Client ->> Master: 
 Master ->> Client: 
@@ -103,7 +103,7 @@ Slave.2-->>Master:
 - 没有数据丢失
 - 可用性降低
 
-```sequence
+```txt
 autonumber
 Client ->> Master: 
 Master->>Slave.1: 
@@ -130,7 +130,7 @@ Master -->> Client:
 - 高可用性
 - 可能任何从库都不完整
 
-```sequence
+```txt
 autonumber
 Client ->> Master: 
 Master->>Slave.1: 
@@ -156,7 +156,7 @@ $W + R > N ;R>=\frac{N}{2}+1$
 
 容忍最多$\frac{N-1}{2}$个节点损坏
 
-```sequence
+```txt
 autonumber
 Client ->> Node.1: 
 Client ->> Node.2: 
