@@ -11,6 +11,11 @@ export const NAV_DATA: CardData[] = [
         link: 'https://www.latexlive.com/'
       },
       {
+        title: 'Image Online',
+        desc: '在线制作gif图像',
+        link: 'https://gif.imageonline.co/cn/'
+      },
+      {
         // icon: '',
         title: 'I💕IMG',
         desc: '可批量编辑图片 的所有工具',

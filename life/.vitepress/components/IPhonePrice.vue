@@ -1,4 +1,8 @@
 <template>
+
+
+    <TitleFormat :title="'价格'" :number="2"></TitleFormat>
+
     <div>
         <span>
             {{ " " }}
@@ -16,12 +20,15 @@
 
     <table>
         <tr>
-            <th></th>
+            <th>型号</th>
+            <th>发售日</th>
             <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
         </tr>
 
-        <tr v-for="(item, index) in iPhoneModelRef" :key="index">
+        <tr v-for="(item, index) in iPhoneModelRef" :key="index"
+            :style="{ backgroundColor: getModelBgColor('iPhone ' + item) }">
             <td> {{ 'iPhone ' + item }} </td>
+            <td> {{ getModelDate('iPhone ' + item) }}</td>
             <td class="table-text-center" v-for="(vv, ii) in capacity" :key="ii">
                 {{ iPhonePriceRef[index][vv] ? '￥' + iPhonePriceRef[index][vv] : '-' }}
             </td>
@@ -34,13 +41,15 @@
         <EChartsModel :option="option" />
     </details>
 </template>
-  
+
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
 import EChartsModel from "./EChartsModel.vue";
+import TitleFormat from './TitleFormat.vue';
+import { IPHONE_MODELS } from '../data/iPhoneModels';
 
 import iPhoneObj from '../data/iPhone.json';
-import { isStringNumeric } from "../utils";
+import { ColorScheme, extractNumbers, getColorScheme, isStringNumeric, modifyDate } from "../utils";
 
 const iPhoneCapacity = iPhoneObj.capacity;
 const year = iPhoneObj.year;
@@ -300,7 +309,7 @@ type ModelInfo = {
 // key num value {model, index}
 let allModels: Map<string, ModelInfo[]> = new Map();
 
-let iPhoneModelName = ['mini', '数字版', 'Plus', 'Pro', 'Pro Max'];
+let iPhoneModelName = ['Mini', '数字版', 'Plus', 'Pro', 'Pro Max'];
 iPhoneModel.forEach(value => {
     let numbers = value.match(/\d+/g);
     if (numbers) {
@@ -386,9 +395,47 @@ const filterModel = (model: string) => {
         option.series[i].data = result[iPhoneCapacity[i]];
     }
     option = option;
-
-
 };
+
+
+const model2map = () => {
+    let map: Map<string, { announced: Date, gen: number, }> = new Map();
+    IPHONE_MODELS.forEach(v => {
+        const model = v.model;
+        const announced = v.announced;
+        const gen = v.generation;
+        if (typeof model === 'string') {
+            map.set(model, { announced, gen, });
+        } else {
+            model.forEach(vv => {
+                map.set(vv, { announced, gen, });
+            });
+        }
+    });
+    return map;
+};
+const mapModels = model2map();
+// console.log(mapModels)
+
+const getModelDate = (model: string) => {
+    const value = mapModels.get(model);
+    if (value === undefined) {
+        return '';
+    }
+    return modifyDate(value.announced);
+};
+
+const getModelBgColor = (model: string): string => {
+    const value = mapModels.get(model);
+    if (value === undefined) {
+        return '';
+    }
+    const gen = value.gen;
+    const color = getColorScheme(ColorScheme.FreshGrassAndWood);
+    const key = gen % color.length;
+    return color[key];
+}
+
 </script>
 
 <style scoped>
@@ -418,4 +465,3 @@ const filterModel = (model: string) => {
     background-color: #33d6ff;
 }
 </style>
-  

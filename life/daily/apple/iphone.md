@@ -10,7 +10,7 @@ import IPhonePrice from '../../.vitepress/components/IPhonePrice.vue'
 以上价格均为官网首发价
 :::
 
-iPhone 选择
+## iPhone 选择
 
 11pro 弃用
 

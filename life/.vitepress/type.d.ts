@@ -124,3 +124,9 @@ export interface Certificate {
   cycle?: string,
   link: string,
 }
+
+export interface AppleModels {
+  generation: number,
+  model: string | string[],
+  announced: Date,
+}

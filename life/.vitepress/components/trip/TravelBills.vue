@@ -72,15 +72,8 @@
 <script setup lang="ts">
 import { TRAVEL_BILLS, LARGE_TRAVEL_PACKAGE, TRAVEL_BUDGET } from "../../data/trip/bill";
 import { LargeTravelPackage, TravelBill } from "../../type";
+import { modifyDate } from "../../utils";
 import TitleFormat from "../TitleFormat.vue";
-
-const modifyDate = (date) =>
-    date.toLocaleDateString('zh-CN', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-    });
-
 
 let vOther: {
     [key: number]: LargeTravelPackage[];

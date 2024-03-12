@@ -36,10 +36,9 @@
 <script>
 import EChartsModel from "../EChartsModel.vue";
 import { AIRFARE_DATA } from "../../data/trip/airfare";
+import { modifyDate1 } from "../../utils";
 
-const modifyDate = (date) => `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
-
-let getAllDate = AIRFARE_DATA.map(obj => modifyDate(obj.date))
+let getAllDate = AIRFARE_DATA.map(obj => modifyDate1(obj.date))
 const getAllDateModify = AIRFARE_DATA.map(obj => obj.dateModify)
 getAllDate.forEach((date, index) => {
     getAllDate[index] = date + getAllDateModify[index]
