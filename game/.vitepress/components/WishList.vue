@@ -1,10 +1,19 @@
 <template>
-  <br />
-  <a @click="sortLast">最近排序</a> |
-  <a @click="sortEarly">最远排序</a>
-  <br><br>
 
-  <div v-for="(v, i) in wishChar" :key="i">
+
+  <div v-if="refChronicled">
+    <h2>集录{{ wishName }}</h2>
+  </div>
+
+
+  <h2>限定{{ wishName }}</h2>
+
+  <p>
+    <a @click="sortLast">最近排序</a> |
+    <a @click="sortEarly">最远排序</a>
+  </p>
+
+  <div v-for="(v, i) in refWishChar" :key="i">
 
     <div class="wish-container">
       <span class="wish-version" v-bind:title="getWishDate(v.start, v.end)">{{ v.version }}</span>
@@ -42,69 +51,60 @@
     </div>
   </div>
 </template>
-  
-<script>
 
+<script setup lang="ts">
 
-import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs, GameName, getGameName } from "./utils";
+import { onMounted, onUnmounted, ref } from "vue";
+import { WishAll } from "./type";
+import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs, GameName, getGameName, getWishName } from "./utils";
 
+const props = defineProps<{
+  WISH: WishAll,
+  CHARACTER: Object,
+  WISH_TEXT: {
+    type: GameName,
+    default: GameName.Genshin;
+  };
+}>();
 
+const wishChar = props.WISH.characters;
+const gameName = getGameName(props.WISH_TEXT);
+const wishName = getWishName(props.WISH_TEXT);
+const chronicled = props.WISH.chronicled;
 
-export default {
-  name: "WishList",
-  data() {
-    return {
-      wishChar: this.WISH.characters,
-      gameName: getGameName(this.WISH_TEXT),
-    };
-  },
-  props: {
-    WISH: {
-      type: Object,
-      required: true,
-    },
-    CHARACTER: {
-      type: Object,
-      required: true,
-    },
-    // 0 genshin 1 hsr
-    WISH_TEXT: {
-      type: Number,
-      required: true,
-      default: GameName.Genshin
-    },
-  },
-  methods: {
-    sortLast() {
-      this.wishChar = this.wishChar.sort((a, b) => compareDayjs(a.end, b.end))
-    },
-    sortEarly() {
-      this.wishChar = this.wishChar.sort((a, b) => compareDayjs(b.end, a.end))
-    },
+let refWishChar = ref(wishChar);
+let refChronicled = ref(chronicled);
 
-    replaceImg(event) {
-      event.target.src = '/image/genshin/characters/paimon_faq.png'
-    },
-    getCharAvatar(id) {
-      return composeCharSrc(this.WISH_TEXT, id)
-    },
-    getCharNameZh(id) {
-      return this.CHARACTER[replaceAndLow(id)]?.name
-    },
-    getCharEle(id) {
-      return replaceAndLow(this.CHARACTER[replaceAndLow(id)]?.ele.id)
-    },
-    getWishDate(s, e) {
-      return formatDayjs(s) + ' ~ ' + formatDayjs(e)
-    },
-  },
-  async mounted() {
-    // default
-    this.sortEarly()
-  }
+const sortLast = () => {
+  refWishChar.value = refWishChar.value.sort((a, b) => compareDayjs(a.end, b.end));
 };
+const sortEarly = () => {
+  refWishChar.value = refWishChar.value.sort((a, b) => compareDayjs(b.end, a.end));
+};
+
+const replaceImg = (event) => {
+  event.target.src = '/image/genshin/characters/paimon_faq.png';
+};
+const getCharAvatar = (id) => {
+  return composeCharSrc(props.WISH_TEXT, id);
+};
+const getCharNameZh = (id) => {
+  return props.CHARACTER[replaceAndLow(id)]?.name;
+};
+const getCharEle = (id) => {
+  return replaceAndLow(props.CHARACTER[replaceAndLow(id)]?.ele.id);
+};
+const getWishDate = (s, e) => {
+  return formatDayjs(s) + ' ~ ' + formatDayjs(e);
+};
+
+onMounted(async () => {
+  sortEarly();
+})
+
+
 </script>
-  
+
 <style scoped>
 .wish-container {
   display: flex;
@@ -233,5 +233,3 @@ export default {
 
 }
 </style>
-  
-  

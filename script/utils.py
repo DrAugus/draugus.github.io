@@ -4,6 +4,7 @@ import requests
 import inspect
 
 from functools import wraps
+from datetime import datetime
 
 
 def log_args(func):
@@ -184,12 +185,12 @@ def get_duration(text):
         def got_dur(start: str, end: str):
             if start != None and end != None:
                 arr.append({
-                    'start_time': start,
-                    'end_time': end
+                    'start_time': format_date(start),
+                    'end_time': format_date(end)
                 })
 
         time_match = re.search(
-            r"(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})", find_des)
+            r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des)
         if time_match:
             version_match = re.search(r"Version (\d+\.\d+)", find_des)
             if version_match:
@@ -198,7 +199,7 @@ def get_duration(text):
                 version = None
 
             time_match = re.search(
-                r"(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})", find_des)
+                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des)
             if time_match:
                 time = time_match.group(1)
             else:
@@ -210,7 +211,7 @@ def get_duration(text):
                 return
 
             # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})'
+            pattern = r'(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})'
             # 使用正则表达式搜索所有匹配的时间
             matches = re.findall(pattern, find_des)
             # 检查是否找到了两个匹配的时间，表示开始和结束时间
@@ -232,7 +233,7 @@ def get_duration(text):
                 version = None
 
             time_match = re.search(
-                r"(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})", find_des)
+                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des)
             if time_match:
                 time = time_match.group(1)
             else:
@@ -247,7 +248,7 @@ def get_duration(text):
         # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
         if 'Event Duration' in find_des and 'server time' in find_des:
             # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{2}/\d{2}\s+\d{2}:\d{2}:\d{2})'
+            pattern = r'(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})'
             # 使用正则表达式搜索所有匹配的时间
             matches = re.findall(pattern, find_des)
             # 检查是否找到了两个匹配的时间，表示开始和结束时间
@@ -264,3 +265,20 @@ def get_duration(text):
     got_insert_info(text, append_match)
 
     return arr
+
+
+# original_time_str = "2024/4/2  17:59:59"
+def format_date(original_time_str):
+    # 去除多余的空格
+    normalized_time_str = re.sub(r'\s+', ' ', original_time_str.strip())
+
+    # 尝试将字符串解析为datetime对象
+    try:
+        dt = datetime.strptime(normalized_time_str, '%Y/%m/%d %H:%M:%S')
+        # 格式化datetime对象为xxxx/xx/xx xx:xx:xx形式
+        standardized_time_str = dt.strftime('%Y/%m/%d %H:%M:%S')
+        print("标准化后的时间字符串:", standardized_time_str)
+        return standardized_time_str
+    except ValueError as e:
+        print("无法解析时间字符串:", e)
+        return original_time_str

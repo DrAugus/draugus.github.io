@@ -7,18 +7,21 @@ import { WishAll } from "../type";
 export const WISH: WishAll = {
   chronicled: [
     {
-      name: [""],
+      name: ["Ode to the Dawn Breeze"],
       image: [1],
       shortName: [],
       start: "2024-03-13 11:00:00 +0800",
       end: "2024-04-02 17:59:59 +0800",
       version: "4.5",
       wish5star: {
-        characters: [],
-        weapons: []
+        characters: ['Eula', 'Mona', 'Albedo', 'Klee', 'Diluc', 'Jean'],
+        weapons: ['Skyward Blade', 'Aquila Favonia', 'Beacon of the Reed Sea', 'Song of Broken Pines', "Wolf's Gravestone", 'Skyward Pride', 'Skyward Spine', 'Lost Prayer to the Sacred Winds', 'Skyward Atlas', "Hunter's Path", 'Skyward Harp']
       },
-      wish4star: [],
-      wishName: [],
+      wish4star: {
+        characters: ['Mika', 'Rosaria', 'Sucrose', 'Diona', 'Noelle', 'Bennett', 'Fischl', 'Amber', 'Razor', 'Kaeya', 'Barbara', 'Lisa'],
+        weapons: ['The Alley Flash', "Lion's Roar", 'Sacrificial Sword', 'The Flute', 'Favonius Sword', 'Rainslasher', 'Sacrificial Greatsword', 'The Bell', 'Favonius Greatsword', 'Favonius Lance', "Dragon's Bane", 'Wine and Song', 'Eye of Perception', 'Sacrificial Fragments', 'The Widsith', 'Favonius Codex', 'Mitternachts Waltz', 'Alley Hunter', 'Rust', 'Sacrificial Bow', 'The Stringless', 'Favonius Warbow']
+      },
+      wishName: ['晨风之诗'],
       url: []
     },
   ],
@@ -32,7 +35,7 @@ export const WISH: WishAll = {
       version: "1.0",
       wish5star: ["venti"],
       wish4star: ["barbara", "fischl", "xiangling"],
-      wishName: ["「杯装之诗」"],
+      wishName: ["杯装之诗"],
       url: ["1748378"]
     },
     {
@@ -44,7 +47,7 @@ export const WISH: WishAll = {
       version: "1.0",
       wish5star: ["klee"],
       wish4star: ["xingqiu", "sucrose", "noelle"],
-      wishName: ["「闪焰的驻足」"],
+      wishName: ["闪焰的驻足"],
       url: ["2277693"]
     },
     {
@@ -56,7 +59,7 @@ export const WISH: WishAll = {
       version: "1.1",
       wish5star: ["tartaglia"],
       wish4star: ["ningguang", "beidou", "diona"],
-      wishName: ["「暂别冬都」"],
+      wishName: ["暂别冬都"],
       url: ["2563525"]
     },
     {
@@ -68,7 +71,7 @@ export const WISH: WishAll = {
       version: "1.1",
       wish5star: ["zhongli"],
       wish4star: ["xinyan", "razor", "chongyun"],
-      wishName: ["「陵薮市朝」"],
+      wishName: ["陵薮市朝"],
       url: ["2878243"]
     },
     {
@@ -80,7 +83,7 @@ export const WISH: WishAll = {
       version: "1.2",
       wish5star: ["albedo"],
       wish4star: ["fischl", "bennett", "sucrose"],
-      wishName: ["「深秘之息」"],
+      wishName: ["深秘之息"],
       url: ["3236897"]
     },
     {
@@ -92,7 +95,7 @@ export const WISH: WishAll = {
       version: "1.2",
       wish5star: ["ganyu"],
       wish4star: ["xingqiu", "xiangling", "noelle"],
-      wishName: ["「浮生孰来」"],
+      wishName: ["浮生孰来"],
       url: ["3661305"]
     },
     {
@@ -104,7 +107,7 @@ export const WISH: WishAll = {
       version: "1.3",
       wish5star: ["xiao"],
       wish4star: ["diona", "xinyan", "beidou"],
-      wishName: ["「烟火之邀」"],
+      wishName: ["烟火之邀"],
       url: ["4005715"]
     },
     {
@@ -116,7 +119,7 @@ export const WISH: WishAll = {
       version: "1.3",
       wish5star: ["keqing"],
       wish4star: ["barbara", "bennett", "ningguang"],
-      wishName: ["「鱼龙灯昼」"],
+      wishName: ["鱼龙灯昼"],
       url: ["4005720"]
     },
     {
@@ -128,7 +131,7 @@ export const WISH: WishAll = {
       version: "1.3",
       wish5star: ["hu_tao"],
       wish4star: ["xingqiu", "xiangling", "chongyun"],
-      wishName: ["「赤团开时」"],
+      wishName: ["赤团开时"],
       url: ["4701165"]
     },
     {
@@ -140,7 +143,7 @@ export const WISH: WishAll = {
       wish5star: ["venti"],
       wish4star: ["sucrose", "razor", "noelle"],
       version: "1.4",
-      wishName: ["「杯装之诗」"],
+      wishName: ["杯装之诗"],
       url: ["4959532"]
     },
     {
@@ -152,7 +155,7 @@ export const WISH: WishAll = {
       wish5star: ["tartaglia"],
       wish4star: ["rosaria", "fischl", "barbara"],
       version: "1.4",
-      wishName: ["「暂别冬都」"],
+      wishName: ["暂别冬都"],
       url: ["5305223"]
     },
     {
@@ -164,7 +167,7 @@ export const WISH: WishAll = {
       wish5star: ["zhongli"],
       wish4star: ["yanfei", "noelle", "diona"],
       version: "1.5",
-      wishName: ["「陵薮市朝」"],
+      wishName: ["陵薮市朝"],
       url: ["5726195"]
     },
     {
@@ -176,7 +179,7 @@ export const WISH: WishAll = {
       wish5star: ["eula"],
       wish4star: ["xingqiu", "beidou", "xinyan"],
       version: "1.5",
-      wishName: ["「浪涌之瞬」"],
+      wishName: ["浪涌之瞬"],
       url: ["6179333"]
     },
     {
@@ -188,7 +191,7 @@ export const WISH: WishAll = {
       wish5star: ["klee"],
       wish4star: ["fischl", "sucrose", "barbara"],
       version: "1.6",
-      wishName: ["「闪焰的驻足」"],
+      wishName: ["闪焰的驻足"],
       url: ["6634463"]
     },
     {
@@ -200,7 +203,7 @@ export const WISH: WishAll = {
       wish5star: ["kaedehara_kazuha"],
       wish4star: ["bennett", "razor", "rosaria"],
       version: "1.6",
-      wishName: ["「叶落风随」"],
+      wishName: ["叶落风随"],
       url: ["7067772"]
     },
     {
@@ -212,7 +215,7 @@ export const WISH: WishAll = {
       wish5star: ["kamisato_ayaka"],
       wish4star: ["chongyun", "ningguang", "yanfei"],
       version: "2.0",
-      wishName: ["「白鹭之庭」"],
+      wishName: ["白鹭之庭"],
       url: ["7578978"]
     },
     {
@@ -224,7 +227,7 @@ export const WISH: WishAll = {
       wish5star: ["yoimiya"],
       wish4star: ["sayu", "diona", "xinyan"],
       version: "2.0",
-      wishName: ["「焰色天河」"],
+      wishName: ["焰色天河"],
       url: ["8275802"]
     },
     {
@@ -236,7 +239,7 @@ export const WISH: WishAll = {
       wish5star: ["raiden_shogun"],
       wish4star: ["xiangling", "sucrose", "kujou_sara"],
       version: "2.1",
-      wishName: ["「影寂天下人」"],
+      wishName: ["影寂天下人"],
       url: ["9004344"]
     },
     {
@@ -248,7 +251,7 @@ export const WISH: WishAll = {
       wish5star: ["sangonomiya_kokomi"],
       wish4star: ["rosaria", "beidou", "xingqiu"],
       version: "2.1",
-      wishName: ["「浮岳虹珠」"],
+      wishName: ["浮岳虹珠"],
       url: ["9679284"]
     },
     {
@@ -260,7 +263,7 @@ export const WISH: WishAll = {
       wish5star: ["tartaglia"],
       wish4star: ["ningguang", "chongyun", "yanfei"],
       version: "2.2",
-      wishName: ["「暂别冬都」"],
+      wishName: ["暂别冬都"],
       url: ["10755906"]
     },
     {
@@ -272,7 +275,7 @@ export const WISH: WishAll = {
       wish5star: ["hu_tao"],
       wish4star: ["thoma", "diona", "sayu"],
       version: "2.2",
-      wishName: ["「赤团开时」"],
+      wishName: ["赤团开时"],
       url: ["11444616"]
     },
     {
@@ -284,7 +287,7 @@ export const WISH: WishAll = {
       wish5star: ["albedo", "eula"],
       wish4star: ["bennett", "noelle", "rosaria"],
       version: "2.3",
-      wishName: ["「深秘之息」", "「浪涌之瞬」"],
+      wishName: ["深秘之息", "浪涌之瞬"],
       url: ["12233203", "12233204"]
     },
     {
@@ -296,7 +299,7 @@ export const WISH: WishAll = {
       wish5star: ["arataki_itto"],
       wish4star: ["gorou", "barbara", "xiangling"],
       version: "2.3",
-      wishName: ["「鬼门斗宴」"],
+      wishName: ["鬼门斗宴"],
       url: ["12926123"]
     },
     {
@@ -308,7 +311,7 @@ export const WISH: WishAll = {
       wish5star: ["shenhe", "xiao"],
       wish4star: ["yun_jin", "chongyun", "ningguang"],
       version: "2.4",
-      wishName: ["「出尘入世」", "「烟火之邀」"],
+      wishName: ["出尘入世", "烟火之邀"],
       url: ["?", "?"]
     },
     {
@@ -320,7 +323,7 @@ export const WISH: WishAll = {
       wish5star: ["zhongli", "ganyu"],
       wish4star: ["yanfei", "xingqiu", "beidou"],
       version: "2.4",
-      wishName: ["「陵薮市朝」", "「浮生孰来」"],
+      wishName: ["陵薮市朝", "浮生孰来"],
       url: ["?", "?"]
     },
     {
@@ -332,7 +335,7 @@ export const WISH: WishAll = {
       wish5star: ["yae_miko"],
       wish4star: ["thoma", "diona", "fischl"],
       version: "2.5",
-      wishName: ["「华紫樱绯」"],
+      wishName: ["华紫樱绯"],
       url: ["?"]
     },
     {
@@ -344,7 +347,7 @@ export const WISH: WishAll = {
       wish5star: ["raiden_shogun", "sangonomiya_kokomi"],
       wish4star: ["bennett", "xinyan", "kujou_sara"],
       version: "2.5",
-      wishName: ["「影寂天下人」", "「浮岳虹珠」"],
+      wishName: ["影寂天下人", "浮岳虹珠"],
       url: ["?", "?"]
     },
     {
@@ -356,7 +359,7 @@ export const WISH: WishAll = {
       wish5star: ["kamisato_ayato", "venti"],
       wish4star: ["sucrose", "xiangling", "yun_jin"],
       version: "2.6",
-      wishName: ["「苍流踏花」", "「杯装之诗」"],
+      wishName: ["苍流踏花", "杯装之诗"],
       url: ["?", "?"]
     },
     {
@@ -368,7 +371,7 @@ export const WISH: WishAll = {
       wish5star: ["kamisato_ayaka"],
       wish4star: ["razor", "rosaria", "sayu"],
       version: "2.6",
-      wishName: ["「白鹭之庭」"],
+      wishName: ["白鹭之庭"],
       url: ["?"]
     },
     {
@@ -380,7 +383,7 @@ export const WISH: WishAll = {
       wish5star: ["yelan", "xiao"],
       wish4star: ["yanfei", "noelle", "barbara"],
       version: "2.7",
-      wishName: ["「素霓伣天」", "「烟火之邀」"],
+      wishName: ["素霓伣天", "烟火之邀"],
       url: ["?", "?"]
     },
     {
@@ -392,7 +395,7 @@ export const WISH: WishAll = {
       wish5star: ["arataki_itto"],
       wish4star: ["kuki_shinobu", "chongyun", "gorou"],
       version: "2.7",
-      wishName: ["「鬼门斗宴」"],
+      wishName: ["鬼门斗宴"],
       url: ["?"]
     },
     {
@@ -404,7 +407,7 @@ export const WISH: WishAll = {
       wish5star: ["kaedehara_kazuha", "klee"],
       wish4star: ["shikanoin_heizou", "ningguang", "thoma"],
       version: "2.8",
-      wishName: ["「叶落风随」", "「闪焰的驻足」"],
+      wishName: ["叶落风随", "闪焰的驻足"],
       url: ["?", "?"]
     },
     {
@@ -416,7 +419,7 @@ export const WISH: WishAll = {
       wish5star: ["yoimiya"],
       wish4star: ["bennett", "xinyan", "yun_jin"],
       version: "2.8",
-      wishName: ["「焰色天河」"],
+      wishName: ["焰色天河"],
       url: ["?"]
     },
     {
@@ -428,7 +431,7 @@ export const WISH: WishAll = {
       wish5star: ["tighnari", "zhongli"],
       wish4star: ["collei", "diona", "fischl"],
       version: "3.0",
-      wishName: ["「幽蔓狐生」", "「陵薮市朝」"],
+      wishName: ["幽蔓狐生", "陵薮市朝"],
       url: ["?", "?"]
     },
     {
@@ -440,7 +443,7 @@ export const WISH: WishAll = {
       wish5star: ["ganyu", "sangonomiya_kokomi"],
       wish4star: ["dori", "sucrose", "xingqiu"],
       version: "3.0",
-      wishName: ["「浮生孰来」", "「浮岳虹珠」"],
+      wishName: ["浮生孰来", "浮岳虹珠"],
       url: ["?", "?"]
     },
     {
@@ -452,7 +455,7 @@ export const WISH: WishAll = {
       wish5star: ["cyno", "venti"],
       wish4star: ["candace", "kuki_shinobu", "sayu"],
       version: "3.1",
-      wishName: ["「雳裁冥昭」", "「杯装之诗」"],
+      wishName: ["雳裁冥昭", "杯装之诗"],
       url: ["?", "?"]
     },
     {
@@ -464,7 +467,7 @@ export const WISH: WishAll = {
       wish5star: ["nilou", "albedo"],
       wish4star: ["Beidou", "Barbara", "Xiangling"],
       version: "3.1",
-      wishName: ["「翩舞歈莲」", "「深秘之息」"],
+      wishName: ["翩舞歈莲", "深秘之息"],
       url: ["?", "?"]
     },
     {
@@ -476,7 +479,7 @@ export const WISH: WishAll = {
       wish5star: ["nahida", "yoimiya"],
       wish4star: ["Razor", "Noelle", "Bennett"],
       version: "3.2",
-      wishName: ["「月草的赐慧」", "「焰色天河」"],
+      wishName: ["月草的赐慧", "焰色天河"],
       url: ["?", "?"]
     },
     {
@@ -488,7 +491,7 @@ export const WISH: WishAll = {
       wish5star: ["yae_miko", "tartaglia"],
       wish4star: ["Layla", "Thoma", "Shikanoin Heizou"],
       version: "3.2",
-      wishName: ["「华紫樱绯」", "「暂别冬都」"],
+      wishName: ["华紫樱绯", "暂别冬都"],
       url: ["?", "?"]
     },
     {
@@ -500,7 +503,7 @@ export const WISH: WishAll = {
       wish5star: ["wanderer", "arataki_itto"],
       wish4star: ["Faruzan", "Gorou", "Yanfei"],
       version: "3.3",
-      wishName: ["「余火变相」", "「鬼门斗宴」"],
+      wishName: ["余火变相", "鬼门斗宴"],
       url: ["?", "?"]
     },
     {
@@ -512,7 +515,7 @@ export const WISH: WishAll = {
       wish5star: ["raiden_shogun", "kamisato_ayato"],
       wish4star: ["Rosaria", "Sayu", "Kujou Sara"],
       version: "3.3",
-      wishName: ["「影寂天下人」", "「苍流踏花」"],
+      wishName: ["影寂天下人", "苍流踏花"],
       url: ["?", "?"]
     },
     {
@@ -524,7 +527,7 @@ export const WISH: WishAll = {
       wish5star: ["alhaitham", "xiao"],
       wish4star: ["Yaoyao", "Yun Jin", "Xinyan"],
       version: "3.4",
-      wishName: ["「敕诫枢谋」", "「烟火之邀」"],
+      wishName: ["敕诫枢谋", "烟火之邀"],
       url: ["?", "?"]
     },
     {
@@ -536,7 +539,7 @@ export const WISH: WishAll = {
       wish5star: ["hu_tao", "yelan"],
       wish4star: ["Xingqiu", "Ningguang", "Beidou"],
       version: "3.4",
-      wishName: ["「赤团开时」", "「素霓伣天」"],
+      wishName: ["赤团开时", "素霓伣天"],
       url: ["?", "?"]
     },
     {
@@ -548,7 +551,7 @@ export const WISH: WishAll = {
       wish5star: ["dehya", "cyno"],
       wish4star: ["Bennett", "Barbara", "Collei"],
       version: "3.5",
-      wishName: ["「烈阳烁金」", "「雳裁冥昭」"],
+      wishName: ["烈阳烁金", "雳裁冥昭"],
       url: ["?", "?"]
     },
     {
@@ -560,7 +563,7 @@ export const WISH: WishAll = {
       wish5star: ["kamisato_ayaka", "shenhe"],
       wish4star: ["Mika", "Sucrose", "Diona"],
       version: "3.5",
-      wishName: ["「白鹭之庭」", "「出尘入世」"],
+      wishName: ["白鹭之庭", "出尘入世"],
       url: ["?", "?"]
     },
     {
@@ -572,7 +575,7 @@ export const WISH: WishAll = {
       wish5star: ["nahida", "nilou"],
       wish4star: ["Kuki Shinobu", "Dori", "Layla"],
       version: "3.6",
-      wishName: ["「月草的赐慧」", "「翩舞歈莲」"],
+      wishName: ["月草的赐慧", "翩舞歈莲"],
       url: ["?", "?"]
     },
     {
@@ -584,7 +587,7 @@ export const WISH: WishAll = {
       wish5star: ["baizhu", "ganyu"],
       wish4star: ["Kaveh", "Candace", "Fischl"],
       version: "3.6",
-      wishName: ["「心珠循琅」", "「浮生孰来」"],
+      wishName: ["心珠循琅", "浮生孰来"],
       url: ["?", "?"]
     },
     {
@@ -596,7 +599,7 @@ export const WISH: WishAll = {
       wish5star: ["yoimiya", "yae_miko"],
       wish4star: ["Kirara", "Yun Jin", "Chongyun"],
       version: "3.7",
-      wishName: ["「焰色天河」", "「华紫樱绯」"],
+      wishName: ["焰色天河", "华紫樱绯"],
       url: ["?", "?"]
     },
     {
@@ -608,7 +611,7 @@ export const WISH: WishAll = {
       wish5star: ["alhaitham", "kaedehara_kazuha"],
       wish4star: ["Yaoyao", "Shikanoin Heizou", "Xiangling"],
       version: "3.7",
-      wishName: ["「敕诫枢谋」", "「叶落风随」"],
+      wishName: ["敕诫枢谋", "叶落风随"],
       url: ["?", "?"]
     },
     {
@@ -620,7 +623,7 @@ export const WISH: WishAll = {
       wish5star: ["eula", "klee"],
       wish4star: ["Mika", "Razor", "Thoma"],
       version: "3.8",
-      wishName: ["「浪涌之瞬」", "「闪焰的驻足」"],
+      wishName: ["浪涌之瞬", "闪焰的驻足"],
       url: ["?", "?"]
     },
     {
@@ -632,7 +635,7 @@ export const WISH: WishAll = {
       wish5star: ["sangonomiya_kokomi", "wanderer"],
       wish4star: ["Faruzan", "Rosaria", "Yanfei"],
       version: "3.8",
-      wishName: ["「浮岳虹珠」", "「余火变相」"],
+      wishName: ["浮岳虹珠", "余火变相"],
       url: ["?", "?"]
     },
     {
@@ -644,7 +647,7 @@ export const WISH: WishAll = {
       wish5star: ["lyney", "yelan"],
       wish4star: ["Lynette", "Bennett", "Barbara"],
       version: "4.0",
-      wishName: ["「光与影的戏术」", "「素霓伣天」"],
+      wishName: ["光与影的戏术", "素霓伣天"],
       url: ["?", "?"]
     },
     {
@@ -656,7 +659,7 @@ export const WISH: WishAll = {
       wish5star: ["zhongli", "tartaglia"],
       wish4star: ['Freminet', 'Sayu', 'Noelle'],
       version: "4.0",
-      wishName: ["「陵薮市朝」", "「暂别冬都」"],
+      wishName: ["陵薮市朝", "暂别冬都"],
       url: ["?", "?"]
     },
     {
@@ -668,7 +671,7 @@ export const WISH: WishAll = {
       wish5star: ["neuvillette", "hu_tao"],
       wish4star: ['Fischl', 'Xingqiu', 'Diona'],
       version: "4.1",
-      wishName: ["「渊海界令」", "「赤团开时」"],
+      wishName: ["渊海界令", "赤团开时"],
       url: ["?", "?"]
     },
     {
@@ -680,7 +683,7 @@ export const WISH: WishAll = {
       wish5star: ["wriothesley", "venti"],
       wish4star: ['Chongyun', 'Thoma', 'Dori'],
       version: "4.1",
-      wishName: ["「劫中泛滥」", "「杯装之诗」"],
+      wishName: ["劫中泛滥", "杯装之诗"],
       url: ["?", "?"]
     },
     {
@@ -692,7 +695,7 @@ export const WISH: WishAll = {
       wish5star: ['furina', 'baizhu'],
       wish4star: ['Charlotte', 'Collei', 'Beidou'],
       version: "4.2",
-      wishName: ["「众水的颂诗」", "「心珠循琅」"],
+      wishName: ["众水的颂诗", "心珠循琅"],
       url: ["?", "?"]
     },
     {
@@ -704,7 +707,7 @@ export const WISH: WishAll = {
       version: "4.2",
       wish5star: ['cyno', 'kamisato_ayato'],
       wish4star: ['Kirara', 'Kuki Shinobu', 'Xiangling'],
-      wishName: ["「雳裁冥昭」", "「苍流踏花」"],
+      wishName: ["雳裁冥昭", "苍流踏花"],
       url: ["?", "?"
       ]
     },
@@ -717,7 +720,7 @@ export const WISH: WishAll = {
       wish5star: ["navia", "kamisato_ayaka"],
       wish4star: ['Sucrose', 'Rosaria', 'Candace'],
       version: "4.3",
-      wishName: ["「刺玫的铭誓」", "「白鹭之庭」"],
+      wishName: ["刺玫的铭誓", "白鹭之庭"],
       url: ["?", "?"]
     },
     {
@@ -729,7 +732,7 @@ export const WISH: WishAll = {
       wish5star: ['raiden_shogun', 'yoimiya'],
       wish4star: ['Chevreuse', 'Kujou Sara', 'Bennett'],
       version: "4.3",
-      wishName: ["「影寂天下人」", "「焰色天河」"],
+      wishName: ["影寂天下人", "焰色天河"],
       url: ["?", "?"]
     },
     {
@@ -741,7 +744,7 @@ export const WISH: WishAll = {
       wish5star: ["xianyun", "nahida"],
       wish4star: ["gaming", "faruzan", "noelle"],
       version: "4.4",
-      wishName: ["「云府鹤行」", "「月草的赐慧」"],
+      wishName: ["云府鹤行", "月草的赐慧"],
       url: ["?", "?"]
     },
     {
@@ -753,7 +756,19 @@ export const WISH: WishAll = {
       wish5star: ["xiao", "yae_miko"],
       wish4star: ["yaoyao", "xinyan", "ningguang"],
       version: "4.4",
-      wishName: ["「烟火之邀」", "「华紫樱绯」"],
+      wishName: ["烟火之邀", "华紫樱绯"],
+      url: ["?", "?"]
+    },
+    {
+      name: ["Of Silken Clouds Woven", "Oni's Royale",],
+      image: [1, 4],
+      shortName: ['Chiori', 'Arataki Itto'],
+      start: "2024-03-13 11:00:00 +0800",
+      end: "2024-04-02 17:59:59 +0800",
+      wish5star: ["chiori", "arataki_itto"],
+      wish4star: ["gorou", "yun_jin", "dori"],
+      version: "4.5",
+      wishName: ["千云绘羽织", "鬼门斗宴"],
       url: ["?", "?"]
     },
   ],

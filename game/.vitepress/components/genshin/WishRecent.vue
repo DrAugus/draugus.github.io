@@ -1,7 +1,7 @@
 <template>
   <div v-if="current.able">
 
-    <h2>当前祈愿
+    <h2>当前限定祈愿
       <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
@@ -43,14 +43,14 @@
 
   </div>
   <div v-else>
-    <h2>现在 暂无祈愿，敬请期待</h2>
+    <h2>现在，暂无限定祈愿，敬请期待</h2>
   </div>
 
   <div v-if="future.able">
 
     <h2>未来祈愿</h2>
 
-    <h3>{{ begin }} 后开始</h3>
+    <h3>限定祈愿 {{ begin }} 后开始</h3>
 
     <ul>
       <li v-for="(v, i) in future.obj">
@@ -72,6 +72,8 @@
   <div v-else>
     <h2>未来祈愿，等待更新</h2>
   </div>
+
+  
 </template>
 
 <script>

@@ -12,7 +12,7 @@ export const WISH: WishAll = {
       version: '1.0',
       wish5star: ['seele'],
       wish4star: ['hook', 'pela', 'natasha'],
-      wishName: ['「蝶立锋锷」'],
+      wishName: ['蝶立锋锷'],
       url: ['']
     },
     {
@@ -24,7 +24,7 @@ export const WISH: WishAll = {
       version: '1.0',
       wish5star: ['jing_yuan'],
       wish4star: ['sushang', 'march_7th', 'tingyun'],
-      wishName: ['「天戈麾斥」'],
+      wishName: ['天戈麾斥'],
       url: ['']
     },
     {
@@ -36,7 +36,7 @@ export const WISH: WishAll = {
       version: '1.1',
       wish5star: ['silver_wolf'],
       wish4star: ['Dan Heng', 'Asta', 'Serval'],
-      wishName: ['「零号协议」'],
+      wishName: ['零号协议'],
       url: ['']
     },
     {
@@ -48,7 +48,7 @@ export const WISH: WishAll = {
       version: '1.1',
       wish5star: ['luocha'],
       wish4star: ['Yukong', 'Pela', 'Qingque'],
-      wishName: ['「寻索世间」'],
+      wishName: ['寻索世间'],
       url: ['']
     },
     {
@@ -60,7 +60,7 @@ export const WISH: WishAll = {
       version: '1.2',
       wish5star: ['blade'],
       wish4star: ['Arlan', 'Natasha', 'Sushang'],
-      wishName: ['「业途游魂」'],
+      wishName: ['业途游魂'],
       url: ['']
     },
     {
@@ -72,7 +72,7 @@ export const WISH: WishAll = {
       version: '1.2',
       wish5star: ['kafka'],
       wish4star: ['Luka', 'Sampo', 'Serval'],
-      wishName: ['「夜将不眠」'],
+      wishName: ['夜将不眠'],
       url: ['']
     },
     {
@@ -84,7 +84,7 @@ export const WISH: WishAll = {
       version: '1.3',
       wish5star: ['dan_heng_imbibitor_lunae'],
       wish4star: ['Yukong', 'Asta', 'March 7th'],
-      wishName: ['「濯世垂虹」'],
+      wishName: ['濯世垂虹'],
       url: ['']
     },
     {
@@ -96,7 +96,7 @@ export const WISH: WishAll = {
       version: '1.3',
       wish5star: ['fu_xuan'],
       wish4star: ['Lynx', 'Hook', 'Pela'],
-      wishName: ['「穷观妙算」'],
+      wishName: ['穷观妙算'],
       url: ['']
     },
     {
@@ -108,7 +108,7 @@ export const WISH: WishAll = {
       version: '1.4',
       wish5star: ['jingliu'],
       wish4star: ['tingyun', 'Qingque', 'Sampo'],
-      wishName: ['「月有薄蚀」'],
+      wishName: ['月有薄蚀'],
       url: ['']
     },
     {
@@ -120,7 +120,7 @@ export const WISH: WishAll = {
       version: '1.4',
       wish5star: ['topaz_numby', 'seele'],
       wish4star: ['guinaifen', 'Luka', 'Sushang'],
-      wishName: ['「落日条款」', '「蝶立锋锷」'],
+      wishName: ['落日条款', '蝶立锋锷'],
       url: ['']
     },
     {
@@ -132,7 +132,7 @@ export const WISH: WishAll = {
       version: '1.5',
       wish5star: ['huohuo'],
       wish4star: ['Dan Heng', 'Arlan', 'Serval'],
-      wishName: ['「令奉贞凶」'],
+      wishName: ['令奉贞凶'],
       url: ['']
     },
     {
@@ -144,7 +144,7 @@ export const WISH: WishAll = {
       version: '1.5',
       wish5star: ['argenti', 'silver_wolf'],
       wish4star: ['Hanya', 'Lynx', 'Asta'],
-      wishName: ['「荆冠芳勋」', '「零号协议」'],
+      wishName: ['荆冠芳勋', '零号协议'],
       url: ['']
     },
     {
@@ -156,7 +156,7 @@ export const WISH: WishAll = {
       version: '1.6',
       wish5star: ['ruan_mei', 'blade'],
       wish4star: ['Xueyi', 'Tingyun', 'March 7th'],
-      wishName: ['「疏影三迭」', '「业途游魂」'],
+      wishName: ['疏影三迭', '业途游魂'],
       url: ['']
     },
     {
@@ -168,7 +168,7 @@ export const WISH: WishAll = {
       version: "1.6",
       wish5star: ["dr_ratio", "kafka"],
       wish4star: ["hook", "sushang", "natasha"],
-      wishName: ['「万物皆流」', '「夜将不眠」'],
+      wishName: ['万物皆流', '夜将不眠'],
       url: [""]
     },
     {
@@ -180,7 +180,7 @@ export const WISH: WishAll = {
       version: "2.0",
       wish5star: ["black_swan", "dan_heng_imbibitor_lunae"],
       wish4star: ["misha", "tingyun", "guinaifen"],
-      wishName: ['「镜映婆娑」', '「濯世垂虹」'],
+      wishName: ['镜映婆娑', '濯世垂虹'],
       url: [""]
     },
     {
@@ -192,7 +192,7 @@ export const WISH: WishAll = {
       version: "2.0",
       wish5star: ["sparkle", "jing_yuan"],
       wish4star: ["hanya", "qingque", "sampo"],
-      wishName: ['「焰锦游鱼」', '「天戈麾斥」'],
+      wishName: ['焰锦游鱼', '天戈麾斥'],
       url: [""]
     },
   ],

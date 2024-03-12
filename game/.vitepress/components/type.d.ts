@@ -89,7 +89,7 @@ export interface Wish {
   end: string,
   version?: string,
   wish5star?: string[] | WishMixed,
-  wish4star?: string[],
+  wish4star?: string[] | WishMixed,
   wishName?: string[],
   url?: string[] | string,
 }

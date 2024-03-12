@@ -5,6 +5,12 @@ export enum GameName {
   HSR,
 }
 
+export enum WishType {
+  Characters = 0,
+  Weapons,
+  Chronicled,
+}
+
 export const getCharName =
   (id: string, char: Characters) =>
     !id ? '' : char[replaceAndLow(id)]?.name;
@@ -94,7 +100,7 @@ export const getGameName = (gameName: GameName) => {
 export const getWishName = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return '祈愿';
   if (gameName === GameName.HSR) return '跃迁';
-}
+};
 
 // tag 0 no handle
 // tag 1 weapon text weapon1

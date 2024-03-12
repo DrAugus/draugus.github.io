@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { parseDayjs } from "./utils";
+import { WishType, parseDayjs } from "./utils";
 
 import "dayjs/locale/zh";
 import { Wish, WishAll } from "./type";
@@ -66,8 +66,11 @@ export const processEvent = (wishInfo: WishAll) => {
     }][] = [];
 
     let eventsDataInfo: Wish[][] = [];
-    eventsDataInfo[0] = wishInfo.characters;
-    eventsDataInfo[1] = wishInfo.weapons;
+    eventsDataInfo[WishType.Characters] = wishInfo.characters;
+    eventsDataInfo[WishType.Weapons] = wishInfo.weapons;
+    if (wishInfo.chronicled) {
+        eventsDataInfo[WishType.Chronicled] = wishInfo.chronicled;
+    }
 
     let events = eventsDataInfo.map((e, i) => {
         if (Array.isArray(e)) {
