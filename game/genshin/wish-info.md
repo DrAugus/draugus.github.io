@@ -1,10 +1,10 @@
 ---
 aside: false
 ---
-# 祈愿信息汇总
+# 祈愿列表
 
-<GenshinWishInfo />
+<GenshinWishList />
 
-<script setup>
-import GenshinWishInfo from "../.vitepress/components/genshin/WishInfo.vue";
+<script setup lang="ts">
+import GenshinWishList from "../.vitepress/components/genshin/WishList.vue";
 </script>

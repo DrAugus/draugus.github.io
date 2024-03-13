@@ -1,10 +1,10 @@
 ---
 aside: false
 ---
-# 跃迁信息汇总
+# 跃迁列表
 
-<WishInfo />
+<WishList />
 
-<script setup>
-import WishInfo from "../.vitepress/components/hsr/WishInfo.vue";
+<script setup lang="ts">
+import WishList from "../.vitepress/components/hsr/WishList.vue";
 </script>

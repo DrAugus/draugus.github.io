@@ -11,6 +11,19 @@ export enum WishType {
   Chronicled,
 }
 
+export enum WishPageDisplay {
+  WishName,
+  CharName,
+  Date,
+  Version,
+  WishImage,
+}
+
+export enum WishInfoType {
+  Table,
+  List,
+}
+
 export const getCharName =
   (id: string, char: Characters) =>
     !id ? '' : char[replaceAndLow(id)]?.name;

@@ -6,5 +6,5 @@ aside: false
 <GenshinWishInfo />
 
 <script setup>
-import GenshinWishInfo from "../.vitepress/components/genshin/WishInfoPic.vue";
+import GenshinWishInfo from "../.vitepress/components/genshin/WishInfoTable.vue";
 </script>
