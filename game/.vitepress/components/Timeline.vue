@@ -64,9 +64,8 @@
                   </div>
                   <span class="left-align timeline-character-text sticky"
                     :class="'ele-text-shadow-' + CHARACTER[value.wish5star[j]]?.ele?.id">
-                    {{ value.wishName[j] }} {{ replaceText('活动x', gameNum) }}
-                    「{{ CHARACTER[value.wish5star[j]].prefix }}」
-                    {{ CHARACTER[value.wish5star[j]].name }}
+                    {{ combineQuoteZh(value.wishName[j]) + replaceText('活动x', gameNum) +
+      combineQuoteZh(CHARACTER[value.wish5star[j]].prefix + '·' + CHARACTER[value.wish5star[j]].name) }}
                   </span>
                 </div>
               </div>
@@ -93,7 +92,7 @@
 
 <script>
 
-import { parseDayjs, getGameName, combineWishPic, replaceText, GameName, WishType } from "./utils";
+import { parseDayjs, getGameName, combineWishPic, replaceText, GameName, WishType, combineQuoteZh } from "./utils";
 import { processEvent } from "./eventHandle";
 
 import dayjs from "dayjs";
@@ -134,6 +133,7 @@ export default {
       gameNum: this.WISH_TEXT,
       combineWishPic,
       replaceText,
+      combineQuoteZh,
       lenWeaponImage: [],
     };
   },

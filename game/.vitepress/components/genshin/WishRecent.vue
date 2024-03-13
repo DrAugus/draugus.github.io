@@ -1,4 +1,5 @@
 <template>
+
   <div v-if="current.able">
 
     <h2>当前限定祈愿
@@ -12,7 +13,7 @@
         活动期间，下列限定五星角色的祈愿获取概率将大幅提升！ <br />
         <span v-for="(vv, ii) in v.name">
           <span :class="'ele-text-' + getCharElement(v.wish5star[ii], CHARACTER).id">
-            {{ v.name[ii] + '祈愿：' + combineChar(v.wish5star[ii], CHARACTER) }}
+            {{ combineQuoteZh(v.name[ii]) + '祈愿：' + combineQuoteZh(combineChar(v.wish5star[ii], CHARACTER)) }}
           </span>
           <Badge :text="v.image[ii] == 1 ? '首次up' : `第${v.image[ii]}次up`" :type="v.image[ii] == 1 ? 'tip' : 'warning'">
           </Badge>
@@ -22,7 +23,7 @@
       四星角色
       <span v-for="(vv, ii) in v.wish4star">
         <span :class="'ele-text-' + getCharElement(vv, CHARACTER).id">
-          {{ '「' + combineChar(vv, CHARACTER) + '」' }}
+          {{ combineQuoteZh(combineChar(vv, CHARACTER)) }}
         </span>
       </span>
       的祈愿获取概率将大幅提升！
@@ -45,6 +46,7 @@
   <div v-else>
     <h2>现在，暂无限定祈愿，敬请期待</h2>
   </div>
+
 
   <div v-if="future.able">
 
@@ -70,61 +72,114 @@
 
   </div>
   <div v-else>
-    <h2>未来祈愿，等待更新</h2>
+    <h2>未来限定祈愿，等待更新</h2>
   </div>
 
-  
+  <div v-if="currentChronicled.able">
+
+    <h2>当前集录祈愿
+      <Badge :text="currentChronicled.obj[0].ver" type="warning"></Badge>
+    </h2>
+
+    <blockquote>祈愿周期：{{ currentChronicled.obj[0].date }}</blockquote>
+
+    <div v-for="(v, i) in currentChronicled.obj">
+      <h3>
+        活动期间，下列限定五星角色/武器的祈愿获取概率将大幅提升！ <br />
+        {{ combineQuoteZh(v.name[0]) + '祈愿：' }} <br />
+        <span v-for="(vv, ii) in v.wish5star?.characters">
+          <span :class="'ele-text-' + getCharElement(vv, CHARACTER).id">
+            {{ combineQuoteZh(combineChar(vv, CHARACTER)) }}
+          </span>
+        </span>
+        <br />
+        <span v-for="(vv, ii) in v.wish5star?.weapons">
+          {{ `"${vv}" ` }}
+        </span>
+      </h3>
+      四星角色
+      <span v-for="(vv, ii) in v.wish4star?.characters">
+        <span :class="'ele-text-' + getCharElement(vv, CHARACTER).id">
+          {{ combineQuoteZh(combineChar(vv, CHARACTER)) }}
+        </span>
+      </span>
+      的祈愿获取概率将大幅提升！
+      <br />
+      四星武器
+      <span v-for="(vv, ii) in v.wish4star?.weapons">
+        {{ `"${vv}" ` }}
+      </span>
+      的祈愿获取概率将大幅提升！
+
+    </div>
+
+    <!-- <div class="bg-height" :style="imgStyle"></div> -->
+
+    <h3>{{ end }} 后结束</h3>
+
+
+    <div v-for="(v, i) in currentChronicled.obj">
+      <div v-for="(vv, ii) in v.src" :key="ii">
+        <img :src="vv" @error="replaceImg">
+      </div>
+    </div>
+
+  </div>
+  <div v-else>
+    <h2>现在，暂无集录祈愿，敬请期待</h2>
+  </div>
+
+
 </template>
 
-<script>
-import { getCharName, combineChar, getCharElement, getImgStyle } from '../utils';
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from "vue";
+import { getCharName, combineChar, getCharElement, getImgStyle, combineQuoteZh } from '../utils';
 import { CHARACTER } from './characters';
-import { current, future, wishDeadline, wishBegin } from "./wishRecent";
+import { current, future, wishDeadline, wishBegin, wishBeginChronicled, wishDeadlineChronicled, currentChronicled } from "./wishRecent";
 
 import "./genshin.scss";
 
-export default {
-  name: "Wish",
-  components: {
-    wishDeadline,
-    wishBegin,
-  },
-  data() {
-    return {
-      future,
-      current,
-      begin: new Date(),
-      end: new Date(),
-      getCharName,
-      getCharElement,
-      combineChar,
-      CHARACTER,
-      imgStyle: getImgStyle(current, 0),
-    };
-  },
-  methods: {
-    replaceImg(event) {
-      event.target.src = '/image/genshin/wish/_1.jpg';
-    },
 
-  },
-  mounted() {
-    let _this = this;
-    this.timer1 = setInterval(() => {
-      _this.begin = wishBegin();
-    }, 1000);
-    this.timer2 = setInterval(() => {
-      _this.end = wishDeadline();
-    }, 1000);
-  },
-  beforeDestroy() {
-    if (this.timer1)
-      clearInterval(this.timer1);
-    if (this.timer2)
-      clearInterval(this.timer2);
-  },
 
-};
+let begin = ref('');
+let end = ref('');
+let beginChronicled = ref('');
+let endChronicled = ref('');
+let imgStyle = getImgStyle(current, 0);
+
+function replaceImg(event) {
+  event.target.src = '/image/genshin/wish/_1.jpg';
+}
+
+let timer1: number = -1;
+let timer2: number = -1;
+let timer3: number = -1;
+let timer4: number = -1;
+
+onMounted(async () => {
+  timer1 = setInterval(() => {
+    begin.value = wishBegin();
+  }, 1000);
+  timer2 = setInterval(() => {
+    end.value = wishDeadline();
+  }, 1000);
+  timer3 = setInterval(() => {
+    beginChronicled.value = wishBeginChronicled();
+  }, 1000);
+  timer4 = setInterval(() => {
+    endChronicled.value = wishDeadlineChronicled();
+  }, 1000);
+});
+
+
+onUnmounted(() => {
+  if (timer1) clearInterval(timer1);
+  if (timer2) clearInterval(timer2);
+  if (timer3) clearInterval(timer3);
+  if (timer4) clearInterval(timer4);
+});
+
 </script>
 
 <style scoped>

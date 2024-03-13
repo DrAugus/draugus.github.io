@@ -23,7 +23,8 @@
           @error="replaceImg" alt="">
       </td>
       <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
-        {{ CHARACTER[v.wish5star[ii]].name }} [{{ v.image[ii] }}]
+        {{ CHARACTER[v.wish5star[ii]].name }}
+        <Badge :text="v.image[ii] + ''" />
       </td>
 
     </tr>

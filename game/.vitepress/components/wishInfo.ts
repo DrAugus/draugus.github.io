@@ -1,16 +1,11 @@
-import type { EventHandleWish, WishInfo, WishInfoObj } from './type'
+import type { EventHandleWish, WishIndex, WishInfo, WishInfoObj } from './type';
 import dayjs from "dayjs";
 import { formatDayjs, replaceAndLow, combineWishPic, getGameName } from './utils';
 
 // 找出当前在哪个祈愿时间段
-export const getWishIndex = (wish: EventHandleWish[]) => {
+export const getWishIndex = (wish: EventHandleWish[]): WishIndex => {
 
-    type tObj = {
-        wishIndex: number[] // 索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
-        comingIndex: number[] // 即将到来的未开放的
-    }
-
-    let obj: tObj = {
+    let obj: WishIndex = {
         wishIndex: [],
         comingIndex: []
     };
@@ -27,7 +22,7 @@ export const getWishIndex = (wish: EventHandleWish[]) => {
         // 当前时间在祈愿起始时间前
         let startBefore = dayjs().isBefore(e.start, "second");
         if (startBefore) {
-            obj.comingIndex.push(e.index2)
+            obj.comingIndex.push(e.index2);
         }
     }
 
@@ -36,33 +31,39 @@ export const getWishIndex = (wish: EventHandleWish[]) => {
 };
 
 // 
-const getWishObj = (wish: EventHandleWish, game: number = 0) => {
+const getWishObj = (wish: EventHandleWish, game: number = 0): WishInfoObj => {
 
-    let strGame = getGameName(game)
-    let arrImg: string[] = []
-    let wish5starArr: string[] = []
+    let strGame = getGameName(game);
+    let arrImg: string[] = [];
     for (let i = 0; i < wish.name.length; ++i) {
-        arrImg.push(`/image/${strGame}/wish/${combineWishPic(wish.name[i], wish.image[i])}`)
-        wish5starArr.push(wish.wish5star[i])
+        arrImg.push(`/image/${strGame}/wish/${combineWishPic(wish.name[i], wish.image[i])}`);
     }
-
     let s = formatDayjs(wish.start);
     let e = formatDayjs(wish.end);
     // console.log(s, e);
-    let wish4star = wish.wish4star
-    // 有部分没有小写
-    if (Array.isArray(wish4star))
-        wish4star = wish4star?.map((v, i, arr) => replaceAndLow(v))
+
+    let wish5star = wish.wish5star;
+    if (Array.isArray(wish5star)) {
+        wish5star = wish5star?.map((v, i, arr) => replaceAndLow(v));
+    } else {
+        wish5star.characters = wish5star.characters?.map((v, i, arr) => replaceAndLow(v));
+    }
+    let wish4star = wish.wish4star;
+    if (Array.isArray(wish4star)) {
+        wish4star = wish4star?.map((v, i, arr) => replaceAndLow(v));
+    } else {
+        wish4star.characters = wish4star.characters?.map((v, i, arr) => replaceAndLow(v));
+    }
     return {
         name: wish.wishName,
         date: s + " ~ " + e,
         ver: wish.version,
         image: wish.image,
         src: arrImg,
-        wish5star: wish5starArr,
-        wish4star: wish4star
-    }
-}
+        wish5star,
+        wish4star
+    };
+};
 
 // 
 export const getWishInfo =
@@ -71,11 +72,11 @@ export const getWishInfo =
             index: wishIndex,
             able: wishIndex.length > 0,
             obj: []
-        }
+        };
         for (let v of wishIndex) {
-            const obj: WishInfoObj = getWishObj(wish[v], game)
-            wishInfo.obj.push(obj)
+            const obj: WishInfoObj = getWishObj(wish[v], game);
+            wishInfo.obj.push(obj);
         }
-        return wishInfo
+        return wishInfo;
     }
 

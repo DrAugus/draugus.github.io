@@ -11,7 +11,7 @@
       <Badge :text="'v' + v.version"></Badge>
       <span class="f-w-600">
         <span v-for="(vv, ii) in v.wishName">
-          {{ v.wishName[ii] + getCharName(v.wish5star[ii], CHARACTER) }}
+          {{ combineQuoteZh(v.wishName[ii]) + getCharName(v.wish5star[ii], CHARACTER) }}
           <Badge :text="v.image[ii] + ' up'" :type="getBadgeType(v.image[ii])"></Badge>
         </span>
       </span>
@@ -27,7 +27,7 @@
 <script>
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
-import { GameName, replaceAndLow, formatDayjs, getCharName, getGameName } from "./utils";
+import { GameName, replaceAndLow, formatDayjs, getCharName, getGameName, combineQuoteZh } from "./utils";
 
 dayjs.locale("zh");
 
@@ -56,25 +56,26 @@ export default {
       dayjs,
       formatDayjs,
       getCharName,
+      combineQuoteZh,
     };
   },
   methods: {
     sortLast() {
       this.char = this.char.sort(
         (a, b) => dayjs(b.start).diff(dayjs(a.start), "day", true)
-      )
+      );
     },
     sortEarly() {
       this.char = this.char.sort(
         (a, b) => dayjs(a.start).diff(dayjs(b.start), "day", true)
-      )
+      );
     },
     sortUptimes() {
-      this.char = this.char.sort((a, b) => b.image - a.image)
+      this.char = this.char.sort((a, b) => b.image - a.image);
     },
 
     replaceImg(event) {
-      event.target.src = `/image/${getGameName(this.WISH_TEXT)}/wish/_1.jpg`
+      event.target.src = `/image/${getGameName(this.WISH_TEXT)}/wish/_1.jpg`;
     },
 
     getBadgeType(upTimes) {
@@ -88,7 +89,7 @@ export default {
   async mounted() {
 
     // default
-    this.sortEarly()
+    this.sortLast();
   },
 };
 </script>

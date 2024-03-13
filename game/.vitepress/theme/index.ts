@@ -17,7 +17,7 @@ export default {
     }
 
     return h(Theme.Layout, props, {
-      'aside-bottom': () => h(AsideSponsors)
+      // 'aside-bottom': () => h(AsideSponsors)
     })
   },
 }

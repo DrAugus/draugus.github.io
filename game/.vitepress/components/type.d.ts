@@ -34,8 +34,8 @@ export interface EventHandleWish {
   start: string,
   end: string,
   version: string,
-  wish5star: string[],
-  wish4star: string[],
+  wish5star: string[] | WishMixed,
+  wish4star: string[] | WishMixed,
   wishName: string[],
   wish_2?: boolean,
   url: string[],
@@ -51,14 +51,19 @@ export interface WishInfoObj {
   ver: string,
   image: number[],
   src: string[],
-  wish5star: string[],
-  wish4star: string[],
+  wish5star: string[] | WishMixed,
+  wish4star: string[] | WishMixed,
 }
 
 export interface WishInfo {
   index: number[],
   able: boolean,
   obj: WishInfoObj[],
+}
+
+export interface WishIndex {
+  wishIndex: number[],    // 索引集 一个为当前祈愿或者即将开放的祈愿 两个为双复刻池
+  comingIndex: number[],  // 即将到来的未开放的
 }
 
 export interface HeroAction {

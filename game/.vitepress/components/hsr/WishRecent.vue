@@ -11,7 +11,7 @@
         活动期间，下列限定五星角色跃迁成功概率限时提升 <br />
 
         <span v-for="(vv, ii) in v.name">
-          {{ v.name[ii] + getCharName(v.wish5star[ii], CHARACTER) }}
+          {{ combineQuoteZh(v.name[ii]) + getCharName(v.wish5star[ii], CHARACTER) }}
           <Badge :text="v.image[ii] == 1 ? '首次up' : `第${v.image[ii]}次up`" :type="v.image[ii] == 1 ? 'tip' : 'warning'">
           </Badge>
           <br />
@@ -68,7 +68,7 @@
 </template>
 
 <script>
-import { getCharName, getImgStyle } from '../utils';
+import { combineQuoteZh, getCharName, getImgStyle } from '../utils';
 import { CHARACTER } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
@@ -82,6 +82,7 @@ export default {
       end: new Date(),
       getCharName,
       CHARACTER,
+      combineQuoteZh,
       imgStyle: getImgStyle(current, 1),
     };
   },

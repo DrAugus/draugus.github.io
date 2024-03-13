@@ -13,24 +13,45 @@ const game = GameName.Genshin;
 
 // console.log(eventObj);
 
-let wishCharacters = eventObj.events[WishType.Characters];
+const wishCharacters = eventObj.events[WishType.Characters];
 // console.log(wishCharacters)
 
-let objWish = getWishIndex(wishCharacters);
-// console.log("objWish", objWish);
+const wishChronicled = eventObj.events[WishType.Chronicled];
+// console.log(wishChronicled);
 
-export const current = getWishInfo(wishCharacters, objWish.wishIndex, game);
-export const future = getWishInfo(wishCharacters, objWish.comingIndex, game);
+const objWishIndex = getWishIndex(wishCharacters);
+// console.log("objWishIndex", objWishIndex);
+
+const objWishChronicledIndex = getWishIndex(wishChronicled);
+// console.log("objWishChronicledIndex", objWishChronicledIndex);
+
+export const current = getWishInfo(wishCharacters, objWishIndex.wishIndex, game);
+export const future = getWishInfo(wishCharacters, objWishIndex.comingIndex, game);
 // console.log(current, future);
 
-export const wishDeadline = () =>
+export const wishDeadline = (): string =>
     current.able ?
-        getDeadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) :
-        -1;
-export const wishBegin = () =>
+        getDeadline(dayjs(), dayjs(wishCharacters[objWishIndex.wishIndex[0]].end)) :
+        '';
+export const wishBegin = (): string =>
     future.able ?
-        getDeadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) :
-        -1;
+        getDeadline(dayjs(), dayjs(wishCharacters[objWishIndex.comingIndex[0]].start)) :
+        '';
 
 // console.log(wishDeadline(), wishBegin());
 
+
+export const currentChronicled = getWishInfo(wishChronicled, objWishChronicledIndex.wishIndex, game);
+export const futureChronicled = getWishInfo(wishChronicled, objWishChronicledIndex.comingIndex, game);
+// console.log(currentChronicled, futureChronicled);
+
+export const wishDeadlineChronicled = (): string =>
+    current.able ?
+        getDeadline(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.wishIndex[0]].end)) :
+        '';
+export const wishBeginChronicled = (): string =>
+    future.able ?
+        getDeadline(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.comingIndex[0]].start)) :
+        '';
+
+// console.log(wishDeadlineChronicled(), wishBeginChronicled());

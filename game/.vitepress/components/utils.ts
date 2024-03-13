@@ -181,7 +181,7 @@ export const secondsFormat = (s) => {
   const hour = Math.floor((s - day * 24 * 3600) / 3600);
   const minute = Math.floor((s - day * 24 * 3600 - hour * 3600) / 60);
   const second = s - day * 24 * 3600 - hour * 3600 - minute * 60;
-  if (day < 0 || hour < 0 || minute < 0 || second < 0) return -1;
+  if (day < 0 || hour < 0 || minute < 0 || second < 0) return '';
   return day + "天" + hour + "时" + minute + "分" + second + "秒";
 };
 
@@ -219,3 +219,4 @@ export const filterObject = (obj, callback) =>
   Object.fromEntries(Object.entries(obj)
     .filter(([key, val]) => callback(val, key)));
 
+export const combineQuoteZh = (str: string) => `「${str}」`;

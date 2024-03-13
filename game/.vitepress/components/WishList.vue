@@ -3,6 +3,50 @@
 
   <div v-if="refChronicled">
     <h2>集录{{ wishName }}</h2>
+
+
+    <p>
+      <a @click="sortLastChronicled">最近排序</a> |
+      <a @click="sortEarlyChronicled">最远排序</a>
+    </p>
+
+    <div v-for="(v, i) in refChronicled" :key="i">
+
+      <div class="wish-container">
+        <span class="wish-version" v-bind:title="getWishDate(v.start, v.end)">{{ v.version }}</span>
+        <div class="outer-container">
+
+          <div v-for="(vv, ii) in v.wish5star?.characters" :key="ii">
+            <div class="char-container">
+              <div class="char-avatar" :style="{ backgroundColor: '#b47b48' }">
+                <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
+                <div class="ele-corner"
+                  :style="{ backgroundImage: `url(/image/${gameName}/elements/${getCharEle(vv)}.png)` }">
+                </div>
+              </div>
+              <div class="char-name">
+                <span class="wish-name">{{ getCharNameZh(vv) }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div v-for="(vv, ii) in v.wish4star?.characters" :key="ii">
+            <div class="char-container">
+              <div class="char-avatar" :style="{ backgroundColor: '#77609a' }">
+                <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
+                <div class="ele-corner"
+                  :style="{ backgroundImage: `url(/image/${gameName}/elements/${getCharEle(vv)}.png)` }">
+                </div>
+              </div>
+              <div class="char-name">
+                <span class="wish-name">{{ getCharNameZh(vv) }}</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -82,6 +126,13 @@ const sortEarly = () => {
   refWishChar.value = refWishChar.value.sort((a, b) => compareDayjs(b.end, a.end));
 };
 
+const sortLastChronicled = () => {
+  refChronicled.value = refChronicled.value?.sort((a, b) => compareDayjs(a.end, b.end));
+};
+const sortEarlyChronicled = () => {
+  refChronicled.value = refChronicled.value?.sort((a, b) => compareDayjs(b.end, a.end));
+};
+
 const replaceImg = (event) => {
   event.target.src = '/image/genshin/characters/paimon_faq.png';
 };
@@ -100,6 +151,7 @@ const getWishDate = (s, e) => {
 
 onMounted(async () => {
   sortEarly();
+  sortEarlyChronicled();
 })
 
 
@@ -223,7 +275,8 @@ onMounted(async () => {
   }
 
   .char-name {
-    margin-top: unset;
+    margin-top: -8px;
+    margin-bottom: -2px;
   }
 
   .wish-version {
