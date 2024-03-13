@@ -32,13 +32,14 @@ jobs:
       run: |
         python mihoyo2.py
         python mihoyo2_old.py 
+        python mihoyo2_zh.py 
         python mihoyo6.py   
         python mihoyo6_zh.py         
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add auto/mhy2.json auto/mhy2old.json auto/mhy6.json auto/mhy6zh
+        git add auto/mhy2.json auto/mhy2old.json auto/mhy2zh auto/mhy6.json auto/mhy6zh
         git commit -m "Add changes" -a
     # - name: Push changes
     #   uses: ad-m/github-push-action@master

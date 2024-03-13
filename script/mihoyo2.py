@@ -197,6 +197,46 @@ def re_find(text_full: str, find_tag: str) -> list:
     return []
 
 
+# Chronicled Wish
+def get_chronicled_wish(text):
+    arr = []
+
+    def modify_name(s: str):
+        sub = s.split(',')
+        if len(sub):
+            sub = [v.replace(':', '').replace('\n', '').strip() for v in sub]
+            sub = [v[3:].strip() if v.startswith('and') else v for v in sub]
+            return sub
+        return []
+
+    def append_match(find_des):
+        if 'Chronicled' in find_des or 'chronicled' in find_des:
+            index1 = find_des.find('5-Star Characters')
+            res = find_des[index1:]
+
+            char5star = utils.find_substrs(res, '5-Star Characters', '\n')
+            char5weapon = utils.find_substrs(res, '5-Star Weapons', '\n')
+            char4star = utils.find_substrs(res, '4-Star Characters', '\n')
+            char4weapon = utils.find_substrs(res, '4-Star Weapons', '\n')
+
+            if len(char5star):
+                char5star = [modify_name(s) for s in char5star]
+                char5weapon = [modify_name(s) for s in char5weapon]
+                char4star = [modify_name(s) for s in char4star]
+                char4weapon = [modify_name(s) for s in char4weapon]
+
+                arr.append({
+                    'char5star': char5star,
+                    'char5weapon': char5weapon,
+                    'char4star': char4star,
+                    'char4weapon': char4weapon
+                })
+
+    utils.got_insert_info(text, append_match)
+
+    return arr
+
+
 @utils.log_args
 def parse_wish(post_id, post_idx):
     full_article_api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=' + \
@@ -235,9 +275,12 @@ def parse_wish(post_id, post_idx):
     start_tag = 'Event Wish "'
     end_tag = '" - Boosted Drop Rate'
     wish_name = get_arr_str_event_wish_name(clean_text, start_tag, end_tag)
+    end_tag = '" - Chronicled'
+    wish_name.extend(get_arr_str_event_wish_name(
+        clean_text, start_tag, end_tag))
     print('wish name:', wish_name)
     print('wish name len:', len(wish_name))
-    img_times = ['1', '1', '1']
+    img_times = ['1']*len(wish_name)
     for i in range(len(wish_name)):
         # print(find_res[i])
         img_type = img_url[post_idx][i][img_url[post_idx][i].rfind('.', 0):]
@@ -288,6 +331,10 @@ def parse_wish(post_id, post_idx):
     # character_info_only_name4 = utils.get_only_name(character_info4)
     # print('4-star only name:', character_info_only_name4)
 
+    # 集录祈愿
+    chronicle = get_chronicled_wish(clean_text)
+    print("chronicle", chronicle)
+
     return {
         'name': wish_name,
         'image': [1, 1],
@@ -297,6 +344,7 @@ def parse_wish(post_id, post_idx):
         'version': 'xxx',
         'wish5star': [utils.replace_characters(char) for char in only_name],
         'wish4star':  [utils.replace_characters(char) for char in only_name],
+        'chronicle': chronicle,
         'wishName': [],
         'url': ['']
     }

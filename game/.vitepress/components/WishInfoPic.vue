@@ -69,24 +69,24 @@ export default {
     sortLast() {
       this.char = this.char.sort(
         (a, b) => dayjs(b.start).diff(dayjs(a.start), "day", true)
-      )
+      );
     },
     sortEarly() {
       this.char = this.char.sort(
         (a, b) => dayjs(a.start).diff(dayjs(b.start), "day", true)
-      )
+      );
     },
     sortUptimes() {
-      this.char = this.char.sort((a, b) => b.image - a.image)
+      this.char = this.char.sort((a, b) => b.image - a.image);
     },
 
     replaceImg(event) {
-      event.target.src = `/image/${getGameName(this.WISH_TEXT)}/wish/_1.jpg`
+      event.target.src = `/image/${getGameName(this.WISH_TEXT)}/wish/_1.jpg`;
     },
   },
   async mounted() {
     // default
-    this.sortEarly()
+    this.sortLast();
   },
 };
 </script>

@@ -1,7 +1,7 @@
 import { WISH } from "./wish";
 import { processEvent } from "../eventHandle";
 import { getWishIndex, getWishInfo } from "../wishInfo";
-import { getDeadline } from '../utils'
+import { GameName, WishType, getDeadline } from '../utils';
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
@@ -9,9 +9,11 @@ import "dayjs/locale/zh";
 dayjs.locale("zh");
 
 const eventObj = processEvent(WISH);
-const game = 0;
+const game = GameName.Genshin;
 
-let wishCharacters = eventObj.events[0];
+// console.log(eventObj);
+
+let wishCharacters = eventObj.events[WishType.Characters];
 // console.log(wishCharacters)
 
 let objWish = getWishIndex(wishCharacters);

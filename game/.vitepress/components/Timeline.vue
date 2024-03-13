@@ -33,8 +33,8 @@
                 <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishWeapons, i)]"
                   style="height: 100%">
                   <div class="event-img">
-                    <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, _multi)}`" @error="replaceImg"
-                      alt="">
+                    <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name, _multi)}`"
+                      @error="replaceImg" alt="">
                   </div>
                   <span class="left-align timeline-character-text sticky text-shadow-weapon ">
                     {{ replaceText('', gameNum, j + 1) }}
@@ -53,11 +53,11 @@
             <div v-for="(_multi, j) in value.name">
 
               <div class="card event-item " :class="[
-                'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
-                getBorderRadius(wishCharacters, i),
-              ]" :style="getStyleCharacter(i, j)">
-                <div class="card-image waves-effect waves-block waves-light" :class="[getBorderRadius(wishCharacters, i)]"
-                  style="height: 100%">
+      'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
+      getBorderRadius(wishCharacters, i),
+    ]" :style="getStyleCharacter(i, j)">
+                <div class="card-image waves-effect waves-block waves-light"
+                  :class="[getBorderRadius(wishCharacters, i)]" style="height: 100%">
                   <div class="event-img responsive-img lazy">
                     <img v-bind:src="`/image/${gameName}/wish/${combineWishPic(value.name[j], value.image[j])}`"
                       @error="replaceImg" alt="">
@@ -93,7 +93,7 @@
 
 <script>
 
-import { parseDayjs, getGameName, combineWishPic, replaceText, GameName } from "./utils";
+import { parseDayjs, getGameName, combineWishPic, replaceText, GameName, WishType } from "./utils";
 import { processEvent } from "./eventHandle";
 
 import dayjs from "dayjs";
@@ -163,8 +163,8 @@ export default {
     const today = dayjs();
     const firstDay = eventObj.firstDay;
 
-    this.wishCharacters = eventObj.events[0];
-    this.wishWeapons = eventObj.events[1];
+    this.wishCharacters = eventObj.events[WishType.Characters];
+    this.wishWeapons = eventObj.events[WishType.Weapons];
 
     // console.log(this.wishCharacters)
 

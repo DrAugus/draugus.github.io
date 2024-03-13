@@ -1,7 +1,7 @@
 import { WISH } from "./wish";
 import { processEvent } from "../eventHandle";
 import { getWishIndex, getWishInfo } from "../wishInfo";
-import { getDeadline } from '../utils'
+import { GameName, WishType, getDeadline } from '../utils';
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
@@ -9,9 +9,9 @@ import "dayjs/locale/zh";
 dayjs.locale("zh");
 
 const eventObj = processEvent(WISH);
-const game = 1;
+const game = GameName.HSR;
 
-let wishCharacters = eventObj.events[0];
+let wishCharacters = eventObj.events[WishType.Characters];
 // console.log(wishCharacters)
 
 let objWish = getWishIndex(wishCharacters);

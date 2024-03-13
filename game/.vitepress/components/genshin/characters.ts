@@ -4,17 +4,6 @@ import { City, Element, Weapon } from "./utils";
 // todo 后续改为 db
 
 export const CHARACTER = {
-  // arlecchino: {
-  //   id: "arlecchino",
-  //   name: "阿蕾奇诺",
-  //   prefix: "",
-  //   star: 5,
-  //   event_exclusive: true,
-  //   intro: "",
-  //   city: City.Snezhnaya,
-  //   ele: Element.pyro,
-  //   weapon: Weapon.polearm
-  // },
   // liu_ping: {
   //   id: "liu_ping",
   //   name: "流萍",
@@ -26,6 +15,28 @@ export const CHARACTER = {
   //   ele: Element.hydro,
   //   weapon: Weapon.polearm
   // },
+  arlecchino: {
+    id: "arlecchino",
+    name: "阿蕾奇诺",
+    prefix: "孤暝厄月",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Snezhnaya,
+    ele: Element.pyro,
+    weapon: Weapon.sword
+  },
+  chiori: {
+    id: "chiori",
+    name: "千织",
+    prefix: "鸣雷的裁锦师",
+    star: 5,
+    event_exclusive: true,
+    intro: "一位直来直去的服装设计师，以其独有的风格引领着枫丹时尚。",
+    city: City.Fontaine,
+    ele: Element.geo,
+    weapon: Weapon.sword
+  },
   xianyun: {
     id: "xianyun",
     name: "闲云",
