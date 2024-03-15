@@ -32,36 +32,36 @@ hero:
 features:
   - title: 旅行
     # icon: 🚀
-    icon:
-      src: /logo.png
-      width: 32px
-      height: 32px    
-    details: 旅行是旅行计划也是旅行记录
+    # icon:
+    #   src: /logo.png
+    #   width: 32px
+    #   height: 32px    
+    details: 旅行是旅行计划，也是旅行记录
     link: /trip/
     linkText: 看看往哪冲
   - title: 去哪儿
-    icon: 🚀
+    # icon: 🚀
     details: 看看近期准备去哪
     link: /trip/where
     linkText: 冲冲冲
   - title: 旅途游记
-    icon: 🚀
+    # icon: 🚀
     details: 美好的旅行应该被记录下来        
     link: /trip/travelogue/
     linkText: 看看写了什么  
   - title: 文科探秘
-    icon: 🏮
+    # icon: 🏮
     details: 见证者，为见证而来 | 铭记者，因铭记而生
     link: /arts/
     linkText: 了解文科 有益身心
   - title: 代码是永恒的
-    icon: 💻
-    details: 互相学习互相学习
+    # icon: 💻
+    details: 多学、多看、多写……
     link: /code/
     linkText: 快来看看如何编程
   - title: 语言学习
-    icon: 🥂
-    details: 日语英语德语法语意大利语
+    # icon: 🥂
+    details: 日语、英语、德语、法语、意大利语……
     link: /arts/language/  
     linkText: 开始练习吧    
 ---

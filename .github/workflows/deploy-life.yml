@@ -63,7 +63,7 @@ jobs:
 
       - name: Add google
         run: |
-          echo "google-site-verification: googlea936c3462e7f8864.html" >> ./.vitepress/dist/googlea936c3462e7f8864.html
+          echo "google-site-verification: googlea936c3462e7f8864.html" >> ./life/.vitepress/dist/googlea936c3462e7f8864.html
         if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
 
       - name: Deploy to GitHub Pages

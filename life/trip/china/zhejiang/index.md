@@ -33,6 +33,7 @@
 - 313羊庄铁锅烀<Badge type="warning" text="人均 ¥118" />   <Badge type="tip" text="烤全羊" /><Badge type="tip" text="烧烤龙虾" /><Badge type="tip" text="牛羊肉火锅" />
 - 绿茶<Badge type="warning" text="人均 ¥100" /> <Badge type="tip" text="杭帮菜" />  <Badge type="tip" text="融合菜" />
 - 阿英川菜馆<Badge type="warning" text="人均 ¥96" /> <Badge type="tip" text="川菜" />
+- 三分银·辣之源贵州菜 <Badge type="warning" text="人均 ¥88" /><Badge type="tip" text="黔菜" />  
 
 酒吧
 
