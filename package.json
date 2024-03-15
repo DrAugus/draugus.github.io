@@ -1,0 +1,17 @@
+{
+  "name": "augus",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "game": "pnpm --filter game run dev",
+    "game:build": "pnpm --filter game run build",
+    "game:preview": "pnpm --filter game run preview",
+    "life": "pnpm --filter life run dev",
+    "life:build": "pnpm --filter life run build",
+    "life:preview": "pnpm --filter life run preview",
+    "temp": "pnpm --filter temp run dev",
+    "temp:build": "pnpm --filter temp run build",
+    "temp:preview": "pnpm --filter temp run preview"
+  }
+}

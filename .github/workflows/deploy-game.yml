@@ -31,10 +31,6 @@ jobs:
     # only me, deploy
     if: github.actor == 'DrAugus'
 
-    defaults:
-      run:
-        working-directory: ./game
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -43,9 +39,6 @@ jobs:
           fetch-depth: 0
           # if your docs needs submodules, uncomment the following line
           # submodules: true
-
-      - name: Change .npmrc
-        run: mv ./.npmrc-github ./.npmrc
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -68,7 +61,7 @@ jobs:
           BASE: /
           HOSTNAME: https://draugus.github.io/
           NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm build
+        run: pnpm game:build
 
       # 防止加载不到 _开头的文件 下面已经有了 jekyll: false
       # @see https://github.com/orgs/github-community/discussions/19794
@@ -91,14 +84,14 @@ jobs:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
 
       - name: Change config.ts
-        run: mv ./.vitepress/config.ts.example ./.vitepress/config.ts
+        run: mv ./game/.vitepress/config.ts.example ./game/.vitepress/config.ts
 
       - name: Build VuePress site again
         env:
           BASE: /game/
           HOSTNAME: https://augusmeow.github.io/
           NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm build
+        run: pnpm game:build
 
       - name: Deploy to GitHub Pages in augusmeow
         uses: crazy-max/ghaction-github-pages@v4.0.0

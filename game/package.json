@@ -1,12 +1,7 @@
 {
-  "name": "augus",
+  "name": "game",
   "type": "module",
-  "version": "0.1.0",
-  "description": "record everything",
-  "author": "DrAugus",
-  "license": "MIT",
-  "repository": "https://github.com/DrAugus/draugus.github.io.git",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -15,8 +10,8 @@
     "preview": "vitepress preview ."
   },
   "devDependencies": {
-   "@mdit-vue/shared": "^2.0.0",
-	  "@types/leaflet": "1.9.8",
+    "@mdit-vue/shared": "^2.0.0",
+    "@types/leaflet": "1.9.8",
     "@vue-leaflet/vue-leaflet": "0.10.1",
     "dayjs": "1.11.10",
     "leaflet": "1.9.4",

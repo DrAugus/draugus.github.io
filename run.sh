@@ -9,7 +9,22 @@ if [ ! -n "$1" ]; then
     exit 1
 fi
 
-cd $1
+# $1 is sub $2 is all
+contains_word() {
+    local word=$1
+    local text=$2
+
+    if echo "$text" | grep -qFe "$word"; then
+        echo "'$word' found in '$text'"
+        return 0
+    else
+        echo "'$word' not found in '$text'"
+        return 1
+    fi
+}
+
+
+# cd $1
 
 # 同时执行多个命令时的不同
 # if [[ "$(uname)" == *"NT"* ]]; then
@@ -25,10 +40,19 @@ cd $1
 #     fi
 # fi
 
-[ ! -n "$2" ] && pnpm dev
+run=$1
 
-[ "$2" = "-b" ] && pnpm build
+webpage=(
+life
+game
+)
 
-[ "$2" = "-i" ] && pnpm i
+for name in ${webpage[@]}
+do
+    if contains_word "$name" "$run"; then
+        [ ! -n "$2" ] && pnpm $name && exit 1
+        [ "$2" = "-b" ] && pnpm $name:build && exit 1
+    fi
+done
 
 

@@ -20,7 +20,7 @@ hero:
       text: 游记
       link: /trip/travelogue/
     - theme: alt
-      text: 语言学习
+      text: 语言
       link: /arts/language/      
     - theme: alt
       text: 文科
@@ -31,7 +31,11 @@ hero:
 # Could add features description here
 features:
   - title: 旅行
-    icon: 🚀
+    # icon: 🚀
+    icon:
+      src: /logo.png
+      width: 32px
+      height: 32px    
     details: 旅行是旅行计划也是旅行记录
     link: /trip/
     linkText: 看看往哪冲

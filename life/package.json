@@ -1,13 +1,7 @@
 {
-  "name": "augus-life",
+  "name": "life",
   "type": "module",
-  "version": "1.0.0",
-  "description": "augus food record",
-  "author": "Augus",
-  "license": "MIT",
-  "private": false,
-  "repository": "https://github.com/DrAugus/draugus.github.io.git",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
