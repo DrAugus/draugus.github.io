@@ -4,8 +4,8 @@
 
 ## 探索进度
 
-<ChinaList></ChinaList>
+<PlaceVisited />
 
 <script setup>
-import ChinaList from '../../.vitepress/components/trip/ChinaList.vue'
+import PlaceVisited from '../../.vitepress/components/trip/PlaceVisited.vue'
 </script>

@@ -47,7 +47,7 @@ const getChinaCardLink = (): CardLink[] => {
             icon: { svg: svg(v.abbreviation) },
             title: v.name,
             desc: '',
-            link: `${prefixTripChina}/${v.name}`
+            link: `${prefixTripChina}/${v.pinyin}`
         };
         if (v.name != v.capital) {
             one.link += '/';

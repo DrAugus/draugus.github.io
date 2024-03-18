@@ -285,7 +285,10 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                     intro: "学习，工作"
                 },],
                 resident: true
-            },
+            }, {
+                id: '大连',
+                info: []
+            }
         ]
     },
     {
@@ -360,6 +363,36 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                     },
                     intro: "游玩"
                 },]
+            },
+            {
+                id: '湖州', info: [{}, {}]
+            },
+        ]
+    },
+    {
+        id: '河南',
+        items: [
+            {
+                id: '郑州',
+                info: [{}, {}],
+            },
+        ]
+    },
+    {
+        id: '湖南',
+        items: [
+            {
+                id: '长沙',
+                info: [{}],
+            },
+        ]
+    },
+    {
+        id: '山东',
+        items: [
+            {
+                id: '青岛',
+                info: [{}],
             },
         ]
     },

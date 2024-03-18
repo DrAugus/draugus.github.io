@@ -10,7 +10,7 @@
 
 ## 概念介绍
 
-> [refer](http://cs.mfa.gov.cn/zggmcg/cgqz/cgqzjj_660464/)
+> 中国领事服务网，[出国签证简介](http://cs.mfa.gov.cn/zggmcg/cgqz/cgqzjj_660464/)
 
 ### 签证概述
 

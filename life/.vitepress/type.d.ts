@@ -38,8 +38,8 @@ interface DateRange {
 }
 
 interface ExploreInfo {
-  date: DateRange,
-  intro: string,
+  date?: DateRange,
+  intro?: string,
 }
 
 export interface ChinaExploreRecordItem {

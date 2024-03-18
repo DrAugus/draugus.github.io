@@ -6,7 +6,7 @@
             <Badge :text="'¥' + budget[k]"></Badge>
             <br />
             <blockquote>
-                当前已消费
+                已消费
                 <b>{{ ' ¥' + v }}
                     <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)">
                     </Badge>
@@ -23,8 +23,13 @@
 
     <div v-for="(v, k, i) in vTrip">
         <TitleFormat :title="k + '年'" :number="3"></TitleFormat>
-        <p v-for="(vv, ii) in v">
-            <b>{{ vv.name }}</b> <br />
+
+
+        <div v-for="(vv, ii) in v" :class="getBadge(vv.sum / sum[k] * 100, 1)" class="custom-block"
+            :style="{ backgroundColor: getBlockBgColor(ii) }">
+
+            <TitleFormat :title="vv.name" :number="4"></TitleFormat>
+
             <span class="italic">{{ modifyDate(vv.start) + ' ~ ' + modifyDate(vv.end) }}</span><br />
             <span><b>总计{{ ' ￥' + vv.sum }}</b>
                 <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)">
@@ -50,13 +55,12 @@
             <span v-if="vv.intro.others">
                 <b>其他：</b><span v-html="vv.intro.others"></span> <br />
             </span>
-        </p>
+
+        </div>
+
     </div>
 
-
-    <p>
-        <span class="underline"><b>其他额外开支</b></span>
-    </p>
+    <TitleFormat :title="'其他额外开支'" :number="2"></TitleFormat>
     <div v-for="(v, k, i) in vOther">
         <b>{{ k + '年' }}</b>
         <ul>
@@ -72,7 +76,7 @@
 <script setup lang="ts">
 import { TRAVEL_BILLS, LARGE_TRAVEL_PACKAGE, TRAVEL_BUDGET } from "../../data/trip/bill";
 import { LargeTravelPackage, TravelBill } from "../../type";
-import { modifyDate } from "../../utils";
+import { ColorScheme, getColorScheme, modifyDate } from "../../utils";
 import TitleFormat from "../TitleFormat.vue";
 
 let vOther: {
@@ -91,7 +95,7 @@ TRAVEL_BILLS.forEach(obj => {
     if (!vTrip[year]) { vTrip[year] = []; }
     vTrip[year].push(obj);
 });
-// console.log(vTrip)
+console.log(vTrip);
 
 // 倒序显示旅行
 // 对 object 中的键进行排序，即按年排序
@@ -143,6 +147,16 @@ const getBadge = (num, neg = 0) => {
 const budget: {
     [key: number]: number;
 } = TRAVEL_BUDGET;
+
+
+const getBlockBgColor = (n: number) => {
+    const color = getColorScheme(ColorScheme.GracefulViolet);
+    const key = n % color.length;
+    return color[key];
+}
+
+
+
 </script>
 
 <style scoped>
