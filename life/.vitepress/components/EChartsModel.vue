@@ -1,7 +1,7 @@
 <template>
   <v-chart class="chart" :option="option" />
 </template>
-  
+
 <script>
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
@@ -13,9 +13,10 @@ import {
   TooltipComponent,
   LegendComponent,
   GridComponent,
+  VisualMapComponent,
 } from "echarts/components";
 import VChart, { THEME_KEY } from "vue-echarts";
-import "echarts/lib/component/grid"
+import "echarts/lib/component/grid";
 
 use([
   UniversalTransition,
@@ -28,6 +29,7 @@ use([
   TooltipComponent,
   LegendComponent,
   GridComponent,
+  VisualMapComponent,
 ]);
 
 export default {
@@ -43,13 +45,13 @@ export default {
   },
 };
 </script>
-  
+
 <style scoped>
 .chart {
   height: 100vh;
 }
 </style>
-  
+
 <style>
 body {
   margin: 0;

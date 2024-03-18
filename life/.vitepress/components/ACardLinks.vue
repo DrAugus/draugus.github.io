@@ -7,14 +7,14 @@ import ACardLink from './ACardLink.vue';
 import type { CardLink } from '../type';
 
 const props = defineProps<{
-  title: string,
+  title?: string,
   items: CardLink[],
   target?: string,
   long?: boolean,
 }>();
 
 const formatTitle = computed(() => {
-  return slugify(props.title);
+  return props.title ? slugify(props.title) : '';
 });
 </script>
 

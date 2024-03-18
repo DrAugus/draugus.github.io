@@ -108,7 +108,7 @@ const getMarkers = (AMap) => {
   for (let cityInfo of cityVisitedTimes) {
 
     const city = cityInfo.city;
-    const content = city + ': ' + (cityInfo.resident ? "永居" : cityInfo.times);
+    const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
 
     let curCityData = findInCities(city);
     let number = cityInfo.times;

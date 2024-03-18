@@ -2,6 +2,29 @@ import type { CardData } from '../type';
 
 export const NAV_DATA: CardData[] = [
   {
+    title: '努力学习',
+    items: [
+      {
+        icon: 'https://www.hello-algo.com/assets/images/logo.svg',
+        title: 'Hello 算法',
+        desc: '动画图解、一键运行的数据结构与算法教程',
+        link: 'https://www.hello-algo.com/'
+      },
+      {
+        icon: '',
+        title: '开发人员速查表',
+        desc: '快速查找技术栈命令',
+        link: 'https://wangchujiang.com/reference/'
+      },
+      {
+        icon: '',
+        title: 'make',
+        desc: 'make 命令 makefile 编写指南',
+        link: 'https://wangchujiang.com/reference/docs/make.html'
+      },
+    ]
+  },
+  {
     title: '常用工具',
     items: [
       {
@@ -75,23 +98,6 @@ export const NAV_DATA: CardData[] = [
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn'
       }
-    ]
-  },
-  {
-    title: '资料文档',
-    items: [
-      {
-        icon: '',
-        title: '开发人员速查表',
-        desc: '快速查找技术栈命令',
-        link: 'https://wangchujiang.com/reference/'
-      },
-      {
-        icon: '',
-        title: 'make',
-        desc: 'make 命令 makefile 编写指南',
-        link: 'https://wangchujiang.com/reference/docs/make.html'
-      },
     ]
   },
   {

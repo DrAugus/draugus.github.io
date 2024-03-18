@@ -2,21 +2,21 @@
     当前可能的飞行次数不会超过 14次
     <EChartsModel :option="option3" />
 
-    以当前飞行了 8次 为基准，消耗为 ¥ curExpend
+    以当前飞行了 8次 为基准，消耗为 ¥ {{ curExpend }}
     <EChartsModel :option="option" />
 
     如果觉得不够亏？可以点开下面的看看更亏的
 
     <EChartsModel :option="option2" />
 </template>
-  
+
 <script>
-import EChartsModel from "../EChartsModel.vue"
+import EChartsModel from "../EChartsModel.vue";
 
 // 0 - 20
-let flyTimes = []
-let averageConsume = []
-let totalConsume = []
+let flyTimes = [];
+let averageConsume = [];
+let totalConsume = [];
 const startFly = 8;
 const curTax = 100;
 const curExpend = 5318;
@@ -24,15 +24,15 @@ const sliceTimes = 15;
 const maxTimes = 50;
 
 const calAverageConsume = (times) =>
-    ((curExpend + curTax * times) / (times + startFly)).toFixed(2)
+    ((curExpend + curTax * times) / (times + startFly)).toFixed(2);
 
 const calTotalConsume = (times) =>
-    curExpend + curTax * times
+    curExpend + curTax * times;
 
 for (let i = 0; i <= maxTimes - startFly; ++i) {
-    flyTimes.push(i + startFly)
-    averageConsume.push(calAverageConsume(i))
-    totalConsume.push(calTotalConsume(i))
+    flyTimes.push(i + startFly);
+    averageConsume.push(calAverageConsume(i));
+    totalConsume.push(calTotalConsume(i));
 }
 
 // flyTimes = flyTimes.sort((a, b) => b - a)
@@ -298,8 +298,8 @@ export default {
             option: option,
             option2: option2,
             option3: option3,
+            curExpend,
         };
     },
 };
 </script>
-  

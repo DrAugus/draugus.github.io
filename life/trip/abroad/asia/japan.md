@@ -13,7 +13,7 @@
 - [伏见稻荷大社 祭礼和活动](http://inari.jp/zh-cn/rite/)
 - 天神祭 [Live Japan 相关文章](https://livejapan.com/ja/in-kansai/in-pref-osaka/in-osaka-castle_tenmabashi_kyobashi/article-a2000459/)，[大阪天满宫资讯](https://osakatemmangu.or.jp/2117)，[天满宫官方网站](https://osakatemmangu.or.jp)，[2023年祭典路线](https://osakatemmangu.or.jp/wp/wp-content/uploads/2023/07/4062dc80a53466e8c0345bef7a238649-1.pdf)
 - [祇园祭介绍](https://kyoto.travel/cn/season_festivals/gion_matsuri.html)
--
+- 明治神宫(群友推荐)
 
 ## 怎么去
 
@@ -34,6 +34,7 @@
 |日本国驻重庆总领事馆|023-6373-3585（总机）| 重庆市、四川省、贵州省、云南省|
 |日本国驻青岛总领事馆|0532-8090-0001（总机）| 山东省|
 |日本国驻香港总领事馆|+852-2522-1184（总机）| 香港特别行政区、澳门特别行政区|
+
 :::
 
 - 日本国驻华大使馆，010-8531-9800（总机），地区：北京市、天津市、陕西省、山西省、甘肃省、河南省、河北省、 湖北省、湖南省、青海省、新疆维吾尔自治区、宁夏回族自治区、西藏自治区、内蒙古自治区
@@ -65,6 +66,10 @@
 
 :::details 费用截图
 ![1](/img/trip/visa-jp.jpg)
+
+依然是这个旅行社，好奇问了其他价格
+
+![2](/img/trip/visa-jp2.jpg)
 :::
 
 **旅游签需要联系旅行社**，并且有必要说明，下面官网的列表也需要提前打电话确认（官网的可能没更新或者旅行社倒闭了、搬家了），最好选择比较大的旅行社，虽然乌鸦一般黑，最起码大的办事靠谱，即使他可能更黑……

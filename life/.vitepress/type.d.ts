@@ -45,14 +45,14 @@ interface ExploreInfo {
 export interface ChinaExploreRecordItem {
   // 市区拼音
   id: string,
-  info: ExploreInfo[];
+  info: ExploreInfo[],
   resident?: boolean,
 }
 
 export interface ChinaExploreRecord {
   // 省区/直辖市拼音
   id: string,
-  info?: ExploreInfo[];
+  info?: ExploreInfo[],
   resident?: boolean,
   items?: ChinaExploreRecordItem[],
 }
@@ -129,4 +129,14 @@ export interface AppleModels {
   generation: number,
   model: string | string[],
   announced: Date,
+}
+
+
+
+export interface Province {
+  name: string, // 省份名  
+  fullName: string,
+  abbreviation: string, // 简称  
+  pinyin: string,
+  capital: string, // 省会  
 }
