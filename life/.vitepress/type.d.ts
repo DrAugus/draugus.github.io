@@ -5,9 +5,9 @@ export interface LinkName {
 
 interface LibsInfo {
   intro?: string,
-  repo?: LinkName,
-  homepage?: LinkName,
-  guide?: LinkName,
+  repo?: string,
+  homepage?: string,
+  guide?: string,
   others?: LinkName[],
 }
 
@@ -24,6 +24,8 @@ export interface CardLink {
   link: string,
   /** 链接 target */
   target?: string,
+  /** 背景 */
+  bgColor?: string,
 }
 
 export interface CardData {
@@ -124,19 +126,23 @@ export interface Certificate {
   cycle?: string,
   link: string,
 }
-
 export interface AppleModels {
   generation: number,
   model: string | string[],
   announced: Date,
 }
-
-
-
 export interface Province {
   name: string, // 省份名  
   fullName: string,
   abbreviation: string, // 简称  
   pinyin: string,
   capital: string, // 省会  
+}
+
+interface EntertainmentContent {
+  title: string,
+  description: string,
+  contentType: 'movie' | 'series',
+  releaseYear: number,
+  watchedStatus: boolean,
 }

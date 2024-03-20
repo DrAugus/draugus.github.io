@@ -95,7 +95,7 @@ TRAVEL_BILLS.forEach(obj => {
     if (!vTrip[year]) { vTrip[year] = []; }
     vTrip[year].push(obj);
 });
-console.log(vTrip);
+// console.log(vTrip);
 
 // 倒序显示旅行
 // 对 object 中的键进行排序，即按年排序

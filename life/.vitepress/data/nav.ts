@@ -153,7 +153,7 @@ export const NAV_DATA: CardData[] = [
       {
         icon: '',
         title: 'Atomics',
-        // desc: 'Rust Atomics and Locks',
+        desc: 'Rust Atomics and Locks',
         link: 'https://marabos.nl/atomics/'
       },
       {
@@ -183,14 +183,20 @@ export const NAV_DATA: CardData[] = [
       {
         icon: '',
         title: 'Standard C++',
-        // desc: 'News, Status & Discussion about Standard C++',
+        desc: 'News, Status & Discussion about Standard C++',
         link: 'https://isocpp.org/'
       },
       {
         icon: '',
-        title: '',
-        desc: '',
-        link: ''
+        title: 'Rust 秘典',
+        desc: { repo: 'https://github.com/rust-lang-cn/nomicon-zh-Hans' },
+        link: 'https://nomicon.purewhite.io/'
+      },
+      {
+        icon: '',
+        title: 'Rust Doc',
+        desc: 'The Rust Programming Language, an introductory book about Rust',
+        link: 'https://doc.rust-lang.org/book/'
       },
     ]
   },
@@ -533,6 +539,16 @@ export const NAV_DATA: CardData[] = [
   {
     title: '编译&构建&打包',
     items: [
+      {
+        icon: '',
+        title: 'GCC GDB 技巧',
+        desc: {
+          others: [{
+            text: 'gcc', link: 'https://github.com/hellogcc/100-gcc-tips',
+          }, { text: 'gdb', link: 'https://github.com/hellogcc/100-gdb-tips', }]
+        },
+        link: 'https://www.webpackjs.com'
+      },
       {
         icon: 'https://www.webpackjs.com/icon_180x180.png',
         title: 'Webpack 中文网',

@@ -12,7 +12,8 @@ const props = defineProps<{
   date?: CardLink['date'];
   desc?: CardLink['desc'];
   link: CardLink['link'];
-  target: CardLink['target'];
+  target?: CardLink['target'];
+  bgColor?: CardLink['bgColor'];
 }>();
 
 const formatTitle = computed(() => {
@@ -27,10 +28,14 @@ const svg = computed(() => {
   return '';
 });
 
+const prefixGitHub = 'https://github.com/';
 
-const descInfo = (obj: LinkName) => {
+const splitLink = (text: string, link: string) => {
 
-  const link = obj.link;
+  if (link.includes(prefixGitHub)) {
+    return splitRepo(text, link);
+  }
+
   let splitDot = link.split('.');
   // rm https://www
   splitDot = splitDot.slice(1);
@@ -46,24 +51,35 @@ const descInfo = (obj: LinkName) => {
     }
     res += '.';
   }
+  let obj: LinkName = {
+    text,
+    link
+  };
+  return modifyLink(obj, res);
+};
 
+const splitRepo = (text: string, link: string) => {
+
+  let obj: LinkName = {
+    text,
+    link
+  };
+  return modifyLink(obj, link.replace(prefixGitHub, ''));
+};
+
+const modifyLink = (obj: LinkName, res: string) => {
   let target = '_blank';
-
-  if (obj.text === 'Repo') {
-    res = link.replace('https://', '');
-  }
-
   let textInfo = `<b>${obj.text}</b>: `;
   let linkInfo = `<a href="${obj.link}" target='${target}' rel='noreferrer' > ${res}</a>`;
 
   return textInfo + linkInfo;
-};
-
+}
 
 </script>
 
 <template>
-  <a class="m-nav-link" :href="link ? link : ''" :target="!link ? '' : !target ? '' : '_blank'" rel="noreferrer">
+  <a class="m-nav-link" :href="link ? link : ''" :target="!link ? '' : !target ? '' : '_blank'" rel="noreferrer"
+    :style="{ backgroundColor: bgColor ? bgColor : '' }">
     <article class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
@@ -73,17 +89,17 @@ const descInfo = (obj: LinkName) => {
         <div v-else class="icon">😛</div>
         <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
-      <p v-if="date" class="italic">{{ date }}</p>
+      <span v-if="date" class="italic">{{ date }}</span>
       <div v-if="desc">
         <p v-if="typeof desc === 'string'" class="desc" v-html="desc"></p>
         <div v-else-if="'desc instanceof LibsInfo'" class="desc">
           <ul>
             <li v-if="desc.intro" class="desc intro" v-html="'<b>Intro: </b>' + desc.intro"> </li>
-            <li v-if="desc.repo" class="desc" v-html="descInfo(desc.repo)"> </li>
-            <li v-if="desc.homepage" class="desc" v-html="descInfo(desc.homepage)"> </li>
-            <li v-if="desc.guide" class="desc" v-html="descInfo(desc.guide)"> </li>
+            <li v-if="desc.repo" class="desc" v-html="splitRepo('Repo', desc.repo)"> </li>
+            <li v-if="desc.homepage" class="desc" v-html="splitLink('homepage', desc.homepage)"> </li>
+            <li v-if="desc.guide" class="desc" v-html="splitLink('guide', desc.guide)"> </li>
             <div v-if="desc.others">
-              <li v-for="(v, i) in desc.others" class="desc" v-html="descInfo(v)"> </li>
+              <li v-for="(v, i) in desc.others" class="desc" v-html="splitLink(v.text, v.link)"> </li>
             </div>
           </ul>
         </div>

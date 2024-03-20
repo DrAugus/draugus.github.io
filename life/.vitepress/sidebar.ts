@@ -16,11 +16,12 @@ const sidebarDaily = () => [
     { text: '办卡吗', link: '/daily/card' },
     { text: '户口', link: '/daily/hukou' },
     { text: '租房', link: '/daily/rent' },
+    { text: '看剧', link: '/daily/entertainment' },
     { text: '通勤', link: '/daily/commuting' },
     { text: '月亮', link: '/daily/moon' },
-    { text: '投影仪', link: '/daily/projector' },
+    { text: '踩雷商品', link: '/daily/bad-product' },
     {
-        text: '记录 Apple 使用体验', collapsed: false, items: [
+        text: 'Apple', collapsed: false, items: [
             { text: 'Apple官方日历订阅', link: '/daily/apple/calendar' },
             { text: 'iPhone', link: '/daily/apple/iphone' },
             { text: '评测', link: '/daily/apple/review' },
