@@ -60,7 +60,7 @@ importers:
         version: 2.1.0
       vite:
         specifier: ^5.0.12
-        version: 5.2.0(sass@1.72.0)
+        version: 5.2.2(sass@1.72.0)
       vitepress:
         specifier: 1.0.0-rc.45
         version: 1.0.0-rc.45(@algolia/client-search@4.22.1)(markdown-it-mathjax3@4.3.2)(sass@1.72.0)(search-insights@2.13.0)
@@ -878,14 +878,14 @@ packages:
       vue: 3.4.21
     dev: true
 
-  /@vitejs/plugin-vue@5.0.4(vite@5.2.0)(vue@3.4.21):
+  /@vitejs/plugin-vue@5.0.4(vite@5.2.2)(vue@3.4.21):
     resolution: {integrity: sha512-WS3hevEszI6CEVEx28F8RjTX97k3KsrcY6kvTg7+Whm5y3oYvcqzVeGCU3hxSAn4uY2CLCkeokkGKpoctccilQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     peerDependencies:
       vite: ^5.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 5.2.0(sass@1.72.0)
+      vite: 5.2.2(sass@1.72.0)
       vue: 3.4.21
     dev: true
 
@@ -1735,8 +1735,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vite@5.2.0(sass@1.72.0):
-    resolution: {integrity: sha512-xMSLJNEjNk/3DJRgWlPADDwaU9AgYRodDH2t6oENhJnIlmU9Hx1Q6VpjyXua/JdMw1WJRbnAgHJ9xgET9gnIAg==}
+  /vite@5.2.2(sass@1.72.0):
+    resolution: {integrity: sha512-FWZbz0oSdLq5snUI0b6sULbz58iXFXdvkZfZWR/F0ZJuKTSPO7v72QPXt6KqYeMFb0yytNp6kZosxJ96Nr/wDQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1788,7 +1788,7 @@ packages:
       '@shikijs/core': 1.2.0
       '@shikijs/transformers': 1.2.0
       '@types/markdown-it': 13.0.7
-      '@vitejs/plugin-vue': 5.0.4(vite@5.2.0)(vue@3.4.21)
+      '@vitejs/plugin-vue': 5.0.4(vite@5.2.2)(vue@3.4.21)
       '@vue/devtools-api': 7.0.18(vue@3.4.21)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       '@vueuse/integrations': 10.9.0(focus-trap@7.5.4)(vue@3.4.21)
@@ -1797,7 +1797,7 @@ packages:
       markdown-it-mathjax3: 4.3.2
       minisearch: 6.3.0
       shiki: 1.2.0
-      vite: 5.2.0(sass@1.72.0)
+      vite: 5.2.2(sass@1.72.0)
       vue: 3.4.21
     transitivePeerDependencies:
       - '@algolia/client-search'
