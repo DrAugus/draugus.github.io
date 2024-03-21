@@ -5,22 +5,22 @@
     <TitleFormat :title="'大学清单'" :number="2"></TitleFormat>
     <University></University>
 </template>
-  
-<script>
-import EChartsModel from "../EChartsModel.vue"
-import gaokaoInfo from '../../data/study/gaokao.json'
-import University from "./University.vue"
+
+<script setup lang="ts">
+import EChartsModel from "../EChartsModel.vue";
+import gaokaoInfo from '../../data/study/gaokao.json';
+import University from "./University.vue";
 import TitleFormat from "../TitleFormat.vue";
 
-const lineName = ['一本', '二本', '大专']
+const lineName = ['一本', '二本', '大专'];
 
-const scores = Object.values(gaokaoInfo.henan.science)
+const scores = Object.values(gaokaoInfo.henan.science);
 
 const filterScore = [
     scores.map(str => str.split(',')[0]),
     scores.map(str => str.split(',')[1]),
     scores.map(str => str.split(',')[2])
-]
+];
 
 const opt = {
     title: {
@@ -40,7 +40,10 @@ const opt = {
     },
     toolbox: {
         feature: {
-            saveAsImage: {}
+            dataView: { show: true, readOnly: false },
+            magicType: { show: true, type: ['line', 'bar'] },
+            restore: { show: true },
+            saveAsImage: { show: true }
         }
     },
     xAxis: {
@@ -71,20 +74,8 @@ const opt = {
             data: filterScore[2],
         },
     ]
-}
-
-export default {
-    name: "Gaokao",
-    components: {
-    EChartsModel,
-    University,
-    TitleFormat
-},
-    data() {
-        return {
-            option: opt,
-        };
-    },
 };
+
+const option = opt
+
 </script>
-  

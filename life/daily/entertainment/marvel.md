@@ -1,6 +1,4 @@
----
-title: Marvel
----
+# Marvel
 
 Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/), timeline todo...
 
@@ -8,9 +6,10 @@ Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/),
 
 [refer2][zhihu-timeline]
 
-## MCU
+:::danger MCU
+:::
 
-### 按照剧情时间顺序
+## 按照剧情时间顺序
 
 > 注：电影、短片、Disney+剧集&特别篇必看，其他剧集可以不看。
 
@@ -98,7 +97,13 @@ Marvel Cinematic Universe, MCU. [link](https://nuxt-movies-draugus.vercel.app/),
 29. 《雷神4：爱与雷霆》
     - Disney+特别篇：《暗夜狼人》
 
-:Marvel
+## DATA from [TMDB](https://www.themoviedb.org/)
+
+<Marvel />
+
+<script setup>
+import Marvel from '../../.vitepress/components/Marvel.vue'
+</script>
 
 [manweimi]: https://www.manweimi.cn/notice/16721.html
 [zhihu-timeline]: https://zhuanlan.zhihu.com/p/546488177

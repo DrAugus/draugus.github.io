@@ -1,7 +1,8 @@
 <template>
-  <div v-if="info.daodejing">
+  <div>
 
     <h3><a @click="showExplain">显示</a>/<a @click="hideExplain">隐藏</a>翻译</h3>
+    <br />
 
     <div class="heti heti--ancient">
       <p v-for="(v, i) in daodejing.info.article">
@@ -14,46 +15,37 @@
     </div>
   </div>
 
-  <div v-if="info.other">
-    我是other
-  </div>
+
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref } from "vue";
 import article from "../../data/article.json";
 
-export default {
-  name: "Article",
-  props: {
-    info: {
-      type: Object,
-      default: () => {
-      }
-    }
-  },
-  data() {
-    return {
-      daodejing: {
-        info: article.daodejing,
-        explain: false,
-      },
-    };
-  },
-  methods: {
-    showExplain() {
-      this.daodejing = {
-        info: article.daodejing,
-        explain: true,
-      };
-    },
-    hideExplain() {
-      this.daodejing = {
-        info: article.daodejing,
-        explain: false,
-      };
-    },
-  }
-};
+
+// const props = defineProps<{
+//   info: Object,
+// }>();
+
+
+let daodejing = ref({
+  info: article.daodejing,
+  explain: false,
+});
+
+function showExplain() {
+  daodejing.value = {
+    info: article.daodejing,
+    explain: true,
+  };
+}
+function hideExplain() {
+  daodejing.value = {
+    info: article.daodejing,
+    explain: false,
+  };
+}
+
 </script>
 
 <style scoped>

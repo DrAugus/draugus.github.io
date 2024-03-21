@@ -32,26 +32,26 @@
         </table>
     </details>
 </template>
-  
-<script>
+
+<script setup lang="ts">
 import EChartsModel from "../EChartsModel.vue";
 import { AIRFARE_DATA } from "../../data/trip/airfare";
 import { modifyDate1 } from "../../utils";
 
-let getAllDate = AIRFARE_DATA.map(obj => modifyDate1(obj.date))
-const getAllDateModify = AIRFARE_DATA.map(obj => obj.dateModify)
+let getAllDate = AIRFARE_DATA.map(obj => modifyDate1(obj.date));
+const getAllDateModify = AIRFARE_DATA.map(obj => obj.dateModify);
 getAllDate.forEach((date, index) => {
-    getAllDate[index] = date + getAllDateModify[index]
-})
+    getAllDate[index] = date + getAllDateModify[index];
+});
 
-const dateUpdate = getAllDate
-const below800km = AIRFARE_DATA.map(obj => obj.costBelow800km)
-const above800km = AIRFARE_DATA.map(obj => obj.costAbove800km)
-const taxAirport = AIRFARE_DATA.map(obj => obj.taxAirport)
-const details = AIRFARE_DATA.map(obj => obj.details)
-const taxTotal = taxAirport.map((value, index) => {
-    return (value + below800km[index]) + '/' + (value + above800km[index])
-})
+let dateUpdate = getAllDate;
+let below800km = AIRFARE_DATA.map(obj => obj.costBelow800km);
+let above800km = AIRFARE_DATA.map(obj => obj.costAbove800km);
+let taxAirport = AIRFARE_DATA.map(obj => obj.taxAirport);
+let details = AIRFARE_DATA.map(obj => obj.details);
+let taxTotal = taxAirport.map((value, index) => {
+    return (value + below800km[index]) + '/' + (value + above800km[index]);
+});
 // console.log("taxTotal", taxTotal)
 
 let opt = {
@@ -67,7 +67,9 @@ let opt = {
     legend: {},
     toolbox: {
         feature: {
-            saveAsImage: {}
+            magicType: { show: true, type: ['line', 'bar'] },
+            restore: { show: true },
+            saveAsImage: { show: true }
         }
     },
     grid: {
@@ -76,13 +78,21 @@ let opt = {
         bottom: '3%',
         containLabel: true
     },
+    // yAxis: {
+    //     type: 'value',
+    // },
+    // xAxis: {
+    //     type: 'category',
+    //     data: dateUpdate,
+    //     boundaryGap: [0, 0.01]
+    // },
     xAxis: {
         type: 'value',
-        boundaryGap: [0, 0.01]
     },
     yAxis: {
         type: 'category',
-        data: dateUpdate
+        data: dateUpdate,
+        boundaryGap: [0, 0.01]
     },
     series: [
         {
@@ -93,16 +103,22 @@ let opt = {
                 show: true
             },
             data: above800km,
+            markLine: {
+                data: [{ type: "average" }]
+            },
+            markPoint: {
+                data: [{ type: "max" }]
+            }
         },
-        {
-            name: "> 800km 燃油",
-            type: 'line',
-            // stack: 'Total',
-            // label: {
-            //     show: true
-            // },
-            data: above800km,
-        },
+        // {
+        //     name: "> 800km 燃油",
+        //     type: 'line',
+        //     // stack: 'Total',
+        //     // label: {
+        //     //     show: true
+        //     // },
+        //     data: above800km,
+        // },
         {
             name: "<= 800km 燃油",
             type: 'bar',
@@ -111,16 +127,22 @@ let opt = {
                 show: true
             },
             data: below800km,
+            markLine: {
+                data: [{ type: "average" }]
+            },
+            markPoint: {
+                data: [{ type: "max" }]
+            }
         },
-        {
-            name: "<= 800km 燃油",
-            type: 'line',
-            // stack: 'Total',
-            // label: {
-            //     show: true
-            // },
-            data: below800km,
-        },
+        // {
+        //     name: "<= 800km 燃油",
+        //     type: 'line',
+        //     // stack: 'Total',
+        //     // label: {
+        //     //     show: true
+        //     // },
+        //     data: below800km,
+        // },
         {
             name: "基建",
             type: 'bar',
@@ -129,29 +151,27 @@ let opt = {
                 show: true
             },
             data: taxAirport,
+            markLine: {
+                data: [{ type: "average" }]
+            },
+            markPoint: {
+                data: [{ type: "max" }]
+            }
         },
     ]
 };
 
-export default {
-    name: "Airfare",
-    components: {
-        EChartsModel,
-    },
-    data() {
-        return {
-            option: opt,
-            dateUpdate: [...dateUpdate].reverse(),
-            details: [...details].reverse(),
-            below800km: [...below800km].reverse(),
-            above800km: [...above800km].reverse(),
-            taxAirport: [...taxAirport].reverse(),
-            taxTotal: [...taxTotal].reverse(),
-        };
-    },
-};
+
+const option = opt;
+dateUpdate = [...dateUpdate].reverse();
+below800km = [...below800km].reverse();
+above800km = [...above800km].reverse();
+taxAirport = [...taxAirport].reverse();
+details = [...details].reverse();
+taxTotal = [...taxTotal].reverse()
+
 </script>
-  
+
 <style scoped>
 .cur-bg-color {
     background-color: #ffa9aa;

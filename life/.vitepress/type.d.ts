@@ -145,4 +145,5 @@ interface EntertainmentContent {
   contentType: 'movie' | 'series',
   releaseYear: number,
   watchedStatus: boolean,
+  link?: string,
 }

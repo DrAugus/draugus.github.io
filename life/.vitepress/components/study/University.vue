@@ -19,18 +19,8 @@
 
     </table>
 </template>
-  
-<script>
+
+<script setup lang="ts">
 import data from '../../data/study/university.json'
 
-export default {
-    name: "University",
-    data() {
-        return {
-            data,
-        };
-    },
-};
-
 </script>
-  

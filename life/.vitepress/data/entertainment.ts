@@ -1,5 +1,7 @@
 import type { CardData, CardLink, EntertainmentContent } from '../type';
 
+const prefixLink = '/daily/entertainment/';
+
 export const ENTERTAINMENT_CONTENT: EntertainmentContent[] = [
     {
         title: '过把瘾',
@@ -49,6 +51,7 @@ export const ENTERTAINMENT_CONTENT: EntertainmentContent[] = [
         contentType: 'movie',
         releaseYear: 2012,
         watchedStatus: true,
+        link: prefixLink + 'marvel'
     },
     {
         title: 'TBBT(The Big Bang Theory)',
@@ -142,10 +145,10 @@ export const ENTERTAINMENT_CONTENT: EntertainmentContent[] = [
         watchedStatus: true,
     },
     {
-        title: '',
-        description: '',
+        title: '디어 마이 프렌즈',
+        description: '该剧主要讲述人生还没有结束，我们还活着的黄昏青春的人生礼赞，走向人生尽头的朋友们之间的故事',
         contentType: 'series',
-        releaseYear: 0,
+        releaseYear: 2016,
         watchedStatus: false,
     },
     {
@@ -188,7 +191,7 @@ export const change2card = (): CardData[] => {
             date: `${v.releaseYear}年`,
             desc: v.description,
             bgColor: v.watchedStatus ? '#8BC34A' : '#B0BEC5',
-            link: ''
+            link: v.link ? v.link : ''
         };
 
         if (v.contentType === 'movie') {

@@ -1,23 +1,13 @@
 <template>
     <EChartsModel :option="option" />
-
-
-    <details>
-        <summary>列表显示</summary>
-        <p>
-            <span v-for="(v,k,i) in population">
-            {{ k +': ' + v.birth }} <br/>
-            </span>
-        </p>
-    </details>
 </template>
-  
-<script>
-import EChartsModel from "./EChartsModel.vue"
+
+<script setup lang="ts">
+import EChartsModel from "./EChartsModel.vue";
 import population from "../data/society/population.json";
 
-let yAxis = Object.keys(population)
-let birth = Object.values(population).map(item => parseInt(item.birth))
+let yAxis = Object.keys(population);
+let birth = Object.values(population).map(item => parseInt(item.birth));
 
 let opt;
 
@@ -32,6 +22,14 @@ opt = {
         }
     },
     legend: {},
+    toolbox: {
+        feature: {
+            dataView: { show: true, readOnly: false },
+            magicType: { show: true, type: ['line', 'bar'] },
+            restore: { show: true },
+            saveAsImage: { show: true }
+        }
+    },
     grid: {
         left: '3%',
         right: '4%',
@@ -56,17 +54,6 @@ opt = {
     ]
 };
 
-export default {
-    name: "Population",
-    components: {
-        EChartsModel,
-    },
-    data() {
-        return {
-            option: opt,
-            population,
-        };
-    },
-};
+const option = opt
+
 </script>
-  

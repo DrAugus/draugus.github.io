@@ -1,6 +1,8 @@
 <template>
 
-  <h1>{{ ww1.name }}</h1>
+
+  <TitleFormat :title="ww1.name" :number=2 />
+
 
   <div class="event-info" v-for="(value, key, index) in ww1.info">
     <div class="event-title">
@@ -14,7 +16,8 @@
     </div>
   </div>
 
-  <h1><a href="{{falklands_war.zh.url}}">{{ falklands_war.zh.name }}</a></h1>
+  <TitleFormat :title="falklands_war.zh.name" :number=2 /> <a :href="falklands_war.zh.url">wiki</a>
+
 
   <p v-for="(item, index) in falklands_war.zh.info">
     {{ item }}
@@ -24,18 +27,13 @@
 
 </template>
 
-<script>
-import data from '~/assets/json/war.json'
+<script setup lang="ts">
+import TitleFormat from '../TitleFormat.vue';
+import data from '../../data/war.json';
 
-export default {
-  name: "War",
-  data() {
-    return {
-      ww1: data.world_war_1,
-      falklands_war: data.falklands_war,
-    };
-  },
-};
+const ww1 = data.world_war_1;
+const falklands_war = data.falklands_war
+
 
 </script>
 

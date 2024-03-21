@@ -10,7 +10,7 @@
     <EChartsModel :option="option2" />
 </template>
 
-<script>
+<script setup lang="ts">
 import EChartsModel from "../EChartsModel.vue";
 
 // 0 - 20
@@ -54,6 +54,11 @@ const option = {
         }
     },
     legend: {},
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
     grid: {
         left: '3%',
         right: '4%',
@@ -113,6 +118,11 @@ const option2 = {
         }
     },
     legend: {},
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
     grid: {
         left: '3%',
         right: '4%',
@@ -218,6 +228,11 @@ const option3 = {
     tooltip: {
         trigger: 'axis'
     },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
     xAxis: [
         {
             axisLabel: {
@@ -287,19 +302,4 @@ const option3 = {
     ]
 };
 
-
-export default {
-    name: "AnalyseSuixinfei",
-    components: {
-        EChartsModel,
-    },
-    data() {
-        return {
-            option: option,
-            option2: option2,
-            option3: option3,
-            curExpend,
-        };
-    },
-};
 </script>
