@@ -261,8 +261,7 @@ def parse_wish(post_id, wish_type: WishType):
     print('4-star only name:', character_info_only_name4)
 
     name = arr_str_char_event_warp_name if wish_type == WishType.CHARACTER else "Brilliant Fixation"
-    name_lower = [utils.replace_characters(
-        char) for char in character_info_only_name]
+    name_lower = [utils.replace_characters(char) for char in name]
 
     return {
         'name': name,
