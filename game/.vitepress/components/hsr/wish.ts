@@ -195,6 +195,18 @@ export const WISH: WishAll = {
       wishName: ['焰锦游鱼', '天戈麾斥'],
       url: [""]
     },
+    {
+      name: ["Words of Yore", "Laic Pursuit"],
+      image: [1, 2],
+      shortName: ["Acheron", "Luocha"],
+      start: '2024/03/27 10:00:00 +0800',
+      end: "2024/04/17 11:59:00 +0800",
+      version: "2.1",
+      wish5star: ["acheron", "luocha"],
+      wish4star: ["dan_heng", "pela", "gallagher"],
+      wishName: ['远辞畴昔', '寻索世间'],
+      url: [""]
+    },
   ],
   weapons: [
     {
@@ -355,6 +367,16 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ["Earthly Escapade", "Before Dawn"],
       wish4star: ["Geniuses' Repose", "Planetary Rendezvous", "Under the Blue Sky"],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: [23, 24],
+      start: '2024/03/27 10:00:00 +0800',
+      end: "2024/04/17 11:59:00 +0800",
+      shortName: "",
+      wish5star: ["Along the Passing Shore", "Echoes of the Coffin"],
+      wish4star: ["Subscribe for More", "Post-Op Conversation", "Good Night and Sleep Well"],
       url: ""
     },
   ]
