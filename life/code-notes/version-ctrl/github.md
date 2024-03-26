@@ -31,6 +31,19 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 ## GitHub Action
 
+### cron 表达式
+
+```
+*     *     *   *    *  
+-     -     -   -    -  
+|     |     |   |    |  
+|     |     |   |    +----- day of week (0 - 7) [both 0 and 7 mean Sunday]  
+|     |     |   +------- month (1 - 12)  
+|     |     +--------- day of month (1 - 31)  
+|     +----------- hour (0 - 23)  
++------------- min (0 - 59)
+```
+
 ### [Create Pull Request](https://github.com/marketplace/actions/create-pull-request)
 
 > GitHub Action

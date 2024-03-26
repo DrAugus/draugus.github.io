@@ -34,6 +34,12 @@ export const NAV_DATA: CardData[] = [
     title: '常用工具',
     items: [
       {
+        icon: '',
+        title: '地图',
+        desc: '行政区划图',
+        link: 'https://bajiu.cn/ditu/?qh=36'
+      },
+      {
         icon: 'https://api.iconify.design/file-icons:latex.svg',
         title: 'LaTeX',
         desc: 'LaTeX 公式在线编辑器',

@@ -189,9 +189,15 @@ export const TRAVEL_BILLS: TravelBill[] = [
 
 export const LARGE_TRAVEL_PACKAGE: LargeTravelPackage[] = [
     {
-        name: "随心飞",
+        name: "“畅游中国”全国版",
         sum: 4258,
         year: 2023,
+        intro: ""
+    },
+    {
+        name: "“畅游中国”全国版",
+        sum: 4418,
+        year: 2024,
         intro: ""
     }
 ]

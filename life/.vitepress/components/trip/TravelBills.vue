@@ -1,9 +1,9 @@
 <template>
     <TitleFormat :title="'预算'" :number="2"></TitleFormat>
-    <p>
+    <div>
         <span v-for="(v, k, i) in sum">
-            <b>{{ k + ' ' }}</b> 全年旅行支出限额
-            <Badge :text="'¥' + budget[k]"></Badge>
+            <TitleFormat :title="k + ''" :number="3"></TitleFormat>
+            全年旅行支出限额 <Badge :text="'¥' + budget[k]"></Badge>
             <br />
             <blockquote>
                 已消费
@@ -17,7 +17,7 @@
                     :type="getBadge((budget[k] - v) / budget[k] * 100)"></Badge>
             </blockquote>
         </span>
-    </p>
+    </div>
 
     <TitleFormat :title="'支出'" :number="2"></TitleFormat>
 
@@ -62,7 +62,7 @@
 
     <TitleFormat :title="'其他额外开支'" :number="2"></TitleFormat>
     <div v-for="(v, k, i) in vOther">
-        <b>{{ k + '年' }}</b>
+        <TitleFormat :title="k + '年'" :number="3"></TitleFormat>
         <ul>
             <li v-for="(vv, ii) in v">
                 {{ vv.name }}: {{ vv.sum }}

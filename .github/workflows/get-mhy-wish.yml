@@ -10,6 +10,8 @@ on:
   schedule:
     # This is run at midnight UTC on Tuesday and Wednesday
     - cron:  '0 0 * * 2,3'
+    # 在 UTC 时间的凌晨 4 点执行（周二）（即周二的中午 UTC+8）
+    - cron: '0 4 * * 2'    
 
 jobs:
   build:
