@@ -1,0 +1,1 @@
+import{_ as e,c as p,o as a,a5 as t}from"./chunks/framework.BH3LI59O.js";const f=JSON.parse('{"title":"梗","description":"","frontmatter":{},"headers":[],"relativePath":"geng.md","filePath":"geng.md","lastUpdated":1703327301000}'),o={name:"geng.md"},r=t("",20),n=[r];function _(s,c,d,i,l,h){return a(),p("div",null,n)}const g=e(o,[["render",_]]);export{f as __pageData,g as default};
