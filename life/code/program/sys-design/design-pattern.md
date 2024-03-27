@@ -4,6 +4,8 @@
 
 ## 实现单例设计模式（懒汉，饿汉）
 
+单例模式详细：[链接](https://www.cnblogs.com/sunchaothu/p/10389842.html)
+
 > [singleton-how-should-it-be-used](https://stackoverflow.com/a/92193/17744936)
 
 - 意图：保证一个类仅有一个实例，并提供一个访问他的全局访问点。
@@ -14,32 +16,25 @@
   
 饿汉：在类加载时就创建实例；懒汉：在第一次使用时进行实例化
 
-::callout
-#summary
-code
-#content
-
 ```cpp
 class Singleton
 {
-private:
-static Singleton instance;
-private:
-Singleton();
-~Singleton();
-Singleton(const Singleton&);
-Singleton& operator=(const Singleton&);
-public:
-static Singleton& getInstance() {
-return instance;
-}
+  private:
+    static Singleton instance;
+  private:
+    Singleton();
+    ~Singleton();
+    Singleton(const Singleton&);
+    Singleton& operator=(const Singleton&);
+  public:
+    static Singleton& getInstance() {
+      return instance;
+    }
 }
 
 // initialize defaultly
 Singleton Singleton::instance;
 ```
-
-::
 
 ## 简述常见的工厂模式以及单例模式的使用场景
 
