@@ -760,7 +760,7 @@ export const WISH: WishAll = {
       url: ["?", "?"]
     },
     {
-      name: ["Of Silken Clouds Woven", "Oni's Royale",],
+      name: ["Of Silken Clouds Woven", "Oni's Royale"],
       image: [1, 4],
       shortName: ['Chiori', 'Arataki Itto'],
       start: "2024-03-13 06:00:00 +0800",
@@ -769,6 +769,18 @@ export const WISH: WishAll = {
       wish4star: ["gorou", "yun_jin", "dori"],
       version: "4.5",
       wishName: ["千云绘羽织", "鬼门斗宴"],
+      url: ["?", "?"]
+    },
+    {
+      name: ["Decree of the Deeps", "Leaves in the Wind"],
+      image: [2, 4],
+      shortName: ["Neuvillette", "Kaedehara Kazuha"],
+      start: "2024/04/02 18:00:00 +0800",
+      end: "2024/04/23 14:59:00 +0800",
+      wish5star: ["neuvillette", "kaedehara_kazuha"],
+      wish4star: ["barbara", "xingqiu", "yanfei"],
+      version: "4.5",
+      wishName: ["渊海界令", "红叶逐荒波"],
       url: ["?", "?"]
     },
   ],
@@ -1289,6 +1301,12 @@ export const WISH: WishAll = {
       image: 61,
       start: "2024-03-13 06:00:00 +0800",
       end: "2024-04-02 17:59:59 +0800",
+    },
+    {
+      name: "Epitome Invocation",
+      image: 62,
+      start: "2024/04/02 18:00:00 +0800",
+      end: "2024/04/23 14:59:00 +0800",
     },
   ],
 };

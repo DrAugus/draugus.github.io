@@ -335,8 +335,11 @@ def parse_wish(post_id, post_idx):
     chronicle = get_chronicled_wish(clean_text)
     print("chronicle", chronicle)
 
+    name_lower = [utils.replace_characters(char) for char in wish_name]
+
     return {
         'name': wish_name,
+        'name_lower': name_lower,
         'image': [1, 1],
         'shortName': only_name,
         'start': duration_text[0]['start_time'] + ' +0800'if len(duration_text) else '',
