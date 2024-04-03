@@ -14,11 +14,11 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       '@types/leaflet':
-        specifier: 1.9.8
-        version: 1.9.8
+        specifier: 1.9.9
+        version: 1.9.9
       '@vue-leaflet/vue-leaflet':
         specifier: 0.10.1
-        version: 0.10.1(@types/leaflet@1.9.8)(leaflet@1.9.4)
+        version: 0.10.1(@types/leaflet@1.9.9)(leaflet@1.9.4)
       dayjs:
         specifier: 1.11.10
         version: 1.11.10
@@ -33,7 +33,7 @@ importers:
         version: 2.1.0
       vitepress:
         specifier: ^1.0.0-rc.39
-        version: 1.0.2(@algolia/client-search@4.23.2)(sass@1.72.0)(search-insights@2.13.0)
+        version: 1.0.2(@algolia/client-search@4.23.2)(markdown-it-mathjax3@4.3.2)(sass@1.72.0)(search-insights@2.13.0)
       vue:
         specifier: ^3.4.15
         version: 3.4.21
@@ -75,7 +75,7 @@ importers:
     devDependencies:
       vitepress:
         specifier: ^1.0.0-rc.39
-        version: 1.0.2(@algolia/client-search@4.23.2)(sass@1.72.0)(search-insights@2.13.0)
+        version: 1.0.2(@algolia/client-search@4.23.2)(search-insights@2.13.0)
       vue:
         specifier: ^3.4.15
         version: 3.4.21
@@ -653,20 +653,10 @@ packages:
     resolution: {integrity: sha512-GXbTyNP6HlxpyWMR4eirW54Cxp84nVuivcV5hGVBgKnIl+UmD4AJgCX1uXuNRcFFAw58lB3HqryuezIc0iCLgw==}
     dev: true
 
-  /@shikijs/core@1.2.4:
-    resolution: {integrity: sha512-ClaUWpt8oTzjcF0MM1P81AeWyzc1sNSJlAjMG80CbwqbFqXSNz+NpQVUC0icobt3sZn43Sn27M4pHD/Jmp3zHw==}
-    dev: true
-
   /@shikijs/transformers@1.2.2:
     resolution: {integrity: sha512-GL03TlMh9oBeBLU5pcYBKpZnZZVdXSJ4ec7EQ/uw9+NrVaHs6qTjVN8F/0mvKd+sXLbBga8XZWDdob5F5tx5lw==}
     dependencies:
       shiki: 1.2.2
-    dev: true
-
-  /@shikijs/transformers@1.2.4:
-    resolution: {integrity: sha512-ysGkpsHxRxLmz8nGKeFdV+gKj1NXt+88sM/34kfKVWTWIXg5gsFOJxJBbG7k+fUR5JlD6sNh65W9qPXrbVE1wQ==}
-    dependencies:
-      shiki: 1.2.4
     dev: true
 
   /@types/estree@1.0.5:
@@ -677,8 +667,8 @@ packages:
     resolution: {integrity: sha512-WCfD5Ht3ZesJUsONdhvm84dmzWOiOzOAqOncN0++w0lBw1o8OuDNJF2McvvCef/yBqb/HYRahp1BYtODFQ8bRg==}
     dev: true
 
-  /@types/leaflet@1.9.8:
-    resolution: {integrity: sha512-EXdsL4EhoUtGm2GC2ZYtXn+Fzc6pluVgagvo2VC1RHWToLGlTRwVYoDpqS/7QXa01rmDyBjJk3Catpf60VMkwg==}
+  /@types/leaflet@1.9.9:
+    resolution: {integrity: sha512-o0qD9ReJzWpGNIAY0O32NkpfM6rhV4sxnwVkz7x7Ah4Zy9sP+2T9Q3byccL5la1ZX416k+qiyvt8ksBavPPY7A==}
     dependencies:
       '@types/geojson': 7946.0.14
     dev: true
@@ -713,7 +703,7 @@ packages:
       vue: 3.4.21
     dev: true
 
-  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.8)(leaflet@1.9.4):
+  /@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.9)(leaflet@1.9.4):
     resolution: {integrity: sha512-RNEDk8TbnwrJl8ujdbKgZRFygLCxd0aBcWLQ05q/pGv4+d0jamE3KXQgQBqGAteE1mbQsk3xoNcqqUgaIGfWVg==}
     peerDependencies:
       '@types/leaflet': ^1.5.7
@@ -722,7 +712,7 @@ packages:
       '@types/leaflet':
         optional: true
     dependencies:
-      '@types/leaflet': 1.9.8
+      '@types/leaflet': 1.9.9
       leaflet: 1.9.4
       vue: 3.4.21
     transitivePeerDependencies:
@@ -1426,12 +1416,6 @@ packages:
       '@shikijs/core': 1.2.2
     dev: true
 
-  /shiki@1.2.4:
-    resolution: {integrity: sha512-Q9n9jKiOjJCRPztA9POn3/uZXNySHDNKAsPNpmtHDcFyi6ZQhx5vQKZW3Nhrwn8TWW3RudSRk66zqY603EZDeg==}
-    dependencies:
-      '@shikijs/core': 1.2.4
-    dev: true
-
   /slick@1.12.2:
     resolution: {integrity: sha512-4qdtOGcBjral6YIBCWJ0ljFSKNLz9KkhbWtuGvUyRowl1kxfuE1x/Z/aJcaiilpb3do9bl5K7/1h9XC5wWpY/A==}
     dev: true
@@ -1551,8 +1535,8 @@ packages:
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.2)(search-insights@2.13.0)
-      '@shikijs/core': 1.2.4
-      '@shikijs/transformers': 1.2.4
+      '@shikijs/core': 1.2.2
+      '@shikijs/transformers': 1.2.2
       '@types/markdown-it': 13.0.7
       '@vitejs/plugin-vue': 5.0.4(vite@5.2.8)(vue@3.4.21)
       '@vue/devtools-api': 7.0.25(vue@3.4.21)
@@ -1562,7 +1546,7 @@ packages:
       mark.js: 8.11.1
       markdown-it-mathjax3: 4.3.2
       minisearch: 6.3.0
-      shiki: 1.2.4
+      shiki: 1.2.2
       vite: 5.2.8(sass@1.72.0)
       vue: 3.4.21
     transitivePeerDependencies:
@@ -1593,7 +1577,7 @@ packages:
       - universal-cookie
     dev: true
 
-  /vitepress@1.0.2(@algolia/client-search@4.23.2)(sass@1.72.0)(search-insights@2.13.0):
+  /vitepress@1.0.2(@algolia/client-search@4.23.2)(search-insights@2.13.0):
     resolution: {integrity: sha512-bEj9yTEdWyewJFOhEREZF+mXuAgOq27etuJZT6DZSp+J3XpQstXMJc5piSVwhZBtuj8OfA0iXy+jdP1c71KMYQ==}
     hasBin: true
     peerDependencies:
