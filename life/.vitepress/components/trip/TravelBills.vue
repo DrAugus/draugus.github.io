@@ -31,6 +31,12 @@
             <TitleFormat :title="vv.name" :number="4"></TitleFormat>
 
             <span class="italic">{{ modifyDate(vv.start) + ' ~ ' + modifyDate(vv.end) }}</span><br />
+
+            <span v-if="vv.city">
+                <b>城市：{{ vv.city }}</b>
+                <br />
+            </span>
+
             <span><b>总计{{ ' ￥' + vv.sum }}</b>
                 <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)">
                 </Badge>

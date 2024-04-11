@@ -3,6 +3,20 @@ import { LargeTravelPackage, TravelBill } from "../../type"
 
 export const TRAVEL_BILLS: TravelBill[] = [
     {
+        name: "潮汕地区",
+        start: new Date("2024/04/04"),
+        end: new Date("2024/04/10"),
+        sum: 2029,
+        city: "广州,香港,潮州,汕头",
+        intro: {
+            tips: "",
+            hotels: "总计753。101+173+116+109+127+127",
+            transportation: "总计781.5。飞机280，高铁74.5+75+75+148，打车45+22+22，机场大巴40",
+            dining: "总计494。80+40+35+30+11+14+15+30+16+13+12+198",
+            entertainment: "",
+            others: ""
+        }
+    }, {
         name: "柳州",
         start: new Date("2023/10/20"),
         end: new Date("2023/10/22"),
