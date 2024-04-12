@@ -54,6 +54,11 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                     start: new Date('2023/07/27'),
                 },
                 intro: "转机"
+            }, {
+                date: {
+                    start: new Date('2024/04/05'),
+                },
+                intro: "办事"
             }
         ]
     },
@@ -137,6 +142,40 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                 ]
             },
         ]
+    }, {
+        id: '内蒙古', items: [
+            {
+                id: '鄂尔多斯', info: [
+                    {
+                        date: {
+                            start: new Date('2020/07/27'),
+                            end: new Date('2020/07/28'),
+                        },
+                        intro: "转机"
+                    }, {
+                        date: {
+                            start: new Date('2020/11/06'),
+                        },
+                        intro: "转机"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: '陕西', items: [
+            {
+                id: '西安', info: [
+                    {
+                        date: {
+                            start: new Date('2018/03/30'),
+                            end: new Date('2018/04/11'),
+                        },
+                        intro: "游玩"
+                    }
+                ]
+            }
+        ]
     },
     { id: '甘肃' },
     {
@@ -155,7 +194,13 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                             start: new Date('2023/06/30'),
                         },
                         intro: "高铁转车"
-                    }
+                    }, {
+                        date: {
+                            start: new Date('2024/04/04'),
+                            end: new Date('2024/04/05'),
+                        },
+                        intro: "飞机落地，高铁去hk"
+                    },
                 ]
             },
             {
@@ -170,6 +215,27 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                         start: new Date('2023/06/28'),
                     },
                     intro: "转车去香港"
+                }, {
+                    date: {
+                        start: new Date('2024/04/05'),
+                    },
+                    intro: "转车来回香港"
+                }]
+            }, {
+                id: '汕头', info: [{
+                    date: {
+                        start: new Date('2024/04/05'),
+                        end: new Date('2023/04/08'),
+                    },
+                    intro: "游玩"
+                }]
+            }, {
+                id: '潮州', info: [{
+                    date: {
+                        start: new Date('2024/04/08'),
+                        end: new Date('2023/04/10'),
+                    },
+                    intro: "游玩"
                 }]
             },
         ]
@@ -190,6 +256,12 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                         end: new Date('2023/10/22'),
                     },
                     intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/03/29'),
+                        end: new Date('2024/03/31'),
+                    },
+                    intro: "游玩"
                 },]
             },
             {
@@ -205,6 +277,24 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                         end: new Date('2023/06/12'),
                     },
                     intro: "游玩"
+                },]
+            }, {
+                id: '桂林', info: [{
+                    date: {
+                        start: new Date('2023/09/02'),
+                        end: new Date('2023/09/06'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/03/29'),
+                    },
+                    intro: "转车"
+                }, {
+                    date: {
+                        start: new Date('2024/03/31'),
+                    },
+                    intro: "转车"
                 },]
             },
         ]
@@ -271,8 +361,21 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                 resident: true
             },
         ]
-    },
-    {
+    }, {
+        id: '吉林',
+        items: [
+            {
+                id: '长春',
+                info: [{
+                    date: {
+                        start: new Date('2023/05/27'),
+                        end: new Date('2023/05/28'),
+                    },
+                    intro: "游玩"
+                }]
+            }
+        ]
+    }, {
         id: '辽宁',
         items: [
             {
@@ -287,7 +390,13 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                 resident: true
             }, {
                 id: '大连',
-                info: []
+                info: [{
+                    date: {
+                        start: new Date('2016/06/10'),
+                        end: new Date('2016/06/12'),
+                    },
+                    intro: "游玩"
+                }]
             }
         ]
     },
@@ -374,7 +483,43 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
         items: [
             {
                 id: '郑州',
-                info: [{}, {}],
+                info: [{
+                    date: {
+                        start: new Date('2017/02/22'),
+                    },
+                    intro: "飞机"
+                }, {
+                    date: {
+                        start: new Date('2019/01/03'),
+                        end: new Date('2019/01/04'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2020/10/04'),
+                    },
+                    intro: "飞机"
+                }, {
+                    date: {
+                        start: new Date('2020/10/07'),
+                    },
+                    intro: "飞机"
+                }, {
+                    date: {
+                        start: new Date('2022/02/12'),
+                    },
+                    intro: "飞机"
+                }, {
+                    date: {
+                        start: new Date('2022/02/16'),
+                    },
+                    intro: "飞机"
+                }, {
+                    date: {
+                        start: new Date('2024/01/26'),
+                    },
+                    intro: "g高铁"
+                },],
             },
         ]
     },
@@ -391,8 +536,32 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
         id: '山东',
         items: [
             {
+                id: '淄博',
+                info: [{
+                    date: {
+                        start: new Date('2023/08/04'),
+                        end: new Date('2023/08/05'),
+                    },
+                    intro: "游玩"
+                }],
+            }, {
+                id: '济宁',
+                info: [{
+                    date: {
+                        start: new Date('2023/08/05'),
+                        end: new Date('2023/08/06'),
+                    },
+                    intro: "游玩"
+                }],
+            }, {
                 id: '青岛',
-                info: [{}],
+                info: [{
+                    date: {
+                        start: new Date('2023/08/03'),
+                        end: new Date('2023/08/04'),
+                    },
+                    intro: "游玩"
+                }],
             },
         ]
     },
