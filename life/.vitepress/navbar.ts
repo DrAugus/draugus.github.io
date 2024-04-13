@@ -13,31 +13,15 @@ export const navbar = [
   { text: '日常', link: '/daily/', activeMatch: '^/daily' },
   // { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
   {
-    text: '文科',
-    items: [
-      { text: '首页', link: '/arts/' },
-      {
-        text: '看看',
-        items: [
-          { text: '语言', link: '/arts/language/' },
-          { text: '经济', link: '/arts/economics/' },
-          { text: '社会', link: '/arts/society/' },
-          { text: '历史', link: '/arts/history/' },
-          { text: '乐理', link: '/arts/music/' },]
-      },
-      {
-        text: '语文',
-        items: [
-          { text: '檄文', link: '/arts/xiwen/' },
-          { text: '文章', link: '/arts/article/' },
-        ],
-      },
-      { text: '演讲', link: '/arts/speech/' },
-      { text: '一言', link: '/arts/one-word' },
-    ],
-    activeMatch: '^/arts',
+    text: '课程', items: [
+      { text: '说明', link: '/course/' },
+      { text: '经济学', link: '/course/economics/', activeMatch: '^/course/economics' },
+      { text: '文学', link: '/course/literature/', activeMatch: '^/course/literature' },
+      { text: '历史学', link: '/course/history/', activeMatch: '^/course/history' },
+      { text: '理学', link: '/course/science/', activeMatch: '^/course/science' },
+      { text: '工学', link: '/course/engineering/', activeMatch: '^/course/engineering' },
+    ]
   },
-  { text: '理科', link: '/science/', activeMatch: '^/science' },
   {
     text: '编程',
     items: [
@@ -96,6 +80,20 @@ export const navbar = [
         items: [
           { text: '病', link: '/disease/' },
         ],
+      },
+      {
+        text: '文科',
+        items: [
+          { text: '首页', link: '/arts/' },
+          { text: '语言', link: '/arts/language/' },
+          { text: '社会', link: '/arts/society/' },
+          { text: '历史', link: '/arts/history/' },
+          { text: '檄文', link: '/arts/xiwen/' },
+          { text: '文章', link: '/arts/article/' },
+          { text: '演讲', link: '/arts/speech/' },
+          { text: '一言', link: '/arts/one-word' },
+        ],
+        activeMatch: '^/arts',
       },
     ],
   },

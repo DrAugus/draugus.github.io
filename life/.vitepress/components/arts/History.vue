@@ -1,8 +1,7 @@
 <template>
+
   <div class="dynasty-info" v-for="(value, key, index) in history">
-    <div class="dynasty-title">
-      {{ value.name }}
-    </div>
+    <TitleFormat :title="value.name" :number="2"></TitleFormat>
     <div class="dynasty-date">
       {{ value.start }}&nbsp;-&nbsp;{{ value.end }}
     </div>
@@ -14,18 +13,10 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import TitleFormat from "../TitleFormat.vue";
 import data from '../../data/history_china.json'
-
-export default {
-  name: "History",
-  data() {
-    return {
-      history: data,
-    };
-  },
-};
-
+const history = data
 </script>
 
 <style scoped>

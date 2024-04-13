@@ -5,9 +5,7 @@
 
 
   <div class="event-info" v-for="(value, key, index) in ww1.info">
-    <div class="event-title">
-      {{ value.name }}
-    </div>
+    <TitleFormat :title="value.name" :number=3 />
     <div class="event-date">
       {{ value.date }}
     </div>

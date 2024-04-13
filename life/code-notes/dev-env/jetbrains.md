@@ -1,12 +1,9 @@
----
-icon: logos:jetbrains
----
-
-
 # JetBrains
 
 ## hotkeys
 
-<kbd>ctrl</kbd>+<kbd>z</kbd> 撤回代码
+ctrl+z 撤回代码
 
-<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>z</kbd> 恢复撤回代码
+ctrl+shift+z 恢复撤回代码
+
+In the main menu, go to Code | Reformat Code or press Ctrl+Alt+L.
