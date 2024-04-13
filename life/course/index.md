@@ -13,7 +13,7 @@
 5. 文学（Literature）
 6. 历史学（History）
 7. [理学](./science/)（Science）
-8. 工学（Engineering）
+8. [工学](./engineering/)（Engineering）
 9. 农学（Agronomy）
 10. 医学（Medicine）
 11. 军事学（Military Science）

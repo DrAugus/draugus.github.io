@@ -335,7 +335,10 @@ const sidebarCourse = [
             { text: '离散数学', link: '/course/science/discrete-math' },
             { text: '概率论', link: '/course/science/probability-theory' },
         ]
-
+    }, {
+        text: '工学', collapsed: false, items: [
+            { text: '数据结构与算法', link: '/course/engineering/dsa' },
+        ]
     }, {
         text: '艺术学', collapsed: false, items: [
             { text: '乐理', link: '/course/art/music_theory' },
