@@ -207,6 +207,18 @@ export const WISH: WishAll = {
       wishName: ['远辞畴昔', '寻索世间'],
       url: [""]
     },
+    {
+      name: ["Gilded Imprisonment", "Gentle Eclipse of the Moon"],
+      image: [1, 2],
+      shortName: ["Aventurine", "Jingliu"],
+      start: '2024/04/17 12:00:00 +0800',
+      end: "2024/05/07 15:00:00 +0800",
+      version: "2.1",
+      wish5star: ["aventurine", "jingliu"],
+      wish4star: ["serval", "luka", "lynx"],
+      wishName: ['囚石铸金', '月有薄蚀'],
+      url: [""]
+    },
   ],
   weapons: [
     {
@@ -377,6 +389,16 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ["Along the Passing Shore", "Echoes of the Coffin"],
       wish4star: ["Subscribe for More", "Post-Op Conversation", "Good Night and Sleep Well"],
+      url: ""
+    },
+    {
+      name: "Brilliant Fixation",
+      image: [25, 26],
+      start: '2024/04/17 12:00:00 +0800',
+      end: "2024/05/07 15:00:00 +0800",
+      shortName: "",
+      wish5star: ["I Shall Be My Own Sword", "Inherently Unjust Destiny"],
+      wish4star: ["Make the World Clamor", "Shared Feeling", "Concert for Two"],
       url: ""
     },
   ]

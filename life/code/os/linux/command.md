@@ -424,6 +424,14 @@ sz 命令
 
 `scp -r server_a server_b`
 
+```bash
+scp -r local_folder remote_username@remote_ip:remote_folder 
+# 或者 
+scp -r local_folder remote_ip:remote_folder 
+```
+
+如果使用了指定端口，则需要加上 `-P your_port_number`
+
 服务器A上执行scp到服务器B，报错：`Permission denied (publickey)`.
 > 解决方法，把A的公钥放到B上
 
