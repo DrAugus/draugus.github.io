@@ -1,4 +1,4 @@
-import { modifyTravelogue } from "./data/trip/travelogueToSiderbar";
+import { modifyTravelogue } from "./data/trip/travelogueToSidebar";
 import { LinkName } from "./type";
 
 const sidebarEat = [
@@ -67,10 +67,10 @@ const sidebarTrip = [
 
 ];
 
-
-const sidebarTripTravelogue = (): LinkName[] => [
+const sidebarTripTravelogue = [
     { text: '游记', link: '/trip/travelogue/' },
-].concat(...modifyTravelogue());
+]
+    .concat(...modifyTravelogue());
 const sidebarTripChina = [
     { text: '上海', link: '/trip/china/shanghai' },
     { text: '澳门', link: '/trip/china/macao' },

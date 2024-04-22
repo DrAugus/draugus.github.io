@@ -1,4 +1,4 @@
-# 6 means hsr
+# 2 means genshin
 # 米游社接口
 
 import json
@@ -25,6 +25,9 @@ api_url_news_list += '?gids=2'
 # 星穹铁道 跃迁在公告分类里
 api_url_news_list += '&type=1'
 api_url_news_list += '&page_size=50'
+
+
+api_url_post_full += '?post_id='
 
 data = get_url_data(api_url_news_list)
 json_str = json.dumps(data['data']['list'])
@@ -69,13 +72,14 @@ for obj in data_dict:
     if match_lc:
         warp_arr[2].append(obj)
 
-post_id_arr = [[], [], []]
+post_id_arr = []
 idx = 0
 
 output = ''
 
 for warp_info in warp_arr:
 
+    tmp_post_id = []
     for get_warp in warp_info:
 
         subject = get_warp['post']['subject']
@@ -85,7 +89,12 @@ for warp_info in warp_arr:
         output += print_wish_name
         print(print_wish_name)
 
+        post_id = get_warp['post']['post_id']
+        tmp_post_id.append(post_id)
+
         structured_content = get_warp['post']['structured_content']
+        if len(structured_content) == 0:
+            continue
         # 先去除可能的转义字符
         structured_content = structured_content.replace('\\\\', '\\')
         data_subject = json.loads(structured_content)
@@ -119,9 +128,16 @@ for warp_info in warp_arr:
         print('============')
 
     idx = idx + 1
+    post_id_arr.append(tmp_post_id)
     output += '================\n'
     print('============')
 
+output += f'post_id_arr\n{post_id_arr}'
+print('post_id_arr', post_id_arr)
+post_id_link_arr = [api_url_post_full +
+                    v for sublist in post_id_arr for v in sublist]
+output += f'post_id_link_arr\n{post_id_arr}'
+print('post_id_link_arr', post_id_link_arr)
 
 current_path = os.path.dirname(__file__)
 filename = current_path + '/auto/mhy2zh'

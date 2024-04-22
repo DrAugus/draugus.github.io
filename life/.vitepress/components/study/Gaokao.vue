@@ -2,8 +2,12 @@
     <TitleFormat :title="'河南高考历年分数线(仅理科)'" :number="2"></TitleFormat>
     <EChartsModel :option="option" />
 
-    <TitleFormat :title="'大学清单'" :number="2"></TitleFormat>
-    <University></University>
+
+    <details class="details custom-block">
+        <summary>大学清单</summary>
+        <University></University>
+    </details>
+
 </template>
 
 <script setup lang="ts">
@@ -21,6 +25,9 @@ const filterScore = [
     scores.map(str => str.split(',')[1]),
     scores.map(str => str.split(',')[2])
 ];
+
+const minScore = Math.min(...filterScore[1].map(v => parseInt(v))) - 30
+
 
 const opt = {
     title: {
@@ -52,7 +59,8 @@ const opt = {
         data: Object.keys(gaokaoInfo.henan.science)
     },
     yAxis: {
-        type: 'value'
+        type: 'value',
+        min: minScore,
     },
     series: [
         {
@@ -67,12 +75,12 @@ const opt = {
             // stack: 'Total',
             data: filterScore[1],
         },
-        {
-            name: lineName[2],
-            type: 'line',
-            // stack: 'Total',
-            data: filterScore[2],
-        },
+        // {
+        //     name: lineName[2],
+        //     type: 'line',
+        //     // stack: 'Total',
+        //     data: filterScore[2],
+        // },
     ]
 };
 

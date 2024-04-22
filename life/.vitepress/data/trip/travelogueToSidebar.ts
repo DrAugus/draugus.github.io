@@ -3,7 +3,7 @@ import { dataTravelogue } from "./travelogue";
 
 export const modifyTravelogue = (): LinkName[] =>
     dataTravelogue
-        .slice(0)
+        // .slice(0)
         .reverse()
         .map((v, i) => {
             let arrLink = v.link.split('/');
