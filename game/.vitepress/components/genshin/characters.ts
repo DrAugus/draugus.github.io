@@ -15,16 +15,49 @@ export const CHARACTER = {
   //   ele: Element.hydro,
   //   weapon: Weapon.polearm
   // },
+  sethos: {
+    id: "sethos",
+    name: "赛索斯",
+    prefix: "衡明知度",
+    star: 4,
+    event_exclusive: false,
+    intro: "",
+    city: City.Sumeru,
+    ele: Element.pyro,
+    weapon: Weapon.polearm
+  },
+  sigewinne: {
+    id: "sigewinne",
+    name: "希格雯",
+    prefix: "龙女妙变",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.hydro,
+    weapon: Weapon.polearm
+  },
+  clorinde: {
+    id: "clorinde",
+    name: "克洛琳德",
+    prefix: "秉烛弥影",
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Fontaine,
+    ele: Element.electro,
+    weapon: Weapon.polearm
+  },
   arlecchino: {
     id: "arlecchino",
     name: "阿蕾奇诺",
     prefix: "孤暝厄月",
     star: 5,
     event_exclusive: true,
-    intro: "",
-    city: City.Snezhnaya,
+    intro: "愚人众执行官第四席「仆人」，壁炉之家的孩子们敬畏的「父亲」。",
+    city: City.Fontaine,
     ele: Element.pyro,
-    weapon: Weapon.sword
+    weapon: Weapon.polearm
   },
   chiori: {
     id: "chiori",

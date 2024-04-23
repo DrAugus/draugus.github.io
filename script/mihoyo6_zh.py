@@ -73,10 +73,12 @@ for warp_info in warp_arr:
 
     for get_warp in warp_info:
 
-        subject = get_warp['post']['structured_content']
+        structured_content = get_warp['post']['structured_content']
+        if len(structured_content) == 0:
+            continue        
         # 先去除可能的转义字符
-        subject = subject.replace('\\\\', '\\')
-        data_subject = json.loads(subject)
+        structured_content = structured_content.replace('\\\\', '\\')
+        data_subject = json.loads(structured_content)
         inserts = [item["insert"] for item in data_subject if "insert" in item and isinstance(
             item["insert"], str)]
         merged_string = "".join(inserts)
@@ -88,7 +90,7 @@ for warp_info in warp_arr:
 
         img_url = get_warp['post']['images']
 
-        # print('subject', subject)
+        # print('structured_content', structured_content)
         # print('subject_zh', subject_zh)
         output += 'img_url' + str(img_url) + '\n'
         print('img_url', img_url)
@@ -98,8 +100,8 @@ for warp_info in warp_arr:
         # print('img_type', img_type)
         # image_times = '1'
 
-        # # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
-        # modify_subject = subject.split(':')[0].lower().replace(' ', '_')
+        # # modify_subject = structured_content.split('"')[1].lower().replace(' ', '_')
+        # modify_subject = structured_content.split(':')[0].lower().replace(' ', '_')
         # modify_subject += '_' + image_times + img_type
         # print('modify_subject', modify_subject)
 
