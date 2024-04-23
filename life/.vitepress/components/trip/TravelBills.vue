@@ -1,31 +1,32 @@
 <template>
     <TitleFormat :title="'预算'" :number="2"></TitleFormat>
     <div>
-        <span v-for="(v, k, i) in sum">
-            <TitleFormat :title="k + ''" :number="3"></TitleFormat>
-            全年旅行支出限额 <Badge :text="'¥' + budget[k]"></Badge>
+        <span v-for="(v, i) in infoSum">
+            <TitleFormat :title="years[i] + ''" :number="3"></TitleFormat>
+            全年旅行支出限额 <Badge :text="'¥' + infoBudget[i]"></Badge>
             <br />
             <blockquote>
                 已消费
                 <b>{{ ' ¥' + v }}
-                    <Badge :text="(v / budget[k] * 100).toFixed(2) + '%'" :type="getBadge(v / budget[k] * 100, 1)">
+                    <Badge :text="(v / infoBudget[i] * 100).toFixed(2) + '%'"
+                        :type="getBadge(v / infoBudget[i] * 100, 1)">
                     </Badge>
                 </b>
                 <br />
-                剩余可支配 {{ ' ¥' + (budget[k] - v) }}
-                <Badge :text="((budget[k] - v) / budget[k] * 100).toFixed(2) + '%'"
-                    :type="getBadge((budget[k] - v) / budget[k] * 100)"></Badge>
+                剩余可支配 {{ ' ¥' + (infoBudget[i] - v) }}
+                <Badge :text="((infoBudget[i] - v) / infoBudget[i] * 100).toFixed(2) + '%'"
+                    :type="getBadge((infoBudget[i] - v) / infoBudget[i] * 100)"></Badge>
             </blockquote>
         </span>
     </div>
 
     <TitleFormat :title="'支出'" :number="2"></TitleFormat>
 
-    <div v-for="(v, k, i) in vTrip">
-        <TitleFormat :title="k + '年'" :number="3"></TitleFormat>
+    <div v-for="(v, i) in infoTrip">
+        <TitleFormat :title="years[i] + '年'" :number="3"></TitleFormat>
 
 
-        <div v-for="(vv, ii) in v" :class="getBadge(vv.sum / sum[k] * 100, 1)" class="custom-block"
+        <div v-for="(vv, ii) in v" :class="getBadge(vv.sum / infoSum[i] * 100, 1)" class="custom-block"
             :style="{ backgroundColor: getBlockBgColor(ii) }">
 
             <TitleFormat :title="vv.name" :number="4"></TitleFormat>
@@ -38,7 +39,8 @@
             </span>
 
             <span><b>总计{{ ' ￥' + vv.sum }}</b>
-                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)">
+                <Badge :text="(vv.sum / infoSum[i] * 100).toFixed(2) + '%'"
+                    :type="getBadge(vv.sum / infoSum[i] * 100, 1)">
                 </Badge>
             </span>
             <br />
@@ -67,12 +69,13 @@
     </div>
 
     <TitleFormat :title="'其他额外开支'" :number="2"></TitleFormat>
-    <div v-for="(v, k, i) in vOther">
-        <TitleFormat :title="k + '年'" :number="3"></TitleFormat>
+    <div v-for="(v, i) in infoOther">
+        <TitleFormat :title="years[i] + '年'" :number="3"></TitleFormat>
         <ul>
             <li v-for="(vv, ii) in v">
                 {{ vv.name }}: {{ vv.sum }}
-                <Badge :text="(vv.sum / sum[k] * 100).toFixed(2) + '%'" :type="getBadge(vv.sum / sum[k] * 100, 1)">
+                <Badge :text="(vv.sum / infoSum[i] * 100).toFixed(2) + '%'"
+                    :type="getBadge(vv.sum / infoSum[i] * 100, 1)">
                 </Badge>
             </li>
         </ul>
@@ -85,56 +88,57 @@ import { LargeTravelPackage, TravelBill } from "../../type";
 import { ColorScheme, getColorScheme, modifyDate } from "../../utils";
 import TitleFormat from "../TitleFormat.vue";
 
-let vOther: {
+
+// others ----------
+let objOther: {
     [key: number]: LargeTravelPackage[];
 } = {};
 LARGE_TRAVEL_PACKAGE.forEach(obj => {
-    if (!vOther[obj.year]) { vOther[obj.year] = []; }
-    vOther[obj.year].push(obj);
+    if (!objOther[obj.year]) { objOther[obj.year] = []; }
+    objOther[obj.year].push(obj);
 });
 
-let vTrip: {
+
+// trip -----------------
+let objTrip: {
     [key: number]: TravelBill[];
 } = {};
 TRAVEL_BILLS.forEach(obj => {
     let year = obj.start.getFullYear();
-    if (!vTrip[year]) { vTrip[year] = []; }
-    vTrip[year].push(obj);
+    if (!objTrip[year]) { objTrip[year] = []; }
+    objTrip[year].push(obj);
 });
-// console.log(vTrip);
-
+// console.log(objTrip);
 // 倒序显示旅行
-// 对 object 中的键进行排序，即按年排序
-const sortedKeys = Object.keys(vTrip).sort((a, b) => Number(b) - Number(a));
 // 对每个键对应的数组进行排序
-sortedKeys.forEach(key => {
-    vTrip[key].sort((a: TravelBill, b: TravelBill) => {
+Object.keys(objTrip).forEach(key => {
+    objTrip[key].sort((a: TravelBill, b: TravelBill) => {
         if (new Date(b.start) > new Date(a.start))
-            return -1;
-        if (new Date(b.start) < new Date(a.start))
             return 1;
+        if (new Date(b.start) < new Date(a.start))
+            return -1;
         return 0;
     });
 });
-// console.log(vTrip)
+// console.log(objTrip)
 
 
-// 
-let sum: {
+// objSum -------------------
+let objSum: {
     [key: number]: number;
 } = {};
 TRAVEL_BILLS.forEach(obj => {
     let year = obj.start.getFullYear();
-    if (!sum[year]) sum[year] = 0;
-    sum[year] += obj.sum;
+    if (!objSum[year]) objSum[year] = 0;
+    objSum[year] += obj.sum;
 });
 LARGE_TRAVEL_PACKAGE.forEach(obj => {
     let year = obj.year;
-    if (!sum[year]) sum[year] = 0;
-    sum[year] += obj.sum;
+    if (!objSum[year]) objSum[year] = 0;
+    objSum[year] += obj.sum;
 });
-// console.log(sum);
-// console.log(budget)
+// console.log(objSum);
+// console.log(objBudget)
 
 
 const getBadge = (num, neg = 0) => {
@@ -150,7 +154,7 @@ const getBadge = (num, neg = 0) => {
     return s[res];
 };
 
-const budget: {
+const objBudget: {
     [key: number]: number;
 } = TRAVEL_BUDGET;
 
@@ -161,6 +165,24 @@ const getBlockBgColor = (n: number) => {
     return color[key];
 }
 
+// sort ==================
+const years = Object.keys(objBudget)
+    .reverse();
+// console.log(years);
+
+let infoBudget: number[] = [];
+let infoOther: LargeTravelPackage[][] = [];
+let infoTrip: TravelBill[][] = [];
+let infoSum: number[] = [];
+
+years.forEach(year => {
+    const numYear: number = parseInt(year);
+    infoBudget.push(objBudget[numYear]);
+    infoSum.push(objSum[numYear]);
+
+    infoOther.push(objOther[numYear]);
+    infoTrip.push(objTrip[numYear]);
+})
 
 
 </script>

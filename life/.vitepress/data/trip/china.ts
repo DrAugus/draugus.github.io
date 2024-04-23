@@ -177,7 +177,21 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
             }
         ]
     },
-    { id: '甘肃' },
+    { id: '甘肃' }, {
+        id: '海南', items: [
+            {
+                id: '海口', info: [
+                    {
+                        date: {
+                            start: new Date('2024/04/15'),
+                            end: new Date('2024/04/18'),
+                        },
+                        intro: "游玩"
+                    }
+                ]
+            }
+        ]
+    },
     {
         id: '广东',
         items: [
@@ -233,9 +247,28 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                 id: '潮州', info: [{
                     date: {
                         start: new Date('2024/04/08'),
-                        end: new Date('2023/04/10'),
+                        end: new Date('2024/04/10'),
                     },
                     intro: "游玩"
+                }]
+            }, {
+                id: '珠海', info: [{
+                    date: {
+                        start: new Date('2024/04/18'),
+                    },
+                    intro: "飞机转高铁"
+                }, {
+                    date: {
+                        start: new Date('2023/06/28'),
+                        end: new Date('2023/06/30'),
+                    },
+                    intro: "香港临时落脚"
+                }, {
+                    date: {
+                        start: new Date('2023/04/30'),
+                        end: new Date('2023/05/01'),
+                    },
+                    intro: "澳门临时落脚"
                 }]
             },
         ]
@@ -281,6 +314,12 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
             }, {
                 id: '桂林', info: [{
                     date: {
+                        start: new Date('2024/04/18'),
+                        end: new Date('2024/04/22'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
                         start: new Date('2023/09/02'),
                         end: new Date('2023/09/06'),
                     },
@@ -302,7 +341,14 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
     {
         id: '贵州',
         items: [
-            { id: '贵阳', info: [] },
+            {
+                id: '贵阳', info: [{
+                    date: {
+                        start: new Date('2024/04/22'),
+                    },
+                    intro: "高铁转飞机"
+                },]
+            },
         ]
     },
     {

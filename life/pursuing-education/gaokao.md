@@ -11,6 +11,15 @@
 是中国大陆首个大学联盟，于2009年10月启动，联盟成员包括清华大学、北京大学、浙江大学、复旦大学、上海交通大学、南京大学、西安交通大学、中国科学技术大学、哈尔滨工业大学9所高校。
 :::
 
+:::danger 链接收录
+
+- [2024强基计划](https://gaokao.chsi.com.cn/gkxx/zt/qjjh2024.shtml)
+- [同济大学强基2024](https://bm.chsi.com.cn/jcxkzs/stu/)
+- [高校特殊类型招生信息服务平台 (chsi.com.cn)](https://bm.chsi.com.cn/)
+- [高校专项计划报名系统](https://gaokao.chsi.com.cn/zzbm/stu/welcome.action)
+- [掌上高考](https://gaokao.eol.cn/he_nan/)
+:::
+
 ## 学校推荐
 
 :::info 2022年河南高考一本509  

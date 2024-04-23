@@ -3,6 +3,20 @@ import { LargeTravelPackage, TravelBill } from "../../type"
 
 export const TRAVEL_BILLS: TravelBill[] = [
     {
+        name: "海口",
+        start: new Date("2024/04/15"),
+        end: new Date("2024/04/22"),
+        sum: 1948,
+        city: "海口,桂林,贵阳",
+        intro: {
+            tips: "",
+            hotels: "总计321。122+95+104",
+            transportation: "总计1124。飞机520，高铁70+165+10+175，打车24+43+24+33，机场大巴30，公交30",
+            dining: "总计408。45+9+9+36+6+36+190+49+28",
+            entertainment: "门票48+47",
+            others: "桂林吃喝支出未计入，Apple Pay 小额公交卡未计入"
+        }
+    }, {
         name: "潮汕地区",
         start: new Date("2024/04/04"),
         end: new Date("2024/04/10"),
@@ -98,7 +112,7 @@ export const TRAVEL_BILLS: TravelBill[] = [
             transportation: "高铁来回235，公交地铁24",
             dining: "",
             entertainment: "",
-            others: "……"
+            others: ""
         }
     }, {
         name: "上海",
@@ -112,7 +126,7 @@ export const TRAVEL_BILLS: TravelBill[] = [
             transportation: "高铁73，回程积分兑换，地铁公交等微小支出不计入",
             dining: "饮食330",
             entertainment: "",
-            others: "……"
+            others: ""
         }
     }, {
         name: "舟山",
