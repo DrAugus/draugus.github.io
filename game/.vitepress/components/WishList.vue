@@ -1,9 +1,52 @@
 <template>
 
+  <TitleFormat :title="'限定' + wishName" :number="2"></TitleFormat>
+  <p>
+    <a @click="sortLast">最近排序</a> |
+    <a @click="sortEarly">最远排序</a>
+  </p>
+
+  <div v-for="(v, i) in refWishChar" :key="i">
+
+    <div class="wish-container">
+      <span class="wish-version" v-bind:title="getWishDate(v.start, v.end)">{{ v.version }}</span>
+      <div class="outer-container">
+
+        <div v-for="(vv, ii) in v.wish5star" :key="ii">
+          <div class="char-container">
+            <div class="char-avatar" :style="{ backgroundColor: '#b47b48' }">
+              <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
+              <div class="ele-corner"
+                :style="{ backgroundImage: `url(/image/${gameName}/elements/${getCharEle(vv)}.png)` }">
+              </div>
+            </div>
+            <div class="char-name">
+              <span class="wish-name">{{ getCharNameZh(vv) }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div v-for="(vv, ii) in v.wish4star" :key="ii">
+          <div class="char-container">
+            <div class="char-avatar" :style="{ backgroundColor: '#77609a' }">
+              <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
+              <div class="ele-corner"
+                :style="{ backgroundImage: `url(/image/${gameName}/elements/${getCharEle(vv)}.png)` }">
+              </div>
+            </div>
+            <div class="char-name">
+              <span class="wish-name">{{ getCharNameZh(vv) }}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 
   <div v-if="refChronicled">
-    <h2>集录{{ wishName }}</h2>
-
+    <TitleFormat :title="'集录' + wishName" :number="2"></TitleFormat>
 
     <p>
       <a @click="sortLastChronicled">最近排序</a> |
@@ -49,51 +92,6 @@
     </div>
   </div>
 
-
-  <h2>限定{{ wishName }}</h2>
-
-  <p>
-    <a @click="sortLast">最近排序</a> |
-    <a @click="sortEarly">最远排序</a>
-  </p>
-
-  <div v-for="(v, i) in refWishChar" :key="i">
-
-    <div class="wish-container">
-      <span class="wish-version" v-bind:title="getWishDate(v.start, v.end)">{{ v.version }}</span>
-      <div class="outer-container">
-
-        <div v-for="(vv, ii) in v.wish5star" :key="ii">
-          <div class="char-container">
-            <div class="char-avatar" :style="{ backgroundColor: '#b47b48' }">
-              <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
-              <div class="ele-corner"
-                :style="{ backgroundImage: `url(/image/${gameName}/elements/${getCharEle(vv)}.png)` }">
-              </div>
-            </div>
-            <div class="char-name">
-              <span class="wish-name">{{ getCharNameZh(vv) }}</span>
-            </div>
-          </div>
-        </div>
-
-        <div v-for="(vv, ii) in v.wish4star" :key="ii">
-          <div class="char-container">
-            <div class="char-avatar" :style="{ backgroundColor: '#77609a' }">
-              <img :src="getCharAvatar(vv)" :alt="vv" @error="replaceImg">
-              <div class="ele-corner"
-                :style="{ backgroundImage: `url(/image/${gameName}/elements/${getCharEle(vv)}.png)` }">
-              </div>
-            </div>
-            <div class="char-name">
-              <span class="wish-name">{{ getCharNameZh(vv) }}</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -101,6 +99,7 @@
 import { onMounted, onUnmounted, ref } from "vue";
 import { WishAll } from "./type";
 import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs, GameName, getGameName, getWishName } from "./utils";
+import TitleFormat from "./TitleFormat.vue";
 
 const props = defineProps<{
   WISH: WishAll,

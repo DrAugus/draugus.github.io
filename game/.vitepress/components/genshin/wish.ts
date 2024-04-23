@@ -783,6 +783,18 @@ export const WISH: WishAll = {
       wishName: ["渊海界令", "红叶逐荒波"],
       url: ["?", "?"]
     },
+    {
+      name: ["The Hearth's Ashen Shadow", "Conjuring Chiaroscuro"],
+      image: [1, 2],
+      shortName: ["Arlecchino", "Lyney"],
+      start: "2024/04/24 11:00:00 +0800",
+      end: "2024/05/14 17:59:00 +0800",
+      wish5star: ["arlecchino", "lyney"],
+      wish4star: ["freminet", "lynette", "xiangling"],
+      version: "4.6",
+      wishName: ["炉边烬影", "光与影的戏术"],
+      url: ["?", "?"]
+    },
   ],
   weapons: [
     {
@@ -1307,6 +1319,11 @@ export const WISH: WishAll = {
       image: 62,
       start: "2024/04/02 18:00:00 +0800",
       end: "2024/04/23 14:59:00 +0800",
+    }, {
+      name: "Epitome Invocation",
+      image: 63,
+      start: "2024/04/24 11:00:00 +0800",
+      end: "2024/05/14 17:59:00 +0800",
     },
   ],
 };
