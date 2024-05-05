@@ -8,7 +8,7 @@
 
 :::details “畅游中国”全国版产品规则
 
-[官方链接](https://m.csair.com/FTPCMS/map-b/2024/20240305/7154aa02-1d38-4046-a415-519102b4275c/index.html)
+[官方链接](https://m.csair.com/FTPCMS/map-b/2024/20240305/7154aa02-1d38-4046-a415-519102b4275c/index.html)，[购买入口](https://m.csair.com/b/?LFXkwStIiY)
 
 一、产品简介
 

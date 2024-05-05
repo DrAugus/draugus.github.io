@@ -347,6 +347,12 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                         start: new Date('2024/04/22'),
                     },
                     intro: "高铁转飞机"
+                }, {
+                    date: {
+                        start: new Date('2024/04/26'),
+                        end: new Date('2024/05/01'),
+                    },
+                    intro: "游玩"
                 },]
             },
         ]

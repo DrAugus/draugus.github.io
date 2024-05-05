@@ -18,4 +18,5 @@ export const dataTravelogue: LinkName[] = [
     { text: '桂林', link: '/trip/travelogue/20230902' },
     { text: '潮汕地区', link: '/trip/travelogue/20240404' },
     { text: '海口', link: '/trip/travelogue/20240415' },
+    { text: '贵阳', link: '/trip/travelogue/20240426' },
 ];
