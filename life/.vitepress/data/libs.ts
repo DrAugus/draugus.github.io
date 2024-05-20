@@ -1,8 +1,8 @@
 import type { CardData } from '../type';
 
-const prefixLinks = '/code/cpp/lib/';
+const prefixLinks = '/code/libs/';
 
-export const CPP_LIBS_DATA: CardData[] = [
+export const LIBS_DATA: CardData[] = [
     {
         title: 'cpp 库待分类',
         items: [
@@ -23,7 +23,7 @@ export const CPP_LIBS_DATA: CardData[] = [
                     homepage: "https://www.boost.org/",
                     guide: "https://www.boost.org/doc/"
                 },
-                link: `${prefixLinks}Boost`
+                link: `${prefixLinks}boost`
             },
             {
                 icon: "https://www.actor-framework.org/static/img/caf-logo.png",
@@ -92,7 +92,7 @@ export const CPP_LIBS_DATA: CardData[] = [
                     repo: "https://github.com/LuaJIT/LuaJIT",
                     homepage: "https://luajit.org/",
                 },
-                link: `${prefixLinks}LuaJIT`
+                link: `${prefixLinks}luajit`
             },
             {
                 icon: "",
@@ -119,7 +119,7 @@ export const CPP_LIBS_DATA: CardData[] = [
                     repo: "https://github.com/Tencent/rapidjson/",
                     homepage: "https://rapidjson.org/",
                 },
-                link: `${prefixLinks}RapidJSON`
+                link: `${prefixLinks}rapidjson`
             },
 
         ]

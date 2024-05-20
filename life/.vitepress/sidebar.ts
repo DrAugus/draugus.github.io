@@ -535,26 +535,6 @@ const sidebarCodeCpp = [
             { text: '一些要点', link: '/code/cpp/tips/tip' },
         ]
     }, {
-        text: 'temp', collapsed: true, items: [
-            { text: '内存检测', link: '/code/cpp/lib/asan' },
-            { text: 'epoll', link: '/code/cpp/lib/epoll' },
-            { text: 'BERT', link: '/code/cpp/lib/bert' },
-            { text: 'Reactor', link: '/code/cpp/lib/reactor' },
-        ]
-    }, {
-        text: 'lib', collapsed: false, items: [
-            { text: 'all libs', link: '/code/cpp/lib/' },
-            { text: 'STL', link: '/code/cpp/lib/stl' },
-            { text: 'Boost', link: '/code/cpp/lib/Boost' },
-            { text: 'LuaJIT', link: '/code/cpp/lib/LuaJIT' },
-            { text: 'protobuf', link: '/code/cpp/lib/protobuf' },
-            { text: 'cppzmq', link: '/code/cpp/lib/cppzmq' },
-            { text: 'libevent', link: '/code/cpp/lib/libevent' },
-            { text: 'libuv', link: '/code/cpp/lib/libuv' },
-            { text: 'RapidJSON', link: '/code/cpp/lib/RapidJSON' },
-            { text: 'actor', link: '/code/cpp/lib/actor' },
-        ]
-    }, {
         text: 'thread-mutex', collapsed: false, items: [
             { text: 'Threads and Mutexes', link: '/code/cpp/thread-mutex/threads-and-mutexes' },
             { text: '各种锁', link: '/code/cpp/thread-mutex/mutex' },
@@ -570,6 +550,26 @@ const sidebarCodeDB = [
     { text: 'DB2', link: '/code/db/db2' },
     { text: '达梦8', link: '/code/db/dameng8' },
     { text: 'mongoDB', link: '/code/db/mongoDB' },
+];
+const sidebarCodeProtocol = [
+    { text: 'CAN FD', link: '/code/protocol/can-fd' },  
+    { text: 'epoll', link: '/code/protocol/epoll' },
+    { text: 'BERT', link: '/code/protocol/bert' },
+    { text: 'Reactor', link: '/code/protocol/reactor' },
+];
+const sidebarCodeLibs = [
+    { text: 'all libs', link: '/code/libs/' },
+    { text: 'STL', link: '/code/libs/stl' },
+    { text: 'Boost', link: '/code/libs/boost' },
+    { text: 'LuaJIT', link: '/code/libs/luajit' },
+    { text: 'protobuf', link: '/code/libs/protobuf' },
+    { text: 'cppzmq', link: '/code/libs/cppzmq' },
+    { text: 'libevent', link: '/code/libs/libevent' },
+    { text: 'libuv', link: '/code/libs/libuv' },
+    { text: 'RapidJSON', link: '/code/libs/rapidjson' },
+    { text: 'actor', link: '/code/libs/actor' },
+    { text: '内存检测', link: '/code/libs/asan' },
+    { text: 'OpenGL', link: '/code/libs/opengl' },  
 ];
 const sidebarCodeFrontEnd = [
     { text: 'Sol', link: '/code/front-end/sol' },
@@ -758,6 +758,8 @@ export const sidebar = {
     '/code/interview/': sidebarCodeInterview,
     '/code/cpp/': sidebarCodeCpp,
     '/code/db/': sidebarCodeDB,
+    '/code/protocol/': sidebarCodeProtocol,
+    '/code/libs/': sidebarCodeLibs,
     '/code/front-end/': sidebarCodeFrontEnd,
     '/code/program/': sidebarCodeProgram,
     '/code/shock/': sidebarCodeShock,

@@ -31,6 +31,8 @@ export const navbar = [
       { text: '操作系统', link: '/code/os/' },
       { text: 'DSA', link: '/code/dsa/' },
       { text: '数据库', link: '/code/db/' },
+      { text: '协议', link: '/code/protocol/' },
+      { text: '库', link: '/code/libs/' },
       { text: '前端', link: '/code/front-end/' },
       {
         text: '代码笔记',

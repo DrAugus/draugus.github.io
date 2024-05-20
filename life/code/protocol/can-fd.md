@@ -54,7 +54,7 @@ FlexRay 通常用于比 CAN FD 更苛刻的环境和应用场景，如自动驾�
 7 部分  
 SOF(Start of Frame) 帧起始，Arbitration Field 仲裁场，Control Field 控制场，Data Field 数据场，CRC Field(Stuff Count + CRC Sequence)，ACK Field，EOF(End of Frame) 帧结束
 
-![alt text](can-fd-frame.png)
+![alt](/img/code/protocol/can-fd-frame.png)
 
 ### SOF
 
