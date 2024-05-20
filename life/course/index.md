@@ -2,6 +2,8 @@
 
 > 坚持学习，记录学习笔记。
 
+数学学习：[Math is fun](https://www.mathsisfun.com/)
+
 学科分类参考[普通高等学校本科专业目录（2024年）](http://www.moe.gov.cn/srcsite/A08/moe_1034/s4930/202403/W020240319305498791768.pdf)
 
 :::warning 学科分类
