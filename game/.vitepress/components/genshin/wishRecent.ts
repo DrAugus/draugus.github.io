@@ -46,11 +46,11 @@ export const futureChronicled = getWishInfo(wishChronicled, objWishChronicledInd
 // console.log(currentChronicled, futureChronicled);
 
 export const wishDeadlineChronicled = (): string =>
-    current.able ?
+    currentChronicled.able ?
         getDeadline(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.wishIndex[0]].end)) :
         '';
 export const wishBeginChronicled = (): string =>
-    future.able ?
+    futureChronicled.able ?
         getDeadline(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.comingIndex[0]].start)) :
         '';
 

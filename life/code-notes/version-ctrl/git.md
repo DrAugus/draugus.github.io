@@ -35,11 +35,29 @@ git rebase --abort
 
 不知道怎么解决。但是日前，是因为把 remote 仓库 rename 了。后面是把本地仓库删了，重新拉取了。
 
+### git 如何取消 merge
+
+当我们使用 git merge 操作合并代码但还没add时，若想取消这次合并，使用`git merge --abort`命令即可
+
+假如不幸已经 `git add` 了怎么办呢？ 其实也很简单，先用 `git reflog` 指令显示历史的操作
+
+再用 `git reset --hard commit id`就可以回退到操作之前的状态了
+
+### git 合并没有共同祖先的分支
+
+> fatal: refusing to merge unrelated histories
+
+`git pull origin master --allow-unrelated-histories`
+
 ## clone
 
 `git clone <xxx.git>`
 
 `git clone --branch your_branch_or_tag <xxx.git>`
+
+## fetch
+
+`git fetch [origin]` 从远程获取所有分支
 
 ## submodule
 
@@ -127,6 +145,18 @@ If your upstream branch is not already created, you will need to create it by ru
 `-s` 参数来获得简短的输出结果
 
 `git status ./`
+
+## merge
+
+将远程分支合并到当前分支
+
+```bash
+git merge [alias]/[branch]
+# Generate a merge commit even if merge is fast-forward
+git merge --no-ff [alias]/[branch]
+# abort if fast-forward is not possible
+$ git merge --ff-only [alias]/[branch]
+```
 
 ## diff
 
@@ -243,7 +273,7 @@ Footer 部分只用于两种情况。
    Closes #123, #245, #992
    ```
 
-## git reset
+## reset
 
 `git reset [--soft | --mixed | --hard] [HEAD]`
 
@@ -286,27 +316,16 @@ git checkout <existing_branch>
 git checkout -b <new_branch>
 git switch <existing_branch>
 git switch -c <non_existing_branch>
+
+git branch
+git branch -a # 查看历史
+# 删除分支
+git branch -d dev 
+git branch –delete dev 
+# 删除远程分支
+git push <remote-name> --delete <branch-name>
+git checkout -b dev origin/dev # checkout 远程
 ```
-
-1. `git branch`
-2. `git branch -a` //查看历史
-3. `git branch -d dev` or `git branch –delete dev` //删除分支
-4. `git push <remote-name> --delete <branch-name>` //删除远程分支
-5. `git checkout -b dev origin/dev` //checkout 远程
-
-## git如何取消merge
-
-当我们使用git merge操作合并代码但还没add时，若想取消这次合并，使用`git merge --abort`命令即可
-
-假如不幸已经 `git add` 了怎么办呢？ 其实也很简单，先用 `git reflog` 指令显示历史的操作
-
-再用 `git reset --hard commit id`就可以回退到操作之前的状态了
-
-## git 合并没有共同祖先的分支
-
-> fatal: refusing to merge unrelated histories
-
-`git pull origin master --allow-unrelated-histories`
 
 ## linux下git免密码登录配置
 
