@@ -218,6 +218,17 @@ export const WISH: WishAll = {
       wish4star: ["serval", "luka", "lynx"],
       wishName: ['囚石铸金', '月有薄蚀'],
       url: [""]
+    }, {
+      name: ['Just Intonation', 'Sunset Clause'],
+      image: [1, 2],
+      shortName: ['Robin', 'Topaz & Numby'],
+      start: '2024/05/08 10:00:00 +0800',
+      end: '2024/05/29 11:59:00 +0800',
+      version: '2.2',
+      wish5star: ['robin', 'topaz_numby'],
+      wish4star: ["xueyi", "march_7th", "hanya"],
+      wishName: ['翼声纯律', '落日条款'],
+      url: ['']
     },
   ],
   weapons: [
@@ -399,6 +410,15 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ["I Shall Be My Own Sword", "Inherently Unjust Destiny"],
       wish4star: ["Make the World Clamor", "Shared Feeling", "Concert for Two"],
+      url: ""
+    }, {
+      name: "Brilliant Fixation",
+      image: [27, 28],
+      start: '2024/05/08 10:00:00 +0800',
+      end: '2024/05/29 11:59:00 +0800',
+      shortName: "",
+      wish5star: ["Flowing Nightglow", "Worrisome, Blissful"],
+      wish4star:  ["Boundless Choreo", "Swordplay", "Perfect Timing"],
       url: ""
     },
   ]

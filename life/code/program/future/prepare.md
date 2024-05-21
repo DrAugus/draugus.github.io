@@ -58,7 +58,7 @@
 
 - c++的基础知识
 - c++11特性
-- [设计模式](../sys-design/design-pattern),单例、适配器模式
+- [设计模式](../../sys-design/design-pattern)，单例、适配器模式
 - 内存管理
 - C/C++的段错误是什么
 - 写一个c++的类 实现一个string类，然后支持拷贝构造和移动构造和支持vector容器，用智能指针
