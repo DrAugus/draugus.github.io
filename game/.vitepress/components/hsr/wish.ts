@@ -225,7 +225,7 @@ export const WISH: WishAll = {
       start: '2024/05/08 10:00:00 +0800',
       end: '2024/05/29 11:59:00 +0800',
       version: '2.2',
-      wish5star: ['robin', 'topaz_numby '],
+      wish5star: ['robin', 'topaz_numby'],
       wish4star: ["xueyi", "march_7th", "hanya"],
       wishName: ['翼声纯律', '落日条款'],
       url: ['']
