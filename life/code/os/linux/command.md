@@ -667,9 +667,23 @@ curl -X DELETE www.example.com
 
 ## readelf
 
+readelf 命令来查看该二进制可执行文件是否包含 debugging symbols 信息。带 debug_ 开头表示有 debug 信息
+
+`readelf -S someone | grep debug`
+
 ## objdump
 
 ## addr2line
+
+## dos2unix
+
+.sh 无法在 Linux 平台正常运行，`dos2unix some.sh`
+
+## hexdump
+
+使用十六进制查看文件裸数据
+
+`hexdump -C somefile`
 
 ## others
 
