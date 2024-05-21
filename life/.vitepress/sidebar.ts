@@ -334,6 +334,8 @@ const sidebarCourse = [
         text: '理学', collapsed: false, items: [
             { text: '离散数学', link: '/course/science/discrete-math' },
             { text: '概率论', link: '/course/science/probability-theory' },
+            { text: '线性代数', link: '/course/science/linear-algebra' },
+            { text: '微积分', link: '/course/science/calculus' },
         ]
     }, {
         text: '工学', collapsed: false, items: [
@@ -553,9 +555,6 @@ const sidebarCodeDB = [
 ];
 const sidebarCodeProtocol = [
     { text: 'CAN FD', link: '/code/protocol/can-fd' },  
-    { text: 'epoll', link: '/code/protocol/epoll' },
-    { text: 'BERT', link: '/code/protocol/bert' },
-    { text: 'Reactor', link: '/code/protocol/reactor' },
 ];
 const sidebarCodeLibs = [
     { text: 'all libs', link: '/code/libs/' },
@@ -610,10 +609,6 @@ const sidebarCodeProgram = [
     { text: '瞎玩', link: '/code/program/stroll' },
     { text: '一些有的没的', link: '/code/program/others' },
     {
-        text: '系统设计', collapsed: false, items: [
-            { text: '设计模式', link: '/code/program/sys-design/design-pattern' },
-        ]
-    }, {
         text: '分布式', collapsed: false, items: [
             { text: 'Raft论文', link: '/code/program/distributed/raft' },
             { text: 'PAXOS', link: '/code/program/distributed/paxos' },
@@ -625,6 +620,15 @@ const sidebarCodeShock = [
     { text: '小妙招', link: '/code/shock/clue' },
     { text: '小外包', link: '/code/shock/outsourcing-co' },
 ];
+const sidebarCodeSysDesign = [  
+    { text: '设计模式', link: '/code/sys-design/design-pattern' },
+    { text: 'Reactor', link: '/code/sys-design/reactor' },
+];
+const sidebarCodeKernel = [
+    { text: 'epoll', link: '/code/kernel/epoll' },
+];
+const sidebarCodeML = [
+    { text: 'BERT', link: '/code/protocol/bert' }];
 
 const sidebarPursuingEducation = [
     { text: '高考', link: '/pursuing-education/gaokao' },
@@ -763,6 +767,9 @@ export const sidebar = {
     '/code/front-end/': sidebarCodeFrontEnd,
     '/code/program/': sidebarCodeProgram,
     '/code/shock/': sidebarCodeShock,
+    '/code/sys-design/': sidebarCodeSysDesign,
+    '/code/kernel/': sidebarCodeKernel,  
+    '/code/ml/': sidebarCodeML,  
     //
     '/pursuing-education/': sidebarPursuingEducation,
     '/study/': sidebarStudy,

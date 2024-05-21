@@ -15,6 +15,7 @@ export const navbar = [
   {
     text: '课程', items: [
       { text: '说明', link: '/course/' },
+      { text: '最近学什么', link: '/course/latest' },
       { text: '经济学', link: '/course/economics/', activeMatch: '^/course/economics' },
       { text: '文学', link: '/course/literature/', activeMatch: '^/course/literature' },
       { text: '历史学', link: '/course/history/', activeMatch: '^/course/history' },
@@ -33,6 +34,7 @@ export const navbar = [
       { text: '数据库', link: '/code/db/' },
       { text: '协议', link: '/code/protocol/' },
       { text: '库', link: '/code/libs/' },
+      { text: '系统设计', link: '/code/sys-design/' },
       { text: '前端', link: '/code/front-end/' },
       {
         text: '代码笔记',
