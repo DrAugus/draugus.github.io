@@ -326,11 +326,31 @@ const sidebarArtsXiwen = [
     { text: '谕南京等处文武官员军民人等告示', link: '/arts/xiwen/谕南京等处文武官员军民人等告示' },
 ];
 const sidebarCourse = [
-    {
+    {  
+        text: '哲学', collapsed: false, items: [  
+            { text: '哲学', link: '/course/philosophy/' },  
+        ]  
+    },  {
         text: '经济学', collapsed: false, items: [
             { text: '微观经济学', link: '/course/economics/microeconomics' },
         ]
-    }, {
+    },{  
+        text: '法学', collapsed: false, items: [  
+            { text: '法学', link: '/course/law/' },  
+        ]  
+    },  {  
+        text: '教育学', collapsed: false, items: [  
+            { text: '教育学', link: '/course/education/' },  
+        ]  
+    },   {  
+        text: '文学', collapsed: false, items: [  
+            { text: '文学', link: '/course/literature/' },  
+        ]  
+    },  {  
+        text: '历史学', collapsed: false, items: [  
+            { text: '历史学', link: '/course/history/' },  
+        ]  
+    },   {
         text: '理学', collapsed: false, items: [
             { text: '离散数学', link: '/course/science/discrete-math' },
             { text: '概率论', link: '/course/science/probability-theory' },
@@ -341,7 +361,26 @@ const sidebarCourse = [
         text: '工学', collapsed: false, items: [
             { text: '数据结构与算法', link: '/course/engineering/dsa' },
         ]
-    }, {
+    },{  
+        text: '农学', collapsed: false, items: [  
+            { text: '农学', link: '/course/agronomy/' },  
+        ]  
+    },   
+    {  
+        text: '医学', collapsed: false, items: [  
+            { text: '医学', link: '/course/medicine/' },  
+        ]  
+    },    
+    {  
+        text: '军事学', collapsed: false, items: [  
+            { text: '军事学', link: '/course/military-science/' },  
+        ]  
+    },   
+    {  
+        text: '管理学', collapsed: false, items: [  
+            { text: '管理学', link: '/course/management/' },  
+        ]  
+    },   {
         text: '艺术学', collapsed: false, items: [
             { text: '乐理', link: '/course/art/music_theory' },
             { text: '连音', link: '/course/art/tuplet' },]

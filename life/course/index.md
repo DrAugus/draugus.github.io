@@ -8,17 +8,17 @@
 
 :::warning 学科分类
 
-1. 哲学（Philosophy）
+1. [哲学](./philosophy/)（Philosophy）
 2. [经济学](./economics/)（Economics）
-3. 法学（Law）
-4. 教育学（Education）
-5. 文学（Literature）
-6. 历史学（History）
+3. [法学](./law/)（Law）
+4. [教育学](./education/)（Education）
+5. [文学](./literature/)（Literature）
+6. [历史学](./history/)（History）
 7. [理学](./science/)（Science）
 8. [工学](./engineering/)（Engineering）
-9. 农学（Agronomy）
-10. 医学（Medicine）
-11. 军事学（Military Science）
-12. 管理学（Management）
+9. [农学](./agronomy/)（Agronomy）
+10. [医学](./medicine/)（Medicine）
+11. [军事学](./military-science/)（Military Science）
+12. [管理学](./management/)（Management）
 13. [艺术学](./art/)（Art）
 :::
