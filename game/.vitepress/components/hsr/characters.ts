@@ -1,6 +1,18 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  robin: {
+    key: "Robin",
+    id: "robin",
+    name: "知更鸟",
+    prefix: Weapon.Destruction.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.Penacony,
+    ele: Element.Physical,
+    weapon: Weapon.Destruction
+  },
   gallagher: {
     key: "Gallagher",
     id: "gallagher",
