@@ -354,6 +354,7 @@ const sidebarCourse = [
         ]  
     },   {
         text: '理学', collapsed: false, items: [
+            { text: '数学术语中英文', link: '/course/science/math-term' },
             { text: '离散数学', link: '/course/science/discrete-math' },
             { text: '概率论', link: '/course/science/probability-theory' },
             { text: '线性代数', link: '/course/science/linear-algebra' },
