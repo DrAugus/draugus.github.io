@@ -40,15 +40,17 @@ const sidebarTrip = [
     { text: '出门检查', link: '/trip/check' },
     { text: '旅行账单', link: '/trip/bill' },
     { text: '探索', link: '/trip/explore' },
+    { text: '常住地', link: '/trip/permanent-residence' },
 
     {
         text: '出行', collapsed: false, items: [
             { text: '赶路日记', link: '/trip/rush-diary' },
             { text: '飞机', link: '/trip/airplane' },
+            { text: '机场', link: '/trip/airport' },
+            { text: '火车站', link: '/trip/railway' },   
+            { text: '自驾游', link: '/trip/self-drive' },          
             { text: '随心飞', link: '/trip/suixinfei' },
             { text: '酒店', link: '/trip/hotel' },
-            { text: '机场', link: '/trip/airport' },
-            { text: '火车站', link: '/trip/railway' },
         ]
     },
 

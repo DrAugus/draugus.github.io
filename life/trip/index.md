@@ -16,7 +16,6 @@ outline: [2, 4]
 - [江西](./china/jiangxi/)全市。杭州始发，**高铁**玩
 - [福建](./china/fujian/)全市。杭州始发，**高铁**玩
 - 河南 —— [开封](./china/henan/#开封) [洛阳](./china/henan/#洛阳)，等回河南再玩
-- 湖北 —— [武汉](./china/hubei/#武汉)。杭州/郑州始发，**高铁**玩
 - [天津](./china/tianjin)。杭州始发，高铁玩，注意提前看**二等动卧**很不错的选择
 - 黑龙江 —— [哈尔滨](./china/heilongjiang/#哈尔滨)，**飞机**出行，意愿并不强
 - 川渝 —— [成都](./china/sichuan/#成都) [重庆](./china/chongqing)

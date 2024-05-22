@@ -2,6 +2,15 @@
 
 > 代码过程遇到的一些问题速查表
 
+## 无法在 linux 正常编译 thread
+
+cmake添加
+
+```cmake
+find_package (Threads REQUIRED)
+target_link_libraries(${your_project_name} ${CMAKE_THREAD_LIBS_INIT})
+```
+
 ## version `GLIBCXX_3.4.29' not found
 
 查看报错 libc 的情况

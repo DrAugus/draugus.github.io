@@ -207,10 +207,14 @@
 
 已飞行{{timesFlownUp2024}}次，总计消耗 **{{totalFlownUp2024}}**，单次消耗 **{{(totalFlownUp2024/timesFlownUp2024).toFixed(2)}}**
 
-* 2024/04/04 杭州-广州
-* 2024/04/10 潮汕-杭州
-* 2024/04/18 海口-珠海
-* 2024/04/22 贵阳-杭州
+* 2024/05/13 南宁-杭州 140
+* 2024/05/08 杭州-武汉 110
+* 2024/05/01 贵阳-杭州 140
+* 2024/04/26 杭州-贵阳 140
+* 2024/04/22 贵阳-杭州 140
+* 2024/04/18 海口-珠海 110
+* 2024/04/10 潮汕-杭州 140
+* 2024/04/04 杭州-广州 140
 
 ### 计划目的地
 
@@ -223,10 +227,9 @@
 四川：成都  
 云南：丽江  
 湖南：岳阳  
-~~湖北：武汉~~  
 河南：开封、洛阳  
 广西：北海  
-海南：~~海口~~、三亚
+海南：三亚
 
 ## 南航「畅游中国」2023
 
@@ -405,6 +408,6 @@ const singleFlightFee2024 = 140;
 const getTotalResume2024 = () => packageFee2024 + parseInt(flyTimes.value)*singleFlightFee2024;
 const getSingleResume2024 = () => (getTotalResume2024()/parseInt(flyTimes.value)).toFixed(2);
 
-const timesFlownUp2024 = 4;
+const timesFlownUp2024 = 8;
 const totalFlownUp2024 = packageFee2024 + timesFlownUp2024*singleFlightFee2024;
 </script>
