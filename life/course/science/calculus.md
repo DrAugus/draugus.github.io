@@ -4,6 +4,23 @@
 
 - [微积分的本质](https://www.bilibili.com/video/BV1qW411N7FU/) by 3blue1brown  
 - math is fun: [Calculus](https://www.mathsisfun.com/calculus/)
+
+Current Progress: [Fourier Series](https://www.mathsisfun.com/calculus/fourier-series.html)
+
+todo todo
+
+1. [Magic Hexagon for Trig Identities](https://www.mathsisfun.com/algebra/trig-magic-hexagon.html)
+2. [Factorial !](https://www.mathsisfun.com/numbers/factorial.html)
+3. [Combinations and Permutations](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
+4. [Gamma Function](https://www.mathsisfun.com/numbers/gamma-function.html)
+
+:::
+
+:::warning Confusions
+
+1. Did it just drop out of the sky?
+$$f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + c_3(x-a)^3 + \dots$$
+2. todo todo
 :::
 
 ## Derivative
@@ -100,11 +117,11 @@ Differentiable means that the derivative exists
 
 ## Taylor Series
 
-$f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + c_3(x-a)^3 + \dots$
+$$f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + c_3(x-a)^3 + \dots$$
 
-$f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \dots$
+$$f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \dots$$
 
-:::waring Maclaurin Series
+:::warning Maclaurin Series
 A Maclaurin Series is a Taylor Series where a=0, so all the examples we have been using so far can also be called Maclaurin Series.
 :::
 
@@ -196,3 +213,46 @@ $$\int\limits_{a}^{b} f(x) dx=\int\limits_{a}^{c} f(x) dx+\int\limits_{c}^{b} f(
 Definite vs Indefinite Integrals
 
 The Definite Integral between **a** and **b** is the Indefinite Integral at **b** minus the Indefinite Integral at **a**.
+
+## Arc Length
+
+Using Calculus to find the length of a curve.
+
+:::warning The Arc Length Formula
+$S= \int\limits_a^b\sqrt{1+(f'(x))^2} dx$
+:::
+
+## Integral Approximations
+
+We can estimate the area under a curve by slicing a function up. There are many ways of finding the area of each slice such as:
+
+- Left Rectangular Approximation Method (LRAM)
+- Right Rectangular Approximation Method (RRAM)
+- Midpoint Rectangular Approximation Method (MRAM)
+- Trapezoidal Rule
+- Simpson's Rule
+
+:::info Riemann Sums
+the previous 4 methods are also called **Riemann Sums** after the mathematician Bernhard Riemann.
+:::
+
+::::warning Maximum Error
+
+- For Midpoint: $\left |E  \right | = \frac{K(b-a)^3}{24n^2}$
+- For Trapezoidal: $\left |E  \right | = \frac{K(b-a)^3}{12n^2}$
+- For Simpson's: $\left |E  \right | = \frac{M(b-a)^5}{180n^4}$
+
+:::details where
+
+- **|E|** is the absolute value of the maximum error (could be plus or minus)
+- **a** is the start of the interval
+- **b** is the end of the interval
+- **n** is the number of slices
+- **K** is the greatest second derivative over the interval.
+- **M** is the greatest fourth derivative over the interval.  
+(By "greatest" we mean the maximum absolute value.)
+:::
+
+::::
+
+## Fourier Series

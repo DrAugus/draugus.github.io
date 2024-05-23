@@ -1,5 +1,13 @@
 # 最近
 
+:::info 本站近期更新学习笔记
+
+- [离散数学](/course/science/discrete-math)
+- [微积分](/course/science/calculus)
+- [FDBus](/code/framework/fdbus)
+- [Abseil](/code/libs/abseil)
+:::
+
 最近学什么？
 
 - 数学学习：[Math is fun](https://www.mathsisfun.com/)

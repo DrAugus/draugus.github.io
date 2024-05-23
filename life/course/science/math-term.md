@@ -13,7 +13,7 @@ Approximate integration: 近似积分
 Approximation: 逼近法  
 by differentials: 用微分逼近  
 by linear: 线性逼近法  
-by Simpson’s Rule: Simpson法则逼近法  
+by Simpson's Rule: Simpson 法则逼近法  
 by the Trapezoidal Rule: 梯形法则逼近法  
 Arbitrary constant: 任意常数  
 Arc length: 弧长  
@@ -40,7 +40,7 @@ differential: 微分学
 integral: 积分学  
 Cartesian coordinates: 笛卡儿坐标图片一般指直角坐标  
 Cartesian coordinates system: 笛卡儿坐标系  
-Cauch’s Mean Value Theorem: 柯西均值定理  
+Cauch's Mean Value Theorem: 柯西均值定理  
 Chain Rule: 连锁律  
 Change of variables: 变数变换  
 Circle: 圆  
