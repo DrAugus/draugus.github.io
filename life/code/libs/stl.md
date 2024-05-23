@@ -9,7 +9,7 @@
 | forward_list       |  单向链表          | O(n)      | O(1)             ||
 | stack              | deque / list   | /         | O(1)             |  先进后出         |
 | queue              | deque / list   | /         |  O(1)            | 先进先出          |
-| priority_queue     |  vector        | /         |  O(logn) 堆，完全二叉树 |
+| priority_queue     |  vector        | /         |  O(logn) 堆，完全二叉树 ||
 | set                | 红黑树            | O(logn)   |  O(logn)         ||
 | multiset           | 红黑树            |  O(logn)  | O(logn)          ||
 | map                | 红黑树            | O(logn)   |  O(logn)         ||

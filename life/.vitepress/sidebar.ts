@@ -47,8 +47,8 @@ const sidebarTrip = [
             { text: '赶路日记', link: '/trip/rush-diary' },
             { text: '飞机', link: '/trip/airplane' },
             { text: '机场', link: '/trip/airport' },
-            { text: '火车站', link: '/trip/railway' },   
-            { text: '自驾游', link: '/trip/self-drive' },          
+            { text: '火车站', link: '/trip/railway' },
+            { text: '自驾游', link: '/trip/self-drive' },
             { text: '随心飞', link: '/trip/suixinfei' },
             { text: '酒店', link: '/trip/hotel' },
         ]
@@ -328,31 +328,31 @@ const sidebarArtsXiwen = [
     { text: '谕南京等处文武官员军民人等告示', link: '/arts/xiwen/谕南京等处文武官员军民人等告示' },
 ];
 const sidebarCourse = [
-    {  
-        text: '哲学', collapsed: false, items: [  
-            { text: '哲学', link: '/course/philosophy/' },  
-        ]  
-    },  {
+    {
+        text: '哲学', collapsed: false, items: [
+            { text: '哲学', link: '/course/philosophy/' },
+        ]
+    }, {
         text: '经济学', collapsed: false, items: [
             { text: '微观经济学', link: '/course/economics/microeconomics' },
         ]
-    },{  
-        text: '法学', collapsed: false, items: [  
-            { text: '法学', link: '/course/law/' },  
-        ]  
-    },  {  
-        text: '教育学', collapsed: false, items: [  
-            { text: '教育学', link: '/course/education/' },  
-        ]  
-    },   {  
-        text: '文学', collapsed: false, items: [  
-            { text: '文学', link: '/course/literature/' },  
-        ]  
-    },  {  
-        text: '历史学', collapsed: false, items: [  
-            { text: '历史学', link: '/course/history/' },  
-        ]  
-    },   {
+    }, {
+        text: '法学', collapsed: false, items: [
+            { text: '法学', link: '/course/law/' },
+        ]
+    }, {
+        text: '教育学', collapsed: false, items: [
+            { text: '教育学', link: '/course/education/' },
+        ]
+    }, {
+        text: '文学', collapsed: false, items: [
+            { text: '文学', link: '/course/literature/' },
+        ]
+    }, {
+        text: '历史学', collapsed: false, items: [
+            { text: '历史学', link: '/course/history/' },
+        ]
+    }, {
         text: '理学', collapsed: false, items: [
             { text: '数学术语中英文', link: '/course/science/math-term' },
             { text: '离散数学', link: '/course/science/discrete-math' },
@@ -364,26 +364,26 @@ const sidebarCourse = [
         text: '工学', collapsed: false, items: [
             { text: '数据结构与算法', link: '/course/engineering/dsa' },
         ]
-    },{  
-        text: '农学', collapsed: false, items: [  
-            { text: '农学', link: '/course/agronomy/' },  
-        ]  
-    },   
-    {  
-        text: '医学', collapsed: false, items: [  
-            { text: '医学', link: '/course/medicine/' },  
-        ]  
-    },    
-    {  
-        text: '军事学', collapsed: false, items: [  
-            { text: '军事学', link: '/course/military-science/' },  
-        ]  
-    },   
-    {  
-        text: '管理学', collapsed: false, items: [  
-            { text: '管理学', link: '/course/management/' },  
-        ]  
-    },   {
+    }, {
+        text: '农学', collapsed: false, items: [
+            { text: '农学', link: '/course/agronomy/' },
+        ]
+    },
+    {
+        text: '医学', collapsed: false, items: [
+            { text: '医学', link: '/course/medicine/' },
+        ]
+    },
+    {
+        text: '军事学', collapsed: false, items: [
+            { text: '军事学', link: '/course/military-science/' },
+        ]
+    },
+    {
+        text: '管理学', collapsed: false, items: [
+            { text: '管理学', link: '/course/management/' },
+        ]
+    }, {
         text: '艺术学', collapsed: false, items: [
             { text: '乐理', link: '/course/art/music_theory' },
             { text: '连音', link: '/course/art/tuplet' },]
@@ -482,7 +482,6 @@ const sidebarCodeNotes = [
             { text: 'Algolia', link: '/code-notes/tools/algolia' },
             { text: 'The Movie Database(TMDB)', link: '/code-notes/tools/tmdb' },
             { text: 'gitalk 评论接入教程', link: '/code-notes/tools/gitalk' },
-            { text: 'ffmpeg', link: '/code-notes/tools/ffmpeg' },
         ],
     },
 ];
@@ -595,22 +594,29 @@ const sidebarCodeDB = [
     { text: '达梦8', link: '/code/db/dameng8' },
     { text: 'mongoDB', link: '/code/db/mongoDB' },
 ];
+const sidebarCodeFramework = [
+    { text: 'Actor', link: '/code/framework/actor' },
+    { text: 'FDBus', link: '/code/framework/fdbus' },
+    { text: 'ffmpeg', link: '/code/framework/ffmpeg' },
+    { text: 'GStreamer', link: '/code/framework/gstreamer' },
+];
 const sidebarCodeProtocol = [
-    { text: 'CAN FD', link: '/code/protocol/can-fd' },  
+    { text: 'CAN FD', link: '/code/protocol/canfd' },
+    { text: 'Fast DDS', link: '/code/protocol/fastdds' },
 ];
 const sidebarCodeLibs = [
     { text: 'all libs', link: '/code/libs/' },
-    { text: 'STL', link: '/code/libs/stl' },
+    { text: 'Abseil', link: '/code/libs/abseil' },
+    { text: 'asan 内存检测', link: '/code/libs/asan' },
     { text: 'Boost', link: '/code/libs/boost' },
-    { text: 'LuaJIT', link: '/code/libs/luajit' },
-    { text: 'protobuf', link: '/code/libs/protobuf' },
     { text: 'cppzmq', link: '/code/libs/cppzmq' },
     { text: 'libevent', link: '/code/libs/libevent' },
     { text: 'libuv', link: '/code/libs/libuv' },
+    { text: 'LuaJIT', link: '/code/libs/luajit' },
+    { text: 'OpenGL', link: '/code/libs/opengl' },
+    { text: 'protobuf', link: '/code/libs/protobuf' },
     { text: 'RapidJSON', link: '/code/libs/rapidjson' },
-    { text: 'actor', link: '/code/libs/actor' },
-    { text: '内存检测', link: '/code/libs/asan' },
-    { text: 'OpenGL', link: '/code/libs/opengl' },  
+    { text: 'STL', link: '/code/libs/stl' },
 ];
 const sidebarCodeFrontEnd = [
     { text: 'Sol', link: '/code/front-end/sol' },
@@ -662,7 +668,7 @@ const sidebarCodeShock = [
     { text: '小妙招', link: '/code/shock/clue' },
     { text: '小外包', link: '/code/shock/outsourcing-co' },
 ];
-const sidebarCodeSysDesign = [  
+const sidebarCodeSysDesign = [
     { text: '设计模式', link: '/code/sys-design/design-pattern' },
     { text: 'Reactor', link: '/code/sys-design/reactor' },
 ];
@@ -804,14 +810,15 @@ export const sidebar = {
     '/code/interview/': sidebarCodeInterview,
     '/code/cpp/': sidebarCodeCpp,
     '/code/db/': sidebarCodeDB,
+    '/code/framework/': sidebarCodeFramework,
     '/code/protocol/': sidebarCodeProtocol,
     '/code/libs/': sidebarCodeLibs,
     '/code/front-end/': sidebarCodeFrontEnd,
     '/code/program/': sidebarCodeProgram,
     '/code/shock/': sidebarCodeShock,
     '/code/sys-design/': sidebarCodeSysDesign,
-    '/code/kernel/': sidebarCodeKernel,  
-    '/code/ml/': sidebarCodeML,  
+    '/code/kernel/': sidebarCodeKernel,
+    '/code/ml/': sidebarCodeML,
     //
     '/pursuing-education/': sidebarPursuingEducation,
     '/study/': sidebarStudy,

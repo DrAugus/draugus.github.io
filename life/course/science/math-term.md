@@ -1,6 +1,7 @@
 # 数学常用术语中英文对照
 
 ## A、B  
+
 Absolute convergence: 绝对收敛  
 Absolute extreme values: 绝对极值  
 Absolute maximum and minimum: 绝对极大与极小  
@@ -33,6 +34,7 @@ Axes of ellipse: 椭圆之轴
 Binomial series: 二项级数
 
 ## C  
+
 Calculus: 微积分  
 differential: 微分学  
 integral: 积分学  
@@ -82,6 +84,7 @@ Cylinder：圆柱
 Cylindrical Coordinates: 圆柱坐标  
   
 ## D  
+
 Decreasing function: 递减函数  
 Decreasing sequence: 递减数列  
 Definite integral: 定积分  
@@ -124,6 +127,7 @@ change of variable in: 二重积分之变数变换
 in polar coordinates: 极坐标二重积分  
   
 ## E、F、G、H  
+
 Ellipse: 椭圆  
 Ellipsoid: 椭圆体  
 Epicycloid: 外摆线  
@@ -156,6 +160,7 @@ Hyperbola: 双曲线
 Hyper boloid: 双曲面  
   
 ## I  
+
 Implicit differentiation: 隐求导法  
 Implicit function: 隐函数  
 Improper integral: 瑕积分  
@@ -183,6 +188,7 @@ Inverse trigonometric function: 反三角函数
 Iterated integral: 逐次积分  
   
 ## L  
+
 Laplace transform: Leplace 变换  
 Law of Cosines: 余弦定理  
 Least upper bound: 最小上界  
@@ -323,6 +329,7 @@ Tangent function: 正切函数
 Tangent line: 切线  
 Tangent plane: 切平面  
 Tangent vector: 切向量  
+Taylor series: 泰勒展开式  
 Total differential: 全微分  
 Trigonometric function: 三角函数  
 Trigonometric integrals: 三角积分  

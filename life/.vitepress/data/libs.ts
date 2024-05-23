@@ -25,31 +25,31 @@ export const LIBS_DATA: CardData[] = [
                 },
                 link: `${prefixLinks}boost`
             },
-            {
-                icon: "https://www.actor-framework.org/static/img/caf-logo.png",
-                title: 'Actor Framework',
-                desc: {
-                    intro: "<b>CAF</b> offers a high-level programming environment based on the Actor Model of computation combined with an efficient, native runtime environment that lets you build scalable applications. For example, software for molecular research, communication backends for distributed network security monitoring or even massive multiplayer online games.",
-                    repo: "https://github.com/actor-framework/actor-framework",
-                    homepage: "https://www.actor-framework.org/",
-                    guide: "https://www.cafcademy.com/articles",
-                    others: [
-                        {
-                            text: "Developer Blog",
-                            link: "https://www.actor-framework.org/blog"
-                        },
-                        {
-                            text: "Manual",
-                            link: "https://actor-framework.readthedocs.io"
-                        },
-                        {
-                            text: "Doxygen",
-                            link: "https://www.actor-framework.org/doxygen/"
-                        }
-                    ]
-                },
-                link: `${prefixLinks}actor`
-            },
+            // {
+            //     icon: "https://www.actor-framework.org/static/img/caf-logo.png",
+            //     title: 'Actor Framework',
+            //     desc: {
+            //         intro: "<b>CAF</b> offers a high-level programming environment based on the Actor Model of computation combined with an efficient, native runtime environment that lets you build scalable applications. For example, software for molecular research, communication backends for distributed network security monitoring or even massive multiplayer online games.",
+            //         repo: "https://github.com/actor-framework/actor-framework",
+            //         homepage: "https://www.actor-framework.org/",
+            //         guide: "https://www.cafcademy.com/articles",
+            //         others: [
+            //             {
+            //                 text: "Developer Blog",
+            //                 link: "https://www.actor-framework.org/blog"
+            //             },
+            //             {
+            //                 text: "Manual",
+            //                 link: "https://actor-framework.readthedocs.io"
+            //             },
+            //             {
+            //                 text: "Doxygen",
+            //                 link: "https://www.actor-framework.org/doxygen/"
+            //             }
+            //         ]
+            //     },
+            //     link: `${prefixLinks}actor`
+            // },
 
             {
                 icon: "https://api.iconify.design/simple-icons:zeromq.svg",
