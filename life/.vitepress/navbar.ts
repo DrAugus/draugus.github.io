@@ -36,23 +36,24 @@ export const navbar = [
     items: [
       {
         text: '基础', items: [
-          { text: 'C++', link: '/code/cpp/' },
-          { text: '操作系统', link: '/code/os/' },
-          { text: 'DSA', link: '/code/dsa/' },
-          { text: '数据库', link: '/code/db/' },
-          { text: '前端', link: '/code/front-end/' },
-          { text: '编译器/开发环境', link: '/code/dev-env/' },
-          { text: '构建/持续集成', link: '/code/build/' },
-          { text: '版本控制', link: '/code/version-ctrl/' },
+          { text: 'C++', link: '/code/cpp/', activeMatch: '/code/cpp/' },
+          { text: '操作系统', link: '/code/os/', activeMatch: '/code/os/' },
+          { text: 'DSA', link: '/code/dsa/', activeMatch: '/code/dsa/' },
+          { text: '数据库', link: '/code/db/', activeMatch: '/code/db/' },
+          { text: '前端', link: '/code/front-end/', activeMatch: '/code/front-end/' },
+          { text: '编译器/开发环境', link: '/code/dev-env/', activeMatch: '/code/dev-env/' },
+          { text: '构建/持续集成', link: '/code/build/', activeMatch: '/code/build/' },
+          { text: '版本控制', link: '/code/version-ctrl/', activeMatch: '/code/version-ctrl/' },
         ]
       }, {
         text: '进阶', items: [
-          { text: 'API', link: '/code/api/' },
-          { text: '框架', link: '/code/framework/' },
-          { text: '协议', link: '/code/protocol/' },
-          { text: '内核', link: '/code/kernel/' },
-          { text: '库', link: '/code/libs/' },
-          { text: '系统设计', link: '/code/sys-design/' },]
+          { text: 'API', link: '/code/api/', activeMatch: '/code/api/' },
+          { text: '框架', link: '/code/framework/', activeMatch: '/code/framework/' },
+          { text: '协议', link: '/code/protocol/', activeMatch: '/code/protocol/' },
+          { text: '内核', link: '/code/kernel/', activeMatch: '/code/kernel/' },
+          { text: '库', link: '/code/libs/', activeMatch: '/code/libs/' },
+          { text: '系统设计', link: '/code/sys-design/', activeMatch: '/code/sys-design/' },
+        ]
       }, {
         text: '杂项',
         items: [
@@ -76,7 +77,8 @@ export const navbar = [
   {
     text: '待定',
     items: [
-      { text: '学习', link: '/study/' },
+      { text: '散记', link: '/random-notes/', activeMatch: '/random-notes/' },
+      { text: '思考', link: '/thought/', activeMatch: '/thought/' },
       { text: '职业', link: '/career/' },
       { text: '证书', link: '/career/certificate/' },
       {
@@ -88,30 +90,20 @@ export const navbar = [
       {
         text: '差不多得了',
         items: [
-          { text: '想法', link: '/thought/' },
-          { text: '牢骚', link: '/grumbling/' },
-          { text: '女人', link: '/thought/woman' },
-          { text: '事故', link: '/accident/' },
-          { text: '偷乐', link: '/funny/' },
+          { text: '疾病', link: '/disease/', activeMatch: '/disease/' },
+          { text: '牢骚', link: '/grumbling/', activeMatch: '/grumbling/' },
+          { text: '事故', link: '/accident/', activeMatch: '/accident/' },
+          { text: '偷乐', link: '/funny/', activeMatch: '/funny/' },
         ],
-      },
-      {
-        text: '大抵是病了',
-        items: [
-          { text: '病', link: '/disease/' },
-        ],
-      },
-      {
+      }, {
         text: '文科',
         items: [
-          { text: '首页', link: '/arts/' },
           { text: '语言', link: '/arts/language/' },
           { text: '社会', link: '/arts/society/' },
           { text: '历史', link: '/arts/history/' },
           { text: '檄文', link: '/arts/xiwen/' },
           { text: '文章', link: '/arts/article/' },
           { text: '演讲', link: '/arts/speech/' },
-          { text: '一言', link: '/arts/one-word' },
         ],
         activeMatch: '^/arts',
       },

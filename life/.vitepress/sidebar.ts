@@ -678,18 +678,17 @@ const sidebarVersionCtrl = [
 const sidebarPursuingEducation = [
     { text: '高考', link: '/pursuing-education/gaokao' },
 ];
-const sidebarStudy = [
-    { text: '随便学学', link: '/study/' },
-    { text: '散篇1', link: '/study/temp1' },
-    { text: '散篇2', link: '/study/temp2' },
-    { text: '痛经', link: '/study/rambling/dysmenorrhoea' },
-    { text: '电网', link: '/study/rambling/state-grid' },
-    { text: '锻炼', link: '/study/rambling/exercise' },
-    { text: '梅花 vs 桃花 vs 樱花', link: '/study/rambling/flower' },
-    { text: '学位服', link: '/study/rambling/academic-dress' },
-    { text: '女人相亲惯用套路', link: '/study/rambling/blind-date-routine-skill' },
-    { text: '中国有14亿人 而我还是单身', link: '/study/rambling/bachelor' },
-    { text: '身份证', link: '/study/rambling/id_card' },
+const sidebarRandomNotes = [
+    { text: '一言', link: '/random-notes/one-word' },
+    { text: '散篇', link: '/random-notes/temp2' },
+    { text: '痛经', link: '/random-notes/dysmenorrhoea' },
+    { text: '电网', link: '/random-notes/state-grid' },
+    { text: '锻炼', link: '/random-notes/exercise' },
+    { text: '梅桃樱', link: '/random-notes/flower' },
+    { text: '学位服', link: '/random-notes/academic-dress' },
+    { text: '女人相亲惯用套路', link: '/random-notes/blind-date-routine-skill' },
+    { text: '中国有14亿人 而我还是单身', link: '/random-notes/bachelor' },
+    { text: '身份证', link: '/random-notes/id_card' },
 ];
 const sidebarCareer = [
     { text: '简历', link: '/career/cv' },
@@ -723,7 +722,7 @@ const sidebarCareer = [
 
 
 const sidebarThought = [
-    { text: '想法', link: '/thought/' },
+    // { text: '想法', link: '/thought/' },
     { text: '未来', link: '/thought/future' },
     { text: '90 后都经历了什么', link: '/thought/90s' },
     { text: '这又是什么呢', link: '/thought/temp' },
@@ -737,16 +736,16 @@ const sidebarThought = [
 ];
 
 const sidebarGrumbling = [
+    // { text: '牢骚', link: '/grumbling/' },
     { text: '一次淘宝经历', link: '/grumbling/1' },
-    { text: '牢骚', link: '/grumbling/' },
     { text: '喷子', link: '/grumbling/2' },
 ];
 
 
 const sidebarAccident = [
+    // { text: '事故', link: '/accident/' },
     { text: '2018年重庆万州公交车坠江事故', link: '/accident/2018-Chongqing-bus-crash' },
     { text: '2022年中国东方航空5735号班机空难', link: '/accident/2022-China-Eastern-Airlines-Flight-5735' },
-    { text: '事故', link: '/accident/' },
     { text: '2020年贵州公交坠湖事故', link: '/accident/2020-Anshun-bus-crash' },
 ];
 
@@ -822,7 +821,7 @@ export const sidebar = {
     '/code/version-ctrl/': sidebarVersionCtrl,
     //
     '/pursuing-education/': sidebarPursuingEducation,
-    '/study/': sidebarStudy,
+    '/random-notes/': sidebarRandomNotes,
     '/career/': sidebarCareer,
     '/thought/': sidebarThought,
     '/grumbling/': sidebarGrumbling,
