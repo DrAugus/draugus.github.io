@@ -2,32 +2,91 @@
 
 ## C++23 有什么新特性
 
-todo
+:::tip Link [cppreference](https://en.cppreference.com/w/cpp/23)
+...etc
+:::
 
 ## C++20 有什么新特性
 
-todo
+:::tip Link [cppreference](https://en.cppreference.com/w/cpp/20)
+
+- Feature test macros
+- Three-way comparison operator `<=>` and operator==() = default
+- Designated initializers
+- Init-statements and initializers in range-for
+- char8_t
+- New attributes: [[no_unique_address]], [[likely]], [[unlikely]]
+- Pack-expansions in lambda init-captures
+- Removed the requirement to use typename to disambiguate types in many contexts
+- consteval, constinit
+- Further relaxed constexpr
+- Signed integers are 2's complement
+- Bitwise shift operators unified behavior
+- aggregate initialization using parentheses
+- coroutines
+- modules
+- Constraints and concepts
+- Abbreviated function template
+- DR11: array new can deduce array size
+:::
 
 ## C++17 有什么新特性
 
-todo
+:::tip Link [cppreference](https://en.cppreference.com/w/cpp/17)
+...etc
+:::
 
 ## C++14 有什么新特性
 
-todo
+:::tip Link [cppreference](https://en.cppreference.com/w/cpp/14)
+
+- variable templates
+- generic lambdas
+- lambda init-capture
+- new/delete elision
+- relaxed restrictions on constexpr functions
+- binary literals
+- digit separators
+- return type deduction for functions
+- aggregate classes with default non-static member initializers.
+
+:::
 
 ## C++11 有什么新特性
 
-与之前的版本相比，C++11增加了许多新的特性，包括：
+:::tip Link [cppreference](https://en.cppreference.com/w/cpp/11)
 
-- 新的类型：C++11增加了多种新的类型，例如auto和decltype，它们可以让程序员更容易地定义变量。
-- 字面常量：C++11提供了新的字面常量，例如nullptr和u8"hello"，它们可以让程序员更方便地声明和使用指针和字符串。
-- 智能指针：C++11提供了多种新的智能指针，例如unique_ptr和shared_ptr，它们可以自动管理内存，避免出现内存泄漏和野指针等错误。
-- [Lambda表达式](./concept/lambda#lambda-函数的特点和普通函数相比有什么优点)：C++11增加了Lambda表达式，它可以让程序员在代码中定义和使用匿名函数。
-- 新的容器：C++11增加了多种新的容器，例如unordered_map和array，它们可以提高容器的性能和使用方便性。
-- 多线程支持：C++11增加了对多线程的支持，它提供了一系列的多线程库，可以让程序员方便地编写多线程程序。
+- auto and decltype
+- defaulted and deleted functions
+- final and override
+- trailing return type
+- rvalue references
+- move constructors and move assignment operators
+- scoped enums
+- constexpr and literal types
+- list initialization
+- delegating and inherited constructors
+- brace-or-equal initializers
+- nullptr
+- long long
+- char16_t and char32_t
+- type aliases
+- variadic templates
+- generalized (non-trivial) unions
+- generalized PODs (trivial types and standard-layout types)
+- Unicode string literals
+- user-defined literals
+- attributes
+- lambda expressions
+- noexcept specifier and noexcept operator
+- alignof and alignas
+- multithreaded memory model
+- thread-local storage
+- GC interface (removed in C++23)
+- range-for (based on a Boost library)
+- static_assert (based on a Boost library)
 
-除了以上特性之外，C++11还增加了许多其他的特性，例如对默认构造函数、拷贝构造函数、赋值运算符和移动运算符的编译器自动生成（叫做"自动类型推导"），以及对Unicode字符集的支持等等。
+:::
 
 ### 线程库
 

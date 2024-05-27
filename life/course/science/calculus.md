@@ -5,7 +5,8 @@
 - [微积分的本质](https://www.bilibili.com/video/BV1qW411N7FU/) by 3blue1brown  
 - math is fun: [Calculus](https://www.mathsisfun.com/calculus/)
 
-Current Progress: [Fourier Series](https://www.mathsisfun.com/calculus/fourier-series.html)
+Current Progress: [Differential Equations](https://www.mathsisfun.com/calculus/differential-equations.html)  
+中断，先去听 3blue1brown 的课，或者 mooc
 
 todo todo
 
@@ -20,10 +21,13 @@ todo todo
 
 1. Did it just drop out of the sky?
 $$f(x) = c_0 + c_1(x-a) + c_2(x-a)^2 + c_3(x-a)^3 + \dots$$
-2. todo todo
+2. confuse all pages: [Fourier Series](https://www.mathsisfun.com/calculus/fourier-series.html)
+3. todo todo
 :::
 
 ## Derivative
+
+We write **dx** instead of **"Δx heads towards 0"**.
 
 $\frac{\mathrm{d} \sin (x) }{\mathrm{d} x}$ and $sin'(x)$ both mean "The derivative of sin(x)"
 
@@ -256,3 +260,40 @@ the previous 4 methods are also called **Riemann Sums** after the mathematician 
 ::::
 
 ## Fourier Series
+
+confusion
+
+## Differential Equations
+
+::::warning Compound Interest
+
+![svg](/img/course/fv_formula.svg)
+
+:::details where
+
+- **FV** = Future Value
+- **PV** = Present Value
+- **r** = annual interest rate
+- **n** = number of periods
+:::
+
+Effective Annual Rate = (1+(r/n))n − 1
+
+Where:
+
+- r = **Nominal Rate** (the rate they mention)
+- n = number of periods that are compounded (example: for monthly n=12)
+
+**APR** means "Annual Percentage Rate": it shows how much you will actually be paying for the year (including compounding, fees, etc).
+
+:::details Examples
+
+Example 1: "**1% per month**" actually works out to be **12.683% APR** (if no fees).
+
+Example 2: "**6% interest with monthly compounding**" works out to be **6.168% APR** (if no fees).
+
+:::
+
+::::
+
+confusion

@@ -1,5 +1,8 @@
 import op_file
+import os
 
+
+current_path = os.path.dirname(__file__)
 
 # 逐行读取 按行加入 ["",""]
 def format_json(sa, sb):
@@ -107,19 +110,19 @@ def invoke_translate():
 
 
 def invoke_add_prefix(str):
-    add_prefix("script/test", str)
+    add_prefix(current_path+"/test", str)
 
 
 def invoke_add_suffix(str):
-    add_suffix("script/test", str)
+    add_suffix(current_path+"/test", str)
 
 
 def invoke_replace_str(src, dis):
-    replace_str("script/test", src, dis)
+    replace_str(current_path+"/test", src, dis)
 
 
 def invoke_change_line(str):
-    change_line("script/test", str)
+    change_line(current_path+"/test", str)
 
 
 all_feature = '\n=========*****=========\n' \

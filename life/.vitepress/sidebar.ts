@@ -429,34 +429,6 @@ const sidebarCodeNotes = [
     { text: '指南', link: '/code-notes/' },
     { text: '配环境', link: '/code-notes/nipeima' },
     {
-        text: '编辑器/开发环境', collapsed: false, items: [
-            { text: 'VSCode', link: '/code-notes/dev-env/vscode' },
-            { text: 'Xcode', link: '/code-notes/dev-env/xcode' },
-            { text: 'JetBrains', link: '/code-notes/dev-env/jetbrains' },
-            { text: 'Cocos', link: '/code-notes/dev-env/cocos' },
-        ],
-    }, {
-        text: '编译', collapsed: false, items: [
-            { text: 'Compile', link: '/code-notes/compile/' },
-            { text: 'gcc', link: '/code-notes/compile/gcc' },
-            { text: 'Makefile', link: '/code-notes/compile/Makefile' },
-            { text: 'CMakeLists', link: '/code-notes/compile/CMakeLists' },
-        ],
-    }, {
-        text: '构建/持续集成', collapsed: false, items: [
-            { text: 'Docker', link: '/code-notes/build/docker' },
-            { text: 'Jenkins', link: '/code-notes/build/Jenkins' },
-            { text: 'Mergify', link: '/code-notes/build/mergify' },
-            { text: 'Vercel', link: '/code-notes/build/vercel' },
-        ],
-    }, {
-        text: '版本控制', collapsed: false, items: [
-            { text: 'Git', link: '/code-notes/version-ctrl/git' },
-            { text: 'GitHub', link: '/code-notes/version-ctrl/github' },
-            { text: 'Gitlab', link: '/code-notes/version-ctrl/gitlab' },
-            { text: 'svn', link: '/code-notes/version-ctrl/svn' },
-        ],
-    }, {
         text: '命令行工具', collapsed: false, items: [
             { text: 'fish cmd', link: '/code-notes/cmd-line-tools/fish' },
             { text: 'Tabby', link: '/code-notes/cmd-line-tools/tabby' },
@@ -556,7 +528,8 @@ const sidebarCodeCpp = [
     { text: '程序题', link: '/code/cpp/code' },
     { text: 'C 与 C++', link: '/code/cpp/c-cpp-diff' },
     {
-        text: 'concept', collapsed: false, items: [
+        text: '基本概念', collapsed: false, items: [
+            { text: '概念辨析', link: '/code/cpp/concept/' },
             { text: '类', link: '/code/cpp/concept/class' },
             { text: '引用', link: '/code/cpp/concept/reference' },
             { text: '堆栈 内存', link: '/code/cpp/concept/stack_memory' },
@@ -564,12 +537,18 @@ const sidebarCodeCpp = [
             { text: '指针', link: '/code/cpp/concept/pointer' },
             { text: '原子', link: '/code/cpp/concept/atomic' },
             { text: '虚函数', link: '/code/cpp/concept/virtual' },
-            { text: '概念辨析', link: '/code/cpp/concept/' },
             { text: '并发', link: '/code/cpp/concept/concurrent' },
             { text: '异常', link: '/code/cpp/concept/exception' },
             { text: '运算符', link: '/code/cpp/concept/operator' },
-            { text: 'lambda', link: '/code/cpp/concept/lambda' },
+            { text: 'Lambda', link: '/code/cpp/concept/lambda' },
         ]
+    }, {
+        text: '编译', collapsed: false, items: [
+            { text: 'Compile', link: '/code/cpp/compile/' },
+            { text: 'gcc', link: '/code/cpp/compile/gcc' },
+            { text: 'Makefile', link: '/code/cpp/compile/Makefile' },
+            { text: 'CMakeLists', link: '/code/cpp/compile/CMakeLists' },
+        ],
     }, {
         text: 'tips', collapsed: false, items: [
             { text: 'check OS with a preprocessor directive', link: '/code/cpp/tips/check-os' },
@@ -582,7 +561,6 @@ const sidebarCodeCpp = [
             { text: 'Threads and Mutexes', link: '/code/cpp/thread-mutex/threads-and-mutexes' },
             { text: '各种锁', link: '/code/cpp/thread-mutex/mutex' },
             { text: 'Thread', link: '/code/cpp/thread-mutex/thread' },
-            { text: '线程 锁', link: '/code/cpp/thread-mutex/' },
             { text: '4 Easy Tips for Using Threads and Mutexes in C++', link: '/code/cpp/thread-mutex/4-easy-tips-on-using-threads-and-mutexes-in-cpp' },
         ]
     },
@@ -676,7 +654,26 @@ const sidebarCodeKernel = [
     { text: 'epoll', link: '/code/kernel/epoll' },
 ];
 const sidebarCodeML = [
-    { text: 'BERT', link: '/code/protocol/bert' }];
+    { text: 'BERT', link: '/code/protocol/bert' }
+];
+const sidebarDevEnv = [
+    { text: 'VSCode', link: '/code/dev-env/vscode' },
+    { text: 'Xcode', link: '/code/dev-env/xcode' },
+    { text: 'JetBrains', link: '/code/dev-env/jetbrains' },
+    { text: 'Cocos', link: '/code/dev-env/cocos' },
+];
+const sidebarBuild = [
+    { text: 'Docker', link: '/code/build/docker' },
+    { text: 'Jenkins', link: '/code/build/Jenkins' },
+    { text: 'Mergify', link: '/code/build/mergify' },
+    { text: 'Vercel', link: '/code/build/vercel' },
+];
+const sidebarVersionCtrl = [
+    { text: 'Git', link: '/code/version-ctrl/git' },
+    { text: 'GitHub', link: '/code/version-ctrl/github' },
+    { text: 'Gitlab', link: '/code/version-ctrl/gitlab' },
+    { text: 'svn', link: '/code/version-ctrl/svn' },
+];
 
 const sidebarPursuingEducation = [
     { text: '高考', link: '/pursuing-education/gaokao' },
@@ -803,9 +800,10 @@ export const sidebar = {
     //
     '/course/': sidebarCourse,
     //
+    '/code-notes/': sidebarCodeNotes,
+    //
     '/code/os/': sidebarCodeOS,
     '/code/api/': sidebarCodeAPI,
-    '/code-notes/': sidebarCodeNotes,
     '/code/dsa/': sidebarCodeDSA,
     '/code/interview/': sidebarCodeInterview,
     '/code/cpp/': sidebarCodeCpp,
@@ -819,6 +817,9 @@ export const sidebar = {
     '/code/sys-design/': sidebarCodeSysDesign,
     '/code/kernel/': sidebarCodeKernel,
     '/code/ml/': sidebarCodeML,
+    '/code/dev-env/': sidebarDevEnv,
+    '/code/build/': sidebarBuild,
+    '/code/version-ctrl/': sidebarVersionCtrl,
     //
     '/pursuing-education/': sidebarPursuingEducation,
     '/study/': sidebarStudy,

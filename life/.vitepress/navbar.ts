@@ -34,24 +34,30 @@ export const navbar = [
   {
     text: '编程',
     items: [
-      { text: '首页', link: '/code/' },
-      { text: 'C++', link: '/code/cpp/' },
-      { text: '操作系统', link: '/code/os/' },
-      { text: 'DSA', link: '/code/dsa/' },
-      { text: '数据库', link: '/code/db/' },
-      { text: 'API', link: '/code/api/' },
-      { text: '框架', link: '/code/framework/' },
-      { text: '协议', link: '/code/protocol/' },
-      { text: '内核', link: '/code/kernel/' },
-      { text: '库', link: '/code/libs/' },
-      { text: '系统设计', link: '/code/sys-design/' },
-      { text: '前端', link: '/code/front-end/' },
       {
-        text: '代码笔记',
+        text: '基础', items: [
+          { text: 'C++', link: '/code/cpp/' },
+          { text: '操作系统', link: '/code/os/' },
+          { text: 'DSA', link: '/code/dsa/' },
+          { text: '数据库', link: '/code/db/' },
+          { text: '前端', link: '/code/front-end/' },
+          { text: '编译器/开发环境', link: '/code/dev-env/' },
+          { text: '构建/持续集成', link: '/code/build/' },
+          { text: '版本控制', link: '/code/version-ctrl/' },
+        ]
+      }, {
+        text: '进阶', items: [
+          { text: 'API', link: '/code/api/' },
+          { text: '框架', link: '/code/framework/' },
+          { text: '协议', link: '/code/protocol/' },
+          { text: '内核', link: '/code/kernel/' },
+          { text: '库', link: '/code/libs/' },
+          { text: '系统设计', link: '/code/sys-design/' },]
+      }, {
+        text: '杂项',
         items: [
           { text: '配环境', link: '/code-notes/nipeima' },
           { text: '直接进入', link: '/code-notes/' },
-          { text: '导航指示', link: '/code-notes/intro' },
         ],
         activeMatch: '^/code-notes',
       },

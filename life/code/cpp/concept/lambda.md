@@ -1,4 +1,4 @@
-# lambda
+# Lambda
 
 ## stroustrup intro
 
