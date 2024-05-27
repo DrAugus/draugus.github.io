@@ -6,6 +6,8 @@ sidebar: false
 
 # 去哪儿
 
+走过蓝色星球，[旅途记录](./travelogue/)
+
 <script setup>
 import ACardLinks from '../.vitepress/components/ACardLinks.vue'
 

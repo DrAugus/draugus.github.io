@@ -12,8 +12,8 @@
 
 推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
 
-- 版本控制 Git：`apt-get install git`，git [config](../code-notes/version-ctrl/git#config)，[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，[Git 命令参考](../code-notes/version-ctrl/git)
-- 生成 ssh [pubkey](./version-ctrl/github#generate-ssh) 放入 GitHub 以访问 GitHub，直接使用 `git clone git@github.com:name/repo`
+- 版本控制 Git：`apt-get install git`，git [config](../code/version-ctrl/git#config)，[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，[Git 命令参考](../code/version-ctrl/git)
+- 生成 ssh [pubkey](../code/version-ctrl/github#generate-ssh) 放入 GitHub 以访问 GitHub，直接使用 `git clone git@github.com:name/repo`
 - 安装 [nodejs](../code/front-end/webtools#node)，安装 yarn、pnpm 皆可从左侧链接内查看
 
 todo
@@ -40,7 +40,7 @@ todo
 - Node.js：[官网](https://nodejs.org/)，安装可以勾选 Chocolatey，并且会自动安装 Python
 - 代码工具 VS Code：[官网](https://code.visualstudio.com/)
 - 版本控制 SVN：TortoiseSVN [下载页/汉化页](https://tortoisesvn.net/downloads.html)
-- 版本控制 Git：[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，直接进入 Windows 版本[下载页](https://git-scm.com/download/win)，[Git 命令参考](../code-notes/version-ctrl/git)
+- 版本控制 Git：[官网指南](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)，直接进入 Windows 版本[下载页](https://git-scm.com/download/win)，[Git 命令参考](../code/version-ctrl/git)
 - 终端 Tabby：[官网](https://tabby.sh/)
 
 其他软件
