@@ -1,17 +1,8 @@
-name: Python script workflow
-on:
-  # # test push, del later
-  # push:
-  #   branches:
-  #     - master
-  #   paths:
-  #     - "script/**"
-  #     - ".github/workflows/get-wish-mhy-hsr.yml"      
+name: Life recent script workflow
+on:  
   schedule:
-    # This is run at midnight UTC on Tuesday and Wednesday
-    - cron:  '0 0 * * 2,3'
-    # 在 UTC 时间的凌晨 4 点执行（周二）（即周二的中午 UTC+8）
-    - cron: '0 4 * * 2'    
+    # This is run at midnight UTC, aka UTC+8 8:00 a.m.
+    - cron:  '0 8 * * *'
 
 jobs:
   build:
@@ -32,17 +23,13 @@ jobs:
         pip install -r requirements.txt
     - name: Execute Python script
       run: |
-        python mihoyo2.py
-        python mihoyo2_old.py 
-        python mihoyo2_zh.py 
-        python mihoyo6.py   
-        python mihoyo6_zh.py         
+        python latest.py    
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add auto/mhy2.json auto/mhy2old.json auto/mhy2zh auto/mhy6.json auto/mhy6zh
-        git commit -m "Add changes" -a
+        git add .
+        git commit -m "docs: life latest" -a
     # - name: Push changes
     #   uses: ad-m/github-push-action@master
     #   with:
@@ -52,11 +39,11 @@ jobs:
       uses: peter-evans/create-pull-request@v6
       with:
         token: ${{ secrets.DEPLOY_GH }}
-        title: Got mhy wish info
-        commit-message: Add changes
+        title: "docs: life latest"
+        commit-message: "docs: life latest"
         committer: GitHub <noreply@github.com>
         author: GitHub <noreply@github.com>
-        branch: create-pull-request/patch
+        branch: create-pull-request/patch-life-recent-update
         base: master    
         labels: |
           report

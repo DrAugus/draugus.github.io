@@ -14,13 +14,15 @@ const getTravelogue = (): CardData[] => {
         const year = date.slice(0, 4);
         const month = date.slice(4, 6);
         const day = date.slice(6, 8);
-        const desc = `${year}年${month}月${day}日起始游记`;
+        const sDate = `${year}年${month}月${day}日`
+        const desc = `${sDate}起始游记`;
 
         const cardData: CardLink = {
             icon: '',
             title: v.text,
-            desc,
-            link: v.link
+            // desc,
+            link: v.link,
+            date: sDate,
         };
 
         const currentYearData = map.get(year) || [];

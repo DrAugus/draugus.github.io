@@ -11,10 +11,11 @@ def log_args(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
         func_args = inspect.signature(func).bind(*args, **kwargs).arguments
-        func_args_str = ', '.join(f"{k}={v!r}" for k, v in func_args.items())
+        func_args_str = ", ".join(f"{k}={v!r}" for k, v in func_args.items())
         print(f"====== Calling function: {func.__name__} ======")
         print(f"Arguments: {func_args_str}")
         return func(*args, **kwargs)
+
     return wrapper
 
 
@@ -58,7 +59,7 @@ def str_to_dict(text):
 
 def find_unique_timestamps(text):
     # 正则表达式匹配两种格式的时间字符串
-    pattern = r'\b\d{4}[/-]\d{2}[/-]\d{2}\s+\d{2}:\d{2}:\d{2}\b'
+    pattern = r"\b\d{4}[/-]\d{2}[/-]\d{2}\s+\d{2}:\d{2}:\d{2}\b"
 
     # 在文本中查找所有匹配的时间字符串
     matches = re.findall(pattern, text)
@@ -73,20 +74,24 @@ def find_unique_timestamps(text):
 # 包含 start_str end_str：r'({}.*?{})'
 # 不包含 start_str：r'{}(.*?{})'
 def find_substrs(text, start_str, end_str):
-    pattern = r'{}(.*?{})'.format(re.escape(start_str), re.escape(end_str))
+    pattern = r"{}(.*?{})".format(re.escape(start_str), re.escape(end_str))
     return re.findall(pattern, text, re.IGNORECASE)
 
 
 # 查找子串在字符串中第n次出现的方法
 def find_nth_occurrence_1(string: str, substring: str, occurrence: int) -> int:
-    if (occurrence == 1):
+    if occurrence == 1:
         return string.find(substring)
     else:
-        return string.find(substring, find_nth_occurrence_1(string, substring, occurrence - 1) + 1)
+        return string.find(
+            substring, find_nth_occurrence_1(string, substring, occurrence - 1) + 1
+        )
 
 
 # 查找子串2在字符串中从子串1开始之后 第n次出现的方法
-def find_nth_occurrence_2(text_full: str, start_str: str, find_str: str, occurrence: int) -> int:
+def find_nth_occurrence_2(
+    text_full: str, start_str: str, find_str: str, occurrence: int
+) -> int:
     # 检查起始字符串是否存在于文本中
     start_index = text_full.find(start_str)
     if start_index == -1:
@@ -119,9 +124,9 @@ def match_char_event_warp_name_string(text):
 
 
 def replace_characters(input_string: str) -> str:
-    new_str = re.sub(r'[·.,& ]', '_', input_string)
-    while '__' in new_str:
-        new_str = new_str.replace('__', '_')
+    new_str = re.sub(r"[·.,& ]", "_", input_string)
+    while "__" in new_str:
+        new_str = new_str.replace("__", "_")
     new_str = new_str.lower()
     return new_str
 
@@ -129,7 +134,7 @@ def replace_characters(input_string: str) -> str:
 # 找到第一个和最后一个英文字母，并提取这两个字母及其之间的内容
 def clear_non_letters(input_str) -> str:
 
-    match = re.search(r'[a-zA-Z].*[a-zA-Z]', input_str)
+    match = re.search(r"[a-zA-Z].*[a-zA-Z]", input_str)
 
     # 如果匹配成功，从原字符串中提取匹配内容，否则返回原字符串
     if match:
@@ -156,11 +161,11 @@ def get_char_name(input_string):
 
 
 def get_only_name(character_info: list) -> list:
-    character_info_only_name = [info.split('(')[0] for info in character_info]
-    character_info_only_name = [name.strip()
-                                for name in character_info_only_name]
-    character_info_only_name = [clear_non_letters(
-        clear) for clear in character_info_only_name]
+    character_info_only_name = [info.split("(")[0] for info in character_info]
+    character_info_only_name = [name.strip() for name in character_info_only_name]
+    character_info_only_name = [
+        clear_non_letters(clear) for clear in character_info_only_name
+    ]
     character_info_only_name = clean_list_none(character_info_only_name)
     # print('only name:', character_info_only_name)
     return character_info_only_name
@@ -184,13 +189,13 @@ def get_duration(text):
 
         def got_dur(start: str, end: str):
             if start != None and end != None:
-                arr.append({
-                    'start_time': format_date(start),
-                    'end_time': format_date(end)
-                })
+                arr.append(
+                    {"start_time": format_date(start), "end_time": format_date(end)}
+                )
 
         time_match = re.search(
-            r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des)
+            r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des
+        )
         if time_match:
             version_match = re.search(r"Version (\d+\.\d+)", find_des)
             if version_match:
@@ -199,7 +204,8 @@ def get_duration(text):
                 version = None
 
             time_match = re.search(
-                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des)
+                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des
+            )
             if time_match:
                 time = time_match.group(1)
             else:
@@ -211,7 +217,7 @@ def get_duration(text):
                 return
 
             # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})'
+            pattern = r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})"
             # 使用正则表达式搜索所有匹配的时间
             matches = re.findall(pattern, find_des)
             # 检查是否找到了两个匹配的时间，表示开始和结束时间
@@ -225,7 +231,7 @@ def get_duration(text):
 
         # 大版本更新时
         # update – 2024/01/17 11:59:00(server time)
-        if 'update' in find_des and 'server time' in find_des:
+        if "update" in find_des and "server time" in find_des:
             version_match = re.search(r"Version (\d+\.\d+)", find_des)
             if version_match:
                 version = version_match.group(1)
@@ -233,7 +239,8 @@ def get_duration(text):
                 version = None
 
             time_match = re.search(
-                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des)
+                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des
+            )
             if time_match:
                 time = time_match.group(1)
             else:
@@ -246,9 +253,9 @@ def get_duration(text):
 
         # 小版本更新时
         # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
-        if 'Event Duration' in find_des and 'server time' in find_des:
+        if "Event Duration" in find_des and "server time" in find_des:
             # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r'(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})'
+            pattern = r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})"
             # 使用正则表达式搜索所有匹配的时间
             matches = re.findall(pattern, find_des)
             # 检查是否找到了两个匹配的时间，表示开始和结束时间
@@ -270,15 +277,20 @@ def get_duration(text):
 # original_time_str = "2024/4/2  17:59:59"
 def format_date(original_time_str):
     # 去除多余的空格
-    normalized_time_str = re.sub(r'\s+', ' ', original_time_str.strip())
+    normalized_time_str = re.sub(r"\s+", " ", original_time_str.strip())
 
     # 尝试将字符串解析为datetime对象
     try:
-        dt = datetime.strptime(normalized_time_str, '%Y/%m/%d %H:%M:%S')
+        dt = datetime.strptime(normalized_time_str, "%Y/%m/%d %H:%M:%S")
         # 格式化datetime对象为xxxx/xx/xx xx:xx:xx形式
-        standardized_time_str = dt.strftime('%Y/%m/%d %H:%M:%S')
+        standardized_time_str = dt.strftime("%Y/%m/%d %H:%M:%S")
         print("标准化后的时间字符串:", standardized_time_str)
         return standardized_time_str
     except ValueError as e:
         print("无法解析时间字符串:", e)
         return original_time_str
+
+
+def timestamp2date(ts: int):
+    dt_object = datetime.fromtimestamp(ts)
+    return dt_object.strftime("%Y-%m-%d")

@@ -16,7 +16,7 @@ export interface CardLink {
   icon?: string | { svg: string, },
   /** 名称 */
   title: string,
-  /** 名称 */
+  /** 日期 */
   date?: string,
   /** 描述 */
   desc?: string | LibsInfo,
