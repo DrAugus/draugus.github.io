@@ -16,11 +16,11 @@ def get_url_data(api_url):
 
 
 # type=3 公告
-api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=2&type=3'
-api_url += '&page_size=50'
+api_url = "https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=2&type=3"
+api_url += "&page_size=50"
 
 data = get_url_data(api_url)
-json_str = json.dumps(data['data']['list'])
+json_str = json.dumps(data["data"]["list"])
 data_dict = json.loads(json_str)
 
 # print(data_dict)
@@ -28,7 +28,7 @@ data_dict = json.loads(json_str)
 all_events_info = []
 
 for obj in data_dict:
-    if 'Event Wishes' in obj['post']['subject']:
+    if "Event Wishes" in obj["post"]["subject"]:
         all_events_info.append(obj)
 
 img_url = [[]]
@@ -36,24 +36,24 @@ post_id = []
 
 for get_warp in all_events_info:
     tmp_img_url = []
-    for img in get_warp['image_list']:
-        tmp_img_url.append(img['url'])
+    for img in get_warp["image_list"]:
+        tmp_img_url.append(img["url"])
     img_url.append(tmp_img_url)
 
-    post_id.append(get_warp['post']['post_id'])
+    post_id.append(get_warp["post"]["post_id"])
 
 # clean none img arr
 img_url = list(filter(None, img_url))
 
-print('img_url')
+print("img_url")
 for mm in img_url:
     print(mm)
-print('post_id', post_id)
+print("post_id", post_id)
 
 
 def modify_image_name(str, img_times, img_type):
-    res = str.lower().replace(' ', '_')
-    res += '_' + img_times + img_type
+    res = str.lower().replace(" ", "_")
+    res += "_" + img_times + img_type
     # print('res:', res)
     return res
 
@@ -124,11 +124,11 @@ def get_wish_char(text: str):
 
 def get_wish5star(text: str):
     arr = []
-    find_tag: list[str] = ['5-star character', '5-star weapons']
+    find_tag: list[str] = ["5-star character", "5-star weapons"]
 
     def append_match(find_des):
         for vv in find_tag:
-            arr.extend(utils.find_substrs(find_des, vv, ')'))
+            arr.extend(utils.find_substrs(find_des, vv, ")"))
 
     utils.got_insert_info(text, append_match)
 
@@ -137,12 +137,11 @@ def get_wish5star(text: str):
 
 def get_wish4star(text: str):
     arr = []
-    find_tag: list[str] = ['4-star characters', '4-star weapons']
+    find_tag: list[str] = ["4-star characters", "4-star weapons"]
 
     def extract_characters(text: str, find_tag: str):
         # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
-        pattern = fr"{
-            find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
+        pattern = rf"{find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
 
         # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
         matches = re.findall(pattern, text)
@@ -181,16 +180,16 @@ def re_find(text_full: str, find_tag: str) -> list:
             arr.append(find_des)
 
     utils.got_insert_info(text_full, append_match)
-    got_new_str: str = ''
+    got_new_str: str = ""
     for vv in arr:
-        find_index = utils.find_nth_occurrence_2(vv, find_tag, ')', 3)
+        find_index = utils.find_nth_occurrence_2(vv, find_tag, ")", 3)
         start_index = vv.find(find_tag)
         if find_index != -1:
-            got_new_str = vv[start_index+len(find_tag):find_index]
+            got_new_str = vv[start_index + len(find_tag) : find_index]
             break
-    if got_new_str != '':
-        got_new_str = got_new_str.replace('\n', '')
-        res = got_new_str.split(')')
+    if got_new_str != "":
+        got_new_str = got_new_str.replace("\n", "")
+        res = got_new_str.split(")")
         # print(res)
         return res
 
@@ -202,22 +201,22 @@ def get_chronicled_wish(text):
     arr = []
 
     def modify_name(s: str):
-        sub = s.split(',')
+        sub = s.split(",")
         if len(sub):
-            sub = [v.replace(':', '').replace('\n', '').strip() for v in sub]
-            sub = [v[3:].strip() if v.startswith('and') else v for v in sub]
+            sub = [v.replace(":", "").replace("\n", "").strip() for v in sub]
+            sub = [v[3:].strip() if v.startswith("and") else v for v in sub]
             return sub
         return []
 
     def append_match(find_des):
-        if 'Chronicled' in find_des or 'chronicled' in find_des:
-            index1 = find_des.find('5-Star Characters')
+        if "Chronicled" in find_des or "chronicled" in find_des:
+            index1 = find_des.find("5-Star Characters")
             res = find_des[index1:]
 
-            char5star = utils.find_substrs(res, '5-Star Characters', '\n')
-            char5weapon = utils.find_substrs(res, '5-Star Weapons', '\n')
-            char4star = utils.find_substrs(res, '4-Star Characters', '\n')
-            char4weapon = utils.find_substrs(res, '4-Star Weapons', '\n')
+            char5star = utils.find_substrs(res, "5-Star Characters", "\n")
+            char5weapon = utils.find_substrs(res, "5-Star Weapons", "\n")
+            char4star = utils.find_substrs(res, "4-Star Characters", "\n")
+            char4weapon = utils.find_substrs(res, "4-Star Weapons", "\n")
 
             if len(char5star):
                 char5star = [modify_name(s) for s in char5star]
@@ -225,12 +224,14 @@ def get_chronicled_wish(text):
                 char4star = [modify_name(s) for s in char4star]
                 char4weapon = [modify_name(s) for s in char4weapon]
 
-                arr.append({
-                    'char5star': char5star,
-                    'char5weapon': char5weapon,
-                    'char4star': char4star,
-                    'char4weapon': char4weapon
-                })
+                arr.append(
+                    {
+                        "char5star": char5star,
+                        "char5weapon": char5weapon,
+                        "char4star": char4star,
+                        "char4weapon": char4weapon,
+                    }
+                )
 
     utils.got_insert_info(text, append_match)
 
@@ -239,21 +240,23 @@ def get_chronicled_wish(text):
 
 @utils.log_args
 def parse_wish(post_id, post_idx):
-    full_article_api_url = 'https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=' + \
-        post_id
+    full_article_api_url = (
+        "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id="
+        + post_id
+    )
     print("full_article_api_url: ", full_article_api_url)
 
     full_data = get_url_data(full_article_api_url)
-    got_content = full_data['data']['post']['post']['structured_content']
+    got_content = full_data["data"]["post"]["post"]["structured_content"]
 
     clean_text = utils.str_to_dict(got_content)
     print("clean_text type is ", type(clean_text))
     if clean_text == None:
         return
 
-    print('=====================')
+    print("=====================")
     # print(clean_text)
-    print('=====================')
+    print("=====================")
 
     timestamp_text = utils.get_timestamp(clean_text)
     print("Timestamp: ", timestamp_text)
@@ -276,17 +279,16 @@ def parse_wish(post_id, post_idx):
     end_tag = '" - Boosted Drop Rate'
     wish_name = get_arr_str_event_wish_name(clean_text, start_tag, end_tag)
     end_tag = '" - Chronicled'
-    wish_name.extend(get_arr_str_event_wish_name(
-        clean_text, start_tag, end_tag))
-    print('wish name:', wish_name)
-    print('wish name len:', len(wish_name))
-    img_times = ['1']*len(wish_name)
+    wish_name.extend(get_arr_str_event_wish_name(clean_text, start_tag, end_tag))
+    print("wish name:", wish_name)
+    print("wish name len:", len(wish_name))
+    img_times = ["1"] * len(wish_name)
     for i in range(len(wish_name)):
         # print(find_res[i])
-        img_type = img_url[post_idx][i][img_url[post_idx][i].rfind('.', 0):]
+        img_type = img_url[post_idx][i][img_url[post_idx][i].rfind(".", 0) :]
         # print('img_type', img_type)
         img_name = modify_image_name(wish_name[i], img_times[i], img_type)
-        print('img_name:', img_name)
+        print("img_name:", img_name)
 
     # 5-star char
     # pattern_string = r'5-star character(.*?)will receive a huge'
@@ -297,13 +299,13 @@ def parse_wish(post_id, post_idx):
     # print('5-star only name:', character_info_only_name)
 
     all_char_info = get_wish_char(clean_text)
-    print('all char:', all_char_info)
+    print("all char:", all_char_info)
     only_name = []
     for v in all_char_info:
         char_prefix, char_name, char_type = v
         if len(char_name) < 30:
             only_name.append(char_name)
-    print('all char only name:', only_name)
+    print("all char only name:", only_name)
     # count_5star = len(all_char_info) / 4
     # character_info = []
     # for i in range(0, count_5star):
@@ -338,18 +340,20 @@ def parse_wish(post_id, post_idx):
     name_lower = [utils.replace_characters(char) for char in wish_name]
 
     return {
-        'name': wish_name,
-        'name_lower': name_lower,
-        'image': [1, 1],
-        'shortName': only_name,
-        'start': duration_text[0]['start_time'] + ' +0800'if len(duration_text) else '',
-        'end':   duration_text[0]['end_time'] + ' +0800'if len(duration_text) else '',
-        'version': 'xxx',
-        'wish5star': [utils.replace_characters(char) for char in only_name],
-        'wish4star':  [utils.replace_characters(char) for char in only_name],
-        'chronicle': chronicle,
-        'wishName': [],
-        'url': ['']
+        "name": wish_name,
+        "name_lower": name_lower,
+        "image": [1, 1],
+        "shortName": only_name,
+        "start": (
+            duration_text[0]["start_time"] + " +0800" if len(duration_text) else ""
+        ),
+        "end": duration_text[0]["end_time"] + " +0800" if len(duration_text) else "",
+        "version": "xxx",
+        "wish5star": [utils.replace_characters(char) for char in only_name],
+        "wish4star": [utils.replace_characters(char) for char in only_name],
+        "chronicle": chronicle,
+        "wishName": [],
+        "url": [""],
     }
 
 
@@ -365,7 +369,7 @@ for i in range(len(post_id)):
         break
 
 current_path = os.path.dirname(__file__)
-filename = current_path + '/auto/mhy2.json'
-with open(filename, 'w', encoding='utf-8') as file:
+filename = current_path + "/auto/mhy2.json"
+with open(filename, "w", encoding="utf-8") as file:
     # 将字典写入文件
     json.dump(all_info, file)

@@ -1,8 +1,8 @@
 name: Life recent script workflow
 on:  
   schedule:
-    # This is run at midnight UTC, aka UTC+8 8:00 a.m.
-    - cron:  '0 8 * * *'
+    # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m.
+    - cron:  '0 16 * * *'
 
 jobs:
   build:
