@@ -1,3 +1,5 @@
+import { navItem } from "./data/dirCode";
+
 export const navbar = [
   { text: '游戏', link: 'https://draugus.github.io/' },
   // { text: '最近更新', link: '/recent' },
@@ -34,37 +36,15 @@ export const navbar = [
   {
     text: '编程',
     items: [
+      ...navItem,
       {
-        text: '基础', items: [
-          { text: 'C++', link: '/code/cpp/', activeMatch: '/code/cpp/' },
-          { text: '操作系统', link: '/code/os/', activeMatch: '/code/os/' },
-          { text: 'DSA', link: '/code/dsa/', activeMatch: '/code/dsa/' },
-          { text: '数据库', link: '/code/db/', activeMatch: '/code/db/' },
-          { text: '前端', link: '/code/front-end/', activeMatch: '/code/front-end/' },
-          { text: '编译器/开发环境', link: '/code/dev-env/', activeMatch: '/code/dev-env/' },
-          { text: '构建/持续集成', link: '/code/build/', activeMatch: '/code/build/' },
-          { text: '版本控制', link: '/code/version-ctrl/', activeMatch: '/code/version-ctrl/' },
-        ]
-      }, {
-        text: '进阶', items: [
-          { text: 'API', link: '/code/api/', activeMatch: '/code/api/' },
-          { text: '框架', link: '/code/framework/', activeMatch: '/code/framework/' },
-          { text: '协议', link: '/code/protocol/', activeMatch: '/code/protocol/' },
-          { text: '内核', link: '/code/kernel/', activeMatch: '/code/kernel/' },
-          { text: '库', link: '/code/libs/', activeMatch: '/code/libs/' },
-          { text: '系统设计', link: '/code/sys-design/', activeMatch: '/code/sys-design/' },
-        ]
-      }, {
         text: '杂项',
         items: [
           { text: '配环境', link: '/code-notes/nipeima' },
           { text: '直接进入', link: '/code-notes/' },
         ],
         activeMatch: '^/code-notes',
-      },
-      { text: '八股文', link: '/code/interview/' },
-      { text: '编程语言', link: '/code/program/' },
-      {
+      }, {
         text: '速查清单',
         items: [
           { text: 'Linux 命令', link: '/code/os/linux/command' },
