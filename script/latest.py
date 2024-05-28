@@ -32,27 +32,34 @@ current_path = os.path.dirname(__file__)
 # 使用你的Git仓库路径替换这里的路径
 repo_path = current_path + "/../"
 print(repo_path)
+print("=========================")
+print("=========================")
 # path: date
 files = get_files_updated_in_last_week(repo_path)
-
+print(files)
+print("=========================")
+print("=========================")
 
 sorted_items = sorted(files.items(), key=lambda item: item[1], reverse=True)
-
 # print(sorted_items)
+# print('=========================')
+# print('=========================')
 
 # all md files, except index.md. ONLY LIFE, NO GAME DIR
 md_files = []
 md_dict = {}
-for file, file_date in files.items():
+for tuple_items in sorted_items:
+    file_name = tuple_items[0]
+    file_date = tuple_items[1]
     if (
-        file.startswith("life")
-        and file.endswith(".md")
-        and not file.endswith("index.md")
+        file_name.startswith("life")
+        and file_name.endswith(".md")
+        and not file_name.endswith("index.md")
     ):
-        md_files.append(file)
-        md_title = op_file.get_md_title(f"{repo_path}{file}")
+        md_files.append(file_name)
+        md_title = op_file.get_md_title(f"{repo_path}{file_name}")
         if md_title != "":
-            md_dict[file] = {"title": md_title, "date": file_date}
+            md_dict[file_name] = {"title": md_title, "date": file_date}
 
 
 print(md_dict)

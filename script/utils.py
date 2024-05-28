@@ -5,6 +5,7 @@ import inspect
 
 from functools import wraps
 from datetime import datetime
+from collections import OrderedDict
 
 
 def log_args(func):
@@ -29,7 +30,7 @@ def is_1d_array(arr):
 def clean_list_none(my_list):
     if not is_1d_array(my_list):
         return my_list
-    new_my_list = list(set(my_list))
+    new_my_list = list(OrderedDict.fromkeys(my_list))
     return [x for x in new_my_list if x is not None]
 
 
@@ -65,7 +66,7 @@ def find_unique_timestamps(text):
     matches = re.findall(pattern, text)
 
     # 使用set数据结构来去重，然后转换为列表
-    unique_matches = list(set(matches))
+    unique_matches = list(OrderedDict.fromkeys(matches))
 
     return unique_matches
 

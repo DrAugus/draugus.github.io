@@ -6,14 +6,14 @@ from datetime import datetime
 import os
 import pandas as pd
 from openpyxl import load_workbook
-
+from collections import OrderedDict
 
 current_path = os.path.dirname(__file__)
 
 
 def fps_format():
 
-    filename = 'script/test.xlsx'
+    filename = "script/test.xlsx"
 
     outputfile = "script/output.xlsx"
 
@@ -24,7 +24,7 @@ def fps_format():
     print(wb.sheetnames)
 
     # 选择要读取的sheet
-    sheet1 = wb['Result 1']
+    sheet1 = wb["Result 1"]
 
     # 获取行数和列数
     nrows = sheet1.max_row
@@ -42,9 +42,9 @@ def fps_format():
     # /home/test_fps/gene/fps5/gene_in.sh_fps5_7204997026155744572.4822.flv.far
 
     def classify_value(str, num, res_value):
-        match_arr = ['fps', 'fps15', 'fps10', 'fps5', 'fps1']
+        match_arr = ["fps", "fps15", "fps10", "fps5", "fps1"]
         for idx, ma in enumerate(match_arr):
-            ss = f'/home/test_fps/gene/{ma}/'
+            ss = f"/home/test_fps/gene/{ma}/"
             if str.startswith(ss) and num > 0:
                 res_value[idx][1] = 1
 
@@ -58,8 +58,8 @@ def fps_format():
     # 将A列作为key，B列和C列组成一个tuple作为value，放入字典中
     data_dict = {}
     for index, row in df.iterrows():
-        key = row['site_asset_id']
-        value = (row['meta_title'], row['video_duration'])
+        key = row["site_asset_id"]
+        value = (row["meta_title"], row["video_duration"])
         if key not in data_dict:
             data_dict[key] = []
         data_dict[key].append(value)
@@ -70,11 +70,11 @@ def fps_format():
     for key, value in data_dict.items():
         res_key = key
         res_value = [
-            ['fps', 0],
-            ['fps15', 0],
-            ['fps10', 0],
-            ['fps5', 0],
-            ['fps1', 0],
+            ["fps", 0],
+            ["fps15", 0],
+            ["fps10", 0],
+            ["fps5", 0],
+            ["fps1", 0],
         ]
 
         # print(f"Key: {key}")
@@ -92,15 +92,21 @@ def fps_format():
     print(num_keys)
 
     # 创建一个空DataFrame
-    res_df = pd.DataFrame(columns=['key']+list(set([pair[0]
-                                                    for pairs in res_dict.values() for pair in pairs])))
+    res_df = pd.DataFrame(
+        columns=["key"]
+        + list(
+            OrderedDict.fromkeys(
+                [pair[0] for pairs in res_dict.values() for pair in pairs]
+            )
+        )
+    )
 
     # 遍历字典，将数据填入DataFrame中
     dataframes = []
 
     for k, v in res_dict.items():
         values = {pair[0]: pair[1] for pair in v}
-        values['key'] = k
+        values["key"] = k
         dataframes.append(pd.DataFrame(values, index=[0]))
 
     res_df = pd.concat(dataframes, ignore_index=True)
@@ -109,12 +115,28 @@ def fps_format():
     res_df.to_excel(outputfile, index=False)
 
     tttt = {
-        'fps1.7096759473913548047.2704.fbl.flv':
-        [['fps', 1], ['fps1', 0], ['fps5', 1], ['fps10', 1], ['fps15', 1]],
-        'fps5.7096759473913548047.2704.fbl.flv':
-        [['fps', 1], ['fps1', 1], ['fps5', 0], ['fps10', 1], ['fps15', 1]],
-        'fps15.7110599057562733858.21359.fbl.flv':
-        [['fps', 1], ['fps1', 1], ['fps5', 1], ['fps10', 1], ['fps15', 1]]}
+        "fps1.7096759473913548047.2704.fbl.flv": [
+            ["fps", 1],
+            ["fps1", 0],
+            ["fps5", 1],
+            ["fps10", 1],
+            ["fps15", 1],
+        ],
+        "fps5.7096759473913548047.2704.fbl.flv": [
+            ["fps", 1],
+            ["fps1", 1],
+            ["fps5", 0],
+            ["fps10", 1],
+            ["fps15", 1],
+        ],
+        "fps15.7110599057562733858.21359.fbl.flv": [
+            ["fps", 1],
+            ["fps1", 1],
+            ["fps5", 1],
+            ["fps10", 1],
+            ["fps15", 1],
+        ],
+    }
 
 
 # "January 9, 2007" to "2007/01/09"
@@ -134,17 +156,17 @@ def format_date(date_str):
 def read_excel():
 
     # 读取Excel文件
-    filename = current_path + '/test.xlsx'
-    sheet_name = 'Sheet1'  # 替换为你的工作表名称
+    filename = current_path + "/test.xlsx"
+    sheet_name = "Sheet1"  # 替换为你的工作表名称
 
     df = pd.read_excel(filename, sheet_name=sheet_name)
 
-    df['formatted_announced'] = df['announced'].apply(format_date)
+    df["formatted_announced"] = df["announced"].apply(format_date)
 
     # 获取前三列数据并转换为字典数组
     # 列名映射，确保它们对应Excel表格中的前三列
-    columns = ['generation', 'model', 'formatted_announced']
-    result = df[columns].to_dict('records')
+    columns = ["generation", "model", "formatted_announced"]
+    result = df[columns].to_dict("records")
 
     # 输出结果
     print(result)
@@ -155,18 +177,14 @@ def modify_res(rs):
     res = []
     gen = 0
     models = []
-    dic = {
-        'generation': gen,
-        'model': models,
-        'formatted_announced': ''
-    }
+    dic = {"generation": gen, "model": models, "formatted_announced": ""}
     for item in rs:
-        if item.generation != 'nan':
+        if item.generation != "nan":
             gen = item.generation
-            dic['model'] = []
-            dic['model'].append(item.model)
+            dic["model"] = []
+            dic["model"].append(item.model)
         else:
-            dic['model'].append(item.model)
+            dic["model"].append(item.model)
 
 
 read_excel()

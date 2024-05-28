@@ -1,4 +1,5 @@
 import re
+from collections import OrderedDict
 
 
 def string_match(str, begin, end):
@@ -11,22 +12,22 @@ def string_match(str, begin, end):
 
 # 正则表达式的懒惰匹配模式可以处理任意长度的字符串
 def match_strings(text, begin, end):
-    pattern = re.compile(f'{begin}(.*?){end}')
+    pattern = re.compile(f"{begin}(.*?){end}")
     matches = pattern.findall(text)
     return matches
 
 
 def remove_html_tags(text):
-    clean = re.compile('<.*?>')
-    return re.sub(clean, '', text)
+    clean = re.compile("<.*?>")
+    return re.sub(clean, "", text)
 
 
 def remove_char(text, ch):
-    return text.replace(ch, '')
+    return text.replace(ch, "")
 
 
 def remove_line_break(text):
-    return remove_char(text, '\n')
+    return remove_char(text, "\n")
 
 
 def remove_duplicate(arr):
@@ -38,4 +39,4 @@ def remove_duplicate(arr):
     else:
         # 如果是一维list, 直接使用set进行去重
         print(arr)
-        arr[:] = list(set(arr))
+        arr[:] = list(OrderedDict.fromkeys(arr))

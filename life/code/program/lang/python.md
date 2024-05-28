@@ -65,8 +65,12 @@ d = list(filter(None, d))
 对于一维list, 可以直接使用set转换
 
 ```py
-a = [1,2,3,1,2,3]
-a = list(set(a))  # [1,2,3]
+my_list = [1,2,3,1,2,3]
+my_list = list(set(my_list))  # [1,2,3]
+# 如果要保证顺序不变，则可使用下面的方法
+from collections import OrderedDict  
+unique_list = list(OrderedDict.fromkeys(my_list))  
+print(unique_list)
 ```
 
 对于多维list, 可以使用递归的方法，先对每一维进行去重，然后递归进行下一维的去重
