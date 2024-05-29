@@ -1,5 +1,14 @@
 name: Life recent script workflow
 on:  
+  push:
+    branches:
+      - master
+    paths:
+      - "life/**"
+      - "!life/.vitepress/**"
+      - "!life/*"
+    # paths-ignore:
+    #   - "life/.vitepress/**"
   schedule:
     # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m.
     - cron:  '0 16 * * *'

@@ -580,7 +580,28 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
         items: [
             {
                 id: '长沙',
-                info: [{}],
+                info: [{
+                    date: {
+                        start: new Date('2022/08/10'),
+                        end: new Date('2022/08/12'),
+                    },
+                    intro: "游玩"
+                }],
+            },
+        ]
+    },
+    {
+        id: '湖北',
+        items: [
+            {
+                id: '武汉',
+                info: [{
+                    date: {
+                        start: new Date('2024/05/08'),
+                        end: new Date('2024/05/11'),
+                    },
+                    intro: "游玩"
+                }],
             },
         ]
     },

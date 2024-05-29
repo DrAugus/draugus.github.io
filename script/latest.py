@@ -54,7 +54,11 @@ for tuple_items in sorted_items:
     if (
         file_name.startswith("life")
         and file_name.endswith(".md")
-        and not file_name.endswith("index.md")
+        and (
+            not file_name.endswith("index.md")
+            # 去哪些地方
+            or ("trip" in file_name and file_name.endswith("index.md"))
+        )
     ):
         md_files.append(file_name)
         md_title = op_file.get_md_title(f"{repo_path}{file_name}")
