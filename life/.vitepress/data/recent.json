@@ -2,6 +2,42 @@
     "title": "",
     "items": [
         {
+            "title": "福建",
+            "desc": "福建 厦门 游玩 - 鼓浪屿 - 海上冲浪 美食 游记 当日晚上到达，入住双子塔。夜游沙坡尾，路遇",
+            "link": "/trip/china/fujian/index",
+            "date": "2024-05-29"
+        },
+        {
+            "title": "广西",
+            "desc": "广西 柳州 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有） 白天鱼峰山公园，龙潭公园，柳侯公",
+            "link": "/trip/china/guangxi/index",
+            "date": "2024-05-29"
+        },
+        {
+            "title": "黑龙江",
+            "desc": "黑龙江 哈尔滨 :::details 旅行参考 by 老乡pls 第一天晚上去中央大街，逛完直接能",
+            "link": "/trip/china/heilongjiang/index",
+            "date": "2024-05-29"
+        },
+        {
+            "title": "湖北",
+            "desc": "湖北 武汉 游记参看，武汉20240508 :::details 攻略 by gpt 1. 东湖风",
+            "link": "/trip/china/hubei/index",
+            "date": "2024-05-29"
+        },
+        {
+            "title": "湖南",
+            "desc": "湖南 长沙 游记参看，长沙20220810 橘子洲小火车 小火车不要坐车头，巨抖无比 ::: 游玩",
+            "link": "/trip/china/hunan/index",
+            "date": "2024-05-29"
+        },
+        {
+            "title": "Python",
+            "desc": "Python requirements 如果你想让你的项目在更多的环境中稳定运行，最好指定所有依赖",
+            "link": "/code/program/lang/python",
+            "date": "2024-05-28"
+        },
+        {
             "title": "机场评测",
             "desc": "机场评测 停止安检前/停止值机前 **30分钟** 到达机场即可，如 17:35 值机截至，17:",
             "link": "/trip/airport",
@@ -32,6 +68,42 @@
             "date": "2024-05-27"
         },
         {
+            "title": "广东",
+            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 :::details 不愿透露姓名的群友推荐 广州特色",
+            "link": "/trip/china/guangdong/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "贵州",
+            "desc": "贵州 贵阳 游记参看，贵阳20240426 推荐 - 花果园湿地公园 - 黔灵山公园 - 南明河畔",
+            "link": "/trip/china/guizhou/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "海南",
+            "desc": "海南 海口 游记参看，海口20240415 推荐 - 海南省博物馆 - 骑楼老街 - 钟楼 - 人",
+            "link": "/trip/china/hainan/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "江苏",
+            "desc": "江苏 南京 游记参看，2023/02/25 游玩推荐 这次基本都是博物馆，陵园，商场。没怎么体会到",
+            "link": "/trip/china/jiangsu/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "规划指南",
+            "desc": "规划指南 两岸青山相对出 孤帆一片日边来 走过，看过，记过。未来就在前方... ::: [[TOC",
+            "link": "/trip/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "游记",
+            "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
+            "link": "/trip/travelogue/index",
+            "date": "2024-05-27"
+        },
+        {
             "title": "去哪儿",
             "desc": "去哪儿 走过蓝色星球，旅途记录 import ACardLinks from '../.vitep",
             "link": "/trip/where",
@@ -48,78 +120,6 @@
             "desc": "微积分 学习地址 - 微积分的本质 by 3blue1brown - math is fun: C",
             "link": "/course/science/calculus",
             "date": "2024-05-23"
-        },
-        {
-            "title": "小猫",
-            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
-            "link": "/daily/cat",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "日用价格参考",
-            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
-            "link": "/daily/goods-price",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "最近",
-            "desc": "最近 本站近期更新学习笔记 - 离散数学 - 微积分 - FDBus - Abseil ::: 最",
-            "link": "/course/latest",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "数学常用术语中英文对照",
-            "desc": "数学常用术语中英文对照 A、B Absolute convergence: 绝对收敛 Absolu",
-            "link": "/course/science/math-term",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "FDBus",
-            "desc": "FDBus LINKS - docs - repo ::: FDBus is a middlewa",
-            "link": "/code/framework/fdbus",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "GStreamer",
-            "desc": "GStreamer open source multimedia framework LINKS",
-            "link": "/code/framework/gstreamer",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "Abseil",
-            "desc": "Abseil official site",
-            "link": "/code/libs/abseil",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "STL",
-            "desc": "STL 容器 实现 查询 插入删除 特点 :-:-:----- array 数组 O(1) O(1",
-            "link": "/code/libs/stl",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "Fast DDS",
-            "desc": "Fast DDS LINKS - docs - repo ::: eprosima Fast DD",
-            "link": "/code/protocol/fastdds",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "牙",
-            "desc": "牙 洗牙 2022/01/22 周六 杭州口腔医院(平海院区)，因牙龈出血洗牙。挂号 ¥17，洗牙",
-            "link": "/disease/tooth",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "高考志愿",
-            "desc": "高考志愿",
-            "link": "/pursuing-education/gaokao-voluntary",
-            "date": "2024-05-22"
-        },
-        {
-            "title": "遇到的问题速查",
-            "desc": "遇到的问题速查 > 代码过程遇到的一些问题速查表 无法在 linux 正常编译 thread cm",
-            "link": "/code/cpp/tips/qa",
-            "date": "2024-05-22"
         }
     ]
 }
