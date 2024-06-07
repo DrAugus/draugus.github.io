@@ -60,7 +60,7 @@ importers:
         version: 2.1.0
       vite:
         specifier: ^5.0.12
-        version: 5.2.12(sass@1.77.4)
+        version: 5.2.13(sass@1.77.4)
       vitepress:
         specifier: 1.2.3
         version: 1.2.3(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.38)(sass@1.77.4)(search-insights@2.13.0)
@@ -931,8 +931,8 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+  picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -1028,8 +1028,8 @@ packages:
     resolution: {integrity: sha512-jOWVmzVceKlVVdwjNSenT4PbGghU0SBIizAev8ofZVgivk/TVHXSbNL8LP6M3spZvkR9/QolkyJavGSX5Cs0UA==}
     engines: {node: '>=10'}
 
-  vite@5.2.12:
-    resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
+  vite@5.2.13:
+    resolution: {integrity: sha512-SSq1noJfY9pR3I1TUENL3rQYDQCFqgD+lM6fTRAM8Nv6Lsg5hDLaXkjETVeBt+7vZBCMoibD+6IWnT2mJ+Zb/A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1533,9 +1533,9 @@ snapshots:
       vite: 5.2.9(sass@1.77.4)
       vue: 3.4.27
 
-  '@vitejs/plugin-vue@5.0.5(vite@5.2.12(sass@1.77.4))(vue@3.4.27)':
+  '@vitejs/plugin-vue@5.0.5(vite@5.2.13(sass@1.77.4))(vue@3.4.27)':
     dependencies:
-      vite: 5.2.12(sass@1.77.4)
+      vite: 5.2.13(sass@1.77.4)
       vue: 3.4.27
 
   '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.12)(leaflet@1.9.4)':
@@ -1968,14 +1968,14 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  picocolors@1.0.0: {}
+  picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
 
   postcss@8.4.38:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.2.0
 
   preact@10.20.2: {}
@@ -2082,7 +2082,7 @@ snapshots:
 
   valid-data-url@3.0.1: {}
 
-  vite@5.2.12(sass@1.77.4):
+  vite@5.2.13(sass@1.77.4):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
@@ -2154,7 +2154,7 @@ snapshots:
       '@shikijs/core': 1.6.2
       '@shikijs/transformers': 1.6.2
       '@types/markdown-it': 14.1.1
-      '@vitejs/plugin-vue': 5.0.5(vite@5.2.12(sass@1.77.4))(vue@3.4.27)
+      '@vitejs/plugin-vue': 5.0.5(vite@5.2.13(sass@1.77.4))(vue@3.4.27)
       '@vue/devtools-api': 7.2.1(vue@3.4.27)
       '@vue/shared': 3.4.27
       '@vueuse/core': 10.10.0(vue@3.4.27)
@@ -2163,7 +2163,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 6.3.0
       shiki: 1.6.2
-      vite: 5.2.12(sass@1.77.4)
+      vite: 5.2.13(sass@1.77.4)
       vue: 3.4.27
     optionalDependencies:
       markdown-it-mathjax3: 4.3.2
