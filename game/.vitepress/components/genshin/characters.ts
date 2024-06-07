@@ -23,8 +23,8 @@ export const CHARACTER = {
     event_exclusive: false,
     intro: "",
     city: City.Sumeru,
-    ele: Element.pyro,
-    weapon: Weapon.polearm
+    ele: Element.electro,
+    weapon: Weapon.bow
   },
   sigewinne: {
     id: "sigewinne",
@@ -35,7 +35,7 @@ export const CHARACTER = {
     intro: "",
     city: City.Fontaine,
     ele: Element.hydro,
-    weapon: Weapon.polearm
+    weapon: Weapon.catalyst
   },
   clorinde: {
     id: "clorinde",
@@ -46,7 +46,7 @@ export const CHARACTER = {
     intro: "",
     city: City.Fontaine,
     ele: Element.electro,
-    weapon: Weapon.polearm
+    weapon: Weapon.sword
   },
   arlecchino: {
     id: "arlecchino",
