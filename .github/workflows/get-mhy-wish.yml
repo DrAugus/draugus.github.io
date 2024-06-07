@@ -1,4 +1,4 @@
-name: Python script workflow
+name: Get mhy wish
 on:
   # # test push, del later
   # push:

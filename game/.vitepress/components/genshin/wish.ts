@@ -794,7 +794,7 @@ export const WISH: WishAll = {
       version: "4.6",
       wishName: ["炉边烬影", "光与影的戏术"],
       url: ["?", "?"]
-    },    {
+    }, {
       name: ['From Ashes Reborn', 'Immaculate Pulse'],
       image: [3, 3],
       shortName: ['Wanderer', 'Baizhu'],
@@ -804,6 +804,17 @@ export const WISH: WishAll = {
       wish4star: ["layla", "faruzan", "beidou"],
       version: "4.6",
       wishName: ["余火变相", "心珠循琅"],
+      url: ["?", "?"]
+    }, {
+      name: ["Illuminating Lightning", "Caution in Confidence"],
+      image: [1, 3],
+      shortName: ["Clorinde", "Alhaitham"],
+      start: "2024/06/05 11:00:00 +0800",
+      end: "2024/06/25 17:59:00 +0800",
+      wish5star: ['clorinde', 'alhaitham'],
+      wish4star: ["sethos", "bennett", "thoma"],
+      version: "4.7",
+      wishName: ["流霆贯夜", "敕诫枢谋"],
       url: ["?", "?"]
     },
   ],
@@ -1340,8 +1351,15 @@ export const WISH: WishAll = {
       image: 64,
       start: "2024/05/14 18:00:00 +0800",
       end: "2024/06/04 14:59:00 +0800",
-      wish5star: ["Tulaytullah's Remembrance", "Jadefall's Splendor"], 
-      wish4star: ["Prospector's Drill", "Rainslasher", "Sacrificial Fragments"], 
+      wish5star: ["Tulaytullah's Remembrance", "Jadefall's Splendor"],
+      wish4star: ["Prospector's Drill", "Rainslasher", "Sacrificial Fragments"],
+    }, {
+      name: "Epitome Invocation",
+      image: 65,
+      start: "2024/06/05 11:00:00 +0800",
+      end: "2024/06/25 17:59:00 +0800",
+      wish5star: ["Absolution", "Light of Foliar Incision"],
+      wish4star: ["Sacrificial Sword", "Sacrificial Greatsword", "The Widsith", "The Stringless"],
     },
   ],
 };

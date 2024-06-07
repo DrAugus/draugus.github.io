@@ -229,6 +229,17 @@ export const WISH: WishAll = {
       wish4star: ["xueyi", "march_7th", "hanya"],
       wishName: ['翼声纯律', '落日条款'],
       url: ['']
+    }, {
+      name: ["Dusty Trail's Lone Star", 'Foreseen, Foreknown, Foretold'],
+      image: [1, 2],
+      shortName: ["Boothill", "Fu Xuan"],
+      start: "2024/05/29 12:00:00 +0800",
+      end: "2024/06/18 15:00:00 +0800",
+      version: '2.2',
+      wish5star: ["boothill", "fu_xuan"],
+      wish4star: ["pela", "luka", "hook"],
+      wishName: ['扬尘孤星', '穷观妙算'],
+      url: ['']
     },
   ],
   weapons: [
@@ -418,7 +429,16 @@ export const WISH: WishAll = {
       end: '2024/05/29 11:59:00 +0800',
       shortName: "",
       wish5star: ["Flowing Nightglow", "Worrisome, Blissful"],
-      wish4star:  ["Boundless Choreo", "Swordplay", "Perfect Timing"],
+      wish4star: ["Boundless Choreo", "Swordplay", "Perfect Timing"],
+      url: ""
+    }, {
+      name: "Brilliant Fixation",
+      image: [29, 30],
+      start: "2024/05/29 12:00:00 +0800",
+      end: "2024/06/18 15:00:00 +0800",
+      shortName: "",
+      wish5star: ["Sailing Towards a Second Life", "She Already Shut Her Eyes"],
+      wish4star: ["Geniuses' Repose", "A Secret Vow", "Landau's Choice"],
       url: ""
     },
   ]
