@@ -6,13 +6,6 @@ import { defineConfig } from 'vite';
 //  https://vitejs.dev/config/ssr-options.html
 //   
 export default defineConfig({
-    build: {
-        rollupOptions: {
-            external: [
-                '@amap/amap-jsapi-loader', 'AMapLoader'
-            ]
-        }
-    },
     ssr: {
         noExternal: [
             'echarts', 'vue-echarts',

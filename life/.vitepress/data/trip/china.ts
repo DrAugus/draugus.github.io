@@ -312,7 +312,7 @@ export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
                     intro: "游玩"
                 },]
             }, {
-                id: '桂林', info: [{
+                id: '桂林', resident: true, info: [{
                     date: {
                         start: new Date('2024/04/18'),
                         end: new Date('2024/04/22'),

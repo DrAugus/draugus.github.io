@@ -147,3 +147,17 @@ interface EntertainmentContent {
   watchedStatus: boolean,
   link?: string,
 }
+
+export interface Suixinfei {
+  date: Date,
+  departure: string,
+  arrival: string,
+  price: number,
+}
+
+export interface ApplePrice {
+  device: string,
+  price?: number | number[],
+  lowest: number,
+  discountDate?: Date,
+}

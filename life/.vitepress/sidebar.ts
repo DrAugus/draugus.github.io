@@ -22,13 +22,13 @@ const sidebarDaily = [
     { text: '踩雷商品', link: '/daily/bad-product' },
     {
         text: 'Apple', collapsed: false, items: [
-            { text: 'Apple官方日历订阅', link: '/daily/apple/calendar' },
+            { text: '官方日历订阅', link: '/daily/apple/calendar' },
             { text: 'iPhone', link: '/daily/apple/iphone' },
             { text: '评测', link: '/daily/apple/review' },
             // { text: '价格波动', link: '/daily/apple/price' },
             { text: '苹果究竟怎么了', link: '/daily/apple/reflect' },
             { text: '技术规格', link: '/daily/apple/specs' },
-            { text: '设备价格', link: '/daily/apple/apple-price' },
+            { text: '设备价格', link: '/daily/apple/price' },
             { text: '天才吧', link: '/daily/apple/genius-bar' },
             { text: 'iCloud', link: '/daily/apple/iCloud' },
             { text: 'Apple ID', link: '/daily/apple/id' },

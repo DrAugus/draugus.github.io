@@ -104,7 +104,7 @@ const cityVisitedTimes = extractCityAndTimes(visitedData);
 // console.log(cityVisitedTimes);
 
 const getMarkers = (AMap) => {
-  let markers = [];
+  let markers: any[] = [];
   for (let cityInfo of cityVisitedTimes) {
 
     const city = cityInfo.city;

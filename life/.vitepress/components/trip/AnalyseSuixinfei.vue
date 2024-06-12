@@ -14,9 +14,9 @@
 import EChartsModel from "../EChartsModel.vue";
 
 // 0 - 20
-let flyTimes = [];
-let averageConsume = [];
-let totalConsume = [];
+let flyTimes: number[] = [];
+let averageConsume: string[] = [];
+let totalConsume: number[] = [];
 const startFly = 8;
 const curTax = 100;
 const curExpend = 5318;

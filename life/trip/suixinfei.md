@@ -187,7 +187,7 @@
 拼团购买代金券，19块代200块，非拼团则59代200。本次选择的“畅行款”一周7日畅行，原价4688，拼团4599，代金券-200，最终付款4399。实际支付为 4399 + 19 = **4418**
 
 :::danger 飞行计算
-每次飞行均按最大值140元机票来计算，当前时间段800km以上航程基建燃油费用为120，加上票价20，共计140。
+每次飞行均按最大值140元机票来计算，当前时间段800km以上航程基建燃油费用为120，加上票价20，共计140。6月5日起，800km以上航程基建燃油费用为100。
 
 <input v-model="flyTimes" placeholder="填写飞行次数" /> <br/>
 <div v-if="flyTimes">
@@ -205,16 +205,14 @@
 
 ### 已飞行程
 
-已飞行{{timesFlownUp2024}}次，总计消耗 **{{totalFlownUp2024}}**，单次消耗 **{{(totalFlownUp2024/timesFlownUp2024).toFixed(2)}}**
+已飞行{{timesFlownUp2024}}次，全部按 140 票价来计，总计消耗 **{{totalFlownUp2024}}**，单次消耗 **{{(totalFlownUp2024/timesFlownUp2024).toFixed(2)}}**。  
+真实消耗为 **{{trulyConsume2024}}**，单次消耗 **{{(trulyConsume2024/timesFlownUp2024).toFixed(2)}}**。
 
-* 2024/05/13 南宁-杭州 140
-* 2024/05/08 杭州-武汉 110
-* 2024/05/01 贵阳-杭州 140
-* 2024/04/26 杭州-贵阳 140
-* 2024/04/22 贵阳-杭州 140
-* 2024/04/18 海口-珠海 110
-* 2024/04/10 潮汕-杭州 140
-* 2024/04/04 杭州-广州 140
+<ul>
+    <li v-for="(item, index) in filter2024">
+        {{modifyDate(item.date)}} {{item.departure}}-{{item.arrival}} {{item.price}}
+    </li>
+</ul>
 
 ### 计划目的地
 
@@ -398,7 +396,9 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import AnalyseSuixinfei from '../.vitepress/components/trip/AnalyseSuixinfei.vue'
+import { modifyDate } from "../.vitepress/utils";
+import AnalyseSuixinfei from '../.vitepress/components/trip/AnalyseSuixinfei.vue';
+import { SUIXINFEI2024 } from '../.vitepress/data/trip/suixinfei2024';
 
 const flyTimes = ref('');
 
@@ -408,6 +408,11 @@ const singleFlightFee2024 = 140;
 const getTotalResume2024 = () => packageFee2024 + parseInt(flyTimes.value)*singleFlightFee2024;
 const getSingleResume2024 = () => (getTotalResume2024()/parseInt(flyTimes.value)).toFixed(2);
 
-const timesFlownUp2024 = 8;
+const filter2024 = SUIXINFEI2024.filter(obj => obj.departure !== '' && obj.arrival !== '');
+
+const timesFlownUp2024 = filter2024.length;
 const totalFlownUp2024 = packageFee2024 + timesFlownUp2024*singleFlightFee2024;
+
+const trulyConsume2024 = packageFee2024+  filter2024.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0);  
+
 </script>
