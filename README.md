@@ -4,10 +4,10 @@
 
 > cause [netlify][netlify] has been sending emails asking for payment all the time, so I [delete](https://app.netlify.com/user/settings#danger-zone) netlify account. And then, I deprecated [vercel][vercel] because every commit will be automatically built, I can't set trigger conditions.
 
-| site | [github pages][new-repo] | source | tech|
+| SITE | [Github Pages][new-repo] | Source | TECH|
 | :--: |:--: |:--: | :--:|
-| main site (now only game)|  [online][site0-1] [online2][site0-2] | [game](./game/) | [vitepress][vitepress] [vue3][vue] |
-| life | [online][site6-1] [online2][pilot] | [life](./life/) | [vitepress][vitepress] [vue3][vue] |
+| main site (now only game)|  [online][site0-1], [online2][site0-2] | [game](./game/) | [vitepress][vitepress], [vue3][vue] |
+| life | [online][site6-1], [online2][pilot] | [life](./life/) | [vitepress][vitepress], [vue3][vue] |
 
 ## Develop
 
@@ -20,28 +20,25 @@
 
 ### Git clone
 
-```git
+```bash
 git clone https://github.com/DrAugus/draugus.github.io.git
+cd draugus.github.io
+pnpm i
+# preview
+./run.sh life/
+./run.sh game/
+# build
+./run.sh life/ -b
+./run.sh game/ -b
 ```
-
-### Run
-
-2 sites, just run `pnpm i && pnpm dev`
-
-- [game](./game/), powered by [vitepress][vitepress]
-- [life](./life/), powered by [vitepress][vitepress]
 
 ## Upgrade
 
 You don't have to think about them. Just give them to the robot.
 
-## Thanks
-
-[JetBrains](https://www.jetbrains.com/zh-cn/community/opensource/#support)
-
 ## Reference
 
-- [vitepress][vitepress]
+[vitepress][vitepress]
 
 [pilot]:https://augusmeow.github.io/
 [site0-1]: https://draugus.github.io/

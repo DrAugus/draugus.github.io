@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import EChartsModel from "../EChartsModel.vue";
-import gaokaoInfo from '../../data/study/gaokao.json';
+import gaokaoInfo from '../../data/exam/gaokao.json';
 import University from "./University.vue";
 import TitleFormat from "../TitleFormat.vue";
 

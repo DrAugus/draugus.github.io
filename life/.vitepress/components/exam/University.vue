@@ -21,6 +21,6 @@
 </template>
 
 <script setup lang="ts">
-import data from '../../data/study/university.json'
+import data from '../../data/exam/university.json'
 
 </script>

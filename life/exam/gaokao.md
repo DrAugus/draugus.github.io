@@ -132,5 +132,5 @@
 竞赛保送、外国语学校保送
 
 <script setup>
-import Gaokao from '../.vitepress/components/study/Gaokao.vue'
+import Gaokao from '../.vitepress/components/exam/Gaokao.vue'
 </script>
