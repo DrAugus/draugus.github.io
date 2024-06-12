@@ -700,14 +700,7 @@ const sidebarCareer = [
     { text: '个人档案 ', link: '/career/personal-profile' },
     { text: '人社部', link: '/career/mohrss' },
     { text: '其他职业', link: '/career/others' },
-    {
-        text: '证书', collapsed: false, items: [
-            { text: '软考高级系统架构', link: '/career/certificate/ruankao-high-lv' },
-            { text: '教师资格证', link: '/career/certificate/ntce' },
-            { text: '全国会计专业技术资格', link: '/career/certificate/cpa' },
-            { text: '公务员考试', link: '/career/certificate/gwy' },
-        ]
-    },
+
     {
         text: '亚马逊', collapsed: false, items: [
             { text: '领导力准则 Leadership Principles', link: '/career/amazon/leadership-principles' },
@@ -719,7 +712,18 @@ const sidebarCareer = [
         ]
     },
 ];
-
+const sidebarExam = [
+    { text: '高考', link: '/exam/gaokao' },
+    {
+        text: '证书', collapsed: false, items: [
+            { text: '考证', link: '/exam/certificate/' },
+            { text: '软考高级系统架构', link: '/exam/certificate/ruankao-high-lv' },
+            { text: '教师资格证', link: '/exam/certificate/ntce' },
+            { text: '全国会计专业技术资格', link: '/exam/certificate/cpa' },
+            { text: '公务员考试', link: '/exam/certificate/gwy' },
+        ]
+    },
+]
 
 const sidebarThought = [
     // { text: '想法', link: '/thought/' },
@@ -823,6 +827,7 @@ export const sidebar = {
     '/pursuing-education/': sidebarPursuingEducation,
     '/random-notes/': sidebarRandomNotes,
     '/career/': sidebarCareer,
+    '/exam/': sidebarExam,
     '/thought/': sidebarThought,
     '/grumbling/': sidebarGrumbling,
     // 待定

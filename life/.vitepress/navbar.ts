@@ -60,13 +60,9 @@ export const navbar = [
       { text: '散记', link: '/random-notes/', activeMatch: '/random-notes/' },
       { text: '思考', link: '/thought/', activeMatch: '/thought/' },
       { text: '职业', link: '/career/' },
-      { text: '证书', link: '/career/certificate/' },
-      {
-        text: '求学',
-        items: [
-          { text: '高考', link: '/pursuing-education/gaokao' },
-        ],
-      },
+      { text: '证书', link: '/exam/certificate/' },
+      { text: '考试', link: '/exam/' },
+      { text: '高考', link: '/exam/gaokao' },
       {
         text: '差不多得了',
         items: [

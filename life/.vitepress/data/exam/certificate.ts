@@ -1,6 +1,6 @@
 import { Certificate } from "../../type";
 
-const linkPrefix = '/life/career/certificate/';
+const linkPrefix = '/life/exam/certificate/';
 
 export const CERTIFICATE_DATA: Certificate[] = [
     {
