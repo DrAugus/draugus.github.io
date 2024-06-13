@@ -10,6 +10,11 @@ def get_files_updated_in_last_week(repo_path):
     repo = Repo(repo_path)
     one_week_ago = datetime.now() - timedelta(days=7)
 
+    print("temp >>>>>>>>>>>>")
+    print(repo)
+    print(one_week_ago)
+    print("temp >>>>>>>>>>>>")
+
     updated_files = {}
 
     # 遍历仓库中的每一个commit
@@ -59,6 +64,7 @@ for tuple_items in sorted_items:
             # 去哪些地方
             or ("trip" in file_name and file_name.endswith("index.md"))
         )
+        and not ".vitepress" in file_name
     ):
         md_files.append(file_name)
         md_title = op_file.get_md_title(f"{repo_path}{file_name}")

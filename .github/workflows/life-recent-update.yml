@@ -33,6 +33,7 @@ jobs:
     - name: Execute Python script
       run: |
         python latest.py    
+        git log --since="7 days ago" --pretty=format:"" --name-only --diff-filter=AMR | sort | uniq
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"

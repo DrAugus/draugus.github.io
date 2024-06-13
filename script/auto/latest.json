@@ -1,4 +1,40 @@
 {
+    "life/random-notes/exercise.md": {
+        "title": "锻炼",
+        "date": 1718219927
+    },
+    "life/trip/airplane.md": {
+        "title": "飞机",
+        "date": 1718219927
+    },
+    "life/daily/apple/calendar.md": {
+        "title": "官方日历订阅",
+        "date": 1718165336
+    },
+    "life/daily/apple/price.md": {
+        "title": "设备价格",
+        "date": 1718165336
+    },
+    "life/daily/bad-product.md": {
+        "title": "踩雷产品",
+        "date": 1718165336
+    },
+    "life/exam/gaokao.md": {
+        "title": "高考",
+        "date": 1718165336
+    },
+    "life/trip/suixinfei.md": {
+        "title": "随心飞",
+        "date": 1716329120
+    },
+    "life/trip/where.md": {
+        "title": "去哪儿",
+        "date": 1716791141
+    },
+    "life/.vitepress/data/trip/README.md": {
+        "title": "TRIP",
+        "date": 1718219927
+    },
     "life/trip/china/fujian/index.md": {
         "title": "福建",
         "date": 1716915828
@@ -67,10 +103,6 @@
         "title": "游记",
         "date": 1716791141
     },
-    "life/trip/where.md": {
-        "title": "去哪儿",
-        "date": 1716791141
-    },
     "life/code/cpp/concept/lambda.md": {
         "title": "Lambda",
         "date": 1716460074
@@ -133,10 +165,6 @@
     },
     "life/trip/self-drive.md": {
         "title": "自驾游",
-        "date": 1716329120
-    },
-    "life/trip/suixinfei.md": {
-        "title": "随心飞",
         "date": 1716329120
     },
     "life/trip/travelogue/20240426.md": {

@@ -2,6 +2,60 @@
     "title": "",
     "items": [
         {
+            "title": "锻炼",
+            "desc": "锻炼 室内锻炼 1. 跳绳：这是一种简单、有效且不需要任何器械的运动。您可以在家里的任何地方跳绳，",
+            "link": "/random-notes/exercise",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "飞机",
+            "desc": "飞机 航线 全球航线图参考 航司 南方航空 里程兑换 里程:人民币 = 24:1 ::: 活动 -",
+            "link": "/trip/airplane",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "官方日历订阅",
+            "desc": "官方日历订阅 中国节日 * `https://calendars.icloud.com/holid",
+            "link": "/daily/apple/calendar",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "设备价格",
+            "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价 ::: im",
+            "link": "/daily/apple/price",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "踩雷产品",
+            "desc": "踩雷产品 投影仪 极米Z7X 隔空投屏画质很不清晰。 本机自带全需要vip，需要再充钱。不开vip",
+            "link": "/daily/bad-product",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "高考",
+            "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
+            "link": "/exam/gaokao",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "随心飞",
+            "desc": "随心飞 一句话 对于上班族来说，谁买谁上当！ ::: 南航「畅游中国」2024 :::detail",
+            "link": "/trip/suixinfei",
+            "date": "2024-05-22"
+        },
+        {
+            "title": "去哪儿",
+            "desc": "去哪儿 走过蓝色星球，旅途记录，探索驻足 import ACardLinks from '../.",
+            "link": "/trip/where",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "TRIP",
+            "desc": "TRIP",
+            "link": "/.vitepress/data/trip/README",
+            "date": "2024-06-13"
+        },
+        {
             "title": "福建",
             "desc": "福建 厦门 游玩 - 鼓浪屿 - 海上冲浪 美食 游记 当日晚上到达，入住双子塔。夜游沙坡尾，路遇",
             "link": "/trip/china/fujian/index",
@@ -66,60 +120,6 @@
             "desc": "日本 游记 夏季游记，参看 日本东京/大版/京都20230720 推荐去处 因为本人夏季去的，日本",
             "link": "/trip/abroad/asia/japan",
             "date": "2024-05-27"
-        },
-        {
-            "title": "广东",
-            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 :::details 不愿透露姓名的群友推荐 广州特色",
-            "link": "/trip/china/guangdong/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "贵州",
-            "desc": "贵州 贵阳 游记参看，贵阳20240426 推荐 - 花果园湿地公园 - 黔灵山公园 - 南明河畔",
-            "link": "/trip/china/guizhou/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "海南",
-            "desc": "海南 海口 游记参看，海口20240415 推荐 - 海南省博物馆 - 骑楼老街 - 钟楼 - 人",
-            "link": "/trip/china/hainan/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "江苏",
-            "desc": "江苏 南京 游记参看，2023/02/25 游玩推荐 这次基本都是博物馆，陵园，商场。没怎么体会到",
-            "link": "/trip/china/jiangsu/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "规划指南",
-            "desc": "规划指南 两岸青山相对出 孤帆一片日边来 走过，看过，记过。未来就在前方... ::: [[TOC",
-            "link": "/trip/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "游记",
-            "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
-            "link": "/trip/travelogue/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "去哪儿",
-            "desc": "去哪儿 走过蓝色星球，旅途记录 import ACardLinks from '../.vitep",
-            "link": "/trip/where",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "Lambda",
-            "desc": "Lambda stroustrup intro from Thriving in a Crowde",
-            "link": "/code/cpp/concept/lambda",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "微积分",
-            "desc": "微积分 学习地址 - 微积分的本质 by 3blue1brown - math is fun: C",
-            "link": "/course/science/calculus",
-            "date": "2024-05-23"
         }
     ]
 }
