@@ -148,6 +148,41 @@ interface EntertainmentContent {
   link?: string,
 }
 
+export interface Airport {
+  code: string,
+  name: string,
+  nameLocal: string,
+  city: string,
+  country: string,
+  longitude: number,
+  latitude: number,
+}
+
+export interface Airline {
+  name: string,
+  country: string,
+}
+
+interface FlightTicket {
+  ticketPrice: number,
+  airportConstructionFee: number,
+  fuelSurcharge: number,
+}
+
+// 全部以实际飞行数据录入
+export interface Flight {
+  date: Date,
+  number: string,
+  airlineCode: string,
+  seatClass: string,
+  departureTime: string,
+  departureAirport: string,
+  duration: string,
+  arrivalTime: string,
+  arrivalAirport: string,
+  price: FlightTicket,
+}
+
 export interface Suixinfei {
   date: Date,
   departure: string,
