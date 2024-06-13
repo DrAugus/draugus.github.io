@@ -4,5 +4,5 @@
 <SentenceItalian></SentenceItalian>
 
 <script setup>
-import SentenceItalian from '../../.vitepress/components/arts/SentenceItalian.vue'
+import SentenceItalian from '../../../.vitepress/components/arts/SentenceItalian.vue'
 </script>

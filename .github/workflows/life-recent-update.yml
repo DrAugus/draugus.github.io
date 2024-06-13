@@ -7,6 +7,7 @@ on:
       - "life/**"
       - "!life/.vitepress/**"
       - "!life/*"
+      - ".github/workflows/life-recent-update.yml"
     # paths-ignore:
     #   - "life/.vitepress/**"
   schedule:

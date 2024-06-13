@@ -189,5 +189,5 @@ sakana o tabemasu
 <Japanese />
 
 <script setup>
-import Japanese from '../../.vitepress/components/arts/JapaneseLetter.vue'
+import Japanese from '../../../.vitepress/components/arts/JapaneseLetter.vue'
 </script>

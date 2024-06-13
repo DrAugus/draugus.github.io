@@ -60,9 +60,12 @@ export const navbar = [
       { text: '散记', link: '/random-notes/', activeMatch: '/random-notes/' },
       { text: '思考', link: '/thought/', activeMatch: '/thought/' },
       { text: '职业', link: '/career/' },
-      { text: '证书', link: '/exam/certificate/' },
-      { text: '考试', link: '/exam/' },
-      { text: '高考', link: '/exam/gaokao' },
+      {
+        text: '考试', items: [
+          { text: '高考', link: '/exam/gaokao' },
+          { text: '证书', link: '/exam/certificate/' },
+        ], activeMatch: '^/exam',
+      },
       {
         text: '差不多得了',
         items: [
@@ -71,18 +74,9 @@ export const navbar = [
           { text: '事故', link: '/accident/', activeMatch: '/accident/' },
           { text: '偷乐', link: '/funny/', activeMatch: '/funny/' },
         ],
-      }, {
-        text: '文科',
-        items: [
-          { text: '语言', link: '/arts/language/' },
-          { text: '社会', link: '/arts/society/' },
-          { text: '历史', link: '/arts/history/' },
-          { text: '檄文', link: '/arts/xiwen/' },
-          { text: '文章', link: '/arts/article/' },
-          { text: '演讲', link: '/arts/speech/' },
-        ],
-        activeMatch: '^/arts',
       },
+      { text: '演讲', link: '/speech/', activeMatch: '^/speech', },
+      { text: '檄文', link: '/xiwen/', activeMatch: '^/xiwen', },
     ],
   },
   { text: '链接', link: '/nav', activeMatch: '^/nav' },

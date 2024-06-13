@@ -73,259 +73,70 @@ const sidebarTripTravelogue = [
     { text: '游记', link: '/trip/travelogue/' },
 ]
     .concat(...modifyTravelogue());
-const sidebarTripChina = [
-    { text: '上海', link: '/trip/china/shanghai' },
-    { text: '澳门', link: '/trip/china/macao' },
-    { text: '北京', link: '/trip/china/beijing' },
-    { text: '香港', link: '/trip/china/hongkong' },
-    { text: '天津', link: '/trip/china/tianjin' },
-    { text: '重庆', link: '/trip/china/chongqing' },
 
-    {
-        text: '江苏', collapsed: false, items: [
-            { text: '苏州', link: '/trip/china/jiangsu/suzhou' },
-            { text: '扬州', link: '/trip/china/jiangsu/yangzhou' },
-            { text: '南京', link: '/trip/china/jiangsu/nanjing' },
-            { text: '无锡', link: '/trip/china/jiangsu/wuxi' },
-        ],
-    },
-    {
-        text: '浙江', collapsed: false,
-        items: [
-            { text: '绍兴', link: '/trip/china/zhejiang/shaoxing' },
-            { text: '温州', link: '/trip/china/zhejiang/wenzhou' },
-            { text: '杭州', link: '/trip/china/zhejiang/hangzhou' },
-            { text: '舟山', link: '/trip/china/zhejiang/zhoushan' },
-            { text: '金华', link: '/trip/china/zhejiang/jinhua' },
-            { text: '台州', link: '/trip/china/zhejiang/taizhou' },
-        ],
-    },
+const prefixArticle = '/course/literature/article'
 
-    {
-        text: '广东', collapsed: false, items: [
-            { text: '广东', link: '/trip/china/guangdong/' },
-            { text: '深圳', link: '/trip/china/guangdong/shenzhen' },
-            { text: '广州', link: '/trip/china/guangdong/guangzhou' },
-            { text: '珠海', link: '/trip/china/guangdong/zhuhai' },
-        ],
-    },
-
-    {
-        text: '河南', collapsed: false, items: [
-            { text: '开封', link: '/trip/china/henan/kaifeng' },
-            { text: '郑州', link: '/trip/china/henan/zhengzhou' },
-            { text: '洛阳', link: '/trip/china/henan/luoyang' },
-        ],
-    },
-    {
-        text: '陕西', collapsed: false, items: [
-            { text: '西安', link: '/trip/china/shaanxi/xian' },
-        ],
-    },
-    {
-        text: '山西', collapsed: false, items: [
-            { text: '太原', link: '/trip/china/shanxi/taiyuan' },
-        ],
-    },
-    {
-        text: '甘肃', collapsed: false, items: [
-            { text: '甘肃', link: '/trip/china/gansu/' },
-            { text: '兰州', link: '/trip/china/gansu/lanzhou' },
-        ],
-    },
-
-
-    {
-        text: '黑龙江', collapsed: false, items: [
-            { text: '哈尔滨', link: '/trip/china/heilongjiang/haerbing' },
-        ],
-    },
-    {
-        text: '吉林', collapsed: false, items: [
-            { text: '长春', link: '/trip/china/jilin/changchun' },
-        ],
-    },
-    {
-        text: '辽宁', collapsed: false, items: [
-            { text: '大连', link: '/trip/china/liaoning/dalian' },
-            { text: '沈阳', link: '/trip/china/liaoning/shenyang' },
-        ],
-    },
-
-
-    {
-        text: '福建', collapsed: false, items: [
-            { text: '福州', link: '/trip/china/fujian/fuzhou' },
-            { text: '厦门', link: '/trip/china/fujian/xiamen' },
-        ],
-    },
-    {
-        text: '湖北', collapsed: false, items: [
-            { text: '武汉', link: '/trip/china/hubei/wuhan' },
-        ],
-    },
-    {
-        text: '湖南', collapsed: false, items: [
-            { text: '长沙', link: '/trip/china/hunan/changsha' },
-        ],
-    },
-
-    {
-        text: '云南', collapsed: false, items: [
-            { text: '大理', link: '/trip/china/yunnan/dali' },
-            { text: '西双版纳', link: '/trip/china/yunnan/xishuangbanna' },
-            { text: '昆明', link: '/trip/china/yunnan/kunming' },
-            { text: '丽江', link: '/trip/china/yunnan/lijiang' },
-        ],
-    },
-    {
-        text: '广西', collapsed: false, items: [
-            { text: '柳州', link: '/trip/china/guangxi/liuzhou' },
-            { text: '南宁', link: '/trip/china/guangxi/nanning' },
-        ],
-    },
-    {
-        text: '四川', collapsed: false, items: [
-            { text: '四川', link: '/trip/china/sichuan/' },
-            { text: '成都', link: '/trip/china/sichuan/chengdu' },
-        ],
-    },
-    {
-        text: '贵州', collapsed: false, items: [
-            { text: '贵阳', link: '/trip/china/guizhou/guiyang' },
-        ],
-    },
-
-    {
-        text: '海南', collapsed: false, items: [
-            { text: '海口', link: '/trip/china/hainan/haikou' },
-            { text: '三亚', link: '/trip/china/hainan/sanya' },
-        ],
-    },
-
-];
-const sidebarTripAboard = [
-    { text: '世界', link: '/trip/abroad/' },
-    {
-        text: '欧洲',
-        collapsed: false,
-        items: [
-            { text: '英国', link: '/trip/abroad/europe/england' },
-        ],
-    },
-    {
-        text: '亚洲',
-        collapsed: false,
-        items: [
-            { text: '韩国', link: '/trip/abroad/asia/korean' },
-            { text: '日本', link: '/trip/abroad/asia/japan' },
-        ],
-    },
-];
-const sidebarArtsArticle = [
-    { text: '猫', link: '/arts/article/猫' },
-    { text: '庄子·秋水', link: '/arts/article/庄子·秋水' },
-    { text: '归去来兮辞', link: '/arts/article/归去来兮辞' },
-    { text: '道德经', link: '/arts/article/道德经' },
-    { text: '逍遥游·北冥有鱼', link: '/arts/article/逍遥游·北冥有鱼' },
-    { text: '聪明人和傻子和奴才', link: '/arts/article/聪明人和傻子和奴才' },
-    { text: 'A Cup of Tea', link: '/arts/article/a-cup-of-tea' },
-];
 const sidebarArtsSociety = [
-    { text: '中国人口', link: '/arts/society/population-cn' },
+
 ];
-const sidebarArtsHistory = [
-    { text: '中国历史', link: '/arts/history/china' },
-    { text: '社会主义主要矛盾', link: '/arts/history/tmc' },
-    { text: '战争', link: '/arts/history/war' },
-    { text: '古人说话也用文言文吗', link: '/arts/history/wenyan' },
-    {
-        text: '皇室',
-        collapsed: true,
-        items: [
-            { text: '温莎', link: '/arts/history/royal/windsor' },
-        ],
-    },
-    {
-        text: '正史', collapsed: false,
-        items: [
-            { text: '介绍', link: '/arts/history/orthodox/' },
-        ],
-    },
-];
+const prefixHistory = '/course/history/'
 const sidebarArtsSpeech = [
     { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/arts/speech/craig-federighi' },
 ];
-const sidebarArtsLang = [
-    { text: '中文', link: '/arts/language/chinese' },
-    { text: '英语单词', link: '/arts/language/english-words' },
-    { text: '英语简单句', link: '/arts/language/english' },
-    { text: '法语', link: '/arts/language/french' },
-    { text: '德语', link: '/arts/language/german' },
-    { text: '日语', link: '/arts/language/japanese' },
-    { text: '意大利语', link: '/arts/language/italian' },
-    {
-        text: '英语专辑',
-        collapsed: false,
-        items: [
-            { text: '常用电话提示音', link: '/arts/language/english/dial-number' },
-            { text: '词组 俚语', link: '/arts/language/english/phrase' },
-        ],
-    },
-    { text: '人名汇总', link: '/arts/language/name' },
-    { text: '发音体系', link: '/arts/language/pronunciation' },
-    { text: '相似', link: '/arts/language/similar' },
-];
-const sidebarArtsXiwen = [
-    { text: '汤誓', link: '/arts/xiwen/汤誓' },
-    { text: '牧誓', link: '/arts/xiwen/牧誓' },
-    { text: '甘誓', link: '/arts/xiwen/甘誓' },
-    { text: '费誓', link: '/arts/xiwen/费誓' },
-    { text: '檄蜀文', link: '/arts/xiwen/檄蜀文' },
-    { text: '兴师檄文', link: '/arts/xiwen/兴师檄文' },
-    { text: '吕相绝秦', link: '/arts/xiwen/吕相绝秦' },
-    { text: '檄告楚相', link: '/arts/xiwen/檄告楚相' },
-    { text: '白朗告示', link: '/arts/xiwen/白朗告示' },
-    { text: '讨王莽檄', link: '/arts/xiwen/讨王莽檄' },
-    { text: '讨粤匪檄', link: '/arts/xiwen/讨粤匪檄' },
-    { text: '谕巴蜀檄', link: '/arts/xiwen/谕巴蜀檄' },
-    { text: '剿兵安民檄', link: '/arts/xiwen/剿兵安民檄' },
-    { text: '奉天讨胡檄', link: '/arts/xiwen/奉天讨胡檄' },
-    { text: '张献忠之檄', link: '/arts/xiwen/张献忠之檄' },
-    { text: '管仲檄楚使', link: '/arts/xiwen/管仲檄楚使' },
-    { text: '为袁绍檄豫州', link: '/arts/xiwen/为袁绍檄豫州' },
-    { text: '延平民人告白', link: '/arts/xiwen/延平民人告白' },
-    { text: '普告同胞檄稿', link: '/arts/xiwen/普告同胞檄稿' },
-    { text: '檄吴将校部曲', link: '/arts/xiwen/檄吴将校部曲' },
-    { text: '谕黑旗将士檄', link: '/arts/xiwen/谕黑旗将士檄' },
-    { text: '钦赐督辅手敕', link: '/arts/xiwen/钦赐督辅手敕' },
-    { text: '隋文帝伐陈檄', link: '/arts/xiwen/隋文帝伐陈檄' },
-    { text: '为李密檄洛州文', link: '/arts/xiwen/为李密檄洛州文' },
-    { text: '宁波众义民公启', link: '/arts/xiwen/宁波众义民公启' },
-    { text: '朱元璋北伐檄文', link: '/arts/xiwen/朱元璋北伐檄文' },
-    { text: '第二次讨袁宣言', link: '/arts/xiwen/第二次讨袁宣言' },
-    { text: '郑畋传檄天下文', link: '/arts/xiwen/郑畋传檄天下文' },
-    { text: '为徐敬业讨武曌檄', link: '/arts/xiwen/为徐敬业讨武曌檄' },
-    { text: '为窦建德檄秦王文', link: '/arts/xiwen/为窦建德檄秦王文' },
-    { text: '台湾人民抗战檄文', link: '/arts/xiwen/台湾人民抗战檄文' },
-    { text: '吴王刘濞遗诸侯书', link: '/arts/xiwen/吴王刘濞遗诸侯书' },
-    { text: '扑灭异端邪教公启', link: '/arts/xiwen/扑灭异端邪教公启' },
-    { text: '李自成檄明臣庶文', link: '/arts/xiwen/李自成檄明臣庶文' },
-    { text: '杨复光露布献捷文', link: '/arts/xiwen/杨复光露布献捷文' },
-    { text: '中华民国军起义檄文', link: '/arts/xiwen/中华民国军起义檄文' },
-    { text: '中国革命军大元帅檄', link: '/arts/xiwen/中国革命军大元帅檄' },
-    { text: '移河南郡县讨刘豫檄', link: '/arts/xiwen/移河南郡县讨刘豫檄' },
-    { text: '三元里等乡痛骂鬼子词', link: '/arts/xiwen/三元里等乡痛骂鬼子词' },
-    { text: '大顺军传牌山西各郡县', link: '/arts/xiwen/大顺军传牌山西各郡县' },
-    { text: '就陆海军大元帅职宣言', link: '/arts/xiwen/就陆海军大元帅职宣言' },
-    { text: '捻军盟主张乐行的布告', link: '/arts/xiwen/捻军盟主张乐行的布告' },
-    { text: '中华民国讨逆军檄告天下', link: '/arts/xiwen/中华民国讨逆军檄告天下' },
-    { text: '为李密檄荥阳守郇王庆文', link: '/arts/xiwen/为李密檄荥阳守郇王庆文' },
-    { text: '杨玄感敦促樊子盖归义书', link: '/arts/xiwen/杨玄感敦促樊子盖归义书' },
-    { text: '大清国摄政王多尔衮南下告示', link: '/arts/xiwen/大清国摄政王多尔衮南下告示' },
-    { text: '宣谕云、贵文武官员军民人等诏', link: '/arts/xiwen/宣谕云、贵文武官员军民人等诏' },
-    { text: '尽忠报国全粤义民申谕英夷告示', link: '/arts/xiwen/尽忠报国全粤义民申谕英夷告示' },
-    { text: '谕南京等处文武官员军民人等告示', link: '/arts/xiwen/谕南京等处文武官员军民人等告示' },
+
+const prefixLang = '/course/literature/language'
+
+const prefixXiwen = '/xiwen'
+const sidebarXiwen = [
+    { text: '汤誓', link: prefixXiwen + '/汤誓' },
+    { text: '牧誓', link: prefixXiwen + '/牧誓' },
+    { text: '甘誓', link: prefixXiwen + '/甘誓' },
+    { text: '费誓', link: prefixXiwen + '/费誓' },
+    { text: '檄蜀文', link: prefixXiwen + '/檄蜀文' },
+    { text: '兴师檄文', link: prefixXiwen + '/兴师檄文' },
+    { text: '吕相绝秦', link: prefixXiwen + '/吕相绝秦' },
+    { text: '檄告楚相', link: prefixXiwen + '/檄告楚相' },
+    { text: '白朗告示', link: prefixXiwen + '/白朗告示' },
+    { text: '讨王莽檄', link: prefixXiwen + '/讨王莽檄' },
+    { text: '讨粤匪檄', link: prefixXiwen + '/讨粤匪檄' },
+    { text: '谕巴蜀檄', link: prefixXiwen + '/谕巴蜀檄' },
+    { text: '剿兵安民檄', link: prefixXiwen + '/剿兵安民檄' },
+    { text: '奉天讨胡檄', link: prefixXiwen + '/奉天讨胡檄' },
+    { text: '张献忠之檄', link: prefixXiwen + '/张献忠之檄' },
+    { text: '管仲檄楚使', link: prefixXiwen + '/管仲檄楚使' },
+    { text: '为袁绍檄豫州', link: prefixXiwen + '/为袁绍檄豫州' },
+    { text: '延平民人告白', link: prefixXiwen + '/延平民人告白' },
+    { text: '普告同胞檄稿', link: prefixXiwen + '/普告同胞檄稿' },
+    { text: '檄吴将校部曲', link: prefixXiwen + '/檄吴将校部曲' },
+    { text: '谕黑旗将士檄', link: prefixXiwen + '/谕黑旗将士檄' },
+    { text: '钦赐督辅手敕', link: prefixXiwen + '/钦赐督辅手敕' },
+    { text: '隋文帝伐陈檄', link: prefixXiwen + '/隋文帝伐陈檄' },
+    { text: '为李密檄洛州文', link: prefixXiwen + '/为李密檄洛州文' },
+    { text: '宁波众义民公启', link: prefixXiwen + '/宁波众义民公启' },
+    { text: '朱元璋北伐檄文', link: prefixXiwen + '/朱元璋北伐檄文' },
+    { text: '第二次讨袁宣言', link: prefixXiwen + '/第二次讨袁宣言' },
+    { text: '郑畋传檄天下文', link: prefixXiwen + '/郑畋传檄天下文' },
+    { text: '为徐敬业讨武曌檄', link: prefixXiwen + '/为徐敬业讨武曌檄' },
+    { text: '为窦建德檄秦王文', link: prefixXiwen + '/为窦建德檄秦王文' },
+    { text: '台湾人民抗战檄文', link: prefixXiwen + '/台湾人民抗战檄文' },
+    { text: '吴王刘濞遗诸侯书', link: prefixXiwen + '/吴王刘濞遗诸侯书' },
+    { text: '扑灭异端邪教公启', link: prefixXiwen + '/扑灭异端邪教公启' },
+    { text: '李自成檄明臣庶文', link: prefixXiwen + '/李自成檄明臣庶文' },
+    { text: '杨复光露布献捷文', link: prefixXiwen + '/杨复光露布献捷文' },
+    { text: '中华民国军起义檄文', link: prefixXiwen + '/中华民国军起义檄文' },
+    { text: '中国革命军大元帅檄', link: prefixXiwen + '/中国革命军大元帅檄' },
+    { text: '移河南郡县讨刘豫檄', link: prefixXiwen + '/移河南郡县讨刘豫檄' },
+    { text: '三元里等乡痛骂鬼子词', link: prefixXiwen + '/三元里等乡痛骂鬼子词' },
+    { text: '大顺军传牌山西各郡县', link: prefixXiwen + '/大顺军传牌山西各郡县' },
+    { text: '就陆海军大元帅职宣言', link: prefixXiwen + '/就陆海军大元帅职宣言' },
+    { text: '捻军盟主张乐行的布告', link: prefixXiwen + '/捻军盟主张乐行的布告' },
+    { text: '中华民国讨逆军檄告天下', link: prefixXiwen + '/中华民国讨逆军檄告天下' },
+    { text: '为李密檄荥阳守郇王庆文', link: prefixXiwen + '/为李密檄荥阳守郇王庆文' },
+    { text: '杨玄感敦促樊子盖归义书', link: prefixXiwen + '/杨玄感敦促樊子盖归义书' },
+    { text: '大清国摄政王多尔衮南下告示', link: prefixXiwen + '/大清国摄政王多尔衮南下告示' },
+    { text: '宣谕云、贵文武官员军民人等诏', link: prefixXiwen + '/宣谕云、贵文武官员军民人等诏' },
+    { text: '尽忠报国全粤义民申谕英夷告示', link: prefixXiwen + '/尽忠报国全粤义民申谕英夷告示' },
+    { text: '谕南京等处文武官员军民人等告示', link: prefixXiwen + '/谕南京等处文武官员军民人等告示' },
 ];
 const sidebarCourse = [
     {
@@ -389,6 +200,102 @@ const sidebarCourse = [
             { text: '连音', link: '/course/art/tuplet' },]
     }
 ];
+const sidebarPhilosophy = [
+    { text: '哲学', link: '/course/philosophy/' },
+];
+const sidebarEconomics = [
+    { text: '微观经济学', link: '/course/economics/microeconomics' },
+];
+const sidebarLaw = [
+    { text: '法学', link: '/course/law/' },
+    { text: '中国人口', link: '/course/law/population-cn' },
+];
+const sidebarEducation = [
+    { text: '教育学', link: '/course/education/' },
+];
+const sidebarLiterature = [
+    // { text: '文学', link: '/course/literature/' },
+    {
+        text: "语言", items: [
+            { text: '中文', link: prefixLang + '/chinese' },
+            { text: '英语单词', link: prefixLang + '/english-words' },
+            { text: '英语简单句', link: prefixLang + '/english' },
+            { text: '法语', link: prefixLang + '/french' },
+            { text: '德语', link: prefixLang + '/german' },
+            { text: '日语', link: prefixLang + '/japanese' },
+            { text: '意大利语', link: prefixLang + '/italian' },
+            {
+                text: '英语专辑',
+                collapsed: false,
+                items: [
+                    { text: '常用电话提示音', link: prefixLang + '/english/dial-number' },
+                    { text: '词组 俚语', link: prefixLang + '/english/phrase' },
+                ],
+            },
+            { text: '人名汇总', link: prefixLang + '/name' },
+            { text: '发音体系', link: prefixLang + '/pronunciation' },
+            { text: '相似', link: prefixLang + '/similar' },
+        ]
+    }, {
+        text: '文章',
+        items: [
+            { text: '猫', link: prefixArticle + '/猫' },
+            { text: '庄子·秋水', link: prefixArticle + '/庄子·秋水' },
+            { text: '归去来兮辞', link: prefixArticle + '/归去来兮辞' },
+            { text: '道德经', link: prefixArticle + '/道德经' },
+            { text: '逍遥游·北冥有鱼', link: prefixArticle + '/逍遥游·北冥有鱼' },
+            { text: '聪明人和傻子和奴才', link: prefixArticle + '/聪明人和傻子和奴才' },
+            { text: 'A Cup of Tea', link: prefixArticle + '/a-cup-of-tea' },
+        ]
+    }
+];
+const sidebarHistory = [
+    // { text: '历史学', link: '/course/history/' },
+    { text: '中国历史', link: prefixHistory + '/china' },
+    { text: '社会主义主要矛盾', link: prefixHistory + '/tmc' },
+    { text: '战争', link: prefixHistory + '/war' },
+    { text: '古人说话也用文言文吗', link: prefixHistory + '/wenyan' },
+    {
+        text: '皇室',
+        collapsed: true,
+        items: [
+            { text: '温莎', link: prefixHistory + '/royal/windsor' },
+        ],
+    },
+    {
+        text: '正史', collapsed: false,
+        items: [
+            { text: '介绍', link: prefixHistory + '/orthodox/' },
+        ],
+    },
+];
+const sidebarScience = [
+    { text: '数学术语中英文', link: '/course/science/math-term' },
+    { text: '离散数学', link: '/course/science/discrete-math' },
+    { text: '概率论', link: '/course/science/probability-theory' },
+    { text: '线性代数', link: '/course/science/linear-algebra' },
+    { text: '微积分', link: '/course/science/calculus' },
+];
+const sidebarEngineering = [
+    { text: '数据结构与算法', link: '/course/engineering/dsa' },
+];
+const sidebarAgronomy = [
+    { text: '农学', link: '/course/agronomy/' },
+];
+const sidebarMedicine = [
+    { text: '医学', link: '/course/medicine/' },
+];
+const sidebarMilitaryScience = [
+    { text: '军事学', link: '/course/military-science/' },
+];
+const sidebarManagement = [
+    { text: '管理学', link: '/course/management/' },
+];
+const sidebarArt = [
+    { text: '乐理', link: '/course/art/music_theory' },
+    { text: '连音', link: '/course/art/tuplet' }
+];
+
 const sidebarCodeOS = [
     {
         text: 'MacOS', collapsed: false, items: [
@@ -791,17 +698,26 @@ export const sidebar = {
     // 
     '/trip/': sidebarTrip,
     '/trip/travelogue/': sidebarTripTravelogue,
-    // '/trip/china/': sidebarTripChina,
-    // '/trip/abroad/': sidebarTripAboard,
     // arts
-    '/arts/article/': sidebarArtsArticle,
     '/arts/society/': sidebarArtsSociety,
-    '/arts/history/': sidebarArtsHistory,
-    '/arts/language/': sidebarArtsLang,
     '/arts/speech/': sidebarArtsSpeech,
-    '/arts/xiwen/': sidebarArtsXiwen,
     //
-    '/course/': sidebarCourse,
+    '/xiwen/': sidebarXiwen,
+    //
+    // '/course/': sidebarCourse,
+    '/course/philosophy/': sidebarPhilosophy,
+    '/course/economics/': sidebarEconomics,
+    '/course/law/': sidebarLaw,
+    '/course/education/': sidebarEducation,
+    '/course/literature/': sidebarLiterature,
+    '/course/history/': sidebarHistory,
+    '/course/science/': sidebarScience,
+    '/course/engineering/': sidebarEngineering,
+    '/course/agronomy/': sidebarAgronomy,
+    '/course/medicine/': sidebarMedicine,
+    '/course/military-science/': sidebarMilitaryScience,
+    '/course/management/': sidebarManagement,
+    '/course/art/': sidebarArt,
     //
     '/code-notes/': sidebarCodeNotes,
     //
