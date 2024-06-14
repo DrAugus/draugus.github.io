@@ -2,16 +2,70 @@
     "title": "",
     "items": [
         {
+            "title": "iTerm2",
+            "desc": "iTerm2 - Github repo - Website",
+            "link": "/code-notes/cmd-line-tools/iterm2",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "MobaXterm",
+            "desc": "MobaXterm Enhanced terminal for Windows with X11",
+            "link": "/code-notes/cmd-line-tools/mobaxterm",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "Warp",
+            "desc": "Warp - Github repo - Website Great software start",
+            "link": "/code-notes/cmd-line-tools/warp",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "Xshell",
+            "desc": "Xshell 全局设置配色方案 工具 - 配色方案 - 自定义设计好自己喜欢的配色 !xshell",
+            "link": "/code-notes/cmd-line-tools/xshell",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "道德经",
+            "desc": "道德经 import Article from '../../../.vitepress/comp",
+            "link": "/course/literature/article/道德经",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "中文",
+            "desc": "中文 import Chinese from '../../../.vitepress/compo",
+            "link": "/course/literature/language/chinese",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "英语单词",
+            "desc": "英语单词 import WordsEnglish from '../../../.vitepres",
+            "link": "/course/literature/language/english-words",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "英语简单句",
+            "desc": "英语简单句 import SentenceEnglish from '../../../.vite",
+            "link": "/course/literature/language/english",
+            "date": "2024-06-13"
+        },
+        {
+            "title": "相似",
+            "desc": "相似 import Similar from '../../../.vitepress/compo",
+            "link": "/course/literature/language/similar",
+            "date": "2024-06-13"
+        },
+        {
             "title": "锻炼",
             "desc": "锻炼 室内锻炼 1. 跳绳：这是一种简单、有效且不需要任何器械的运动。您可以在家里的任何地方跳绳，",
             "link": "/random-notes/exercise",
-            "date": "2024-06-13"
+            "date": "2024-06-12"
         },
         {
             "title": "飞机",
             "desc": "飞机 航线 全球航线图参考 航司 南方航空 里程兑换 里程:人民币 = 24:1 ::: 活动 -",
             "link": "/trip/airplane",
-            "date": "2024-06-13"
+            "date": "2024-06-12"
         },
         {
             "title": "官方日历订阅",
@@ -41,7 +95,7 @@
             "title": "随心飞",
             "desc": "随心飞 一句话 对于上班族来说，谁买谁上当！ ::: 南航「畅游中国」2024 :::detail",
             "link": "/trip/suixinfei",
-            "date": "2024-05-22"
+            "date": "2024-05-21"
         },
         {
             "title": "去哪儿",
@@ -53,73 +107,19 @@
             "title": "TRIP",
             "desc": "TRIP",
             "link": "/.vitepress/data/trip/README",
-            "date": "2024-06-13"
+            "date": "2024-06-12"
         },
         {
             "title": "福建",
             "desc": "福建 厦门 游玩 - 鼓浪屿 - 海上冲浪 美食 游记 当日晚上到达，入住双子塔。夜游沙坡尾，路遇",
             "link": "/trip/china/fujian/index",
-            "date": "2024-05-29"
+            "date": "2024-05-28"
         },
         {
             "title": "广西",
             "desc": "广西 柳州 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有） 白天鱼峰山公园，龙潭公园，柳侯公",
             "link": "/trip/china/guangxi/index",
-            "date": "2024-05-29"
-        },
-        {
-            "title": "黑龙江",
-            "desc": "黑龙江 哈尔滨 :::details 旅行参考 by 老乡pls 第一天晚上去中央大街，逛完直接能",
-            "link": "/trip/china/heilongjiang/index",
-            "date": "2024-05-29"
-        },
-        {
-            "title": "湖北",
-            "desc": "湖北 武汉 游记参看，武汉20240508 :::details 攻略 by gpt 1. 东湖风",
-            "link": "/trip/china/hubei/index",
-            "date": "2024-05-29"
-        },
-        {
-            "title": "湖南",
-            "desc": "湖南 长沙 游记参看，长沙20220810 橘子洲小火车 小火车不要坐车头，巨抖无比 ::: 游玩",
-            "link": "/trip/china/hunan/index",
-            "date": "2024-05-29"
-        },
-        {
-            "title": "Python",
-            "desc": "Python requirements 如果你想让你的项目在更多的环境中稳定运行，最好指定所有依赖",
-            "link": "/code/program/lang/python",
             "date": "2024-05-28"
-        },
-        {
-            "title": "机场评测",
-            "desc": "机场评测 停止安检前/停止值机前 **30分钟** 到达机场即可，如 17:35 值机截至，17:",
-            "link": "/trip/airport",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "火车站",
-            "desc": "火车站 贵宾厅 火车站贵宾厅类型 :-: 桂林站无 桂林北站商务座/软席，广西各大银行贵宾 武汉站",
-            "link": "/trip/railway",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "武汉 ",
-            "desc": "武汉",
-            "link": "/trip/travelogue/20240508",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "配环境",
-            "desc": "配环境 简单参考一下 当你获得一台**全新机器**，根据系统不同，可以参考下方的开发环境配置 ::",
-            "link": "/code-notes/nipeima",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "日本",
-            "desc": "日本 游记 夏季游记，参看 日本东京/大版/京都20230720 推荐去处 因为本人夏季去的，日本",
-            "link": "/trip/abroad/asia/japan",
-            "date": "2024-05-27"
         }
     ]
 }
