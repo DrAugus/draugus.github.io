@@ -23,6 +23,11 @@ jobs:
     steps:
     - name: Checkout repository content
       uses: actions/checkout@v4
+      # https://github.com/actions/checkout?tab=readme-ov-file#fetch-all-history-for-all-tags-and-branches
+      # Fetch all history for all tags and branches
+      # for py script
+      with:
+        fetch-depth: 0      
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
