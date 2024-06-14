@@ -58,6 +58,7 @@ pull_request_rules:
 
   - name: automatic merge for python script latest life
     conditions:
+      - author=DrAugus
       - "title=docs: life latest"
       - not:
           or:
