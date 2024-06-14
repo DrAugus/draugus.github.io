@@ -1,4 +1,52 @@
 {
+    "life/random-notes/bachelor.md": {
+        "title": "中国有14亿人，而我还是单身",
+        "date": 1718357794.0
+    },
+    "life/random-notes/one-word.md": {
+        "title": "一言",
+        "date": 1718357794.0
+    },
+    "life/code-notes/nipeima.md": {
+        "title": "配环境",
+        "date": 1716791141
+    },
+    "life/trip/abroad/asia/japan.md": {
+        "title": "日本",
+        "date": 1716791141
+    },
+    "life/trip/abroad/asia/korean.md": {
+        "title": "韩国",
+        "date": 1718349654.0
+    },
+    "life/trip/china/hongkong.md": {
+        "title": "香港",
+        "date": 1718349654.0
+    },
+    "life/trip/china/macao.md": {
+        "title": "澳门",
+        "date": 1718349654.0
+    },
+    "life/trip/travelogue/20230429.md": {
+        "title": "港珠澳广深",
+        "date": 1718349654.0
+    },
+    "life/career/record-net-work.md": {
+        "title": "互联网工作记录",
+        "date": 1718349622.0
+    },
+    "life/career/tax.md": {
+        "title": "年度报税",
+        "date": 1718349622.0
+    },
+    "life/recent.md": {
+        "title": "最近更新",
+        "date": 1718349622.0
+    },
+    "life/trip/explore.md": {
+        "title": "探索",
+        "date": 1718349622.0
+    },
     "life/code-notes/cmd-line-tools/iterm2.md": {
         "title": "iTerm2",
         "date": 1718287380.0
@@ -106,14 +154,6 @@
     "life/trip/travelogue/20240508.md": {
         "title": "武汉 ",
         "date": 1716793014
-    },
-    "life/code-notes/nipeima.md": {
-        "title": "配环境",
-        "date": 1716791141
-    },
-    "life/trip/abroad/asia/japan.md": {
-        "title": "日本",
-        "date": 1716791141
     },
     "life/trip/china/guangdong/index.md": {
         "title": "广东",
