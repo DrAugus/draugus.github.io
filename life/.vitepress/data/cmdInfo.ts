@@ -20,7 +20,7 @@ export const CMD_INFO: OfficialInfo[] = [
         name: 'MobaXterm',
         intro: 'Enhanced terminal for Windows with X11 server, tabbed SSH client, network tools and much more',
         homepage: 'https://mobaxterm.mobatek.net/',
-        platform: ['Windows', 'Linux', 'Mac'],
+        platform: 'Windows',
     }, {
         id: 'tabby',
         name: 'Tabby',
