@@ -1,5 +1,9 @@
 # 日本
 
+:::danger 旅游局
+[日本国家旅游局](https://www.japan.travel/jp/)，[中文站点](https://www.japan-travel.cn)
+:::
+
 ## 游记
 
 夏季游记，[参看 日本东京/大版/京都20230720](../../travelogue/20230720)

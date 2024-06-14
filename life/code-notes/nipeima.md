@@ -20,13 +20,23 @@ todo
 
 ## Mac
 
-基础安装 [homebrew](https://brew.sh): `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+基础安装 [homebrew](https://brew.sh)
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
 
 todo
 
 ## Windows
+
+### 开发者安装
+
+:::warning 说明
+这年头谁用 Windows 做开发？
+:::
 
 一台新机器，首先要安装的也是必需的，是下面这些软件
 
@@ -47,3 +57,10 @@ todo
 
 - 视频软件：[PotPlayer](https://potplayer.info/download/)
 - 查看电脑配置: [图拉丁吧工具箱](https://www.tbtool.cn/)
+
+### 普通使用者
+
+压缩软件：bandizip [官网](https://www.bandisoft.com/bandizip/) [下载页](https://www.bandisoft.com/bandizip/dl.php?web)  
+视频软件：[PotPlayer](https://potplayer.info/download/)  
+社交软件：QQ，微信  
+游戏相关：[战网平台](https://www.blizzard.com/)，[steam 平台](https://store.steampowered.com/)，[米哈游启动器](https://launcher.mihoyo.com/)
