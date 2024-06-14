@@ -1,4 +1,4 @@
-# XShell
+# Xshell
 
 ## 全局设置配色方案
 

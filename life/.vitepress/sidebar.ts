@@ -1,6 +1,12 @@
 import { modifyTravelogue } from "./data/trip/travelogueToSidebar";
 import { LinkName } from "./type";
 
+const prefixArticle = '/course/literature/article';
+const prefixHistory = '/course/history';
+const prefixLang = '/course/literature/language';
+const prefixXiwen = '/xiwen';
+const prefixDiseaseRecord = '/disease/record';
+const prefixCommandTools = '/code-notes/cmd-line-tools'
 const sidebarEat = [
     { text: '吃饭了', link: '/eat/' },
     { text: '零食', link: '/eat/snack' },
@@ -74,19 +80,12 @@ const sidebarTripTravelogue = [
 ]
     .concat(...modifyTravelogue());
 
-const prefixArticle = '/course/literature/article'
 
-const sidebarArtsSociety = [
-
-];
-const prefixHistory = '/course/history/'
 const sidebarArtsSpeech = [
     { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/arts/speech/craig-federighi' },
 ];
 
-const prefixLang = '/course/literature/language'
 
-const prefixXiwen = '/xiwen'
 const sidebarXiwen = [
     { text: '汤誓', link: prefixXiwen + '/汤誓' },
     { text: '牧誓', link: prefixXiwen + '/牧誓' },
@@ -337,9 +336,13 @@ const sidebarCodeNotes = [
     { text: '配环境', link: '/code-notes/nipeima' },
     {
         text: '命令行工具', collapsed: false, items: [
-            { text: 'fish cmd', link: '/code-notes/cmd-line-tools/fish' },
-            { text: 'Tabby', link: '/code-notes/cmd-line-tools/tabby' },
-            { text: 'XShell', link: '/code-notes/cmd-line-tools/xshell' },
+            { text: '工具介绍', link: prefixCommandTools + '/' },
+            { text: 'fish cmd', link: prefixCommandTools + '/fish' },
+            { text: 'iTerm2', link: prefixCommandTools + '/iterm2' },
+            { text: 'MobaXterm', link: prefixCommandTools + '/mobaxterm' },
+            { text: 'Tabby', link: prefixCommandTools + '/tabby' },
+            { text: 'Warp', link: prefixCommandTools + '/warp' },
+            { text: 'XShell', link: prefixCommandTools + '/xshell' },
         ],
     }, {
         text: '文本编辑', collapsed: false, items: [
@@ -668,7 +671,7 @@ const sidebarFunny = [
     { text: '调休', link: '/funny/tiaoxiu' },
 ];
 
-const recordPrefix = '/disease/record/';
+
 const sidebarDisease = [
     { text: '病痛', link: '/disease/' },
     { text: '胃镜', link: '/disease/gastroscopy' },
@@ -676,17 +679,17 @@ const sidebarDisease = [
     { text: '牙', link: '/disease/tooth' },
     {
         text: '记录-自己的', collapsed: false, items: [
-            { text: '2024/02/23 发烧', link: `${recordPrefix}/self/2024-02-23` },
-            { text: '2024/01/25 感冒', link: `${recordPrefix}/self/2024-01-25` },
-            { text: '2022/12/21 发烧', link: `${recordPrefix}/self/2022-12-21` },
-            { text: '2022/11/28 感冒', link: `${recordPrefix}/self/2022-11-28` },
-            { text: '2022/06/14 中暑', link: `${recordPrefix}/self/2022-06-14` },
+            { text: '2024/02/23 发烧', link: `${prefixDiseaseRecord}/self/2024-02-23` },
+            { text: '2024/01/25 感冒', link: `${prefixDiseaseRecord}/self/2024-01-25` },
+            { text: '2022/12/21 发烧', link: `${prefixDiseaseRecord}/self/2022-12-21` },
+            { text: '2022/11/28 感冒', link: `${prefixDiseaseRecord}/self/2022-11-28` },
+            { text: '2022/06/14 中暑', link: `${prefixDiseaseRecord}/self/2022-06-14` },
         ]
     },
     {
         text: '记录-别人的', collapsed: false, items: [
-            { text: '2022/12/22 发烧', link: `${recordPrefix}/others/2022-12-22` },
-            { text: '2022/06/24 扁桃体炎', link: `${recordPrefix}/others/2022-06-24` },
+            { text: '2022/12/22 发烧', link: `${prefixDiseaseRecord}/others/2022-12-22` },
+            { text: '2022/06/24 扁桃体炎', link: `${prefixDiseaseRecord}/others/2022-06-24` },
         ]
     },
 ];
@@ -699,7 +702,6 @@ export const sidebar = {
     '/trip/': sidebarTrip,
     '/trip/travelogue/': sidebarTripTravelogue,
     // arts
-    '/arts/society/': sidebarArtsSociety,
     '/arts/speech/': sidebarArtsSpeech,
     //
     '/xiwen/': sidebarXiwen,

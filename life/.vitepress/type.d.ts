@@ -3,6 +3,17 @@ export interface LinkName {
   link: string,
 }
 
+type Platform = 'Windows' | 'Linux' | 'Mac';
+
+export interface OfficialInfo {
+  id: string,
+  name: string,
+  intro?: string,
+  repo?: string,
+  homepage?: string,
+  platform?: Platform | Platform[],
+}
+
 interface LibsInfo {
   intro?: string,
   repo?: string,
