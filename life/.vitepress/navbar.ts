@@ -59,7 +59,7 @@ export const navbar = [
     items: [
       { text: '散记', link: '/random-notes/', activeMatch: '/random-notes/' },
       { text: '思考', link: '/thought/', activeMatch: '/thought/' },
-      { text: '职业', link: '/career/' },
+      { text: '职业', link: '/career/', activeMatch: '/career/' },
       {
         text: '考试', items: [
           { text: '高考', link: '/exam/gaokao' },

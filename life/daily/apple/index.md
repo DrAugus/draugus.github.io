@@ -2,7 +2,7 @@
 
 记录 [Apple](https://www.apple.com/) 使用体验
 
-<Wiki />
+<!-- <Wiki /> -->
 
 <script setup>
 import Wiki from '../../.vitepress/components/Wiki.vue'

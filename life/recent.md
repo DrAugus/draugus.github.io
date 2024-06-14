@@ -1,6 +1,8 @@
 ---
 outline: false
 sidebar: false
+lastUpdated: false
+editLink: false
 ---
 
 # 最近更新

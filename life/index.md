@@ -36,7 +36,7 @@ features:
     #   src: /logo.png
     #   width: 32px
     #   height: 32px    
-    details: 旅行是旅行计划，也是旅行记录
+    details: 见证者，为见证而来 | 铭记者，因铭记而生
     link: /trip/
     linkText: 看看往哪冲
   - title: 去哪儿
@@ -64,14 +64,9 @@ features:
   - title: 课程笔记
     details: 知识虽然学不完，但还是要每天都学一点点
     link: /course/    
-  - title: 高考
-    details: 如何高考？只有高考吗？
-    link: /pursuing-education/gaokao
-  - title: 文科探秘
-    # icon: 🏮
-    details: 见证者，为见证而来 | 铭记者，因铭记而生
-    link: /arts/
-    linkText: 了解文科 有益身心
+  - title: 考试
+    details: 如何考试，如何高考，如何考证
+    link: /exam/
   - title: 代码是永恒的
     # icon: 💻
     details: 多学、多看、多写……
@@ -80,6 +75,11 @@ features:
   - title: 语言学习
     # icon: 🥂
     details: 日语、英语、德语、法语、意大利语……
-    link: /arts/language/  
+    link: /course/literature/language/
     linkText: 开始练习吧    
+  - title: 社畜
+    # icon: 🥂
+    details: 真的非工作不可吗
+    link: /career/
+    linkText: 上班上班上班继续上班     
 ---

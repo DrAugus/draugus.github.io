@@ -67,7 +67,7 @@ const sidebarTrip = [
             { text: '签证', link: '/trip/visa' },
             { text: '往来港澳通行证', link: '/trip/eep' },
             { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
-            { text: '境外银行卡办理指南', link: '/trip/card' },
+            { text: '境外银行卡', link: '/trip/card' },
             { text: '境外手机卡', link: '/trip/phone-number' },
 
         ]
