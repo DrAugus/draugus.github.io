@@ -591,12 +591,10 @@ const sidebarPursuingEducation = [
 const sidebarRandomNotes = [
     { text: '一言', link: '/random-notes/one-word' },
     { text: '散篇', link: '/random-notes/temp2' },
-    { text: '痛经', link: '/random-notes/dysmenorrhoea' },
     { text: '电网', link: '/random-notes/state-grid' },
     { text: '锻炼', link: '/random-notes/exercise' },
     { text: '梅桃樱', link: '/random-notes/flower' },
     { text: '学位服', link: '/random-notes/academic-dress' },
-    { text: '女人相亲惯用套路', link: '/random-notes/blind-date-routine-skill' },
     { text: '中国有14亿人 而我还是单身', link: '/random-notes/bachelor' },
     { text: '身份证', link: '/random-notes/id_card' },
 ];
@@ -635,6 +633,7 @@ const sidebarExam = [
     },
 ]
 
+const prefixWoman = '/thought/woman'
 const sidebarThought = [
     // { text: '想法', link: '/thought/' },
     { text: '未来', link: '/thought/future' },
@@ -644,9 +643,15 @@ const sidebarThought = [
     { text: '怜悯', link: '/thought/pity' },
     { text: '结婚', link: '/thought/marry' },
     { text: '男女关系', link: '/thought/relationship-m-w' },
-    { text: '女人', link: '/thought/woman' },
     { text: '命运的织机', link: '/thought/portended-fate' },
     { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film' },
+    {
+        text: '女人', items: [
+            { text: '唉', link: prefixWoman + '/' },
+            { text: '痛经', link: prefixWoman + '/dysmenorrhoea' },
+            { text: '女人相亲惯用套路', link: prefixWoman + '/blind-date-routine-skill' },
+        ]
+    },
 ];
 
 const sidebarGrumbling = [
