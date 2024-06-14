@@ -49,16 +49,16 @@ pull_request_rules:
       merge:
         method: merge
 
-  # - name: automatic merge for auto pull requests
-  #   conditions:
-  #     - title=pulling refs/heads/dev into master
-  #   actions:
-  #     merge:
-  #       method: merge
+#   - name: automatic merge for auto pull requests
+#     conditions:
+#       - title=pulling refs/heads/dev into master
+#     actions:
+#       merge:
+#         method: merge
 
   - name: automatic merge for python script latest life
     conditions:
-      - title="docs: life latest"
+      - "title=docs: life latest"
       - not:
           or:
             - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
