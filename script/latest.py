@@ -1,9 +1,25 @@
+import argparse
 import os
 from git import Repo
 from datetime import datetime, timedelta
+import pytz
 import op_file
 from op_md import modify_md_content
 import utils
+
+parser = argparse.ArgumentParser(description="Process some integers.")
+parser.add_argument(
+    "arg1", type=int, nargs="?", help="An integer for the github workflows"
+)
+args = parser.parse_args()
+
+
+def convert_to_utc_plus_8_timestamp(dt):
+    # 如果dt是naive datetime对象，我们假设它是UTC时间
+    if dt.tzinfo is None or dt.tzinfo.utcoffset(dt) is None:
+        dt = dt.replace(tzinfo=pytz.utc)
+    # 转换为UTC+8时区
+    return dt.astimezone(pytz.timezone("Asia/Shanghai")).timestamp()
 
 
 def get_files_updated_in_last_week(repo_path):
@@ -23,12 +39,20 @@ def get_files_updated_in_last_week(repo_path):
         for diff in commit.diff(None):
             # 如果文件是修改或添加的，则添加到列表中
             if diff.a_path and not diff.deleted_file:
+
+                committed_timestamp = commit.committed_datetime.timestamp()
+                if args.arg1:
+                    # 将commit时间转换为UTC+8
+                    committed_timestamp = convert_to_utc_plus_8_timestamp(
+                        commit.committed_datetime
+                    )
+
                 if diff.a_path in updated_files:
                     # compare date
-                    if updated_files[diff.a_path] < commit.committed_date:
-                        updated_files[diff.a_path] = commit.committed_date
+                    if updated_files[diff.a_path] < committed_timestamp:
+                        updated_files[diff.a_path] = committed_timestamp
                 else:
-                    updated_files[diff.a_path] = commit.committed_date
+                    updated_files[diff.a_path] = committed_timestamp
 
     return updated_files
 

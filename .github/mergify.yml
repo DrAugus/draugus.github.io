@@ -55,3 +55,15 @@ pull_request_rules:
   #   actions:
   #     merge:
   #       method: merge
+
+  - name: automatic merge for python script latest life
+    conditions:
+      - title="docs: life latest"
+      - not:
+          or:
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+    actions:
+      merge:
+        method: merge
