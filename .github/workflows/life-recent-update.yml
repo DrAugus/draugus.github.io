@@ -40,17 +40,16 @@ jobs:
       run: |
         python latest.py 1
     - name: Commit files
-      id: commit
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
         if git diff --cached --quiet; then  
           echo "No changes to commit"  
-          echo "##[set-output name=has_changes;value=false]"  
+          echo "has_changes=false" >> $GITHUB_OUTPUT
         else  
           git commit -m "docs: life latest" -a
-          echo "##[set-output name=has_changes;value=true]"  
+          echo "has_changes=true" >> $GITHUB_OUTPUT
         fi
     # - name: Push changes
     #   uses: ad-m/github-push-action@master
@@ -58,7 +57,7 @@ jobs:
     #     github_token: ${{ secrets.DEPLOY_GH }}
     #     branch: ${{ github.head_ref }}
     - name: Create Pull Request
-      if: steps.commit.outputs.has_changes == 'true'  
+      if: ${{ env.GITHUB_OUTPUT }} == 'true'  
       uses: peter-evans/create-pull-request@v6
       with:
         token: ${{ secrets.DEPLOY_GH }}
