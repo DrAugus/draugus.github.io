@@ -38,6 +38,7 @@ jobs:
         python mihoyo6.py   
         python mihoyo6_zh.py         
     - name: Commit files
+      id: commit
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
@@ -55,7 +56,7 @@ jobs:
     #     github_token: ${{ secrets.DEPLOY_GH }}
     #     branch: ${{ github.head_ref }}
     - name: Create Pull Request
-      if: ${{ env.GITHUB_OUTPUT }} == 'true'
+      if: ${{ steps.commit.outputs.has_changes }} == 'true'
       uses: peter-evans/create-pull-request@v6
       with:
         token: ${{ secrets.DEPLOY_GH }}
