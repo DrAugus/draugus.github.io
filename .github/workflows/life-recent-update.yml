@@ -53,11 +53,15 @@ jobs:
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
       - name: test output
+        env:
+          AUGAGU: ${{steps.commit.outputs.has_changes}}
         run: |
           echo "=========="
           echo "$GITHUB_OUTPUT"
           echo "=========="
-          echo "steps.commit.outputs.has_changes"
+          echo "${{steps.commit.outputs.has_changes}}"
+          echo "=========="
+          echo "$AUGAGU"
       # - name: Push changes
       #   uses: ad-m/github-push-action@master
       #   with:
