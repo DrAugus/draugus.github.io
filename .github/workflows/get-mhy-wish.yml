@@ -6,12 +6,12 @@ on:
   #     - master
   #   paths:
   #     - "script/**"
-  #     - ".github/workflows/get-wish-mhy-hsr.yml"      
+  #     - ".github/workflows/get-wish-mhy-hsr.yml"
   schedule:
     # This is run at midnight UTC on Monday, Tuesday and Wednesday
-    - cron:  '0 16 * * 1-3'
+    - cron: "0 16 * * 1-3"
     # 在 UTC 时间的凌晨 4 点执行（周二）（即周二的中午 UTC+8）
-    - cron: '0 4 * * 2'    
+    - cron: "0 4 * * 2"
 
 jobs:
   build:
@@ -20,55 +20,55 @@ jobs:
       run:
         working-directory: ./script
     steps:
-    - name: Checkout repository content
-      uses: actions/checkout@v4
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x' 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Execute Python script
-      run: |
-        python mihoyo2.py
-        python mihoyo2_old.py 
-        python mihoyo2_zh.py 
-        python mihoyo6.py   
-        python mihoyo6_zh.py         
-    - name: Commit files
-      id: commit
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add auto/mhy2.json auto/mhy2old.json auto/mhy2zh auto/mhy6.json auto/mhy6zh
-        if git diff --cached --quiet; then  
-          echo "No changes to commit"  
-          echo "has_changes=false" >> $GITHUB_OUTPUT
-        else  
-          git commit -m "Add changes" -a 
-          echo "has_changes=true" >> $GITHUB_OUTPUT
-        fi  
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.DEPLOY_GH }}
-    #     branch: ${{ github.head_ref }}
-    - name: Create Pull Request
-      if: ${{ steps.commit.outputs.has_changes }} == 'true'
-      uses: peter-evans/create-pull-request@v6
-      with:
-        token: ${{ secrets.DEPLOY_GH }}
-        title: Got mhy wish info
-        commit-message: Add changes
-        committer: GitHub <noreply@github.com>
-        author: GitHub <noreply@github.com>
-        branch: create-pull-request/patch
-        base: master    
-        labels: |
-          report
-          automated pr
-        assignees: DrAugus
-        # Review cannot be requested from pull request author.
-        # reviewers: DrAugus  
+      - name: Checkout repository content
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Execute Python script
+        run: |
+          python mihoyo2.py
+          python mihoyo2_old.py 
+          python mihoyo2_zh.py 
+          python mihoyo6.py   
+          python mihoyo6_zh.py
+      - name: Commit files
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add auto/mhy2.json auto/mhy2old.json auto/mhy2zh auto/mhy6.json auto/mhy6zh
+          if git diff --cached --quiet; then  
+            echo "No changes to commit"  
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else  
+            git commit -m "Add changes" -a 
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+      # - name: Push changes
+      #   uses: ad-m/github-push-action@master
+      #   with:
+      #     github_token: ${{ secrets.DEPLOY_GH }}
+      #     branch: ${{ github.head_ref }}
+      - name: Create Pull Request
+        if: ${{ steps.commit.outputs.has_changes }} == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.DEPLOY_GH }}
+          title: Got mhy wish info
+          commit-message: Add changes
+          committer: GitHub <noreply@github.com>
+          author: GitHub <noreply@github.com>
+          branch: create-pull-request/patch
+          base: master
+          labels: |
+            report
+            automated pr
+          assignees: DrAugus
+          # Review cannot be requested from pull request author.
+          # reviewers: DrAugus
