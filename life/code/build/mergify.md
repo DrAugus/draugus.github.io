@@ -1,7 +1,3 @@
----
-icon: pajamas:git-merge
----
-
 # Mergify
 
 github 官方支持 [auto merge][github auto merge pr] ~~这个 [bot][mergify] 可以下架了~~
@@ -53,3 +49,42 @@ pull_request_rules:
 
 [mergify]: https://docs.mergify.com/examples/#bots
 [github auto merge pr]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request
+
+当使用 matrix 时，
+
+```yml
+jobs:
+  deploy-life:
+    strategy:
+      matrix:
+        os: [ubuntu-latest] # macos-latest, windows-latest
+        node: [16]
+        deploy-dir: [life/.vitepress/dist]
+        deploy-user: [augusmeow]
+        deploy-repo: [life, augusmeow.github.io]
+```
+
+:::warning 对于条件的解释
+[condition](https://docs.mergify.com/conditions/#github-actions)  
+不一定全都会响应 在此判定 任意一个失败都不可以  
+必须用 not or  
+修改成这样是因为 [无法匹配 matrix](https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692)
+
+```yml
+conditions:
+  - author=dependabot[bot]
+  - not:
+      or:
+        - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+        - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+        - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+```
+
+修改为直接正则匹配 deploy 也可行
+
+```yml
+conditions:
+  - check-success~=^deploy
+```
+
+:::

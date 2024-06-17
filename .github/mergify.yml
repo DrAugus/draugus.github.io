@@ -9,17 +9,7 @@ pull_request_rules:
   - name: automatic merge for dependabot pull requests
     conditions:
       - author=dependabot[bot]
-      # condition
-      # https://docs.mergify.com/conditions/#github-actions
-      # 不一定全都会响应 在此判定 任意一个失败都不可以
-      # 必须用 not or
-      # 修改成这样是因为 无法匹配 matrix
-      # https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692
-      - not:
-          or:
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+      - check-success~=^deploy
     actions:
       merge:
         method: merge
@@ -27,11 +17,7 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - not:
-          or:
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+      - check-success~=^deploy
     actions:
       merge:
         method: merge
@@ -40,31 +26,16 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - not:
-          or:
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+      - check-success~=^deploy
     actions:
       merge:
         method: merge
-
-#   - name: automatic merge for auto pull requests
-#     conditions:
-#       - title=pulling refs/heads/dev into master
-#     actions:
-#       merge:
-#         method: merge
 
   - name: automatic merge for python script latest life
     conditions:
       - author=DrAugus
       - "title=docs: life latest"
-      - not:
-          or:
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+      - check-success~=^deploy
     actions:
       merge:
         method: merge
