@@ -8,6 +8,8 @@ on:
     paths:
       - "game/**"
       - ".github/workflows/deploy-game.yml"
+      - "**/package.json"
+      - "**/pnpm-lock.yaml"
   # 手动触发部署
   # workflow_dispatch:
   pull_request:
