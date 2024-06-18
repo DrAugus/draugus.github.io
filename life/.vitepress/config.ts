@@ -20,6 +20,10 @@ export default defineConfig({
         },],
         // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
+    // https://vitepress.dev/guide/sitemap-generation
+    sitemap: {
+        hostname: 'https://augusmeow.github.io'
+    },
     themeConfig: {
         logo: '/logo.png',
         nav: navbar,

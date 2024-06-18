@@ -1,10 +1,10 @@
-import { defineConfig } from 'vitepress'
-import { navbar } from './navbar'
-import { sidebar } from './sidebar'
+import { defineConfig } from 'vitepress';
+import { navbar } from './navbar';
+import { sidebar } from './sidebar';
 
 export default defineConfig({
     // These are app level configs.
-    title: 'Augus 享乐',
+    title: 'Augusの享乐',
     description: '吃什么 去哪玩',
     base: "/life/",
     lastUpdated: true,
@@ -18,8 +18,11 @@ export default defineConfig({
             rel: "stylesheet",
             href: "//unpkg.com/heti/umd/heti.min.css",
         },],
-        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
+    sitemap: {
+        hostname: 'https://augusmeow.github.io/life/'
+    },
     themeConfig: {
         logo: '/logo.png',
         nav: navbar,
@@ -35,7 +38,7 @@ export default defineConfig({
         outline: [2, 3],
 
         footer: {
-            message: '吃好喝好',
+            message: '吃好喝好 快乐地活下去',
             copyright: 'Copyright © 2019-present Augus'
         },
         lastUpdatedText: '上次更新',
@@ -94,4 +97,14 @@ export default defineConfig({
             }
         }
     },
-})
+    markdown: {
+        container: {
+            tipLabel: '提示',
+            warningLabel: '警告',
+            dangerLabel: '危险',
+            infoLabel: '信息',
+            detailsLabel: '详细信息'
+        },
+        math: true
+    },
+});

@@ -16,6 +16,9 @@ export default defineConfig({
     }],
     // ['meta', { name: 'theme-color', content: '#3c8772' }],
   ],
+  sitemap: {
+    hostname: 'https://draugus.github.io'
+  },
   themeConfig: {
     logo: '/logo/logo.jpg',
     nav: navbar_zh,
