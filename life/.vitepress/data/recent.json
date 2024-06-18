@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "Mergify",
+            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
+            "link": "/code/build/mergify",
+            "date": "2024-06-17"
+        },
+        {
+            "title": "GitHub",
+            "desc": "GitHub hub 自动建仓 ```bash hub create [-poc] [-d ] [",
+            "link": "/code/version-ctrl/github",
+            "date": "2024-06-17"
+        },
+        {
             "title": "中国有14亿人，而我还是单身",
             "desc": "中国有14亿人，而我还是单身 转载自有理数 ::: > 我国每5个成年​人中就有1个是单身。 人口",
             "link": "/random-notes/bachelor",
@@ -107,18 +119,6 @@
             "title": "中文",
             "desc": "中文 import Chinese from '../../../.vitepress/compo",
             "link": "/course/literature/language/chinese",
-            "date": "2024-06-13"
-        },
-        {
-            "title": "英语单词",
-            "desc": "英语单词 import WordsEnglish from '../../../.vitepres",
-            "link": "/course/literature/language/english-words",
-            "date": "2024-06-13"
-        },
-        {
-            "title": "英语简单句",
-            "desc": "英语简单句 import SentenceEnglish from '../../../.vite",
-            "link": "/course/literature/language/english",
             "date": "2024-06-13"
         }
     ]
