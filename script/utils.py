@@ -226,9 +226,6 @@ def get_duration(text):
                 start_time, end_time = matches
                 got_dur(start_time, end_time)
                 # print(f"start_time:{start_time} end_time:{end_time}")
-            else:
-                start_time, end_time = None
-                # print("Could not extract start and end times from the string.")
 
         # 大版本更新时
         # update – 2024/01/17 11:59:00(server time)
@@ -264,9 +261,6 @@ def get_duration(text):
                 start_time, end_time = matches
                 got_dur(start_time, end_time)
                 # print(f"start_time:{start_time} end_time:{end_time}")
-            else:
-                start_time, end_time = None
-                # print("Could not extract start and end times from the string.")
 
         got_dur(None, None)
 
