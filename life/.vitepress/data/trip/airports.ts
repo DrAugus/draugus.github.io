@@ -333,4 +333,4 @@ export const mapAirports: AirportMap = AIRPORTS.reduce((obj, item) => {
         obj[key] = item;
     }
     return obj;
-}, {})
+}, {});
