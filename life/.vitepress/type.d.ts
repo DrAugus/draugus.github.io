@@ -169,6 +169,15 @@ export interface Airport {
   latitude: number,
 }
 
+export interface AirportMap {
+  [path: string]: Airport
+}
+
+export interface Airplane {
+  model: string; // 飞机的型号，如 "波音737-800(WL)"  
+  number: string; // 飞机的编号，如 "B1405"
+}
+
 export interface Airline {
   name: string,
   country: string,
@@ -184,14 +193,16 @@ interface FlightTicket {
 export interface Flight {
   date: Date,
   number: string,
-  airlineCode: string,
-  seatClass: string,
-  departureTime: string,
+  airplane: Airplane,         // 飞机信息
+  airlineCode: string,        // CZ8902
+  seatClass: string,          // 公务舱(O)
+  departureTime: Date,
   departureAirport: string,
-  duration: string,
-  arrivalTime: string,
+  duration: number,           // 飞行时长 分钟数
+  distance: number,           // 飞行里程 km
+  arrivalTime: Date,
   arrivalAirport: string,
-  price: FlightTicket,
+  price: FlightTicket,        // 票价
 }
 
 export interface Suixinfei {

@@ -1,9 +1,9 @@
-import { Airport } from "../../type";
+import { Airport, AirportMap } from "../../type";
 
 // data from
 // https://echarts.apache.org/examples/data-gl/asset/data/flights.json
 
-export const AIRPORTS: Airport[] = [
+const AIRPORTS: Airport[] = [
     {
         code: 'HGH',
         name: 'Hangzhou Xiaoshan International Airport',
@@ -326,3 +326,11 @@ export const AIRPORTS: Airport[] = [
         latitude: 34.4347222
     }
 ];
+
+export const mapAirports: AirportMap = AIRPORTS.reduce((obj, item) => {
+    const key = item.code;
+    if (key) {
+        obj[key] = item;
+    }
+    return obj;
+}, {})
