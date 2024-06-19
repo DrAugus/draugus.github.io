@@ -24,7 +24,7 @@ export const FLIGHT_DATA: Flight[] = [
     },
     // TEMP DATA
     {
-        date: new Date('2024/06/10'),
+        date: new Date('2023/06/10'),
         number: 'CZ8681',
         airplane: {
             model: '波音737-800(WL)',
@@ -44,7 +44,7 @@ export const FLIGHT_DATA: Flight[] = [
             fuelSurcharge: 70
         }
     }, {
-        date: new Date('2024/06/10'),
+        date: new Date('2023/06/10'),
         number: 'CZ8681',
         airplane: {
             model: '波音737-800(WL)',
@@ -84,7 +84,7 @@ export const FLIGHT_DATA: Flight[] = [
             fuelSurcharge: 70
         }
     }, {
-        date: new Date('2024/06/10'),
+        date: new Date('2022/06/10'),
         number: 'CZ8681',
         airplane: {
             model: '波音737-800(WL)',
@@ -104,7 +104,7 @@ export const FLIGHT_DATA: Flight[] = [
             fuelSurcharge: 70
         }
     }, {
-        date: new Date('2024/06/10'),
+        date: new Date('2022/06/10'),
         number: 'CZ8681',
         airplane: {
             model: '波音737-800(WL)',
@@ -164,7 +164,7 @@ export const FLIGHT_DATA: Flight[] = [
             fuelSurcharge: 70
         }
     }, {
-        date: new Date('2024/06/10'),
+        date: new Date('2019/06/10'),
         number: 'CZ8681',
         airplane: {
             model: '波音737-800(WL)',
@@ -184,7 +184,7 @@ export const FLIGHT_DATA: Flight[] = [
             fuelSurcharge: 70
         }
     }, {
-        date: new Date('2024/06/10'),
+        date: new Date('2019/06/10'),
         number: 'CZ8681',
         airplane: {
             model: '波音737-800(WL)',

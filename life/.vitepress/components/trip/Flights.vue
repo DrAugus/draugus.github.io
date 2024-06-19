@@ -16,6 +16,7 @@ interface Edge {
     fromName: string,
     toName: string,
     coords: number[][],
+    date: Date,
 }
 
 interface infoMark {
@@ -26,6 +27,7 @@ interface infoMark {
 
 let arrInfo: infoMark[] = []
 let countAirport = new Map();
+let yearFlight: Map<number, number> = new Map();
 const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
 
     if (!item.departureAirport || !item.arrivalAirport) { return res; }
@@ -39,10 +41,14 @@ const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
     const depCoord: number[] = [depAirport.longitude, depAirport.latitude]
     const arrCoord: number[] = [arrAirport.longitude, arrAirport.latitude]
 
+    const year = item.date.getFullYear();
+    yearFlight.set(year, (yearFlight.get(year) || 0) + 1)
+
     res.push({
         fromName: depAirport.city,
         toName: arrAirport.city,
-        coords: [depCoord, arrCoord]
+        coords: [depCoord, arrCoord],
+        date: item.date,
     })
 
     arrInfo.push({
@@ -62,6 +68,7 @@ const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
 // console.log(myEdge)
 // console.log(countAirport)
 // console.log(arrInfo)
+// console.log(yearFlight)
 arrInfo.forEach((v, i) => {
     if (v.airport) {
         let c = countAirport.get(v.airport)
@@ -88,6 +95,7 @@ let color = [
 const seriesLine1 = (name: string, data: Edge[], index: number) => ({
     name,
     type: 'lines',
+    // coordinateSystem: 'geo',
     zlevel: 4,
     effect: {
         show: true,
@@ -97,18 +105,9 @@ const seriesLine1 = (name: string, data: Edge[], index: number) => ({
         symbolSize: 3
     },
     lineStyle: {
-        eStyle: {
-            normal: {
-                color: color[index],
-                width: 0,
-                curveness: 0.2
-            }
-        },
-        normal: {
-            color: color[index],
-            width: 0,
-            curveness: 0.2
-        }
+        color: color[index],
+        width: 0,
+        curveness: 0.2
     },
     data
 })
@@ -116,6 +115,7 @@ const seriesLine1 = (name: string, data: Edge[], index: number) => ({
 const seriesLine2 = (name: string, data: Edge[], index: number) => ({
     name,
     type: 'lines',
+    // coordinateSystem: 'geo',
     zlevel: 2,
     symbol: ['none', 'arrow'],
     symbolSize: 10,
@@ -157,16 +157,22 @@ const seriesMark = (name: string, data: any[], index: number) => ({
     data
 })
 
+
+
+
+
 let series: any[] = [];
-{
-    let name = '2024'
+
+yearFlight.forEach((v, k) => {
+    let name = k.toString();
     let idx = Math.floor(Math.random() * color.length);
+    let filter = myEdge.filter(obj => obj.date.getFullYear() === k);
     series.push(
-        seriesLine1(name, myEdge, idx),
-        seriesLine2(name, myEdge, idx),
+        seriesLine1(name, filter, idx),
+        seriesLine2(name, filter, idx),
         seriesMark(name, newArrInfo, idx)
     );
-}
+})
 
 const option = {
     backgroundColor: '#D5DCE5',
@@ -185,7 +191,7 @@ const option = {
         orient: 'vertical',
         top: 'bottom',
         left: 'right',
-        data: ['2024'],
+        data: [...yearFlight.keys()],
         textStyle: {
             color: '#fff'
         },
@@ -195,8 +201,10 @@ const option = {
         map: 'world',
         show: true,
         label: {
-            show: true
+            // show: true
         },
+        zoom: 4,
+        center: [110, 37],
         left: 0,
         top: 0,
         right: 0,
@@ -208,18 +216,30 @@ const option = {
             [180, -90]
         ],
         roam: true,
+        nameMap: {
+            // China: '中国'
+        },
         itemStyle: {
-            areaColor: '#323c48',
-            borderColor: '#404a59'
+            // areaColor: '#32fc48',
+            // borderColor: '#404a59'
         },
         emphasis: {
             label: {
                 show: true
             },
             itemStyle: {
-                areaColor: '#2a333d'
+                // areaColor: '#2a333d'
             }
-        }
+        },
+        regions: [
+            {
+                name: 'Japan',
+                itemStyle: {
+                    areaColor: 'red',
+                    color: 'red'
+                }
+            }
+        ]
     },
     series: series
 };

@@ -36,6 +36,8 @@ import * as echarts from 'echarts/index.blank'
 import * as world from '../data/world.json'
 echarts.registerMap('world', world);
 
+// import 'echarts/extension/bmap/bmap'
+// bmap.registerMap('China', 'china');
 
 use([
   UniversalTransition,
