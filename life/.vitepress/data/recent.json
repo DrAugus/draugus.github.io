@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "Echarts geo",
+            "desc": "Echarts geo 参考示例 Echarts geo-lines ::: 本站实现",
+            "link": "/code-notes/tools/echarts-geo",
+            "date": "2024-06-18"
+        },
+        {
+            "title": "航线",
+            "desc": "航线 import Flights from '../.vitepress/components/",
+            "link": "/trip/flights",
+            "date": "2024-06-18"
+        },
+        {
             "title": "Mergify",
             "desc": "Mergify github 官方支持 [auto merge][github auto merg",
             "link": "/code/build/mergify",
@@ -107,18 +119,6 @@
             "title": "Xshell",
             "desc": "Xshell 全局设置配色方案 工具 - 配色方案 - 自定义设计好自己喜欢的配色 !xshell",
             "link": "/code-notes/cmd-line-tools/xshell",
-            "date": "2024-06-13"
-        },
-        {
-            "title": "道德经",
-            "desc": "道德经 import Article from '../../../.vitepress/comp",
-            "link": "/course/literature/article/道德经",
-            "date": "2024-06-13"
-        },
-        {
-            "title": "中文",
-            "desc": "中文 import Chinese from '../../../.vitepress/compo",
-            "link": "/course/literature/language/chinese",
             "date": "2024-06-13"
         }
     ]
