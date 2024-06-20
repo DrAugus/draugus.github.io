@@ -1,4 +1,8 @@
 {
+    "life/code/version-ctrl/github.md": {
+        "title": "GitHub",
+        "date": 1718590917.0
+    },
     "life/code-notes/tools/echarts-geo.md": {
         "title": "Echarts geo",
         "date": 1718677787.0
@@ -9,10 +13,6 @@
     },
     "life/code/build/mergify.md": {
         "title": "Mergify",
-        "date": 1718590917.0
-    },
-    "life/code/version-ctrl/github.md": {
-        "title": "GitHub",
         "date": 1718590917.0
     },
     "life/random-notes/bachelor.md": {
