@@ -1,6 +1,18 @@
 import { City, Element, Weapon, Artifacts } from "./utils";
 
 export const CHARACTER = {
+  firefly: {
+    key: "Firefly",
+    id: "firefly",
+    name: "流萤",
+    prefix: Weapon.Destruction.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.StellaronHunters,
+    ele: Element.Physical,
+    weapon: Weapon.Destruction
+  },
   boothill: {
     key: "Boothill",
     id: "boothill",

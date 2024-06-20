@@ -240,6 +240,17 @@ export const WISH: WishAll = {
       wish4star: ["pela", "luka", "hook"],
       wishName: ['扬尘孤星', '穷观妙算'],
       url: ['']
+    }, {
+      name: ["Firefull Flyshine", "Floral Triptych"],
+      image: [1, 2],
+      shortName: ["Firefly", "Ruan Mei"],
+      start: "2024/06/19 10:00:00 +0800",
+      end: "2024/07/10 11:59:00 +0800",
+      version: '2.3',
+      wish5star: ["firefly", "ruan_mei"],
+      wish4star: ["gallagher", "misha", "xueyi"],
+      wishName: ['盈茧炽盛', '疏影三迭'],
+      url: ['']
     },
   ],
   weapons: [
@@ -439,6 +450,15 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ["Sailing Towards a Second Life", "She Already Shut Her Eyes"],
       wish4star: ["Geniuses' Repose", "A Secret Vow", "Landau's Choice"],
+      url: ""
+    }, {
+      name: "Brilliant Fixation",
+      image: [31, 32],
+      start: "2024/06/19 10:00:00 +0800",
+      end: "2024/07/10 11:59:00 +0800",
+      shortName: "",
+      wish5star: ["Whereabouts Should Dreams Rest", "Past Self in Mirror"],
+      wish4star: ["Memories of the Past", "Day One of My New Life", "Eyes of the Prey"],
       url: ""
     },
   ]
