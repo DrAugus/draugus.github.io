@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "GitHub",
+            "desc": "GitHub hub 自动建仓 ```bash hub create [-poc] [-d ] [",
+            "link": "/code/version-ctrl/github",
+            "date": "2024-06-17"
+        },
+        {
             "title": "Echarts geo",
             "desc": "Echarts geo 参考示例 Echarts geo-lines ::: 本站实现",
             "link": "/code-notes/tools/echarts-geo",
@@ -17,12 +23,6 @@
             "title": "Mergify",
             "desc": "Mergify github 官方支持 [auto merge][github auto merg",
             "link": "/code/build/mergify",
-            "date": "2024-06-17"
-        },
-        {
-            "title": "GitHub",
-            "desc": "GitHub hub 自动建仓 ```bash hub create [-poc] [-d ] [",
-            "link": "/code/version-ctrl/github",
             "date": "2024-06-17"
         },
         {
