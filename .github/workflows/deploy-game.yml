@@ -1,4 +1,4 @@
-name: ci-deploy-game
+name: Deploy game
 
 on:
   # make sure this is the branch you are using

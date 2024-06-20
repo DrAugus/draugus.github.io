@@ -1,4 +1,4 @@
-name: ci-deploy-life
+name: Deploy life
 
 on:
   push:

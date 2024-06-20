@@ -1,4 +1,4 @@
-name: borrow server to test
+name: Borrow server to test
 on:
   push:
     branches:

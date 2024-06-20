@@ -1,4 +1,4 @@
-name: ci-deploy-notes
+name: Deploy notes
 
 # 暂时不启用
 on:

@@ -39,3 +39,12 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+
+  - name: automatic merge for auto get mhy wish
+    conditions:
+      - author=DrAugus
+      - "title=feat: auto get mhy wish"
+      - check-success~=^deploy
+    actions:
+      merge:
+        method: merge
