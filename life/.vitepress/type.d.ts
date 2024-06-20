@@ -53,6 +53,7 @@ interface DateRange {
 interface ExploreInfo {
   date?: DateRange,
   intro?: string,
+  link?: string,
 }
 
 export interface ChinaExploreRecordItem {
@@ -93,6 +94,12 @@ export interface AirfareInfo {
   costAbove800km: number,
   taxAirport: number,
   details: string,
+}
+
+export interface TravelogueInfo {
+  title: string,
+  date: Date,
+  city: string | string[],
 }
 
 export interface TravelBillIntroItem {
@@ -170,7 +177,7 @@ export interface Airport {
 }
 
 export interface AirportMap {
-  [path: string]: Airport
+  [path: string]: Airport;
 }
 
 export interface Airplane {

@@ -4,6 +4,8 @@ import { onMounted, onUnmounted, ref } from "vue";
 
 import { citiesData } from "../../data/trip/cities";
 import { CHINA_VISITED_DATA } from "../../data/trip/china";
+import { sortedLastTravelogue, isEqualCity, linkTravelogue } from '../../data/trip/travelogue';
+import { ChinaExploreRecord } from "../../type";
 
 let map = null;
 
@@ -64,11 +66,17 @@ let colorLegend = {
 
 const visitedData = CHINA_VISITED_DATA;
 
-function extractCityAndTimes(data) {
-  return data.reduce((acc, item) => {
+interface CityTimes {
+  city: string,
+  times: number,
+  resident: boolean,
+}
+
+function extractCityAndTimes(data: ChinaExploreRecord[]) {
+  return data.reduce((acc: CityTimes[], item) => {
     // 检查当前项是否有 info 字段  
     if (item.info) {
-      let obj = {
+      let obj: CityTimes = {
         city: item.id,
         times: item.info.length,
         resident: false
@@ -103,6 +111,31 @@ function extractCityAndTimes(data) {
 const cityVisitedTimes = extractCityAndTimes(visitedData);
 // console.log(cityVisitedTimes);
 
+const getLastTravelogueLink = (city: string) => {
+
+  let idx = sortedLastTravelogue.findIndex(info => {
+    if (Array.isArray(info.city)) {
+      let equal = false;
+      info.city.forEach(c => {
+        if (isEqualCity(c, city)) {
+          equal = true;
+        }
+      });
+      return equal;
+    } else {
+      return isEqualCity(city, info.city);
+    }
+
+  });
+
+  if (idx === -1) {
+    return '';
+  }
+
+  let last = sortedLastTravelogue[idx];
+  return linkTravelogue(last.date);
+};
+
 const getMarkers = (AMap) => {
   let markers: any[] = [];
   for (let cityInfo of cityVisitedTimes) {
@@ -126,6 +159,13 @@ const getMarkers = (AMap) => {
           style: textStyle,
         }
       });
+      const link = getLastTravelogueLink(city);
+      if (link !== '') {
+        marker.on('click', function (e) {
+          // 在新标签页打开链接
+          window.open(getLastTravelogueLink(city), '_blank');
+        });
+      }
       markers.push(marker);
     }
   }

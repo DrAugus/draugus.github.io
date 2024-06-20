@@ -1,44 +1,37 @@
 import { CardData, CardLink, LinkName } from "../../type";
-import { dataTravelogue } from "./travelogue";
+import { modifyDate1 } from "../../utils";
+import { linkTravelogue, sortedLastTravelogue } from "./travelogue";
 
 const getTravelogue = (): CardData[] => {
-    const sorted = [...dataTravelogue].sort((a, b) => {
-        const dateA = a.link.split('/').pop()!;
-        const dateB = b.link.split('/').pop()!;
-        return Number(dateB) - Number(dateA);
-    });
 
-    const map = new Map<string, CardLink[]>();
-    sorted.forEach(v => {
-        const date = v.link.split('/').pop()!;
-        const year = date.slice(0, 4);
-        const month = date.slice(4, 6);
-        const day = date.slice(6, 8);
-        const sDate = `${year}年${month}月${day}日`
+    const map = new Map<number, CardLink[]>();
+    sortedLastTravelogue.forEach(v => {
+        const year = v.date.getFullYear();
+        const sDate = modifyDate1(v.date);
         const desc = `${sDate}起始游记`;
 
         const cardData: CardLink = {
             icon: '',
-            title: v.text,
+            title: v.title,
             // desc,
-            link: v.link,
+            link: linkTravelogue(v.date),
             date: sDate,
         };
 
         const currentYearData = map.get(year) || [];
         currentYearData.push(cardData);
         map.set(year, currentYearData);
-    })
+    });
 
-    let res: CardData[] = []
+    let res: CardData[] = [];
     map.forEach((v, k) => {
         res.push({
             title: `${k}年`,
             items: v
-        })
-    })
+        });
+    });
 
-    return res
-}
+    return res;
+};
 
-export const TRAVELOGUE_DATA: CardData[] = getTravelogue()
+export const TRAVELOGUE_DATA: CardData[] = getTravelogue();

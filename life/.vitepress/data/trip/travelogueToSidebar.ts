@@ -1,10 +1,15 @@
 import { LinkName } from "../../type";
-import { dataTravelogue } from "./travelogue";
+import { linkTravelogue, sortedLastTravelogue } from "./travelogue";
 
 export const modifyTravelogue = (): LinkName[] =>
-    dataTravelogue
-        // .slice(0)
-        .reverse()
+    sortedLastTravelogue
+        .reduce((res: LinkName[], cur) => {
+            res.push({
+                text: cur.title,
+                link: linkTravelogue(cur.date)
+            });
+            return res;
+        }, [])
         .map((v, i) => {
             let arrLink = v.link.split('/');
             if (!v.text.includes(arrLink[arrLink.length - 1])) {
