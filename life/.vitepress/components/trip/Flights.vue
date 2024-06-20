@@ -177,8 +177,8 @@ yearFlight.forEach((v, k) => {
 const option = {
     backgroundColor: '#D5DCE5',
     title: {
-        text: '冲冲冲',
-        subtext: '芜湖起飞',
+        // text: '冲冲冲',
+        // subtext: '芜湖起飞',
         left: 'center',
         textStyle: {
             color: '#fff'
@@ -224,8 +224,9 @@ const option = {
             // borderColor: '#404a59'
         },
         emphasis: {
+            disabled: true,
             label: {
-                show: true
+                show: false
             },
             itemStyle: {
                 // areaColor: '#2a333d'

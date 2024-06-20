@@ -152,7 +152,7 @@ jobs:
       echo "has_changes=true" >> $GITHUB_OUTPUT
     fi
 - name: Create Pull Request
-  if: ${{ steps.commit.outputs.has_changes == true }}
+  if: ${{ steps.commit.outputs.has_changes == 'true' }}
   uses: peter-evans/create-pull-request@v6
   with:
     token: ${{ secrets.DEPLOY_GH }}
@@ -199,13 +199,15 @@ false
 :::danger 注意 if 条件
 
 ```yml
-if: ${{ steps.commit.outputs.has_changes == true }}
+if: ${{ steps.commit.outputs.has_changes == 'true' }}
 ```
 
 千万不可写成
 
 ```yml
-if: ${{ steps.commit.outputs.has_changes }} == true
+if: ${{ steps.commit.outputs.has_changes }} == true # 错误的
+# 或者
+if: ${{ steps.commit.outputs.has_changes == true }} # 错误的
 ```
 
 :::

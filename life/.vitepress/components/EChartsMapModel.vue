@@ -2,7 +2,7 @@
   <v-chart class="chart" :option="option" />
 </template>
 
-<script>
+<script setup lang="ts">
 import { use } from "echarts/core";
 import { CanvasRenderer } from "echarts/renderers";
 import { UniversalTransition } from 'echarts/features';
@@ -57,18 +57,6 @@ use([
   GeoComponent,
 ]);
 
-export default {
-  name: "EChartsModel",
-  components: {
-    VChart,
-  },
-  props: {
-    option: Object,
-  },
-  provide: {
-    [THEME_KEY]: "auto",
-  },
-};
 </script>
 
 <style scoped>
