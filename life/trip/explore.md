@@ -6,7 +6,9 @@ lastUpdated: false
 
 # 探索
 
-中国地区，探索城市及次数
+:::info 探索城市及次数
+点击下方地图标签可跳转[旅行游记](./travelogue/)
+:::
 
 <PlaceVisited />
 

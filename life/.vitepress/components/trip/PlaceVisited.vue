@@ -183,7 +183,12 @@ const getChinaMarkers = (AMap) => {
       if (link !== '') {
         marker.on('click', function (e) {
           // 在新标签页打开链接
-          window.open(getLastTravelogueLink(city), '_blank');
+          window.open(link, '_blank');
+        });
+      } else {
+        marker.on('click', function (e) {
+          // 在新标签页打开链接
+          window.alert(city + "没有旅行日记，看看其他城市吧");
         });
       }
       markers.push(marker);
@@ -219,7 +224,12 @@ const getGlobalMarkers = (AMap) => {
       if (link !== '') {
         marker.on('click', function (e) {
           // 在新标签页打开链接
-          window.open(getLastTravelogueLink(city), '_blank');
+          window.open(link, '_blank');
+        });
+      } else {
+        marker.on('click', function (e) {
+          // 在新标签页打开链接
+          window.alert(city + "没有旅行日记，看看其他城市吧");
         });
       }
       markers.push(marker);
@@ -282,7 +292,6 @@ onMounted(async () => {
           map.add(layer);
           layer.add(getChinaMarkers(AMap));
           layer.add(getGlobalMarkers(AMap));
-          console.log(getGlobalMarkers(AMap));
         })
         .catch((e) => {
           console.log(e);

@@ -1,7 +1,7 @@
 import { TravelogueInfo } from "../../type";
 import { modifyDate } from "../../utils";
 
-export const dataTravelogue: TravelogueInfo[] = [
+const dataTravelogue: TravelogueInfo[] = [
     { title: '长沙', date: new Date('2022/08/10'), city: '长沙' },
     { title: '云南', date: new Date('2022/08/12'), city: ['西双版纳', '昆明', '大理'] },
     { title: '苏州', date: new Date('2022/09/06'), city: '苏州' },
@@ -40,4 +40,33 @@ export const isEqualCity = (cityA: string, cityB: string) => {
         return true;
     }
     return false;
+};
+
+interface CityLink {
+    title: string,
+    links: string[],
+    date: Date,
+}
+
+const travelogueByCity = () => {
+    let mapCityDate: Map<string, TravelogueInfo[]> = new Map();
+    dataTravelogue.forEach(item => {
+        if (Array.isArray(item.city)) {
+            item.city.forEach(city => {
+                mapCityDate.set(city, (mapCityDate.get(city) || []).concat(item));
+            });
+        } else {
+            mapCityDate.set(item.city, (mapCityDate.get(item.city) || []).concat(item));
+        }
+    });
+    return mapCityDate;
+};
+
+export const getCityLink = (city: string, date?: Date) => {
+    let dataByCity = travelogueByCity().get(city);
+    if (!dataByCity || !dataByCity.length) return [];
+    if (date) {
+        dataByCity = dataByCity.filter(obj => obj.date.getTime() !== date.getTime());
+    }
+    return dataByCity;
 };
