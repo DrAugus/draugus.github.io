@@ -2,124 +2,124 @@
     "title": "",
     "items": [
         {
-            "title": "GitHub",
-            "desc": "GitHub hub 自动建仓 ```bash hub create [-poc] [-d ] [",
-            "link": "/code/version-ctrl/github",
-            "date": "2024-06-17"
-        },
-        {
-            "title": "Echarts geo",
-            "desc": "Echarts geo 参考示例 Echarts geo-lines ::: 本站实现",
-            "link": "/code-notes/tools/echarts-geo",
-            "date": "2024-06-18"
-        },
-        {
-            "title": "航线",
-            "desc": "航线 import Flights from '../.vitepress/components/",
-            "link": "/trip/flights",
-            "date": "2024-06-18"
-        },
-        {
-            "title": "Mergify",
-            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
-            "link": "/code/build/mergify",
-            "date": "2024-06-17"
-        },
-        {
-            "title": "中国有14亿人，而我还是单身",
-            "desc": "中国有14亿人，而我还是单身 转载自有理数 ::: > 我国每5个成年​人中就有1个是单身。 人口",
-            "link": "/random-notes/bachelor",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "一言",
-            "desc": "一言 '' 寄蜉蝣于天地 渺沧海之一粟 哀吾生之须臾 羡长江之无穷 挟飞仙以遨游 抱明月而长终 知",
-            "link": "/random-notes/one-word",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "配环境",
-            "desc": "配环境 简单参考一下 当你获得一台**全新机器**，根据系统不同，可以参考下方的开发环境配置 ::",
-            "link": "/code-notes/nipeima",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "日本",
-            "desc": "日本 旅游局 日本国家旅游局，中文站点 ::: 游记 夏季游记，参看 日本东京/大版/京都2023",
-            "link": "/trip/abroad/asia/japan",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "韩国",
-            "desc": "韩国 旅游局 韩国旅游发展局 :::",
-            "link": "/trip/abroad/asia/korean",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "香港",
-            "desc": "香港 旅游局 香港旅游事务署 ::: 游记 游记参看港珠澳广深 推荐 地方推荐 - 香港艺术馆 -",
-            "link": "/trip/china/hongkong",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "澳门",
-            "desc": "澳门 旅游局 澳门旅游局 ::: 推荐 - 妈阁庙 周边景点：海事博物馆、港务局大楼（摩尔兵营）、",
-            "link": "/trip/china/macao",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "港珠澳广深",
-            "desc": "港珠澳广深 > 2023/04/29 - 2023/05/03 共计5天 分别为 - 04/29",
-            "link": "/trip/travelogue/20230429",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "互联网工作记录",
-            "desc": "互联网工作记录 自从来到杭州之后，眼睛不断的恶化。也许之前在成都的时候，就有了征兆，记得当时想把自",
-            "link": "/career/record-net-work",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "年度报税",
-            "desc": "年度报税 2.16起预约退税(以下以**2022综合所得年度汇算**为例)(也可能是补税) > 想",
-            "link": "/career/tax",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "最近更新",
-            "desc": "最近更新 import ACardLinks from './.vitepress/compone",
-            "link": "/recent",
-            "date": "2024-06-14"
-        },
-        {
             "title": "探索",
-            "desc": "探索 中国地区，探索城市及次数 import PlaceVisited from '../.vit",
+            "desc": "探索 探索城市及次数 点击下方地图标签可跳转旅行游记 ::: import PlaceVisite",
             "link": "/trip/explore",
             "date": "2024-06-14"
         },
         {
-            "title": "iTerm2",
-            "desc": "iTerm2 - Github repo - Website",
-            "link": "/code-notes/cmd-line-tools/iterm2",
-            "date": "2024-06-13"
+            "title": "长沙",
+            "desc": "长沙 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20220810",
+            "date": "2024-06-21"
         },
         {
-            "title": "MobaXterm",
-            "desc": "MobaXterm Enhanced terminal for Windows with X11",
-            "link": "/code-notes/cmd-line-tools/mobaxterm",
-            "date": "2024-06-13"
+            "title": "云南",
+            "desc": "云南 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20220812",
+            "date": "2024-06-21"
         },
         {
-            "title": "Warp",
-            "desc": "Warp - Github repo - Website Great software start",
-            "link": "/code-notes/cmd-line-tools/warp",
-            "date": "2024-06-13"
+            "title": "苏州",
+            "desc": "苏州 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20220906",
+            "date": "2024-06-21"
         },
         {
-            "title": "Xshell",
-            "desc": "Xshell 全局设置配色方案 工具 - 配色方案 - 自定义设计好自己喜欢的配色 !xshell",
-            "link": "/code-notes/cmd-line-tools/xshell",
-            "date": "2024-06-13"
+            "title": "南京",
+            "desc": "南京 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230225",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "上海",
+            "desc": "上海 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230311",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "舟山",
+            "desc": "舟山 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230415",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "绍兴",
+            "desc": "绍兴 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230422",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "港珠澳广深",
+            "desc": "港珠澳广深 import CityLink from '../../.vitepress/comp",
+            "link": "/trip/travelogue/20230429",
+            "date": "2024-06-14"
+        },
+        {
+            "title": "长春",
+            "desc": "长春 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230527",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "南宁",
+            "desc": "南宁 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230610",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "深港珠+柳州",
+            "desc": "深港珠+柳州 import CityLink from '../../.vitepress/com",
+            "link": "/trip/travelogue/20230628",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "日本 ",
+            "desc": "日本 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230720",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "青岛淄博济宁",
+            "desc": "青岛淄博济宁 import CityLink from '../../.vitepress/com",
+            "link": "/trip/travelogue/20230803",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "南京",
+            "desc": "南京 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230809",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "桂林",
+            "desc": "桂林 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20230902",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "潮汕地区",
+            "desc": "潮汕地区 import CityLink from '../../.vitepress/compo",
+            "link": "/trip/travelogue/20240404",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "海口",
+            "desc": "海口 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20240415",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "贵阳 ",
+            "desc": "贵阳 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20240426",
+            "date": "2024-05-21"
+        },
+        {
+            "title": "武汉 ",
+            "desc": "武汉 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20240508",
+            "date": "2024-05-27"
         }
     ]
 }
