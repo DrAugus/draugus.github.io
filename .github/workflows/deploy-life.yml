@@ -15,6 +15,9 @@ on:
       - master
     paths:
       - "life/**"
+      - ".github/workflows/deploy-life.yml"
+      - "**/package.json"
+      - "**/pnpm-lock.yaml"
 
 jobs:
   deploy-life:

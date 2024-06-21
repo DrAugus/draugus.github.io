@@ -17,6 +17,9 @@ on:
       - master
     paths:
       - "game/**"
+      - ".github/workflows/deploy-game.yml"
+      - "**/package.json"
+      - "**/pnpm-lock.yaml"
 
 jobs:
   deploy-game:

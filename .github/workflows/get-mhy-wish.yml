@@ -1,12 +1,18 @@
 name: Get mhy wish
 on:
-  # # test push, del later
-  # push:
-  #   branches:
-  #     - master
-  #   paths:
-  #     - "script/**"
-  #     - ".github/workflows/get-wish-mhy-hsr.yml"
+  push:
+    branches:
+      - master
+    paths:
+      - "script/requirements.txt"
+      # - "script/**"
+      # - ".github/workflows/get-wish-mhy-hsr.yml"
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - master
+    paths:
+      - "script/requirements.txt"
   schedule:
     # This is run at midnight UTC on Monday, Tuesday and Wednesday
     - cron: "0 16 * * 1-3"
