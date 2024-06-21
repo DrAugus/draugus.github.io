@@ -6,7 +6,7 @@ const prefixHistory = '/course/history';
 const prefixLang = '/course/literature/language';
 const prefixXiwen = '/xiwen';
 const prefixDiseaseRecord = '/disease/record';
-const prefixCommandTools = '/code-notes/cmd-line-tools'
+const prefixCommandTools = '/code-notes/cmd-line-tools';
 const sidebarEat = [
     { text: '吃饭了', link: '/eat/' },
     { text: '零食', link: '/eat/snack' },
@@ -596,7 +596,8 @@ const sidebarRandomNotes = [
     { text: '梅桃樱', link: '/random-notes/flower' },
     { text: '学位服', link: '/random-notes/academic-dress' },
     { text: '中国有14亿人 而我还是单身', link: '/random-notes/bachelor' },
-    { text: '身份证', link: '/random-notes/id_card' },
+    { text: '身份证', link: '/random-notes/id-card' },
+    { text: '日本行政区划', link: '/random-notes/divisions-jp' },
 ];
 const sidebarCareer = [
     { text: '简历', link: '/career/cv' },
@@ -620,6 +621,9 @@ const sidebarCareer = [
         ]
     },
 ];
+const sidebarDev = [
+    { text: '地图数据集', link: '/dev/map-data' },
+];
 const sidebarExam = [
     { text: '高考', link: '/exam/gaokao' },
     {
@@ -631,9 +635,9 @@ const sidebarExam = [
             { text: '公务员考试', link: '/exam/certificate/gwy' },
         ]
     },
-]
+];
 
-const prefixWoman = '/thought/woman'
+const prefixWoman = '/thought/woman';
 const sidebarThought = [
     // { text: '想法', link: '/thought/' },
     { text: '未来', link: '/thought/future' },
@@ -750,6 +754,7 @@ export const sidebar = {
     '/pursuing-education/': sidebarPursuingEducation,
     '/random-notes/': sidebarRandomNotes,
     '/career/': sidebarCareer,
+    '/dev/': sidebarDev,
     '/exam/': sidebarExam,
     '/thought/': sidebarThought,
     '/grumbling/': sidebarGrumbling,

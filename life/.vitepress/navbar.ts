@@ -58,6 +58,7 @@ export const navbar = [
     text: '待定',
     items: [
       { text: '散记', link: '/random-notes/', activeMatch: '/random-notes/' },
+      { text: '开发', link: '/dev/', activeMatch: '/dev/' },
       { text: '思考', link: '/thought/', activeMatch: '/thought/' },
       { text: '职业', link: '/career/', activeMatch: '/career/' },
       {

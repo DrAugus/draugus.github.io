@@ -58,16 +58,17 @@ const findInChinaCities = (name: string) => {
 
 interface GlobalCity {
   name: string,
-  lat: string,
-  lng: string,
-  country: string,
-  admin1: string,
-  admin2: string,
+  name_en: string,
+  kanji: string,
+  kana: string,
+  roman: string,
+  lat: number,
+  lng: number,
 }
 
 const findInGlobalCities = (name: string): GlobalCity | null => {
   for (const city of japanCities) {
-    if (name === city.name) {
+    if (isEqualCity(name, city.name_en)) {
       return city;
     }
   }
@@ -202,16 +203,16 @@ const getGlobalMarkers = (AMap) => {
   for (let cityInfo of japanCityVisitedTimes) {
 
     const city = cityInfo.city;
-    const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
-
     let curCityData = findInGlobalCities(city);
+    const nameCity = curCityData?.name;
+    const content = nameCity + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
     let number = cityInfo.times;
     if (cityInfo.resident) number += 100;
     if (curCityData && number) {
       let color = getColorByNumber(number);
       textStyle.backgroundColor = color;
       let marker = new AMap.LabelMarker({
-        name: city,
+        name: nameCity,
         position: [curCityData.lng, curCityData.lat],
         zIndex: number,
         text: {
