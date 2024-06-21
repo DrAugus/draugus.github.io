@@ -1,8 +1,8 @@
-import type { ChinaExploreRecord } from '../../type';
+import type { ExploreRecord } from '../../../type';
 
 export const LinkChinaPrefix = '/trip/china';
 
-export const CHINA_VISITED_DATA: ChinaExploreRecord[] = [
+export const VISITED_CHINA: ExploreRecord[] = [
     {
         id: '北京', info: [
             {

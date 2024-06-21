@@ -3,12 +3,13 @@ import { onMounted, onUnmounted, ref } from "vue";
 // import AMapLoader from "@amap/amap-jsapi-loader";
 
 import { citiesData } from "../../data/trip/cities";
-import { CHINA_VISITED_DATA } from "../../data/trip/china";
+import japanCities from "../../data/trip/citiesjp.json";
+import { VISITED_CHINA } from "../../data/trip/visited/china";
+import { VISITED_JAPAN } from "../../data/trip/visited/japan";
 import { sortedLastTravelogue, isEqualCity, linkTravelogue } from '../../data/trip/travelogue';
-import { ChinaExploreRecord } from "../../type";
+import { ExploreRecord } from "../../type";
 
-let map = null;
-
+let map: any = null;
 
 let icon = {
   type: 'image',
@@ -46,12 +47,31 @@ let LabelsData = [
   },
 ];
 
-const findInCities = (name) => {
+const findInChinaCities = (name: string) => {
   for (const city of citiesData) {
     if (name === city.name) {
       return city;
     }
   }
+};
+
+
+interface GlobalCity {
+  name: string,
+  lat: string,
+  lng: string,
+  country: string,
+  admin1: string,
+  admin2: string,
+}
+
+const findInGlobalCities = (name: string): GlobalCity | null => {
+  for (const city of japanCities) {
+    if (name === city.name) {
+      return city;
+    }
+  }
+  return null;
 };
 
 let colorLegend = {
@@ -64,7 +84,6 @@ let colorLegend = {
   100000: '#792a17',
 };
 
-const visitedData = CHINA_VISITED_DATA;
 
 interface CityTimes {
   city: string,
@@ -72,8 +91,8 @@ interface CityTimes {
   resident: boolean,
 }
 
-function extractCityAndTimes(data: ChinaExploreRecord[]) {
-  return data.reduce((acc: CityTimes[], item) => {
+const extractCityAndTimes = (data: ExploreRecord[]) =>
+  data.reduce((acc: CityTimes[], item) => {
     // 检查当前项是否有 info 字段  
     if (item.info) {
       let obj: CityTimes = {
@@ -106,10 +125,11 @@ function extractCityAndTimes(data: ChinaExploreRecord[]) {
     }
     return acc;
   }, []);
-}
 
-const cityVisitedTimes = extractCityAndTimes(visitedData);
-// console.log(cityVisitedTimes);
+const chinaCityVisitedTimes = extractCityAndTimes(VISITED_CHINA);
+// console.log(chinaCityVisitedTimes);
+const japanCityVisitedTimes = extractCityAndTimes(VISITED_JAPAN);
+// console.log(japanCityVisitedTimes);
 
 const getLastTravelogueLink = (city: string) => {
 
@@ -136,14 +156,14 @@ const getLastTravelogueLink = (city: string) => {
   return linkTravelogue(last.date);
 };
 
-const getMarkers = (AMap) => {
+const getChinaMarkers = (AMap) => {
   let markers: any[] = [];
-  for (let cityInfo of cityVisitedTimes) {
+  for (let cityInfo of chinaCityVisitedTimes) {
 
     const city = cityInfo.city;
     const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
 
-    let curCityData = findInCities(city);
+    let curCityData = findInChinaCities(city);
     let number = cityInfo.times;
     if (cityInfo.resident) number += 100;
     if (curCityData && number) {
@@ -152,6 +172,42 @@ const getMarkers = (AMap) => {
       let marker = new AMap.LabelMarker({
         name: city,
         position: [curCityData.x, curCityData.y],
+        zIndex: number,
+        text: {
+          content: content,
+          direction: 'center',
+          style: textStyle,
+        }
+      });
+      const link = getLastTravelogueLink(city);
+      if (link !== '') {
+        marker.on('click', function (e) {
+          // 在新标签页打开链接
+          window.open(getLastTravelogueLink(city), '_blank');
+        });
+      }
+      markers.push(marker);
+    }
+  }
+  return markers;
+};
+
+const getGlobalMarkers = (AMap) => {
+  let markers: any[] = [];
+  for (let cityInfo of japanCityVisitedTimes) {
+
+    const city = cityInfo.city;
+    const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
+
+    let curCityData = findInGlobalCities(city);
+    let number = cityInfo.times;
+    if (cityInfo.resident) number += 100;
+    if (curCityData && number) {
+      let color = getColorByNumber(number);
+      textStyle.backgroundColor = color;
+      let marker = new AMap.LabelMarker({
+        name: city,
+        position: [curCityData.lng, curCityData.lat],
         zIndex: number,
         text: {
           content: content,
@@ -187,7 +243,7 @@ function getColorByNumber(number) {
   return color;
 }
 
-const aMapLoader = ref(null);
+const aMapLoader: any = ref(null);
 
 onMounted(async () => {
 
@@ -224,9 +280,9 @@ onMounted(async () => {
           layer.add([]);
           // 图层添加到地图
           map.add(layer);
-          let mark = getMarkers(AMap);
-          layer.add(mark);
-          // console.log(mark);
+          layer.add(getChinaMarkers(AMap));
+          layer.add(getGlobalMarkers(AMap));
+          console.log(getGlobalMarkers(AMap));
         })
         .catch((e) => {
           console.log(e);

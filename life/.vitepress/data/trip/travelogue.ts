@@ -13,7 +13,7 @@ export const dataTravelogue: TravelogueInfo[] = [
     { title: '长春', date: new Date('2023/05/27'), city: '长春' },
     { title: '南宁', date: new Date('2023/06/10'), city: '南宁' },
     { title: '深港珠柳州', date: new Date('2023/06/28'), city: ['深圳', '香港', '珠海', '柳州'] },
-    { title: '日本', date: new Date('2023/07/20'), city: ['东京', '大版', '京都'] },
+    { title: '日本', date: new Date('2023/07/20'), city: ['Tokyo', 'Kyoto', 'Osaka'] },
     { title: '青岛淄博济宁', date: new Date('2023/08/03'), city: ['青岛', '淄博', '济宁'] },
     { title: '南京', date: new Date('2023/08/09'), city: '南京' },
     { title: '桂林', date: new Date('2023/09/02'), city: '桂林' },
@@ -33,9 +33,8 @@ export const sortedLastTravelogue = [...dataTravelogue].sort((a, b) => {
 });
 
 export const isEqualCity = (cityA: string, cityB: string) => {
-    if (cityA === cityB) {
-        return true;
-    }
+    if (cityA === cityB) { return true; }
+    if (cityA.toLowerCase() === cityB.toLowerCase()) { return true; }
     if ((cityA.length < cityB.length && cityB.includes(cityA)) ||
         (cityA.length > cityB.length && cityA.includes(cityB))) {
         return true;
