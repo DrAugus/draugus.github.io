@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "地图数据集",
+            "desc": "地图数据集 本站使用了很多地图集，有用到 ECharts 和 Amap 等等。 具体代码实现可以参",
+            "link": "/dev/map-data",
+            "date": "2024-06-21"
+        },
+        {
+            "title": "日本的行政区划",
+            "desc": "日本的行政区划 日本的行政区划划分清晰，主要可以分为两级。 1. **一级行政区划**： - 都（",
+            "link": "/random-notes/divisions-jp",
+            "date": "2024-06-21"
+        },
+        {
             "title": "探索",
             "desc": "探索 探索城市及次数 点击下方地图标签可跳转旅行游记 ::: import PlaceVisite",
             "link": "/trip/explore",
@@ -108,18 +120,6 @@
             "desc": "海口 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20240415",
             "date": "2024-06-21"
-        },
-        {
-            "title": "贵阳 ",
-            "desc": "贵阳 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20240426",
-            "date": "2024-05-21"
-        },
-        {
-            "title": "武汉 ",
-            "desc": "武汉 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20240508",
-            "date": "2024-05-27"
         }
     ]
 }
