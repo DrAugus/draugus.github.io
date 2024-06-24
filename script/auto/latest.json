@@ -1,4 +1,12 @@
 {
+    "life/exam/gaokao.md": {
+        "title": "高考",
+        "date": 1718165336
+    },
+    "life/trip/abroad/asia/korean.md": {
+        "title": "韩国",
+        "date": 1718349654.0
+    },
     "life/dev/map-data.md": {
         "title": "地图数据集",
         "date": 1718950538.0
@@ -119,10 +127,6 @@
         "title": "日本",
         "date": 1716791141
     },
-    "life/trip/abroad/asia/korean.md": {
-        "title": "韩国",
-        "date": 1718349654.0
-    },
     "life/trip/china/hongkong.md": {
         "title": "香港",
         "date": 1718349654.0
@@ -197,10 +201,6 @@
     },
     "life/daily/bad-product.md": {
         "title": "踩雷产品",
-        "date": 1718165336
-    },
-    "life/exam/gaokao.md": {
-        "title": "高考",
         "date": 1718165336
     },
     "life/trip/suixinfei.md": {

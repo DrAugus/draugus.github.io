@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "高考",
+            "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
+            "link": "/exam/gaokao",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "韩国",
+            "desc": "韩国 旅游局 韩国旅游发展局 ::: 济州岛 济州岛的夏季潮湿多雨，多台风；冬季温差大，海风强烈，",
+            "link": "/trip/abroad/asia/korean",
+            "date": "2024-06-14"
+        },
+        {
             "title": "地图数据集",
             "desc": "地图数据集 本站使用了很多地图集，有用到 ECharts 和 Amap 等等。 具体代码实现可以参",
             "link": "/dev/map-data",
@@ -107,18 +119,6 @@
             "title": "桂林",
             "desc": "桂林 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230902",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "潮汕地区",
-            "desc": "潮汕地区 import CityLink from '../../.vitepress/compo",
-            "link": "/trip/travelogue/20240404",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "海口",
-            "desc": "海口 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20240415",
             "date": "2024-06-21"
         }
     ]
