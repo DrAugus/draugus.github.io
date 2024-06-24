@@ -11,6 +11,19 @@
 是中国大陆首个大学联盟，于2009年10月启动，联盟成员包括清华大学、北京大学、浙江大学、复旦大学、上海交通大学、南京大学、西安交通大学、中国科学技术大学、哈尔滨工业大学9所高校。
 :::
 
+:::danger 成绩查询
+
+以下所有网站调用的都是同一接口：[录取查询](https://datacenter.haeea.cn/PagePZQuery/ShowPZLQ.aspx)，[高考成绩查询](https://datacenter.haeea.cn/PagePZQuery/ShowPZCJ.aspx)
+
+- [河南省普通高校招生考生服务平台](https://pzwb.haeea.cn/)
+- [河南省教育厅网站](http://jyt.henan.gov.cn/)
+- [河南省教育考试院网站](http://www.haeea.cn)
+- [河南招生考试信息网](http://www.heao.com.cn)
+- [河南省阳光高考信息平台](http://gaokao.haedu.cn/)
+- 河南省教育考试院官微
+- “招生考试之友”微信公众号
+:::
+
 :::danger 链接收录
 
 - [2024强基计划](https://gaokao.chsi.com.cn/gkxx/zt/qjjh2024.shtml)
