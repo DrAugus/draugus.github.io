@@ -14,23 +14,23 @@ def get_url_data(api_url):
     return data
 
 
-api_prefix = 'https://bbs-api.miyoushe.com/post/wapi/'
+api_prefix = "https://bbs-api.miyoushe.com/post/wapi/"
 
-api_url_news_list = api_prefix + 'getNewsList'
-api_url_post_full = api_prefix + 'getPostFull'
+api_url_news_list = api_prefix + "getNewsList"
+api_url_post_full = api_prefix + "getPostFull"
 
-api_url_news_list += '?gids=2'
+api_url_news_list += "?gids=2"
 # https://augusmeow.github.io/code/api/mihoyo
 # type: 1 公告 2 活动 3 资讯
 # 星穹铁道 跃迁在公告分类里
-api_url_news_list += '&type=1'
-api_url_news_list += '&page_size=50'
+api_url_news_list += "&type=1"
+api_url_news_list += "&page_size=50"
 
 
-api_url_post_full += '?post_id='
+api_url_post_full += "?post_id="
 
 data = get_url_data(api_url_news_list)
-json_str = json.dumps(data['data']['list'])
+json_str = json.dumps(data["data"]["list"])
 data_dict = json.loads(json_str)
 
 print(api_url_news_list)
@@ -57,62 +57,65 @@ warp_arr = [[], [], []]
 
 for obj in data_dict:
 
-    pattern_char = '限定5星角色'
-    match_char = re.search(pattern_char, obj['post']['content'], re.IGNORECASE)
+    pattern_char = "限定5星角色"
+    match_char = re.search(pattern_char, obj["post"]["content"], re.IGNORECASE)
     if match_char:
         warp_arr[0].append(obj)
 
-    pattern_lc = '限定5星武器'
-    match_lc = re.search(pattern_lc, obj['post']['content'], re.IGNORECASE)
+    pattern_lc = "限定5星武器"
+    match_lc = re.search(pattern_lc, obj["post"]["content"], re.IGNORECASE)
     if match_lc:
         warp_arr[1].append(obj)
 
-    pattern_lc = '集录祈愿'
-    match_lc = re.search(pattern_lc, obj['post']['content'], re.IGNORECASE)
+    pattern_lc = "集录祈愿"
+    match_lc = re.search(pattern_lc, obj["post"]["content"], re.IGNORECASE)
     if match_lc:
         warp_arr[2].append(obj)
 
 post_id_arr = []
 idx = 0
 
-output = ''
+output = ""
 
 for warp_info in warp_arr:
 
     tmp_post_id = []
     for get_warp in warp_info:
 
-        subject = get_warp['post']['subject']
-        matches = re.findall(r'「(.*?)」', subject, re.DOTALL)
-        print_wish_name = '----- wish name -----\n'
-        print_wish_name += str(matches) + '\n' + '----- --------- -----\n'
+        subject = get_warp["post"]["subject"]
+        matches = re.findall(r"「(.*?)」", subject, re.DOTALL)
+        print_wish_name = "----- wish name -----\n"
+        print_wish_name += str(matches) + "\n" + "----- --------- -----\n"
         output += print_wish_name
         print(print_wish_name)
 
-        post_id = get_warp['post']['post_id']
+        post_id = get_warp["post"]["post_id"]
         tmp_post_id.append(post_id)
 
-        structured_content = get_warp['post']['structured_content']
+        structured_content = get_warp["post"]["structured_content"]
         if len(structured_content) == 0:
             continue
         # 先去除可能的转义字符
-        structured_content = structured_content.replace('\\\\', '\\')
+        structured_content = structured_content.replace("\\\\", "\\")
         data_subject = json.loads(structured_content)
-        inserts = [item["insert"] for item in data_subject if "insert" in item and isinstance(
-            item["insert"], str)]
+        inserts = [
+            item["insert"]
+            for item in data_subject
+            if "insert" in item and isinstance(item["insert"], str)
+        ]
         merged_string = "".join(inserts)
         # print(merged_string)
 
-        matches = re.findall(r'「(.*?)」', merged_string, re.DOTALL)
-        output += str(matches) + '\n'
+        matches = re.findall(r"「(.*?)」", merged_string, re.DOTALL)
+        output += str(matches) + "\n"
         print(matches)
 
-        img_url = get_warp['post']['images']
+        img_url = get_warp["post"]["images"]
 
         # print('structured_content', structured_content)
         # print('subject_zh', subject_zh)
-        output += 'img_url' + str(img_url) + '\n'
-        print('img_url', img_url)
+        output += "img_url" + str(img_url) + "\n"
+        print("img_url", img_url)
         # print('post_id', post_id)
 
         # img_type = img_url[img_url[0].rfind('.', 0):]
@@ -124,22 +127,21 @@ for warp_info in warp_arr:
         # modify_subject += '_' + image_times + img_type
         # print('modify_subject', modify_subject)
 
-        output += '================\n'
-        print('============')
+        output += "================\n"
+        print("============")
 
     idx = idx + 1
     post_id_arr.append(tmp_post_id)
-    output += '================\n'
-    print('============')
+    output += "================\n"
+    print("============")
 
-output += f'post_id_arr\n{post_id_arr}'
-print('post_id_arr', post_id_arr)
-post_id_link_arr = [api_url_post_full +
-                    v for sublist in post_id_arr for v in sublist]
-output += f'post_id_link_arr\n{post_id_arr}'
-print('post_id_link_arr', post_id_link_arr)
+output += f"post_id_arr\n{post_id_arr}"
+print("post_id_arr", post_id_arr)
+post_id_link_arr = [api_url_post_full + v for sublist in post_id_arr for v in sublist]
+output += f"post_id_link_arr\n{post_id_arr}"
+print("post_id_link_arr", post_id_link_arr)
 
 current_path = os.path.dirname(__file__)
-filename = current_path + '/auto/mhy2zh'
-with open(filename, 'w', encoding="utf-8") as file:
+filename = current_path + "/auto/mhy2zh"
+with open(filename, "w", encoding="utf-8") as file:
     file.write(output)
