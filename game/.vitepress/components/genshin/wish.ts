@@ -816,6 +816,17 @@ export const WISH: WishAll = {
       version: "4.7",
       wishName: ["流霆贯夜", "敕诫枢谋"],
       url: ["?", "?"]
+    }, {
+      name: ["Romaritime Meluserenity", "Chanson of Many Waters"],
+      image: [1, 2],
+      shortName: ["Sigewinne", "Furina"],
+      start: "2024/06/25 18:00:00 +0800",
+      end: "2024/07/16 14:59:00 +0800",
+      wish5star: ["sigewinne", "furina"],
+      wish4star: ["noelle", "gaming", "rosaria"],
+      version: "4.7",
+      wishName: ["柔柔海露心", "众水的颂诗"],
+      url: ["?", "?"]
     },
   ],
   weapons: [
@@ -1360,6 +1371,13 @@ export const WISH: WishAll = {
       end: "2024/06/25 17:59:00 +0800",
       wish5star: ["Absolution", "Light of Foliar Incision"],
       wish4star: ["Sacrificial Sword", "Sacrificial Greatsword", "The Widsith", "The Stringless"],
+    }, {
+      name: "Epitome Invocation",
+      image: 66,
+      start: "2024/06/25 18:00:00 +0800",
+      end: "2024/07/16 14:59:00 +0800",
+      wish5star: ["Silvershower Heartstrings", "Splendor of Tranquil Waters"],
+      wish4star: ["Lion's Roar", "Favonius Lance", "Favonius Codex", "Sacrificial Bow"],
     },
   ],
 };
