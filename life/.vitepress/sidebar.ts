@@ -1,5 +1,4 @@
-import { modifyTravelogue } from "./data/trip/travelogueToSidebar";
-import { LinkName } from "./type";
+import { setTravelogueSidebar } from "./data/trip/travelogue";
 
 const prefixArticle = '/course/literature/article';
 const prefixHistory = '/course/history';
@@ -78,7 +77,7 @@ const sidebarTrip = [
 const sidebarTripTravelogue = [
     { text: '游记', link: '/trip/travelogue/' },
 ]
-    .concat(...modifyTravelogue());
+    .concat(...setTravelogueSidebar());
 
 
 const sidebarArtsSpeech = [
