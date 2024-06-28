@@ -1,4 +1,8 @@
 {
+    "life/trip/travelogue/index.md": {
+        "title": "游记",
+        "date": 1716791141
+    },
     "life/exam/gaokao.md": {
         "title": "高考",
         "date": 1718165336
@@ -265,10 +269,6 @@
     },
     "life/trip/index.md": {
         "title": "规划指南",
-        "date": 1716791141
-    },
-    "life/trip/travelogue/index.md": {
-        "title": "游记",
         "date": 1716791141
     },
     "life/code/cpp/concept/lambda.md": {

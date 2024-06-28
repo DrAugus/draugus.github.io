@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "游记",
+            "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
+            "link": "/trip/travelogue/index",
+            "date": "2024-05-27"
+        },
+        {
             "title": "高考",
             "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
             "link": "/exam/gaokao",
@@ -113,12 +119,6 @@
             "title": "南京",
             "desc": "南京 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230809",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "桂林",
-            "desc": "桂林 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230902",
             "date": "2024-06-21"
         }
     ]
