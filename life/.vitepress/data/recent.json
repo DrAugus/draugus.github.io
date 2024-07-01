@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "隐私",
+            "desc": "隐私 清除任务栏固定应用的最近打开历史。在设置中，个性化设置-开始，关掉【在“开始”菜单或任务栏的",
+            "link": "/code/os/windows/private",
+            "date": "2024-06-28"
+        },
+        {
+            "title": "游记",
+            "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
+            "link": "/trip/travelogue/index",
+            "date": "2024-05-27"
+        },
+        {
             "title": "高考",
             "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
             "link": "/exam/gaokao",
@@ -107,18 +119,6 @@
             "title": "青岛淄博济宁",
             "desc": "青岛淄博济宁 import CityLink from '../../.vitepress/com",
             "link": "/trip/travelogue/20230803",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "南京",
-            "desc": "南京 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230809",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "桂林",
-            "desc": "桂林 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230902",
             "date": "2024-06-21"
         }
     ]
