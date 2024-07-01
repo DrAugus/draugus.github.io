@@ -29,7 +29,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  py-life-recent:
     runs-on: ubuntu-latest
     defaults:
       run:
