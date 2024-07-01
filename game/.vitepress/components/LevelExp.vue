@@ -58,7 +58,7 @@ export default {
 
     showEXP() {
       let obj = this.getEXP(this.lv1, this.lv2, this.got, this.money);
-      console.log(obj)
+      // console.log(obj)
       this.expNeed = obj.show;
       this.prefixInfo = obj.objInfo?.prefixInfo;
       this.dayNeed = obj.objInfo?.dayInfo;
@@ -79,7 +79,7 @@ export default {
       let resinDayTotal = TOTAL_DAY_RENEW + resinPlus;
       let dayEXPTotal = resin2exp(resinDayTotal) + this.dailyTask;
       let daySpend = Math.ceil(exp / dayEXPTotal);
-      console.info("money", money, "exp", exp, "resin", resinDayTotal, "daySpend", daySpend);
+      // console.info("money", money, "exp", exp, "resin", resinDayTotal, "daySpend", daySpend);
       return {
         daySpend: daySpend,
         cost: cost
@@ -130,13 +130,13 @@ export default {
         for (let i = lv1; i < lv2; ++i) {
           exp += this.EXP[i];
         }
-        console.info("exp", exp);
+        // console.info("exp", exp);
 
         got = parseInt(got);
         if (got > exp) return show;
 
         exp -= got;
-        console.info("got", got);
+        // console.info("got", got);
         objInfo = this.showMore(this.getDaySpend(exp, money));
         show = "所需经验为：" + exp;
       }
@@ -159,7 +159,7 @@ export default {
     tipsInfo.push(str)
     str = '不计算除每日任务外其他任务的奖励'
     tipsInfo.push(str)
-    console.log(tipsInfo)
+    // console.log(tipsInfo)
     this.tipsInfo = tipsInfo
     this.expName = expName
   },

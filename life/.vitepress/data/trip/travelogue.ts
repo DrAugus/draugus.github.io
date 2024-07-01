@@ -1,5 +1,5 @@
-import { TravelogueInfo } from "../../type";
-import { modifyDate } from "../../utils";
+import { CardData, CardLink, LinkName, TravelogueInfo } from "../../type";
+import { modifyDate, modifyDate1 } from "../../utils";
 
 const dataTravelogue: TravelogueInfo[] = [
     { title: '长沙', date: new Date('2022/08/10'), city: '长沙' },
@@ -31,6 +31,37 @@ export const sortedLastTravelogue = [...dataTravelogue].sort((a, b) => {
     if (a.date > b.date) return -1;
     return 0;
 });
+
+export const setTravelogueSidebar = () => {
+    const result: any[] = [];
+    sortedLastTravelogue.forEach(travelogue => {
+        const year = travelogue.date.getFullYear();
+        const month = travelogue.date.getMonth() + 1;
+        let yearItem = result.find(item => item.text === `${year}年`);
+        if (!yearItem) {
+            yearItem = {
+                text: `${year}年`,
+                items: []
+            };
+            result.push(yearItem);
+        }
+        let monthItem = yearItem.items.find(item => item.text === `${month}月`);
+        if (!monthItem) {
+            monthItem = {
+                text: `${month}月`,
+                items: []
+            };
+            yearItem.items.push(monthItem);
+        }
+        let day = travelogue.date.getDate();
+        let linkName: LinkName = {
+            text: `${day}日${travelogue.title}`,
+            link: linkTravelogue(travelogue.date)
+        };
+        monthItem.items.push(linkName);
+    });
+    return result;
+};
 
 export const isEqualCity = (cityA: string, cityB: string) => {
     if (cityA === cityB) { return true; }
@@ -70,3 +101,37 @@ export const getCityLink = (city: string, date?: Date) => {
     }
     return dataByCity;
 };
+
+const getTravelogueCard = (): CardData[] => {
+
+    const map = new Map<number, CardLink[]>();
+    sortedLastTravelogue.forEach(v => {
+        const year = v.date.getFullYear();
+        const sDate = modifyDate1(v.date);
+        const desc = `${sDate}起始游记`;
+
+        const cardData: CardLink = {
+            icon: '',
+            title: v.title,
+            // desc,
+            link: linkTravelogue(v.date),
+            date: sDate,
+        };
+
+        const currentYearData = map.get(year) || [];
+        currentYearData.push(cardData);
+        map.set(year, currentYearData);
+    });
+
+    let res: CardData[] = [];
+    map.forEach((v, k) => {
+        res.push({
+            title: `${k}年`,
+            items: v
+        });
+    });
+
+    return res;
+};
+
+export const CARD_TRAVELOGUE_DATA: CardData[] = getTravelogueCard();
