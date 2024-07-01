@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "Mergify",
+            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
+            "link": "/code/build/mergify",
+            "date": "2024-06-17"
+        },
+        {
             "title": "隐私",
             "desc": "隐私 清除任务栏固定应用的最近打开历史。在设置中，个性化设置-开始，关掉【在“开始”菜单或任务栏的",
             "link": "/code/os/windows/private",
@@ -113,12 +119,6 @@
             "title": "日本 ",
             "desc": "日本 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230720",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "青岛淄博济宁",
-            "desc": "青岛淄博济宁 import CityLink from '../../.vitepress/com",
-            "link": "/trip/travelogue/20230803",
             "date": "2024-06-21"
         }
     ]

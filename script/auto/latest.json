@@ -1,4 +1,8 @@
 {
+    "life/code/build/mergify.md": {
+        "title": "Mergify",
+        "date": 1718590917.0
+    },
     "life/code/os/windows/private.md": {
         "title": "隐私",
         "date": 1719564205.0
@@ -114,10 +118,6 @@
     "life/trip/flights.md": {
         "title": "航线",
         "date": 1718677787.0
-    },
-    "life/code/build/mergify.md": {
-        "title": "Mergify",
-        "date": 1718590917.0
     },
     "life/random-notes/bachelor.md": {
         "title": "中国有14亿人，而我还是单身",
