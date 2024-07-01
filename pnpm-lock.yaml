@@ -60,7 +60,7 @@ importers:
         version: 2.1.0
       vite:
         specifier: ^5.0.12
-        version: 5.3.1(sass@1.77.6)
+        version: 5.3.2(sass@1.77.6)
       vitepress:
         specifier: 1.2.3
         version: 1.2.3(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.6)(search-insights@2.13.0)
@@ -1206,8 +1206,8 @@ packages:
       terser:
         optional: true
 
-  vite@5.3.1:
-    resolution: {integrity: sha512-XBmSKRLXLxiaPYamLv3/hnP/KXDai1NDexN0FpkTaZXTfycHvkRHoenpgl/fvuK/kPbB6xAgoyiryAhQNxYmAQ==}
+  vite@5.3.2:
+    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1752,9 +1752,9 @@ snapshots:
       vite: 5.2.9(sass@1.77.6)
       vue: 3.4.31
 
-  '@vitejs/plugin-vue@5.0.5(vite@5.3.1(sass@1.77.6))(vue@3.4.31)':
+  '@vitejs/plugin-vue@5.0.5(vite@5.3.2(sass@1.77.6))(vue@3.4.31)':
     dependencies:
-      vite: 5.3.1(sass@1.77.6)
+      vite: 5.3.2(sass@1.77.6)
       vue: 3.4.31
 
   '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.12)(leaflet@1.9.4)':
@@ -2345,10 +2345,10 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.6
 
-  vite@5.3.1(sass@1.77.6):
+  vite@5.3.2(sass@1.77.6):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.38
+      postcss: 8.4.39
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
@@ -2408,7 +2408,7 @@ snapshots:
       '@shikijs/core': 1.6.2
       '@shikijs/transformers': 1.6.2
       '@types/markdown-it': 14.1.1
-      '@vitejs/plugin-vue': 5.0.5(vite@5.3.1(sass@1.77.6))(vue@3.4.31)
+      '@vitejs/plugin-vue': 5.0.5(vite@5.3.2(sass@1.77.6))(vue@3.4.31)
       '@vue/devtools-api': 7.2.1(vue@3.4.31)
       '@vue/shared': 3.4.27
       '@vueuse/core': 10.10.0(vue@3.4.31)
@@ -2417,7 +2417,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 6.3.0
       shiki: 1.6.2
-      vite: 5.3.1(sass@1.77.6)
+      vite: 5.3.2(sass@1.77.6)
       vue: 3.4.31
     optionalDependencies:
       markdown-it-mathjax3: 4.3.2
