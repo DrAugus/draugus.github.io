@@ -315,6 +315,7 @@ const sidebarCodeOS = [
     },
     {
         text: 'Windows', collapsed: false, items: [
+            { text: '隐私', link: '/code/os/windows/private' },
             { text: 'Chocolatey', link: '/code/os/windows/chocolatey' },
             { text: 'WSL', link: '/code/os/windows/wsl' },
             { text: 'VirtualBox', link: '/code/os/windows/VirtualBox' },
