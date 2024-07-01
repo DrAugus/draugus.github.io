@@ -88,3 +88,21 @@ conditions:
 ```
 
 :::
+
+:::danger `not` 关键字修改
+
+参看 [conditions](https://docs.mergify.com/configuration/conditions/)
+
+`-label~=^work` is **false** because there is a label matching the regular expression ^work but the condition is reversed with the **-** prefix.
+
+about [Modifiers](https://docs.mergify.com/configuration/conditions/#modifiers)
+
+```yml
+[ "-" ] [ "#" ] <attribute> [ <operator> <value> ]
+```
+
+The optional minus (-) operator at the beginning of the condition negates the result of the condition, acting as a “not” operator.
+
+The optional hash (#) operator is used to evaluate the length of a list when the attribute is a list.
+
+:::

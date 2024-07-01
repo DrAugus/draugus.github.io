@@ -48,7 +48,7 @@ pull_request_rules:
     conditions:
       - author=DrAugus
       - "title=feat: auto get mhy wish"
-      - -check-failure~=^deploy-
+      - check-success~=^deploy-
       - -check-failure~=^py-
     actions:
       merge:
