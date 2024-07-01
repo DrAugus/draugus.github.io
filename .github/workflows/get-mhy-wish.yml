@@ -53,7 +53,7 @@ jobs:
             echo "No changes to commit"  
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else  
-            git commit -m "Add changes" -a 
+            git commit -m "feat: auto wish" -a 
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
       # - name: Push changes

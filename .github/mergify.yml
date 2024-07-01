@@ -9,8 +9,8 @@ pull_request_rules:
   - name: automatic merge for dependabot pull requests
     conditions:
       - author=dependabot[bot]
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
+      - check-success~=^deploy-
+      - files!=requirements.txt
     actions:
       merge:
         method: merge
@@ -18,8 +18,8 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
+      - check-success~=^deploy-
+      - files!=requirements.txt
     actions:
       merge:
         method: merge
@@ -28,21 +28,49 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
+      - check-success~=^deploy-
+      - files!=requirements.txt
     actions:
       merge:
         method: merge
 
-  - name: automatic merge for python script latest life
+  - name: automatic merge for dependabot pull requests py
     conditions:
-      - author=DrAugus
-      - "title=docs: life latest"
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
+      - author=dependabot[bot]
+      - check-success~=^py-
+      - files=requirements.txt
     actions:
       merge:
         method: merge
+
+  - name: automatic merge for Renovate pull requests py
+    conditions:
+      - author=renovate[bot]
+      - check-success~=^py-
+      - files=requirements.txt
+    actions:
+      merge:
+        method: merge
+
+  - name: automatic merge for Requires.io pull requests py
+    conditions:
+      - title~=^\[requires.io\]
+      - head~=^requires-io
+      - check-success~=^py-
+      - files=requirements.txt
+    actions:
+      merge:
+        method: merge
+
+  # - name: automatic merge for python script latest life
+  #   conditions:
+  #     - author=DrAugus
+  #     - "title=docs: life latest"
+  #     - -check-failure~=^deploy-
+  #     - -check-failure~=^py-
+  #   actions:
+  #     merge:
+  #       method: merge
 
   - name: automatic merge for auto get mhy wish
     conditions:
