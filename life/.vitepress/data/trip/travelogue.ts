@@ -41,6 +41,7 @@ export const setTravelogueSidebar = () => {
         if (!yearItem) {
             yearItem = {
                 text: `${year}年`,
+                collapsed: false,
                 items: []
             };
             result.push(yearItem);
@@ -55,7 +56,7 @@ export const setTravelogueSidebar = () => {
         }
         let day = travelogue.date.getDate();
         let linkName: LinkName = {
-            text: `${day}日${travelogue.title}`,
+            text: `${day}日 ${travelogue.title}`,
             link: linkTravelogue(travelogue.date)
         };
         monthItem.items.push(linkName);

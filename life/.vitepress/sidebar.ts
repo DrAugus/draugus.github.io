@@ -598,6 +598,7 @@ const sidebarRandomNotes = [
     { text: '中国有14亿人 而我还是单身', link: '/random-notes/bachelor' },
     { text: '身份证', link: '/random-notes/id-card' },
     { text: '日本行政区划', link: '/random-notes/divisions-jp' },
+    { text: '中国面', link: '/random-notes/chinese-noodles' },
 ];
 const sidebarCareer = [
     { text: '简历', link: '/career/cv' },

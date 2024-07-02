@@ -7,6 +7,8 @@ from bs4 import BeautifulSoup
 import re
 import os
 
+gid = 6
+
 
 def get_url_data(api_url):
     response = requests.get(api_url)
@@ -19,18 +21,18 @@ api_prefix = "https://bbs-api.miyoushe.com/post/wapi/"
 api_url_news_list = api_prefix + "getNewsList"
 api_url_post_full = api_prefix + "getPostFull"
 
-api_url_news_list += "?gids=6"
+api_url_news_list += f"?gids={gid}"
 # https://augusmeow.github.io/code/api/mihoyo
 # type: 1 公告 2 活动 3 资讯
 # 星穹铁道 跃迁在公告分类里
 api_url_news_list += "&type=1"
 api_url_news_list += "&page_size=50"
 
+print(api_url_news_list)
+
 data = get_url_data(api_url_news_list)
 json_str = json.dumps(data["data"]["list"])
 data_dict = json.loads(json_str)
-
-print(api_url_news_list)
 
 # print(data_dict)
 
@@ -59,9 +61,9 @@ for obj in data_dict:
     if match_char:
         warp_arr[0].append(obj)
 
-    pattern_lc = "光锥活动跃迁"
-    match_lc = re.search(pattern_lc, obj["post"]["subject"], re.IGNORECASE)
-    if match_lc:
+    pattern_weapon = "光锥活动跃迁"
+    match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
+    if match_weapon:
         warp_arr[1].append(obj)
 
 post_id_arr = [[], []]
@@ -117,6 +119,6 @@ for warp_info in warp_arr:
 
 
 current_path = os.path.dirname(__file__)
-filename = current_path + "/auto/mhy6zh"
+filename = current_path + f"/auto/mhy{gid}zh"
 with open(filename, "w", encoding="utf-8") as file:
     file.write(output)

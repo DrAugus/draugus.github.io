@@ -110,6 +110,10 @@ Visit Japan Web 是指，提供办理入境手续的、“入境审查”、“�
 - 貨幣 日元
 - 緊急援助電話 警察：110，消防、救護車：119
 
+### 食在日本
+
+[日本の麺](https://www.meiji.co.jp/meiji-shokuiku/japaneseculture/column/noodles/)
+
 ## 夏季旅行
 
 ### 烟花会

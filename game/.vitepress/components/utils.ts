@@ -3,6 +3,7 @@ import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 export enum GameName {
   Genshin,
   HSR,
+  ZZZ,
 }
 
 export enum WishType {
@@ -48,8 +49,10 @@ export const getImgStyle =
     // replace char src
     homeImg = [];
     for (let v of current.obj) {
-      for (let vv of v.wish5star) {
-        homeImg.push(`/image/${gameName}/characters/full/${vv}.png`);
+      if (Array.isArray(v.wish5star)) {
+        for (let vv of v.wish5star) {
+          homeImg.push(`/image/${gameName}/characters/full/${vv}.png`);
+        }
       }
     }
     let style = {};
@@ -108,11 +111,13 @@ export const getTimelineHomeHero =
 export const getGameName = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return 'genshin';
   if (gameName === GameName.HSR) return 'hsr';
+  if (gameName === GameName.ZZZ) return 'zzz';
 };
 
 export const getWishName = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return '祈愿';
   if (gameName === GameName.HSR) return '跃迁';
+  if (gameName === GameName.ZZZ) return '调频';
 };
 
 // tag 0 no handle

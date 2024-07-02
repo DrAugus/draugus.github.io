@@ -1,4 +1,4 @@
-# 6 means hsr
+# 8 means zzz
 # hoyolab interface
 
 import json
@@ -12,7 +12,7 @@ import utils
 
 from enum import Enum
 
-gid = 6
+gid = 8
 
 
 # 定义全局枚举类型
@@ -53,27 +53,34 @@ for url in list_api_url_news_list:
 
 # print(data_dict)
 
-# 0 char 1 weapon
-warp_arr = [[], []]
+# 0 char 1 weapon 2 bangboo
+warp_arr = [[], [], []]
 
 for one_dict in data_dict:
     for obj in one_dict:
 
-        pattern_char = "5-star character"
+        pattern_char = "exclusive channel"
         pattern_char2 = "Character Event Warp"
         match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
         match_char2 = re.search(pattern_char2, obj["post"]["subject"], re.IGNORECASE)
         if match_char or match_char2:
             warp_arr[0].append(obj)
 
-        pattern_weapon = "5-star Light Cone"
+        pattern_weapon = "w-engine channel"
         pattern_weapon2 = "Light Cone Event Warp"
         match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
         match_weapon2 = re.search(pattern_weapon2, obj["post"]["subject"], re.IGNORECASE)
         if match_weapon or match_weapon2:
             warp_arr[1].append(obj)
 
-post_id_arr = [[], []]
+        pattern_weapon = "bangboo channel"
+        pattern_weapon2 = "Light Cone Event Warp"
+        match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
+        match_weapon2 = re.search(pattern_weapon2, obj["post"]["subject"], re.IGNORECASE)
+        if match_weapon or match_weapon2:
+            warp_arr[2].append(obj)
+
+post_id_arr = [[], [], []]
 idx = 0
 
 

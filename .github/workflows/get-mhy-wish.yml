@@ -5,14 +5,14 @@ on:
       - master
     paths:
       - "script/requirements.txt"
-      # - "script/**"
-      # - ".github/workflows/get-wish-mhy-hsr.yml"
+      - ".github/workflows/get-mhy-wish.yml"
   pull_request:
     types: [opened, synchronize]
     branches:
       - master
     paths:
       - "script/requirements.txt"
+      - ".github/workflows/get-mhy-wish.yml"      
   schedule:
     # This is run at midnight UTC on Monday, Tuesday and Wednesday
     - cron: "0 16 * * 1-3"
@@ -48,7 +48,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add auto/mhy2.json auto/mhy2old.json auto/mhy2zh auto/mhy6.json auto/mhy6zh
+          git add auto/mhy2.json auto/mhy2old.json auto/mhy2zh auto/mhy6.json auto/mhy6zh auto/mhy8.json auto/mhy8zh
           if git diff --cached --quiet; then  
             echo "No changes to commit"  
             echo "has_changes=false" >> $GITHUB_OUTPUT

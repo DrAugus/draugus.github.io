@@ -1,4 +1,4 @@
-import { City, Element, Weapon, Artifacts } from "./utils";
+import { City, Element, Weapon } from "./utils";
 
 export const CHARACTER = {
   firefly: {

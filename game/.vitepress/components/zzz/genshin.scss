@@ -1,0 +1,140 @@
+:root {
+    --ele-denro: #98e628;
+    --ele-geo: #e2b032;
+    --ele-electro: #d296fc;
+    --ele-hydro: #03ddfe;
+    --ele-pyro: #fa5d3e;
+    --ele-anemo: #57dcb0;
+    --ele-cryo: #84c2e6;
+    --ele-weapon: #ffb169;
+}
+
+@mixin ele-text-shadow($color) {
+    text-shadow: var($color) -1px -1px 4px, var($color) 1px -1px 4px, var($color) -1px 1px 4px, var($color) 1px 1px 4px, var($color) 0 0 10px;
+}
+
+.weapon {
+    background-color: var(--ele-weapon)
+}
+
+/*元素背景色*/
+.ele-dendro {
+    background-color: var(--ele-denro)
+}
+
+.ele-geo {
+    background-color: var(--ele-geo)
+}
+
+.ele-electro {
+    background-color: var(--ele-electro)
+}
+
+.ele-hydro {
+    background-color: var(--ele-hydro)
+}
+
+.ele-pyro {
+    background-color: var(--ele-pyro)
+}
+
+.ele-anemo {
+    background-color: var(--ele-anemo)
+}
+
+.ele-cryo {
+    background-color: var(--ele-cryo)
+}
+
+.text-shadow-weapon {
+    @include ele-text-shadow(var(--ele-weapon))
+}
+
+.ele-text-shadow-dendro {
+    @include ele-text-shadow(var(--ele-denro))
+}
+
+.ele-text-shadow-geo {
+    @include ele-text-shadow(var(--ele-geo))
+}
+
+.ele-text-shadow-electro {
+    @include ele-text-shadow(var(--ele-electro))
+}
+
+.ele-text-shadow-hydro {
+    @include ele-text-shadow(var(--ele-hydro))
+}
+
+.ele-text-shadow-pyro {
+    @include ele-text-shadow(var(--ele-pyro))
+}
+
+.ele-text-shadow-anemo {
+    @include ele-text-shadow(var(--ele-anemo))
+}
+
+.ele-text-shadow-cryo {
+    @include ele-text-shadow(var(--ele-cryo))
+}
+
+/*元素文本色*/
+.ele-text-dendro {
+    color: var(--ele-denro);
+}
+
+.ele-text-geo {
+    color: var(--ele-geo)
+}
+
+.ele-text-electro {
+    color: var(--ele-electro)
+}
+
+.ele-text-hydro {
+    color: var(--ele-hydro)
+}
+
+.ele-text-pyro {
+    color: var(--ele-pyro)
+}
+
+.ele-text-anemo {
+    color: var(--ele-anemo)
+}
+
+.ele-text-cryo {
+    color: var(--ele-cryo)
+}
+
+.event-item-background-weapon {
+    background: linear-gradient(to right, var(--ele-weapon), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-dendro {
+    background: linear-gradient(to right, var(--ele-denro), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-geo {
+    background: linear-gradient(to right, var(--ele-geo), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-electro {
+    background: linear-gradient(to right, var(--ele-electro), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-hydro {
+    background: linear-gradient(to right, var(--ele-hydro), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-pyro {
+    background: linear-gradient(to right, var(--ele-pyro), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-anemo {
+    background: linear-gradient(to right, var(--ele-anemo), rgb(0 0 0 / 0%)) no-repeat;
+}
+
+.event-item-background-cryo {
+    background: linear-gradient(to right, var(--ele-cryo), rgb(0 0 0 / 0%)) no-repeat;
+}

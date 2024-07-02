@@ -27,6 +27,7 @@ const combineLinkName = (linkName: LinkName[], gameName: string): LinkName[] => 
     let replaceName: string = '';
     if (gameName == 'genshin') replaceName = '祈愿';
     if (gameName == 'hsr') replaceName = '跃迁';
+    if (gameName == 'zzz') replaceName = '调频';
     let res: LinkName[] = [];
     linkName.forEach((item, index) => {
         res[index] = {
@@ -66,5 +67,9 @@ export const sidebar_zh = {
                 ...combineLinkName(wishLink, 'hsr'),
             ]
         },
+    ],
+
+    '/zzz/': [
+        ...combineLinkName(listLinkName, 'zzz'),
     ],
 };
