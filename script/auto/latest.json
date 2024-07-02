@@ -1,4 +1,20 @@
 {
+    "life/exam/gaokao.md": {
+        "title": "高考",
+        "date": 1718165336
+    },
+    "life/random-notes/chinese-noodles.md": {
+        "title": "中国面",
+        "date": 1719812980.0
+    },
+    "life/trip/abroad/asia/japan.md": {
+        "title": "日本",
+        "date": 1716791141
+    },
+    "life/trip/china/shaanxi/index.md": {
+        "title": "陕西",
+        "date": 1719812980.0
+    },
     "life/code/build/mergify.md": {
         "title": "Mergify",
         "date": 1718590917.0
@@ -10,10 +26,6 @@
     "life/trip/travelogue/index.md": {
         "title": "游记",
         "date": 1716791141
-    },
-    "life/exam/gaokao.md": {
-        "title": "高考",
-        "date": 1718165336
     },
     "life/trip/abroad/asia/korean.md": {
         "title": "韩国",
@@ -129,10 +141,6 @@
     },
     "life/code-notes/nipeima.md": {
         "title": "配环境",
-        "date": 1716791141
-    },
-    "life/trip/abroad/asia/japan.md": {
-        "title": "日本",
         "date": 1716791141
     },
     "life/trip/china/hongkong.md": {

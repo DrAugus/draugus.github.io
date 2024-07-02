@@ -2,6 +2,30 @@
     "title": "",
     "items": [
         {
+            "title": "高考",
+            "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
+            "link": "/exam/gaokao",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "中国面",
+            "desc": "中国面 兰州拉面 兰州拉面是甘肃省兰州地区的风味小吃，具有“筋、韧、滑、嫩”的特点，因为美味可口，",
+            "link": "/random-notes/chinese-noodles",
+            "date": "2024-07-01"
+        },
+        {
+            "title": "日本",
+            "desc": "日本 旅游局 日本国家旅游局，中文站点 ::: 游记 夏季游记，参看 日本东京/大版/京都2023",
+            "link": "/trip/abroad/asia/japan",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "陕西",
+            "desc": "陕西 西安 西安旅游线路可由“东、西、华、北、市”五个字概括。 **东**：即东线，时间一天，景点",
+            "link": "/trip/china/shaanxi/index",
+            "date": "2024-07-01"
+        },
+        {
             "title": "Mergify",
             "desc": "Mergify github 官方支持 [auto merge][github auto merg",
             "link": "/code/build/mergify",
@@ -18,12 +42,6 @@
             "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
             "link": "/trip/travelogue/index",
             "date": "2024-05-27"
-        },
-        {
-            "title": "高考",
-            "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
-            "link": "/exam/gaokao",
-            "date": "2024-06-12"
         },
         {
             "title": "韩国",
@@ -101,24 +119,6 @@
             "title": "长春",
             "desc": "长春 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230527",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "南宁",
-            "desc": "南宁 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230610",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "深港珠+柳州",
-            "desc": "深港珠+柳州 import CityLink from '../../.vitepress/com",
-            "link": "/trip/travelogue/20230628",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "日本 ",
-            "desc": "日本 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230720",
             "date": "2024-06-21"
         }
     ]
