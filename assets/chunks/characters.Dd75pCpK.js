@@ -1,0 +1,1 @@
+import{C as e,E as i,W as a}from"./utils.B6UskQzF.js";const o={liu_ping:{id:"liu_ping",name:"流萍",prefix:"",star:4,event_exclusive:!1,intro:"",city:e.Liyue,ele:i.hydro,weapon:a.polearm}};export{o as C};
