@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "mihoyo",
+            "desc": "mihoyo API 官方咨询 - 米游社 API prefix `https://bbs-api",
+            "link": "/code/api/mihoyo",
+            "date": "2024-07-03"
+        },
+        {
             "title": "高考",
             "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
             "link": "/exam/gaokao",
@@ -114,12 +120,6 @@
             "desc": "港珠澳广深 import CityLink from '../../.vitepress/comp",
             "link": "/trip/travelogue/20230429",
             "date": "2024-06-14"
-        },
-        {
-            "title": "长春",
-            "desc": "长春 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230527",
-            "date": "2024-06-21"
         }
     ]
 }
