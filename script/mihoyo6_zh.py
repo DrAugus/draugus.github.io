@@ -6,15 +6,9 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import os
+import utils
 
 gid = 6
-
-
-def get_url_data(api_url):
-    response = requests.get(api_url)
-    data = response.json()
-    return data
-
 
 api_prefix = "https://bbs-api.miyoushe.com/post/wapi/"
 
@@ -30,7 +24,7 @@ api_url_news_list += "&page_size=50"
 
 print(api_url_news_list)
 
-data = get_url_data(api_url_news_list)
+data = utils.get_url_data(api_url_news_list)
 json_str = json.dumps(data["data"]["list"])
 data_dict = json.loads(json_str)
 

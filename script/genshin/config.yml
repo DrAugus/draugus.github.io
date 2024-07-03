@@ -1,12 +1,12 @@
 LOG: 6
 # chinese or english
-SHOW_ZH: 0
+SHOW_ZH: 1
 # wish info
 SHOW_WISH: 1
 SHOW_WISH_CHAR: 1
 SHOW_WISH_WEAPON: 1
 # character
-SHOW_CHAR_INFO: 0
+SHOW_CHAR_INFO: 1
 # all event
 SHOW_ALL_EVENT: 0
 # url config

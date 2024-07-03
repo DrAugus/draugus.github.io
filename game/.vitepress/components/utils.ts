@@ -237,4 +237,4 @@ export const filterObject = (obj, callback) =>
   Object.fromEntries(Object.entries(obj)
     .filter(([key, val]) => callback(val, key)));
 
-export const combineQuoteZh = (str: string) => `「${str}」`;
+export const combineQuoteZh = (str: string) => str ? `「${str}」` : '';

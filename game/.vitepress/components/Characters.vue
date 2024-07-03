@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="filter-container">
+  <div class="filter-container" v-if="city">
     <div class="filter-title"> 世界</div>
     <div class="filter-info">
       <span v-for="(v, k, i) in city">
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div class="filter-container">
+  <div class="filter-container" v-if="elementStr">
     <div class="filter-title"> 元素</div>
     <div class="filter-info">
       <div class="genshin-element">
@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="filter-container">
+  <div class="filter-container" v-if="weapon">
     <div class="filter-title"> 战斗</div>
     <div class="filter-info">
       <span v-for="(v, k, i) in weapon">
@@ -61,14 +61,14 @@
   <div class="character-info">
 
     <CharModal v-for="(value, key, index) in info" :info="{
-      name: value.name,
-      prefix: value.prefix,
-      id: value.id,
-      intro: value.intro,
-      star: value.star,
-      ele: value.ele,
-      weapon: value.weapon,
-    }" :game="Game">
+        name: value.name,
+        prefix: value.prefix,
+        id: value.id,
+        intro: value.intro,
+        star: value.star,
+        ele: value.ele,
+        weapon: value.weapon,
+      }" :game="Game">
 
     </CharModal>
 
@@ -105,27 +105,27 @@ export default {
   methods: {
     filterEle(ele) {
       this.info = objFilter(this.Character, details => details.ele.id == ele);
-      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
+      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length;
     },
     filterWeapon(w) {
       this.info = objFilter(this.Character, details => details.weapon.id == w);
-      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
+      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length;
     },
     filterCity(c) {
       this.info = objFilter(this.Character, details => details.city.id == c);
-      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
+      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length;
     },
     filterStar(s) {
       this.info = objFilter(this.Character, details => details.star == s);
-      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
+      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length;
     },
     filterExclusive(e) {
       this.info = objFilter(this.Character, details => details.event_exclusive == e);
-      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
+      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length;
     },
     all() {
       this.info = this.Character;
-      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length
+      this.lenFilterChar = Object.getOwnPropertyNames(this.info).length;
     },
   }
 };

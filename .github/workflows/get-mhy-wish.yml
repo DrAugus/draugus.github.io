@@ -43,6 +43,8 @@ jobs:
           python mihoyo2_zh.py 
           python mihoyo6.py   
           python mihoyo6_zh.py
+          python mihoyo8.py   
+          python mihoyo8zh.py          
       - name: Commit files
         id: commit
         run: |

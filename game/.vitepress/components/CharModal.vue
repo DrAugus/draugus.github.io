@@ -34,10 +34,10 @@ export default {
     <div class="character-img" :class="info.star == 5 ? 'bg-5-star' : 'bg-4-star', 'char-img1'">
       <img :src='`/image/${gameName}/characters/${replaceAndLow(info.id)}.png`' object-fit: contain @error="replaceImg">
     </div>
-    <div class="character-ele">
+    <div class="character-ele" v-if="info.ele">
       <img :src="`/image/${gameName}/elements/${replaceAndLow(info.ele.id)}.png`" alt="{{1}}">
     </div>
-    <div v-if="game" class="character-weapon">
+    <div v-if="game && info.weapon" class="character-weapon">
       <img :src="`/image/${gameName}/elements/${(info.weapon.id).replace('The ', '').toLowerCase()}.png`" alt="{{1}}">
     </div>
     <div class="character-name">

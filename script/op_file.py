@@ -15,10 +15,16 @@ def write_file(arr, filename=current_path + "/.augus_output"):
             file.write(aa)
 
 
+def write_file_anything(anything, filename=current_path + "/.augus_output"):
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(anything)
+
+
 def open_and_read(filename, callback):
     if not len(filename):
         filename = current_path + "/test"
-    filename = current_path + filename
+    if current_path not in filename:
+        filename = current_path + filename
     with open(filename, "r", encoding="utf-8") as file_handle:
         line = file_handle.readline()
         arr_res = []
@@ -29,6 +35,23 @@ def open_and_read(filename, callback):
             arr_res.append(res)
             line = file_handle.readline()
         write_file(arr_res)
+
+
+def open_and_read_no_strip(filename, callback, output):
+    if not len(filename):
+        filename = current_path + "/test"
+    if current_path not in filename:
+        filename = current_path + filename
+    with open(filename, "r", encoding="utf-8") as file_handle:
+        line = file_handle.readline()
+        arr_res = []
+        while line:
+            line_str = line
+            res = callback(line_str)
+            # print('res', res)
+            arr_res.append(res)
+            line = file_handle.readline()
+        write_file(arr_res, output)
 
 
 def open_file(filename, callback):
@@ -44,6 +67,27 @@ def open_file(filename, callback):
             # print('res', res)
             arr_res.append(res)
             line = file_handle.readline()
+
+
+def prepend_to_file(filename, new_content):  
+    """  
+    在文件的开头插入新的内容。  
+  
+    参数:  
+    - filename: 要更新的文件名（字符串）  
+    - new_content: 要插入到文件开头的内容（字符串）  
+    """  
+    # 读取原文件内容  
+    try:  
+        with open(filename, 'r', encoding='utf-8') as file:  
+            old_content = file.read()  
+    except FileNotFoundError:  
+        old_content = ""  # 如果文件不存在，则视为空文件  
+  
+    updated_content = new_content + old_content  
+
+    with open(filename, 'w', encoding='utf-8') as file:  
+        file.write(updated_content) 
 
 
 def read_one_line():
@@ -68,7 +112,7 @@ def read_one_line():
                 file.write(newline)
 
 
-# read_one_line()
+
 
 
 def get_md_title(filename):

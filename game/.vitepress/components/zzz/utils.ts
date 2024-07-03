@@ -6,7 +6,17 @@ export const Element = {
   hydro: { id: "hydro", name: "水" },
   geo: { id: "geo", name: "岩" },
   dendro: { id: "dendro", name: "草" }
-}
+};
+
+export const Camp = {
+  SonsofCalydon: { id: 'Sons of Calydon', name: '卡吕冬之子' },
+  CriminalInvestigationSpecialResponseTeam: { id: 'Criminal Investigation Special Response Team', name: '刑侦特勤组' }, 
+  Section6: { id: 'Section 6', name: 'H.S.O.S.6' }, 
+  BelobogHeavyIndustries: { id: 'Belobog Heavy Industries', name: '白祇重工' }, 
+  VictoriaHousekeepingCo: { id: 'Victoria Housekeeping Co.', name: '维多利亚家政' }, 
+  ObolSquad: { id: 'Obol Squad', name: '奥波勒斯小队' }, 
+  CunningHaresAKAGentleHouse: { id: 'Cunning Hares AKA Gentle House', name: '狡兔屋' }
+};
 
 export const City = {
   Mondstadt: { id: "Mondstadt", name: "蒙德" },
@@ -16,7 +26,7 @@ export const City = {
   Fontaine: { id: "Fontaine", name: "枫丹" },
   Natlan: { id: "Natlan", name: "纳塔" },
   Snezhnaya: { id: "Snezhnaya", name: "至冬" }
-}
+};
 
 export const ExploreName = {
   World: { id: "World", name: "世界" },
@@ -33,8 +43,4 @@ export const Weapon = {
   catalyst: { id: "catalyst", name: "法器" },
   bow: { id: "bow", name: "弓" },
   polearm: { id: "polearm", name: "长柄武器" },
-}
-
-export enum Artifacts {
-  flower, plume, sands, goblet, circlet
-}
+};

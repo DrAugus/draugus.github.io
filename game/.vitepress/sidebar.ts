@@ -22,12 +22,17 @@ const wishLink: LinkName[] = [
     { text: '展示三', link: "/wish-info2" },
 ];
 
+const mapWishNameZh = {
+    'genshin': '祈愿',
+    'hsr': '跃迁',
+    'zzz': '调频',
+};
+
+const getWishNameZh = (gameName: string): string => mapWishNameZh[gameName] || '';
+
 const combineLinkName = (linkName: LinkName[], gameName: string): LinkName[] => {
     let linkPrefix: string = '/' + gameName;
-    let replaceName: string = '';
-    if (gameName == 'genshin') replaceName = '祈愿';
-    if (gameName == 'hsr') replaceName = '跃迁';
-    if (gameName == 'zzz') replaceName = '调频';
+    let replaceName: string = getWishNameZh(gameName);
     let res: LinkName[] = [];
     linkName.forEach((item, index) => {
         res[index] = {
@@ -38,6 +43,11 @@ const combineLinkName = (linkName: LinkName[], gameName: string): LinkName[] => 
     return res;
 };
 
+const getWishSide = (gameName: string) => [{
+    text: `${getWishNameZh(gameName)}信息`, collapsed: false, items: [
+        ...combineLinkName(wishLink, gameName),
+    ]
+}];
 
 export const sidebar_zh = {
 
@@ -49,11 +59,7 @@ export const sidebar_zh = {
         ...combineLinkName(listLinkName, 'genshin'),
         { text: '提瓦特通用文字', link: "/genshin/language" },
         { text: '圣遗物', link: "/genshin/artifacts" },
-        {
-            text: '祈愿信息', collapsed: false, items: [
-                ...combineLinkName(wishLink, 'genshin'),
-            ]
-        },
+        ...getWishSide('genshin')
     ],
 
     '/hsr/': [
@@ -62,14 +68,11 @@ export const sidebar_zh = {
         { text: '每日', link: "/hsr/daily" },
         { text: '锄地', link: "/hsr/hoeing" },
         { text: '遗器', link: "/hsr/relics" },
-        {
-            text: '跃迁信息', collapsed: false, items: [
-                ...combineLinkName(wishLink, 'hsr'),
-            ]
-        },
+        ...getWishSide('hsr')
     ],
 
     '/zzz/': [
         ...combineLinkName(listLinkName, 'zzz'),
+        ...getWishSide('zzz')
     ],
 };

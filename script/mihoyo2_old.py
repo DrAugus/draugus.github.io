@@ -9,17 +9,14 @@ import utils
 import os
 
 
-def get_url_data(api_url):
-    response = requests.get(api_url)
-    data = response.json()
-    return data
+
 
 
 # type=3 公告
 api_url = "https://bbs-api-os.hoyolab.com/community/post/wapi/getNewsList?gids=2&type=3"
 api_url += "&page_size=50"
 
-data = get_url_data(api_url)
+data = utils.get_url_data(api_url)
 json_str = json.dumps(data["data"]["list"])
 data_dict = json.loads(json_str)
 
@@ -106,7 +103,7 @@ def parse_all(post_id, post_idx):
         + post_id
     )
 
-    full_data = get_url_data(full_article_api_url)
+    full_data = utils.get_url_data(full_article_api_url)
     json_str = json.dumps(full_data["data"]["post"]["post"]["content"])
     # print(json_str)
     # 清洗标签

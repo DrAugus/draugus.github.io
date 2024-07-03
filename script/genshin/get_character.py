@@ -144,7 +144,7 @@ def clean_char_data(_data_):
             # "角色语言": ext[4]["value"],
             # "声优1": ext[5]["value"],
             # "声优2": ext[6]["value"],
-            "简介": be(ext[7]["value"], "lxml").p.text.strip(),
+            # "简介": be(ext[7]["value"], "lxml").p.text.strip(),
             # "台词": ext[8]["value"][0]["url"],
             # "音频": {
             #     ext[9]["value"][0]["name"]: ext[9]["value"][0]["url"],

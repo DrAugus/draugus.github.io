@@ -96,23 +96,24 @@
 
 <script setup lang="ts">
 
-import { onMounted, onUnmounted, ref } from "vue";
-import { WishAll } from "./type";
+import { onMounted, computed, ref } from "vue";
+import { Characters, WishAll } from "./type";
 import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs, GameName, getGameName, getWishName } from "./utils";
 import TitleFormat from "./TitleFormat.vue";
 
 const props = defineProps<{
   WISH: WishAll,
-  CHARACTER: Object,
-  WISH_TEXT: {
-    type: GameName,
-    default: GameName.Genshin;
-  };
+  CHARACTER: Characters,
+  WISH_TEXT: GameName,
 }>();
 
+const refGameName = computed(() => {
+  return props.WISH_TEXT ?? 'Genshin'; // 使用逻辑或操作符 ?? 来提供默认值  
+});
+
 const wishChar = props.WISH.characters;
-const gameName = getGameName(props.WISH_TEXT);
-const wishName = getWishName(props.WISH_TEXT);
+const gameName = getGameName(refGameName.value);
+const wishName = getWishName(refGameName.value);
 const chronicled = props.WISH.chronicled;
 
 let refWishChar = ref(wishChar);

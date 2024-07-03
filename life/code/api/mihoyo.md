@@ -27,6 +27,28 @@ e.g.
 e.g.  
 <https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=18568299>
 
+官网 API
+
+绝区零
+
+271 阵营  
+272 所有角色
+
+<https://api-takumi-static.mihoyo.com/content_v2_user/app/706fd13a87294881/getContentList?iChanId=271&iPageSize=10&iPage=1&sLangKey=zh-cn>
+
+<https://api-takumi-static.mihoyo.com/content_v2_user/app/706fd13a87294881/getContentList?iPageSize=200&iPage=1&sLangKey=zh-cn&iChanId=272>
+
+<https://api-takumi-static.mihoyo.com/content_v2_user/app/706fd13a87294881/getContentList?iPageSize=999&iPage=1&sLangKey=zh-cn&iChanId=309>
+
+286 阵营  
+287 所有角色
+
+<https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iChanId=286&iPageSize=10&iPage=1&sLangKey=en-us>
+
+<https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=200&iPage=1&iChanId=287&sLangKey=en-us>
+
+<https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&iChanId=889&sLangKey=en-us>
+
 ## ID对照表
 
 ### 游戏ID
