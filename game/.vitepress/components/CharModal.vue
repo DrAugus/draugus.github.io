@@ -1,6 +1,6 @@
 <script>
 import Modal from "./Modal.vue";
-import { objFilter, replaceAndLow, getGameName } from "./utils";
+import { objFilter, replaceAndLow, getGameName, GameName } from "./utils";
 
 export default {
   props: {
@@ -18,12 +18,13 @@ export default {
     return {
       showModal: false,
       replaceAndLow,
-      gameName: getGameName(this.game)
+      gameName: getGameName(this.game),
+      GameName,
     };
   },
   methods: {
     replaceImg(event) {
-      event.target.src = '/image/genshin/characters/paimon_faq.png'
+      event.target.src = '/image/genshin/characters/paimon_faq.png';
     },
   },
 };
@@ -40,7 +41,7 @@ export default {
     <div v-if="game && info.weapon" class="character-weapon">
       <img :src="`/image/${gameName}/elements/${(info.weapon.id).replace('The ', '').toLowerCase()}.png`" alt="{{1}}">
     </div>
-    <div class="character-name">
+    <div class="character-name" :style="{ fontSize: game === GameName.ZZZ ? '14px' : '18px' }">
       {{ info.name }}
     </div>
   </div>

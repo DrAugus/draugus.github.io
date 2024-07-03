@@ -1,5 +1,5 @@
 <template>
-  <WishInfo :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin :DISPLAY=WishInfoType.Table />
+  <WishInfo :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.ZZZ :DISPLAY=WishInfoType.Table />
 </template>
 
 <script setup>

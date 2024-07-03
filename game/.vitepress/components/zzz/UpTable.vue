@@ -1,5 +1,5 @@
 <template>
-    <UpTable :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
+    <UpTable :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.ZZZ />
 </template>
   
 <script setup>

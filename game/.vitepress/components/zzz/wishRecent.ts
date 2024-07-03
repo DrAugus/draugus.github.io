@@ -9,7 +9,7 @@ import "dayjs/locale/zh";
 dayjs.locale("zh");
 
 const eventObj = processEvent(WISH);
-const game = GameName.HSR;
+const game = GameName.ZZZ;
 
 let wishCharacters = eventObj.events[WishType.Characters];
 // console.log(wishCharacters)
