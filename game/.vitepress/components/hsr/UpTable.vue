@@ -1,5 +1,5 @@
 <template>
-    <UpTable :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.HSR />
+    <UpTable :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.HSR />
 </template>
   
 <script setup>

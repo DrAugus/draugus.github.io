@@ -1,6 +1,6 @@
 <template>
   <AugusHome :name=tl.name :text=tl.text :tagline=tl.tagline :style=tl.style>
-    <Timeline :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
+    <Timeline :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.Genshin />
   </AugusHome>
 </template>
 

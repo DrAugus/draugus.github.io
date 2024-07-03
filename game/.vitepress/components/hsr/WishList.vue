@@ -1,5 +1,5 @@
 <template>
-  <WishList :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.HSR />
+  <WishList :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.HSR />
 </template>
 
 <script setup>

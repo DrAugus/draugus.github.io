@@ -42,7 +42,7 @@ export const combineChar =
     !id ? '' : (`${getCharPrefix(id, char)} · ${getCharName(id, char)}(${getCharElement(id, char).name})`);
 
 export const getImgStyle =
-  (current: WishInfo, gameNum: number = 0) => {
+  (current: WishInfo, gameNum: GameName = GameName.Genshin) => {
     let gameName = getGameName(gameNum);
     // wish src
     let homeImg; // = current.src

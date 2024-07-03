@@ -68,7 +68,7 @@ export default {
       required: true,
     },
     // 0 genshin 1 hsr
-    WISH_TEXT: {
+    GAME_NAME: {
       type: Number,
       required: true,
       default: GameName.Genshin
@@ -201,7 +201,7 @@ export default {
 
       if (dur > 0) tip = ` ${parseInt(dur)}天后登场`
       else if (dur < 0) tip = ` 距今${-parseInt(dur)}天`
-      else tip = ` 当前${getWishName(this.WISH_TEXT)}进行时`
+      else tip = ` 当前${getWishName(this.GAME_NAME)}进行时`
       return tip
     }
 
@@ -210,7 +210,7 @@ export default {
       let obj = {}
       obj.shortName = v.shortName
       obj.nameZH = this.CHARACTER[v.shortName].name
-      obj.src = composeCharSrc(this.WISH_TEXT, v.shortName)
+      obj.src = composeCharSrc(this.GAME_NAME, v.shortName)
       obj.version = v.version
       obj.duration = dayTip(v.duration)
       obj.tag = v.duration // 排序用 由远至近-由大到小

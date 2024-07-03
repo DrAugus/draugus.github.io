@@ -104,11 +104,11 @@ import TitleFormat from "./TitleFormat.vue";
 const props = defineProps<{
   WISH: WishAll,
   CHARACTER: Characters,
-  WISH_TEXT: GameName,
+  GAME_NAME: GameName,
 }>();
 
 const refGameName = computed(() => {
-  return props.WISH_TEXT ?? 'Genshin'; // 使用逻辑或操作符 ?? 来提供默认值  
+  return props.GAME_NAME ?? 'Genshin'; // 使用逻辑或操作符 ?? 来提供默认值  
 });
 
 const wishChar = props.WISH.characters;
@@ -137,7 +137,7 @@ const replaceImg = (event) => {
   event.target.src = '/image/genshin/characters/paimon_faq.png';
 };
 const getCharAvatar = (id) => {
-  return composeCharSrc(props.WISH_TEXT, id);
+  return composeCharSrc(props.GAME_NAME, id);
 };
 const getCharNameZh = (id) => {
   return props.CHARACTER[replaceAndLow(id)]?.name;

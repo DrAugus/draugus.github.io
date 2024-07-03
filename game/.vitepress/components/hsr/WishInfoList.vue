@@ -1,5 +1,5 @@
 <template>
-  <WishInfo :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.HSR :DISPLAY=WishInfoType.List />
+  <WishInfo :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.HSR :DISPLAY=WishInfoType.List />
 </template>
 
 <script setup>

@@ -66,12 +66,12 @@ dayjs.locale("zh");
 const props = defineProps<{
   WISH: WishAll,
   CHARACTER: Characters,
-  WISH_TEXT: GameName,
+  GAME_NAME: GameName,
   DISPLAY: WishInfoType,
 }>();
 
 const gameName = computed(() => {
-  return props.WISH_TEXT ?? 'Genshin'; // 使用逻辑或操作符 ?? 来提供默认值  
+  return props.GAME_NAME ?? 'Genshin'; // 使用逻辑或操作符 ?? 来提供默认值  
 });
 
 let char = ref(props.WISH.characters);

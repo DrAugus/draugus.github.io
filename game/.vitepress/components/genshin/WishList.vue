@@ -1,5 +1,5 @@
 <template>
-  <WishList :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
+  <WishList :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.Genshin />
 </template>
 
 <script setup>

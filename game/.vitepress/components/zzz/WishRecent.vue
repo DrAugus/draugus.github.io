@@ -1,14 +1,14 @@
 <template>
   <div v-if="current.able">
 
-    <h2>当前跃迁
+    <h2>当前调频
       <Badge :text="current.obj[0].ver" type="warning"></Badge>
     </h2>
 
-    <blockquote>跃迁周期：{{ current.obj[0].date }}</blockquote>
+    <blockquote>调频周期：{{ current.obj[0].date }}</blockquote>
     <div v-for="(v, i) in current.obj">
       <h3>
-        活动期间，下列限定五星角色跃迁成功概率限时提升 <br />
+        活动期间，下列限定五星角色调频成功概率限时提升 <br />
 
         <span v-for="(vv, ii) in v.name">
           {{ combineQuoteZh(v.name[ii]) + getCharName(v.wish5star[ii], CHARACTER) }}
@@ -22,7 +22,7 @@
       <span v-for="(vv, ii) in v.wish4star">
         {{ '「' + getCharName(vv, CHARACTER) + '」' }}
       </span>
-      跃迁成功概率限时提升
+      调频成功概率限时提升
     </div>
     <!-- <div class="bg-height" :style="imgStyle"></div> -->
 
@@ -37,12 +37,12 @@
 
   </div>
   <div v-else>
-    <h2>现在 暂无跃迁，敬请期待</h2>
+    <h2>现在 暂无调频，敬请期待</h2>
   </div>
 
   <div v-if="future.able">
 
-    <h2>未来跃迁</h2>
+    <h2>未来调频</h2>
 
     <h3>{{ begin }} 后开始</h3>
 
@@ -63,52 +63,44 @@
 
   </div>
   <div v-else>
-    <h2>未来跃迁，等待更新</h2>
+    <h2>未来调频，等待更新</h2>
   </div>
 </template>
 
-<script>
-import { combineQuoteZh, getCharName, getImgStyle } from '../utils';
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from "vue";
+import { combineQuoteZh, getCharName, getImgStyle, GameName } from '../utils';
 import { CHARACTER } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
-export default {
-  name: "Wish",
-  data() {
-    return {
-      future,
-      current,
-      begin: new Date(),
-      end: new Date(),
-      getCharName,
-      CHARACTER,
-      combineQuoteZh,
-      imgStyle: getImgStyle(current, 1),
-    };
-  },
-  methods: {
-    replaceImg(event) {
-      event.target.src = '/image/genshin/wish/_1.jpg';
-    },
 
-  },
-  mounted() {
-    let _this = this;
-    this.timer1 = setInterval(() => {
-      _this.begin = wishBegin();
-    }, 1000);
-    this.timer2 = setInterval(() => {
-      _this.end = wishDeadline();
-    }, 1000);
-  },
-  beforeDestroy() {
-    if (this.timer1)
-      clearInterval(this.timer1);
-    if (this.timer2)
-      clearInterval(this.timer2);
-  },
+let timer1: number = -1;
+let timer2: number = -1;
 
-};
+let begin = ref('');
+let end = ref('');
+
+onMounted(async () => {
+  timer1 = setInterval(() => {
+    begin.value = wishBegin();
+  }, 1000);
+  timer2 = setInterval(() => {
+    end.value = wishDeadline();
+  }, 1000);
+});
+
+
+onUnmounted(() => {
+  if (timer1) clearInterval(timer1);
+  if (timer2) clearInterval(timer2);
+});
+
+const imgStyle = getImgStyle(current, GameName.ZZZ);
+
+function replaceImg(event) {
+  event.target.src = '/image/genshin/wish/_1.jpg';
+}
+
 </script>
 
 <style scoped>

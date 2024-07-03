@@ -1,5 +1,5 @@
 <template>
-    <UpTimes :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.HSR />
+    <UpTimes :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.HSR />
 </template>
   
 <script setup>

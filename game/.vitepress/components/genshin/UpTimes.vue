@@ -1,5 +1,5 @@
 <template>
-    <UpTimes :WISH=WISH :CHARACTER=CHARACTER :WISH_TEXT=GameName.Genshin />
+    <UpTimes :WISH=WISH :CHARACTER=CHARACTER :GAME_NAME=GameName.Genshin />
 </template>
   
 <script setup>

@@ -67,48 +67,40 @@
   </div>
 </template>
 
-<script>
-import { combineQuoteZh, getCharName, getImgStyle } from '../utils';
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref } from "vue";
+import { combineQuoteZh, getCharName, getImgStyle, GameName } from '../utils';
 import { CHARACTER } from './characters';
 import { current, future, wishDeadline, wishBegin } from "./wishRecent";
 
-export default {
-  name: "Wish",
-  data() {
-    return {
-      future,
-      current,
-      begin: new Date(),
-      end: new Date(),
-      getCharName,
-      CHARACTER,
-      combineQuoteZh,
-      imgStyle: getImgStyle(current, 1),
-    };
-  },
-  methods: {
-    replaceImg(event) {
-      event.target.src = '/image/genshin/wish/_1.jpg';
-    },
 
-  },
-  mounted() {
-    let _this = this;
-    this.timer1 = setInterval(() => {
-      _this.begin = wishBegin();
-    }, 1000);
-    this.timer2 = setInterval(() => {
-      _this.end = wishDeadline();
-    }, 1000);
-  },
-  beforeDestroy() {
-    if (this.timer1)
-      clearInterval(this.timer1);
-    if (this.timer2)
-      clearInterval(this.timer2);
-  },
+let timer1: number = -1;
+let timer2: number = -1;
 
-};
+let begin = ref('');
+let end = ref('');
+
+onMounted(async () => {
+  timer1 = setInterval(() => {
+    begin.value = wishBegin();
+  }, 1000);
+  timer2 = setInterval(() => {
+    end.value = wishDeadline();
+  }, 1000);
+});
+
+
+onUnmounted(() => {
+  if (timer1) clearInterval(timer1);
+  if (timer2) clearInterval(timer2);
+});
+
+const imgStyle = getImgStyle(current, GameName.HSR);
+
+function replaceImg(event) {
+  event.target.src = '/image/genshin/wish/_1.jpg';
+}
+
 </script>
 
 <style scoped>
