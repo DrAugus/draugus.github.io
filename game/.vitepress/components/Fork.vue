@@ -38,7 +38,7 @@
 
 <script>
 import dayjs from "dayjs";
-import { GameName, getGameName, getWishName, replaceAndLow, compareDayjs, filterObject, currentDayjs, beforeToday, afterToday, durationTodayDay, composeCharSrc } from "./utils";
+import { GameName, getGameNameStr, getWishNameStr, replaceAndLow, compareDayjs, filterObject, currentDayjs, beforeToday, afterToday, durationTodayDay, composeCharSrc } from "./utils";
 
 import "dayjs/locale/zh";
 
@@ -201,7 +201,7 @@ export default {
 
       if (dur > 0) tip = ` ${parseInt(dur)}天后登场`
       else if (dur < 0) tip = ` 距今${-parseInt(dur)}天`
-      else tip = ` 当前${getWishName(this.GAME_NAME)}进行时`
+      else tip = ` 当前${getWishNameStr(this.GAME_NAME)}进行时`
       return tip
     }
 

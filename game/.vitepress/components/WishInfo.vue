@@ -10,7 +10,7 @@
       <tr>
         <th class="table-center">版本</th>
         <th class="table-center">日期</th>
-        <th colspan="2" class="table-center"> {{ getWishName(gameName) }}信息</th>
+        <th colspan="2" class="table-center"> {{ getWishNameStr(gameName) }}信息</th>
         <th colspan="2" class="table-center">5星(up次数)</th>
 
       </tr>
@@ -19,7 +19,7 @@
         <td class="table-center">{{ v.version }}</td>
         <td class="table-center">{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
         <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
-          <img v-bind:src="`/image/${getGameName(gameName)}/wish/${combineWishPic(v.name[ii], v.image[ii])}`"
+          <img v-bind:src="`/image/${getGameNameStr(gameName)}/wish/${combineWishPic(v.name[ii], v.image[ii])}`"
             width="320" @error="replaceImg" alt="">
         </td>
         <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
@@ -59,7 +59,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/zh";
 import { onMounted, ref, computed } from "vue";
 import { Characters, WishAll } from "./type";
-import { GameName, WishInfoType, combineQuoteZh, combineWishPic, formatDayjs, getCharName, getGameName, getWishName, replaceAndLow } from "./utils";
+import { GameName, WishInfoType, combineQuoteZh, combineWishPic, formatDayjs, getCharName, getGameNameStr, getWishNameStr, replaceAndLow } from "./utils";
 
 dayjs.locale("zh");
 
@@ -91,7 +91,7 @@ function sortEarly() {
 // }
 
 function replaceImg(event) {
-  event.target.src = `/image/${getGameName(gameName.value)}/wish/_1.jpg`;
+  event.target.src = `/image/${getGameNameStr(gameName.value)}/wish/_1.jpg`;
 }
 
 function getBadgeType(upTimes) {

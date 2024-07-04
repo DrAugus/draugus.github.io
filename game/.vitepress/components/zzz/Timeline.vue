@@ -18,6 +18,6 @@ import Timeline from "../Timeline.vue";
 import AugusHome from '../AugusHome.vue'
 import { GameName, getTimelineHomeHero } from "../utils"
 
-const tl = getTimelineHomeHero(current, GameName.Genshin)
+const tl = getTimelineHomeHero(current, GameName.ZZZ)
 
 </script>

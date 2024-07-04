@@ -43,7 +43,7 @@ export const combineChar =
 
 export const getImgStyle =
   (current: WishInfo, gameNum: GameName = GameName.Genshin) => {
-    let gameName = getGameName(gameNum);
+    let gameName = getGameNameStr(gameNum);
     // wish src
     let homeImg; // = current.src
     // replace char src
@@ -76,7 +76,7 @@ export const getImgStyle =
   };
 
 export const getTimelineHomeHero =
-  (current: WishInfo, gameNum: number = 0) => {
+  (current: WishInfo, gameName: GameName = GameName.Genshin) => {
     let tl: TimelineHomeHero = {
       name: '',
       text: '',
@@ -85,14 +85,14 @@ export const getTimelineHomeHero =
       style: {}
     };
 
-    tl.name = replaceText('x时间轴', gameNum);
-    tl.text = replaceText('全部x信息', gameNum);
+    tl.name = replaceText('x时间轴', gameName);
+    tl.text = replaceText('全部x信息', gameName);
 
-    let gameName = getGameName(gameNum);
+    let strGameName = getGameNameStr(gameName);
 
     tl.actions = [
-      { theme: 'alt', text: '返回上级', link: '/' + gameName + '/' },
-      { theme: 'brand', text: replaceText('当前x', gameNum), link: '/' + gameName + '/wish' }
+      { theme: 'alt', text: '返回上级', link: `/${strGameName}/` },
+      { theme: 'brand', text: replaceText('当前x', gameName), link: `/${strGameName}/wish` }
     ];
     let homeTagline = '';
     for (let v of current.obj) {
@@ -100,7 +100,7 @@ export const getTimelineHomeHero =
     }
     tl.tagline = homeTagline.slice(3);
 
-    // tl.style = getImgStyle(current, gameNum)
+    // tl.style = getImgStyle(current, gameName)
 
     // console.log(tl)
 
@@ -108,13 +108,13 @@ export const getTimelineHomeHero =
 
   };
 
-export const getGameName = (gameName: GameName) => {
+export const getGameNameStr = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return 'genshin';
   if (gameName === GameName.HSR) return 'hsr';
   if (gameName === GameName.ZZZ) return 'zzz';
 };
 
-export const getWishName = (gameName: GameName) => {
+export const getWishNameStr = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return '祈愿';
   if (gameName === GameName.HSR) return '跃迁';
   if (gameName === GameName.ZZZ) return '调频';
@@ -124,24 +124,29 @@ export const getWishName = (gameName: GameName) => {
 // tag 1 weapon text weapon1
 // tag 2 weapon text weapon2
 export const replaceText =
-  (str: string, game: number = 0, tag: number = 0) => {
-    if (game === 0) {
-
+  (str: string, gameName: GameName = GameName.Genshin, tag: number = 0) => {
+    if (gameName === GameName.Genshin) {
       if (tag === 1) {
         return '「神铸赋形」活动祈愿';
       }
-
       return str.replace('x', '祈愿');
-    } else if (game === 1) {
+    }
 
+    if (gameName === GameName.HSR) {
       if (tag === 1) {
         return '「流光定影」活动跃迁';
       }
       if (tag === 2) {
         return '「溯回忆象」活动跃迁';
       }
-
       return str.replace('x', '跃迁');
+    }
+
+    if (gameName === GameName.ZZZ) {
+      if (tag === 1) {
+        return '「音擎频段」喧哗奏鸣';
+      }
+      return str.replace('x', '调频');
     }
 
     return '';
@@ -158,8 +163,8 @@ export const replaceAndLow = (inputString: string): string => {
   return newStr;
 };
 
-export const composeCharSrc = (game: number, name: string) =>
-  `/image/${getGameName(game)}/characters/${replaceAndLow(name)}.png`;
+export const composeCharSrc = (gameName: GameName, name: string) =>
+  `/image/${getGameNameStr(gameName)}/characters/${replaceAndLow(name)}.png`;
 
 export const combineWishPic = (wishName: string, wishImage: number) =>
   replaceAndLow(wishName) + "_" + wishImage + '.jpg';

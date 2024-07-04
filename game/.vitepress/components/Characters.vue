@@ -78,7 +78,7 @@
 <script>
 
 import CharModal from "./CharModal.vue";
-import { objFilter, replaceAndLow, getGameName } from "./utils";
+import { objFilter, replaceAndLow, getGameNameStr } from "./utils";
 
 export default {
   name: "Characters",
@@ -94,7 +94,7 @@ export default {
       lenChar: this.Character ? Object.getOwnPropertyNames(this.Character).length : 0,
       lenFilterChar: this.Character ? Object.getOwnPropertyNames(this.Character).length : 0,
       replaceAndLow,
-      gameName: getGameName(this.Game),
+      gameName: getGameNameStr(this.Game),
       protagonist: this.Game ? '开拓者' : '旅行者',
     };
   },

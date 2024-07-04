@@ -1,4 +1,5 @@
 <template>
+
   <!--时间轴 电脑版-->
   <div class="hide-on-small-only">
     <p :style="{ textAlign: 'center' }">
@@ -37,7 +38,7 @@
                       @error="replaceImg" alt="">
                   </div>
                   <span class="left-align timeline-character-text sticky text-shadow-weapon ">
-                    {{ replaceText('', gameNum, j + 1) }}
+                    {{ replaceText('', GAME_NAME, j + 1) }}
                   </span>
                 </div>
               </div>
@@ -53,9 +54,9 @@
             <div v-for="(_multi, j) in value.name">
 
               <div class="card event-item " :class="[
-      'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
-      getBorderRadius(wishCharacters, i),
-    ]" :style="getStyleCharacter(i, j)">
+    'ele-' + CHARACTER[value.wish5star[j]]?.ele?.id,
+    getBorderRadius(wishCharacters, i),
+  ]" :style="getStyleCharacter(i, j)">
                 <div class="card-image waves-effect waves-block waves-light"
                   :class="[getBorderRadius(wishCharacters, i)]" style="height: 100%">
                   <div class="event-img responsive-img lazy">
@@ -64,8 +65,8 @@
                   </div>
                   <span class="left-align timeline-character-text sticky"
                     :class="'ele-text-shadow-' + CHARACTER[value.wish5star[j]]?.ele?.id">
-                    {{ combineQuoteZh(value.wishName[j]) + replaceText('活动x', gameNum) +
-      combineQuoteZh(CHARACTER[value.wish5star[j]].prefix + '·' + CHARACTER[value.wish5star[j]].name) }}
+                    {{ combineQuoteZh(value.wishName[j]) + replaceText('活动x', GAME_NAME) +
+    combineQuoteZh(CHARACTER[value.wish5star[j]].prefix + '·' + CHARACTER[value.wish5star[j]].name) }}
                   </span>
                 </div>
               </div>
@@ -90,9 +91,9 @@
   </div>
 </template>
 
-<script>
-
-import { parseDayjs, getGameName, combineWishPic, replaceText, GameName, WishType, combineQuoteZh } from "./utils";
+<script setup lang="ts">
+import { onMounted, onUnmounted, ref, nextTick } from "vue";
+import { parseDayjs, getGameNameStr, combineWishPic, replaceText, GameName, WishType, combineQuoteZh } from "./utils";
 import { processEvent } from "./eventHandle";
 
 import dayjs from "dayjs";
@@ -100,6 +101,7 @@ import "dayjs/locale/zh";
 dayjs.locale("zh");
 
 import "./timeline.scss";
+import { Characters, WishAll } from "./type";
 
 const colorMap = {
   "denro": "#98e628",
@@ -113,198 +115,181 @@ const colorMap = {
 
 const DUR_DAY_WIDTH = 40;
 
-export default {
-  name: "GenshinTimeline",
-  data() {
-    return {
-      monthList: [],
-      dates: [],
-      DUR_DAY_WIDTH,
-      todayOffset: null,
-      currentTime: new Date(),
-      durationCharacter: [],
-      durationWeapon: [],
-      wishCharacters: [],
-      wishWeapons: [],
-      colorMap,
-      homeActions: [],
-      homeTagline: '',
-      gameName: getGameName(this.WISH_TEXT),
-      gameNum: this.WISH_TEXT,
-      combineWishPic,
-      replaceText,
-      combineQuoteZh,
-      lenWeaponImage: [],
-    };
-  },
-  props: {
-    WISH: {
-      type: Object,
-      required: true,
-    },
-    CHARACTER: {
-      type: Object,
-      required: true,
-    },
-    // 0 genshin 1 hsr
-    WISH_TEXT: {
-      type: Number,
-      required: true,
-      default: GameName.Genshin
-    },
-  },
-  components: {
-  },
-  computed: {
-  },
-  mounted() {
-    const eventObj = processEvent(this.WISH);
+const props = defineProps<{
+  WISH: WishAll,
+  CHARACTER: Characters,
+  GAME_NAME: GameName,
+}>();
 
-    const today = dayjs();
-    const firstDay = eventObj.firstDay;
+const gameName = getGameNameStr(props.GAME_NAME);
 
-    this.wishCharacters = eventObj.events[WishType.Characters];
-    this.wishWeapons = eventObj.events[WishType.Weapons];
+const setNowPos = ref(null);
+const findNowPos = ref(null);
 
-    // console.log(this.wishCharacters)
+// 在下一个 tick 中计算 offsetLeft 的值，然后更新 scrollLeft，这样可以保证 offsetLeft 的值已经计算完成
+const setCurrentPos = async () => {
+  // 等待 DOM 更新  
+  await nextTick();
 
-    const wishCharacterLength = this.wishCharacters.length;
-    const wishWeaponLength = this.wishWeapons.length;
-
-    this.dates = eventObj.dates;
-    this.monthList = eventObj.monthList;
-
-    // 设置时间轴
-    this.todayOffset = Math.abs(firstDay.diff(today, "day", true));
-    this.todayOffset = (this.todayOffset + 1) * (DUR_DAY_WIDTH + 1) + "px";
-
-    const start = firstDay;
-
-    // 祈愿角色信息
-    for (let i = 0; i < wishCharacterLength; ++i) {
-      const end = parseDayjs(this.wishCharacters[i].start).subtract(0, "minute");
-      this.durationCharacter.push(end.diff(start, "day", true));
-      // console.log(i, durationCharacter);
-    }
-
-    // 祈愿武器信息
-    for (let i = 0; i < wishWeaponLength; ++i) {
-      const end = parseDayjs(this.wishWeapons[i].start).subtract(0, "minute");
-      // console.log(start, end);
-      // console.log(i, end.diff(start, "day", true));
-      this.durationWeapon.push(end.diff(start, "day", true));
-
-      let image = this.wishWeapons[i].image;
-      this.lenWeaponImage.push(Array.isArray(image) ? image.length : 1);
-    }
-
-    // current time
-    let _this = this;
-    this.timer1 = setInterval(() => {
-      _this.currentTime = dayjs().format("HH:mm:ss");
-    }, 1000);
-
-    // 在下一个 tick 中计算 offsetLeft 的值，然后更新 scrollLeft，这样可以保证 offsetLeft 的值已经计算完成
-    this.$nextTick(() => {
-      this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
-    });
-
-  },
-  methods: {
-    setCurrentPos() {
-      this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
-    },
-    // 保证 e 在 s 之后
-    // start - end
-    diffWishStyle(s, e) {
-      if (s == e) return 0;
-      let res = parseDayjs(e).subtract(0, "minute")
-        .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1;
-      if (res) return 1;
-      return -1;
-    },
-    getBorderRadius(wishInfo, i) {
-      const len = wishInfo.length;
-      if (!len) return '';
-      let style = '';
-      if (i === 0) {
-        style += 'rounded-l-xl ';
-      } else if (i === len - 1) {
-        style += 'rounded-r-xl ';
-      } else {
-        let diff = this.diffWishStyle(wishInfo[i].end, wishInfo[i + 1].start);
-        if (diff === 1) {
-          style += 'border-r-4 border-white ';
-        } else if (diff === -1) {
-          style += 'rounded-r-xl ';
-        }
-
-        let diff2 = this.diffWishStyle(wishInfo[i - 1].end, wishInfo[i].start);
-        if (diff2 === 1) {
-          style += 'border-r-4 border-white ';
-        } else if (diff2 === -1) {
-          style += 'rounded-l-xl ';
-        }
-      }
-
-      if (style.includes('rounded-r-xl')) {
-        style = style.replace('border-r-4 border-white ', '');
-      }
-
-      return style;
-    },
-
-
-    replaceImg(event) {
-      event.target.src = `/image/${this.gameName}/wish/_1.jpg`;
-    },
-
-    getStyleWeapon(indexWeapon, indexImage) {
-
-      let lenImage = this.lenWeaponImage[indexWeapon];
-      let marginTop = '';
-      if (lenImage == 2) {
-        // 间距 0，1
-        marginTop = `calc((var(--event-height) + var(--event-height-dur)) * ${indexImage})`;
-      }
-
-      return {
-        width: this.wishWeapons[indexWeapon]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
-        left: (this.durationWeapon[indexWeapon] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-        height: 'var(--event-height)',
-        marginTop: marginTop
-      };
-    },
-    getStyleCharacter(indexChar, indexImage) {
-      let lenImage = this.lenWeaponImage[indexChar];
-      // 原神武器池和角色池长度不一样 lenImage 可能为空
-      if (!lenImage) {
-        lenImage = 1;
-      }
-      // 间距 0，1 或者 1，2
-      let marginTop = `calc((var(--event-height) + var(--event-height-dur)) * ${lenImage - 1 + indexImage})`;
-
-      return {
-        width: this.wishCharacters[indexChar]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
-        left: (this.durationCharacter[indexChar] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
-        marginTop: marginTop
-      };
-    },
-
-    modifyImage(image) {
-      if (Array.isArray(image)) {
-        return image;
-      }
-      let arr = [image];
-      return arr;
-    },
-  },
-  beforeDestroy() {
-    if (this.timer1)
-      clearInterval(this.timer1);
-  },
-
+  // 确保元素已挂载到 DOM  
+  if (setNowPos.value && findNowPos.value) {
+    setNowPos.value.scrollLeft = findNowPos.value.offsetLeft - window.innerWidth / 2;
+  }
 };
+
+let timer1: number = -1;
+let currentTime = ref('');
+
+const eventObj = processEvent(props.WISH);
+
+const today = dayjs();
+const firstDay = eventObj.firstDay;
+
+const wishCharacters = eventObj.events[WishType.Characters];
+const wishWeapons = eventObj.events[WishType.Weapons];
+// console.log(wishCharacters);
+
+const wishCharacterLength = wishCharacters.length;
+const wishWeaponLength = wishWeapons.length;
+
+const dates = eventObj.dates;
+const monthList = eventObj.monthList;
+
+// 设置时间轴
+const todayOffsetNumber = Math.abs(firstDay.diff(today, "day", true));
+const todayOffset = (todayOffsetNumber + 1) * (DUR_DAY_WIDTH + 1) + "px";
+
+const start = firstDay;
+
+let durationCharacter = ref([]);
+let durationWeapon = ref([]);
+let lenWeaponImage = ref([]);
+
+onMounted(async () => {
+
+  // 祈愿角色信息
+  for (let i = 0; i < wishCharacterLength; ++i) {
+    const end = parseDayjs(wishCharacters[i].start).subtract(0, "minute");
+    durationCharacter.value.push(end.diff(start, "day", true));
+    // console.log(i, durationCharacter);
+  }
+
+  // 祈愿武器信息
+  for (let i = 0; i < wishWeaponLength; ++i) {
+    const end = parseDayjs(wishWeapons[i].start).subtract(0, "minute");
+    // console.log(start, end);
+    // console.log(i, end.diff(start, "day", true));
+    durationWeapon.value.push(end.diff(start, "day", true));
+
+    let image = wishWeapons[i].image;
+    lenWeaponImage.value.push(Array.isArray(image) ? image.length : 1);
+  }
+
+  timer1 = setInterval(() => {
+    currentTime.value = dayjs().format("HH:mm:ss");
+  }, 1000);
+
+  setCurrentPos();
+});
+onUnmounted(() => {
+  if (timer1) clearInterval(timer1);
+});
+
+
+// this.$nextTick(() => {
+//   this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+// });
+
+// function setCurrentPos() {
+//   this.$refs.setNowPos.scrollLeft = this.$refs.findNowPos.offsetLeft - document.body.clientWidth / 2;
+// }
+
+// 保证 e 在 s 之后
+// start - end
+function diffWishStyle(s, e) {
+  if (s == e) return 0;
+  let res = parseDayjs(e).subtract(0, "minute")
+    .diff(parseDayjs(s).subtract(0, "minute"), "hour", true) < 1;
+  if (res) return 1;
+  return -1;
+}
+function getBorderRadius(wishInfo, i) {
+  // console.log(wishInfo, i)
+  const len = wishInfo.length;
+  if (!len) return '';
+  let style = '';
+  if (i === 0) {
+    style += 'rounded-l-xl ';
+  } else if (i === len - 1) {
+    style += 'rounded-r-xl ';
+  } else {
+    let diff = diffWishStyle(wishInfo[i].end, wishInfo[i + 1].start);
+    if (diff === 1) {
+      style += 'border-r-4 border-white ';
+    } else if (diff === -1) {
+      style += 'rounded-r-xl ';
+    }
+
+    let diff2 = diffWishStyle(wishInfo[i - 1].end, wishInfo[i].start);
+    if (diff2 === 1) {
+      style += 'border-r-4 border-white ';
+    } else if (diff2 === -1) {
+      style += 'rounded-l-xl ';
+    }
+  }
+
+  if (style.includes('rounded-r-xl')) {
+    style = style.replace('border-r-4 border-white ', '');
+  }
+
+  return style;
+}
+
+
+function replaceImg(event) {
+  event.target.src = `/image/${gameName}/wish/_1.jpg`;
+}
+
+function getStyleWeapon(indexWeapon, indexImage) {
+
+  let lenImage = lenWeaponImage.value[indexWeapon];
+  let marginTop = '';
+  if (lenImage == 2) {
+    // 间距 0，1
+    marginTop = `calc((var(--event-height) + var(--event-height-dur)) * ${indexImage})`;
+  }
+
+  return {
+    width: wishWeapons[indexWeapon]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
+    left: (durationWeapon.value[indexWeapon] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+    height: 'var(--event-height)',
+    marginTop: marginTop
+  };
+}
+function getStyleCharacter(indexChar, indexImage) {
+  let lenImage = lenWeaponImage.value[indexChar];
+  // 原神武器池和角色池长度不一样 lenImage 可能为空
+  if (!lenImage) {
+    lenImage = 1;
+  }
+  // 间距 0，1 或者 1，2
+  let marginTop = `calc((var(--event-height) + var(--event-height-dur)) * ${lenImage - 1 + indexImage})`;
+
+  return {
+    width: wishCharacters[indexChar]?.duration * (DUR_DAY_WIDTH + 1) + 'px',
+    left: (durationCharacter.value[indexChar] + 1) * (DUR_DAY_WIDTH + 1) + 'px',
+    marginTop: marginTop
+  };
+}
+
+function modifyImage(image) {
+  if (Array.isArray(image)) {
+    return image;
+  }
+  let arr = [image];
+  return arr;
+}
+
 </script>
 
 <style scoped>

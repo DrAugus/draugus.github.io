@@ -98,7 +98,7 @@
 
 import { onMounted, computed, ref } from "vue";
 import { Characters, WishAll } from "./type";
-import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs, GameName, getGameName, getWishName } from "./utils";
+import { replaceAndLow, composeCharSrc, compareDayjs, formatDayjs, GameName, getGameNameStr, getWishNameStr } from "./utils";
 import TitleFormat from "./TitleFormat.vue";
 
 const props = defineProps<{
@@ -112,8 +112,8 @@ const refGameName = computed(() => {
 });
 
 const wishChar = props.WISH.characters;
-const gameName = getGameName(refGameName.value);
-const wishName = getWishName(refGameName.value);
+const gameName = getGameNameStr(refGameName.value);
+const wishName = getWishNameStr(refGameName.value);
 const chronicled = props.WISH.chronicled;
 
 let refWishChar = ref(wishChar);

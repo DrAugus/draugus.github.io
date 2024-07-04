@@ -1,6 +1,6 @@
 <script>
 import Modal from "./Modal.vue";
-import { objFilter, replaceAndLow, getGameName, GameName } from "./utils";
+import { objFilter, replaceAndLow, getGameNameStr, GameName } from "./utils";
 
 export default {
   props: {
@@ -18,7 +18,7 @@ export default {
     return {
       showModal: false,
       replaceAndLow,
-      gameName: getGameName(this.game),
+      gameName: getGameNameStr(this.game),
       GameName,
     };
   },
