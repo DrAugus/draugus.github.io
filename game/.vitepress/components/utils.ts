@@ -6,6 +6,10 @@ export enum GameName {
   ZZZ,
 }
 
+export enum Rarity {
+
+}
+
 export enum WishType {
   Characters = 0,
   Weapons,
@@ -108,16 +112,52 @@ export const getTimelineHomeHero =
 
   };
 
+export const getCategoriesName = (gameName: GameName) => {
+  if (gameName === GameName.Genshin) return '国家';
+  if (gameName === GameName.HSR) return '星球';
+  if (gameName === GameName.ZZZ) return '阵营';
+  return '';
+};
+
+export const getRarityName = (gameName: GameName, star: number): string => {
+  if (gameName === GameName.ZZZ) {
+    let map = {
+      3: "B级",
+      4: 'A级',
+      5: "S级"
+    };
+    return map[star] || '';
+  }
+  let map = {
+    3: '三星',
+    4: '四星',
+    5: '五星',
+  };
+  if (gameName === GameName.Genshin) return map[star] || '';
+  if (gameName === GameName.HSR) return map[star] || '';
+
+  return '';
+};
+
+export const getProtagonistName = (gameName: GameName) => {
+  if (gameName === GameName.Genshin) return '旅行者';
+  if (gameName === GameName.HSR) return '开拓者';
+  if (gameName === GameName.ZZZ) return '绳匠';
+  return '';
+};
+
 export const getGameNameStr = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return 'genshin';
   if (gameName === GameName.HSR) return 'hsr';
   if (gameName === GameName.ZZZ) return 'zzz';
+  return '';
 };
 
 export const getWishNameStr = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return '祈愿';
   if (gameName === GameName.HSR) return '跃迁';
   if (gameName === GameName.ZZZ) return '调频';
+  return '';
 };
 
 // tag 0 no handle

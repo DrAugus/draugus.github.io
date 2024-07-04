@@ -3,7 +3,7 @@ aside: false
 ---
 # 角色
 
-<Characters :Character=CHARACTER :City=City :Element=Element :Weapon=Weapon :Game=GameName.Genshin />
+<Characters :CHARACTER=CHARACTER :CITY=City :ELEMENT=Element :WEAPON=Weapon :GAME_NAME=GameName.Genshin />
 
 <script setup>
 import { City, Element, Weapon } from "../.vitepress/components/genshin/utils";

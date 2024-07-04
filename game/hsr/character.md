@@ -3,7 +3,7 @@ aside: false
 ---
 # 角色
 
-<Characters :Character=CHARACTER :City=City :Element=Element :Weapon=Weapon :Game=GameName.HSR />
+<Characters :CHARACTER=CHARACTER :CITY=City :ELEMENT=Element :WEAPON=Weapon :GAME_NAME=GameName.HSR />
 
 <script setup>
 import { City, Element, Weapon } from "../.vitepress/components/hsr/utils";

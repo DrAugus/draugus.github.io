@@ -23,6 +23,22 @@ contains_word() {
     fi
 }
 
+run=$1
+
+webpage=(
+life
+game
+)
+
+for name in ${webpage[@]}
+do
+    if contains_word "$name" "$run"; then
+        [ ! -n "$2" ] && pnpm $name && break
+        [ "$2" = "-b" ] && pnpm $name:build && break
+        break
+    fi
+done
+
 
 # cd $1
 
@@ -39,20 +55,3 @@ contains_word() {
 #         echo "Not Linux"
 #     fi
 # fi
-
-run=$1
-
-webpage=(
-life
-game
-)
-
-for name in ${webpage[@]}
-do
-    if contains_word "$name" "$run"; then
-        [ ! -n "$2" ] && pnpm $name && exit 1
-        [ "$2" = "-b" ] && pnpm $name:build && exit 1
-    fi
-done
-
-

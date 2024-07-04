@@ -1,20 +1,18 @@
 export const Element = {
-  anemo: { id: "anemo", name: "风" },
-  pyro: { id: "pyro", name: "火" },
-  cryo: { id: "cryo", name: "冰" },
-  electro: { id: "electro", name: "雷" },
-  hydro: { id: "hydro", name: "水" },
-  geo: { id: "geo", name: "岩" },
-  dendro: { id: "dendro", name: "草" }
+  fire: { id: "fire", name: "火" },
+  ice: { id: "ice", name: "冰" },
+  thunder: { id: "thunder", name: "电" },
+  ether: { id: "ether", name: "以太" },
+  physdmg: { id: "physdmg", name: "物理" },
 };
 
 export const Camp = {
   SonsofCalydon: { id: 'Sons of Calydon', name: '卡吕冬之子' },
-  CriminalInvestigationSpecialResponseTeam: { id: 'Criminal Investigation Special Response Team', name: '刑侦特勤组' }, 
-  Section6: { id: 'Section 6', name: 'H.S.O.S.6' }, 
-  BelobogHeavyIndustries: { id: 'Belobog Heavy Industries', name: '白祇重工' }, 
-  VictoriaHousekeepingCo: { id: 'Victoria Housekeeping Co.', name: '维多利亚家政' }, 
-  ObolSquad: { id: 'Obol Squad', name: '奥波勒斯小队' }, 
+  CriminalInvestigationSpecialResponseTeam: { id: 'Criminal Investigation Special Response Team', name: '刑侦特勤组' },
+  Section6: { id: 'Section 6', name: 'H.S.O.S.6' },
+  BelobogHeavyIndustries: { id: 'Belobog Heavy Industries', name: '白祇重工' },
+  VictoriaHousekeepingCo: { id: 'Victoria Housekeeping Co.', name: '维多利亚家政' },
+  ObolSquad: { id: 'Obol Squad', name: '奥波勒斯小队' },
   CunningHaresAKAGentleHouse: { id: 'Cunning Hares AKA Gentle House', name: '狡兔屋' }
 };
 
@@ -35,12 +33,12 @@ export const ExploreName = {
   AdventureEXP: { id: "Adventure EXP", name: "冒险阅历" },
   Resin: { id: "Resin", name: "树脂" },
   OriginalResin: { id: "Original Resin", name: "原脆树脂" },
-}
+};
 
 export const Weapon = {
-  sword: { id: "sword", name: "单手剑" },
-  claymore: { id: "claymore", name: "双手剑" },
-  catalyst: { id: "catalyst", name: "法器" },
-  bow: { id: "bow", name: "弓" },
-  polearm: { id: "polearm", name: "长柄武器" },
+  anomaly: { id: "anomaly", name: "异常" },
+  defense: { id: "defense", name: "防护" },
+  support: { id: "support", name: "支援" },
+  attack: { id: "attack", name: "强攻" },
+  stun: { id: "stun", name: "击破" },
 };
