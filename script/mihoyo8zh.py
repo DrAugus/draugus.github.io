@@ -12,7 +12,6 @@ import utils
 gid = 8
 
 
-
 api_prefix = "https://bbs-api.miyoushe.com/post/wapi/"
 
 api_url_news_list = api_prefix + "getNewsList"
@@ -48,25 +47,35 @@ data_dict = json.loads(json_str)
 # },
 
 
-# 0 char 1 weapon 2 bangboo
+# 0 char 1 weapon 2 永久
 warp_arr = [[], [], []]
 
 for obj in data_dict:
+    pattern_subject = "调频说明"
+    if pattern_subject in obj["post"]["subject"]:
 
-    pattern_char = "独家频段"
-    match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
-    if match_char:
-        warp_arr[0].append(obj)
+        match_char = (
+            "非限定" not in obj["post"]["content"]
+            and "限定" in obj["post"]["content"]
+            and "代理人" in obj["post"]["content"]
+        )
+        match_weapon = (
+            "非限定" not in obj["post"]["content"]
+            and "限定" in obj["post"]["content"]
+            and "音擎" in obj["post"]["content"]
+        )
 
-    pattern_weapon = "音擎频段"
-    match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
-    if match_weapon:
-        warp_arr[1].append(obj)
+        match_permanent = "永久频段" in obj["post"]["content"]
 
-    pattern_weapon = "邦布频段"
-    match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
-    if match_weapon:
-        warp_arr[2].append(obj)
+        if match_char:
+            warp_arr[0].append(obj)
+
+        if match_weapon:
+            warp_arr[1].append(obj)
+
+        if match_permanent:
+            warp_arr[2].append(obj)
+
 
 post_id_arr = [[], [], []]
 idx = 0
@@ -79,6 +88,11 @@ for warp_info in warp_arr:
 
         structured_content = get_warp["post"]["structured_content"]
         if len(structured_content) == 0:
+
+            content = get_warp["post"]["content"]
+            print(content)
+            output += content + "\n"
+
             continue
         # 先去除可能的转义字符
         structured_content = structured_content.replace("\\\\", "\\")

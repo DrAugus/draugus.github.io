@@ -53,32 +53,33 @@ for url in list_api_url_news_list:
 
 # print(data_dict)
 
-# 0 char 1 weapon 2 bangboo
+# 0 char 1 weapon 2 permanent
 warp_arr = [[], [], []]
 
 for one_dict in data_dict:
     for obj in one_dict:
 
-        pattern_char = "exclusive channel"
-        pattern_char2 = "Character Event Warp"
-        match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
-        match_char2 = re.search(pattern_char2, obj["post"]["subject"], re.IGNORECASE)
-        if match_char or match_char2:
-            warp_arr[0].append(obj)
+        pattern_subject = "Channel"
+        if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
 
-        pattern_weapon = "w-engine channel"
-        pattern_weapon2 = "Light Cone Event Warp"
-        match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
-        match_weapon2 = re.search(pattern_weapon2, obj["post"]["subject"], re.IGNORECASE)
-        if match_weapon or match_weapon2:
-            warp_arr[1].append(obj)
+            pattern_char = "Exclusive Channel"
+            match_char = re.search(pattern_char, obj["post"]["content"], re.IGNORECASE)
+            if match_char:
+                warp_arr[0].append(obj)
 
-        pattern_weapon = "bangboo channel"
-        pattern_weapon2 = "Light Cone Event Warp"
-        match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
-        match_weapon2 = re.search(pattern_weapon2, obj["post"]["subject"], re.IGNORECASE)
-        if match_weapon or match_weapon2:
-            warp_arr[2].append(obj)
+            pattern_weapon = "W-Engine Channel"
+            match_weapon = re.search(
+                pattern_weapon, obj["post"]["content"], re.IGNORECASE
+            )
+            if match_weapon:
+                warp_arr[1].append(obj)
+
+            pattern_permanent = "permanent channel"
+            match_permanent = re.search(
+                pattern_permanent, obj["post"]["content"], re.IGNORECASE
+            )
+            if match_permanent:
+                warp_arr[2].append(obj)
 
 post_id_arr = [[], [], []]
 idx = 0
@@ -90,7 +91,7 @@ for warp_info in warp_arr:
 
         subject = get_warp["post"]["subject"]
         subject_zh = get_warp["post"]["multi_language_info"]["lang_subject"]["zh-cn"]
-        img_url = get_warp["image_list"][0]["url"]
+        img_url = len(get_warp["image_list"]) and get_warp["image_list"][0]["url"] or ""
         post_id = get_warp["post"]["post_id"]
 
         post_id_arr[idx].append(post_id)
@@ -100,7 +101,7 @@ for warp_info in warp_arr:
         print("img_url", img_url)
         print("post_id", post_id)
 
-        img_type = img_url[img_url.rfind(".", 0) :]
+        img_type = len(img_url) and img_url[img_url.rfind(".", 0) :] or ""
         print("img_type", img_type)
 
         image_times = "1"
