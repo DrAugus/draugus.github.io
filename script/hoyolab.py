@@ -79,33 +79,31 @@ def get_warp_list(gid: GameID, data_dict):
             pattern_subject = "Event Wishes"
             if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
                 warp_arr[WishType.CHARACTER.value].append(obj)
+
     elif gid == GameID.HSR:
         # 0 char 1 weapon
+        for obj in data_dict:
 
-        for one_dict in data_dict:
-            for obj in one_dict:
+            pattern_char = "5-star character"
+            pattern_char2 = "Character Event Warp"
+            match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
+            match_char2 = re.search(
+                pattern_char2, obj["post"]["subject"], re.IGNORECASE
+            )
+            if match_char or match_char2:
+                warp_arr[WishType.CHARACTER.value].append(obj)
 
-                pattern_char = "5-star character"
-                pattern_char2 = "Character Event Warp"
-                match_char = re.search(
-                    pattern_char, obj["post"]["subject"], re.IGNORECASE
-                )
-                match_char2 = re.search(
-                    pattern_char2, obj["post"]["subject"], re.IGNORECASE
-                )
-                if match_char or match_char2:
-                    warp_arr[WishType.CHARACTER.value].append(obj)
+            pattern_weapon = "5-star Light Cone"
+            pattern_weapon2 = "Light Cone Event Warp"
+            match_weapon = re.search(
+                pattern_weapon, obj["post"]["subject"], re.IGNORECASE
+            )
+            match_weapon2 = re.search(
+                pattern_weapon2, obj["post"]["subject"], re.IGNORECASE
+            )
+            if match_weapon or match_weapon2:
+                warp_arr[WishType.WEAPON.value].append(obj)
 
-                pattern_weapon = "5-star Light Cone"
-                pattern_weapon2 = "Light Cone Event Warp"
-                match_weapon = re.search(
-                    pattern_weapon, obj["post"]["subject"], re.IGNORECASE
-                )
-                match_weapon2 = re.search(
-                    pattern_weapon2, obj["post"]["subject"], re.IGNORECASE
-                )
-                if match_weapon or match_weapon2:
-                    warp_arr[WishType.WEAPON.value].append(obj)
     elif gid == GameID.ZZZ:
         for obj in data_dict:
             # 0 char 1 weapon 2 permanent
