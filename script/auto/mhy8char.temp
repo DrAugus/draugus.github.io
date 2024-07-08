@@ -118,6 +118,14 @@
   CHAR: [
     [
       {
+        char_name: '青衣',
+        char_color: '#6b8571',
+        char_line: '邂逅相遇,适我愿兮。',
+        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/124640/230f4b74d788a87eac29456c9bd55523_887085143212201067.png',
+        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/124640/394f0f4e60787ba0669ebfe2ae572d98_4215286215230789325.png',
+        char_chan_id: '780'
+      },
+      {
         char_name: '派派·韦尔',
         char_color: '#d5c798',
         char_line: '要载你一程吗？记得系好安全带哦。',
@@ -263,6 +271,14 @@
       }
     ],
     [
+      {
+        char_name: 'Qingyi',
+        char_color: '#6b8571',
+        char_line: 'A chance encounter, just as I had hoped.',
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124660/230f4b74d788a87eac29456c9bd55523_407710037607077575.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124660/394f0f4e60787ba0669ebfe2ae572d98_3503317420990646059.png',
+        char_chan_id: '782'
+      },
       {
         char_name: 'Piper Wheel',
         char_color: '#d5c798',
@@ -410,6 +426,18 @@
     ]
   ],
   JS_CHAR: {
+    qingyi: {
+      key: 'Qingyi',
+      id: 'qingyi',
+      name: '青衣',
+      prefix: '',
+      star: 5,
+      event_exclusive: true,
+      intro: '邂逅相遇,适我愿兮。',
+      camp: 'CriminalInvestigationSpecialResponseTeam',
+      ele: 'Element.electro',
+      weapon: 'Weapon.bow'
+    },
     piper_wheel: {
       key: 'Piper Wheel',
       id: 'piper_wheel',
