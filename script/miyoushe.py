@@ -17,6 +17,7 @@ class GameID(Enum):
     HSR = 6
     ZZZ = 8
 
+
 GET_IMAGE = True
 current_path = os.path.dirname(__file__)
 api_prefix = "https://bbs-api.miyoushe.com/post/wapi/"
@@ -40,8 +41,7 @@ def get_api_news_list(gid: GameID):
 def get_data_dict(api_url):
 
     data = utils.get_url_data(api_url)
-    json_str = json.dumps(data["data"]["list"])
-    data_dict = json.loads(json_str)
+    data_dict = utils.str_to_dict(data["data"]["list"])
     # print(data_dict)
     return data_dict
 
@@ -141,18 +141,17 @@ def get_output(warp_arr):
     api_url_post_full = api_prefix + "getPostFull"
     api_url_post_full += "?post_id="
 
-    post_id_arr = []
+    post_id_arr = [[], [], []]
     idx = 0
 
     output = ""
 
     for warp_info in warp_arr:
-        tmp_post_id = []
         for get_warp in warp_info:
 
             # POST ID
             post_id = get_warp["post"]["post_id"]
-            tmp_post_id.append(post_id)
+            post_id_arr[idx].append(post_id)
 
             # WISH NAME
             subject = get_warp["post"]["subject"]
@@ -220,7 +219,6 @@ def get_output(warp_arr):
             print("============")
 
         idx = idx + 1
-        post_id_arr.append(tmp_post_id)
         output += "================\n"
         print("============")
 
@@ -237,7 +235,7 @@ def get_output(warp_arr):
 
 def write_local(gid: GameID, output):
 
-    filename = current_path + f"/auto/mhy{gid.value}zh"
+    filename = current_path + f"/auto/mys{gid.value}"
     with open(filename, "w", encoding="utf-8") as file:
         file.write(output)
 

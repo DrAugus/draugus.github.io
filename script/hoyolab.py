@@ -6,122 +6,165 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import re
-
 import utils
-
-
 from enum import Enum
 
-gid = 8
 
+# 只取最新的
+LAST_ONLY = False
 wish_img_path = "/../game/public/image/zzz/wish"
 
+current_path = os.path.dirname(__file__)
 
-# 定义全局枚举类型
+
+class GameID(Enum):
+    Genshin = 2
+    HSR = 6
+    ZZZ = 8
+
+
 class WishType(Enum):
-    INVALID = 0
-    CHARACTER = 1
-    WEAPON = 2
+    INVALID = -1
+    CHARACTER = 0
+    WEAPON = 1
+    OTHERS = 2
 
 
 api_prefix = "https://bbs-api-os.hoyolab.com/community/post/wapi/"
 
-api_url_news_list = api_prefix + "getNewsList"
-api_url_post_full = api_prefix + "getPostFull"
-# https://augusmeow.github.io/code/api/mihoyo
-# type: 1 公告 2 活动 3 资讯
-# 之前跃迁都是 type=3 hoyolab 放在了资讯里
-# 1.5版本 放到了公告里 type=1
-# 英文官网非常乱，从此之后三个type里全都找，一会放公告一会放活动一会放资讯
-api_url_news_list += f"?gids={gid}"
-api_url_news_list += "&page_size=50"
 
-api_url_news_list += "&type="
+def get_api_news_list(gid: GameID):
 
-list_api_url_news_list = [
-    api_url_news_list + "1",
-    api_url_news_list + "2",
-    api_url_news_list + "3",
-]
+    api_url_news_list = api_prefix + "getNewsList"
+    # https://augusmeow.github.io/code/api/mihoyo
+    # type: 1 公告 2 活动 3 资讯
+    # 之前跃迁都是 type=3 hoyolab 放在了资讯里
+    # 1.5版本 放到了公告里 type=1
+    # 英文官网非常乱，从此之后三个type里全都找，一会放公告一会放活动一会放资讯
+    api_url_news_list += f"?gids={gid.value}"
+    api_url_news_list += "&page_size=50"
 
-print(list_api_url_news_list)
+    api_url_news_list += "&type="
 
-data_dict = []
-for url in list_api_url_news_list:
-    one_data = utils.get_url_data(url)
-    one_data_dict = utils.str_to_dict(one_data["data"]["list"])
-    data_dict.append(one_data_dict)
-    print("one_data_dict type is ", type(one_data_dict))
+    list_api_url_news_list = [
+        api_url_news_list + "1",
+        api_url_news_list + "2",
+        api_url_news_list + "3",
+    ]
 
-# print(data_dict)
+    print(list_api_url_news_list)
+    return list_api_url_news_list
 
-# 0 char 1 weapon 2 permanent
-warp_arr = [[], [], []]
 
-for one_dict in data_dict:
-    for obj in one_dict:
+def get_data_dict(api_url):
 
-        pattern_subject = "Channel"
-        if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
+    data = utils.get_url_data(api_url)
+    data_dict = utils.str_to_dict(data["data"]["list"])
+    # print(data_dict)
+    return data_dict
 
-            pattern_char = "Exclusive Channel"
-            match_char = re.search(pattern_char, obj["post"]["content"], re.IGNORECASE)
-            if match_char:
-                warp_arr[0].append(obj)
 
-            pattern_weapon = "W-Engine Channel"
-            match_weapon = re.search(
-                pattern_weapon, obj["post"]["content"], re.IGNORECASE
+def get_warp_list(gid: GameID, data_dict):
+    
+    warp_arr = [[], [], []]
+
+    if gid == GameID.Genshin:
+        for obj in data_dict:
+            pattern_subject = "Event Wishes"
+            if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
+                warp_arr[WishType.CHARACTER.value].append(obj)
+    elif gid == GameID.HSR:
+        # 0 char 1 weapon
+
+        for one_dict in data_dict:
+            for obj in one_dict:
+
+                pattern_char = "5-star character"
+                pattern_char2 = "Character Event Warp"
+                match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
+                match_char2 = re.search(pattern_char2, obj["post"]["subject"], re.IGNORECASE)
+                if match_char or match_char2:
+                    warp_arr[WishType.CHARACTER.value].append(obj)
+
+                pattern_weapon = "5-star Light Cone"
+                pattern_weapon2 = "Light Cone Event Warp"
+                match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
+                match_weapon2 = re.search(pattern_weapon2, obj["post"]["subject"], re.IGNORECASE)
+                if match_weapon or match_weapon2:
+                    warp_arr[WishType.WEAPON.value].append(obj)
+    elif gid == GameID.ZZZ:
+        for obj in data_dict:
+            # 0 char 1 weapon 2 permanent
+            pattern_subject = "Channel"
+            if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
+
+                pattern_char = "Exclusive Channel"
+                match_char = re.search(pattern_char, obj["post"]["content"], re.IGNORECASE)
+                if match_char:
+                    warp_arr[WishType.CHARACTER.value].append(obj)
+
+                pattern_weapon = "W-Engine Channel"
+                match_weapon = re.search(
+                    pattern_weapon, obj["post"]["content"], re.IGNORECASE
+                )
+                if match_weapon:
+                    warp_arr[WishType.WEAPON.value].append(obj)
+
+                pattern_permanent = "permanent channel"
+                match_permanent = re.search(
+                    pattern_permanent, obj["post"]["content"], re.IGNORECASE
+                )
+                if match_permanent:
+                    warp_arr[WishType.OTHERS.value].append(obj)
+
+    return warp_arr
+
+
+def get_post_id(warp_arr):
+
+    post_id_arr = [[], [], []]
+    idx = 0
+
+    for warp_info in warp_arr:
+
+        for get_warp in warp_info:
+
+            subject = get_warp["post"]["subject"]
+            subject_zh = get_warp["post"]["multi_language_info"]["lang_subject"][
+                "zh-cn"
+            ]
+            img_url = (
+                len(get_warp["image_list"]) and get_warp["image_list"][0]["url"] or ""
             )
-            if match_weapon:
-                warp_arr[1].append(obj)
+            post_id = get_warp["post"]["post_id"]
 
-            pattern_permanent = "permanent channel"
-            match_permanent = re.search(
-                pattern_permanent, obj["post"]["content"], re.IGNORECASE
-            )
-            if match_permanent:
-                warp_arr[2].append(obj)
+            post_id_arr[idx].append(post_id)
 
-post_id_arr = [[], [], []]
-idx = 0
+            print("subject", subject)
+            print("subject_zh", subject_zh)
+            print("img_url", img_url)
+            print("post_id", post_id)
 
+            img_type = len(img_url) and img_url[img_url.rfind(".", 0) :] or ""
+            print("img_type", img_type)
 
-for warp_info in warp_arr:
+            image_times = "1"
 
-    for get_warp in warp_info:
+            # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
+            modify_subject = subject.split(":")[0].lower().replace(" ", "_")
+            modify_subject += "_" + image_times + img_type
+            print("modify_subject", modify_subject)
 
-        subject = get_warp["post"]["subject"]
-        subject_zh = get_warp["post"]["multi_language_info"]["lang_subject"]["zh-cn"]
-        img_url = len(get_warp["image_list"]) and get_warp["image_list"][0]["url"] or ""
-        post_id = get_warp["post"]["post_id"]
+            if len(img_url) and len(modify_subject):
+                utils.wget_img(img_url, f"{wish_img_path}/{modify_subject}")
 
-        post_id_arr[idx].append(post_id)
+            print("============")
 
-        print("subject", subject)
-        print("subject_zh", subject_zh)
-        print("img_url", img_url)
-        print("post_id", post_id)
-
-        img_type = len(img_url) and img_url[img_url.rfind(".", 0) :] or ""
-        print("img_type", img_type)
-
-        image_times = "1"
-
-        # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
-        modify_subject = subject.split(":")[0].lower().replace(" ", "_")
-        modify_subject += "_" + image_times + img_type
-        print("modify_subject", modify_subject)
-
-        if len(img_url) and len(modify_subject):
-            utils.wget_img(img_url, f"{wish_img_path}/{modify_subject}")
-
+        idx = idx + 1
         print("============")
 
-    idx = idx + 1
-    print("============")
-
-print("post_id_arr", post_id_arr)
+    print("post_id_arr", post_id_arr)
+    return post_id_arr
 
 
 def unicode_conversion(s):
@@ -231,10 +274,11 @@ def get_wish4star(text: str, wish_type: WishType):
 
 @utils.log_args
 def parse_wish(post_id, wish_type: WishType):
-    full_article_api_url = api_url_post_full + "?post_id=" + post_id
-    print("full_article_api_url: ", full_article_api_url)
+    api_url_post_full = api_prefix + "getPostFull"
+    api_url_post_full += "?post_id=" + post_id
+    print("api_url_post_full: ", api_url_post_full)
 
-    full_data = utils.get_url_data(full_article_api_url)
+    full_data = utils.get_url_data(api_url_post_full)
     got_content = full_data["data"]["post"]["post"]["structured_content"]
 
     clean_text = utils.str_to_dict(got_content)
@@ -305,25 +349,36 @@ def parse_wish(post_id, wish_type: WishType):
     }
 
 
-all_info = []
+def get_json(post_id_arr):
+    all_info = []
+    for index, id_arr in enumerate(post_id_arr):
+        for id in id_arr:
+            dict_info = parse_wish(id, WishType(index))
+            all_info.append(dict_info)
+            if LAST_ONLY:
+                break
+    return all_info
 
-# 只取最新的
-only_last = False
 
-for i in post_id_arr[0]:
-    dict_char = parse_wish(i, WishType.CHARACTER)
-    all_info.append(dict_char)
-    if only_last:
-        break
+def write_local(gid: GameID, output):
+    filename = current_path + f"/auto/hoyolab{gid.value}.json"
+    with open(filename, "w", encoding="utf-8") as file:
+        # 将字典写入文件
+        json.dump(output, file)
 
-for i in post_id_arr[1]:
-    dict_weapon = parse_wish(i, WishType.WEAPON)
-    all_info.append(dict_weapon)
-    if only_last:
-        break
 
-current_path = os.path.dirname(__file__)
-filename = current_path + f"/auto/mhy{gid}.json"
-with open(filename, "w", encoding="utf-8") as file:
-    # 将字典写入文件
-    json.dump(all_info, file)
+def main():
+    gids = [GameID.Genshin, GameID.HSR, GameID.ZZZ]
+    for gid in gids:
+        api_url = get_api_news_list(gid)
+        if isinstance(api_url, list):
+            for url in api_url:
+                data_dict = get_data_dict(url)
+                warp_arr = get_warp_list(gid, data_dict)
+                post_id_arr = get_post_id(warp_arr)
+                all_info = get_json(post_id_arr)
+                write_local(gid, all_info)
+
+
+if __name__ == "__main__":
+    main()

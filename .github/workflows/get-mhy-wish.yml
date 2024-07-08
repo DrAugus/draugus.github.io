@@ -40,12 +40,11 @@ jobs:
           pip install -r requirements.txt
       - name: Execute Python script
         run: |
-          python mihoyo.py
+          python miyoushe.py
+          python hoyolab.py
           python mihoyo2.py
           python mihoyo2_old.py
-          python mihoyo6.py   
-          python mihoyo8.py          
-          python mihoyo8char.py   
+          python mihoyo8char.py
           python mihoyo8js.py
           python mihoyo8char_img.py
       - name: Commit files
