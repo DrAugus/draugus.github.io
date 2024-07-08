@@ -1,6 +1,18 @@
 import { Camp, Element, Weapon } from "./utils";
 
 export const CHARACTER = {
+  qingyi: {
+    key: 'Qingyi',
+    id: 'qingyi',
+    name: '青衣',
+    prefix: '',
+    star: 5,
+    event_exclusive: true,
+    intro: '邂逅相遇,适我愿兮。',
+    camp: 'CriminalInvestigationSpecialResponseTeam',
+    ele: 'Element.electro',
+    weapon: 'Weapon.bow'
+  },
   piper_wheel: {
     key: 'Piper Wheel',
     id: 'piper_wheel',
