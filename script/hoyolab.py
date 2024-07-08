@@ -1,4 +1,3 @@
-# 8 means zzz
 # hoyolab interface
 
 import json
@@ -10,9 +9,9 @@ import utils
 from enum import Enum
 
 
-# 只取最新的
+# 是否 只取最新的
 LAST_ONLY = False
-wish_img_path = "/../game/public/image/zzz/wish"
+
 
 current_path = os.path.dirname(__file__)
 
@@ -21,6 +20,13 @@ class GameID(Enum):
     Genshin = 2
     HSR = 6
     ZZZ = 8
+
+
+WISH_IMG_PATH = {
+    GameID.Genshin: "/../game/public/image/genshin/wish",
+    GameID.HSR: "/../game/public/image/hsr/wish",
+    GameID.ZZZ: "/../game/public/image/zzz/wish",
+}
 
 
 class WishType(Enum):
@@ -65,7 +71,7 @@ def get_data_dict(api_url):
 
 
 def get_warp_list(gid: GameID, data_dict):
-    
+
     warp_arr = [[], [], []]
 
     if gid == GameID.Genshin:
@@ -81,15 +87,23 @@ def get_warp_list(gid: GameID, data_dict):
 
                 pattern_char = "5-star character"
                 pattern_char2 = "Character Event Warp"
-                match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
-                match_char2 = re.search(pattern_char2, obj["post"]["subject"], re.IGNORECASE)
+                match_char = re.search(
+                    pattern_char, obj["post"]["subject"], re.IGNORECASE
+                )
+                match_char2 = re.search(
+                    pattern_char2, obj["post"]["subject"], re.IGNORECASE
+                )
                 if match_char or match_char2:
                     warp_arr[WishType.CHARACTER.value].append(obj)
 
                 pattern_weapon = "5-star Light Cone"
                 pattern_weapon2 = "Light Cone Event Warp"
-                match_weapon = re.search(pattern_weapon, obj["post"]["subject"], re.IGNORECASE)
-                match_weapon2 = re.search(pattern_weapon2, obj["post"]["subject"], re.IGNORECASE)
+                match_weapon = re.search(
+                    pattern_weapon, obj["post"]["subject"], re.IGNORECASE
+                )
+                match_weapon2 = re.search(
+                    pattern_weapon2, obj["post"]["subject"], re.IGNORECASE
+                )
                 if match_weapon or match_weapon2:
                     warp_arr[WishType.WEAPON.value].append(obj)
     elif gid == GameID.ZZZ:
@@ -99,7 +113,9 @@ def get_warp_list(gid: GameID, data_dict):
             if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
 
                 pattern_char = "Exclusive Channel"
-                match_char = re.search(pattern_char, obj["post"]["content"], re.IGNORECASE)
+                match_char = re.search(
+                    pattern_char, obj["post"]["content"], re.IGNORECASE
+                )
                 if match_char:
                     warp_arr[WishType.CHARACTER.value].append(obj)
 
@@ -120,7 +136,7 @@ def get_warp_list(gid: GameID, data_dict):
     return warp_arr
 
 
-def get_post_id(warp_arr):
+def get_post_id(gid: GameID, warp_arr):
 
     post_id_arr = [[], [], []]
     idx = 0
@@ -156,7 +172,7 @@ def get_post_id(warp_arr):
             print("modify_subject", modify_subject)
 
             if len(img_url) and len(modify_subject):
-                utils.wget_img(img_url, f"{wish_img_path}/{modify_subject}")
+                utils.wget_img(img_url, f"{WISH_IMG_PATH[gid]}/{modify_subject}")
 
             print("============")
 
@@ -375,7 +391,7 @@ def main():
             for url in api_url:
                 data_dict = get_data_dict(url)
                 warp_arr = get_warp_list(gid, data_dict)
-                post_id_arr = get_post_id(warp_arr)
+                post_id_arr = get_post_id(gid, warp_arr)
                 all_info = get_json(post_id_arr)
                 write_local(gid, all_info)
 
