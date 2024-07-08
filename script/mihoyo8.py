@@ -14,6 +14,8 @@ from enum import Enum
 
 gid = 8
 
+wish_img_path = "/../game/public/image/zzz/wish"
+
 
 # 定义全局枚举类型
 class WishType(Enum):
@@ -110,6 +112,9 @@ for warp_info in warp_arr:
         modify_subject = subject.split(":")[0].lower().replace(" ", "_")
         modify_subject += "_" + image_times + img_type
         print("modify_subject", modify_subject)
+
+        if len(img_url) and len(modify_subject):
+            utils.wget_img(img_url, f"{wish_img_path}/{modify_subject}")
 
         print("============")
 

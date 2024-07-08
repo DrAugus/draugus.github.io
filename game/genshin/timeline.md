@@ -1,6 +1,6 @@
 ---
 layoutClass: a-home-layout
-title: 祈愿时间轴
+title: ${{ getWishNameStr(GameName.Genshin) }}时间轴
 outline: false
 aside: false
 sidebar: false
@@ -13,6 +13,7 @@ footer: false
   
 <script setup>
 import Timeline from "../.vitepress/components/genshin/Timeline.vue";
+import { GameName, getWishNameStr } from "../.vitepress/components/utils";
 </script>
 
 <style scoped>

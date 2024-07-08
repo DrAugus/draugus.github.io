@@ -2,6 +2,7 @@ import json
 import re
 import requests
 import inspect
+import os
 
 from functools import wraps
 from datetime import datetime
@@ -289,3 +290,7 @@ def format_date(original_time_str):
 def timestamp2date(ts: int):
     dt_object = datetime.fromtimestamp(ts)
     return dt_object.strftime("%Y-%m-%d")
+
+
+def wget_img(url, output):
+    os.system(f"wget {url} -O {output}")
