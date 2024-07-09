@@ -385,13 +385,15 @@ def main():
     gids = [GameID.Genshin, GameID.HSR, GameID.ZZZ]
     for gid in gids:
         api_url = get_api_news_list(gid)
+        gid_info_list = []
         if isinstance(api_url, list):
             for url in api_url:
                 data_dict = get_data_dict(url)
                 warp_arr = get_warp_list(gid, data_dict)
                 post_id_arr = get_post_id(gid, warp_arr)
                 all_info = get_json(post_id_arr)
-                write_local(gid, all_info)
+                gid_info_list.extend([info for info in all_info if info])
+        write_local(gid, gid_info_list)
 
 
 if __name__ == "__main__":
