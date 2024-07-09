@@ -6,6 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import utils
+import op_file
 from enum import Enum
 
 
@@ -385,8 +386,7 @@ def get_json(post_id_arr):
 
 def write_local(gid: GameID, output):
     filename = current_path + f"/auto/hoyolab{gid.value}.json"
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(output, file)
+    op_file.save_dict_to_file(output, filename)
 
 
 @utils.log_args

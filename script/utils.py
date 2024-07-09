@@ -280,10 +280,10 @@ def format_date(original_time_str):
         dt = datetime.strptime(normalized_time_str, "%Y/%m/%d %H:%M:%S")
         # 格式化datetime对象为xxxx/xx/xx xx:xx:xx形式
         standardized_time_str = dt.strftime("%Y/%m/%d %H:%M:%S")
-        print("标准化后的时间字符串:", standardized_time_str)
+        # print("标准化后的时间字符串:", standardized_time_str)
         return standardized_time_str
     except ValueError as e:
-        print("无法解析时间字符串:", e)
+        # print("无法解析时间字符串:", e)
         return original_time_str
 
 
