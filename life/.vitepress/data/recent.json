@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "配环境",
+            "desc": "配环境 LINUX ```shell sudo apt install git cmake pyt",
+            "link": "/code/program/config-env",
+            "date": "2024-07-08"
+        },
+        {
+            "title": "Python",
+            "desc": "Python install ```bash python -m pip install --up",
+            "link": "/code/program/lang/python",
+            "date": "2024-05-28"
+        },
+        {
             "title": "离散数学",
             "desc": "离散数学 要学到的 离散数学基础: 集合、偏序集、良序、数学归纳法、级数、递归、递推 ::: 概念",
             "link": "/course/science/discrete-math",
@@ -107,18 +119,6 @@
             "title": "上海",
             "desc": "上海 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230311",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "舟山",
-            "desc": "舟山 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230415",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "绍兴",
-            "desc": "绍兴 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230422",
             "date": "2024-06-21"
         }
     ]

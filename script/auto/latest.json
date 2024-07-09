@@ -1,4 +1,12 @@
 {
+    "life/code/program/config-env.md": {
+        "title": "配环境",
+        "date": 1720426976.0
+    },
+    "life/code/program/lang/python.md": {
+        "title": "Python",
+        "date": 1716866579
+    },
     "life/course/science/discrete-math.md": {
         "title": "离散数学",
         "date": 1720424721.0
@@ -258,10 +266,6 @@
     "life/trip/china/hunan/index.md": {
         "title": "湖南",
         "date": 1716915828
-    },
-    "life/code/program/lang/python.md": {
-        "title": "Python",
-        "date": 1716866579
     },
     "life/trip/airport.md": {
         "title": "机场评测",
