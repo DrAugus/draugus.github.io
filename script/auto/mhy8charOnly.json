@@ -1,4 +1,16 @@
 {
+    "seth_lowell": {
+        "key": "Seth Lowell",
+        "id": "seth_lowell",
+        "name": "赛斯·洛威尔",
+        "prefix": "",
+        "star": 5,
+        "event_exclusive": true,
+        "intro": "队长，逮捕犯人就交给我吧！",
+        "camp": "CriminalInvestigationSpecialResponseTeam",
+        "ele": "Element.electro",
+        "weapon": "Weapon.bow"
+    },
     "qingyi": {
         "key": "Qingyi",
         "id": "qingyi",

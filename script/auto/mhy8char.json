@@ -136,6 +136,14 @@
     "CHAR": [
         [
             {
+                "char_name": "赛斯·洛威尔",
+                "char_color": "#5d82b0",
+                "char_line": "队长，逮捕犯人就交给我吧！",
+                "char_avatar": "https://fastcdn.mihoyo.com/content-v2/nap/124648/c246552f6672e8877bccca2f8ece87c1_7384923825619943325.png",
+                "char_cover_home": "https://fastcdn.mihoyo.com/content-v2/nap/124648/14988767fd0916d0063fc0097f656a42_7231698147028403245.png",
+                "char_chan_id": "780"
+            },
+            {
                 "char_name": "青衣",
                 "char_color": "#6b8571",
                 "char_line": "邂逅相遇,适我愿兮。",
@@ -289,6 +297,14 @@
             }
         ],
         [
+            {
+                "char_name": "Seth Lowell",
+                "char_color": "#5d82b0",
+                "char_line": "Captain, I'll apprehend the perp!",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124700/c246552f6672e8877bccca2f8ece87c1_8614327593741193610.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124700/14988767fd0916d0063fc0097f656a42_4566522091989166627.png",
+                "char_chan_id": "782"
+            },
             {
                 "char_name": "Qingyi",
                 "char_color": "#6b8571",
@@ -444,6 +460,18 @@
         ]
     ],
     "JS_CHAR": {
+        "seth_lowell": {
+            "key": "Seth Lowell",
+            "id": "seth_lowell",
+            "name": "赛斯·洛威尔",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "队长，逮捕犯人就交给我吧！",
+            "camp": "CriminalInvestigationSpecialResponseTeam",
+            "ele": "Element.electro",
+            "weapon": "Weapon.bow"
+        },
         "qingyi": {
             "key": "Qingyi",
             "id": "qingyi",
