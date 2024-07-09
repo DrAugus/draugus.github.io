@@ -1,6 +1,18 @@
 import { Camp, Element, Weapon } from "./utils";
 
 export const CHARACTER = {
+  qingyi: {
+    key: 'Qingyi',
+    id: 'qingyi',
+    name: '青衣',
+    prefix: '',
+    star: 5,
+    event_exclusive: true,
+    intro: '邂逅相遇,适我愿兮。',
+    camp: Camp.CriminalInvestigationSpecialResponseTeam,
+    ele: Element.ether,
+    weapon: Weapon.anomaly
+  },
   piper_wheel: {
     key: 'Piper Wheel',
     id: 'piper_wheel',
@@ -155,7 +167,7 @@ export const CHARACTER = {
     intro: '我、我这样的人……真的可以吗？',
     camp: Camp.VictoriaHousekeepingCo,
     ele: Element.physdmg,
-    weapon: Weapon.attack 
+    weapon: Weapon.attack
   },
   nekomiya_mana: {
     key: 'Nekomiya Mana',
@@ -217,4 +229,4 @@ export const CHARACTER = {
     ele: Element.thunder,
     weapon: Weapon.stun
   }
-}
+};

@@ -5,7 +5,7 @@ const prefixHistory = '/course/history';
 const prefixLang = '/course/literature/language';
 const prefixXiwen = '/xiwen';
 const prefixDiseaseRecord = '/disease/record';
-const prefixCommandTools = '/code-notes/cmd-line-tools';
+const prefixCommandTools = '/tools/cmd-line-tools';
 const sidebarEat = [
     { text: '吃饭了', link: '/eat/' },
     { text: '零食', link: '/eat/snack' },
@@ -331,9 +331,9 @@ const sidebarCodeAPI = [
     { text: 'mihoyo', link: '/code/api/mihoyo' },
     { text: '高德地图', link: '/code/api/amap' },
 ];
-const sidebarCodeNotes = [
-    { text: '指南', link: '/code-notes/' },
-    { text: '配环境', link: '/code-notes/nipeima' },
+const sidebarTools = [
+    { text: '指南', link: '/tools/' },
+    { text: '配环境', link: '/tools/nipeima' },
     {
         text: '命令行工具', collapsed: false, items: [
             { text: '工具介绍', link: prefixCommandTools + '/' },
@@ -346,24 +346,24 @@ const sidebarCodeNotes = [
         ],
     }, {
         text: '文本编辑', collapsed: false, items: [
-            { text: 'Markdown', link: '/code-notes/text-edit/markdown' },
-            { text: 'vim', link: '/code-notes/text-edit/vim' },
+            { text: 'Markdown', link: '/tools/text-edit/markdown' },
+            { text: 'vim', link: '/tools/text-edit/vim' },
         ],
     }, {
         text: 'OpenAI', collapsed: false, items: [
-            { text: 'OpenAI', link: '/code-notes/openai/' },
-            { text: 'ChatGPT', link: '/code-notes/openai/chatgpt' },
+            { text: 'OpenAI', link: '/tools/openai/' },
+            { text: 'ChatGPT', link: '/tools/openai/chatgpt' },
         ],
     }, {
         text: '杂项', collapsed: false, items: [
-            { text: 'RBAC', link: '/code-notes/others/rbac' },
-            { text: 'Excel', link: '/code-notes/others/excel' },]
+            { text: 'RBAC', link: '/tools/others/rbac' },
+            { text: 'Excel', link: '/tools/others/excel' },]
     },
     {
         text: '一些工具', collapsed: false, items: [
-            { text: 'Algolia', link: '/code-notes/tools/algolia' },
-            { text: 'The Movie Database(TMDB)', link: '/code-notes/tools/tmdb' },
-            { text: 'gitalk 评论接入教程', link: '/code-notes/tools/gitalk' },
+            { text: 'Algolia', link: '/tools/tools/algolia' },
+            { text: 'The Movie Database(TMDB)', link: '/tools/tools/tmdb' },
+            { text: 'gitalk 评论接入教程', link: '/tools/tools/gitalk' },
         ],
     },
 ];
@@ -731,7 +731,7 @@ export const sidebar = {
     '/course/management/': sidebarManagement,
     '/course/art/': sidebarArt,
     //
-    '/code-notes/': sidebarCodeNotes,
+    '/tools/': sidebarTools,
     //
     '/code/os/': sidebarCodeOS,
     '/code/api/': sidebarCodeAPI,

@@ -21,6 +21,12 @@ INDEX_ZH = 0
 INDEX_EN = 1
 
 
+def get_api_url():
+    api_url_camp = [f"{api_zh}&iChanId={id_camp_zh}", f"{api_en}&iChanId={id_camp_en}"]
+    api_url_char = [f"{api_zh}&iChanId={id_char_zh}", f"{api_en}&iChanId={id_char_en}"]
+    return {"camp": api_url_camp, "char": api_url_char}
+
+
 def get_img_url(img_list: list):
     if not len(img_list) or "url" not in img_list[0]:
         return ""
@@ -29,6 +35,7 @@ def get_img_url(img_list: list):
 
 def get_camp():
     api_url = [f"{api_zh}&iChanId={id_camp_zh}", f"{api_en}&iChanId={id_camp_en}"]
+    print(api_url)
 
     # 0 zh 1 en
     list_camp_all = []
@@ -112,6 +119,7 @@ def camp_by_id(info_camp):
 
 def get_char():
     api_url = [f"{api_zh}&iChanId={id_char_zh}", f"{api_en}&iChanId={id_char_en}"]
+    print(api_url)
     # 0 zh 1 en
     list_char_all = []
 
@@ -213,3 +221,7 @@ get_all = {
 current_path = os.path.dirname(__file__)
 filename = current_path + f"/auto/mhy{gid}char.json"
 op_file.save_dict_to_file(get_all, filename)
+
+url_info = get_api_url()
+filename = current_path + f"/auto/mhy{gid}char"
+op_file.save_dict_to_file(url_info, filename)

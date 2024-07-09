@@ -36,15 +36,16 @@ export const navbar = [
   {
     text: '编程',
     items: [
+      {
+        text: '工具',
+        items: [
+          { text: '配环境', link: '/tools/nipeima' },
+          { text: '全部工具', link: '/tools/' },
+        ],
+        activeMatch: '^/tools',
+      },
       ...navItem,
       {
-        text: '杂项',
-        items: [
-          { text: '配环境', link: '/code-notes/nipeima' },
-          { text: '直接进入', link: '/code-notes/' },
-        ],
-        activeMatch: '^/code-notes',
-      }, {
         text: '速查清单',
         items: [
           { text: 'Linux 命令', link: '/code/os/linux/command' },

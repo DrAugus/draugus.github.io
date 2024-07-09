@@ -1,6 +1,3 @@
----
-icon: vscode-icons:file-type-dependencies
----
 # 配环境
 
 ## LINUX

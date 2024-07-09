@@ -1,5 +1,23 @@
 # Python
 
+## install
+
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+如果在国内，可以在上面两行后面加上 `-i https://pypi.tuna.tsinghua.edu.cn/simple`
+
+:::details 其他源
+
+- 阿里云 <http://mirrors.aliyun.com/pypi/simple/>
+- 中国科技大学 <https://pypi.mirrors.ustc.edu.cn/simple/>
+- 豆瓣(douban) <http://pypi.douban.com/simple/>  
+- 中国科学技术大学 <http://pypi.mirrors.ustc.edu.cn/simple/>
+
+:::
+
 ## requirements
 
 如果你想让你的项目在更多的环境中稳定运行，最好指定所有依赖包的版本。你可以通过运行`pip freeze > requirements.txt`来自动生成当前环境中所有包及其版本的列表，然后再从这个生成的列表中移除不需要的标准库项。如果你不确定当前项目中用到了哪些包，这个方法会很有用。
