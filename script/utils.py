@@ -292,5 +292,16 @@ def timestamp2date(ts: int):
     return dt_object.strftime("%Y-%m-%d")
 
 
-def wget_img(url, output):
+def wget_file(url, output):
     os.system(f"wget {url} -O {output}")
+
+
+# abc=123
+def match_value_by_key(text: str, key: str, sign: str = "="):
+    pattern = r"[a-zA-Z]+=\d+"
+    matches = re.finditer(pattern, text)
+    for match in matches:
+        k, v = match.group().split(sign)
+        if k == key:
+            return v
+    return ""

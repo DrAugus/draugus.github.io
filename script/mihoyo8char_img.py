@@ -26,8 +26,8 @@ def get_char_img():
         avatar_path = current_path + char_img_path + "/" + name
         full_path = current_path + char_img_path + "/full/" + name
         half_path = current_path + char_img_path + "/half/" + name
-        utils.wget_img(url_avatar, avatar_path)
-        utils.wget_img(url_full, full_path)
+        utils.wget_file(url_avatar, avatar_path)
+        utils.wget_file(url_full, full_path)
         os.system(f'cp {full_path} {half_path}')
 
 
