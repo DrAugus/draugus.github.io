@@ -292,12 +292,13 @@ def timestamp2date(ts: int):
     return dt_object.strftime("%Y-%m-%d")
 
 
+@log_args
 def wget_file(url: str, output):
     if (
         url.endswith(".png") or url.endswith(".jpg") or url.endswith(".jpeg")
     ) and os.path.exists(output):
         return
-    os.system(f"wget {url} -O {output}")
+    os.system(f"wget '{url}' -O {output}")
 
 
 # abc=123
