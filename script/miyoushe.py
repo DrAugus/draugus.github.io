@@ -176,7 +176,7 @@ def get_output(warp_arr):
                         output += filename + "\n"
                         print("img name:", filename)
                         if GET_IMAGE:
-                            utils.wget_img(img, f"{current_path}/auto/img/{filename}")
+                            utils.wget_file(img, f"{current_path}/auto/img/{filename}")
 
             # DETAILS
             structured_content = get_warp["post"]["structured_content"]

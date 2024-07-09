@@ -52,6 +52,7 @@ def get_api_news_list(gid: GameID):
 
     api_url_news_list += "&type="
 
+    # 1, 2, 3
     list_api_url_news_list = [
         api_url_news_list + "1",
         api_url_news_list + "2",
@@ -76,8 +77,15 @@ def get_warp_list(gid: GameID, data_dict):
 
     if gid == GameID.Genshin:
         for obj in data_dict:
-            pattern_subject = "Event Wishes"
-            if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
+            pattern_subject = "Event Wish"
+            pattern_content = "Event Wish"
+            match_subject = re.search(
+                pattern_subject, obj["post"]["subject"], re.IGNORECASE
+            )
+            match_content = re.search(
+                pattern_content, obj["post"]["content"], re.IGNORECASE
+            )
+            if match_subject or match_content:
                 warp_arr[WishType.CHARACTER.value].append(obj)
 
     elif gid == GameID.HSR:
@@ -170,7 +178,7 @@ def get_post_id(gid: GameID, warp_arr):
             print("modify_subject", modify_subject)
 
             if len(img_url) and len(modify_subject):
-                utils.wget_img(img_url, f"{WISH_IMG_PATH[gid]}/{modify_subject}")
+                utils.wget_file(img_url, f"{WISH_IMG_PATH[gid]}/{modify_subject}")
 
             print("============")
 
@@ -339,6 +347,7 @@ def parse_wish(post_id, wish_type: WishType):
     name_lower = [utils.replace_characters(char) for char in name]
 
     return {
+        "api_url": api_url_post_full,
         "name": name,
         "name_lower": name_lower,
         "image": [1, 1] if len(character_info_only_name) == 2 else [1],
@@ -377,8 +386,29 @@ def get_json(post_id_arr):
 def write_local(gid: GameID, output):
     filename = current_path + f"/auto/hoyolab{gid.value}.json"
     with open(filename, "w", encoding="utf-8") as file:
-        # 将字典写入文件
         json.dump(output, file)
+
+
+@utils.log_args
+def get_official_json(gid: GameID, url):
+    type_news = utils.match_value_by_key(url, "type")
+    post_id = utils.match_value_by_key(url, "post_id")
+
+    filename = current_path + f"/data/hoyolab{gid.name}{type_news}"
+    if len(post_id):
+        filename += f"_{post_id}"
+    filename += ".json"
+    utils.wget_file(url, filename)
+
+
+@utils.log_args
+def get_post_id_url(gid: GameID, post_all: list):
+    for post in post_all:
+        if "api_url" in post:
+            url = post["api_url"]
+            get_official_json(gid, url)
+            # 只获取最新的，一个就够用了
+            break
 
 
 def main():
@@ -388,11 +418,13 @@ def main():
         gid_info_list = []
         if isinstance(api_url, list):
             for url in api_url:
+                get_official_json(gid, url)
                 data_dict = get_data_dict(url)
                 warp_arr = get_warp_list(gid, data_dict)
                 post_id_arr = get_post_id(gid, warp_arr)
                 all_info = get_json(post_id_arr)
                 gid_info_list.extend([info for info in all_info if info])
+        get_post_id_url(gid, gid_info_list)
         write_local(gid, gid_info_list)
 
 
