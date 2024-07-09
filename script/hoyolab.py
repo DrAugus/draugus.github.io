@@ -77,8 +77,15 @@ def get_warp_list(gid: GameID, data_dict):
 
     if gid == GameID.Genshin:
         for obj in data_dict:
-            pattern_subject = "Event Wishes"
-            if re.search(pattern_subject, obj["post"]["subject"], re.IGNORECASE):
+            pattern_subject = "Event Wish"
+            pattern_content = "Event Wish"
+            match_subject = re.search(
+                pattern_subject, obj["post"]["subject"], re.IGNORECASE
+            )
+            match_content = re.search(
+                pattern_content, obj["post"]["content"], re.IGNORECASE
+            )
+            if match_subject or match_content:
                 warp_arr[WishType.CHARACTER.value].append(obj)
 
     elif gid == GameID.HSR:
@@ -382,6 +389,7 @@ def write_local(gid: GameID, output):
         json.dump(output, file)
 
 
+@utils.log_args
 def get_official_json(gid: GameID, url):
     type_news = utils.match_value_by_key(url, "type")
     post_id = utils.match_value_by_key(url, "post_id")
@@ -393,11 +401,14 @@ def get_official_json(gid: GameID, url):
     utils.wget_file(url, filename)
 
 
+@utils.log_args
 def get_post_id_url(gid: GameID, post_all: list):
     for post in post_all:
         if "api_url" in post:
             url = post["api_url"]
             get_official_json(gid, url)
+            # 只获取最新的，一个就够用了
+            break
 
 
 def main():
