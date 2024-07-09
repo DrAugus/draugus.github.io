@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - py
     paths:
       - "script/requirements.txt"
       - ".github/workflows/get-mhy-wish.yml"
@@ -14,7 +13,6 @@ on:
     types: [opened, synchronize]
     branches:
       - master
-      - py
     paths:
       - "script/requirements.txt"
       - ".github/workflows/get-mhy-wish.yml"
