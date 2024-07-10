@@ -45,17 +45,6 @@ if __name__ == '__main__' :
   read_file()
 ```
 
-## python 提取字符串中的指定字符 正则表达式
-
-```py
-def match_strings(text, begin, end):
-    pattern = re.compile(f'{begin}(.*?){end}')
-    matches = pattern.findall(text)
-    return matches
-```
-
-如果 字符串里有 `\n` 记得替换掉 否则不生效
-
 ## 一维转二维
 
 ```py
@@ -77,6 +66,10 @@ new_foo = sum(foo, [])
 d = ['', 'ad', 'fi', '', 'ar', 'ff']
 d = list(filter(None, d))
 ```
+
+## 正则
+
+正则相关参看 [正则专题](./regex)
 
 ## 去重
 
