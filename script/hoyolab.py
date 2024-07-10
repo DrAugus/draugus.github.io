@@ -1,19 +1,48 @@
 # hoyolab interface
 
+import argparse
 import json
 import os
 import requests
 from bs4 import BeautifulSoup
 import re
 import utils
+import op_file
 from enum import Enum
 
-
-# 是否 只取最新的
-LAST_ONLY = False
-
-
+################# GLOBAL INFO ##################
 current_path = os.path.dirname(__file__)
+current_file_path = __file__
+current_file_name = os.path.basename(current_file_path)
+print(f"\n >>>> RUN {current_file_name} >>>> \n")
+print("path is", current_file_path)
+
+config_name = current_file_name.replace("py", "yml")
+config_path = os.path.join(current_path, "config", config_name)
+print("config path is", config_path)
+
+config_info = utils.get_yaml_config(config_path)
+
+LAST_ONLY = config_info["LAST_ONLY"]
+USE_LOCAL_JSON = config_info["USE_LOCAL_JSON"]
+
+print("\n")
+###############################################
+
+
+############# FOR GITHUB RUNNING #############
+parser = argparse.ArgumentParser(description="Process some integers.")
+parser.add_argument(
+    "arg1", type=int, nargs="?", help="An integer for the github workflows"
+)
+args = parser.parse_args()
+
+if args.arg1:
+    USE_LOCAL_JSON = False
+
+print("ARGS INFO", args)
+print("\n")
+###############################################
 
 
 class GameID(Enum):
@@ -34,6 +63,12 @@ class WishType(Enum):
     CHARACTER = 0
     WEAPON = 1
     OTHERS = 2
+
+
+class Rarity(Enum):
+    STAR3 = 3
+    STAR4 = 4
+    STAR5 = 5
 
 
 api_prefix = "https://bbs-api-os.hoyolab.com/community/post/wapi/"
@@ -63,7 +98,13 @@ def get_api_news_list(gid: GameID):
     return list_api_url_news_list
 
 
-def get_data_dict(api_url):
+def get_data_dict(gid: GameID, api_url):
+
+    if USE_LOCAL_JSON:
+        filename = get_local_official_json_name(gid, api_url)
+        data = op_file.load_dict_from_file(filename)
+        data_dict = data["data"]["list"]
+        return data_dict
 
     data = utils.get_url_data(api_url)
     data_dict = utils.str_to_dict(data["data"]["list"])
@@ -144,6 +185,8 @@ def get_warp_list(gid: GameID, data_dict):
 
 def get_post_id(gid: GameID, warp_arr):
 
+    print("INVOKE get_post_id >>>")
+
     post_id_arr = [[], [], []]
     idx = 0
 
@@ -169,15 +212,17 @@ def get_post_id(gid: GameID, warp_arr):
 
             img_type = len(img_url) and img_url[img_url.rfind(".", 0) :] or ""
             print("img_type", img_type)
-
             image_times = "1"
-
-            # modify_subject = subject.split('"')[1].lower().replace(' ', '_')
-            modify_subject = subject.split(":")[0].lower().replace(" ", "_")
-            modify_subject += "_" + image_times + img_type
+            modify_subject = utils.replace_characters(subject.split(":")[0])
+            if gid == GameID.ZZZ:
+                modify_subject = utils.replace_characters(subject.split("Channel")[0])
+            if not modify_subject.endswith("_"):
+                modify_subject += "_"
+            img_type = ".jpg"
+            modify_subject += image_times + img_type
             print("modify_subject", modify_subject)
 
-            if len(img_url) and len(modify_subject):
+            if len(img_url) and len(modify_subject) and not USE_LOCAL_JSON:
                 utils.wget_file(img_url, f"{WISH_IMG_PATH[gid]}/{modify_subject}")
 
             print("============")
@@ -193,18 +238,48 @@ def unicode_conversion(s):
     return bytes(s, "latin1").decode("unicode_escape")
 
 
-def get_arr_str_event_warp_name(sub_str, text):
+def get_arr_str_event_warp_name(gid: GameID, text):
     arr = []
 
+    match_substr = []
+    match_pattern = []
+
+    if gid == GameID.Genshin:
+        match_substr = ["Character Event Warp", "Event Wish"]
+        match_pattern = [r'"([^"]*)" Character Event Warp', r'Event Wish "([^"]*)"']
+    elif gid == GameID.HSR:
+        match_substr = ["Character Event Warp"]
+        match_pattern = [
+            r'"([^"]*)" Character Event Warp',
+            r'Character Event Warp "([^"]*)"',
+        ]
+    elif gid == GameID.ZZZ:
+        match_substr = ["Exclusive Channel"]
+        match_pattern = [r'Exclusive Channel ([^"]*) is almost here']
+
     def append_match(find_des):
-        if sub_str in find_des:
-            arr.append(utils.match_char_event_warp_name_string(find_des))
+        for substr in match_substr:
+            if utils.is_match(substr, find_des):
+                for pp in match_pattern:
+                    matches = re.findall(pp, text, re.IGNORECASE)
+                    arr.extend([m for m in matches if m])
 
     utils.got_insert_info(text, append_match)
-    if isinstance(arr, list) and len(arr) > 2:
-        arr = arr[:2]
+
+    def remove_if_sign_last_char(s: str):
+        if not s:
+            return s
+
+        last_char = s[-1]
+        if not last_char.isalpha():
+            return s[:-1]
+        else:
+            return s
+
+    arr = [remove_if_sign_last_char(name) for name in arr]
+
     # print(arr)
-    return utils.clean_list_none(arr)
+    return arr
 
 
 def re_find(text_full: str, find_tag: str) -> list:
@@ -231,112 +306,177 @@ def re_find(text_full: str, find_tag: str) -> list:
     return []
 
 
-def get_wish5star(text: str, wish_type: WishType):
+# match: "name (type)"
+def modify_char3(text: str):
+    single_quotes = text.count("'")
+    double_quotes = text.count('"')
+    if single_quotes == 1:
+        text += "'"
+    if double_quotes == 1:
+        text += '"'
+
+    pattern = r'"\s*([^"]*?)\s*\s*\(([^)]*)\)\s*"'
+    matches = re.findall(pattern, text, re.IGNORECASE)
+    res = []
+    if len(matches):
+        for ma in matches:
+            if len(ma) == 2:
+                res.append(
+                    {
+                        "name": ma[0],
+                        "type": ma[1],
+                    }
+                )
+
+    return res
+
+
+# match: name (type)
+def modify_char2(text: str):
+    pattern = r"\s+([a-zA-Z_][a-zA-Z0-9_]*)\s+\((.+?)\)"
+    matches = re.findall(pattern, text, re.IGNORECASE)
+    res = []
+    if len(matches):
+        for ma in matches:
+            if len(ma) == 2:
+                res.append(
+                    {
+                        "name": ma[0],
+                        "type": ma[1],
+                    }
+                )
+
+    return res
+
+
+# match: "xxx" name (type)
+def modify_char(text: str):
+    pattern = r'"(.+?)"\s+([a-zA-Z_][a-zA-Z0-9_]*)\s+\((.+?)\)'
+    matches = re.findall(pattern, text, re.IGNORECASE)
+    res = []
+    if len(matches):
+        for ma in matches:
+            if len(ma) == 3:
+                res.append(
+                    {
+                        "quote": ma[0],
+                        "name": ma[1],
+                        "type": ma[2],
+                    }
+                )
+
+    return res
+
+
+def get_wish_stars(gid: GameID, text, wish_type: WishType, rarity: Rarity):
     arr = []
-    find_tag: str = ""
-    if wish_type == WishType.CHARACTER:
-        find_tag = "5-Star Character"
-    elif wish_type == WishType.WEAPON:
-        find_tag = "5-Star Light Cone"
+    start_str = ""
+    end_str = ""
+    if gid == GameID.Genshin:
+        if wish_type == WishType.CHARACTER:
+            if rarity == Rarity.STAR5:
+                start_str = "5-Star Character"
+                end_str = "will receive a huge"
+            elif rarity == Rarity.STAR4:
+                start_str = "4-Star Character"
+                end_str = "will receive a huge"
+        elif wish_type == WishType.WEAPON:
+            if rarity == Rarity.STAR5:
+                start_str = "5-Star weapon"
+                end_str = "will receive a huge"
+            elif rarity == Rarity.STAR4:
+                start_str = "4-Star weapon"
+                end_str = "will receive a huge"
+    elif gid == GameID.HSR:
+        if wish_type == WishType.CHARACTER:
+            if rarity == Rarity.STAR5:
+                start_str = "5-Star Character"
+                end_str = ")"
+            elif rarity == Rarity.STAR4:
+                start_str = "4-Star Character"
+                end_str = "will be boosted"
+        elif wish_type == WishType.WEAPON:
+            if rarity == Rarity.STAR5:
+                start_str = "5-star Light Cone"
+                end_str = ")"
+            elif rarity == Rarity.STAR4:
+                start_str = "4-star Light Cone"
+                end_str = "will be boosted"
+    elif gid == GameID.ZZZ:
+        if wish_type == WishType.CHARACTER:
+            if rarity == Rarity.STAR5:
+                start_str = "S-Rank Agent"
+                end_str = ")"
+            elif rarity == Rarity.STAR4:
+                start_str = "A-Rank Agents"
+                end_str = "have significantly boosted"
+        # TODO WEAPON
+        elif wish_type == WishType.WEAPON:
+            if rarity == Rarity.STAR5:
+                start_str = "5-star Light Cone"
+                end_str = ")"
+            elif rarity == Rarity.STAR4:
+                start_str = "4-star Light Cone"
+                end_str = "will be boosted"
 
     def append_match(find_des):
-        arr.extend(utils.find_substrs(find_des, find_tag, ")"))
+        arr.extend(utils.find_all_substr(find_des, start_str, end_str))
 
     utils.got_insert_info(text, append_match)
 
-    if isinstance(arr, list) and len(arr) > 2:
-        arr = arr[:2]
-
-    return utils.clean_list_none(arr)
-
-
-def get_wish4star(text: str, wish_type: WishType):
-    arr = []
-    find_tag: str = ""
+    list_wish_info = []
     if wish_type == WishType.CHARACTER:
-        find_tag = "4-Star Characters"
+        for one in arr:
+            list_wish_info.extend([char for char in modify_char(one) if char])
+        if not len(list_wish_info):
+            for one in arr:
+                list_wish_info.extend([char for char in modify_char2(one) if char])
     elif wish_type == WishType.WEAPON:
-        find_tag = "4-Star Light Cones"
+        for one in arr:
+            list_wish_info.extend([char for char in modify_char2(one) if char])
+        for one in arr:
+            list_wish_info.extend([char for char in modify_char3(one) if char])
 
-    def extract_characters(text: str, find_tag: str):
-        # 使用一个正则表达式模式匹配所有的角色及其类型，根据传递的角色等级进行匹配
-        pattern = rf"{find_tag}\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))\s+((?:\w+\s+)?\w+\s+\(.*?\))"
-
-        # 使用findall而不是search，findall将找到所有的匹配项，每项都是一个组中的字符。
-        matches = re.findall(pattern, text)
-
-        # 由于 findall 返回列表的列表，我们需要使用列表展开来获取单个组。
-        if matches:
-            character_list = [match for group in matches for match in group]
-            return character_list
-        else:
-            return None
-
-    def append_match(find_des):
-        if extract_characters(find_des, find_tag) != None:
-            arr.extend(extract_characters(find_des, find_tag))
-
-    utils.got_insert_info(text, append_match)
-
-    if isinstance(arr, list) and len(arr) > 3:
-        arr = arr[:3]
-
-    res = utils.clean_list_none(arr)
-
-    # 没找着
-    if isinstance(res, list) and not len(res):
-        # print(">>>>>>> 没找到没找到没找到")
-        res = re_find(text, find_tag)
-
-    return utils.clean_list_none(res)
+    return list_wish_info
 
 
-# wish_type 0 character 1 weapon
-
-
-@utils.log_args
-def parse_wish(post_id, wish_type: WishType):
+def get_post_url(post_id):
     api_url_post_full = api_prefix + "getPostFull"
     api_url_post_full += "?post_id=" + post_id
     print("api_url_post_full: ", api_url_post_full)
+    return api_url_post_full
 
-    full_data = utils.get_url_data(api_url_post_full)
-    got_content = full_data["data"]["post"]["post"]["structured_content"]
 
-    clean_text = utils.str_to_dict(got_content)
-    print("clean_text type is ", type(clean_text))
-    if clean_text == None:
-        return
+def get_info_by_insert(gid: GameID, post_id, wish_type: WishType, clean_text):
 
-    arr_str_char_event_warp_name = get_arr_str_event_warp_name(
-        "Character Event Warp", clean_text
-    )
+    api_url_post_full = get_post_url(post_id)
+    arr_str_char_event_warp_name = get_arr_str_event_warp_name(gid, clean_text)
     print("arr_str_char_event_warp_name is ", arr_str_char_event_warp_name)
     arr_str_char_event_warp_name_modify = [
-        modify_name.lower().replace(" ", "_")
+        utils.replace_characters(modify_name) + "_"
         for modify_name in arr_str_char_event_warp_name
     ]
     print(
         "arr_str_char_event_warp_name modify is ", arr_str_char_event_warp_name_modify
     )
 
-    timestamp_text = utils.get_timestamp(clean_text)
-    print("Timestamp: ", timestamp_text)
+    text_date = utils.get_date(clean_text)
+    print("Date: ", text_date)
 
     duration_text = utils.get_duration(clean_text)
     print("Duration: ", duration_text)
 
     # str.strip()方法用于移除字符串头尾指定的字符，默认为空格或换行符
     # 提取5-star角色的名称和描述信息
-    character_info = get_wish5star(clean_text, wish_type)
+    character_info = get_wish_stars(gid, clean_text, wish_type, Rarity.STAR5)
     print("5-star:", character_info)
-    character_info_only_name = utils.get_only_name(character_info)
+    character_info_only_name = [info["name"] for info in character_info]
     print("5-star only name:", character_info_only_name)
 
     # 提取4-star角色的名称和描述信息
-    character_info4 = get_wish4star(clean_text, wish_type)
+    character_info4 = get_wish_stars(gid, clean_text, wish_type, Rarity.STAR4)
     print("4-star:", character_info4)
-    character_info_only_name4 = utils.get_only_name(character_info4)
+    character_info_only_name4 = [info["name"] for info in character_info4]
     print("4-star only name:", character_info_only_name4)
 
     name = (
@@ -344,12 +484,11 @@ def parse_wish(post_id, wish_type: WishType):
         if wish_type == WishType.CHARACTER
         else "Brilliant Fixation"
     )
-    name_lower = [utils.replace_characters(char) for char in name]
 
     return {
         "api_url": api_url_post_full,
         "name": name,
-        "name_lower": name_lower,
+        "name_lower": arr_str_char_event_warp_name_modify,
         "image": [1, 1] if len(character_info_only_name) == 2 else [1],
         "shortName": character_info_only_name,
         "start": (
@@ -372,25 +511,46 @@ def parse_wish(post_id, wish_type: WishType):
     }
 
 
-def get_json(post_id_arr):
+@utils.log_args
+def parse_wish(gid: GameID, post_id, wish_type: WishType):
+
+    api_url_post_full = get_post_url(post_id)
+
+    if USE_LOCAL_JSON:
+        post_json_filename = get_local_official_json_name(gid, api_url_post_full)
+        # # TODO temp name, if commit delete
+        # post_json_filename = post_json_filename.split("_")[0] + ".json"
+        full_data = op_file.load_dict_from_file(post_json_filename)
+    else:
+        full_data = utils.get_url_data(api_url_post_full)
+
+    got_content = full_data["data"]["post"]["post"]["structured_content"]
+
+    clean_text = utils.str_to_dict(got_content)
+    print("clean_text type is ", type(clean_text))
+    if clean_text == None:
+        return
+
+    # 合并查找
+    merge_insert = utils.merge_insert(clean_text)
+    return get_info_by_insert(gid, post_id, wish_type, merge_insert)
+    # 单条查找
+    return get_info_by_insert(gid, post_id, wish_type, clean_text)
+
+
+def get_json(gid: GameID, post_id_arr):
     all_info = []
     for index, id_arr in enumerate(post_id_arr):
-        for id in id_arr:
-            dict_info = parse_wish(id, WishType(index))
+        for post_id in id_arr:
+            dict_info = parse_wish(gid, post_id, WishType(index))
             all_info.append(dict_info)
             if LAST_ONLY:
                 break
     return all_info
 
 
-def write_local(gid: GameID, output):
-    filename = current_path + f"/auto/hoyolab{gid.value}.json"
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(output, file)
-
-
 @utils.log_args
-def get_official_json(gid: GameID, url):
+def get_local_official_json_name(gid: GameID, url):
     type_news = utils.match_value_by_key(url, "type")
     post_id = utils.match_value_by_key(url, "post_id")
 
@@ -398,16 +558,32 @@ def get_official_json(gid: GameID, url):
     if len(post_id):
         filename += f"_{post_id}"
     filename += ".json"
+    return filename
+
+
+def write_local(gid: GameID, output):
+    filename = current_path + f"/auto/hoyolab{gid.value}.json"
+    op_file.save_dict_to_file(output, filename)
+
+
+@utils.log_args
+def get_official_json(gid: GameID, url):
+    if USE_LOCAL_JSON:
+        return
+    filename = get_local_official_json_name(gid, url)
     utils.wget_file(url, filename)
 
 
 @utils.log_args
-def get_post_id_url(gid: GameID, post_all: list):
-    for post in post_all:
-        if "api_url" in post:
-            url = post["api_url"]
+def get_post_id_url(gid: GameID, post_id: list):
+    if len(post_id) != 3:
+        return
+
+    for list_id in post_id:
+        for id in list_id:
+            url = get_post_url(id)
             get_official_json(gid, url)
-            # 只获取最新的，一个就够用了
+            # 每种只获取最新的，一个就够用了
             break
 
 
@@ -419,12 +595,13 @@ def main():
         if isinstance(api_url, list):
             for url in api_url:
                 get_official_json(gid, url)
-                data_dict = get_data_dict(url)
+                data_dict = get_data_dict(gid, url)
                 warp_arr = get_warp_list(gid, data_dict)
                 post_id_arr = get_post_id(gid, warp_arr)
-                all_info = get_json(post_id_arr)
+                get_post_id_url(gid, post_id_arr)
+                all_info = get_json(gid, post_id_arr)
                 gid_info_list.extend([info for info in all_info if info])
-        get_post_id_url(gid, gid_info_list)
+
         write_local(gid, gid_info_list)
 
 

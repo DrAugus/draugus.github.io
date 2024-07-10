@@ -5,7 +5,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import re
-
+import op_file
 import utils
 
 
@@ -122,7 +122,7 @@ def get_wish5star(text: str):
 
     def append_match(find_des):
         for vv in find_tag:
-            arr.extend(utils.find_substrs(find_des, vv, ")"))
+            arr.extend(utils.find_all_substr(find_des, vv, ")"))
 
     utils.got_insert_info(text, append_match)
 
@@ -207,10 +207,10 @@ def get_chronicled_wish(text):
             index1 = find_des.find("5-Star Characters")
             res = find_des[index1:]
 
-            char5star = utils.find_substrs(res, "5-Star Characters", "\n")
-            char5weapon = utils.find_substrs(res, "5-Star Weapons", "\n")
-            char4star = utils.find_substrs(res, "4-Star Characters", "\n")
-            char4weapon = utils.find_substrs(res, "4-Star Weapons", "\n")
+            char5star = utils.find_all_substr(res, "5-Star Characters", "\n")
+            char5weapon = utils.find_all_substr(res, "5-Star Weapons", "\n")
+            char4star = utils.find_all_substr(res, "4-Star Characters", "\n")
+            char4weapon = utils.find_all_substr(res, "4-Star Weapons", "\n")
 
             if len(char5star):
                 char5star = [modify_name(s) for s in char5star]
@@ -252,8 +252,8 @@ def parse_wish(post_id, post_idx):
     # print(clean_text)
     print("=====================")
 
-    timestamp_text = utils.get_timestamp(clean_text)
-    print("Timestamp: ", timestamp_text)
+    text_date = utils.get_date(clean_text)
+    print("Date: ", text_date)
 
     duration_text = utils.get_duration(clean_text)
     print("Duration: ", duration_text)
@@ -364,6 +364,4 @@ for i in range(len(post_id)):
 
 current_path = os.path.dirname(__file__)
 filename = current_path + "/auto/mhy2.json"
-with open(filename, "w", encoding="utf-8") as file:
-    # 将字典写入文件
-    json.dump(all_info, file)
+op_file.save_dict_to_file(all_info, filename)

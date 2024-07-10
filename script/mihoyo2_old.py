@@ -4,12 +4,9 @@ import json
 import requests
 from bs4 import BeautifulSoup
 import re
-
+import op_file
 import utils
 import os
-
-
-
 
 
 # type=3 公告
@@ -252,6 +249,4 @@ for i in range(len(post_id)):
 
 current_path = os.path.dirname(__file__)
 filename = current_path + "/auto/mhy2old.json"
-with open(filename, "w", encoding="utf-8") as file:
-    # 将字典写入文件
-    json.dump(all_info, file)
+op_file.save_dict_to_file(all_info, filename)
