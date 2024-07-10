@@ -1,11 +1,15 @@
 {
-    "life/code/program/config-env.md": {
-        "title": "配环境",
-        "date": 1720426976.0
-    },
     "life/code/program/lang/python.md": {
         "title": "Python",
         "date": 1716866579
+    },
+    "life/code/program/lang/regex.md": {
+        "title": "正则表达式",
+        "date": 1720604343.0
+    },
+    "life/code/program/config-env.md": {
+        "title": "配环境",
+        "date": 1720426976.0
     },
     "life/course/science/discrete-math.md": {
         "title": "离散数学",

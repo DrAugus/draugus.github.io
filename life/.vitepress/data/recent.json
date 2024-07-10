@@ -2,16 +2,22 @@
     "title": "",
     "items": [
         {
-            "title": "配环境",
-            "desc": "配环境 LINUX ```shell sudo apt install git cmake pyt",
-            "link": "/code/program/config-env",
-            "date": "2024-07-08"
-        },
-        {
             "title": "Python",
             "desc": "Python install ```bash python -m pip install --up",
             "link": "/code/program/lang/python",
             "date": "2024-05-28"
+        },
+        {
+            "title": "正则表达式",
+            "desc": "正则表达式 匹配中文 `[\\u4e00-\\u9fa5]` 匹配英文 `[a-zA-Z]` 匹配数字",
+            "link": "/code/program/lang/regex",
+            "date": "2024-07-10"
+        },
+        {
+            "title": "配环境",
+            "desc": "配环境 LINUX ```shell sudo apt install git cmake pyt",
+            "link": "/code/program/config-env",
+            "date": "2024-07-08"
         },
         {
             "title": "离散数学",
@@ -113,12 +119,6 @@
             "title": "南京",
             "desc": "南京 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230225",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "上海",
-            "desc": "上海 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230311",
             "date": "2024-06-21"
         }
     ]
