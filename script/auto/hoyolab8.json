@@ -1,1 +1,74 @@
-[{"api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552250", "name": [], "name_lower": [], "image": [1], "shortName": [], "start": "", "end": "", "version": "xxx", "wish5star": [], "wish4star": [], "wishName": [], "url": [""]}, {"api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552247", "name": "Brilliant Fixation", "name_lower": ["b", "r", "i", "l", "l", "i", "a", "n", "t", "_", "f", "i", "x", "a", "t", "i", "o", "n"], "image": [1], "shortName": [], "start": "", "end": "", "version": "xxx", "wish5star": [], "wish4star": [], "wishName": [], "url": [""]}, {"api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552246", "name": "Brilliant Fixation", "name_lower": ["b", "r", "i", "l", "l", "i", "a", "n", "t", "_", "f", "i", "x", "a", "t", "i", "o", "n"], "image": [1, 1], "shortName": ["Event Contents: Proxies can try out Agents Lycaon", "Nekomata"], "start": "", "end": "", "version": "xxx", "wish5star": ["Event Contents: Proxies can try out Agents Lycaon", "Nekomata"], "wish4star": ["Requirements: Unlock Signal Search\u2022 Time Available: Permanent\u2022 Event Contents: Proxies can try out Agents Lycaon", "Nekomata", "Grace"], "wishName": [], "url": [""]}, {"api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552245", "name": "Brilliant Fixation", "name_lower": ["b", "r", "i", "l", "l", "i", "a", "n", "t", "_", "f", "i", "x", "a", "t", "i", "o", "n"], "image": [1], "shortName": [], "start": "", "end": "", "version": "xxx", "wish5star": [], "wish4star": [], "wishName": [], "url": [""]}]
+[
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552250",
+        "name": [],
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [],
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552247",
+        "name": "Brilliant Fixation",
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [],
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552246",
+        "name": "Brilliant Fixation",
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [],
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552245",
+        "name": "Brilliant Fixation",
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [],
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    }
+]

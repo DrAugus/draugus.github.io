@@ -3,6 +3,7 @@ import re
 import requests
 import inspect
 import os
+import yaml
 
 from functools import wraps
 from datetime import datetime
@@ -59,23 +60,22 @@ def str_to_dict(text):
         return None
 
 
-def find_unique_timestamps(text):
+def find_date(text):
     # 正则表达式匹配两种格式的时间字符串
-    pattern = r"\b\d{4}[/-]\d{2}[/-]\d{2}\s+\d{2}:\d{2}:\d{2}\b"
-
-    # 在文本中查找所有匹配的时间字符串
+    # 2024/1/2 or 2024/01/02 or 2024-01-02
+    # 秒可选，可能会没有秒
+    # (?::\d{1,2})?
+    # 参考 群友 及 https://docs.python.org/3/howto/regex.html#non-capturing-and-named-groups
+    pattern = r"\d{4}[/-]\d{1,2}[/-]\d{1,2}\s+\d{1,2}:\d{1,2}(?::\d{1,2})?"
     matches = re.findall(pattern, text)
-
-    # 使用set数据结构来去重，然后转换为列表
-    unique_matches = list(OrderedDict.fromkeys(matches))
-
+    unique_matches = list(dict.fromkeys(matches))
     return unique_matches
 
 
 # escape 避免传入可能引起正则错误的符号
 # 包含 start_str end_str：r'({}.*?{})'
 # 不包含 start_str：r'{}(.*?{})'
-def find_substrs(text, start_str, end_str):
+def find_all_substr(text, start_str, end_str):
     pattern = r"{}(.*?{})".format(re.escape(start_str), re.escape(end_str))
     return re.findall(pattern, text, re.IGNORECASE)
 
@@ -118,15 +118,17 @@ def find_nth_occurrence_2(
 
 
 def match_char_event_warp_name_string(text):
-    pattern = r'"([^"]*)" Character Event Warp'
-    match = re.search(pattern, text)
-    if match:
-        return match.group(1)
-    return None
+    pattern = [r'"([^"]*)" Character Event Warp', r'Event Wish "([^"]*)"']
+    res = []
+    for pp in pattern:
+        matches = re.findall(pp, text)
+        res.extend(matches)
+
+    return res
 
 
 def replace_characters(input_string: str) -> str:
-    new_str = re.sub(r"[·.,& ]", "_", input_string)
+    new_str = re.sub(r"[-·.,& ]", "_", input_string)
     while "__" in new_str:
         new_str = new_str.replace("__", "_")
     new_str = new_str.lower()
@@ -145,7 +147,19 @@ def clear_non_letters(input_str) -> str:
         return input_str
 
 
+def merge_insert(insert_list: list):
+    output = ""
+    for obj in insert_list:
+        if "insert" in obj and isinstance(obj["insert"], str):
+            output += obj["insert"]
+    return output
+
+
 def got_insert_info(text, callback):
+    if isinstance(text, str):
+        callback(text)
+        return
+
     for vv in text:
         find_des = vv.get("insert")
         if isinstance(find_des, str):
@@ -173,11 +187,11 @@ def get_only_name(character_info: list) -> list:
     return character_info_only_name
 
 
-def get_timestamp(text):
+def get_date(text):
     arr = []
 
     def append_match(find_des):
-        arr.extend(find_unique_timestamps(find_des))
+        arr.extend(find_date(find_des))
 
     got_insert_info(text, append_match)
 
@@ -195,43 +209,32 @@ def get_duration(text):
                     {"start_time": format_date(start), "end_time": format_date(end)}
                 )
 
-        time_match = re.search(
-            r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des
-        )
-        if time_match:
-            version_match = re.search(r"Version (\d+\.\d+)", find_des)
+        # time_match = re.search(
+        #     r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}(:\d{1,2})?)", find_des
+        # )
+        time_match = find_date(find_des)
+        if len(time_match) == 2:
+            start_time, end_time = time_match
+            got_dur(start_time, end_time)
+            return
+        elif len(time_match):
+            version_match = re.search(r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
                 version = version_match.group(1)
             else:
                 version = None
 
-            time_match = re.search(
-                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", find_des
-            )
-            if time_match:
-                time = time_match.group(1)
-            else:
-                time = None
+            time = time_match[0]
 
             if version != None and time != None:
                 # print(f'version:{version}', f'time:{time}')
                 got_dur(version, time)
                 return
 
-            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
-            pattern = r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})"
-            # 使用正则表达式搜索所有匹配的时间
-            matches = re.findall(pattern, find_des)
-            # 检查是否找到了两个匹配的时间，表示开始和结束时间
-            if matches and len(matches) == 2:
-                start_time, end_time = matches
-                got_dur(start_time, end_time)
-                # print(f"start_time:{start_time} end_time:{end_time}")
-
         # 大版本更新时
         # update – 2024/01/17 11:59:00(server time)
         if "update" in find_des and "server time" in find_des:
-            version_match = re.search(r"Version (\d+\.\d+)", find_des)
+            version_match = re.search(r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
                 version = version_match.group(1)
             else:
@@ -302,11 +305,26 @@ def wget_file(url: str, output):
 
 
 # abc=123
+# \w+ 匹配一个或多个字母数字字符（等价于 [a-zA-Z0-9_]+）
+# \d+ 匹配一个或多个数字
 def match_value_by_key(text: str, key: str, sign: str = "="):
-    pattern = r"[a-zA-Z]+=\d+"
+    pattern = r"\w+=\d+"
     matches = re.finditer(pattern, text)
     for match in matches:
         k, v = match.group().split(sign)
         if k == key:
             return v
     return ""
+
+
+def get_yaml_config(yaml_path):
+    f = open(yaml_path, "rb")
+    config = yaml.safe_load_all(f)
+    config_list = list(config)
+    config_value = config_list[0]
+    return config_value
+
+
+def is_match(sub_str: str, text: str):
+    match_info = re.search(sub_str, text, re.IGNORECASE)
+    return True if match_info else False

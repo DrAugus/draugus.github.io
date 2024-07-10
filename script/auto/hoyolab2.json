@@ -1,1 +1,82 @@
-[{"api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30071782", "name": [], "name_lower": [], "image": [1], "shortName": [], "start": "", "end": "", "version": "xxx", "wish5star": [], "wish4star": [], "wishName": [], "url": [""]}, {"api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=29435758", "name": [], "name_lower": [], "image": [1], "shortName": [], "start": "4.7 +0800", "end": "2024/06/25 17:59:00 +0800", "version": "xxx", "wish5star": [], "wish4star": [], "wishName": [], "url": [""]}]
+[
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30071782",
+        "name": [
+            "Romaritime Meluserenity",
+            "Chanson of Many Waters",
+            "Epitome Invocation"
+        ],
+        "name_lower": [
+            "romaritime_meluserenity_",
+            "chanson_of_many_waters_",
+            "epitome_invocation_"
+        ],
+        "image": [
+            1,
+            1
+        ],
+        "shortName": [
+            "Sigewinne",
+            "Furina"
+        ],
+        "start": "2024/6/25 18:00 +0800",
+        "end": "2024/7/16 14:59 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "sigewinne",
+            "furina"
+        ],
+        "wish4star": [
+            "noelle",
+            "gaming",
+            "rosaria",
+            "noelle",
+            "gaming",
+            "rosaria"
+        ],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=29435758",
+        "name": [
+            "Romaritime Meluserenity",
+            "Chanson of Many Waters",
+            "Epitome Invocation"
+        ],
+        "name_lower": [
+            "romaritime_meluserenity_",
+            "chanson_of_many_waters_",
+            "epitome_invocation_"
+        ],
+        "image": [
+            1,
+            1
+        ],
+        "shortName": [
+            "Sigewinne",
+            "Furina"
+        ],
+        "start": "2024/6/25 18:00 +0800",
+        "end": "2024/7/16 14:59 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "sigewinne",
+            "furina"
+        ],
+        "wish4star": [
+            "noelle",
+            "gaming",
+            "rosaria",
+            "noelle",
+            "gaming",
+            "rosaria"
+        ],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    }
+]

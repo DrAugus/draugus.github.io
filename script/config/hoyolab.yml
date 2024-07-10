@@ -1,0 +1,4 @@
+# 是否 只取最新的
+LAST_ONLY: false
+#
+USE_LOCAL_JSON: true
