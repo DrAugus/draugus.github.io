@@ -5,15 +5,15 @@ import { WishAll } from "../type";
 export const WISH: WishAll = {
   characters: [
     {
-      name: [],
+      name: ["Mellow Waveride"],
       image: [1],
       shortName: ["Ellen Joe"],
       start: "2024/07/04 10:00:00 +0800",
       end: "2024/07/24 17:59:00 +0800",
       wish5star: ["ellen_joe"],
-      wish4star: [],
+      wish4star: ["soukaku", "anton_ivanov"],
       version: "1.0",
-      wishName: [],
+      wishName: ['慵懒逐浪'],
       url: []
     }, {
       name: [],

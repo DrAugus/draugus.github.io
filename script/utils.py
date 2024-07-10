@@ -117,16 +117,6 @@ def find_nth_occurrence_2(
     return find_index - len(find_str)
 
 
-def match_char_event_warp_name_string(text):
-    pattern = [r'"([^"]*)" Character Event Warp', r'Event Wish "([^"]*)"']
-    res = []
-    for pp in pattern:
-        matches = re.findall(pp, text)
-        res.extend(matches)
-
-    return res
-
-
 def replace_characters(input_string: str) -> str:
     new_str = re.sub(r"[-·.,& ]", "_", input_string)
     while "__" in new_str:
@@ -213,8 +203,9 @@ def get_duration(text):
         #     r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}(:\d{1,2})?)", find_des
         # )
         time_match = find_date(find_des)
-        if len(time_match) == 2:
-            start_time, end_time = time_match
+        if len(time_match) >= 2:
+            start_time = time_match[0]
+            end_time = time_match[1]
             got_dur(start_time, end_time)
             return
         elif len(time_match):
