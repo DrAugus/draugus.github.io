@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - dev-py
     paths:
       - "script/requirements.txt"
       - ".github/workflows/get-mhy-wish.yml"

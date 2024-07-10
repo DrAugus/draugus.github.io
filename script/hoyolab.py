@@ -12,6 +12,8 @@ from enum import Enum
 
 # 是否 只取最新的
 LAST_ONLY = False
+# 
+USE_LOCAL_JSON = True
 
 
 current_path = os.path.dirname(__file__)
