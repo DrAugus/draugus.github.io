@@ -223,7 +223,9 @@ def get_post_id(gid: GameID, warp_arr):
             print("modify_subject", modify_subject)
 
             if len(img_url) and len(modify_subject) and not USE_LOCAL_JSON:
-                utils.wget_file(img_url, f"{WISH_IMG_PATH[gid]}/{modify_subject}")
+                utils.wget_file(
+                    img_url, f"{current_path}{WISH_IMG_PATH[gid]}/{modify_subject}"
+                )
 
             print("============")
 
