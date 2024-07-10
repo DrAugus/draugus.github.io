@@ -34,6 +34,26 @@ export const NAV_DATA: CardData[] = [
     title: '常用工具',
     items: [
       {
+        icon: 'https://static.deepl.com/img/favicon/favicon_96.png',
+        title: 'DeepL 翻译',
+        desc: 'DeepL翻译：全世界最准确的翻译。',
+        link: 'https://www.deepl.com/zh/translator'
+      }, {
+        icon: 'https://lzltool.cn/favicon.ico?v=1',
+        title: '在线字符串转义',
+        desc: '在线字符串转义工具可以将字符串中的双引号、单引号、换行符转义或去转义。',
+        link: 'https://lzltool.cn/string-escape'
+      }, {
+        icon: '/icons/json-cn.ico',
+        title: 'Json 中文网',
+        desc: 'JSON 在线解析及格式化验证',
+        link: 'https://www.json.cn'
+      },{
+        icon: 'https://regex101.com/static/assets/icon-96.png',
+        title: 'regex101',
+        desc: '正则表达式在线编辑器',
+        link: 'https://regex101.com/'
+      },  {
         icon: '',
         title: '地图',
         desc: '行政区划图',
@@ -104,12 +124,6 @@ export const NAV_DATA: CardData[] = [
         desc: '开发人员的工具箱',
         link: 'https://oktools.net/'
       },
-      {
-        icon: '/icons/json-cn.ico',
-        title: 'Json 中文网',
-        desc: 'JSON 在线解析及格式化验证',
-        link: 'https://www.json.cn'
-      }
     ]
   },
   {
@@ -559,7 +573,8 @@ export const NAV_DATA: CardData[] = [
             text: 'gcc', link: 'https://github.com/hellogcc/100-gcc-tips',
           }, { text: 'gdb', link: 'https://github.com/hellogcc/100-gdb-tips', }]
         },
-        link: 'https://www.webpackjs.com'
+        target:'',
+        link: ''
       },
       {
         icon: 'https://www.webpackjs.com/icon_180x180.png',
