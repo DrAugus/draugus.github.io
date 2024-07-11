@@ -48,12 +48,12 @@ export const NAV_DATA: CardData[] = [
         title: 'Json 中文网',
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn'
-      },{
+      }, {
         icon: 'https://regex101.com/static/assets/icon-96.png',
         title: 'regex101',
         desc: '正则表达式在线编辑器',
         link: 'https://regex101.com/'
-      },  {
+      }, {
         icon: '',
         title: '地图',
         desc: '行政区划图',
@@ -150,6 +150,18 @@ export const NAV_DATA: CardData[] = [
         icon: '/icons/chatgpt.png',
         title: 'ChatGPT(最强)',
         link: 'https://chat.openai.com/chat'
+      }, {
+        icon: 'https://nlp-eb.cdn.bcebos.com/logo/favicon.ico',
+        title: '文心一言',
+        link: 'https://yiyan.baidu.com/'
+      }, {
+        icon: 'https://statics.moonshot.cn/kimi-chat/favicon.ico',
+        title: 'KIMI',
+        link: 'https://kimi.moonshot.cn/'
+      }, {
+        icon: 'https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/web/logo-icon.png',
+        title: '豆包',
+        link: 'https://www.doubao.com/chat/'
       },
       {
         // icon: 'https://www.notion.so/images/logo-ios.png',
@@ -573,7 +585,7 @@ export const NAV_DATA: CardData[] = [
             text: 'gcc', link: 'https://github.com/hellogcc/100-gcc-tips',
           }, { text: 'gdb', link: 'https://github.com/hellogcc/100-gdb-tips', }]
         },
-        target:'',
+        target: '',
         link: ''
       },
       {
