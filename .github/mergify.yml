@@ -91,3 +91,20 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+
+  - name: automatic merge for dev-py
+    conditions:
+      - author=DrAugus
+      - -check-failure~=^py-
+      - base=dev-py
+    actions:
+      merge:
+        method: merge        
+
+  # https://docs.mergify.com/workflow/delete-head-branches/#prevent-deletion-for-dependent-branches
+  - name: delete head branch after merge but not if other PRs depend on it
+    conditions:
+      - merged
+    actions:
+      delete_head_branch:
+        force: false

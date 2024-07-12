@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - dev-game
+      - dev-py
 
 jobs:
   pull-request:
@@ -17,5 +18,5 @@ jobs:
         with:
           destination_branch: master
           pr_title: "pulling ${{ github.ref }} into master"
-          pr_body: "👑 *An automated PR* for game"
+          pr_body: "👑 *An automated PR* for ${{ github.ref }}"
           github_token: ${{ secrets.DEPLOY_GH }}
