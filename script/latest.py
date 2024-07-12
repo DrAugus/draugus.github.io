@@ -120,7 +120,10 @@ print(len(md_dict))
 # }
 ts_card = {"title": "", "items": []}
 for file, obj in md_dict.items():
-    content = op_file.read_file_and_truncate(current_path + "/../" + file)
+    file_path = f"{current_path}/../{file}"
+    if not os.path.exists(file_path):
+        continue
+    content = op_file.read_file_and_truncate(file_path)
     if file.startswith("life") and file.endswith(".md"):
         link = file[4:-3]
     else:
