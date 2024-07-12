@@ -8,8 +8,12 @@ export const Element = {
 
 export const Camp = {
   SonsofCalydon: { id: 'Sons of Calydon', name: '卡吕冬之子' },
-  CriminalInvestigationSpecialResponseTeam: { id: 'Criminal Investigation Special Response Team', name: '刑侦特勤组' },
-  Section6: { id: 'Section 6', name: 'H.S.O.S.6' },
+  FactionUnknown: { id: 'Faction Unknown', name: '阵营不明' },
+  CriminalInvestigationSpecialResponseTeam: {
+    id: 'Criminal Investigation Special Response Team',
+    name: '刑侦特勤组'
+  },
+  Section6: { id: 'Section 6', name: '对空六课' },
   BelobogHeavyIndustries: { id: 'Belobog Heavy Industries', name: '白祇重工' },
   VictoriaHousekeepingCo: { id: 'Victoria Housekeeping Co.', name: '维多利亚家政' },
   ObolSquad: { id: 'Obol Squad', name: '奥波勒斯小队' },
