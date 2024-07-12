@@ -8,8 +8,8 @@
         "event_exclusive": true,
         "intro": "队长，逮捕犯人就交给我吧！",
         "camp": "CriminalInvestigationSpecialResponseTeam",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "qingyi": {
         "key": "Qingyi",
@@ -18,10 +18,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "邂逅相遇,适我愿兮。",
+        "intro": "邂逅相遇，适我愿兮。",
         "camp": "CriminalInvestigationSpecialResponseTeam",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "piper_wheel": {
         "key": "Piper Wheel",
@@ -32,8 +32,8 @@
         "event_exclusive": true,
         "intro": "要载你一程吗？记得系好安全带哦。",
         "camp": "SonsofCalydon",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "lucy": {
         "key": "Lucy",
@@ -44,8 +44,8 @@
         "event_exclusive": true,
         "intro": "有贵客登门，就让本小姐来招待吧！",
         "camp": "SonsofCalydon",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "zhu_yuan": {
         "key": "Zhu Yuan",
@@ -56,8 +56,8 @@
         "event_exclusive": true,
         "intro": "都市秩序部刑侦组下属分队长朱鸢，随时待命。",
         "camp": "CriminalInvestigationSpecialResponseTeam",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "ellen_joe": {
         "key": "Ellen Joe",
@@ -68,8 +68,8 @@
         "event_exclusive": true,
         "intro": "啊，又是麻烦的委托…果然该换个班表。",
         "camp": "VictoriaHousekeepingCo",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "alexandrina": {
         "key": "Alexandrina",
@@ -78,10 +78,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "您就是这次的主人吗？<br>维多利亚家政丽娜，为您服务。",
+        "intro": "您就是这次的主人吗？<br/>维多利亚家政丽娜，为您服务。",
         "camp": "VictoriaHousekeepingCo",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "grace_howard": {
         "key": "Grace Howard",
@@ -90,10 +90,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "这冷峻硬朗的线条，真美啊……忍不住想拆开来看看呢。",
+        "intro": "这冷峻硬朗的线条，真美啊……<br>忍不住想拆开来看看呢。",
         "camp": "BelobogHeavyIndustries",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "hoshimi_miyabi": {
         "key": "Hoshimi Miyabi",
@@ -104,8 +104,8 @@
         "event_exclusive": true,
         "intro": "秩序，不可破。",
         "camp": "Section6",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "soukaku": {
         "key": "Soukaku",
@@ -116,8 +116,8 @@
         "event_exclusive": true,
         "intro": "只要能一直吃饱肚子，<br>苍角就已经很幸福啦~",
         "camp": "Section6",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "ben_bigger": {
         "key": "Ben Bigger",
@@ -128,8 +128,8 @@
         "event_exclusive": true,
         "intro": "我喜欢算术，但这不妨碍我一巴掌拍碎歹徒。",
         "camp": "BelobogHeavyIndustries",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "anton_ivanov": {
         "key": "Anton Ivanov",
@@ -138,10 +138,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "有搞不定的活儿？让我来！",
+        "intro": "有搞不定的活儿？让我来！ ",
         "camp": "BelobogHeavyIndustries",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "koleda_belobog": {
         "key": "Koleda Belobog",
@@ -152,8 +152,8 @@
         "event_exclusive": true,
         "intro": "我就是白祇重工的社长，珂蕾妲。",
         "camp": "BelobogHeavyIndustries",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "von_lycaon": {
         "key": "Von Lycaon",
@@ -164,8 +164,8 @@
         "event_exclusive": true,
         "intro": "执事莱卡恩，感谢您的指名。",
         "camp": "VictoriaHousekeepingCo",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "corin_wickes": {
         "key": "Corin Wickes",
@@ -176,8 +176,8 @@
         "event_exclusive": true,
         "intro": "我、我这样的人……真的可以吗？",
         "camp": "VictoriaHousekeepingCo",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "nekomiya_mana": {
         "key": "Nekomiya Mana",
@@ -186,10 +186,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "最好吃的青花鱼，<br>永远是还没吃到的那一条。",
+        "intro": "最好吃的青花鱼，<br>永远是还没吃到的那一条~",
         "camp": "CunningHaresAKAGentleHouse",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "soldier_11": {
         "key": "Soldier 11",
@@ -200,8 +200,8 @@
         "event_exclusive": true,
         "intro": "我不关心你去了哪里，但无论如何，请给我留下命令。",
         "camp": "ObolSquad",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "billy_kid": {
         "key": "Billy Kid",
@@ -210,10 +210,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "星徽骑士可是不会输的，哈——哈哈哈！",
+        "intro": "星徽骑士可是不会输的<br>哈——哈哈哈！",
         "camp": "CunningHaresAKAGentleHouse",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "nicole_demara": {
         "key": "Nicole Demara",
@@ -222,10 +222,10 @@
         "prefix": "",
         "star": 5,
         "event_exclusive": true,
-        "intro": "明智之选！不过提前说好，我出场费可不低哦！",
+        "intro": "明智之选！<br/>不过提前说好，我出场费可不低哦！",
         "camp": "CunningHaresAKAGentleHouse",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     },
     "anby_demara": {
         "key": "Anby Demara",
@@ -236,7 +236,7 @@
         "event_exclusive": true,
         "intro": "目标确认，开始行动。",
         "camp": "CunningHaresAKAGentleHouse",
-        "ele": "Element.electro",
-        "weapon": "Weapon.bow"
+        "ele": "Element.ether",
+        "weapon": "Weapon.anomaly"
     }
 }

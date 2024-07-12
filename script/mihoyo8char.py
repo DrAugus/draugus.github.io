@@ -2,7 +2,16 @@ import json
 import utils
 import os
 import op_file
+from enum import Enum
 
+
+class LANG(Enum):
+    ZH_CN = 0
+    EN_US = 1
+
+
+CAMP = "camp"
+CHAR = "char"
 
 gid = 8
 
@@ -17,14 +26,32 @@ id_camp_en = 286
 id_char_en = 287
 
 
-INDEX_ZH = 0
-INDEX_EN = 1
+def url_append_chan_id(api_prefix, chan_id):
+    return f"{api_prefix}&iChanId={chan_id}"
+
+
+def url_append_lang_key(api_prefix, lang_key):
+    return f"{api_prefix}&sLangKey={lang_key}"
 
 
 def get_api_url():
-    api_url_camp = [f"{api_zh}&iChanId={id_camp_zh}", f"{api_en}&iChanId={id_camp_en}"]
-    api_url_char = [f"{api_zh}&iChanId={id_char_zh}", f"{api_en}&iChanId={id_char_en}"]
-    return {"camp": api_url_camp, "char": api_url_char}
+
+    api_global = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList"
+    api_global += "?iPageSize=999&iPage=1"
+    # 下标对应 Enum 的值
+    lang_key = ["zh-cn", "en-us"]
+    id_camp_global = 286
+    id_char_global = 287
+
+    api_url_camp = [
+        url_append_lang_key(url_append_chan_id(api_global, id_camp_global), lang)
+        for lang in lang_key
+    ]
+    api_url_char = [
+        url_append_lang_key(url_append_chan_id(api_global, id_char_global), lang)
+        for lang in lang_key
+    ]
+    return {CAMP: api_url_camp, CHAR: api_url_char}
 
 
 def get_img_url(img_list: list):
@@ -34,7 +61,7 @@ def get_img_url(img_list: list):
 
 
 def get_camp():
-    api_url = [f"{api_zh}&iChanId={id_camp_zh}", f"{api_en}&iChanId={id_camp_en}"]
+    api_url = get_api_url()[CAMP]
     print(api_url)
 
     # 0 zh 1 en
@@ -75,6 +102,11 @@ def get_camp():
         list_camp_all.append(list_camp)
 
     print("camp len", len(list_camp_all))
+    for camp_all in list_camp_all:
+        if isinstance(camp_all, list):
+            output_id = [v["camp_channel"] for v in camp_all]
+            print(output_id)
+
     return list_camp_all
 
 
@@ -84,15 +116,15 @@ def camp_js_display(info_camp):
     if len(info_camp) != 2:
         return ""
 
-    if len(info_camp[INDEX_ZH]) != len(info_camp[INDEX_EN]):
+    if len(info_camp[LANG.ZH_CN.value]) != len(info_camp[LANG.EN_US.value]):
         return ""
 
-    for index, one_camp in enumerate(info_camp[INDEX_EN]):
+    for index, one_camp in enumerate(info_camp[LANG.EN_US.value]):
         name = one_camp["camp_name"].replace(" ", "")
         name = name.replace(".", "")
         camp_dict[name] = {
             "id": one_camp["camp_name"],
-            "name": info_camp[INDEX_ZH][index]["camp_name"],
+            "name": info_camp[LANG.ZH_CN.value][index]["camp_name"],
         }
 
     print(camp_dict)
@@ -106,10 +138,10 @@ def camp_by_id(info_camp):
     if len(info_camp) != 2:
         return ""
 
-    if len(info_camp[INDEX_ZH]) != len(info_camp[INDEX_EN]):
+    if len(info_camp[LANG.ZH_CN.value]) != len(info_camp[LANG.EN_US.value]):
         return ""
 
-    info = info_camp[INDEX_EN]
+    info = info_camp[LANG.EN_US.value]
     for ca in info:
         name = ca["camp_name"].replace(" ", "").replace(".", "")
         camp_dict[ca["camp_channel"]] = name
@@ -118,7 +150,7 @@ def camp_by_id(info_camp):
 
 
 def get_char():
-    api_url = [f"{api_zh}&iChanId={id_char_zh}", f"{api_en}&iChanId={id_char_en}"]
+    api_url = get_api_url()[CHAR]
     print(api_url)
     # 0 zh 1 en
     list_char_all = []
@@ -179,26 +211,29 @@ def char_js_display(info_char, camp_map):
     if len(info_char) != 2:
         return ""
 
-    if len(info_char[INDEX_ZH]) != len(info_char[INDEX_EN]):
+    if len(info_char[LANG.ZH_CN.value]) != len(info_char[LANG.EN_US.value]):
         return ""
 
-    for index, one_char in enumerate(info_char[INDEX_EN]):
+    for index, one_char in enumerate(info_char[LANG.EN_US.value]):
         key = utils.replace_characters(one_char["char_name"])
-        char_dict[key] = {
-            "key": one_char["char_name"],
-            "id": key,
-            "name": info_char[INDEX_ZH][index]["char_name"],
-            "prefix": "",
-            "star": 5,
-            "event_exclusive": True,
-            "intro": info_char[INDEX_ZH][index]["char_line"],
-            # 这里使用英文的 camp id
-            "camp": camp_map != ""
-            and camp_map[one_char["char_chan_id"]]
-            or one_char["char_chan_id"],
-            "ele": "Element.electro",
-            "weapon": "Weapon.bow",
-        }
+        try:
+            char_dict[key] = {
+                "key": one_char["char_name"],
+                "id": key,
+                "name": info_char[LANG.ZH_CN.value][index]["char_name"],
+                "prefix": "",
+                "star": 5,
+                "event_exclusive": True,
+                "intro": info_char[LANG.ZH_CN.value][index]["char_line"],
+                # 这里使用英文的 camp id
+                "camp": camp_map != ""
+                and camp_map[one_char["char_chan_id"]]
+                or one_char["char_chan_id"],
+                "ele": "Element.ether",
+                "weapon": "Weapon.anomaly",
+            }
+        except Exception as e:
+            print(e, camp_map)
 
     print(char_dict)
     return char_dict

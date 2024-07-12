@@ -251,6 +251,17 @@ export const WISH: WishAll = {
       wish4star: ["gallagher", "misha", "xueyi"],
       wishName: ['盈茧炽盛', '疏影三迭'],
       url: ['']
+    }, {
+      name: ["Lien on Life, Lease on Fate", "Thorns of Scented Crown"],
+      image: [1, 2],
+      shortName: ["Jade", "Argenti",],
+      start: "2024/07/10 12:00:00 +0800",
+      end: "2024/07/30 15:00:00 +0800",
+      version: '2.3',
+      wish5star: ["jade", "argenti",],
+      wish4star: ["serval", "natasha", "asta",],
+      wishName: ['质生契运', '荆冠芳勋'],
+      url: ['']
     },
   ],
   weapons: [
@@ -459,6 +470,15 @@ export const WISH: WishAll = {
       shortName: "",
       wish5star: ["Whereabouts Should Dreams Rest", "Past Self in Mirror"],
       wish4star: ["Memories of the Past", "Day One of My New Life", "Eyes of the Prey"],
+      url: ""
+    }, {
+      name: "Brilliant Fixation",
+      image: [33, 34],
+      start: "2024/07/10 12:00:00 +0800",
+      end: "2024/07/30 15:00:00 +0800",
+      shortName: "",
+      wish5star: ["Yet Hope Is Priceless", "An Instant Before A Gaze"],
+      wish4star: [],
       url: ""
     },
   ]
