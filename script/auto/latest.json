@@ -1,4 +1,16 @@
 {
+    "life/code/os/linux/qa.md": {
+        "title": "Linux 问题收集",
+        "date": 1720772837.0
+    },
+    "life/code/version-ctrl/github.md": {
+        "title": "GitHub",
+        "date": 1718590917.0
+    },
+    "life/tools/nipeima.md": {
+        "title": "配环境",
+        "date": 1720772837.0
+    },
     "life/code/program/lang/python.md": {
         "title": "Python",
         "date": 1716866579
@@ -7,13 +19,13 @@
         "title": "正则表达式",
         "date": 1720604343.0
     },
-    "life/code/program/config-env.md": {
-        "title": "配环境",
-        "date": 1720426976.0
-    },
     "life/course/science/discrete-math.md": {
         "title": "离散数学",
         "date": 1720424721.0
+    },
+    "life/code/program/config-env.md": {
+        "title": "配环境",
+        "date": 1720426976.0
     },
     "life/code/api/mihoyo.md": {
         "title": "mihoyo",
@@ -138,10 +150,6 @@
     "life/trip/travelogue/20240508.md": {
         "title": "武汉 ",
         "date": 1716793014
-    },
-    "life/code/version-ctrl/github.md": {
-        "title": "GitHub",
-        "date": 1718590917.0
     },
     "life/code-notes/tools/echarts-geo.md": {
         "title": "Echarts geo",

@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "Linux 问题收集",
+            "desc": "Linux 问题收集 命令行使用代理 `export HTTPS_PROXY=your_proxy",
+            "link": "/code/os/linux/qa",
+            "date": "2024-07-12"
+        },
+        {
+            "title": "GitHub",
+            "desc": "GitHub hub 自动建仓 ```bash hub create [-poc] [-d ] [",
+            "link": "/code/version-ctrl/github",
+            "date": "2024-06-17"
+        },
+        {
+            "title": "配环境",
+            "desc": "配环境 简单参考一下 当你获得一台**全新机器**，根据系统不同，可以参考下方的开发环境配置 ::",
+            "link": "/tools/nipeima",
+            "date": "2024-07-12"
+        },
+        {
             "title": "Python",
             "desc": "Python install ```bash python -m pip install --up",
             "link": "/code/program/lang/python",
@@ -12,12 +30,6 @@
             "desc": "正则表达式 匹配中文 `[\\u4e00-\\u9fa5]` 匹配英文 `[a-zA-Z]` 匹配数字",
             "link": "/code/program/lang/regex",
             "date": "2024-07-10"
-        },
-        {
-            "title": "配环境",
-            "desc": "配环境 LINUX ```shell sudo apt install git cmake pyt",
-            "link": "/code/program/config-env",
-            "date": "2024-07-08"
         },
         {
             "title": "离散数学",
@@ -107,18 +119,6 @@
             "title": "云南",
             "desc": "云南 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20220812",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "苏州",
-            "desc": "苏州 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20220906",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "南京",
-            "desc": "南京 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230225",
             "date": "2024-06-21"
         }
     ]
