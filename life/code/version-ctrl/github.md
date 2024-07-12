@@ -114,6 +114,19 @@ jobs:
 
 ### Tips
 
+#### github.com slowly 访问慢
+
+通过 [ipaddress](https://www.ipaddress.com/) 来获得`github.com`、`github.global.ssl.fastly.net`、`codeload.github.com`这三个域名的服务器公网IP地址
+
+`vim /etc/hosts`
+
+添加如下内容
+
+```txt
+140.82.114.4    github.com
+199.232.5.194   github.global.ssl.fastly.net
+```
+
 #### 指定条件运行指定 job
 
 条件判断，多个 job 时，指定某个特定条件下运行某个 job

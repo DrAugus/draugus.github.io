@@ -24,7 +24,7 @@ ps -ef | grep flask | grep -v grep | awk '{print $2}' | xargs kill -9
 命令分析
 |命令 |作用|
 |:--:|:--:|
-|`ps -ef | grep flask` |找到所有 flask 进程|
+|`ps -ef \| grep flask` |找到所有 flask 进程|
 |`grep -v grep` |过滤包含 grep 的进程行|
 |`awk '{print $2}'` |提取找到的进程行记录中第二列的参数，也就是flask的进程号|
 |`xargs kill -9` |把前面的参数都传递给后面的命令 kill -9|
@@ -53,3 +53,20 @@ yum -y install gcc+ gcc-c++
 apt-get update gcc #(更新)
 apt-get install g++
 ```
+
+## 修改 Linux 环境变量
+
+临时生效 `export NAME='value'`
+
+全局环境变量配置永久生效
+
+```shell
+#切换到root用户下
+su - root
+#编辑全局系统环境变量存储配置文件，所有用户都生效，永久生效。
+vim /etc/profile
+```
+
+尾行加入 `export NAME='value'`
+
+execute `source /etc/profile`

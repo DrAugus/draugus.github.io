@@ -303,14 +303,13 @@ const sidebarCodeOS = [
     },
     {
         text: 'Linux', collapsed: false, items: [
-            { text: 'Install', link: '/code/os/linux/install' },
-            { text: 'GDB', link: '/code/os/linux/gdb' },
+            { text: 'Linux 记录  ', link: '/code/os/linux/' },
             { text: 'Linux 系统分类', link: '/code/os/linux/sys_category' },
             { text: '查看 Linux 的基本信息', link: '/code/os/linux/sys_base_info' },
-            { text: 'Linux 问题收集', link: '/code/os/linux/qa' },
-            { text: 'Linux 记录  ', link: '/code/os/linux/README' },
+            { text: 'Install', link: '/code/os/linux/install' },
             { text: 'CMD', link: '/code/os/linux/command' },
-            { text: '指南', link: '/code/os/linux/guide' },
+            { text: 'GDB', link: '/code/os/linux/gdb' },
+            { text: 'Linux 问题收集', link: '/code/os/linux/qa' },
         ]
     },
     {
@@ -334,6 +333,7 @@ const sidebarCodeAPI = [
 const sidebarTools = [
     { text: '指南', link: '/tools/' },
     { text: '配环境', link: '/tools/nipeima' },
+    { text: '瞎玩', link: '/tools/stroll' },
     {
         text: '命令行工具', collapsed: false, items: [
             { text: '工具介绍', link: prefixCommandTools + '/' },
@@ -540,9 +540,7 @@ const sidebarCodeProgram = [
             { text: '正则表达式', link: '/code/program/lang/regex' },
         ]
     },
-    { text: '配环境', link: '/code/program/config-env' },
     { text: '疑难排查', link: '/code/program/problems' },
-    { text: '瞎玩', link: '/code/program/stroll' },
     { text: '一些有的没的', link: '/code/program/others' },
     {
         text: '分布式', collapsed: false, items: [
