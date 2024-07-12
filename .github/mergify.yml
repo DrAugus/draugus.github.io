@@ -81,3 +81,13 @@ pull_request_rules:
   #   actions:
   #     merge:
   #       method: merge
+
+  - name: automatic merge for dev-game
+    conditions:
+      - author=DrAugus
+      - check-success~=^deploy-
+      - -check-failure~=^py-
+      - base=dev-game
+    actions:
+      merge:
+        method: merge

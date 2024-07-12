@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+      - dev-game
     paths:
       - "game/**"
       - ".github/workflows/deploy-game.yml"
@@ -15,6 +16,7 @@ on:
   pull_request:
     branches:
       - master
+      - dev-game
     paths:
       - "game/**"
       - ".github/workflows/deploy-game.yml"

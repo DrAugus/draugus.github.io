@@ -196,8 +196,8 @@ def char_js_display(info_char, camp_map):
             "camp": camp_map != ""
             and camp_map[one_char["char_chan_id"]]
             or one_char["char_chan_id"],
-            "ele": "Element.electro",
-            "weapon": "Weapon.bow",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly",
         }
 
     print(char_dict)

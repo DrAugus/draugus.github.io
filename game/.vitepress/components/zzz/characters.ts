@@ -1,6 +1,18 @@
 import { Camp, Element, Weapon } from "./utils";
 
 export const CHARACTER = {
+  seth_lowell: {
+    key: 'Seth Lowell',
+    id: 'seth_lowell',
+    name: '赛斯·洛威尔',
+    prefix: '',
+    star: 5,
+    event_exclusive: true,
+    intro: '队长，逮捕犯人就交给我吧！',
+    camp: Camp.CriminalInvestigationSpecialResponseTeam,
+    ele: Element.ether,
+    weapon: Weapon.anomaly
+  },
   qingyi: {
     key: 'Qingyi',
     id: 'qingyi',

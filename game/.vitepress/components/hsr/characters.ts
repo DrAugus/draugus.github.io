@@ -1,6 +1,18 @@
 import { City, Element, Weapon } from "./utils";
 
 export const CHARACTER = {
+  jade: {
+    key: "Jade",
+    id: "jade",
+    name: "翡翠",
+    prefix: Weapon.Erudition.name,
+    star: 5,
+    event_exclusive: true,
+    intro: "",
+    city: City.StellaronHunters,
+    ele: Element.Quantum,
+    weapon: Weapon.Erudition
+  },
   firefly: {
     key: "Firefly",
     id: "firefly",
