@@ -1,28 +1,17 @@
 [
     {
         "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552250",
-        "name": [
-            "Mellow Waveride"
-        ],
-        "name_lower": [
-            "mellow_waveride_"
-        ],
+        "name": [],
+        "name_lower": [],
         "image": [
             1
         ],
-        "shortName": [
-            "Ellen"
-        ],
+        "shortName": [],
         "start": "2024/07/24 11:59:59 +0800",
         "end": "2024/07/24 11:59:59 +0800",
         "version": "xxx",
-        "wish5star": [
-            "ellen"
-        ],
-        "wish4star": [
-            "soukaku",
-            "anton"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -36,8 +25,8 @@
             1
         ],
         "shortName": [],
-        "start": "",
-        "end": "",
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
         "version": "xxx",
         "wish5star": [],
         "wish4star": [],
@@ -54,8 +43,8 @@
             1
         ],
         "shortName": [],
-        "start": "",
-        "end": "",
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
         "version": "xxx",
         "wish5star": [],
         "wish4star": [],
@@ -72,8 +61,8 @@
             1
         ],
         "shortName": [],
-        "start": "",
-        "end": "",
+        "start": "2024/07/24 11:59:59 +0800",
+        "end": "2024/07/24 11:59:59 +0800",
         "version": "xxx",
         "wish5star": [],
         "wish4star": [],

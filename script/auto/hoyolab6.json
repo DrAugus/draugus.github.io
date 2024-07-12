@@ -1,42 +1,17 @@
 [
     {
         "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30816396",
-        "name": [
-            "Lien on Life, Lease on Fate",
-            "Lien on Life, Lease on Fate",
-            "Thorns of Scented Crown"
-        ],
-        "name_lower": [
-            "lien_on_life_lease_on_fate_",
-            "lien_on_life_lease_on_fate_",
-            "thorns_of_scented_crown_"
-        ],
+        "name": [],
+        "name_lower": [],
         "image": [
             1
         ],
-        "shortName": [
-            "Jade",
-            "Argenti",
-            "Jade",
-            "Argenti"
-        ],
-        "start": "2024/07/10 12:00:00 +0800",
-        "end": "2024/07/30 15:00:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "jade",
-            "argenti",
-            "jade",
-            "argenti"
-        ],
-        "wish4star": [
-            "serval",
-            "natasha",
-            "asta",
-            "serval",
-            "natasha",
-            "asta"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -44,44 +19,17 @@
     },
     {
         "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=29992036",
-        "name": [
-            "Firefull Flyshine",
-            "Floral Triptych",
-            "Firefull Flyshine",
-            "Floral Triptych"
-        ],
-        "name_lower": [
-            "firefull_flyshine_",
-            "floral_triptych_",
-            "firefull_flyshine_",
-            "floral_triptych_"
-        ],
+        "name": [],
+        "name_lower": [],
         "image": [
             1
         ],
-        "shortName": [
-            "Firefly",
-            "Mei",
-            "Firefly",
-            "Mei"
-        ],
-        "start": "2024/07/10 11:59:00 +0800",
-        "end": "2024/07/17 11:59:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "firefly",
-            "mei",
-            "firefly",
-            "mei"
-        ],
-        "wish4star": [
-            "gallagher",
-            "misha",
-            "xueyi",
-            "gallagher",
-            "misha",
-            "xueyi"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -94,29 +42,12 @@
         "image": [
             1
         ],
-        "shortName": [
-            "Boothill",
-            "Xuan",
-            "Boothill",
-            "Xuan"
-        ],
-        "start": "2024/05/29 12:00:00 +0800",
-        "end": "2024/06/18 15:00:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "boothill",
-            "xuan",
-            "boothill",
-            "xuan"
-        ],
-        "wish4star": [
-            "pela",
-            "luka",
-            "hook",
-            "pela",
-            "luka",
-            "hook"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -124,36 +55,17 @@
     },
     {
         "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=28251947",
-        "name": [
-            "Just Intonation"
-        ],
-        "name_lower": [
-            "just_intonation_"
-        ],
+        "name": [],
+        "name_lower": [],
         "image": [
             1
         ],
-        "shortName": [
-            "Robin",
-            "Numby",
-            "Robin",
-            "Numby"
-        ],
-        "start": "2024/05/29 11:59:00 +0800",
-        "end": "2024/06/05 11:59:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "robin",
-            "numby",
-            "robin",
-            "numby"
-        ],
-        "wish4star": [
-            "hanya",
-            "xueyi",
-            "hanya",
-            "xueyi"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -166,39 +78,12 @@
         "image": [
             1
         ],
-        "shortName": [
-            "Priceless",
-            "Gaze",
-            "Priceless",
-            "Gaze",
-            "Yet Hope Is Priceless",
-            "An Instant Before A Gaze",
-            "Yet Hope Is Priceless",
-            "An Instant Before A Gaze"
-        ],
-        "start": "2024/07/10 12:00:00 +0800",
-        "end": "2024/07/30 15:00:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "Priceless",
-            "Gaze",
-            "Priceless",
-            "Gaze",
-            "Yet Hope Is Priceless",
-            "An Instant Before A Gaze",
-            "Yet Hope Is Priceless",
-            "An Instant Before A Gaze"
-        ],
-        "wish4star": [
-            "Fall",
-            "Feeling",
-            "Market",
-            "Fall",
-            "Feeling",
-            "Market",
-            "Trend of the Universal Market",
-            "Trend of the Universal Market"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -211,33 +96,12 @@
         "image": [
             1
         ],
-        "shortName": [
-            "Rest",
-            "Mirror",
-            "Rest",
-            "Mirror",
-            "Whereabouts Should Dreams Rest",
-            "Past Self in Mirror"
-        ],
-        "start": "2.3 +0800",
-        "end": "2024/07/10 11:59:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "Rest",
-            "Mirror",
-            "Rest",
-            "Mirror",
-            "Whereabouts Should Dreams Rest",
-            "Past Self in Mirror"
-        ],
-        "wish4star": [
-            "Past",
-            "Life",
-            "Prey",
-            "Past",
-            "Life",
-            "Prey"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -250,39 +114,12 @@
         "image": [
             1
         ],
-        "shortName": [
-            "Life",
-            "Eyes",
-            "Life",
-            "Eyes",
-            "Sailing Towards a Second Life",
-            "She Already Shut Her Eyes",
-            "Sailing Towards a Second Life",
-            "She Already Shut Her Eyes"
-        ],
-        "start": "2024/05/29 12:00:00 +0800",
-        "end": "2024/06/18 15:00:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "Life",
-            "Eyes",
-            "Life",
-            "Eyes",
-            "Sailing Towards a Second Life",
-            "She Already Shut Her Eyes",
-            "Sailing Towards a Second Life",
-            "She Already Shut Her Eyes"
-        ],
-        "wish4star": [
-            "Repose",
-            "Vow",
-            "Choice",
-            "Repose",
-            "Vow",
-            "Choice",
-            "Landau's Choice",
-            "Landau's Choice"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
@@ -295,37 +132,12 @@
         "image": [
             1
         ],
-        "shortName": [
-            "Nightglow",
-            "Blissful",
-            "Nightglow",
-            "Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful"
-        ],
-        "start": "2.2 +0800",
-        "end": "2024/05/29 11:59:00 +0800",
+        "shortName": [],
+        "start": "",
+        "end": "",
         "version": "xxx",
-        "wish5star": [
-            "Nightglow",
-            "Blissful",
-            "Nightglow",
-            "Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful"
-        ],
-        "wish4star": [
-            "Choreo",
-            "Timing",
-            "Choreo",
-            "Timing",
-            "Perfect Timing",
-            "Perfect Timing"
-        ],
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""
