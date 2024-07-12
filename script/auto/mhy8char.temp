@@ -3,52 +3,59 @@
     [
       {
         camp_name: '卡吕冬之子',
-        camp_channel: '862',
-        camp_icon: 'https://fastcdn.mihoyo.com/content-v2/nap/124272/193ce3eb96bce41fc84619164cd3aed5_748736223171964552.png',
-        camp_shade: 'https://fastcdn.mihoyo.com/content-v2/nap/124272/76dfdd30792027a9a4c9884406523f53_2559970779352990870.png',
-        camp_kv: 'https://fastcdn.mihoyo.com/content-v2/nap/124272/517f4336e4a3819dee6f9ec4d18fb94c_4211522616364637755.png'
+        camp_channel: '889',
+        camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/124305/c5a5f68fb80b7614b57630c9fe5e37d0_6003424360315141035.png',
+        camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/124305/76dfdd30792027a9a4c9884406523f53_6008693205615282082.png',
+        camp_kv: 'https://fastcdn.hoyoverse.com/content-v2/nap/124305/517f4336e4a3819dee6f9ec4d18fb94c_3292181308204717228.png'
+      },
+      {
+        camp_name: '阵营不明',
+        camp_channel: '925',
+        camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/124676/fb8e50f12b6c4623b6b65d9edffd76dd_179889476792215002.png',
+        camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/124676/623c2c8db94de38d8fde92fa8dd7f1cb_7784391364925293549.png',
+        camp_kv: ''
       },
       {
         camp_name: '刑侦特勤组',
-        camp_channel: '780',
-        camp_icon: 'https://fastcdn.mihoyo.com/content-v2/nap/122780/5e2833934e34b266dde548849040d433_7055688299901497327.png',
-        camp_shade: 'https://fastcdn.mihoyo.com/content-v2/nap/122780/9ba182a0025ec69d4fc1a543d8d795cb_7817244322984783945.png',
-        camp_kv: 'https://fastcdn.mihoyo.com/content-v2/nap/122780/f9396eb7131f5f3b7793014b0eabe93c_2997905287101643171.png'
+        camp_channel: '782',
+        camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/122783/5e2833934e34b266dde548849040d433_3077251731928402711.png',
+        camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/122783/9ba182a0025ec69d4fc1a543d8d795cb_8725052673224252476.png',
+        camp_kv: 'https://fastcdn.hoyoverse.com/content-v2/nap/122783/f9396eb7131f5f3b7793014b0eabe93c_4741851414852385779.png'
       },
       {
-        camp_name: 'H.S.O.S.6',
-        camp_channel: '309',
-        camp_icon: 'https://fastcdn.mihoyo.com/content-v2/nap/103262/dc54e0eb8b6ba749e3bc6219dabbb6b1_4606263158565041411.png',
-        camp_shade: 'https://fastcdn.mihoyo.com/content-v2/nap/103262/9aafc15bb0d7a617ba0c37fb572e862b_5448592690966134766.png',
-        camp_kv: 'https://webstatic.mihoyo.com/upload/op-public/2022/11/02/6dd6b9394bf095f234bd956fcc358d99_1522835979754513222.png'
+        camp_name: '对空六课',
+        camp_channel: '312',
+        camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/103294/dc54e0eb8b6ba749e3bc6219dabbb6b1_6926139992837247984.png',
+        camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/103294/9aafc15bb0d7a617ba0c37fb572e862b_7393224566581220333.png',
+        camp_kv: 'https://webstatic.hoyoverse.com/upload/op-public/2022/11/03/6dd6b9394bf095f234bd956fcc358d99_1073768873096826149.png'
       },
       {
         camp_name: '白祇重工',
-        camp_channel: '308',
-        camp_icon: 'https://webstatic.mihoyo.com/upload/op-public/2023/03/08/2cc0dd2628c722e73004a19b84ab1f99_2079635245468948683.png',
-        camp_shade: 'https://webstatic.mihoyo.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_7472951923593688345.png',
-        camp_kv: 'https://fastcdn.mihoyo.com/content-v2/nap/102671/4f33f8d9643641e5eaf9a32098a3052e_2827366796411694716.png'
+        camp_channel: '311',
+        camp_icon: 'https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/2cc0dd2628c722e73004a19b84ab1f99_2283002001929482879.png',
+        camp_shade: 'https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_1937704424541135334.png',
+        camp_kv: 'https://fastcdn.hoyoverse.com/content-v2/nap/102707/4f33f8d9643641e5eaf9a32098a3052e_7130409311570105392.png'
       },
       {
         camp_name: '维多利亚家政',
-        camp_channel: '307',
-        camp_icon: 'https://webstatic.mihoyo.com/upload/op-public/2022/07/11/7eda813e089f1bdcec4e7c7e93b101d6_6078806162773208785.png',
-        camp_shade: 'https://webstatic.mihoyo.com/upload/op-public/2022/07/11/1a94de6462dba23318a8b62697720ee4_601705931323124710.png',
-        camp_kv: 'https://fastcdn.mihoyo.com/content-v2/nap/102378/3aacb552be7ed7960153458cbcda1a78_8661128362513008467.png'
+        camp_channel: '310',
+        camp_icon: 'https://webstatic.hoyoverse.com/upload/op-public/2022/07/13/7eda813e089f1bdcec4e7c7e93b101d6_8731139115616173725.png',
+        camp_shade: 'https://webstatic.hoyoverse.com/upload/op-public/2022/07/13/1a94de6462dba23318a8b62697720ee4_5618651288820919239.png',
+        camp_kv: 'https://fastcdn.hoyoverse.com/content-v2/nap/102476/3aacb552be7ed7960153458cbcda1a78_3658625827003322299.png'
       },
       {
         camp_name: '奥波勒斯小队',
-        camp_channel: '284',
-        camp_icon: 'https://fastcdn.mihoyo.com/content-v2/nap/102200/66c54388250c187ba84617b2002c1452_5316115385291467404.png',
-        camp_shade: 'https://fastcdn.mihoyo.com/content-v2/nap/102200/5cf3c77dd10dbc87adfff8d0204b695b_6190345915024415060.png',
+        camp_channel: '299',
+        camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/102291/66c54388250c187ba84617b2002c1452_222276993151138744.png',
+        camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/102291/5cf3c77dd10dbc87adfff8d0204b695b_7727602646943080895.png',
         camp_kv: ''
       },
       {
         camp_name: '狡兔屋',
-        camp_channel: '283',
-        camp_icon: 'https://webstatic.mihoyo.com/upload/op-public/2022/06/08/5bf9ca7c5b342d38c8b3fbf0964e00da_6402413799256732419.png',
-        camp_shade: 'https://webstatic.mihoyo.com/upload/op-public/2022/05/14/9f3591d864c6c896cbc576b69120137d_3254221047274391699.png',
-        camp_kv: 'https://fastcdn.mihoyo.com/content-v2/nap/102158/ad44ef8c583ba6cbdd65822a6478840d_7915785876371776787.png'
+        camp_channel: '298',
+        camp_icon: 'https://webstatic.hoyoverse.com/upload/op-public/2022/06/07/5196e6764e97e7ddd59cd947afcd8141_944447315406277766.png',
+        camp_shade: 'https://webstatic.hoyoverse.com/upload/op-public/2022/05/14/9f3591d864c6c896cbc576b69120137d_6608998489547782656.png',
+        camp_kv: 'https://fastcdn.hoyoverse.com/content-v2/nap/102027/ad44ef8c583ba6cbdd65822a6478840d_8398322110563790839.png'
       }
     ],
     [
@@ -58,6 +65,13 @@
         camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/124305/c5a5f68fb80b7614b57630c9fe5e37d0_6003424360315141035.png',
         camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/124305/76dfdd30792027a9a4c9884406523f53_6008693205615282082.png',
         camp_kv: 'https://fastcdn.hoyoverse.com/content-v2/nap/124305/517f4336e4a3819dee6f9ec4d18fb94c_3292181308204717228.png'
+      },
+      {
+        camp_name: 'Faction Unknown',
+        camp_channel: '925',
+        camp_icon: 'https://fastcdn.hoyoverse.com/content-v2/nap/124676/fb8e50f12b6c4623b6b65d9edffd76dd_179889476792215002.png',
+        camp_shade: 'https://fastcdn.hoyoverse.com/content-v2/nap/124676/623c2c8db94de38d8fde92fa8dd7f1cb_7784391364925293549.png',
+        camp_kv: ''
       },
       {
         camp_name: 'Criminal Investigation Special Response Team',
@@ -105,11 +119,12 @@
   ],
   JS_CAMP: {
     SonsofCalydon: { id: 'Sons of Calydon', name: '卡吕冬之子' },
+    FactionUnknown: { id: 'Faction Unknown', name: '阵营不明' },
     CriminalInvestigationSpecialResponseTeam: {
       id: 'Criminal Investigation Special Response Team',
       name: '刑侦特勤组'
     },
-    Section6: { id: 'Section 6', name: 'H.S.O.S.6' },
+    Section6: { id: 'Section 6', name: '对空六课' },
     BelobogHeavyIndustries: { id: 'Belobog Heavy Industries', name: '白祇重工' },
     VictoriaHousekeepingCo: { id: 'Victoria Housekeeping Co.', name: '维多利亚家政' },
     ObolSquad: { id: 'Obol Squad', name: '奥波勒斯小队' },
@@ -121,161 +136,169 @@
         char_name: '赛斯·洛威尔',
         char_color: '#5d82b0',
         char_line: '队长，逮捕犯人就交给我吧！',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/124648/c246552f6672e8877bccca2f8ece87c1_7384923825619943325.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/124648/14988767fd0916d0063fc0097f656a42_7231698147028403245.png',
-        char_chan_id: '780'
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124700/c246552f6672e8877bccca2f8ece87c1_8614327593741193610.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124700/14988767fd0916d0063fc0097f656a42_4566522091989166627.png',
+        char_chan_id: '782'
+      },
+      {
+        char_name: '简·杜',
+        char_color: '#83a09e',
+        char_line: '哎呀，上次是上次嘛！这次我说的是真的哦，相信我吧~',
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124675/57844dcbca0ae06307d16d92e4430ad4_4400410995056383301.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124675/e0bf1cb7547cbc89b67226ec9bfc9acd_4070184306411436761.png',
+        char_chan_id: '926'
       },
       {
         char_name: '青衣',
         char_color: '#6b8571',
-        char_line: '邂逅相遇,适我愿兮。',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/124640/230f4b74d788a87eac29456c9bd55523_887085143212201067.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/124640/394f0f4e60787ba0669ebfe2ae572d98_4215286215230789325.png',
-        char_chan_id: '780'
+        char_line: '邂逅相遇，适我愿兮。',
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124660/230f4b74d788a87eac29456c9bd55523_407710037607077575.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124660/394f0f4e60787ba0669ebfe2ae572d98_3503317420990646059.png',
+        char_chan_id: '782'
       },
       {
         char_name: '派派·韦尔',
         char_color: '#d5c798',
         char_line: '要载你一程吗？记得系好安全带哦。',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/124186/741d43186463f04c762ec3db5c324b22_6182202357340126770.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/124186/168da80aafe64cb42bbbd12575208329_7010897639295574159.png',
-        char_chan_id: '862'
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124310/741d43186463f04c762ec3db5c324b22_1708213659253107053.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124310/168da80aafe64cb42bbbd12575208329_1629537670400613754.png',
+        char_chan_id: '889'
       },
       {
         char_name: '露西',
         char_color: '#c6a97a',
         char_line: '有贵客登门，就让本小姐来招待吧！',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/124268/6463d738d4fa2dfcbff9d0ec221fd9d3_8411458613588125046.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/124268/aaecc6959db75ce722d409a16795e5de_5701152236388265281.png',
-        char_chan_id: '862'
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124308/6463d738d4fa2dfcbff9d0ec221fd9d3_3901891948525993416.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124308/aaecc6959db75ce722d409a16795e5de_1126366155690144326.png',
+        char_chan_id: '889'
       },
       {
         char_name: '朱鸢',
         char_color: '#5b93ce',
         char_line: '都市秩序部刑侦组下属分队长朱鸢，随时待命。',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/122875/f1104e9b26d696fa6063d46593286af9_2740020603372887152.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/122875/dc80a0bf1d57d4343c03110f84ae2fcc_7212875961253816924.png',
-        char_chan_id: '780'
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/122782/f1104e9b26d696fa6063d46593286af9_397548901361650057.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/122782/dc80a0bf1d57d4343c03110f84ae2fcc_1306406606714622129.png',
+        char_chan_id: '782'
       },
       {
         char_name: '艾莲·乔',
         char_color: '#bebfd2',
         char_line: '啊，又是麻烦的委托…果然该换个班表。',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/113456/832139c2f105cae385009f4ec150ce6f_5853736810688129312.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/113456/ac73015ad575dd0093228a46eebd79d9_882160339076120706.png',
-        char_chan_id: '307'
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/113671/832139c2f105cae385009f4ec150ce6f_3692851514341761853.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/113671/ac73015ad575dd0093228a46eebd79d9_8977863346370075623.png',
+        char_chan_id: '310'
       },
       {
         char_name: '亚历山德丽娜',
         char_color: '#c4c1b1',
-        char_line: '您就是这次的主人吗？<br>维多利亚家政丽娜，为您服务。',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/113455/1017d77a8f98ad151de5d152d4f5372d_2366969329257899735.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/113455/aba218021520e66e0dcfac1114df4a71_6613820379150484450.png',
-        char_chan_id: '307'
+        char_line: '您就是这次的主人吗？<br/>维多利亚家政丽娜，为您服务。',
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/113612/1017d77a8f98ad151de5d152d4f5372d_7514167879033239625.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/113612/aba218021520e66e0dcfac1114df4a71_8151821799162446072.png',
+        char_chan_id: '310'
       },
       {
         char_name: '格莉丝·霍华德',
         char_color: '#ed6646',
-        char_line: '这冷峻硬朗的线条，真美啊……忍不住想拆开来看看呢。',
-        char_avatar: 'https://fastcdn.mihoyo.com/content-v2/nap/113451/84d585cf9fe066af620be0047ad176ff_571761973009796987.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/113451/0e4a2f50886d5d9dfffcc6029adc6b5e_6984290895133478797.png',
-        char_chan_id: '308'
+        char_line: '这冷峻硬朗的线条，真美啊……<br>忍不住想拆开来看看呢。',
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/113532/84d585cf9fe066af620be0047ad176ff_5638403101394275027.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/113532/0e4a2f50886d5d9dfffcc6029adc6b5e_2458752736676745374.png',
+        char_chan_id: '311'
       },
       {
         char_name: '星见雅',
         char_color: '#4ba3ad',
         char_line: '秩序，不可破。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/11/14/9eefd58e0e58ae5b8f904af6c5b534f6_4907751819472523358.png',
-        char_cover_home: 'https://webstatic.mihoyo.com/upload/op-public/2022/11/04/8d4403c3532ab8322c716a04d2a3129b_8758014879302023886.png',
-        char_chan_id: '309'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/11/17/9eefd58e0e58ae5b8f904af6c5b534f6_4961632965952671863.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/871e4dd9c83f0c1d621aae99ba0178a0_2822171334037088860.png',
+        char_chan_id: '312'
       },
       {
         char_name: '苍角',
         char_color: '#6ea0d9',
         char_line: '只要能一直吃饱肚子，<br>苍角就已经很幸福啦~',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/11/02/beafe6de25b5a7597a834081dfb5769e_1111135916122038833.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/103261/b380466a3eaed83c58a907ff4234c8f3_7416784381467135090.png',
-        char_chan_id: '309'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/11/03/beafe6de25b5a7597a834081dfb5769e_4530593817636422661.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/3c8921632652bafb5e27b0765dc20541_8641936950124923398.png',
+        char_chan_id: '312'
       },
       {
         char_name: '本·比格',
         char_color: '#a68d73',
         char_line: '我喜欢算术，但这不妨碍我一巴掌拍碎歹徒。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/08/23/add2d18de9de70a8742461335a7f5184_1363611786432711552.png',
-        char_cover_home: 'https://webstatic.mihoyo.com/upload/op-public/2022/08/23/15b460d611ddea2b83ce16d7ab601af1_7759236297099696876.png',
-        char_chan_id: '308'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/09/13/add2d18de9de70a8742461335a7f5184_9083986488092290309.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/65dd458a093d161ffd30ece5054ad68a_8072386834829421211.png',
+        char_chan_id: '311'
       },
       {
         char_name: '安东·伊万诺夫',
         char_color: '#d7be71',
-        char_line: '有搞不定的活儿？让我来！',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/08/30/dc5c9e15f4c219ef60252e5b2df3246d_631101512213276712.png',
-        char_cover_home: 'https://webstatic.mihoyo.com/upload/op-public/2022/08/30/e7d89bcf7b4bddf3814b69c71c4432b7_590290760522381374.png',
-        char_chan_id: '308'
+        char_line: '有搞不定的活儿？让我来！ ',
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/08/30/c4b6bf4e9214175a08d8ddd401a8720f_5572483592508810877.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2022/08/30/e7d89bcf7b4bddf3814b69c71c4432b7_8210526894800624759.png',
+        char_chan_id: '311'
       },
       {
         char_name: '珂蕾妲·贝洛伯格',
         char_color: '#e94f13',
         char_line: '我就是白祇重工的社长，珂蕾妲。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/08/16/98b57486490b92e2cbc8795db12c33eb_8832126526938587132.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/102672/c6586d89e3561e3b30859c14861bd51a_8863562908834130711.png',
-        char_chan_id: '308'
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/102708/a7c2caba53262c8b36b1e97dd4a28045_7481629679718021345.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/102708/c6586d89e3561e3b30859c14861bd51a_906120803982789425.png',
+        char_chan_id: '311'
       },
       {
         char_name: '冯·莱卡恩',
         char_color: '#d0d3e0',
         char_line: '执事莱卡恩，感谢您的指名。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/07/21/dda254b8c179338463ae9dcfbc0cc2e1_423190559809353347.png',
-        char_cover_home: 'https://webstatic.mihoyo.com/upload/op-public/2022/07/21/be629e986380c894d4104435fda2d348_6752742334694093902.png',
-        char_chan_id: '307'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/07/21/dda254b8c179338463ae9dcfbc0cc2e1_2053525689951876225.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2022/07/21/be629e986380c894d4104435fda2d348_4617848246597868290.png',
+        char_chan_id: '310'
       },
       {
         char_name: '可琳·威克斯',
         char_color: '#c8d7bd',
         char_line: '我、我这样的人……真的可以吗？',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/07/11/030cc4746c6ab2b75027a2c367caa8b9_8675937491466922005.png',
-        char_cover_home: 'https://webstatic.mihoyo.com/upload/op-public/2022/07/11/62797155403e116e2e4bf55a90e31506_6231077478078331945.png',
-        char_chan_id: '307'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/07/13/030cc4746c6ab2b75027a2c367caa8b9_1734879417695865991.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/5913f027102b6c6850e398ce8bc49ea2_7354356136345697622.png',
+        char_chan_id: '310'
       },
       {
         char_name: '猫宫又奈',
         char_color: '#c84f30',
-        char_line: '最好吃的青花鱼，<br>永远是还没吃到的那一条。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/06/29/8464e6f94fc174395a5d7d86cc6ddb48_6544552371184447221.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/102371/14e9dbcd1e22c15efee2f6521755c4f0_8086221496131001199.png',
-        char_chan_id: '283'
+        char_line: '最好吃的青花鱼，<br>永远是还没吃到的那一条~',
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/07/07/8464e6f94fc174395a5d7d86cc6ddb48_4975354210448367286.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/102427/14e9dbcd1e22c15efee2f6521755c4f0_7894770830201738163.png',
+        char_chan_id: '298'
       },
       {
         char_name: '11号',
         char_color: '#ffbb2a',
         char_line: '我不关心你去了哪里，但无论如何，请给我留下命令。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/06/02/cb8cf61f821b236b3da5d3211da753a9_7034271022293409915.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/102276/679983102dba5b485de849c08dc15751_6697097801804941989.png',
-        char_chan_id: '284'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/06/10/cb8cf61f821b236b3da5d3211da753a9_3875929208286602235.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/102292/679983102dba5b485de849c08dc15751_9000842772761452425.png',
+        char_chan_id: '299'
       },
       {
         char_name: '比利·奇德',
-        char_color: '#cf443f',
-        char_line: '星徽骑士可是不会输的，哈——哈哈哈！',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/05/20/eea067cdceeda7b8cf45fd776f74e13a_2792664984165187762.png',
-        char_cover_home: 'https://webstatic.mihoyo.com/upload/op-public/2022/05/20/a54460842077b4ca7ce6f04ce8fcea32_2255897375504950444.png',
-        char_chan_id: '283'
+        char_color: ' #cf443f',
+        char_line: '星徽骑士可是不会输的<br>哈——哈哈哈！',
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/05/19/eea067cdceeda7b8cf45fd776f74e13a_4226709793790517741.png',
+        char_cover_home: 'https://webstatic.hoyoverse.com/upload/op-public/2022/05/26/fb9112e3a564f716e9ca2c364031a9c4_3251784621082537522.png',
+        char_chan_id: '298'
       },
       {
         char_name: '妮可·德玛拉',
-        char_color: '#f5bfbd',
-        char_line: '明智之选！不过提前说好，我出场费可不低哦！',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/05/18/1a82a5a83749ca6b128c81381fe94063_1273458224204943372.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/102169/62512dd00e05045759ec3521dddbdef5_8800873235300323298.png',
-        char_chan_id: '283'
+        char_color: '#f7bfbb',
+        char_line: '明智之选！<br/>不过提前说好，我出场费可不低哦！',
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/05/19/1a82a5a83749ca6b128c81381fe94063_1074261892080967189.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/102183/62512dd00e05045759ec3521dddbdef5_6237140226188483622.png',
+        char_chan_id: '298'
       },
       {
         char_name: '安比·德玛拉',
-        char_color: '#d0e974',
+        char_color: '#d1e875',
         char_line: '目标确认，开始行动。',
-        char_avatar: 'https://webstatic.mihoyo.com/upload/op-public/2022/05/18/ba3e92bf0ea390a702969b204ae562f3_7243002285368578003.png',
-        char_cover_home: 'https://fastcdn.mihoyo.com/content-v2/nap/102162/eecdce796ddabd20b80ab942dc49b754_6877946544895812021.png',
-        char_chan_id: '283'
+        char_avatar: 'https://webstatic.hoyoverse.com/upload/op-public/2022/05/18/ba3e92bf0ea390a702969b204ae562f3_3515216936997121656.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/102103/eecdce796ddabd20b80ab942dc49b754_2983546474985668407.png',
+        char_chan_id: '298'
       }
     ],
     [
@@ -286,6 +309,14 @@
         char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124700/c246552f6672e8877bccca2f8ece87c1_8614327593741193610.png',
         char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124700/14988767fd0916d0063fc0097f656a42_4566522091989166627.png',
         char_chan_id: '782'
+      },
+      {
+        char_name: 'Jane Doe',
+        char_color: '#83a09e',
+        char_line: "Well, last time was last time! This time, I'm telling the truth. Trust me~",
+        char_avatar: 'https://fastcdn.hoyoverse.com/content-v2/nap/124675/57844dcbca0ae06307d16d92e4430ad4_4400410995056383301.png',
+        char_cover_home: 'https://fastcdn.hoyoverse.com/content-v2/nap/124675/e0bf1cb7547cbc89b67226ec9bfc9acd_4070184306411436761.png',
+        char_chan_id: '926'
       },
       {
         char_name: 'Qingyi',
@@ -451,8 +482,8 @@
       event_exclusive: true,
       intro: '队长，逮捕犯人就交给我吧！',
       camp: 'CriminalInvestigationSpecialResponseTeam',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     qingyi: {
       key: 'Qingyi',
@@ -461,10 +492,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '邂逅相遇,适我愿兮。',
+      intro: '邂逅相遇，适我愿兮。',
       camp: 'CriminalInvestigationSpecialResponseTeam',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     piper_wheel: {
       key: 'Piper Wheel',
@@ -475,8 +506,8 @@
       event_exclusive: true,
       intro: '要载你一程吗？记得系好安全带哦。',
       camp: 'SonsofCalydon',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     lucy: {
       key: 'Lucy',
@@ -487,8 +518,8 @@
       event_exclusive: true,
       intro: '有贵客登门，就让本小姐来招待吧！',
       camp: 'SonsofCalydon',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     zhu_yuan: {
       key: 'Zhu Yuan',
@@ -499,8 +530,8 @@
       event_exclusive: true,
       intro: '都市秩序部刑侦组下属分队长朱鸢，随时待命。',
       camp: 'CriminalInvestigationSpecialResponseTeam',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     ellen_joe: {
       key: 'Ellen Joe',
@@ -511,8 +542,8 @@
       event_exclusive: true,
       intro: '啊，又是麻烦的委托…果然该换个班表。',
       camp: 'VictoriaHousekeepingCo',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     alexandrina: {
       key: 'Alexandrina',
@@ -521,10 +552,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '您就是这次的主人吗？<br>维多利亚家政丽娜，为您服务。',
+      intro: '您就是这次的主人吗？<br/>维多利亚家政丽娜，为您服务。',
       camp: 'VictoriaHousekeepingCo',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     grace_howard: {
       key: 'Grace Howard',
@@ -533,10 +564,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '这冷峻硬朗的线条，真美啊……忍不住想拆开来看看呢。',
+      intro: '这冷峻硬朗的线条，真美啊……<br>忍不住想拆开来看看呢。',
       camp: 'BelobogHeavyIndustries',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     hoshimi_miyabi: {
       key: 'Hoshimi Miyabi',
@@ -547,8 +578,8 @@
       event_exclusive: true,
       intro: '秩序，不可破。',
       camp: 'Section6',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     soukaku: {
       key: 'Soukaku',
@@ -559,8 +590,8 @@
       event_exclusive: true,
       intro: '只要能一直吃饱肚子，<br>苍角就已经很幸福啦~',
       camp: 'Section6',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     ben_bigger: {
       key: 'Ben Bigger',
@@ -571,8 +602,8 @@
       event_exclusive: true,
       intro: '我喜欢算术，但这不妨碍我一巴掌拍碎歹徒。',
       camp: 'BelobogHeavyIndustries',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     anton_ivanov: {
       key: 'Anton Ivanov',
@@ -581,10 +612,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '有搞不定的活儿？让我来！',
+      intro: '有搞不定的活儿？让我来！ ',
       camp: 'BelobogHeavyIndustries',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     koleda_belobog: {
       key: 'Koleda Belobog',
@@ -595,8 +626,8 @@
       event_exclusive: true,
       intro: '我就是白祇重工的社长，珂蕾妲。',
       camp: 'BelobogHeavyIndustries',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     von_lycaon: {
       key: 'Von Lycaon',
@@ -607,8 +638,8 @@
       event_exclusive: true,
       intro: '执事莱卡恩，感谢您的指名。',
       camp: 'VictoriaHousekeepingCo',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     corin_wickes: {
       key: 'Corin Wickes',
@@ -619,8 +650,8 @@
       event_exclusive: true,
       intro: '我、我这样的人……真的可以吗？',
       camp: 'VictoriaHousekeepingCo',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     nekomiya_mana: {
       key: 'Nekomiya Mana',
@@ -629,10 +660,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '最好吃的青花鱼，<br>永远是还没吃到的那一条。',
+      intro: '最好吃的青花鱼，<br>永远是还没吃到的那一条~',
       camp: 'CunningHaresAKAGentleHouse',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     soldier_11: {
       key: 'Soldier 11',
@@ -643,8 +674,8 @@
       event_exclusive: true,
       intro: '我不关心你去了哪里，但无论如何，请给我留下命令。',
       camp: 'ObolSquad',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     billy_kid: {
       key: 'Billy Kid',
@@ -653,10 +684,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '星徽骑士可是不会输的，哈——哈哈哈！',
+      intro: '星徽骑士可是不会输的<br>哈——哈哈哈！',
       camp: 'CunningHaresAKAGentleHouse',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     nicole_demara: {
       key: 'Nicole Demara',
@@ -665,10 +696,10 @@
       prefix: '',
       star: 5,
       event_exclusive: true,
-      intro: '明智之选！不过提前说好，我出场费可不低哦！',
+      intro: '明智之选！<br/>不过提前说好，我出场费可不低哦！',
       camp: 'CunningHaresAKAGentleHouse',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     },
     anby_demara: {
       key: 'Anby Demara',
@@ -679,8 +710,8 @@
       event_exclusive: true,
       intro: '目标确认，开始行动。',
       camp: 'CunningHaresAKAGentleHouse',
-      ele: 'Element.electro',
-      weapon: 'Weapon.bow'
+      ele: 'Element.ether',
+      weapon: 'Weapon.anomaly'
     }
   }
 }

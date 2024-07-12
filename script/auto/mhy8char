@@ -1,10 +1,10 @@
 {
     "camp": [
-        "https://api-takumi-static.mihoyo.com/content_v2_user/app/706fd13a87294881/getContentList?iPageSize=999&iPage=1&sLangKey=zh-cn&iChanId=271",
-        "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&sLangKey=en-us&iChanId=286"
+        "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&iChanId=286&sLangKey=zh-cn",
+        "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&iChanId=286&sLangKey=en-us"
     ],
     "char": [
-        "https://api-takumi-static.mihoyo.com/content_v2_user/app/706fd13a87294881/getContentList?iPageSize=999&iPage=1&sLangKey=zh-cn&iChanId=272",
-        "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&sLangKey=en-us&iChanId=287"
+        "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&iChanId=287&sLangKey=zh-cn",
+        "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/3e9196a4b9274bd7/getContentList?iPageSize=999&iPage=1&iChanId=287&sLangKey=en-us"
     ]
 }

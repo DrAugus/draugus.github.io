@@ -54,9 +54,9 @@ export const CHARACTER = """
                 return new_line
 
         # TODO temp
-        # "ele": "Element.electro",
-        # "weapon": "Weapon.bow",
-        tmp_str = ["Element.electro", "Weapon.bow"]
+        # "ele": "Element.ether",
+        # "weapon": "Weapon.anomaly",
+        tmp_str = ["Element.ether", "Weapon.anomaly"]
         for tmp in tmp_str:
             if tmp in line_str:
                 new_line = line_str.replace(f"'{tmp}'", f"{tmp}")
