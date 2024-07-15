@@ -1,20 +1,34 @@
 import requests
 from bs4 import BeautifulSoup as be
 
-import enum
+from enum import Enum
 import re
 import yaml
 import numpy
 import html
+import os
+import json
 
 import util
 
-# 获取yaml文件路径
-# yaml_path = 'config.yml'
-# if platform.system() == "Windows":
-yaml_path = 'script/genshin/config.yml'
 
-f = open(yaml_path, 'rb')
+class LANG(Enum):
+    ZH_CN = 0
+    EN_US = 1
+
+
+def save_dict_to_file(dict_data, file_path):
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(dict_data, f, ensure_ascii=False, indent=4)
+
+
+current_path = os.path.dirname(__file__)
+print(current_path)
+
+# 获取yaml文件路径
+yaml_path = os.path.join(current_path, "config.yml")
+
+f = open(yaml_path, "rb")
 config = yaml.safe_load_all(f)
 config_list = list(config)
 
@@ -25,6 +39,7 @@ SHOW_ZH = config_value["SHOW_ZH"]
 SHOW_WISH = config_value["SHOW_WISH"]
 SHOW_WISH_CHAR = config_value["SHOW_WISH_CHAR"]
 SHOW_WISH_WEAPON = config_value["SHOW_WISH_WEAPON"]
+SHOW_ALL_CHAR = config_value["SHOW_ALL_CHAR"]
 SHOW_CHAR_INFO = config_value["SHOW_CHAR_INFO"]
 SHOW_ALL_EVENT = config_value["SHOW_ALL_EVENT"]
 URL_PAGE_SIZE = config_value["URL_PAGE_SIZE"]
@@ -33,14 +48,7 @@ URL_ORDER = config_value["URL_ORDER"]
 URL_AROUND = config_value["URL_AROUND"]
 # ########################### config ###########################
 
-LV = {
-    'trace': 0,
-    'debug': 1,
-    'info': 2,
-    'warn': 3,
-    'error': 4,
-    'max': 5
-}
+LV = {"trace": 0, "debug": 1, "info": 2, "warn": 3, "error": 4, "max": 5}
 
 
 def log_debug(lv, *str):
@@ -66,14 +74,14 @@ RES_CHAR_INFO = []
 # ########################### result ###########################
 
 
-class City(enum.Enum):
-    Mondstadt = 0,
-    Liyue = 1,
-    Inazuma = 2,
-    Sumeru = 3,
-    Fontaine = 4,
-    Natlan = 5,
-    Snezhnaya = 6,
+class City(Enum):
+    Mondstadt = 0
+    Liyue = 1
+    Inazuma = 2
+    Sumeru = 3
+    Fontaine = 4
+    Natlan = 5
+    Snezhnaya = 6
 
 
 url_zh_char_channel_id = [150, 151, 324, 350]
@@ -86,77 +94,133 @@ url_en_char_channel_id_all = 489
 url_en_event_channel_id = 10
 url_en_event_wish_channel_id = []
 
-url_zh_content_list_prefix = "https://content-static.mihoyo.com/content/ysCn/getContentList?"
-url_en_content_list_prefix = "https://content-static-sea.hoyoverse.com/content/yuanshen/getContentList?"
+url_zh_content_list_prefix = (
+    "https://content-static.mihoyo.com/content/ysCn/getContentList?"
+)
+
+url_en_content_list_prefix = (
+    "https://content-static-sea.hoyoverse.com/content/yuanshen/getContentList?"
+)
 
 url_zh_content_prefix = "https://content-static.mihoyo.com/content/ysCn/getContent?"
-url_en_content_prefix = "https://content-static-sea.hoyoverse.com/content/yuanshen/getContent?"
+url_en_content_prefix = (
+    "https://content-static-sea.hoyoverse.com/content/yuanshen/getContent?"
+)
 
 
-def url_compose(prefix, channel_id,
-                page_size=URL_PAGE_SIZE, page_num=URL_PAGE_NUM, order=URL_ORDER):
-    url_res = prefix + "pageSize=" + str(page_size) + "&pageNum=" + \
-        str(page_num) + "&order=" + order + "&channelId=" + str(channel_id)
+def url_compose(
+    prefix, channel_id, page_size=URL_PAGE_SIZE, page_num=URL_PAGE_NUM, order=URL_ORDER
+):
+    url_res = (
+        prefix
+        + "pageSize="
+        + str(page_size)
+        + "&pageNum="
+        + str(page_num)
+        + "&order="
+        + order
+        + "&channelId="
+        + str(channel_id)
+    )
     log_debug(LV["trace"], url_res)
     return url_res
 
 
-url_zh_char = [
-    # url_compose(url_zh_content_list_prefix, url_zh_char_channel_id[City.Mondstadt.value[0]]),
-    # url_compose(url_zh_content_list_prefix, url_zh_char_channel_id[City.Liyue.value[0]]),
-    # url_compose(url_zh_content_list_prefix, url_zh_char_channel_id[City.Inazuma.value[0]]),
-    url_compose(url_zh_content_list_prefix,
-                url_zh_char_channel_id[City.Sumeru.value[0]]),
-    # url_compose(url_zh_content_list_prefix, url_zh_char_channel_id[City.Fontaine.value[0]]),
-    # url_compose(url_zh_content_list_prefix, url_zh_char_channel_id[City.Natlan.value[0]]),
-    # url_compose(url_zh_content_list_prefix, url_zh_char_channel_id[City.Snezhnaya.value[0]]),
-]
-url_en_char = [
-    # url_compose(url_en_content_list_prefix, url_en_char_channel_id[City.Mondstadt.value[0]]),
-    # url_compose(url_en_content_list_prefix, url_en_char_channel_id[City.Liyue.value[0]]),
-    # url_compose(url_en_content_list_prefix, url_en_char_channel_id[City.Inazuma.value[0]]),
-    url_compose(url_en_content_list_prefix,
-                url_en_char_channel_id[City.Sumeru.value[0]]),
-    # url_compose(url_en_content_list_prefix, url_en_char_channel_id[City.Fontaine.value[0]]),
-    # url_compose(url_en_content_list_prefix, url_en_char_channel_id[City.Natlan.value[0]]),
-    # url_compose(url_en_content_list_prefix, url_en_char_channel_id[City.Snezhnaya.value[0]]),
-]
+def get_url_char():
+
+    if SHOW_ALL_CHAR:
+        if SHOW_ZH:
+            return [url_compose(url_zh_content_list_prefix, url_zh_char_channel_id_all)]
+        else:
+            return [url_compose(url_en_content_list_prefix, url_en_char_channel_id_all)]
+
+    url_zh_char = [
+        url_compose(
+            url_zh_content_list_prefix, url_zh_char_channel_id[City.Mondstadt.value]
+        ),
+        url_compose(
+            url_zh_content_list_prefix, url_zh_char_channel_id[City.Liyue.value]
+        ),
+        url_compose(
+            url_zh_content_list_prefix, url_zh_char_channel_id[City.Inazuma.value]
+        ),
+        url_compose(
+            url_zh_content_list_prefix, url_zh_char_channel_id[City.Sumeru.value]
+        ),
+        # url_compose(
+        #     url_zh_content_list_prefix, url_zh_char_channel_id[City.Fontaine.value]
+        # ),
+        # url_compose(
+        #     url_zh_content_list_prefix, url_zh_char_channel_id[City.Natlan.value]
+        # ),
+        # url_compose(
+        #     url_zh_content_list_prefix, url_zh_char_channel_id[City.Snezhnaya.value]
+        # ),
+    ]
+    url_en_char = [
+        url_compose(
+            url_en_content_list_prefix, url_en_char_channel_id[City.Mondstadt.value]
+        ),
+        url_compose(
+            url_en_content_list_prefix, url_en_char_channel_id[City.Liyue.value]
+        ),
+        url_compose(
+            url_en_content_list_prefix, url_en_char_channel_id[City.Inazuma.value]
+        ),
+        url_compose(
+            url_en_content_list_prefix, url_en_char_channel_id[City.Sumeru.value]
+        ),
+        # url_compose(
+        #     url_en_content_list_prefix, url_en_char_channel_id[City.Fontaine.value]
+        # ),
+        # url_compose(
+        #     url_en_content_list_prefix, url_en_char_channel_id[City.Natlan.value]
+        # ),
+        # url_compose(
+        #     url_en_content_list_prefix, url_en_char_channel_id[City.Snezhnaya.value]
+        # ),
+    ]
+    if SHOW_ZH:
+        return url_zh_char
+    else:
+        return url_en_char
 
 
 def get_json(_url_):
     req = requests.get(url=_url_)
     if req.status_code == 200:
-        return req.json()['data']
+        return req.json()["data"]
     else:
         return None
 
 
 def clean_char_data(_data_):
     _return_ = []
-    for key in _data_['list']:
+    for key in _data_["list"]:
         ext = key["ext"]
-        all_data = {key['title']: {
-            "角色ICON": ext[0]["value"][0]["url"],
-            "电脑端立绘": ext[1]["value"][0]["url"],
-            "手机端立绘": ext[15]["value"][0]["url"],
-            "角色名字": key['title'],
-            "角色属性": ext[3]["value"][0]["url"],
-            # "角色语言": ext[4]["value"],
-            # "声优1": ext[5]["value"],
-            # "声优2": ext[6]["value"],
-            # "简介": be(ext[7]["value"], "lxml").p.text.strip(),
-            # "台词": ext[8]["value"][0]["url"],
-            # "音频": {
-            #     ext[9]["value"][0]["name"]: ext[9]["value"][0]["url"],
-            #     ext[10]["value"][0]["name"]: ext[10]["value"][0]["url"],
-            #     ext[11]["value"][0]["name"]: ext[11]["value"][0]["url"],
-            #     ext[12]["value"][0]["name"]: ext[12]["value"][0]["url"],
-            #     ext[13]["value"][0]["name"]: ext[13]["value"][0]["url"],
-            #     ext[14]["value"][0]["name"]: ext[14]["value"][0]["url"],
-            # },
+        all_data = {
+            key["title"]: {
+                "角色ICON": ext[0]["value"][0]["url"],
+                "电脑端立绘": ext[1]["value"][0]["url"],
+                "手机端立绘": ext[15]["value"][0]["url"],
+                "角色名字": key["title"],
+                "角色属性": ext[3]["value"][0]["url"],
+                # "角色语言": ext[4]["value"],
+                # "声优1": ext[5]["value"],
+                # "声优2": ext[6]["value"],
+                "简介": be(ext[7]["value"], "lxml").p.text.strip(),
+                # "台词": ext[8]["value"][0]["url"],
+                # "音频": {
+                #     ext[9]["value"][0]["name"]: ext[9]["value"][0]["url"],
+                #     ext[10]["value"][0]["name"]: ext[10]["value"][0]["url"],
+                #     ext[11]["value"][0]["name"]: ext[11]["value"][0]["url"],
+                #     ext[12]["value"][0]["name"]: ext[12]["value"][0]["url"],
+                #     ext[13]["value"][0]["name"]: ext[13]["value"][0]["url"],
+                #     ext[14]["value"][0]["name"]: ext[14]["value"][0]["url"],
+                # },
+            }
         }
-        }
-        _return_.append(all_data[key['title']])
+        _return_.append(all_data[key["title"]])
     return _return_
 
 
@@ -165,7 +229,7 @@ def character_data(url_lang):
     for url in url_lang:
         json_list = clean_char_data(get_json(url))
         for json in json_list:
-            _json_[json['角色名字']] = json
+            _json_[json["角色名字"]] = json
     RES_CHAR_INFO.append(_json_)
     log_debug(LV["trace"], _json_)
     return _json_
@@ -182,10 +246,8 @@ def lookup(name, url):
             log_debug(LV["trace"], f"{key}: {value}")
 
 
-url_zh_event_list = url_compose(
-    url_zh_content_list_prefix, url_zh_event_channel_id)
-url_en_event_list = url_compose(
-    url_en_content_list_prefix, url_en_event_channel_id)
+url_zh_event_list = url_compose(url_zh_content_list_prefix, url_zh_event_channel_id)
+url_en_event_list = url_compose(url_en_content_list_prefix, url_en_event_channel_id)
 
 
 def wish_data(url_lang, str_match):
@@ -193,26 +255,26 @@ def wish_data(url_lang, str_match):
     _json_ = {}
     json_list = clean_wish_data(get_json(url_lang), str_match)
     for json in json_list:
-        _json_[json['id']] = json
+        _json_[json["id"]] = json
     display_format_event(_json_)
     return _json_
 
+
 # obj
 # todo: download img and then rename img
-
-
 def display_format_event(event_map):
     for k in event_map:
-        s = "--------" + \
-            "\n [id] "f"{event_map[k]['id']} " + \
-            "\n [title] "f"{event_map[k]['title']} " + \
-            "\n [img] "f"{event_map[k]['img']} " + \
-            "\n--------\n"
+        s = (
+            "--------" + "\n [id] "
+            f"{event_map[k]['id']} " + "\n [title] "
+            f"{event_map[k]['title']} " + "\n [img] "
+            f"{event_map[k]['img']} " + "\n--------\n"
+        )
         log_debug(LV["info"], s)
 
 
 def wish_detail_data(url_lang, str_match):
-    log_debug(LV["info"], "wish_detail_data url_lang :"f"{url_lang}")
+    log_debug(LV["info"], "wish_detail_data url_lang :" f"{url_lang}")
     print("URL", url_lang)
     arr = clean_wish_detail_data(get_json(url_lang), str_match)
     for a in arr:
@@ -232,8 +294,8 @@ def wish_detail_filter(arr):
     # split_str = "「(.*)\("
     split_str = r"\W+"
     for a in arr:
-        new_a = a.replace('「', '')
-        split_a = new_a.split('」')
+        new_a = a.replace("「", "")
+        split_a = new_a.split("」")
         # split_a = re.split(split_str, a)
         # for aa in new_a:
         #     name_prefix = re.findall(r"(.*)&middot;",aa)
@@ -262,11 +324,11 @@ def wish_detail_filter(arr):
         for aa in arr_filter1:
             split_aa = []
             # zh
-            if '&middot;' in aa:
-                split_aa = aa.split('&middot;')
+            if "&middot;" in aa:
+                split_aa = aa.split("&middot;")
             # en
-            if '&quot;' in aa:
-                split_aa = aa.split('&quot;')
+            if "&quot;" in aa:
+                split_aa = aa.split("&quot;")
 
             if not len(split_aa):
                 log_debug(LV["error"], "split aa none")
@@ -279,7 +341,7 @@ def wish_detail_filter(arr):
                     # others clean - only en
                     aaa_arr = []
                     for index, aaa in enumerate(split_aa):
-                        aaa = aaa.split('(')[0].strip()
+                        aaa = aaa.split("(")[0].strip()
                         aaa_arr.append(aaa)
 
                     # if len(aaa_arr) > 0 and isinstance(aaa_arr, list):
@@ -289,12 +351,11 @@ def wish_detail_filter(arr):
                         continue
 
                     log_debug(LV["debug"], "aaa_arr", aaa_arr)
-                    aaa_arr = numpy.array(aaa_arr).reshape(
-                        int(len(aaa_arr) / 2), 2)
+                    aaa_arr = numpy.array(aaa_arr).reshape(int(len(aaa_arr) / 2), 2)
                     for aaaa in aaa_arr:
                         dict_res = {}
-                        dict_res['prefix'] = aaaa[0]
-                        dict_res['name'] = aaaa[1]
+                        dict_res["prefix"] = aaaa[0]
+                        dict_res["name"] = aaaa[1]
                         with_prefix_char.append(dict_res)
                         arr_filter2.append(aaaa[1])
                     log_debug(LV["debug"], "aaa_arr", aaa_arr)
@@ -303,19 +364,19 @@ def wish_detail_filter(arr):
                     # sample
                     # ['A Thousand Floating Dreams (Catalyst) and Thundering Pulse ']
 
-                    if ',' in split_aa[0]:
-                        split_aa1 = split_aa[0].split(',')
-                    elif 'and' in split_aa[0]:
-                        split_aa1 = split_aa[0].split(' and ')
-                    elif 'or' in split_aa[0]:
-                        split_aa1 = split_aa[0].split(' or ')
+                    if "," in split_aa[0]:
+                        split_aa1 = split_aa[0].split(",")
+                    elif "and" in split_aa[0]:
+                        split_aa1 = split_aa[0].split(" and ")
+                    elif "or" in split_aa[0]:
+                        split_aa1 = split_aa[0].split(" or ")
                     else:
                         split_aa1 = split_aa
 
                     for aaa in split_aa1:
                         aaa = aaa.strip()
-                        if '(' in aaa:
-                            aaa = aaa.split('(')[0].strip()
+                        if "(" in aaa:
+                            aaa = aaa.split("(")[0].strip()
                         arr_filter2.append(aaa)
 
                     continue
@@ -327,8 +388,8 @@ def wish_detail_filter(arr):
                 continue
 
             dict_res = {}
-            dict_res['prefix'] = split_aa[0].strip()
-            dict_res['name'] = split_aa[1].strip()
+            dict_res["prefix"] = split_aa[0].strip()
+            dict_res["name"] = split_aa[1].strip()
             with_prefix_char.append(dict_res)
         if len(arr_filter2):
             RES_WISH_INFO.append(arr_filter2)
@@ -348,7 +409,7 @@ def all_wish_id(json):
 def clean_wish_data(_data_, str_match):
     _return_ = []
 
-    for key in _data_['list']:
+    for key in _data_["list"]:
         ext = key["ext"]
         title = key["title"]
         # range of len
@@ -358,13 +419,14 @@ def clean_wish_data(_data_, str_match):
         if not SHOW_ALL_EVENT and title.find(str_match) == -1:
             continue
         # todo: one id, many img can't get
-        all_data = {key['contentId']: {
-            "title": key["title"],
-            "img": ext[1]["value"][0]["url"],
-            "id": key["contentId"],
+        all_data = {
+            key["contentId"]: {
+                "title": key["title"],
+                "img": ext[1]["value"][0]["url"],
+                "id": key["contentId"],
+            }
         }
-        }
-        _return_.append(all_data[key['contentId']])
+        _return_.append(all_data[key["contentId"]])
 
     return _return_
 
@@ -372,7 +434,7 @@ def clean_wish_data(_data_, str_match):
 def clean_wish_detail_data(_data_, str_match):
     _return_ = []
 
-    content = _data_['content']
+    content = _data_["content"]
     new_str = content
 
     # only en website
@@ -410,25 +472,20 @@ def clean_wish_detail_data(_data_, str_match):
     return _return_
 
 
-str_zh_wish_name = [
-
-]
+str_zh_wish_name = []
 str_en_wish_name = "Event Wish (.*?) - Boosted Drop Rate"
-str_zh_detail_match_wish_char = [
-    ".*限定五星角色(.*)的祈愿.*",
-    ".*四星角色(.*)的祈愿.*"
-]
+str_zh_detail_match_wish_char = [".*限定五星角色(.*)的祈愿.*", ".*四星角色(.*)的祈愿.*"]
 str_en_detail_match_wish_char = [
     "the event-exclusive 5-star character (.*?) will receive a huge",
-    "the 4-star characters (.*?) will receive a huge"
+    "the 4-star characters (.*?) will receive a huge",
 ]
 str_zh_detail_match_wish_weapon = [
     ".*限定五星武器(.*)的祈愿.*",
-    ".*四星武器(.*)的祈愿.*"
+    ".*四星武器(.*)的祈愿.*",
 ]
 str_en_detail_match_wish_weapon = [
     ".*the event-exclusive 5-star weapons (.*) will receive a huge.*",
-    ".*the 4-star weapons (.*) will receive a huge.*"
+    ".*the 4-star weapons (.*) will receive a huge.*",
 ]
 
 
@@ -485,7 +542,7 @@ def display_all_res():
         for_print("RES_CHAR_INFO", RES_CHAR_INFO)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # test_arr = ['绮思晚星&middot;莱依拉(冰)」「渡来介者&middot;托马(火)」「心朝乂安&middot;鹿野院平藏']
     # wish_detail_filter(test_arr)
 
@@ -493,19 +550,16 @@ if __name__ == '__main__':
     # wish_detail_filter(test_arr)
 
     if SHOW_CHAR_INFO:
-        if SHOW_ZH:
-            character_data(url_zh_char)
-        else:
-            character_data(url_en_char)
+        json_char = character_data(get_url_char())
+        print("角色数:", len(json_char.keys()))
+        save_dict_to_file(json_char, f"{current_path}/../auto/get_char.json")
     if SHOW_WISH:
         if SHOW_ZH:
-            all_id_zh = all_wish_id(
-                wish_data(url_zh_event_list, str_zh_match_wish))
+            all_id_zh = all_wish_id(wish_data(url_zh_event_list, str_zh_match_wish))
             for i in all_id_zh:
                 get_wish_details(i)
         else:
-            all_id_en = all_wish_id(
-                wish_data(url_en_event_list, str_en_match_wish))
+            all_id_en = all_wish_id(wish_data(url_en_event_list, str_en_match_wish))
             for i in all_id_en:
                 get_wish_details(i)
 

@@ -319,3 +319,22 @@ def get_yaml_config(yaml_path):
 def is_match(sub_str: str, text: str):
     match_info = re.search(sub_str, text, re.IGNORECASE)
     return True if match_info else False
+
+
+def make_dir(dir):
+    if not os.path.exists(dir):
+        os.makedirs(dir)
+
+
+def clean_dir(dir):
+    for filename in os.listdir(dir):
+        file_path = os.path.join(dir, filename)
+        try:
+            # 如果是文件，则删除
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            # 如果是目录，可以递归地清空它（这里不处理子目录的清空）
+            # elif os.path.isdir(file_path):
+            #     shutil.rmtree(file_path)
+        except Exception as e:
+            print(f"Failed to delete {file_path}. Reason: {e}")

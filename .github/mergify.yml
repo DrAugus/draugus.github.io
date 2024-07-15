@@ -87,7 +87,7 @@ pull_request_rules:
       - author=DrAugus
       - check-success~=^deploy-
       - -check-failure~=^py-
-      - base=dev-game
+      - head=dev-game
     actions:
       merge:
         method: merge
@@ -96,7 +96,7 @@ pull_request_rules:
     conditions:
       - author=DrAugus
       - -check-failure~=^py-
-      - base=dev-py
+      - head=dev-py
     actions:
       merge:
         method: merge        

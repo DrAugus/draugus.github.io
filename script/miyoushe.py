@@ -20,6 +20,8 @@ class GameID(Enum):
 
 GET_IMAGE = True
 current_path = os.path.dirname(__file__)
+current_file_path = __file__
+current_file_name = os.path.basename(current_file_path)
 api_prefix = "https://bbs-api.miyoushe.com/post/wapi/"
 
 
@@ -136,7 +138,7 @@ def get_warp_list(gid: GameID, data_dict):
     return warp_arr
 
 
-def get_output(warp_arr):
+def get_output(gid: GameID, warp_arr):
 
     api_url_post_full = api_prefix + "getPostFull"
     api_url_post_full += "?post_id="
@@ -176,7 +178,10 @@ def get_output(warp_arr):
                         output += filename + "\n"
                         print("img name:", filename)
                         if GET_IMAGE:
-                            utils.wget_file(img, f"{current_path}/auto/img/{filename}")
+                            cur_file_name = current_file_name.split(".")[0]
+                            img_path = f"{current_path}/auto/img/{cur_file_name}/{gid.name.lower()}"
+                            utils.make_dir(img_path)
+                            utils.wget_file(img, f"{img_path}/{filename}")
 
             # DETAILS
             structured_content = get_warp["post"]["structured_content"]
@@ -250,7 +255,7 @@ def main():
             for url in api_all:
                 data_dict = get_data_dict(url)
                 warp_arr = get_warp_list(gid, data_dict)
-                output += get_output(warp_arr)
+                output += get_output(gid, warp_arr)
             write_local(gid, output)
 
 
