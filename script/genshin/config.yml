@@ -1,18 +1,19 @@
 LOG: 6
 # chinese or english
-SHOW_ZH: 1
+SHOW_ZH: 0
 # wish info
 SHOW_WISH: 1
 SHOW_WISH_CHAR: 1
 SHOW_WISH_WEAPON: 1
 # character
+SHOW_ALL_CHAR: 1
 SHOW_CHAR_INFO: 1
 # all event
 SHOW_ALL_EVENT: 0
 # url config
-URL_PAGE_SIZE: 50
+URL_PAGE_SIZE: 99
 URL_PAGE_NUM: 1
 # asc des
-URL_ORDER: des
+URL_ORDER: asc
 # 用不用都无所谓 get content
 URL_AROUND: 1
