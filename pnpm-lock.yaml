@@ -27,13 +27,13 @@ importers:
         version: 1.9.4
       sass:
         specifier: ^1.70.0
-        version: 1.77.6
+        version: 1.77.8
       typed.js:
         specifier: 2.1.0
         version: 2.1.0
       vitepress:
         specifier: ^1.0.0-rc.39
-        version: 1.1.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.6)(search-insights@2.13.0)
+        version: 1.1.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.8)(search-insights@2.13.0)
       vue:
         specifier: ^3.4.15
         version: 3.4.31
@@ -54,16 +54,16 @@ importers:
         version: 4.3.2
       sass:
         specifier: ^1.70.0
-        version: 1.77.6
+        version: 1.77.8
       typed.js:
         specifier: 2.1.0
         version: 2.1.0
       vite:
         specifier: ^5.0.12
-        version: 5.3.3(sass@1.77.6)
+        version: 5.3.3(sass@1.77.8)
       vitepress:
         specifier: 1.3.1
-        version: 1.3.1(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.6)(search-insights@2.13.0)
+        version: 1.3.1(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.8)(search-insights@2.13.0)
       vue:
         specifier: ^3.4.21
         version: 3.4.31
@@ -75,7 +75,7 @@ importers:
     devDependencies:
       vitepress:
         specifier: ^1.0.0-rc.39
-        version: 1.1.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.6)(search-insights@2.13.0)
+        version: 1.1.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.8)(search-insights@2.13.0)
       vue:
         specifier: ^3.4.15
         version: 3.4.31
@@ -1137,8 +1137,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sass@1.77.6:
-    resolution: {integrity: sha512-ByXE1oLD79GVq9Ht1PeHWCPMPB8XHpBuz1r85oByKHjZY6qV6rWnQovQzXJXuQ/XyE1Oj3iPk3lo28uzaRA2/Q==}
+  sass@1.77.8:
+    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1777,14 +1777,14 @@ snapshots:
 
   '@types/web-bluetooth@0.0.20': {}
 
-  '@vitejs/plugin-vue@5.0.4(vite@5.2.9(sass@1.77.6))(vue@3.4.31)':
+  '@vitejs/plugin-vue@5.0.4(vite@5.2.9(sass@1.77.8))(vue@3.4.31)':
     dependencies:
-      vite: 5.2.9(sass@1.77.6)
+      vite: 5.2.9(sass@1.77.8)
       vue: 3.4.31
 
-  '@vitejs/plugin-vue@5.0.5(vite@5.3.3(sass@1.77.6))(vue@3.4.31)':
+  '@vitejs/plugin-vue@5.0.5(vite@5.3.3(sass@1.77.8))(vue@3.4.31)':
     dependencies:
-      vite: 5.3.3(sass@1.77.6)
+      vite: 5.3.3(sass@1.77.8)
       vue: 3.4.31
 
   '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.12)(leaflet@1.9.4)':
@@ -2327,7 +2327,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.18.0
       fsevents: 2.3.3
 
-  sass@1.77.6:
+  sass@1.77.8:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.6
@@ -2380,32 +2380,32 @@ snapshots:
 
   valid-data-url@3.0.1: {}
 
-  vite@5.2.9(sass@1.77.6):
+  vite@5.2.9(sass@1.77.8):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.3
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.77.6
+      sass: 1.77.8
 
-  vite@5.3.3(sass@1.77.6):
+  vite@5.3.3(sass@1.77.8):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
       rollup: 4.18.0
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.77.6
+      sass: 1.77.8
 
-  vitepress@1.1.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.6)(search-insights@2.13.0):
+  vitepress@1.1.2(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.8)(search-insights@2.13.0):
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.3)(search-insights@2.13.0)
       '@shikijs/core': 1.3.0
       '@shikijs/transformers': 1.3.0
       '@types/markdown-it': 14.0.1
-      '@vitejs/plugin-vue': 5.0.4(vite@5.2.9(sass@1.77.6))(vue@3.4.31)
+      '@vitejs/plugin-vue': 5.0.4(vite@5.2.9(sass@1.77.8))(vue@3.4.31)
       '@vue/devtools-api': 7.0.27(vue@3.4.31)
       '@vueuse/core': 10.9.0(vue@3.4.31)
       '@vueuse/integrations': 10.9.0(focus-trap@7.5.4)(vue@3.4.31)
@@ -2413,7 +2413,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 6.3.0
       shiki: 1.3.0
-      vite: 5.2.9(sass@1.77.6)
+      vite: 5.2.9(sass@1.77.8)
       vue: 3.4.31
     optionalDependencies:
       markdown-it-mathjax3: 4.3.2
@@ -2445,14 +2445,14 @@ snapshots:
       - typescript
       - universal-cookie
 
-  vitepress@1.3.1(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.6)(search-insights@2.13.0):
+  vitepress@1.3.1(@algolia/client-search@4.23.3)(markdown-it-mathjax3@4.3.2)(postcss@8.4.39)(sass@1.77.8)(search-insights@2.13.0):
     dependencies:
       '@docsearch/css': 3.6.0
       '@docsearch/js': 3.6.0(@algolia/client-search@4.23.3)(search-insights@2.13.0)
       '@shikijs/core': 1.10.3
       '@shikijs/transformers': 1.10.3
       '@types/markdown-it': 14.1.1
-      '@vitejs/plugin-vue': 5.0.5(vite@5.3.3(sass@1.77.6))(vue@3.4.31)
+      '@vitejs/plugin-vue': 5.0.5(vite@5.3.3(sass@1.77.8))(vue@3.4.31)
       '@vue/devtools-api': 7.3.5
       '@vue/shared': 3.4.31
       '@vueuse/core': 10.11.0(vue@3.4.31)
@@ -2461,7 +2461,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 7.0.0
       shiki: 1.10.3
-      vite: 5.3.3(sass@1.77.6)
+      vite: 5.3.3(sass@1.77.8)
       vue: 3.4.31
     optionalDependencies:
       markdown-it-mathjax3: 4.3.2
