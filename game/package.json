@@ -13,7 +13,7 @@
     "@mdit-vue/shared": "^2.0.0",
     "@types/leaflet": "1.9.12",
     "@vue-leaflet/vue-leaflet": "0.10.1",
-    "dayjs": "1.11.11",
+    "dayjs": "1.11.12",
     "leaflet": "1.9.4",
     "sass": "^1.70.0",
     "typed.js": "2.1.0",
