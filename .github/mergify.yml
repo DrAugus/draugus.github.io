@@ -85,7 +85,7 @@ pull_request_rules:
   - name: automatic merge for dev-game
     conditions:
       - author=DrAugus
-      - check-success~=^deploy-
+      - -check-failure~=^deploy-
       - -check-failure~=^py-
       - head=dev-game
     actions:
@@ -95,6 +95,7 @@ pull_request_rules:
   - name: automatic merge for dev-py
     conditions:
       - author=DrAugus
+      - -check-failure~=^deploy-
       - -check-failure~=^py-
       - head=dev-py
     actions:
