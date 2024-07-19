@@ -9,8 +9,8 @@ pull_request_rules:
   - name: automatic merge for dependabot pull requests
     conditions:
       - author=dependabot[bot]
-      - check-success~=^deploy-
-      - files!=requirements.txt
+      - -check-failure~=^deploy-
+      - -check-failure~=^py-
     actions:
       merge:
         method: merge
@@ -18,8 +18,8 @@ pull_request_rules:
   - name: automatic merge for Renovate pull requests
     conditions:
       - author=renovate[bot]
-      - check-success~=^deploy-
-      - files!=requirements.txt
+      - -check-failure~=^deploy-
+      - -check-failure~=^py-
     actions:
       merge:
         method: merge
@@ -28,36 +28,8 @@ pull_request_rules:
     conditions:
       - title~=^\[requires.io\]
       - head~=^requires-io
-      - check-success~=^deploy-
-      - files!=requirements.txt
-    actions:
-      merge:
-        method: merge
-
-  - name: automatic merge for dependabot pull requests py
-    conditions:
-      - author=dependabot[bot]
-      - check-success~=^py-
-      - files=requirements.txt
-    actions:
-      merge:
-        method: merge
-
-  - name: automatic merge for Renovate pull requests py
-    conditions:
-      - author=renovate[bot]
-      - check-success~=^py-
-      - files=requirements.txt
-    actions:
-      merge:
-        method: merge
-
-  - name: automatic merge for Requires.io pull requests py
-    conditions:
-      - title~=^\[requires.io\]
-      - head~=^requires-io
-      - check-success~=^py-
-      - files=requirements.txt
+      - -check-failure~=^deploy-
+      - -check-failure~=^py-
     actions:
       merge:
         method: merge
