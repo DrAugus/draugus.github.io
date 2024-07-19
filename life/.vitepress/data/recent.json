@@ -2,16 +2,16 @@
     "title": "",
     "items": [
         {
-            "title": "Git",
-            "desc": "Git sol 舍弃本地所有提交 `git reset --hard origin/your_br",
-            "link": "/code/version-ctrl/git",
-            "date": "2024-07-18"
-        },
-        {
             "title": "Linux 问题收集",
             "desc": "Linux 问题收集 命令行使用代理 `export HTTPS_PROXY=your_proxy",
             "link": "/code/os/linux/qa",
             "date": "2024-07-12"
+        },
+        {
+            "title": "Git",
+            "desc": "Git sol 舍弃本地所有提交 `git reset --hard origin/your_br",
+            "link": "/code/version-ctrl/git",
+            "date": "2024-07-18"
         },
         {
             "title": "GitHub",
