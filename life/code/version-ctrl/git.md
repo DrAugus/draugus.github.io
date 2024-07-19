@@ -105,6 +105,17 @@ git rm --cached <submodule_path> # 从索引中移除子模块
 
 [refer](https://cloud.tencent.com/developer/article/2143377)
 
+## lfs
+
+[official](https://git-lfs.com/)
+
+```bash
+apt install git-lfs
+git lfs install
+git lfs track "*.psd"
+git add .gitattributes
+```
+
 ## remote
 
 - `git remote -v`
