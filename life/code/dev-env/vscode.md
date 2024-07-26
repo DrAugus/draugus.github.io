@@ -18,3 +18,6 @@
 
 **清除没有用到的 import 语句**  
 `option+shift+O` (`Alt+shift+O`)
+
+**快速跳转指定行号位置**
+`Ctrl+G`

@@ -757,15 +757,9 @@ export const NAV_DATA: CardData[] = [
       },
       {
         icon: '',
-        title: '中午吃什么',
+        title: '复旦大学东亚语言数据中心',
         // desc: '',
-        link: ''
-      },
-      {
-        icon: '',
-        title: '中午吃什么',
-        // desc: '',
-        link: ''
+        link: 'http://ccdc.fudan.edu.cn/bases/index.jsp'
       },
     ]
   },

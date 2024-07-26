@@ -501,6 +501,7 @@ const sidebarCodeLibs = [
     { text: 'libevent', link: '/code/libs/libevent' },
     { text: 'libuv', link: '/code/libs/libuv' },
     { text: 'LuaJIT', link: '/code/libs/luajit' },
+    { text: 'OpenCV', link: '/code/libs/opencv' },
     { text: 'OpenGL', link: '/code/libs/opengl' },
     { text: 'protobuf', link: '/code/libs/protobuf' },
     { text: 'RapidJSON', link: '/code/libs/rapidjson' },
@@ -587,6 +588,7 @@ const sidebarPursuingEducation = [
     { text: '高考', link: '/pursuing-education/gaokao' },
 ];
 const sidebarRandomNotes = [
+    { text: '什么是 xx', link: '/random-notes/what-is' },
     { text: '一言', link: '/random-notes/one-word' },
     { text: '散篇', link: '/random-notes/temp2' },
     { text: '电网', link: '/random-notes/state-grid' },
