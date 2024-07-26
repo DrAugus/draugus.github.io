@@ -6,30 +6,45 @@ pull_request_rules:
       merge:
         method: merge
 
-  - name: automatic merge for dependabot pull requests
+  - name: automatic merge for dependabot/Renovate/Requires.io pull requests
     conditions:
-      - author=dependabot[bot]
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
-    actions:
-      merge:
-        method: merge
-
-  - name: automatic merge for Renovate pull requests
-    conditions:
-      - author=renovate[bot]
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
-    actions:
-      merge:
-        method: merge
-
-  - name: automatic merge for Requires.io pull requests
-    conditions:
-      - title~=^\[requires.io\]
-      - head~=^requires-io
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
+      - or:
+        - and:
+          - author=dependabot[bot]
+        - and:
+          - title~=^\[requires.io\]
+          - head~=^requires-io      
+        - and:
+          - author=renovate[bot]              
+      # PR is not a draft
+      - -draft
+      - or:
+          # Case 1: both checks have completed and are successful
+          - and:
+              - check-success~=^deploy-
+              - check-success~=^py-
+          # Case 2: ~=^deploy- check has not been triggered and ~=^py- is successful
+          - and:
+              - -check-failure~=^deploy-
+              - -check-neutral~=^deploy-
+              - -check-pending~=^deploy-
+              - check-success~=^py-
+          # Case 3: ~=^py- check has not been triggered and ~=^deploy- is successful
+          - and:
+              - -check-failure~=^py-
+              - -check-neutral~=^py-
+              - -check-pending~=^py-
+              - check-success~=^deploy-
+          # Case 4: neither check has been triggered
+          - and:
+              - -check-success~=^deploy-
+              - -check-failure~=^deploy-
+              - -check-neutral~=^deploy-
+              - -check-pending~=^deploy-
+              - -check-success~=^py-
+              - -check-failure~=^py-
+              - -check-neutral~=^py-
+              - -check-pending~=^py-
     actions:
       merge:
         method: merge
@@ -54,25 +69,44 @@ pull_request_rules:
   #     merge:
   #       method: merge
 
-  - name: automatic merge for dev-game
+  - name: automatic merge for dev-game/py
     conditions:
       - author=DrAugus
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
-      - head=dev-game
+      - or:
+        - head=dev-game
+        - head=dev-py
+      # PR is not a draft
+      - -draft
+      - or:
+          # Case 1: both checks have completed and are successful
+          - and:
+              - check-success~=^deploy-
+              - check-success~=^py-
+          # Case 2: ~=^deploy- check has not been triggered and ~=^py- is successful
+          - and:
+              - -check-failure~=^deploy-
+              - -check-neutral~=^deploy-
+              - -check-pending~=^deploy-
+              - check-success~=^py-
+          # Case 3: ~=^py- check has not been triggered and ~=^deploy- is successful
+          - and:
+              - -check-failure~=^py-
+              - -check-neutral~=^py-
+              - -check-pending~=^py-
+              - check-success~=^deploy-
+          # Case 4: neither check has been triggered
+          - and:
+              - -check-success~=^deploy-
+              - -check-failure~=^deploy-
+              - -check-neutral~=^deploy-
+              - -check-pending~=^deploy-
+              - -check-success~=^py-
+              - -check-failure~=^py-
+              - -check-neutral~=^py-
+              - -check-pending~=^py-
     actions:
       merge:
         method: merge
-
-  - name: automatic merge for dev-py
-    conditions:
-      - author=DrAugus
-      - -check-failure~=^deploy-
-      - -check-failure~=^py-
-      - head=dev-py
-    actions:
-      merge:
-        method: merge        
 
   # https://docs.mergify.com/workflow/delete-head-branches/#prevent-deletion-for-dependent-branches
   - name: delete head branch after merge but not if other PRs depend on it
