@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "VS Code",
+            "desc": "VS Code tips **文本自动换行** 文本超出显示时，需要拖动下面的滑块才能看到超出的部",
+            "link": "/code/dev-env/vscode",
+            "date": "2024-07-26"
+        },
+        {
+            "title": "OpenCV",
+            "desc": "OpenCV opencv.org Reading and Writing Videos usin",
+            "link": "/code/libs/opencv",
+            "date": "2024-07-26"
+        },
+        {
+            "title": "这是什么？",
+            "desc": "这是什么？ 什么是数字孪生 数字孪生是某一对象或系统整个生命周期的虚拟再现，根据实时数据进行更新，",
+            "link": "/random-notes/what-is",
+            "date": "2024-07-26"
+        },
+        {
             "title": "Linux 问题收集",
             "desc": "Linux 问题收集 命令行使用代理 `export HTTPS_PROXY=your_proxy",
             "link": "/code/os/linux/qa",
@@ -101,24 +119,6 @@
             "title": "地图数据集",
             "desc": "地图数据集 本站使用了很多地图集，有用到 ECharts 和 Amap 等等。 具体代码实现可以参",
             "link": "/dev/map-data",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "日本的行政区划",
-            "desc": "日本的行政区划 日本的行政区划划分清晰，主要可以分为两级。 1. **一级行政区划**： - 都（",
-            "link": "/random-notes/divisions-jp",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "探索",
-            "desc": "探索 探索城市及次数 点击下方地图标签可跳转旅行游记 ::: import PlaceVisite",
-            "link": "/trip/explore",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "长沙",
-            "desc": "长沙 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20220810",
             "date": "2024-06-21"
         }
     ]
