@@ -53,6 +53,8 @@ export const sidebar_zh = {
 
     'mhy': [
         { text: '米哈游 cookie', link: "/mhy/cookie" },
+        { text: "梗", link: `/mhy/geng` },
+        { text: "抽卡分析", link: `/mhy/banner` },
     ],
 
     '/genshin/': [
