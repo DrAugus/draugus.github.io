@@ -1,4 +1,16 @@
 {
+    "life/code/os/windows/tips.md": {
+        "title": "使用提示",
+        "date": 1722099577.0
+    },
+    "life/trip/china/guangxi/index.md": {
+        "title": "广西",
+        "date": 1716915828
+    },
+    "life/trip/permanent-residence.md": {
+        "title": "常住地居住感受",
+        "date": 1716329120
+    },
     "life/code/dev-env/vscode.md": {
         "title": "VS Code",
         "date": 1721963864.0
@@ -279,10 +291,6 @@
         "title": "福建",
         "date": 1716915828
     },
-    "life/trip/china/guangxi/index.md": {
-        "title": "广西",
-        "date": 1716915828
-    },
     "life/trip/china/heilongjiang/index.md": {
         "title": "黑龙江",
         "date": 1716915828
@@ -377,10 +385,6 @@
     },
     "life/code/cpp/tips/qa.md": {
         "title": "遇到的问题速查",
-        "date": 1716329120
-    },
-    "life/trip/permanent-residence.md": {
-        "title": "常住地居住感受",
         "date": 1716329120
     },
     "life/trip/self-drive.md": {
