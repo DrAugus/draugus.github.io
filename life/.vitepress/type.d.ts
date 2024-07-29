@@ -177,12 +177,12 @@ export interface Airport {
 }
 
 export interface AirportMap {
-  [path: string]: Airport;
+  [path: string]: Airport,
 }
 
 export interface Airplane {
-  model: string; // 飞机的型号，如 "波音737-800(WL)"  
-  number: string; // 飞机的编号，如 "B1405"
+  model: string, // 飞机的型号，如 "波音737-800(WL)"  
+  number: string, // 飞机的编号，如 "B1405"
 }
 
 export interface Airline {
@@ -225,3 +225,19 @@ export interface ApplePrice {
   lowest: number,
   discountDate?: Date,
 }
+
+export interface CityRestaurant {
+  [city: string]: Restaurant[],
+}
+
+interface Restaurant {
+  name: string,                       // 饭店名字  
+  address: string,                    // 地址  
+  review: string,                     // 简要评价  
+  reviewTime: Date,                   // 评价时间
+  averagePricePerPerson: number,      // 人均价格  
+  cuisineTypes: string[],             // 菜品种类，假设有多种类型，所以使用数组  
+  specialDishes: string[],            // 特色菜品，也可以视为推荐菜的一种  
+  recommendedDishes: string[],        // 明确标注为推荐的菜品  
+  notRecommendedDishes: string[],     // 明确标注为不推荐的菜品 
+}  

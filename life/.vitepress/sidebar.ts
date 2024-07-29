@@ -314,6 +314,7 @@ const sidebarCodeOS = [
     },
     {
         text: 'Windows', collapsed: false, items: [
+            { text: '使用提示', link: '/code/os/windows/tips' },
             { text: '隐私', link: '/code/os/windows/private' },
             { text: 'Chocolatey', link: '/code/os/windows/chocolatey' },
             { text: 'WSL', link: '/code/os/windows/wsl' },
