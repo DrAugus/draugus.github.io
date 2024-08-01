@@ -338,3 +338,13 @@ def clean_dir(dir):
             #     shutil.rmtree(file_path)
         except Exception as e:
             print(f"Failed to delete {file_path}. Reason: {e}")
+
+
+def get_num_from_str(text):
+    # 使用正则表达式匹配所有数字（包括整数和小数）
+    numbers = re.findall(r"\d+(?::\.\d+)?", text)
+    if len(numbers) == 0 or numbers[0] == '':
+        return []
+    # 将结果转换为float（如果可能的话），否则保持为str
+    numbers_float_or_str = [float(num) if "." in num else int(num) for num in numbers]
+    return numbers_float_or_str

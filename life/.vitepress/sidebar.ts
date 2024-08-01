@@ -486,7 +486,7 @@ const sidebarCodeDB = [
 const sidebarCodeFramework = [
     { text: 'Actor', link: '/code/framework/actor' },
     { text: 'FDBus', link: '/code/framework/fdbus' },
-    { text: 'ffmpeg', link: '/code/framework/ffmpeg' },
+    { text: 'FFmpeg', link: '/code/framework/ffmpeg' },
     { text: 'GStreamer', link: '/code/framework/gstreamer' },
 ];
 const sidebarCodeProtocol = [

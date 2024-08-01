@@ -189,6 +189,12 @@ export const NAV_DATA: CardData[] = [
     title: '后端开发',
     items: [
       {
+        icon: 'https://en.cppreference.com/favicon.ico',
+        title: 'cppreference.com',
+        desc: 'cpp',
+        link: 'https://en.cppreference.com/w/'
+      },
+      {
         icon: '',
         title: 'Atomics',
         desc: 'Rust Atomics and Locks',
