@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "FFmpeg",
+            "desc": "FFmpeg 视频分割、合并 实测 AMD R7-3800X 8Core16Thread 在不加",
+            "link": "/code/framework/ffmpeg",
+            "date": "2024-07-31"
+        },
+        {
+            "title": "OpenCV",
+            "desc": "OpenCV opencv.org Reading and Writing Videos usin",
+            "link": "/code/libs/opencv",
+            "date": "2024-07-26"
+        },
+        {
+            "title": "Python",
+            "desc": "Python Install 如果在国内，可以在上面两行后面加上 -i https://pypi.",
+            "link": "/code/program/lang/python",
+            "date": "2024-05-28"
+        },
+        {
             "title": "使用提示",
             "desc": "使用提示 快捷键 Windows系统中的常用快捷键可以极大地提高用户的操作效率，以下是一些常用的快",
             "link": "/code/os/windows/tips",
@@ -21,14 +39,8 @@
         },
         {
             "title": "VS Code",
-            "desc": "VS Code tips **文本自动换行** 文本超出显示时，需要拖动下面的滑块才能看到超出的部",
+            "desc": "VS Code tips 文本自动换行 文本超出显示时，需要拖动下面的滑块才能看到超出的部分， -",
             "link": "/code/dev-env/vscode",
-            "date": "2024-07-26"
-        },
-        {
-            "title": "OpenCV",
-            "desc": "OpenCV opencv.org Reading and Writing Videos usin",
-            "link": "/code/libs/opencv",
             "date": "2024-07-26"
         },
         {
@@ -39,49 +51,43 @@
         },
         {
             "title": "Linux 问题收集",
-            "desc": "Linux 问题收集 命令行使用代理 `export HTTPS_PROXY=your_proxy",
+            "desc": "Linux 问题收集 命令行使用代理 export HTTPSPROXY=yourproxy_ad",
             "link": "/code/os/linux/qa",
             "date": "2024-07-12"
         },
         {
             "title": "Git",
-            "desc": "Git sol 舍弃本地所有提交 `git reset --hard origin/your_br",
+            "desc": "Git sol 舍弃本地所有提交 git reset --hard origin/your_bra",
             "link": "/code/version-ctrl/git",
             "date": "2024-07-18"
         },
         {
             "title": "GitHub",
-            "desc": "GitHub hub 自动建仓 ```bash hub create [-poc] [-d ] [",
+            "desc": "GitHub hub 自动建仓 clone private repo github clone p",
             "link": "/code/version-ctrl/github",
             "date": "2024-06-17"
         },
         {
             "title": "配环境",
-            "desc": "配环境 简单参考一下 当你获得一台**全新机器**，根据系统不同，可以参考下方的开发环境配置 ::",
+            "desc": "配环境 简单参考一下 当你获得一台全新机器，根据系统不同，可以参考下方的开发环境配置 Linux",
             "link": "/tools/nipeima",
             "date": "2024-07-12"
         },
         {
-            "title": "Python",
-            "desc": "Python install ```bash python -m pip install --up",
-            "link": "/code/program/lang/python",
-            "date": "2024-05-28"
-        },
-        {
             "title": "正则表达式",
-            "desc": "正则表达式 匹配中文 `[\\u4e00-\\u9fa5]` 匹配英文 `[a-zA-Z]` 匹配数字",
+            "desc": "正则表达式 匹配中文 [\\u4e00-\\u9fa5] 匹配英文 [a-zA-Z] 匹配数字 [0-",
             "link": "/code/program/lang/regex",
             "date": "2024-07-10"
         },
         {
             "title": "离散数学",
-            "desc": "离散数学 要学到的 离散数学基础: 集合、偏序集、良序、数学归纳法、级数、递归、递推 ::: 概念",
+            "desc": "离散数学 要学到的 离散数学基础: 集合、偏序集、良序、数学归纳法、级数、递归、递推 概念定义 集",
             "link": "/course/science/discrete-math",
             "date": "2024-07-08"
         },
         {
             "title": "mihoyo",
-            "desc": "mihoyo API 官方咨询 - 米游社 API prefix `https://bbs-api",
+            "desc": "mihoyo API 官方咨询 - 米游社 API prefix https://bbs-api.",
             "link": "/code/api/mihoyo",
             "date": "2024-07-03"
         },
@@ -99,13 +105,13 @@
         },
         {
             "title": "日本",
-            "desc": "日本 旅游局 日本国家旅游局，中文站点 ::: 游记 夏季游记，参看 日本东京/大版/京都2023",
+            "desc": "日本 旅游局 日本国家旅游局，中文站点 游记 夏季游记，参看 日本东京/大版/京都20230720",
             "link": "/trip/abroad/asia/japan",
             "date": "2024-05-27"
         },
         {
             "title": "陕西",
-            "desc": "陕西 西安 西安旅游线路可由“东、西、华、北、市”五个字概括。 **东**：即东线，时间一天，景点",
+            "desc": "陕西 西安 西安旅游线路可由“东、西、华、北、市”五个字概括。 东：即东线，时间一天，景点主要含兵",
             "link": "/trip/china/shaanxi/index",
             "date": "2024-07-01"
         },
@@ -114,12 +120,6 @@
             "desc": "Mergify github 官方支持 [auto merge][github auto merg",
             "link": "/code/build/mergify",
             "date": "2024-06-17"
-        },
-        {
-            "title": "隐私",
-            "desc": "隐私 清除任务栏固定应用的最近打开历史。在设置中，个性化设置-开始，关掉【在“开始”菜单或任务栏的",
-            "link": "/code/os/windows/private",
-            "date": "2024-06-28"
         }
     ]
 }
