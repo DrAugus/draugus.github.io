@@ -68,8 +68,8 @@ importers:
         specifier: ^3.4.21
         version: 3.4.35
       vue-echarts:
-        specifier: ^6.6.8
-        version: 6.7.3(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35)
+        specifier: ^7.0.0
+        version: 7.0.0(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35)
 
   temp:
     devDependencies:
@@ -898,9 +898,6 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
-  resize-detector@0.3.0:
-    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
-
   rfdc@1.4.1:
     resolution: {integrity: sha512-q1b3N5QkRUWUl7iyylaaj3kOpIT0N2i9MqIEQXP73GVsN9cw3fdx8X63cEmWhJGi2PPCF23Ijp7ktmd39rawIA==}
 
@@ -1064,16 +1061,13 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  vue-echarts@6.7.3:
-    resolution: {integrity: sha512-vXLKpALFjbPphW9IfQPOVfb1KjGZ/f8qa/FZHi9lZIWzAnQC1DgnmEK3pJgEkyo6EP7UnX6Bv/V3Ke7p+qCNXA==}
+  vue-echarts@7.0.0:
+    resolution: {integrity: sha512-lMSn7twd81eC/Sw4wwCsOsg9+upY8ToRe7nTA6fCfL2C/kozvpkcl5Q92NAFondSgPQaGq13P/f/fjFW7thq3w==}
     peerDependencies:
-      '@vue/composition-api': ^1.0.5
       '@vue/runtime-core': ^3.0.0
-      echarts: ^5.4.1
-      vue: ^2.6.12 || ^3.1.1
+      echarts: ^5.5.1
+      vue: ^2.7.0 || ^3.1.1
     peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
       '@vue/runtime-core':
         optional: true
 
@@ -1879,8 +1873,6 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  resize-detector@0.3.0: {}
-
   rfdc@1.4.1: {}
 
   rollup@4.18.0:
@@ -2050,14 +2042,15 @@ snapshots:
     dependencies:
       vue: 3.4.35
 
-  vue-echarts@6.7.3(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35):
+  vue-echarts@7.0.0(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35):
     dependencies:
       echarts: 5.5.1
-      resize-detector: 0.3.0
       vue: 3.4.35
       vue-demi: 0.13.11(vue@3.4.35)
     optionalDependencies:
       '@vue/runtime-core': 3.4.35
+    transitivePeerDependencies:
+      - '@vue/composition-api'
 
   vue@3.4.35:
     dependencies:
