@@ -69,7 +69,7 @@ importers:
         version: 3.4.35
       vue-echarts:
         specifier: ^7.0.0
-        version: 7.0.0(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35)
+        version: 7.0.1(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35)
 
   temp:
     devDependencies:
@@ -1050,8 +1050,8 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  vue-demi@0.14.8:
-    resolution: {integrity: sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==}
+  vue-demi@0.14.10:
+    resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
     engines: {node: '>=12'}
     hasBin: true
     peerDependencies:
@@ -1061,8 +1061,8 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  vue-echarts@7.0.0:
-    resolution: {integrity: sha512-lMSn7twd81eC/Sw4wwCsOsg9+upY8ToRe7nTA6fCfL2C/kozvpkcl5Q92NAFondSgPQaGq13P/f/fjFW7thq3w==}
+  vue-echarts@7.0.1:
+    resolution: {integrity: sha512-P+u6mwAtHuPKC3uDQ+sqIhwBBTvrvEFvgHYzV2Ba1/7+rSzRd6o3Dv/A8PuLP24hB1zPPNfu6BvNyD139X1qbg==}
     peerDependencies:
       '@vue/runtime-core': ^3.0.0
       echarts: ^5.5.1
@@ -1546,7 +1546,7 @@ snapshots:
       '@types/web-bluetooth': 0.0.20
       '@vueuse/metadata': 10.11.0
       '@vueuse/shared': 10.11.0(vue@3.4.35)
-      vue-demi: 0.14.8(vue@3.4.35)
+      vue-demi: 0.14.10(vue@3.4.35)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -1555,7 +1555,7 @@ snapshots:
     dependencies:
       '@vueuse/core': 10.11.0(vue@3.4.35)
       '@vueuse/shared': 10.11.0(vue@3.4.35)
-      vue-demi: 0.14.8(vue@3.4.35)
+      vue-demi: 0.14.10(vue@3.4.35)
     optionalDependencies:
       focus-trap: 7.5.4
     transitivePeerDependencies:
@@ -1566,7 +1566,7 @@ snapshots:
 
   '@vueuse/shared@10.11.0(vue@3.4.35)':
     dependencies:
-      vue-demi: 0.14.8(vue@3.4.35)
+      vue-demi: 0.14.10(vue@3.4.35)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
@@ -2038,11 +2038,11 @@ snapshots:
     dependencies:
       vue: 3.4.35
 
-  vue-demi@0.14.8(vue@3.4.35):
+  vue-demi@0.14.10(vue@3.4.35):
     dependencies:
       vue: 3.4.35
 
-  vue-echarts@7.0.0(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35):
+  vue-echarts@7.0.1(@vue/runtime-core@3.4.35)(echarts@5.5.1)(vue@3.4.35):
     dependencies:
       echarts: 5.5.1
       vue: 3.4.35
