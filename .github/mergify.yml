@@ -18,33 +18,19 @@ pull_request_rules:
           - author=renovate[bot]              
       # PR is not a draft
       - -draft
-      - or:
-          # Case 1: both checks have completed and are successful
-          - and:
-              - check-success~=^deploy-
-              - check-success~=^py-
-          # Case 2: ~=^deploy- check has not been triggered and ~=^py- is successful
-          - and:
-              - -check-failure~=^deploy-
-              - -check-neutral~=^deploy-
-              - -check-pending~=^deploy-
-              - check-success~=^py-
-          # Case 3: ~=^py- check has not been triggered and ~=^deploy- is successful
-          - and:
-              - -check-failure~=^py-
-              - -check-neutral~=^py-
-              - -check-pending~=^py-
-              - check-success~=^deploy-
-          # Case 4: neither check has been triggered
-          - and:
-              - -check-success~=^deploy-
-              - -check-failure~=^deploy-
-              - -check-neutral~=^deploy-
-              - -check-pending~=^deploy-
-              - -check-success~=^py-
-              - -check-failure~=^py-
-              - -check-neutral~=^py-
-              - -check-pending~=^py-
+      # condition
+      # https://docs.mergify.com/conditions/#github-actions
+      # 不一定全都会响应 在此判定 任意一个失败都不可以
+      # 必须用 not or
+      # 修改成这样是因为 无法匹配 matrix
+      # https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692
+      - not:
+          or:
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+            - check-failure=py-game-wish
+            - check-failure=py-life-recent
     actions:
       merge:
         method: merge
@@ -77,33 +63,13 @@ pull_request_rules:
         - head=dev-py
       # PR is not a draft
       - -draft
-      - or:
-          # Case 1: both checks have completed and are successful
-          - and:
-              - check-success~=^deploy-
-              - check-success~=^py-
-          # Case 2: ~=^deploy- check has not been triggered and ~=^py- is successful
-          - and:
-              - -check-failure~=^deploy-
-              - -check-neutral~=^deploy-
-              - -check-pending~=^deploy-
-              - check-success~=^py-
-          # Case 3: ~=^py- check has not been triggered and ~=^deploy- is successful
-          - and:
-              - -check-failure~=^py-
-              - -check-neutral~=^py-
-              - -check-pending~=^py-
-              - check-success~=^deploy-
-          # Case 4: neither check has been triggered
-          - and:
-              - -check-success~=^deploy-
-              - -check-failure~=^deploy-
-              - -check-neutral~=^deploy-
-              - -check-pending~=^deploy-
-              - -check-success~=^py-
-              - -check-failure~=^py-
-              - -check-neutral~=^py-
-              - -check-pending~=^py-
+      - not:
+          or:
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+            - check-failure=py-game-wish
+            - check-failure=py-life-recent
     actions:
       merge:
         method: merge
