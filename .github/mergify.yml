@@ -24,6 +24,8 @@ pull_request_rules:
       # 必须用 not or
       # 修改成这样是因为 无法匹配 matrix
       # https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692
+      # need to list every CI that you expect.
+      # https://github.com/Mergifyio/mergify/discussions/5119
       - not:
           or:
             - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
