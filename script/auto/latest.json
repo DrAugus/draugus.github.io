@@ -1,4 +1,24 @@
 {
+    "life/code/program/lang/python.md": {
+        "title": "Python",
+        "date": 1716866579
+    },
+    "life/code/program/lang/regex.md": {
+        "title": "正则表达式",
+        "date": 1720604343.0
+    },
+    "life/trip/china/guangxi/index.md": {
+        "title": "广西",
+        "date": 1716915828
+    },
+    "life/trip/china/jiangsu/index.md": {
+        "title": "江苏",
+        "date": 1716791141
+    },
+    "life/trip/travelogue/20230225.md": {
+        "title": "南京",
+        "date": 1718936526.0
+    },
     "life/code/framework/ffmpeg.md": {
         "title": "FFmpeg",
         "date": 1722424705.0
@@ -7,17 +27,9 @@
         "title": "OpenCV",
         "date": 1721963864.0
     },
-    "life/code/program/lang/python.md": {
-        "title": "Python",
-        "date": 1716866579
-    },
     "life/code/os/windows/tips.md": {
         "title": "使用提示",
         "date": 1722099577.0
-    },
-    "life/trip/china/guangxi/index.md": {
-        "title": "广西",
-        "date": 1716915828
     },
     "life/trip/permanent-residence.md": {
         "title": "常住地居住感受",
@@ -46,10 +58,6 @@
     "life/tools/nipeima.md": {
         "title": "配环境",
         "date": 1720772837.0
-    },
-    "life/code/program/lang/regex.md": {
-        "title": "正则表达式",
-        "date": 1720604343.0
     },
     "life/course/science/discrete-math.md": {
         "title": "离散数学",
@@ -117,10 +125,6 @@
     },
     "life/trip/travelogue/20220906.md": {
         "title": "苏州",
-        "date": 1718936526.0
-    },
-    "life/trip/travelogue/20230225.md": {
-        "title": "南京",
         "date": 1718936526.0
     },
     "life/trip/travelogue/20230311.md": {
@@ -325,10 +329,6 @@
     },
     "life/trip/china/hainan/index.md": {
         "title": "海南",
-        "date": 1716791141
-    },
-    "life/trip/china/jiangsu/index.md": {
-        "title": "江苏",
         "date": 1716791141
     },
     "life/trip/index.md": {
