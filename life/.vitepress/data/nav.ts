@@ -58,6 +58,11 @@ export const NAV_DATA: CardData[] = [
         title: '地图',
         desc: '行政区划图',
         link: 'https://bajiu.cn/ditu/?qh=36'
+      },{
+        icon: '',
+        title: '图片坐标拾取工具',
+        desc: '可以快速拾取图片中指定点的坐标',
+        link: 'https://uutool.cn/img-coord/'
       },
       {
         icon: 'https://api.iconify.design/file-icons:latex.svg',

@@ -212,3 +212,23 @@ print(decoded_html) # "<p>This is a paragraph</p>"
 ```
 
 [argparse]: https://docs.python.org/zh-cn/3.11/library/argparse.html
+
+### 三目运算 (ternary operator)
+
+问号冒号表达式
+
+语法
+
+```py
+variable = a if exper else b
+variable = (exper and [b] or [c])[0]
+variable = exper and b or c
+```
+
+```py
+a, b = 1, 2
+max = a if a > b else b
+max2 = (a > b and [a] or [b])[0]  # list
+max3 = a > b and a or b
+print max,max2,max3
+```
