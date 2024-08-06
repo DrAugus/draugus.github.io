@@ -2,6 +2,30 @@
     "title": "",
     "items": [
         {
+            "title": "Mergify",
+            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
+            "link": "/code/build/mergify",
+            "date": "2024-06-17"
+        },
+        {
+            "title": "施工",
+            "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 最新的游记，link - 旅行航线，link",
+            "link": "/dev",
+            "date": "2024-08-06"
+        },
+        {
+            "title": "飞机",
+            "desc": "飞机 航线 全球航线图参考 航司 南方航空 里程兑换 里程:人民币 = 24:1 活动 - 随心飞",
+            "link": "/trip/airplane",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "江苏",
+            "desc": "江苏 南京 游记参看，2023/02/25 游玩推荐 这次基本都是博物馆，陵园，商场。 基本都需要",
+            "link": "/trip/china/jiangsu/index",
+            "date": "2024-05-27"
+        },
+        {
             "title": "Python",
             "desc": "Python Install 如果在国内，可以在上面两行后面加上 -i https://pypi.",
             "link": "/code/program/lang/python",
@@ -18,12 +42,6 @@
             "desc": "广西 柳州 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有） 白天鱼峰山公园，龙潭公园，柳侯公",
             "link": "/trip/china/guangxi/index",
             "date": "2024-05-28"
-        },
-        {
-            "title": "江苏",
-            "desc": "江苏 南京 游记参看，2023/02/25 游玩推荐 这次基本都是博物馆，陵园，商场。 基本都需要",
-            "link": "/trip/china/jiangsu/index",
-            "date": "2024-05-27"
         },
         {
             "title": "南京",
@@ -102,24 +120,6 @@
             "desc": "mihoyo API 官方咨询 - 米游社 API prefix https://bbs-api.",
             "link": "/code/api/mihoyo",
             "date": "2024-07-03"
-        },
-        {
-            "title": "高考",
-            "desc": "高考 河南 550 - 620 的期望学校 211工程（英语：Project 211），俗称“21",
-            "link": "/exam/gaokao",
-            "date": "2024-06-12"
-        },
-        {
-            "title": "中国面",
-            "desc": "中国面 兰州拉面 兰州拉面是甘肃省兰州地区的风味小吃，具有“筋、韧、滑、嫩”的特点，因为美味可口，",
-            "link": "/random-notes/chinese-noodles",
-            "date": "2024-07-01"
-        },
-        {
-            "title": "日本",
-            "desc": "日本 旅游局 日本国家旅游局，中文站点 游记 夏季游记，参看 日本东京/大版/京都20230720",
-            "link": "/trip/abroad/asia/japan",
-            "date": "2024-05-27"
         }
     ]
 }

@@ -1,4 +1,20 @@
 {
+    "life/code/build/mergify.md": {
+        "title": "Mergify",
+        "date": 1718590917.0
+    },
+    "life/dev.md": {
+        "title": "施工",
+        "date": 1722913051.0
+    },
+    "life/trip/airplane.md": {
+        "title": "飞机",
+        "date": 1718219927
+    },
+    "life/trip/china/jiangsu/index.md": {
+        "title": "江苏",
+        "date": 1716791141
+    },
     "life/code/program/lang/python.md": {
         "title": "Python",
         "date": 1716866579
@@ -10,10 +26,6 @@
     "life/trip/china/guangxi/index.md": {
         "title": "广西",
         "date": 1716915828
-    },
-    "life/trip/china/jiangsu/index.md": {
-        "title": "江苏",
-        "date": 1716791141
     },
     "life/trip/travelogue/20230225.md": {
         "title": "南京",
@@ -86,10 +98,6 @@
     "life/trip/china/shaanxi/index.md": {
         "title": "陕西",
         "date": 1719812980.0
-    },
-    "life/code/build/mergify.md": {
-        "title": "Mergify",
-        "date": 1718590917.0
     },
     "life/code/os/windows/private.md": {
         "title": "隐私",
@@ -265,10 +273,6 @@
     },
     "life/random-notes/exercise.md": {
         "title": "锻炼",
-        "date": 1718219927
-    },
-    "life/trip/airplane.md": {
-        "title": "飞机",
         "date": 1718219927
     },
     "life/daily/apple/calendar.md": {
