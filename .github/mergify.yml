@@ -20,40 +20,46 @@ pull_request_rules:
       - -draft
       # condition
       # https://docs.mergify.com/conditions/#github-actions
-      # 不一定全都会响应 在此判定 任意一个失败都不可以
+      # 不一定全都会响应 在此判定 任意一个失败都不可以，但是失败也不行，可能有 pending 之类的
       # 必须用 not or
       # 修改成这样是因为 无法匹配 matrix
       # https://github.com/Mergifyio/mergify/discussions/5067#discussioncomment-4859692
       # need to list every CI that you expect.
       # https://github.com/Mergifyio/mergify/discussions/5119
       # https://github.com/Mergifyio/mergify/discussions/5120
-      - and:
-        - or:
-          - files~=^life/
-          - files=".github/workflows/deploy-life.yml"
-          - files=pnpm-lock.yaml
-        - check-success=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
-        - check-success=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-      - and:
-        - or:
-          - files~=^game/
-          - files=".github/workflows/deploy-game.yml"
-          - files=pnpm-lock.yaml
-        - check-success=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)    
-      - and:
-        - or:
-          - files="script/requirements.txt"
-          - files=".github/workflows/get-mhy-wish.yml"
-          - files~=^script/mihoyo
-          - files="script/miyoushe.py"
-          - files="script/hoyolab.py"  
-        - check-success=py-game-wish  
-      - and:
-        - or:
-          - files="script/requirements.txt"
-          - files=".github/workflows/life-recent-update.yml"
-          - files~=^life/
-        - check-success=py-life-recent
+      - or:
+        # deploy
+        - files~=^life/
+        - files~=^game/          
+        - files=".github/workflows/deploy-life.yml"
+        - files=".github/workflows/deploy-game.yml"          
+        - files=pnpm-lock.yaml
+        # py
+        - files="script/requirements.txt"
+        - files=".github/workflows/get-mhy-wish.yml"
+        - files=".github/workflows/life-recent-update.yml"          
+        - files~=^script/mihoyo
+        - files="script/miyoushe.py"
+        - files="script/hoyolab.py"        
+      # deploy life
+      - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+      - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+      - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+      - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)        
+      # deploy game
+      - -check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      - -check-neutral=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      - -check-pending=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      # py-life-recent
+      - -check-failure=py-life-recent
+      - -check-neutral=py-life-recent
+      - -check-pending=py-life-recent
+      # py-game-wish
+      - -check-failure=py-game-wish
+      - -check-neutral=py-game-wish
+      - -check-pending=py-game-wish                        
     actions:
       merge:
         method: merge
