@@ -80,7 +80,8 @@ conditions:
         - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
 ```
 
-修改为直接正则匹配 deploy 也可行
+上面的 **not or 也不行！！**，失败的反义词并不是成功，状态检查一共有四个，分别是 `check-success` `check-failure` `check-neutral` `check-pending`，需要照顾到所有可能的情况。  
+~~修改为直接正则匹配 deploy 也可行~~，不可行的，正则匹配到的是 **any of**，有任何一个成功就 pass 了
 
 ```yml
 conditions:

@@ -92,13 +92,39 @@ pull_request_rules:
         - head=dev-py
       # PR is not a draft
       - -draft
-      - not:
-          or:
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
-            - check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-            - check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
-            - check-failure=py-game-wish
-            - check-failure=py-life-recent
+      - or:
+        # deploy
+        - files~=^life/
+        - files~=^game/          
+        - files=".github/workflows/deploy-life.yml"
+        - files=".github/workflows/deploy-game.yml"          
+        - files=pnpm-lock.yaml
+        # py
+        - files="script/requirements.txt"
+        - files=".github/workflows/get-mhy-wish.yml"
+        - files=".github/workflows/life-recent-update.yml"          
+        - files~=^script/mihoyo
+        - files="script/miyoushe.py"
+        - files="script/hoyolab.py"        
+      # deploy life
+      - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+      - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+      - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
+      - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)        
+      # deploy game
+      - -check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      - -check-neutral=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      - -check-pending=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      # py-life-recent
+      - -check-failure=py-life-recent
+      - -check-neutral=py-life-recent
+      - -check-pending=py-life-recent
+      # py-game-wish
+      - -check-failure=py-game-wish
+      - -check-neutral=py-game-wish
+      - -check-pending=py-game-wish  
     actions:
       merge:
         method: merge

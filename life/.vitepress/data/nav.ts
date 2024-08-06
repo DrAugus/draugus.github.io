@@ -9,6 +9,11 @@ export const NAV_DATA: CardData[] = [
         title: 'Hello 算法',
         desc: '动画图解、一键运行的数据结构与算法教程',
         link: 'https://www.hello-algo.com/'
+      }, {
+        icon: 'https://oi-wiki.org/favicon.ico',
+        title: 'OI Wiki',
+        desc: '编程竞赛 wiki 站点',
+        link: 'https://oi-wiki.org/'
       },
       {
         icon: { svg: '<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" height="1em" width="1em">        <path d="m21.66 10.44-.98 4.18c-.84 3.61-2.5 5.07-5.62 4.77-.5-.04-1.04-.13-1.62-.27l-1.68-.4c-4.17-.99-5.46-3.05-4.48-7.23l.98-4.19c.2-.85.44-1.59.74-2.2 1.17-2.42 3.16-3.07 6.5-2.28l1.67.39c4.19.98 5.47 3.05 4.49 7.23Z" fill="#c9d1d9"></path>        <path d="M15.06 19.39c-.62.42-1.4.77-2.35 1.08l-1.58.52c-3.97 1.28-6.06.21-7.35-3.76L2.5 13.28c-1.28-3.97-.22-6.07 3.75-7.35l1.58-.52c.41-.13.8-.24 1.17-.31-.3.61-.54 1.35-.74 2.2l-.98 4.19c-.98 4.18.31 6.24 4.48 7.23l1.68.4c.58.14 1.12.23 1.62.27Zm2.43-8.88c-.06 0-.12-.01-.19-.02l-4.85-1.23a.75.75 0 0 1 .37-1.45l4.85 1.23a.748.748 0 0 1-.18 1.47Z" fill="#228e6c"></path>        <path d="M14.56 13.89c-.06 0-.12-.01-.19-.02l-2.91-.74a.75.75 0 0 1 .37-1.45l2.91.74c.4.1.64.51.54.91-.08.34-.38.56-.72.56Z" fill="#228e6c"></path>      </svg>' },
@@ -28,6 +33,20 @@ export const NAV_DATA: CardData[] = [
         desc: 'make 命令 makefile 编写指南',
         link: 'https://wangchujiang.com/reference/docs/make.html'
       },
+    ]
+  }, {
+    title: '课程学习',
+    items: [{
+      icon: '',
+      title: '操作系统',
+      desc: '南京大学 操作系统 课程 魔改版',
+      link: 'https://jyywiki.cn/'
+    }, {
+      icon: '',
+      title: '计算机自学指南',
+      desc: '北京大学信科生主笔',
+      link: 'https://csdiy.wiki/'
+    },
     ]
   },
   {
@@ -58,7 +77,7 @@ export const NAV_DATA: CardData[] = [
         title: '地图',
         desc: '行政区划图',
         link: 'https://bajiu.cn/ditu/?qh=36'
-      },{
+      }, {
         icon: '',
         title: '图片坐标拾取工具',
         desc: '可以快速拾取图片中指定点的坐标',

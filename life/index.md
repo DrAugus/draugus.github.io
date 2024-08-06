@@ -3,7 +3,7 @@ layout: home
 title: Augus 乐享人生
 titleTemplate: 吃什么 去哪玩
 hero:
-  name: 乐享人生
+  name: 乐享人生 Augus
   text: 人生在于食，在于游
   tagline: 周游各地，食遍天下，加油进步 <br/>活着...静候一切可能（<a href='/recent'>最近更新</a>）
   image:
