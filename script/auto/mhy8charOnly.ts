@@ -13,6 +13,18 @@ export const CHARACTER = {
     ele: Element.ether,
     weapon: Weapon.anomaly
   },
+  jane_doe: {
+    key: 'Jane Doe',
+    id: 'jane_doe',
+    name: '简·杜',
+    prefix: '',
+    star: 5,
+    event_exclusive: true,
+    intro: '哎呀，上次是上次嘛！这次我说的是真的哦，相信我吧~',
+    camp: Camp.FactionUnknown,
+    ele: Element.ether,
+    weapon: Weapon.anomaly
+  },
   qingyi: {
     key: 'Qingyi',
     id: 'qingyi',

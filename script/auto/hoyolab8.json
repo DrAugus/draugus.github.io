@@ -1,5 +1,27 @@
 [
     {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31334773",
+        "name": [],
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [
+            "Yuan"
+        ],
+        "start": "2024/07/24 12:00:00 +0800",
+        "end": "2024/08/13 14:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "yuan"
+        ],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
         "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552250",
         "name": [
             "Mellow Waveride"
@@ -23,6 +45,24 @@
             "soukaku",
             "anton"
         ],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31334769",
+        "name": "Brilliant Fixation",
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [],
+        "start": "2024/07/24 12:00:00 +0800",
+        "end": "2024/08/13 14:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [],
+        "wish4star": [],
         "wishName": [],
         "url": [
             ""

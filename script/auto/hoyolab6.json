@@ -1,5 +1,44 @@
 [
     {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31605001",
+        "name": [
+            "Bloom in Gloom"
+        ],
+        "name_lower": [
+            "bloom_in_gloom_"
+        ],
+        "image": [
+            1
+        ],
+        "shortName": [
+            "Yunli",
+            "Huohuo",
+            "Yunli",
+            "Huohuo"
+        ],
+        "start": "2024/08/21 11:59:00 +0800",
+        "end": "2024/08/28 11:59:00 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "yunli",
+            "huohuo",
+            "yunli",
+            "huohuo"
+        ],
+        "wish4star": [
+            "hanya",
+            "yukong",
+            "lynx",
+            "hanya",
+            "yukong",
+            "lynx"
+        ],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
         "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30816396",
         "name": [
             "Lien on Life, Lease on Fate",
@@ -123,36 +162,44 @@
         ]
     },
     {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=28251947",
-        "name": [
-            "Just Intonation"
-        ],
-        "name_lower": [
-            "just_intonation_"
-        ],
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31605079",
+        "name": "Brilliant Fixation",
+        "name_lower": [],
         "image": [
             1
         ],
         "shortName": [
-            "Robin",
-            "Numby",
-            "Robin",
-            "Numby"
+            "Sunset",
+            "Fright",
+            "Sunset",
+            "Fright",
+            "Dance at Sunset",
+            "Night of Fright",
+            "Dance at Sunset",
+            "Night of Fright"
         ],
-        "start": "2024/05/29 11:59:00 +0800",
-        "end": "2024/06/05 11:59:00 +0800",
+        "start": "2.4 +0800",
+        "end": "2024/08/21 11:59:00 +0800",
         "version": "xxx",
         "wish5star": [
-            "robin",
-            "numby",
-            "robin",
-            "numby"
+            "Sunset",
+            "Fright",
+            "Sunset",
+            "Fright",
+            "Dance at Sunset",
+            "Night of Fright",
+            "Dance at Sunset",
+            "Night of Fright"
         ],
         "wish4star": [
-            "hanya",
-            "xueyi",
-            "hanya",
-            "xueyi"
+            "You",
+            "Timing",
+            "Self",
+            "You",
+            "Timing",
+            "Self",
+            "The Birth of the Self",
+            "The Birth of the Self"
         ],
         "wishName": [],
         "url": [
@@ -282,49 +329,6 @@
             "Choice",
             "Landau's Choice",
             "Landau's Choice"
-        ],
-        "wishName": [],
-        "url": [
-            ""
-        ]
-    },
-    {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=28252074",
-        "name": "Brilliant Fixation",
-        "name_lower": [],
-        "image": [
-            1
-        ],
-        "shortName": [
-            "Nightglow",
-            "Blissful",
-            "Nightglow",
-            "Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful"
-        ],
-        "start": "2.2 +0800",
-        "end": "2024/05/29 11:59:00 +0800",
-        "version": "xxx",
-        "wish5star": [
-            "Nightglow",
-            "Blissful",
-            "Nightglow",
-            "Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful",
-            "Flowing Nightglow",
-            "Worrisome, Blissful"
-        ],
-        "wish4star": [
-            "Choreo",
-            "Timing",
-            "Choreo",
-            "Timing",
-            "Perfect Timing",
-            "Perfect Timing"
         ],
         "wishName": [],
         "url": [

@@ -1,14 +1,14 @@
 [
     {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30071782",
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31676908",
         "name": [
-            "Romaritime Meluserenity",
-            "Chanson of Many Waters",
+            "Ambrosial Essence",
+            "Discerner of Enigmas",
             "Epitome Invocation"
         ],
         "name_lower": [
-            "romaritime_meluserenity_",
-            "chanson_of_many_waters_",
+            "ambrosial_essence_",
+            "discerner_of_enigmas_",
             "epitome_invocation_"
         ],
         "image": [
@@ -16,23 +16,63 @@
             1
         ],
         "shortName": [
-            "Sigewinne",
-            "Furina"
+            "Emilie",
+            "Yelan"
         ],
-        "start": "2024/6/25 18:00 +0800",
-        "end": "2024/7/16 14:59 +0800",
+        "start": "2024/8/6 18:00 +0800",
+        "end": "2024/8/27 14:59 +0800",
         "version": "xxx",
         "wish5star": [
-            "sigewinne",
-            "furina"
+            "emilie",
+            "yelan"
         ],
         "wish4star": [
-            "noelle",
-            "gaming",
-            "rosaria",
-            "noelle",
-            "gaming",
-            "rosaria"
+            "yanfei",
+            "xiangling",
+            "razor",
+            "yanfei",
+            "xiangling",
+            "razor"
+        ],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31070419",
+        "name": [
+            "In the Name of the Rosula",
+            "Twirling Lotus",
+            "Epitome Invocation"
+        ],
+        "name_lower": [
+            "in_the_name_of_the_rosula_",
+            "twirling_lotus_",
+            "epitome_invocation_"
+        ],
+        "image": [
+            1,
+            1
+        ],
+        "shortName": [
+            "Navia",
+            "Nilou"
+        ],
+        "start": "4.8 +0800",
+        "end": "2024/08/06 17:59:00 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "navia",
+            "nilou"
+        ],
+        "wish4star": [
+            "kirara",
+            "kaveh",
+            "ningguang",
+            "kirara",
+            "kaveh",
+            "ningguang"
         ],
         "wishName": [],
         "url": [

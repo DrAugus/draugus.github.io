@@ -10,7 +10,7 @@
             },
             {
                 "camp_name": "阵营不明",
-                "camp_channel": "925",
+                "camp_channel": "926",
                 "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/fb8e50f12b6c4623b6b65d9edffd76dd_179889476792215002.png",
                 "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/623c2c8db94de38d8fde92fa8dd7f1cb_7784391364925293549.png",
                 "camp_kv": ""
@@ -68,7 +68,7 @@
             },
             {
                 "camp_name": "Faction Unknown",
-                "camp_channel": "925",
+                "camp_channel": "926",
                 "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/fb8e50f12b6c4623b6b65d9edffd76dd_179889476792215002.png",
                 "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/623c2c8db94de38d8fde92fa8dd7f1cb_7784391364925293549.png",
                 "camp_kv": ""
@@ -503,6 +503,18 @@
             "event_exclusive": true,
             "intro": "队长，逮捕犯人就交给我吧！",
             "camp": "CriminalInvestigationSpecialResponseTeam",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "jane_doe": {
+            "key": "Jane Doe",
+            "id": "jane_doe",
+            "name": "简·杜",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "哎呀，上次是上次嘛！这次我说的是真的哦，相信我吧~",
+            "camp": "FactionUnknown",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
         },

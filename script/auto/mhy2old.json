@@ -2,23 +2,28 @@
     {
         "img_url": [
             [
-                "https://upload-os-bbs.hoyolab.com/upload/2024/06/20/0/6eb598c1e597742de52aede98949d5ff_2494949888003000342.jpeg",
-                "https://upload-os-bbs.hoyolab.com/upload/2024/06/20/0/dad653cd0d05d855ed74474c473ed3e2_2487057028963381089.jpeg",
-                "https://upload-os-bbs.hoyolab.com/upload/2024/06/20/0/8498b7ea05e401f022cfa5489d07fc71_310087367442193773.jpeg"
+                "https://upload-os-bbs.hoyolab.com/upload/2024/07/31/0/eba37cf51342934b798cfd932c1be613_388107139389473550.jpeg",
+                "https://upload-os-bbs.hoyolab.com/upload/2024/07/31/0/8cf92a3f871bb2858e6f31dfdb13d29b_3437054714311869393.jpeg",
+                "https://upload-os-bbs.hoyolab.com/upload/2024/07/31/0/5988ffeeb1c34502f51d200f564cea22_2902469049231203077.jpeg"
+            ],
+            [
+                "https://upload-os-bbs.hoyolab.com/upload/2024/07/12/0/1a1bf1359ce8ee5e967ffad413a3c89d_698020643238534062.jpeg",
+                "https://upload-os-bbs.hoyolab.com/upload/2024/07/12/0/30c81139c817fc2032404e9770eb70c5_7739987410574205965.jpeg",
+                "https://upload-os-bbs.hoyolab.com/upload/2024/07/12/0/88635a96c7754fe459e08d22b95a97ea_4584507704093888749.jpeg"
             ]
         ]
     },
     {
-        "post_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30071782",
+        "post_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31676908",
         "wish_char": {
             "name": [
-                "Romaritime Meluserenity",
-                "Chanson of Many Waters",
+                "Ambrosial Essence",
+                "Discerner of Enigmas",
                 "Epitome Invocation"
             ],
             "name_lower": [
-                "romaritime_meluserenity",
-                "chanson_of_many_waters",
+                "ambrosial_essence",
+                "discerner_of_enigmas",
                 "epitome_invocation"
             ],
             "image": [
@@ -26,20 +31,20 @@
                 1
             ],
             "shortName": [
-                "Sigewinne",
-                "Furina"
+                "Emilie",
+                "Yelan"
             ],
-            "start": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
-            "end": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
+            "start": "u30132024/8/6 18:00u20142024/8/27 14:59u3013",
+            "end": "u30132024/8/6 18:00u20142024/8/27 14:59u3013",
             "version": "xxx",
             "wish5star": [
-                "sigewinne",
-                "furina"
+                "emilie",
+                "yelan"
             ],
             "wish4star": [
-                "noelle",
-                "gaming",
-                "rosaria"
+                "yanfei",
+                "xiangling",
+                "razor"
             ],
             "wishName": [],
             "url": [
@@ -53,21 +58,86 @@
                 1
             ],
             "shortName": [
-                "Silvershower Heartstrings",
-                "Splendor of Tranquil Waters"
+                "Lumidouce Elegy",
+                "Aqua Simulacra"
             ],
-            "start": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
-            "end": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
+            "start": "u30132024/8/6 18:00u20142024/8/27 14:59u3013",
+            "end": "u30132024/8/6 18:00u20142024/8/27 14:59u3013",
             "version": "xxx",
             "wish5star": [
-                "Silvershower Heartstrings",
-                "Splendor of Tranquil Waters"
+                "Lumidouce Elegy",
+                "Aqua Simulacra"
             ],
             "wish4star": [
-                "Lion's Roar",
+                "Makhaira Aquamarine",
                 "Favonius Lance",
-                "Favonius Codex",
-                "Sacrificial Bow"
+                "Favonius Warbow"
+            ],
+            "url": [
+                ""
+            ]
+        }
+    },
+    {
+        "post_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31070419",
+        "wish_char": {
+            "name": [
+                "In the Name of the Rosula",
+                "Twirling Lotus",
+                "Epitome Invocation"
+            ],
+            "name_lower": [
+                "in_the_name_of_the_rosula",
+                "twirling_lotus",
+                "epitome_invocation"
+            ],
+            "image": [
+                1,
+                1
+            ],
+            "shortName": [
+                "Navia",
+                "Nilou"
+            ],
+            "start": "u3013After the Version 4.8 updateu20142024/08/06 17:59:00u3013",
+            "end": "u3013After the Version 4.8 updateu20142024/08/06 17:59:00u3013",
+            "version": "xxx",
+            "wish5star": [
+                "navia",
+                "nilou"
+            ],
+            "wish4star": [
+                "kirara",
+                "kaveh",
+                "ningguang"
+            ],
+            "wishName": [],
+            "url": [
+                ""
+            ]
+        },
+        "wish_weapon": {
+            "name": "Epitome Invocation",
+            "image": [
+                1,
+                1
+            ],
+            "shortName": [
+                "Verdict",
+                "Key of Khaj-Nisut"
+            ],
+            "start": "u3013After the Version 4.8 updateu20142024/08/06 17:59:00u3013",
+            "end": "u3013After the Version 4.8 updateu20142024/08/06 17:59:00u3013",
+            "version": "xxx",
+            "wish5star": [
+                "Verdict",
+                "Key of Khaj-Nisut"
+            ],
+            "wish4star": [
+                "The Bell",
+                "Dragon's Bane",
+                "Eye of Perception",
+                "Rust"
             ],
             "url": [
                 ""

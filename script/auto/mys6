@@ -3,6 +3,15 @@ HSR >>>
 api_url:
 ['https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=6&page_size=50&type=1', 'https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=6&page_size=50&type=2', 'https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=6&page_size=50&type=3']
 ----- wish name -----
+['掷山破云', '令奉贞凶']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/9e7e9ece395f659cc95347da8c586aba_7158511009211359064.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/88b8bdb72b6f4da03ec09d65dc8d09c6_1198240684503787776.png', 'https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/bf36514f959aa7ee2810f90640b183e0_2977759714290738926.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/cc98ebd4a9eb72e79e217183ed4aa7cf_4589663173869729871.png']
+掷山破云_0.jpg
+掷山破云_1.png
+掷山破云_2.jpg
+掷山破云_3.png
+
+----- wish name -----
 ['质生契运', '荆冠芳勋']
 ----- --------- -----
 img_url['https://upload-bbs.miyoushe.com/upload/2024/07/08/288909600/8cb2231890c8312a4b6f8a101072e0b7_1182640443545862785.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/08/288909600/dc4ea46a3f4783fa551d131daa98eaed_9009864015038092338.png', 'https://upload-bbs.miyoushe.com/upload/2024/07/08/288909600/9071c78e25f38adb65ddfeb9490803bb_90230786733443479.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/08/288909600/7f88afb0a21faf03d34c425f1b71d881_2669786164205097453.png']
@@ -29,16 +38,16 @@ img_url['https://upload-bbs.miyoushe.com/upload/2024/05/27/288909600/d9d1ff6a246
 扬尘孤星_2.jpg
 扬尘孤星_3.png
 
------ wish name -----
-['翼声纯律', '落日条款']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/c412663f38459789f4301afe8db9c759_1727406439765783209.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/311f7f013079dfdb465774cf35f5f98a_5898854722198042828.png', 'https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/b2f5563d792825a9ac43121b897348ef_8172746655395489060.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/83c69985159f57dfae348d2654becec3_7875053648071034510.png']
-翼声纯律_0.jpg
-翼声纯律_1.png
-翼声纯律_2.jpg
-翼声纯律_3.png
-
 ================
+----- wish name -----
+['流光定影', '溯回忆象']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/b7bdb237f335c5bf22048fb0ccc89ed8_408273765241470479.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/0749e1baa6502a38729ea781d9519013_7230015722466589718.png', 'https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/f9174687cec9fe035f64794041a493f6_3135699718108848911.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/29/288909600/392fbd319e9756b5feb6b3ad65273497_2957572441643917318.png']
+流光定影_0.jpg
+流光定影_1.png
+流光定影_2.jpg
+流光定影_3.png
+
 ----- wish name -----
 ['流光定影', '溯回忆象']
 ----- --------- -----
@@ -66,21 +75,12 @@ img_url['https://upload-bbs.miyoushe.com/upload/2024/05/27/288909600/7f23033bf3f
 流光定影_2.jpg
 流光定影_3.png
 
------ wish name -----
-['流光定影', '溯回忆象']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/b7cb840c69332ee641279a0ccc77cfc6_8254468682850613047.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/97c8f4f1b4d9c661f15c900fbf8a49b8_7334944692699832965.png', 'https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/7529dcef1c864ef92d7e41a9ae5a1e11_634405768170687777.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/05/06/288909600/64f484dfa8316019617654e811475d5a_7982902836742377679.png']
-流光定影_0.jpg
-流光定影_1.png
-流光定影_2.jpg
-流光定影_3.png
-
 ================
 ================
 post_id_arr
-[['54894775', '53923120', '53257598', '52494520'], ['54894961', '53923304', '53257696', '52494642'], []]
+[['55960746', '54894775', '53923120', '53257598'], ['55960953', '54894961', '53923304', '53257696'], []]
 post_id_link_arr
-['https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54894775', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53923120', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53257598', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=52494520', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54894961', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53923304', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53257696', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=52494642']
+['https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55960746', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54894775', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53923120', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53257598', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55960953', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54894961', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53923304', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53257696']
 ================
 ================
 ================
