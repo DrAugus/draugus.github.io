@@ -3,6 +3,20 @@ ZZZ >>>
 api_url:
 ['https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=8&page_size=50&type=1', 'https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=8&page_size=50&type=2', 'https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=8&page_size=50&type=3']
 ----- wish name -----
+['喧哗奏鸣']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/19/152039148/951ef9af5f86d4dc70b19d963117d005_5517255471129532299.png', 'https://upload-bbs.miyoushe.com/upload/2024/07/22/152039148/62deb0ceedb5ba502452ec95c41e0559_2144350549580882568.jpg']
+喧哗奏鸣_0.png
+喧哗奏鸣_1.jpg
+
+----- wish name -----
+['直如朱丝绳']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/19/152039148/76c57fdd8957ea5458deb2f2909f9ad0_200745977699312311.png', 'https://upload-bbs.miyoushe.com/upload/2024/07/22/152039148/b6ce1be52e66fafc6822fcc9ef10305f_1385328340044943679.jpg']
+直如朱丝绳_0.png
+直如朱丝绳_1.jpg
+
+----- wish name -----
 ['卓越搭档']
 ----- --------- -----
 img_url['https://upload-bbs.miyoushe.com/upload/2024/07/02/152039148/5d676005ae2b97bc24d624f75e6126f9_8483806495571801974.png']
@@ -32,9 +46,9 @@ img_url['https://upload-bbs.miyoushe.com/upload/2024/07/02/152039148/a31fceff7cf
 ================
 ================
 post_id_arr
-[['54564276', '54564274', '54564273', '54564272'], [], []]
+[['55489186', '55489185', '54564276', '54564274', '54564273', '54564272'], [], []]
 post_id_link_arr
-['https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564276', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564274', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564273', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564272']
+['https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55489186', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55489185', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564276', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564274', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564273', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54564272']
 ================
 ================
 ================

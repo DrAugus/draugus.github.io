@@ -3,6 +3,48 @@ Genshin >>>
 api_url:
 ['https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=2&page_size=50&type=1', 'https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=2&page_size=50&type=2', 'https://bbs-api.miyoushe.com/post/wapi/getNewsList?gids=2&page_size=50&type=3']
 ----- wish name -----
+['神铸赋形', '长柄武器·柔灯挽歌', '弓·若水']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/31/75276539/5a4dbca26e2b953d920fd07d58df5cc6_8390989965819654290.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/31/75276539/089569f254e89d04534d1ad7da9e2667_7782692969677179020.png']
+神铸赋形_0.jpg
+神铸赋形_1.png
+
+----- wish name -----
+['素霓伣天', '兰生幽谷·夜兰(水)']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/31/75276539/9658e26094836c5818ede85abd10c38b_123945733122177741.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/31/75276539/57d29c48501918ef72e82e06c2284cfd_6815965299241559261.png']
+素霓伣天_0.jpg
+素霓伣天_1.png
+
+----- wish name -----
+['凝露轻芳', '千缕之踪·艾梅莉埃(草)']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/31/75276539/ae9955ce3af23545041bfc4a35c422b5_2229962504275521285.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/31/75276539/d9669196ffdddf289e7028d4cc215105_6363572595006963748.png']
+凝露轻芳_0.jpg
+凝露轻芳_1.png
+
+----- wish name -----
+['神铸赋形', '双手剑·裁断', '单手剑·圣显之钥']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/11/75276539/449d4ec24494e2eb68f5d8c10ddb933c_6769267858468754739.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/11/75276539/2b51aee60f45e22e053c1d58dfba7ee8_2141671803379097316.png']
+神铸赋形_0.jpg
+神铸赋形_1.png
+
+----- wish name -----
+['翩舞歈莲', '莲光落舞筵·妮露(水)']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/11/75276539/3dac9369547ca049984cf6974b86aca6_7182734784093932370.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/11/75276539/d310fd803d85d6216811b78e016846f2_5099272474874502993.png']
+翩舞歈莲_0.jpg
+翩舞歈莲_1.png
+
+----- wish name -----
+['刺玫的铭誓', '明花蔓舵·娜维娅(岩)']
+----- --------- -----
+img_url['https://upload-bbs.miyoushe.com/upload/2024/07/11/75276539/5398ba364335bce632a90f4d0ebbdd32_6967832789071180266.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/07/11/75276539/fb9c810262b71f20352efff579730a47_7669207866085623581.png']
+刺玫的铭誓_0.jpg
+刺玫的铭誓_1.png
+
+----- wish name -----
 ['弓·白雨心弦', '单手剑·静水流涌之辉']
 ----- --------- -----
 img_url['https://upload-bbs.miyoushe.com/upload/2024/06/18/75276539/d32951b53690f4780243942bf4b457fe_1059622937236726571.png', 'https://upload-bbs.miyoushe.com/upload/2024/06/18/75276539/34b5de86a9fa3a4133f183288e34c2e3_439147822730887789.png']
@@ -44,55 +86,13 @@ img_url['https://upload-bbs.miyoushe.com/upload/2024/05/31/75276539/e6db0a29b2f8
 流霆贯夜_0.png
 流霆贯夜_1.png
 
------ wish name -----
-['法器·图莱杜拉的回忆', '法器·碧落之珑']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/3112b92a13fb2694094ff554603e4f0b_9096451714403841549.png', 'https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/a62580fc4c93dc41a5100f659387852f_67733687615841306.png']
-法器·图莱杜拉的回忆_0.png
-法器·图莱杜拉的回忆_1.png
-
------ wish name -----
-['心珠循琅', '遵生合和·白术(草)']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/a92a94c734bb50c7e2403f605ab96fa6_3458354365899436476.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/4ead74dcfb0650d623ef8787e4b267ec_3103754425356651452.png']
-心珠循琅_0.jpg
-心珠循琅_1.png
-
------ wish name -----
-['余火变相', '久世浮倾·流浪者(风)']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/4835a3a5c736c558e7fdc3c8ed8ed6b5_5332051123096324109.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/05/08/75276539/fca51628034ff9b93fdb161e6c9eaefe_7490405158901297095.png']
-余火变相_0.jpg
-余火变相_1.png
-
------ wish name -----
-['长柄武器·赤月之形', '弓·最初的大魔术']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/fdba79b7e3b249120c5bf40609893b85_2020695437144462662.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/f10da748b3c564fe4f7e2ea0fc149c2d_9198690732191494688.png']
-长柄武器·赤月之形_0.jpg
-长柄武器·赤月之形_1.png
-
------ wish name -----
-['光与影的戏术', '惑光幻戏·林尼(火)']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/7e5d9b37e4fe8fa078abafd8e0ad061d_6796851107160785327.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/e6670ee28314a4d5bd0395980b6b19f3_6403324454824315548.png']
-光与影的戏术_0.jpg
-光与影的戏术_1.png
-
------ wish name -----
-['炉边烬影', '孤暝厄月·阿蕾奇诺(火)']
------ --------- -----
-img_url['https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/68815d969fd56225f656c2b2312d2f47_3017034329968026405.jpg', 'https://upload-bbs.miyoushe.com/upload/2024/04/19/75276539/737c0cdc36e3bce45dba0bac3b948721_7366149224756171584.png']
-炉边烬影_0.jpg
-炉边烬影_1.png
-
 ================
 ================
 ================
 post_id_arr
-[['54031543', '54031540', '54031539', '53443725', '53443723', '53443722', '52680845', '52680843', '52680841', '51856268', '51856267', '51856264'], [], []]
+[['56072210', '56072208', '56072207', '55147896', '55147892', '55147891', '54031543', '54031540', '54031539', '53443725', '53443723', '53443722'], [], []]
 post_id_link_arr
-['https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54031543', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54031540', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54031539', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53443725', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53443723', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53443722', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=52680845', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=52680843', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=52680841', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=51856268', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=51856267', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=51856264']
+['https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=56072210', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=56072208', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=56072207', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55147896', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55147892', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=55147891', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54031543', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54031540', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=54031539', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53443725', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53443723', 'https://bbs-api.miyoushe.com/post/wapi/getPostFull?post_id=53443722']
 ================
 ================
 ================
