@@ -2,16 +2,28 @@
     "title": "",
     "items": [
         {
-            "title": "Mergify",
-            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
-            "link": "/code/build/mergify",
-            "date": "2024-06-17"
+            "title": "Shell",
+            "desc": "Shell refer 第一个 shell 脚本 ! 是一个约定的标记，它告诉系统这个脚本需要什么",
+            "link": "/code/program/lang/shell",
+            "date": "2024-08-08"
+        },
+        {
+            "title": "Git",
+            "desc": "Git sol does not point to a valid object 详细描述 git",
+            "link": "/code/version-ctrl/git",
+            "date": "2024-07-18"
         },
         {
             "title": "施工",
             "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 最新的游记，link - 旅行航线，link",
             "link": "/dev",
             "date": "2024-08-06"
+        },
+        {
+            "title": "Mergify",
+            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
+            "link": "/code/build/mergify",
+            "date": "2024-06-17"
         },
         {
             "title": "飞机",
@@ -92,12 +104,6 @@
             "date": "2024-07-12"
         },
         {
-            "title": "Git",
-            "desc": "Git sol 舍弃本地所有提交 git reset --hard origin/your_bra",
-            "link": "/code/version-ctrl/git",
-            "date": "2024-07-18"
-        },
-        {
             "title": "GitHub",
             "desc": "GitHub hub 自动建仓 clone private repo github clone p",
             "link": "/code/version-ctrl/github",
@@ -114,12 +120,6 @@
             "desc": "离散数学 要学到的 离散数学基础: 集合、偏序集、良序、数学归纳法、级数、递归、递推 概念定义 集",
             "link": "/course/science/discrete-math",
             "date": "2024-07-08"
-        },
-        {
-            "title": "mihoyo",
-            "desc": "mihoyo API 官方咨询 - 米游社 API prefix https://bbs-api.",
-            "link": "/code/api/mihoyo",
-            "date": "2024-07-03"
         }
     ]
 }

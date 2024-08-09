@@ -1,11 +1,19 @@
 {
-    "life/code/build/mergify.md": {
-        "title": "Mergify",
-        "date": 1718590917.0
+    "life/code/program/lang/shell.md": {
+        "title": "Shell",
+        "date": 1723130114.0
+    },
+    "life/code/version-ctrl/git.md": {
+        "title": "Git",
+        "date": 1721311884.0
     },
     "life/dev.md": {
         "title": "施工",
         "date": 1722913051.0
+    },
+    "life/code/build/mergify.md": {
+        "title": "Mergify",
+        "date": 1718590917.0
     },
     "life/trip/airplane.md": {
         "title": "飞机",
@@ -58,10 +66,6 @@
     "life/code/os/linux/qa.md": {
         "title": "Linux 问题收集",
         "date": 1720772837.0
-    },
-    "life/code/version-ctrl/git.md": {
-        "title": "Git",
-        "date": 1721311884.0
     },
     "life/code/version-ctrl/github.md": {
         "title": "GitHub",
