@@ -2,6 +2,34 @@
 
 ## sol
 
+### does not point to a valid object
+
+:::danger 详细描述
+git pull 出现 error: refs/remotes/origin xxxx does not point to a valid object
+:::
+
+这个错误通常表示远程仓库的引用数据已损坏或存在不一致。以下是可能的解决方法：
+
+```bash
+# 重新获取引用: 尝试重新获取远程仓库的引用数据：
+git fetch --all
+
+# 删除和重新添加远程仓库:
+git remote remove origin
+git remote add origin <repository_URL>
+git fetch origin
+
+# 检查并修复本地仓库: 使用 git fsck 检查和修复本地仓库中的损坏对象。
+git fsck --full
+
+# 手动更新引用: 可能需要手动更新引用：
+git update-ref -d refs/remotes/origin/xxxx
+git fetch origin
+
+# 克隆新的仓库: 如果以上方法无效，考虑备份当前工作后重新克隆仓库。
+git clone <repository_URL>
+```
+
 ### 舍弃本地所有提交
 
 `git reset --hard origin/your_branch`
@@ -336,6 +364,13 @@ git branch –delete dev
 # 删除远程分支
 git push <remote-name> --delete <branch-name>
 git checkout -b dev origin/dev # checkout 远程
+
+# 查看当前分支的追踪信息
+git branch -vv
+# 查看当前分支的远端分支列表
+git remote show origin
+# 直接查看当前分支追踪的远端分支名
+git rev-parse --abbrev-ref --symbolic-full-name @{u}
 ```
 
 ## linux下git免密码登录配置

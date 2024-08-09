@@ -5,7 +5,7 @@ titleTemplate: 吃什么 去哪玩
 hero:
   name: 乐享人生 Augus
   text: 人生在于食，在于游
-  tagline: 周游各地，食遍天下，加油进步 <br/>活着...静候一切可能（<a href='/recent'>最近更新</a>）
+  tagline: 周游各地，食遍天下，加油进步 <br/>活着...静候一切可能（<a href='/recent'>最近更新</a>）<br/>在此写下碌碌无为的一生……
   image:
     src: /home.png
     alt: none

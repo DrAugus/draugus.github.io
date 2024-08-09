@@ -453,6 +453,52 @@ When used in a shell script, the commands `exit 0` and `exit 1` indicate the suc
 
 ## QA
 
+### /bin/bash^M: bad interpreter: No such file or directory
+
+这个错误信息提示的问题是由于在 `build.sh` 脚本文件中包含了 Windows 风格的换行符（CR LF，即回车加换行），而 Linux 或 Unix 系统通常只识别 LF（换行符）作为行结束符。这里的 `^M` 是回车符（CR）在命令行中的表示方式。
+
+要解决这个问题，你可以使用几种不同的方法来转换文件的换行符格式：
+
+方法 1: 使用 `dos2unix` 工具
+
+如果你的系统中安装了 `dos2unix` 工具，可以很方便地转换文件：
+
+```bash
+dos2unix build.sh
+```
+
+如果没有安装 `dos2unix`，你可以通过包管理器安装它。例如，在 Ubuntu 上，你可以使用：
+
+```bash
+sudo apt-get install dos2unix
+```
+
+方法 2: 使用 `sed` 命令
+
+如果你不想安装额外的工具，可以使用 `sed` 命令来删除回车符：
+
+```bash
+sed -i 's/\r$//' build.sh
+```
+
+注意：在某些系统中（如 macOS），你可能需要使用 `sed -i '' 's/\r$//' build.sh` 来避免 `-i` 选项后面直接跟空格。
+
+方法 3: 使用 Vim 编辑器
+
+如果你熟悉 Vim，可以在 Vim 中打开文件，然后使用 `:set ff=unix` 命令来设置文件格式为 Unix 格式，并保存退出。
+
+```bash
+vim build.sh
+```
+
+在 Vim 中，输入 `:set ff=unix`，然后按 `:wq` 保存并退出。
+
+方法 4: 使用 Notepad++（如果你是在 Windows 上编辑的）
+
+如果你是在 Windows 上编辑文件，然后将其转移到 Linux 上，可以使用 Notepad++ 这类文本编辑器，它允许你保存文件时使用 Unix/Linux 风格的换行符。在 Notepad++ 中，可以通过“编辑”->“EOL 转换”->“UNIX/OSX 格式”来实现。
+
+完成上述任何一种转换后，你的 `build.sh` 脚本应该就能在 Linux 或 Unix 系统上正常运行了。
+
 ### mkdir err
 
 ```shell [foo.sh]
@@ -498,7 +544,21 @@ bash FileName
 作用: 打开一个子 shell 来读取并执行 FileName 中命令，该 filename 文件需要 "执行权限"。  
 注：运行一个 shell 脚本时会启动另一个命令解释器。
 
-## skill
+## 实践
+
+### 控制台输出重定向
+
+默认情况下，`>` 只重定向标准输出（stdout），而标准错误（stderr）仍然会显示在终端上。为了同时捕获标准输出和标准错误，你可以使用 `&>` 或者分别重定向它们
+
+```bash
+./build.sh &> compile.log
+# 或者在一些 shell 中可能需要使用
+./build.sh > compile.log 2>&1
+# 独立错误
+./build.sh > compile.log 2> compile.err
+```
+
+当使用 `>` 或 `&>` 进行重定向时，如果 compile.log 文件已存在，它会被自动替换。如果需要保留原有内容，请使用追加模式（`>>` 或 `&>>`，如果可用）。
 
 ### 遍历文件个数
 
