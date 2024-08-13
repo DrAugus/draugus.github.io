@@ -10,7 +10,7 @@ export const navItem = [{
     { text: '数据库', link: '/code/db/', activeMatch: '/code/db/' },
     { text: '前端', link: '/code/front-end/', activeMatch: '/code/front-end/' },
     { text: '编译器/开发环境', link: '/code/dev-env/', activeMatch: '/code/dev-env/' },
-    { text: '构建/持续集成', link: '/code/build/', activeMatch: '/code/build/' },
+    { text: '构建/持续集成', link: '/code/devops/', activeMatch: '/code/devops/' },
     { text: '版本控制', link: '/code/version-ctrl/', activeMatch: '/code/version-ctrl/' },
     { text: '八股文', link: '/code/interview/', activeMatch: '/code/interview/' },
     { text: '编程语言', link: '/code/program/', activeMatch: '/code/program/' },

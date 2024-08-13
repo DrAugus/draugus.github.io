@@ -6,6 +6,7 @@ __pycache__/
 .augus_output
 test**
 output**
+temp/**/**.md
 
 ~$**.xls
 ~$**.xlsx

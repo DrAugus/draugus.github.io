@@ -572,11 +572,12 @@ const sidebarDevEnv = [
     { text: 'JetBrains', link: '/code/dev-env/jetbrains' },
     { text: 'Cocos', link: '/code/dev-env/cocos' },
 ];
-const sidebarBuild = [
-    { text: 'Docker', link: '/code/build/docker' },
-    { text: 'Jenkins', link: '/code/build/Jenkins' },
-    { text: 'Mergify', link: '/code/build/mergify' },
-    { text: 'Vercel', link: '/code/build/vercel' },
+const sidebarDevOps = [
+    { text: 'Docker', link: '/code/devops/docker' },
+    { text: 'Jenkins', link: '/code/devops/Jenkins' },
+    { text: 'Mergify', link: '/code/devops/mergify' },
+    { text: 'Vercel', link: '/code/devops/vercel' },
+    { text: 'Jira', link: '/code/devops/jira' },
 ];
 const sidebarVersionCtrl = [
     { text: 'Git', link: '/code/version-ctrl/git' },
@@ -750,7 +751,7 @@ export const sidebar = {
     '/code/kernel/': sidebarCodeKernel,
     '/code/ml/': sidebarCodeML,
     '/code/dev-env/': sidebarDevEnv,
-    '/code/build/': sidebarBuild,
+    '/code/devops/': sidebarDevOps,
     '/code/version-ctrl/': sidebarVersionCtrl,
     //
     '/pursuing-education/': sidebarPursuingEducation,
