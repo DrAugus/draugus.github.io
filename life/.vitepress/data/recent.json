@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "Jira",
+            "desc": "Jira 使用指南 过滤 issue 并通知 参看官方文档 使用 cron expressions",
+            "link": "/code/devops/jira",
+            "date": "2024-08-13"
+        },
+        {
             "title": "Shell",
             "desc": "Shell refer 第一个 shell 脚本 ! 是一个约定的标记，它告诉系统这个脚本需要什么",
             "link": "/code/program/lang/shell",
@@ -18,12 +24,6 @@
             "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 最新的游记，link - 旅行航线，link",
             "link": "/dev",
             "date": "2024-08-06"
-        },
-        {
-            "title": "Mergify",
-            "desc": "Mergify github 官方支持 [auto merge][github auto merg",
-            "link": "/code/build/mergify",
-            "date": "2024-06-17"
         },
         {
             "title": "飞机",
