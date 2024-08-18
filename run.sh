@@ -28,6 +28,7 @@ run=$1
 webpage=(
 life
 game
+temp
 )
 
 for name in ${webpage[@]}

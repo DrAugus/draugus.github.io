@@ -21,3 +21,5 @@
 
 **快速跳转指定行号位置**
 `Ctrl+G`
+
+compare 代码，首先选择第一个文件，右键“**Select for Compare**”，再选择第二个文件，右键“**Compare with Selected**”，即可对比代码
