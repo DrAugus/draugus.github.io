@@ -1,4 +1,12 @@
 {
+    "life/code/dev-env/vscode.md": {
+        "title": "VS Code",
+        "date": 1721963864.0
+    },
+    "life/trip/travelogue/20230225.md": {
+        "title": "南京",
+        "date": 1718936526.0
+    },
     "life/code/devops/jira.md": {
         "title": "Jira",
         "date": 1723514780.0
@@ -39,10 +47,6 @@
         "title": "广西",
         "date": 1716915828
     },
-    "life/trip/travelogue/20230225.md": {
-        "title": "南京",
-        "date": 1718936526.0
-    },
     "life/code/framework/ffmpeg.md": {
         "title": "FFmpeg",
         "date": 1722424705.0
@@ -58,10 +62,6 @@
     "life/trip/permanent-residence.md": {
         "title": "常住地居住感受",
         "date": 1716329120
-    },
-    "life/code/dev-env/vscode.md": {
-        "title": "VS Code",
-        "date": 1721963864.0
     },
     "life/random-notes/what-is.md": {
         "title": "这是什么？",
