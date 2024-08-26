@@ -1,11 +1,19 @@
 {
-    "life/code/dev-env/vscode.md": {
-        "title": "VS Code",
-        "date": 1721963864.0
+    "life/code/version-ctrl/git.md": {
+        "title": "Git",
+        "date": 1721311884.0
+    },
+    "life/daily/apple/reflect.md": {
+        "title": "苹果究竟怎么了",
+        "date": 1724517974.0
     },
     "life/trip/travelogue/20230225.md": {
         "title": "南京",
         "date": 1718936526.0
+    },
+    "life/code/dev-env/vscode.md": {
+        "title": "VS Code",
+        "date": 1721963864.0
     },
     "life/code/devops/jira.md": {
         "title": "Jira",
@@ -14,10 +22,6 @@
     "life/code/program/lang/shell.md": {
         "title": "Shell",
         "date": 1723130114.0
-    },
-    "life/code/version-ctrl/git.md": {
-        "title": "Git",
-        "date": 1721311884.0
     },
     "life/dev.md": {
         "title": "施工",

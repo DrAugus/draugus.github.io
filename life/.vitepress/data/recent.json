@@ -2,16 +2,28 @@
     "title": "",
     "items": [
         {
-            "title": "VS Code",
-            "desc": "VS Code tips 文本自动换行 文本超出显示时，需要拖动下面的滑块才能看到超出的部分， -",
-            "link": "/code/dev-env/vscode",
-            "date": "2024-07-26"
+            "title": "Git",
+            "desc": "Git sol does not point to a valid object 详细描述 git",
+            "link": "/code/version-ctrl/git",
+            "date": "2024-07-18"
+        },
+        {
+            "title": "苹果究竟怎么了",
+            "desc": "苹果究竟怎么了 崩溃记录 存储已满 2024年08月15日 早上起来，手机存储空间爆了 255.9",
+            "link": "/daily/apple/reflect",
+            "date": "2024-08-24"
         },
         {
             "title": "南京",
             "desc": "南京 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230225",
             "date": "2024-06-21"
+        },
+        {
+            "title": "VS Code",
+            "desc": "VS Code tips 文本自动换行 文本超出显示时，需要拖动下面的滑块才能看到超出的部分， -",
+            "link": "/code/dev-env/vscode",
+            "date": "2024-07-26"
         },
         {
             "title": "Jira",
@@ -24,12 +36,6 @@
             "desc": "Shell refer 第一个 shell 脚本 ! 是一个约定的标记，它告诉系统这个脚本需要什么",
             "link": "/code/program/lang/shell",
             "date": "2024-08-08"
-        },
-        {
-            "title": "Git",
-            "desc": "Git sol does not point to a valid object 详细描述 git",
-            "link": "/code/version-ctrl/git",
-            "date": "2024-07-18"
         },
         {
             "title": "施工",
@@ -114,12 +120,6 @@
             "desc": "配环境 简单参考一下 当你获得一台全新机器，根据系统不同，可以参考下方的开发环境配置 Linux",
             "link": "/tools/nipeima",
             "date": "2024-07-12"
-        },
-        {
-            "title": "离散数学",
-            "desc": "离散数学 要学到的 离散数学基础: 集合、偏序集、良序、数学归纳法、级数、递归、递推 概念定义 集",
-            "link": "/course/science/discrete-math",
-            "date": "2024-07-08"
         }
     ]
 }
