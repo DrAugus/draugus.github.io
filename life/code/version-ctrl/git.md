@@ -87,6 +87,31 @@ git rebase --abort
 
 `git fetch [origin]` 从远程获取所有分支
 
+## branch
+
+```bash
+git checkout <existing_branch>
+git checkout -b <new_branch>
+git switch <existing_branch>
+git switch -c <non_existing_branch>
+
+git branch
+git branch -a # 查看历史
+# 删除分支
+git branch -d dev 
+git branch –delete dev 
+# 删除远程分支
+git push <remote-name> --delete <branch-name>
+git checkout -b dev origin/dev # checkout 远程
+
+# 查看当前分支的追踪信息
+git branch -vv
+# 查看当前分支的远端分支列表
+git remote show origin
+# 直接查看当前分支追踪的远端分支名
+git rev-parse --abbrev-ref --symbolic-full-name @{u}
+```
+
 ## submodule
 
 ```bash
@@ -348,32 +373,7 @@ git checkout .
 4. 查看log找到需要的版本: `git log`
 5. 根据header checkout : `git checkout XXXXXX`
 
-## branch
-
-```bash
-git checkout <existing_branch>
-git checkout -b <new_branch>
-git switch <existing_branch>
-git switch -c <non_existing_branch>
-
-git branch
-git branch -a # 查看历史
-# 删除分支
-git branch -d dev 
-git branch –delete dev 
-# 删除远程分支
-git push <remote-name> --delete <branch-name>
-git checkout -b dev origin/dev # checkout 远程
-
-# 查看当前分支的追踪信息
-git branch -vv
-# 查看当前分支的远端分支列表
-git remote show origin
-# 直接查看当前分支追踪的远端分支名
-git rev-parse --abbrev-ref --symbolic-full-name @{u}
-```
-
-## linux下git免密码登录配置
+## linux 下 git 免密码登录配置
 
 > [原链接][linux下git免密码登录配置]
 
