@@ -24,6 +24,11 @@ LANG_KEY_EN = 'en-us'
 LANG_KEY_ZH = 'zh-cn'
 
 
+CHAR_DIR = f"{utils.get_project_root()}/game/public/image/genshin/characters"
+CHAR_FULL_DIR = f"{CHAR_DIR}/full"
+CHAR_HALF_DIR = f"{CHAR_DIR}/half"
+
+
 def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, pageSize: int = 99):
     order = "&iOrder=6"
     return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage=1&sLangKey={langKey}'
@@ -56,6 +61,24 @@ def handle_character(obj: object):
     return chan_ids, name, handle_ext(ext)
 
 
+def down_img(dir_prefix: str, name_img: str, list_img: list):
+    full_dir = f"{dir_prefix}/{name_img}"
+    utils.make_dir(full_dir)
+    for idx, img in enumerate(list_img):
+        # 只取 前两个，0 为头像 1 为全图
+        if idx > 1:
+            break
+        filename_without_ext, extension = os.path.splitext(img)
+        filename = f'{full_dir}/{idx}{extension}'
+        utils.wget_file(img, filename)
+        # cp img
+        if idx == 0:
+            os.system(f'cp {filename} {CHAR_DIR}/{name_img}{extension}')
+        elif idx == 1:
+            os.system(f'cp {filename} {CHAR_FULL_DIR}/{name_img}{extension}')
+            os.system(f'cp {filename} {CHAR_HALF_DIR}/{name_img}{extension}')
+
+
 def diff_lang(lang: type.LANG = type.LANG.ZH_CN):
     des_dir_prefix = f"{utils.get_project_root()}/script/auto/output/char"
     if lang == type.LANG.EN_US:
@@ -76,12 +99,10 @@ def diff_lang(lang: type.LANG = type.LANG.ZH_CN):
     des_dir_prefix += f"/{des_dir}"
     for per_char in data_list:
         chan_ids, name, (list_str, list_img) = handle_character(per_char)
-        des_dir_full = f"{des_dir_prefix}/{name}"
-        utils.make_dir(des_dir_full)
-        for idx, img in enumerate(list_img):
-            filename_without_ext, extension = os.path.splitext(img)
-            filename = f'{des_dir_full}/{idx}{extension}'
-            utils.wget_file(img, filename)
+
+        name_img = utils.replace_characters(name)
+        if lang == type.LANG.EN_US:
+            down_img(des_dir_prefix, name_img, list_img)
 
 
 def main():

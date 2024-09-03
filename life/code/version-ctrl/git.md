@@ -2,6 +2,32 @@
 
 ## sol
 
+### git 撤销 modified的文件
+
+撤销工作区（working directory）中所有被修改（modified）的文件到它们最近一次提交（commit）的状态，同时保留新增加（untracked）的文件不被撤销
+
+列出所有modified的文件
+
+```bash
+git status --porcelain | grep '^ M' | cut -c4-
+```
+
+这条命令使用`git status --porcelain`来获取一个简洁的、机器可读的输出，然后筛选出所有modified（M）的文件，并去除每行开头的空格和M字符。
+
+批量撤销这些modified的文件
+
+```bash
+git restore --staged --worktree $(git status --porcelain | grep '^ M' | cut -c4-)
+```
+
+注意：`--staged`参数通常用于撤销暂存区的更改，但在这个场景中，如果你只关心工作区的更改，可以省略它（或者更明确地只使用`--worktree`）。然而，如果你的目的是同时清除暂存区和工作区的更改，则保留`--staged`和`--worktree`都是有用的。
+
+如果只关心工作区，使用：
+
+```bash
+git restore --worktree $(git status --porcelain | grep '^ M' | cut -c4-)
+```
+
 ### does not point to a valid object
 
 :::danger 详细描述
