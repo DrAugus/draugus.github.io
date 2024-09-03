@@ -3,6 +3,10 @@ import { City, Element, Weapon } from "./utils";
 // https://github.com/theBowja/genshin-db
 // todo 后续改为 db
 
+// 原神官网
+// https://ys.mihoyo.com/main/character/fontaine?char=0
+// 英文官网 https://genshin.hoyoverse.com/en/character/Natlan?char=0
+
 export const CHARACTER = {
   // liu_ping: {
   //   id: "liu_ping",

@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "cmd",
+            "desc": "cmd 系统常用 system base info uname uname -a uname -m",
+            "link": "/code/os/linux/command",
+            "date": "2024-05-21"
+        },
+        {
             "title": "Git",
             "desc": "Git sol does not point to a valid object 详细描述 git",
             "link": "/code/version-ctrl/git",
@@ -114,12 +120,6 @@
             "desc": "GitHub hub 自动建仓 clone private repo github clone p",
             "link": "/code/version-ctrl/github",
             "date": "2024-06-17"
-        },
-        {
-            "title": "配环境",
-            "desc": "配环境 简单参考一下 当你获得一台全新机器，根据系统不同，可以参考下方的开发环境配置 Linux",
-            "link": "/tools/nipeima",
-            "date": "2024-07-12"
         }
     ]
 }

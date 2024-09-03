@@ -551,6 +551,7 @@ if __name__ == "__main__":
 
     if SHOW_CHAR_INFO:
         get_url = get_url_char()
+        print("url:", get_url)
         json_char = character_data(get_url)
         print("角色数:", len(json_char.keys()))
         save_dict_to_file(json_char, f"{current_path}/../auto/get_char.json")

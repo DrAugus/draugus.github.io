@@ -86,7 +86,8 @@ def find_nth_occurrence_1(string: str, substring: str, occurrence: int) -> int:
         return string.find(substring)
     else:
         return string.find(
-            substring, find_nth_occurrence_1(string, substring, occurrence - 1) + 1
+            substring, find_nth_occurrence_1(
+                string, substring, occurrence - 1) + 1
         )
 
 
@@ -168,7 +169,8 @@ def get_char_name(input_string):
 
 def get_only_name(character_info: list) -> list:
     character_info_only_name = [info.split("(")[0] for info in character_info]
-    character_info_only_name = [name.strip() for name in character_info_only_name]
+    character_info_only_name = [name.strip()
+                                for name in character_info_only_name]
     character_info_only_name = [
         clear_non_letters(clear) for clear in character_info_only_name
     ]
@@ -196,7 +198,8 @@ def get_duration(text):
         def got_dur(start: str, end: str):
             if start != None and end != None:
                 arr.append(
-                    {"start_time": format_date(start), "end_time": format_date(end)}
+                    {"start_time": format_date(
+                        start), "end_time": format_date(end)}
                 )
 
         # time_match = re.search(
@@ -209,7 +212,8 @@ def get_duration(text):
             got_dur(start_time, end_time)
             return
         elif len(time_match):
-            version_match = re.search(r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
+            version_match = re.search(
+                r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
                 version = version_match.group(1)
             else:
@@ -225,7 +229,8 @@ def get_duration(text):
         # 大版本更新时
         # update – 2024/01/17 11:59:00(server time)
         if "update" in find_des and "server time" in find_des:
-            version_match = re.search(r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
+            version_match = re.search(
+                r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
                 version = version_match.group(1)
             else:
@@ -288,9 +293,7 @@ def timestamp2date(ts: int):
 
 @log_args
 def wget_file(url: str, output):
-    if (
-        url.endswith(".png") or url.endswith(".jpg") or url.endswith(".jpeg")
-    ) and os.path.exists(output):
+    if url_is_img(url) and os.path.exists(output):
         return
     os.system(f"wget '{url}' -O {output}")
 
@@ -346,5 +349,25 @@ def get_num_from_str(text):
     if len(numbers) == 0 or numbers[0] == '':
         return []
     # 将结果转换为float（如果可能的话），否则保持为str
-    numbers_float_or_str = [float(num) if "." in num else int(num) for num in numbers]
+    numbers_float_or_str = [
+        float(num) if "." in num else int(num) for num in numbers]
     return numbers_float_or_str
+
+
+IMAGE_EXTENSIONS = ('.png', '.jpg', '.jpeg', '.gif', '.bmp')
+
+
+def url_is_img(url: str, extensions=IMAGE_EXTENSIONS) -> bool:
+    return url.lower().endswith(extensions)
+
+
+def get_project_root():
+    # 获取当前文件的绝对路径
+    current_file_path = os.path.abspath(__file__)
+    # 获取当前文件所在的目录
+    current_dir = os.path.dirname(current_file_path)
+    # 假设项目根目录是当前目录的上级目录（根据实际情况可能需要多次使用os.path.dirname）
+    project_root = os.path.dirname(current_dir)
+    return project_root
+
+

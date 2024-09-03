@@ -827,6 +827,40 @@ export const WISH: WishAll = {
       version: "4.7",
       wishName: ["柔柔海露心", "众水的颂诗"],
       url: ["?", "?"]
+    }, {
+      name: ["Romaritime Meluserenity", "Chanson of Many Waters"],
+      image: [1, 2],
+      shortName: ["Sigewinne", "Furina"],
+      start: "2024/06/25 18:00:00 +0800",
+      end: "2024/07/16 14:59:00 +0800",
+      wish5star: ["sigewinne", "furina"],
+      wish4star: ["noelle", "gaming", "rosaria"],
+      version: "4.8",
+      wishName: ["刺玫的铭誓", "翩舞歈莲"],
+      url: ["?", "?"]
+    }, {
+      name: ["Romaritime Meluserenity", "Chanson of Many Waters"],
+      image: [1, 2],
+      shortName: ["Sigewinne", "Furina"],
+      start: "2024/06/25 18:00:00 +0800",
+      end: "2024/07/16 14:59:00 +0800",
+      wish5star: ["sigewinne", "furina"],
+      wish4star: ["noelle", "gaming", "rosaria"],
+      version: "4.7",
+      wishName: ["凝露轻芳", "素霓伣天"],
+      url: ["?", "?"]
+    }, {
+      name: ["Sharktacular Surfari", "Leaves in the Wind"],
+      image: [1, 2],
+      shortName: ["Mualani", "Kaedehara Kazuha"],
+      start: "2024/08/28 06:00 +0800",
+      end: "2024/08/31 06:00 +0800",
+      wish5star: ["mualani", "kaedehara_kazuha"],
+      wish4star: ["kachina", "xinyan", "bennett"],
+      version: "5.0",
+      wishName: ["鲨鲨逐浪游", "叶落风随"],
+      url: ["?", "?"]
+
     },
   ],
   weapons: [
