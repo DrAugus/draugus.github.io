@@ -1,4 +1,8 @@
 {
+    "life/code/os/linux/command.md": {
+        "title": "cmd",
+        "date": 1716266651
+    },
     "life/code/version-ctrl/git.md": {
         "title": "Git",
         "date": 1721311884.0
@@ -418,10 +422,6 @@
     "life/course/science/linear-algebra.md": {
         "title": "线性代数",
         "date": 1716273280
-    },
-    "life/code/os/linux/command.md": {
-        "title": "cmd",
-        "date": 1716266651
     },
     "life/code/program/future/prepare.md": {
         "title": "Prepare",
