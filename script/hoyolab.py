@@ -586,8 +586,8 @@ def get_post_id_url(gid: GameID, post_id: list):
         for id in list_id:
             url = get_post_url(id)
             get_official_json(gid, url)
-            # 每种只获取最新的，一个就够用了
-            break
+            # # 每种只获取最新的，一个就够用了
+            # break
 
 
 def main():

@@ -4,6 +4,7 @@ on:
     branches:
       - master
       - dev-py
+      - dev-game
     paths:
       - "script/requirements.txt"
       - ".github/workflows/get-mhy-wish.yml"
