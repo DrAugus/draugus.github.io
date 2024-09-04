@@ -301,12 +301,12 @@ def wget_file(url: str, output):
 
 
 @log_args
-def cp_file(src:str, des:str):
+def cp_file(src: str, des: str):
     if not os.path.isfile(src):
         print("!!! ERROR SOURCE !!!")
         return
     if not os.path.isfile(des):
-        os.system(f'cp {src} {des}')    
+        os.system(f'cp {src} {des}')
 
 
 # abc=123
@@ -387,12 +387,13 @@ def get_project_root():
 
 
 # list is [{key: val}, {key: val}, ...]
-def find_value_by_key(foo:list, key: str):
+def find_value_by_key(foo: list, key: str):
     for obj in foo:
         if not isinstance(obj, dict):
             return None
         if key in obj:
             return obj[key]
+
 
 class Genshin:
     class City(Enum):
@@ -548,7 +549,7 @@ class OperateFile:
 
     @staticmethod
     def save_dict_to_file(dict_data, file_path, format=True):
-        directory = os.path.dirname(file_path) 
+        directory = os.path.dirname(file_path)
         make_dir(directory)
         with open(file_path, "w", encoding="utf-8") as f:
             if format is True:

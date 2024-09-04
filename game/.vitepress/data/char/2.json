@@ -5,7 +5,7 @@
         "prefix": "衡明知度",
         "star": 4,
         "event_exclusive": false,
-        "intro": "",
+        "intro": "笑容亲和的神秘沙漠少年，酷爱徒步旅行，踪迹遍布雨林与沙漠。",
         "city": "Sumeru",
         "ele": "electro",
         "weapon": "bow"
@@ -16,7 +16,7 @@
         "prefix": "龙女妙变",
         "star": 5,
         "event_exclusive": true,
-        "intro": "",
+        "intro": "就职于梅洛彼得堡的护士长，身为美露莘中的一员，以独特的视角观察并爱护着身边众生。",
         "city": "Fontaine",
         "ele": "hydro",
         "weapon": "catalyst"
@@ -27,7 +27,7 @@
         "prefix": "秉烛弥影",
         "star": 5,
         "event_exclusive": true,
-        "intro": "",
+        "intro": "「最强」的决斗代理人，以手中之剑维护着枫丹廷的「公义」。",
         "city": "Fontaine",
         "ele": "electro",
         "weapon": "sword"
@@ -911,5 +911,38 @@
         "city": "Inazuma",
         "ele": "dendro",
         "weapon": "sword"
+    },
+    "kachina": {
+        "id": "kachina",
+        "name": "卡齐娜",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "回声之子的年轻战士，受赐古名「乌沙博蒂」。善良执着的少女，在挫折中不断成长。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "mualani": {
+        "id": "mualani",
+        "name": "玛拉妮",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "「流泉之众」新生代向导中的佼佼者，想要游历纳塔，她绝对是最优秀的伙伴。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "emilie": {
+        "id": "emilie",
+        "name": "艾梅莉埃",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "枫丹知名香水设计师，优雅、迷人，又略显神秘，正如其作品一般。",
+        "city": "Fontaine",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }

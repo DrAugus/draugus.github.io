@@ -47,13 +47,15 @@ IMG_DIR_CHAR = f"{utils.get_project_root()}/game/public/image/genshin/characters
 IMG_DIR_CHAR_FULL = f"{IMG_DIR_CHAR}/full"
 IMG_DIR_CHAR_HALF = f"{IMG_DIR_CHAR}/half"
 
-JSON_CHAR_FILENAME = f"{utils.get_project_root()}/game/.vitepress/data/char/2.json"
+JSON_LOCAL_CHAR_FILENAME = f"{utils.get_project_root()}/game/.vitepress/data/char/2.json"
 
 OUTPUT_DIR_PREFIX = f"{utils.get_project_root()}/script/auto/output/char/2"
 
 I18N_FILENAME_PREFIX = f"{OUTPUT_DIR_PREFIX}/i18n"
 JSON_I18N_CHAR_NAME_FILENAME = f"{I18N_FILENAME_PREFIX}/char_name.json"
 JSON_I18N_CHAR_INTRO_FILENAME = f"{I18N_FILENAME_PREFIX}/char_intro.json"
+
+JSON_ALL_CHAR_FILENAME = f"{OUTPUT_DIR_PREFIX}/all_char_info.json"
 
 CHARA_DEFAULT = {
     "id": "",
@@ -62,7 +64,7 @@ CHARA_DEFAULT = {
     "star": 4,
     "event_exclusive": False,
     "intro": "",
-    "city": "Liyue",
+    "city": "",
     "ele": "pyro",
     "weapon": "catalyst"
 }
@@ -155,8 +157,6 @@ def get_chara_list(url: str):
     return data_list
 
 
-
-
 def get_chara_info(lang: type.LANG = type.LANG.EN_US):
     # FOR ENGLISH ONLY
     if lang != type.LANG.EN_US:
@@ -189,17 +189,18 @@ def get_chara_info(lang: type.LANG = type.LANG.EN_US):
         chara_name = name
 
         tmp_char = CHARA_DEFAULT.copy()
-        tmp_char['id'] =  chara_id
+        tmp_char['id'] = chara_id
         if exist_i18n_name:
-            tmp_char['name'] = utils.find_value_by_key (i18n_name, name)
-        tmp_char['intro'] = utils.find_value_by_key (i18n_intro, chara_intro)  if exist_i18n_intro else chara_intro
+            tmp_char['name'] = utils.find_value_by_key(i18n_name, name)
+        tmp_char['intro'] = utils.find_value_by_key(
+            i18n_intro, chara_intro) if exist_i18n_intro else chara_intro
+        tmp_char['city'] = chara_city.name
         all_char_info[chara_id] = tmp_char
         #
         down_img(img_dir_prefix, chara_id, list_img)
 
-    json_all_char_info_filename = "all_char_info.json"
     utils.OperateFile.save_dict_to_file(
-        all_char_info, f"{OUTPUT_DIR_PREFIX}/{json_all_char_info_filename}")
+        all_char_info, JSON_ALL_CHAR_FILENAME)
 
 
 def get_chara_name_and_intro(data_list: list):
@@ -259,13 +260,23 @@ def write_i18n_chara():
 
 
 def compare_local_char_json():
-    local_json = utils.OperateFile.load_dict_from_file(JSON_CHAR_FILENAME)
+    # old
+    local_json = utils.OperateFile.load_dict_from_file(
+        JSON_LOCAL_CHAR_FILENAME)
     if local_json == {}:
         return
+    # new
+    py_get_json = utils.OperateFile.load_dict_from_file(JSON_ALL_CHAR_FILENAME)
+    if py_get_json == {}:
+        return
+    for key, val in py_get_json.items():
+        if key not in local_json:
+            local_json[key] = val
+        else:
+            if local_json[key]["intro"] == "":
+                local_json[key]["intro"] = val["intro"]
 
-
-def get_local_json():
-    return utils.OperateFile.load_dict_from_file(JSON_CHAR_FILENAME)
+    utils.OperateFile.save_dict_to_file(local_json, JSON_LOCAL_CHAR_FILENAME)
 
 
 def main():
@@ -273,6 +284,7 @@ def main():
     # get url, get name, info, img
     get_chara_info(type.LANG.EN_US)
     # get_chara_info(type.LANG.ZH_CN)
+    compare_local_char_json()
 
 
 if __name__ == "__main__":
