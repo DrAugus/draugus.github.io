@@ -1,7 +1,6 @@
 import json
 import utils
 import os
-import op_file
 from enum import Enum
 
 
@@ -255,8 +254,8 @@ get_all = {
 
 current_path = os.path.dirname(__file__)
 filename = current_path + f"/auto/mhy{gid}char.json"
-op_file.save_dict_to_file(get_all, filename)
+utils.OperateFile.save_dict_to_file(get_all, filename)
 
 url_info = get_api_url()
 filename = current_path + f"/auto/mhy{gid}char"
-op_file.save_dict_to_file(url_info, filename)
+utils.OperateFile.save_dict_to_file(url_info, filename)

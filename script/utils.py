@@ -1,3 +1,4 @@
+from enum import Enum
 import json
 import re
 import requests
@@ -8,6 +9,7 @@ import yaml
 from functools import wraps
 from datetime import datetime
 from collections import OrderedDict
+from bs4 import BeautifulSoup as be
 
 
 def log_args(func):
@@ -293,9 +295,18 @@ def timestamp2date(ts: int):
 
 @log_args
 def wget_file(url: str, output):
-    if url_is_img(url) and os.path.exists(output):
+    if url_is_img(url) and os.path.isfile(output):
         return
     os.system(f"wget '{url}' -O {output}")
+
+
+@log_args
+def cp_file(src:str, des:str):
+    if not os.path.isfile(src):
+        print("!!! ERROR SOURCE !!!")
+        return
+    if not os.path.isfile(des):
+        os.system(f'cp {src} {des}')    
 
 
 # abc=123
@@ -317,6 +328,10 @@ def get_yaml_config(yaml_path):
     config_list = list(config)
     config_value = config_list[0]
     return config_value
+
+
+def rm_html_tag(txt: str):
+    return be(txt, "lxml").p.text.strip()
 
 
 def is_match(sub_str: str, text: str):
@@ -371,3 +386,205 @@ def get_project_root():
     return project_root
 
 
+class Genshin:
+    class City(Enum):
+        Invalid = -1
+        Mondstadt = 0
+        Liyue = 1
+        Inazuma = 2
+        Sumeru = 3
+        Fontaine = 4
+        Natlan = 5
+        Snezhnaya = 6
+
+
+class OperateFile:
+
+    current_path = f"{get_project_root()}/script/"
+
+    @staticmethod
+    def check_filename(filename):
+        if filename is None or filename == "":
+            return OperateFile.current_path + "/.augus_output"
+        return filename
+
+    # str 为最终合并完成的 str 至少一行
+    @staticmethod
+    def write_file(arr, filename):
+        filename = OperateFile.check_filename(filename)
+        if not len(arr) or not isinstance(arr, list) or arr[0].find("\n") == -1:
+            print("str must be one more rows: ", arr)
+            return
+        with open(filename, "w", encoding="utf-8") as file:
+            for aa in arr:
+                file.write(aa)
+
+    @staticmethod
+    def write_file_anything(anything, filename):
+        filename = OperateFile.check_filename(filename)
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(anything)
+
+    @staticmethod
+    def open_and_read(filename, callback):
+        if not len(filename):
+            filename = OperateFile.current_path + "/test"
+        if OperateFile.current_path not in filename:
+            filename = OperateFile.current_path + filename
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line.strip()
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+            OperateFile.write_file(arr_res)
+
+    @staticmethod
+    def open_and_read_no_strip(filename, callback, output):
+        if filename is None or not len(filename):
+            filename = OperateFile.current_path + "/test"
+        if OperateFile.current_path not in filename:
+            filename = OperateFile.current_path + filename
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+            OperateFile.write_file(arr_res, output)
+
+    @staticmethod
+    def open_file(filename, callback):
+        if not len(filename):
+            filename = OperateFile.current_path + "/test"
+        filename = OperateFile.current_path + filename
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line.strip()
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+
+    @staticmethod
+    def prepend_to_file(filename, new_content):
+        """
+        在文件的开头插入新的内容。
+
+        参数:
+        - filename: 要更新的文件名（字符串）
+        - new_content: 要插入到文件开头的内容（字符串）
+        """
+        # 读取原文件内容
+        try:
+            with open(filename, "r", encoding="utf-8") as file:
+                old_content = file.read()
+        except FileNotFoundError:
+            old_content = ""  # 如果文件不存在，则视为空文件
+
+        updated_content = new_content + old_content
+
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(updated_content)
+
+    @staticmethod
+    def read_one_line():
+        filename_input = OperateFile.current_path + "/test"
+        filename_output = OperateFile.current_path + "/.augus_output"
+        # 打开input.txt文件进行读取
+        with open(filename_input, "r", encoding="utf-8") as file:
+            lines = file.readlines()
+
+        # 新建一个output.txt文件，如果文件已存在，则覆盖它
+        with open(filename_output, "w", encoding="utf-8") as file:
+            for line in lines:
+                # 将当前行写入文件
+                file.write(line)
+                # 如果当前行包含'id:'，则再次写入相同的行
+                if "id:" in line:
+                    newline = line.replace("id:", "key:")
+                    arr = newline.split('"')
+                    if len(arr) == 1:
+                        arr = arr[0].split("'")
+                    newline = arr[0] + '"' + \
+                        replace_characters(arr[1]) + '"' + arr[2]
+                    file.write(newline)
+
+    @staticmethod
+    def get_md_title(filename):
+        if not len(filename):
+            return ""
+        try:
+            with open(filename, "r", encoding="utf-8") as file_handle:
+                line = file_handle.readline()
+                while line:
+                    line_str = line.strip()
+                    if line_str.startswith("# "):
+                        html_tag = line_str.find("<")
+                        new_line = line_str[2:]
+                        if html_tag != -1:
+                            new_line = line_str[2:html_tag]
+                        return new_line
+                    line = file_handle.readline()
+        except FileNotFoundError:
+            return ""
+        return ""
+
+    @staticmethod
+    def save_dict_to_file(dict_data, file_path, format=True):
+        with open(file_path, "w", encoding="utf-8") as f:
+            if format is True:
+                json.dump(dict_data, f, ensure_ascii=False, indent=4)
+            else:
+                json.dump(dict_data, f, ensure_ascii=False)
+
+    @staticmethod
+    def load_dict_from_file(file_path):
+        if os.path.exists(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        else:
+            return {}  # 如果文件不存在，返回一个空字典
+
+    @staticmethod
+    def read_file_and_truncate(file_path):
+        with open(file_path, "r", encoding="utf-8") as file:
+            # 读取文件内容，移除空行，并用空格替换
+            lines = [line.strip() for line in file if line.strip()]
+            # 用空格连接非空行，并截断到最多 500 个字符
+            content = " ".join(lines)[:500]
+            return content
+
+    @staticmethod
+    def op_one_line(txt):
+        if "frames" in txt:
+            res = txt.split("frames")[1]
+            return res
+        return txt
+
+    @staticmethod
+    def read_file_and_op_one_line(file_path):
+        with open(file_path, "r", encoding="utf-8") as file:
+            line = file.readline()
+            res = []
+            status = False
+            while line:
+                line_str = line.strip()
+                get_num = get_num_from_str(line_str)
+                for a in get_num:
+                    obj = {"status": status, "frames": a}
+                    res.append(obj)
+                    status = not status
+                print(get_num)
+                line = file.readline()
+            print(res)
+            OperateFile.save_dict_to_file(
+                res, OperateFile.current_path + "/.datafps.json")

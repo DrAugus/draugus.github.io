@@ -1,4 +1,3 @@
-import op_file
 
 
 def callback(str_one_line):
@@ -19,4 +18,4 @@ def callback(str_one_line):
 
 
 if __name__ == '__main__':
-    op_file.open_and_read('', callback)
+    utils.OperateFile.open_and_read('', callback)

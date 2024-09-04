@@ -3,7 +3,6 @@ import os
 from git import Repo
 from datetime import datetime, timedelta
 import pytz
-import op_file
 from op_md import modify_md_content
 import utils
 
@@ -91,7 +90,7 @@ for tuple_items in sorted_items:
         and not ".vitepress" in file_name
     ):
         md_files.append(file_name)
-        md_title = op_file.get_md_title(f"{repo_path}{file_name}")
+        md_title = utils.OperateFile.get_md_title(f"{repo_path}{file_name}")
         if md_title != "":
             md_dict[file_name] = {"title": md_title, "date": file_date}
 
@@ -103,7 +102,7 @@ local_dict_file = current_path + "/auto/latest.json"
 
 
 # load local data
-local_md_dict = op_file.load_dict_from_file(local_dict_file)
+local_md_dict = utils.OperateFile.load_dict_from_file(local_dict_file)
 if len(local_md_dict):
     for _local_file, _local_obj in local_md_dict.items():
         if _local_file in md_dict and _local_obj["date"] > md_dict[_local_file]["date"]:
@@ -123,7 +122,7 @@ for file, obj in md_dict.items():
     file_path = f"{current_path}/../{file}"
     if not os.path.exists(file_path):
         continue
-    content = op_file.read_file_and_truncate(file_path)
+    content = utils.OperateFile.read_file_and_truncate(file_path)
     if file.startswith("life") and file.endswith(".md"):
         link = file[4:-3]
     else:
@@ -140,10 +139,10 @@ for file, obj in md_dict.items():
 
 print(ts_card)
 
-op_file.save_dict_to_file(md_dict, local_dict_file)
+utils.OperateFile.save_dict_to_file(md_dict, local_dict_file)
 
-op_file.save_dict_to_file(
+utils.OperateFile.save_dict_to_file(
     ts_card, current_path + "/../life/.vitepress/data/recent.json"
 )
 
-# op_file.write_file(md_files)
+# utils.OperateFile.write_file(md_files)

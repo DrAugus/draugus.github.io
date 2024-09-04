@@ -7,7 +7,6 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import utils
-import op_file
 from enum import Enum
 
 ################# GLOBAL INFO ##################
@@ -102,7 +101,7 @@ def get_data_dict(gid: GameID, api_url):
 
     if USE_LOCAL_JSON:
         filename = get_local_official_json_name(gid, api_url)
-        data = op_file.load_dict_from_file(filename)
+        data = utils.OperateFile.load_dict_from_file(filename)
         data_dict = data["data"]["list"]
         return data_dict
 
@@ -523,7 +522,7 @@ def parse_wish(gid: GameID, post_id, wish_type: WishType):
         post_json_filename = get_local_official_json_name(gid, api_url_post_full)
         # # TODO temp name, if commit delete
         # post_json_filename = post_json_filename.split("_")[0] + ".json"
-        full_data = op_file.load_dict_from_file(post_json_filename)
+        full_data = utils.OperateFile.load_dict_from_file(post_json_filename)
     else:
         full_data = utils.get_url_data(api_url_post_full)
 
@@ -566,7 +565,7 @@ def get_local_official_json_name(gid: GameID, url):
 
 def write_local(gid: GameID, output):
     filename = current_path + f"/auto/hoyolab{gid.value}.json"
-    op_file.save_dict_to_file(output, filename)
+    utils.OperateFile.save_dict_to_file(output, filename)
 
 
 @utils.log_args
