@@ -43,9 +43,29 @@ LANG_KEY_EN = 'en-us'
 LANG_KEY_ZH = 'zh-cn'
 
 
-CHAR_DIR = f"{utils.get_project_root()}/game/public/image/genshin/characters"
-CHAR_FULL_DIR = f"{CHAR_DIR}/full"
-CHAR_HALF_DIR = f"{CHAR_DIR}/half"
+IMG_DIR_CHAR = f"{utils.get_project_root()}/game/public/image/genshin/characters"
+IMG_DIR_CHAR_FULL = f"{IMG_DIR_CHAR}/full"
+IMG_DIR_CHAR_HALF = f"{IMG_DIR_CHAR}/half"
+
+JSON_CHAR_FILENAME = f"{utils.get_project_root()}/game/.vitepress/data/char/2.json"
+
+OUTPUT_DIR_PREFIX = f"{utils.get_project_root()}/script/auto/output/char/2"
+
+I18N_FILENAME_PREFIX = f"{OUTPUT_DIR_PREFIX}/i18n"
+JSON_I18N_CHAR_NAME_FILENAME = f"{I18N_FILENAME_PREFIX}/char_name.json"
+JSON_I18N_CHAR_INTRO_FILENAME = f"{I18N_FILENAME_PREFIX}/char_intro.json"
+
+CHARA_DEFAULT = {
+    "id": "",
+    "name": "",
+    "prefix": "",
+    "star": 4,
+    "event_exclusive": False,
+    "intro": "",
+    "city": "Liyue",
+    "ele": "pyro",
+    "weapon": "catalyst"
+}
 
 
 def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, pageSize: int = 99):
@@ -92,12 +112,12 @@ def down_img(dir_prefix: str, name_img: str, list_img: list):
         utils.wget_file(img, filename)
         # cp img
         if idx == 0:
-            des_filename = f'{CHAR_DIR}/{name_img}{extension}'
+            des_filename = f'{IMG_DIR_CHAR}/{name_img}{extension}'
             utils.cp_file(filename, des_filename)
         elif idx == 1:
-            des_filename = f'{CHAR_FULL_DIR}/{name_img}{extension}'
+            des_filename = f'{IMG_DIR_CHAR_FULL}/{name_img}{extension}'
             utils.cp_file(filename, des_filename)
-            des_filename = f'{CHAR_HALF_DIR}/{name_img}{extension}'
+            des_filename = f'{IMG_DIR_CHAR_HALF}/{name_img}{extension}'
             utils.cp_file(filename, des_filename)
 
 
@@ -119,7 +139,7 @@ def get_char_intro(list_str: list):
     # 0,1,2 为声优 3 为 intro
     for idx, s in enumerate(list_str):
         if idx == 3:
-            return s
+            return utils.rm_html_tag(s)
     return ""
 
 
@@ -135,8 +155,13 @@ def get_chara_list(url: str):
     return data_list
 
 
-def diff_lang(lang: type.LANG = type.LANG.ZH_CN):
-    des_dir_prefix = f"{utils.get_project_root()}/script/auto/output/char/2"
+
+
+def get_chara_info(lang: type.LANG = type.LANG.EN_US):
+    # FOR ENGLISH ONLY
+    if lang != type.LANG.EN_US:
+        return
+
     if lang == type.LANG.EN_US:
         des_dir = LANG_KEY_EN
         url = attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
@@ -148,7 +173,14 @@ def diff_lang(lang: type.LANG = type.LANG.ZH_CN):
     data_list = get_chara_list(url)
     if data_list is None:
         return
-    des_dir_prefix += f"/{des_dir}"
+    img_dir_prefix = f"{OUTPUT_DIR_PREFIX}/{des_dir}"
+
+    # local info
+    i18n_name, i18n_intro = read_i18n_chara()
+    exist_i18n_name = i18n_name != {}
+    exist_i18n_intro = i18n_intro != {}
+
+    all_char_info = {}
     for per_char in data_list:
         chan_ids, name, (list_str, list_img) = handle_character(per_char)
         chara_city: utils.Genshin.City = get_city(chan_ids, lang)
@@ -156,10 +188,18 @@ def diff_lang(lang: type.LANG = type.LANG.ZH_CN):
         chara_id = utils.replace_characters(name)
         chara_name = name
 
-        # English only, get character's image
-        name_img = chara_id
-        if lang == type.LANG.EN_US:
-            down_img(des_dir_prefix, chara_id, list_img)
+        tmp_char = CHARA_DEFAULT.copy()
+        tmp_char['id'] =  chara_id
+        if exist_i18n_name:
+            tmp_char['name'] = utils.find_value_by_key (i18n_name, name)
+        tmp_char['intro'] = utils.find_value_by_key (i18n_intro, chara_intro)  if exist_i18n_intro else chara_intro
+        all_char_info[chara_id] = tmp_char
+        #
+        down_img(img_dir_prefix, chara_id, list_img)
+
+    json_all_char_info_filename = "all_char_info.json"
+    utils.OperateFile.save_dict_to_file(
+        all_char_info, f"{OUTPUT_DIR_PREFIX}/{json_all_char_info_filename}")
 
 
 def get_chara_name_and_intro(data_list: list):
@@ -174,7 +214,12 @@ def get_chara_name_and_intro(data_list: list):
     return list_chara_name, list_chara_intro
 
 
-def i18n_chara():
+def read_i18n_chara():
+    return utils.OperateFile.load_dict_from_file(JSON_I18N_CHAR_NAME_FILENAME), \
+        utils.OperateFile.load_dict_from_file(JSON_I18N_CHAR_INTRO_FILENAME)
+
+
+def write_i18n_chara():
 
     url = attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
                      CHAR_CHAN_ID_GLOBAL, LANG_KEY_EN)
@@ -207,19 +252,27 @@ def i18n_chara():
                 i: intro_zh[idx]
             })
 
-    des_dir_prefix = f"{utils.get_project_root()}/script/auto/output/char/2/i18n"
-    utils.make_dir(des_dir_prefix)
-    des_dir_char_name = f"{des_dir_prefix}/char_name.json"
-    des_dir_char_intro = f"{des_dir_prefix}/char_intro.json"
-    utils.OperateFile.save_dict_to_file(res_name, des_dir_char_name, False)
-    utils.OperateFile.save_dict_to_file(res_intro, des_dir_char_intro, False)
+    utils.OperateFile.save_dict_to_file(
+        res_name, JSON_I18N_CHAR_NAME_FILENAME, False)
+    utils.OperateFile.save_dict_to_file(
+        res_intro, JSON_I18N_CHAR_INTRO_FILENAME, False)
+
+
+def compare_local_char_json():
+    local_json = utils.OperateFile.load_dict_from_file(JSON_CHAR_FILENAME)
+    if local_json == {}:
+        return
+
+
+def get_local_json():
+    return utils.OperateFile.load_dict_from_file(JSON_CHAR_FILENAME)
 
 
 def main():
-    i18n_chara()
+    write_i18n_chara()
     # get url, get name, info, img
-    diff_lang(type.LANG.EN_US)
-    # diff_lang(type.LANG.ZH_CN)
+    get_chara_info(type.LANG.EN_US)
+    # get_chara_info(type.LANG.ZH_CN)
 
 
 if __name__ == "__main__":

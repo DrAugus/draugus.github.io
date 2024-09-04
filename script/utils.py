@@ -386,6 +386,14 @@ def get_project_root():
     return project_root
 
 
+# list is [{key: val}, {key: val}, ...]
+def find_value_by_key(foo:list, key: str):
+    for obj in foo:
+        if not isinstance(obj, dict):
+            return None
+        if key in obj:
+            return obj[key]
+
 class Genshin:
     class City(Enum):
         Invalid = -1
@@ -540,6 +548,8 @@ class OperateFile:
 
     @staticmethod
     def save_dict_to_file(dict_data, file_path, format=True):
+        directory = os.path.dirname(file_path) 
+        make_dir(directory)
         with open(file_path, "w", encoding="utf-8") as f:
             if format is True:
                 json.dump(dict_data, f, ensure_ascii=False, indent=4)
