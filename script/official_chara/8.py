@@ -1,12 +1,5 @@
-import json
-import utils
-import os
-from enum import Enum
-
-
-class LANG(Enum):
-    ZH_CN = 0
-    EN_US = 1
+from script import utils
+from script import type
 
 
 CAMP = "camp"
@@ -43,11 +36,13 @@ def get_api_url():
     id_char_global = 287
 
     api_url_camp = [
-        url_append_lang_key(url_append_chan_id(api_global, id_camp_global), lang)
+        url_append_lang_key(url_append_chan_id(
+            api_global, id_camp_global), lang)
         for lang in lang_key
     ]
     api_url_char = [
-        url_append_lang_key(url_append_chan_id(api_global, id_char_global), lang)
+        url_append_lang_key(url_append_chan_id(
+            api_global, id_char_global), lang)
         for lang in lang_key
     ]
     return {CAMP: api_url_camp, CHAR: api_url_char}
@@ -84,7 +79,8 @@ def get_camp():
             camp_icon = get_img_url(get_sExt["camp-icon"])
             camp_name = get_sExt["camp-name"]
             if len(camp_name):
-                camp_name = camp_name.replace("<br/>", " ").replace("<br>", " ")
+                camp_name = camp_name.replace(
+                    "<br/>", " ").replace("<br>", " ")
             camp_shade = get_img_url(get_sExt["camp-shade"])
             camp_channel = get_sExt["camp-channel"]
             camp_kv = get_img_url(get_sExt["camp-kv"])
@@ -115,15 +111,15 @@ def camp_js_display(info_camp):
     if len(info_camp) != 2:
         return ""
 
-    if len(info_camp[LANG.ZH_CN.value]) != len(info_camp[LANG.EN_US.value]):
+    if len(info_camp[type.LANG.ZH_CN.value]) != len(info_camp[type.LANG.EN_US.value]):
         return ""
 
-    for index, one_camp in enumerate(info_camp[LANG.EN_US.value]):
+    for index, one_camp in enumerate(info_camp[type.LANG.EN_US.value]):
         name = one_camp["camp_name"].replace(" ", "")
         name = name.replace(".", "")
         camp_dict[name] = {
             "id": one_camp["camp_name"],
-            "name": info_camp[LANG.ZH_CN.value][index]["camp_name"],
+            "name": info_camp[type.LANG.ZH_CN.value][index]["camp_name"],
         }
 
     print(camp_dict)
@@ -137,10 +133,10 @@ def camp_by_id(info_camp):
     if len(info_camp) != 2:
         return ""
 
-    if len(info_camp[LANG.ZH_CN.value]) != len(info_camp[LANG.EN_US.value]):
+    if len(info_camp[type.LANG.ZH_CN.value]) != len(info_camp[type.LANG.EN_US.value]):
         return ""
 
-    info = info_camp[LANG.EN_US.value]
+    info = info_camp[type.LANG.EN_US.value]
     for ca in info:
         name = ca["camp_name"].replace(" ", "").replace(".", "")
         camp_dict[ca["camp_channel"]] = name
@@ -210,20 +206,20 @@ def char_js_display(info_char, camp_map):
     if len(info_char) != 2:
         return ""
 
-    if len(info_char[LANG.ZH_CN.value]) != len(info_char[LANG.EN_US.value]):
+    if len(info_char[type.LANG.ZH_CN.value]) != len(info_char[type.LANG.EN_US.value]):
         return ""
 
-    for index, one_char in enumerate(info_char[LANG.EN_US.value]):
+    for index, one_char in enumerate(info_char[type.LANG.EN_US.value]):
         key = utils.replace_characters(one_char["char_name"])
         try:
             char_dict[key] = {
                 "key": one_char["char_name"],
                 "id": key,
-                "name": info_char[LANG.ZH_CN.value][index]["char_name"],
+                "name": info_char[type.LANG.ZH_CN.value][index]["char_name"],
                 "prefix": "",
                 "star": 5,
                 "event_exclusive": True,
-                "intro": info_char[LANG.ZH_CN.value][index]["char_line"],
+                "intro": info_char[type.LANG.ZH_CN.value][index]["char_line"],
                 # 这里使用英文的 camp id
                 "camp": camp_map != ""
                 and camp_map[one_char["char_chan_id"]]
@@ -238,24 +234,29 @@ def char_js_display(info_char, camp_map):
     return char_dict
 
 
-GET_CAMP = True
-# GET_CAMP = False
-GET_CHAR = True
-# GET_CHAR = False
+def main():
+    GET_CAMP = True
+    # GET_CAMP = False
+    GET_CHAR = True
+    # GET_CHAR = False
 
-info_camp = GET_CAMP and get_camp() or []
-info_char = GET_CHAR and get_char() or []
-get_all = {
-    "CAMP": info_camp,
-    "JS_CAMP": camp_js_display(info_camp),
-    "CHAR": info_char,
-    "JS_CHAR": char_js_display(info_char, camp_by_id(info_camp)),
-}
+    info_camp = GET_CAMP and get_camp() or []
+    info_char = GET_CHAR and get_char() or []
+    get_all = {
+        "CAMP": info_camp,
+        "JS_CAMP": camp_js_display(info_camp),
+        "CHAR": info_char,
+        "JS_CHAR": char_js_display(info_char, camp_by_id(info_camp)),
+    }
 
-current_path = os.path.dirname(__file__)
-filename = current_path + f"/auto/mhy{gid}char.json"
-utils.OperateFile.save_dict_to_file(get_all, filename)
+    path_prefix = f"{utils.get_project_root()}/script/auto"
+    filename = f"{path_prefix}/mhy{gid}char.json"
+    utils.OperateFile.save_dict_to_file(get_all, filename)
 
-url_info = get_api_url()
-filename = current_path + f"/auto/mhy{gid}char"
-utils.OperateFile.save_dict_to_file(url_info, filename)
+    url_info = get_api_url()
+    filename = f"{path_prefix}/mhy{gid}char"
+    utils.OperateFile.save_dict_to_file(url_info, filename)
+
+
+if __name__ == "__main__":
+    main()

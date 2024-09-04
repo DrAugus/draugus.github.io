@@ -5,13 +5,12 @@ from script import type
 
 import os
 
-
+####### just backup meaningless #######
 url_global = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/a1b1f9d3315447cc/getContentList?iAppId=32&iChanId=407&iPageSize=999&iPage=1&sLangKey=en-us&iOrder=6"
 url_zh = "https://api-takumi-static.mihoyo.com/content_v2_user/app/16471662a82d418a/getContentList?iAppId=43&iChanId=732&iPageSize=999&iPage=1&sLangKey=zh-cn&iOrder=6"
 
-
 url_city_name = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/a1b1f9d3315447cc/getContentList?iAppId=32&iChanId=414&iPageSize=50&iPage=1&sLangKey=en-us&iOrder=6"
-
+#######################################
 
 URL_GLOBAL_PREFIX = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/a1b1f9d3315447cc/getContentList"
 URL_ZH_PREFIX = "https://api-takumi-static.mihoyo.com/content_v2_user/app/16471662a82d418a/getContentList"
@@ -191,6 +190,7 @@ def i18n_chara():
         return
     name_zh, intro_zh = get_chara_name_and_intro(data_list)
 
+    # 姑且认为，中文与国际版是一一对应的
     exception_name = len(name_en) != len(name_zh) or len(name_en) == 0
     exception_intro = len(intro_en) != len(intro_zh) or len(intro_en) == 0
 
