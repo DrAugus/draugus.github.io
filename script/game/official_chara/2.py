@@ -39,9 +39,6 @@ CITY_CHAN_ID_ZH = {
     0: utils.Genshin.City.Snezhnaya
 }
 
-LANG_KEY_EN = 'en-us'
-LANG_KEY_ZH = 'zh-cn'
-
 
 IMG_DIR_CHAR = f"{utils.get_project_root()}/game/public/image/genshin/characters"
 IMG_DIR_CHAR_FULL = f"{IMG_DIR_CHAR}/full"
@@ -68,11 +65,6 @@ CHARA_DEFAULT = {
     "ele": "pyro",
     "weapon": "catalyst"
 }
-
-
-def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, pageSize: int = 99):
-    order = "&iOrder=6"
-    return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage=1&sLangKey={langKey}'
 
 
 def handle_ext(ext: str):
@@ -141,7 +133,7 @@ def get_char_intro(list_str: list):
     # 0,1,2 为声优 3 为 intro
     for idx, s in enumerate(list_str):
         if idx == 3:
-            return utils.rm_html_tag(s)
+            return utils.rm_simple_html_tag(s)
     return ""
 
 
@@ -153,6 +145,8 @@ def get_chara_list(url: str):
     if url_exception:
         print("!!! ERROR URL !!!")
         return None
+    if data['iTotal']:
+        print(f"TOTAL DATA: {data['iTotal']}")
     data_list: list = data['list']
     return data_list
 
@@ -163,16 +157,17 @@ def get_chara_info(lang: type.LANG = type.LANG.EN_US):
         return
 
     if lang == type.LANG.EN_US:
-        des_dir = LANG_KEY_EN
-        url = attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
-                         CHAR_CHAN_ID_GLOBAL, LANG_KEY_EN)
+        des_dir = utils.Game.LANG_KEY_EN
+        url = utils.Game.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
+                                    CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
     elif lang == type.LANG.ZH_CN:
-        des_dir = LANG_KEY_ZH
-        url = attach_url(URL_ZH_PREFIX, APP_ID_ZH,
-                         CHAR_CHAN_ID_ZH, LANG_KEY_ZH)
+        des_dir = utils.Game.LANG_KEY_ZH
+        url = utils.Game.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
+                                    CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
     data_list = get_chara_list(url)
     if data_list is None:
         return
+
     img_dir_prefix = f"{OUTPUT_DIR_PREFIX}/{des_dir}"
 
     # local info
@@ -209,7 +204,7 @@ def get_chara_name_and_intro(data_list: list):
     for per_char in data_list:
         chan_ids, name, (list_str, list_img) = handle_character(per_char)
         chara_intro = get_char_intro(list_str)
-        modified_intro = utils.rm_html_tag(chara_intro)
+        modified_intro = utils.rm_simple_html_tag(chara_intro)
         list_chara_name.append(name)
         list_chara_intro.append(modified_intro)
     return list_chara_name, list_chara_intro
@@ -222,15 +217,15 @@ def read_i18n_chara():
 
 def write_i18n_chara():
 
-    url = attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
-                     CHAR_CHAN_ID_GLOBAL, LANG_KEY_EN)
+    url = utils.Game.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
+                                CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
     data_list = get_chara_list(url)
     if data_list is None:
         return
     name_en, intro_en = get_chara_name_and_intro(data_list)
 
-    url = attach_url(URL_ZH_PREFIX, APP_ID_ZH,
-                     CHAR_CHAN_ID_ZH, LANG_KEY_ZH)
+    url = utils.Game.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
+                                CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
     data_list = get_chara_list(url)
     if data_list is None:
         return

@@ -52,7 +52,7 @@ jobs:
           # python hoyolab.py 1
           # python mihoyo2.py
           # python mihoyo2_old.py
-          python -m script.official_chara.2
+          python -m script.game.official_chara.2
           # python mihoyo8char.py
           # python mihoyo8js.py
           # python mihoyo8char_img.py

@@ -10,6 +10,7 @@ from functools import wraps
 from datetime import datetime
 from collections import OrderedDict
 from bs4 import BeautifulSoup as be
+from bs4 import BeautifulSoup
 
 
 def log_args(func):
@@ -330,8 +331,22 @@ def get_yaml_config(yaml_path):
     return config_value
 
 
-def rm_html_tag(txt: str):
+# 仅移除简单的
+def rm_simple_html_tag(txt: str):
     return be(txt, "lxml").p.text.strip()
+
+
+def get_all_text_from_html(html_text):
+    soup = be(html_text, 'lxml')
+    # 提取所有文本（这里使用了get_text()方法，它会获取标签内的所有文本，忽略标签本身）
+    all_text = soup.get_text(strip=True)  # strip=True会去除多余的空白符
+    return all_text
+
+
+def get_all_img_from_html(html_text):
+    soup = be(html_text, 'lxml')
+    img_src = [img['src'] for img in soup.find_all('img')]
+    return img_src
 
 
 def is_match(sub_str: str, text: str):
@@ -393,6 +408,16 @@ def find_value_by_key(foo: list, key: str):
             return None
         if key in obj:
             return obj[key]
+
+
+class Game:
+    LANG_KEY_EN = 'en-us'
+    LANG_KEY_ZH = 'zh-cn'
+
+    @staticmethod
+    def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, pageSize: int = 99, page: int = 1):
+        order = "&iOrder=6"
+        return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
 
 
 class Genshin:
