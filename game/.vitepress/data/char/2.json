@@ -904,7 +904,7 @@
     "kirara": {
         "id": "kirara",
         "name": "绮良良",
-        "prefix": "檐宇猫游 ",
+        "prefix": "檐宇猫游",
         "star": 4,
         "event_exclusive": false,
         "intro": "稻妻快递公司「狛荷屋」的送货员，长有两条好动的尾巴，是一只热爱人类社会的「猫又」。 ",
@@ -921,14 +921,14 @@
         "intro": "回声之子的年轻战士，受赐古名「乌沙博蒂」。善良执着的少女，在挫折中不断成长。",
         "city": "Natlan",
         "ele": "pyro",
-        "weapon": "catalyst"
+        "weapon": "polearm"
     },
     "mualani": {
         "id": "mualani",
         "name": "玛拉妮",
         "prefix": "",
-        "star": 4,
-        "event_exclusive": false,
+        "star": 5,
+        "event_exclusive": true,
         "intro": "「流泉之众」新生代向导中的佼佼者，想要游历纳塔，她绝对是最优秀的伙伴。",
         "city": "Natlan",
         "ele": "pyro",
@@ -938,11 +938,11 @@
         "id": "emilie",
         "name": "艾梅莉埃",
         "prefix": "",
-        "star": 4,
-        "event_exclusive": false,
+        "star": 5,
+        "event_exclusive": true,
         "intro": "枫丹知名香水设计师，优雅、迷人，又略显神秘，正如其作品一般。",
         "city": "Fontaine",
-        "ele": "pyro",
-        "weapon": "catalyst"
+        "ele": "dendro",
+        "weapon": "polearm"
     }
 }
