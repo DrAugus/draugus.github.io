@@ -10,7 +10,6 @@ from functools import wraps
 from datetime import datetime
 from collections import OrderedDict
 from bs4 import BeautifulSoup as be
-from bs4 import BeautifulSoup
 
 
 def log_args(func):
@@ -78,8 +77,16 @@ def find_date(text):
 # escape 避免传入可能引起正则错误的符号
 # 包含 start_str end_str：r'({}.*?{})'
 # 不包含 start_str：r'{}(.*?{})'
-def find_all_substr(text, start_str, end_str):
-    pattern = r"{}(.*?{})".format(re.escape(start_str), re.escape(end_str))
+def find_all_substr(text, start_str, end_str, include_start=False, include_end=False):
+    if include_start and include_end:
+        pattern = r"({}.*?{})".format(re.escape(start_str), re.escape(end_str))
+    elif include_start:
+        pattern = r"({}.*?){}".format(re.escape(start_str), re.escape(end_str))
+    elif include_end:
+        pattern = r"{}(.*?{})".format(re.escape(start_str), re.escape(end_str))
+    else:
+        pattern = r"{}(.*?){}".format(re.escape(start_str), re.escape(end_str))
+
     return re.findall(pattern, text, re.IGNORECASE)
 
 
@@ -168,6 +175,17 @@ def get_char_name(input_string):
         prefix_name, name, type = match.groups()
         result.append((prefix_name, name, type))
     return result
+
+
+def remove_dict_duplicates(dicts, key):
+    seen = {}
+    unique_dicts = []
+    for d in dicts:
+        k = d[key]
+        if k not in seen:
+            seen[k] = d
+            unique_dicts.append(d)
+    return unique_dicts
 
 
 def get_only_name(character_info: list) -> list:
@@ -419,8 +437,132 @@ class Game:
         order = "&iOrder=6"
         return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
 
+    @staticmethod
+    # match "prefix"name(ele)
+    # e.g. "Plane of Euthymia" Raiden Shogun (Electro)
+    def match_en_char_prefix_name_ele(text):
+        pattern = r'"([^"]+)"\s*([\w\s]+?)\s*\(\s*([^()]+)\s*\)'
+        match = re.findall(pattern, text)
+        res = []
+        for m in match:
+            prefix, name, ele = m
+            res.append({
+                'prefix': prefix,
+                'name': name,
+                'ele': ele
+            })
+        if len(res) > 0:
+            res = remove_dict_duplicates(res, 'name')
+        return res
 
-class Genshin:
+    @staticmethod
+    # match xxx·xxx(xx)
+    # e.g.「一心净土·雷电将军(雷)」
+    def match_zh_char_prefix_name_ele(text):
+        matches = find_all_substr(text, '「', '」')
+        res = []
+        for m in matches:
+            condition_brackets = '(' in m or '（' in m
+            condition_separation_dot = '·' in m
+            if not condition_brackets or not condition_separation_dot:
+                continue
+
+            if '(' in m:
+                brackets = '('
+            elif '（' in m:
+                brackets = '（'
+
+            split_separation_dot = m.split('·')
+            prefix = split_separation_dot[0].strip()
+            name_and_ele = split_separation_dot[1]
+            split_brackets = name_and_ele.split(brackets)
+            name = split_brackets[0].strip()
+            ele = split_brackets[1].strip()[:-1]
+
+            res.append({
+                'prefix': prefix,
+                'name': name,
+                'ele': ele
+            })
+
+        if len(res) > 0:
+            res = remove_dict_duplicates(res, 'name')
+        return res
+
+    @staticmethod
+    def get_duration(text):
+        arr = []
+
+        def got_dur(start: str, end: str):
+            if start != None and end != None:
+                arr.append(
+                    {"start_time": format_date(
+                        start), "end_time": format_date(end)}
+                )
+
+        # time_match = re.search(
+        #     r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}(:\d{1,2})?)", text
+        # )
+        time_match = find_date(text)
+        if len(time_match) >= 2:
+            start_time = time_match[0]
+            end_time = time_match[1]
+            got_dur(start_time, end_time)
+        elif len(time_match):
+            version_match = re.search(
+                r"Version (\d+\.\d+)", text, re.IGNORECASE)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time = time_match[0]
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+
+        # 大版本更新时
+        # update – 2024/01/17 11:59:00(server time)
+        if "update" in text and "server time" in text:
+            version_match = re.search(
+                r"Version (\d+\.\d+)", text, re.IGNORECASE)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time_match = re.search(
+                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", text
+            )
+            if time_match:
+                time = time_match.group(1)
+            else:
+                time = None
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+
+        # 小版本更新时
+        # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
+        if "Event Duration" in text and "server time" in text:
+            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
+            pattern = r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})"
+            # 使用正则表达式搜索所有匹配的时间
+            matches = re.findall(pattern, text)
+            # 检查是否找到了两个匹配的时间，表示开始和结束时间
+            if matches and len(matches) == 2:
+                start_time, end_time = matches
+                got_dur(start_time, end_time)
+                # print(f"start_time:{start_time} end_time:{end_time}")
+
+        got_dur(None, None)
+
+        return arr
+
+
+class Genshin(Game):
     class City(Enum):
         Invalid = -1
         Mondstadt = 0
@@ -430,6 +572,19 @@ class Genshin:
         Fontaine = 4
         Natlan = 5
         Snezhnaya = 6
+
+    @staticmethod
+    def get_wish_name_en(text):
+        start_tag = 'Event Wish "'
+        end_tag = '" - Boosted Drop Rate'
+        return find_all_substr(text, start_tag, end_tag)
+
+    @staticmethod
+    def get_wish_name_zh(text):
+        matches = find_all_substr(text, '「', '」')
+        if len(matches) != 1:
+            return ""
+        return matches[0]
 
 
 class OperateFile:

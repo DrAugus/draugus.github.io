@@ -134,7 +134,8 @@ def get_warp_list(gid: GameID, data_dict):
 
             pattern_char = "5-star character"
             pattern_char2 = "Character Event Warp"
-            match_char = re.search(pattern_char, obj["post"]["subject"], re.IGNORECASE)
+            match_char = re.search(
+                pattern_char, obj["post"]["subject"], re.IGNORECASE)
             match_char2 = re.search(
                 pattern_char2, obj["post"]["subject"], re.IGNORECASE
             )
@@ -198,7 +199,8 @@ def get_post_id(gid: GameID, warp_arr):
                 "zh-cn"
             ]
             img_url = (
-                len(get_warp["image_list"]) and get_warp["image_list"][0]["url"] or ""
+                len(get_warp["image_list"]
+                    ) and get_warp["image_list"][0]["url"] or ""
             )
             post_id = get_warp["post"]["post_id"]
 
@@ -209,12 +211,13 @@ def get_post_id(gid: GameID, warp_arr):
             print("img_url", img_url)
             print("post_id", post_id)
 
-            img_type = len(img_url) and img_url[img_url.rfind(".", 0) :] or ""
+            img_type = len(img_url) and img_url[img_url.rfind(".", 0):] or ""
             print("img_type", img_type)
             image_times = "1"
             modify_subject = utils.replace_characters(subject.split(":")[0])
             if gid == GameID.ZZZ:
-                modify_subject = utils.replace_characters(subject.split("Channel")[0])
+                modify_subject = utils.replace_characters(
+                    subject.split("Channel")[0])
             if not modify_subject.endswith("_"):
                 modify_subject += "_"
             img_type = ".jpg"
@@ -248,7 +251,8 @@ def get_arr_str_event_warp_name(gid: GameID, text):
 
     if gid == GameID.Genshin:
         match_substr = ["Character Event Warp", "Event Wish"]
-        match_pattern = [r'"([^"]*)" Character Event Warp', r'Event Wish "([^"]*)"']
+        match_pattern = [r'"([^"]*)" Character Event Warp',
+                         r'Event Wish "([^"]*)"']
     elif gid == GameID.HSR:
         match_substr = ["Character Event Warp"]
         match_pattern = [
@@ -297,7 +301,7 @@ def re_find(text_full: str, find_tag: str) -> list:
         find_index = utils.find_nth_occurrence_2(vv, find_tag, ")", 3)
         start_index = vv.find(find_tag)
         if find_index != -1:
-            got_new_str = vv[start_index + len(find_tag) : find_index]
+            got_new_str = vv[start_index + len(find_tag): find_index]
             break
     if got_new_str != "":
         got_new_str = got_new_str.replace("\n", "")
@@ -422,7 +426,8 @@ def get_wish_stars(gid: GameID, text, wish_type: WishType, rarity: Rarity):
                 end_str = "will be boosted"
 
     def append_match(find_des):
-        arr.extend(utils.find_all_substr(find_des, start_str, end_str))
+        arr.extend(utils.find_all_substr(
+            find_des, start_str, end_str, False, True))
 
     utils.got_insert_info(text, append_match)
 
@@ -432,7 +437,8 @@ def get_wish_stars(gid: GameID, text, wish_type: WishType, rarity: Rarity):
             list_wish_info.extend([char for char in modify_char(one) if char])
         if not len(list_wish_info):
             for one in arr:
-                list_wish_info.extend([char for char in modify_char2(one) if char])
+                list_wish_info.extend(
+                    [char for char in modify_char2(one) if char])
     elif wish_type == WishType.WEAPON:
         for one in arr:
             list_wish_info.extend([char for char in modify_char2(one) if char])
@@ -494,17 +500,20 @@ def get_info_by_insert(gid: GameID, post_id, wish_type: WishType, clean_text):
         "image": [1, 1] if len(character_info_only_name) == 2 else [1],
         "shortName": character_info_only_name,
         "start": (
-            duration_text[0]["start_time"] + " +0800" if len(duration_text) else ""
+            duration_text[0]["start_time"] +
+            " +0800" if len(duration_text) else ""
         ),
         "end": duration_text[0]["end_time"] + " +0800" if len(duration_text) else "",
         "version": "xxx",
         "wish5star": (
-            [utils.replace_characters(char) for char in character_info_only_name]
+            [utils.replace_characters(char)
+             for char in character_info_only_name]
             if wish_type == WishType.CHARACTER
             else character_info_only_name
         ),
         "wish4star": (
-            [utils.replace_characters(char) for char in character_info_only_name4]
+            [utils.replace_characters(char)
+             for char in character_info_only_name4]
             if wish_type == WishType.CHARACTER
             else character_info_only_name4
         ),
@@ -519,7 +528,8 @@ def parse_wish(gid: GameID, post_id, wish_type: WishType):
     api_url_post_full = get_post_url(post_id)
 
     if USE_LOCAL_JSON:
-        post_json_filename = get_local_official_json_name(gid, api_url_post_full)
+        post_json_filename = get_local_official_json_name(
+            gid, api_url_post_full)
         # # TODO temp name, if commit delete
         # post_json_filename = post_json_filename.split("_")[0] + ".json"
         full_data = utils.OperateFile.load_dict_from_file(post_json_filename)
