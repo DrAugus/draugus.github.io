@@ -7,22 +7,22 @@ on:
       - dev-game
     paths:
       - "script/requirements.txt"
-      - ".github/workflows/get-mhy-wish.yml"
+      - ".github/workflows/get-mhy-wish-old.yml"
       - "script/mihoyo*"
       - "script/miyoushe.py"
       - "script/hoyolab.py"
-      - "script/official*"
+      - "script/utils.py"
   pull_request:
     types: [opened, synchronize]
     branches:
       - master
     paths:
       - "script/requirements.txt"
-      - ".github/workflows/get-mhy-wish.yml"
+      - ".github/workflows/get-mhy-wish-old.yml"
       - "script/mihoyo*"
       - "script/miyoushe.py"
       - "script/hoyolab.py"
-      - "script/official*"
+      - "script/utils.py"
   schedule:
     # This is run at midnight UTC on Monday, Tuesday and Wednesday
     - cron: "0 16 * * 1-3"

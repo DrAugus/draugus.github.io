@@ -17,6 +17,7 @@ jobs:
         name: pull-request
         with:
           destination_branch: master
-          pr_title: "pulling ${{ github.ref }} into master"
-          pr_body: "👑 *An automated PR* for ${{ github.ref }}"
+          # diff ref and hear_ref
+          pr_title: "pulling ${{ github.head_ref }} into master"
+          pr_body: "👑 *An automated PR* for ${{ github.head_ref }}"
           github_token: ${{ secrets.DEPLOY_GH }}

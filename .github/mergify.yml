@@ -9,13 +9,13 @@ pull_request_rules:
   - name: automatic merge for dependabot/Renovate/Requires.io pull requests
     conditions:
       - or:
-        - and:
-          - author=dependabot[bot]
-        - and:
-          - title~=^\[requires.io\]
-          - head~=^requires-io      
-        - and:
-          - author=renovate[bot]              
+          - and:
+              - author=dependabot[bot]
+          - and:
+              - title~=^\[requires.io\]
+              - head~=^requires-io
+          - and:
+              - author=renovate[bot]
       # PR is not a draft
       - -draft
       # condition
@@ -28,30 +28,25 @@ pull_request_rules:
       # https://github.com/Mergifyio/mergify/discussions/5119
       # https://github.com/Mergifyio/mergify/discussions/5120
       - or:
-        # deploy
-        - files~=^life/
-        - files~=^game/          
-        - files=".github/workflows/deploy-life.yml"
-        - files=".github/workflows/deploy-game.yml"          
-        - files=pnpm-lock.yaml
-        # py
-        - files="script/requirements.txt"
-        - files=".github/workflows/get-mhy-wish.yml"
-        - files=".github/workflows/life-recent-update.yml"          
-        - files~=^script/mihoyo
-        - files="script/miyoushe.py"
-        - files="script/hoyolab.py"        
+          # workflows
+          - files~=^.github/workflows/
+          # deploy
+          - files~=^life/
+          - files~=^game/
+          - files=pnpm-lock.yaml
+          # py
+          - files~=^script/
       # deploy life
       - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
       - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
       - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
       - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
       - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-      - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)        
+      - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
       # deploy game
-      - -check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
-      - -check-neutral=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
-      - -check-pending=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+      - -check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+      - -check-neutral=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+      - -check-pending=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
       # py-life-recent
       - -check-failure=py-life-recent
       - -check-neutral=py-life-recent
@@ -59,7 +54,7 @@ pull_request_rules:
       # py-game-wish
       - -check-failure=py-game-wish
       - -check-neutral=py-game-wish
-      - -check-pending=py-game-wish                        
+      - -check-pending=py-game-wish
     actions:
       merge:
         method: merge
@@ -95,28 +90,28 @@ pull_request_rules:
   #     - or:
   #       # deploy
   #       - files~=^life/
-  #       - files~=^game/          
+  #       - files~=^game/
   #       - files=".github/workflows/deploy-life.yml"
-  #       - files=".github/workflows/deploy-game.yml"          
+  #       - files=".github/workflows/deploy-game.yml"
   #       - files=pnpm-lock.yaml
   #       # py
   #       - files="script/requirements.txt"
   #       - files=".github/workflows/get-mhy-wish.yml"
-  #       - files=".github/workflows/life-recent-update.yml"          
+  #       - files=".github/workflows/life-recent-update.yml"
   #       - files~=^script/mihoyo
   #       - files="script/miyoushe.py"
-  #       - files="script/hoyolab.py"        
+  #       - files="script/hoyolab.py"
   #     # deploy life
   #     - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
   #     - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
   #     - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, life)
   #     - -check-failure=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
   #     - -check-neutral=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-  #     - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)        
+  #     - -check-pending=deploy-life (ubuntu-latest, 16, life/.vitepress/dist, augusmeow, augusmeow.github.io)
   #     # deploy game
-  #     - -check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
-  #     - -check-neutral=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
-  #     - -check-pending=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)   
+  #     - -check-failure=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+  #     - -check-neutral=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
+  #     - -check-pending=deploy-game (ubuntu-latest, 16, game/.vitepress/dist, augusmeow, game)
   #     # py-life-recent
   #     - -check-failure=py-life-recent
   #     - -check-neutral=py-life-recent
@@ -124,7 +119,7 @@ pull_request_rules:
   #     # py-game-wish
   #     - -check-failure=py-game-wish
   #     - -check-neutral=py-game-wish
-  #     - -check-pending=py-game-wish  
+  #     - -check-pending=py-game-wish
   #   actions:
   #     merge:
   #       method: merge
