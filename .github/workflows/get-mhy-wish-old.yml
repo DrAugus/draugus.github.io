@@ -56,6 +56,15 @@ jobs:
           python mihoyo2_old.py
           python mihoyo8js.py
           python mihoyo8char_img.py
+
+  commit-and-pr:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./script
+    needs: py-game-wish-old
+    if: github.event_name != 'pull_request'
+    steps:
       - name: Commit files
         id: commit
         run: |

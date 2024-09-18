@@ -34,9 +34,6 @@ on:
 jobs:
   py-game-wish:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./script
     steps:
       - name: Checkout repository content
         uses: actions/checkout@v4
@@ -53,6 +50,12 @@ jobs:
           python -m script.game.official_chara.2
           python -m script.game.official_chara.8
           python -m script.game.official_wish.2 1
+
+  commit-and-pr:
+    runs-on: ubuntu-latest
+    needs: py-game-wish
+    if: github.event_name != 'pull_request'
+    steps:
       - name: Commit files
         id: commit
         run: |
