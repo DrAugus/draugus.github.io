@@ -53,6 +53,10 @@ def get_url_data(api_url):
     return data
 
 
+def is_subset(sub: list, all: list):
+    return set(sub).issubset(set(all))
+
+
 def str_to_dict(text):
     try:
         json_str = text
@@ -442,7 +446,7 @@ class Game:
     LANG_KEY_ZH = 'zh-cn'
 
     @staticmethod
-    def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, pageSize: int = 99, page: int = 1):
+    def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, page: int = 1, pageSize: int = 99):
         order = "&iOrder=6"
         return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
 
@@ -500,6 +504,11 @@ class Game:
 
         if len(res) > 0:
             res = remove_dict_duplicates(res, 'name')
+
+        if len(res) == 4:
+            for idx, obj in enumerate(res):
+                obj['star'] = 5 if idx == 0 else 4
+
         return res
 
     @staticmethod

@@ -39,6 +39,10 @@ CHAN_ID_ZH = 719
 OUTPUT_DIR_PREFIX = f"{utils.get_project_root()}/script/auto/output/wish/2"
 
 OFFLINE = True
+GET_MORE_WISH = False
+MORE_WISH_PAGE = 5
+
+JSON_LOCAL_CHAR_FILENAME = f"{utils.get_project_root()}/game/.vitepress/data/char/2.json"
 
 #######################################
 parser = argparse.ArgumentParser(description="Process some integers.")
@@ -77,6 +81,21 @@ def get_wish_list(url: str):
     return data_list
 
 
+def get_more_wish_list(lang: utils.LANG):
+    more_list = []
+    for idx in range(1, MORE_WISH_PAGE+1):
+        if lang == utils.LANG.ZH_CN:
+            url = utils.Game.attach_url(
+                URL_ZH_PREFIX, APP_ID_ZH, CHAN_ID_ZH, utils.Game.LANG_KEY_ZH, idx)
+        elif lang == utils.LANG.EN_US:
+            url = utils.Game.attach_url(
+                URL_GLOBAL_PREFIX, APP_ID_GLOBAL, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN, idx)
+
+        data_list = get_wish_list(url)
+        more_list.extend(data_list)
+    return more_list
+
+
 def wish_filter(lang: utils.LANG = utils.LANG.ZH_CN):
     if lang == utils.LANG.ZH_CN:
         url = utils.Game.attach_url(
@@ -86,20 +105,24 @@ def wish_filter(lang: utils.LANG = utils.LANG.ZH_CN):
             URL_GLOBAL_PREFIX, APP_ID_GLOBAL, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
 
     data_list = get_wish_list(url)
+    if GET_MORE_WISH:
+        data_list = get_more_wish_list(lang)
     if data_list is None:
         return
     list_content = []
     for obj in data_list:
         condition_obj = 'sTitle' in obj and 'sContent' in obj
         title = obj['sTitle']
+        content = obj['sContent']
 
         if lang == utils.LANG.ZH_CN:
             condition_title = isinstance(title, str) and '祈愿' in title
+            condition_content = '集录祈愿' not in content
         elif lang == utils.LANG.EN_US:
             condition_title = isinstance(title, str) and 'Wishes' in title
+            condition_content = 'Chronicled Wish' not in content
 
-        if condition_obj and condition_title:
-            content = obj['sContent']
+        if condition_obj and condition_title and condition_content:
             modified_content = utils.get_all_text_from_html(content)
             imgs = utils.get_all_img_from_html(content)
             tmp = {
@@ -135,6 +158,81 @@ def append_chara_more_info():
 # version: "4.7",
 # wishName: ["流霆贯夜", "敕诫枢谋"],
 # url: ["?", "?"]
+# 合并中英文 祈愿信息
+ # 以英文版官网为底
+def combine_wish_info(wish_info_zh, wish_info_en):
+    local_chara_info = utils.OperateFile.load_dict_from_file(
+        JSON_LOCAL_CHAR_FILENAME)
+
+    def rm_epitome(wish_name_list: list):
+        return [wish_name for wish_name in wish_name_list if wish_name != "Epitome Invocation"]
+
+    combine_info = []
+    for per_wish in wish_info_en:
+
+        if len(per_wish['wish_name']) == 0:
+            continue
+
+        wish_name_en = rm_epitome(per_wish['wish_name'])
+        wish_name_en_lower = [utils.replace_characters(
+            name) for name in wish_name_en if name]
+        wish_start = per_wish['wish_duration'][0]['start_time']
+        wish_end = per_wish['wish_duration'][0]['end_time']
+        wish_version = per_wish['version'][0]
+
+        wish5star = []
+        wish4star = []
+        short_name = []
+
+        chara_zh_by_chara_en = []
+        for chara_en_obj in per_wish['chara']:
+            chara_en = chara_en_obj['name']
+            chara_en_lower = utils.replace_characters(chara_en)
+
+            chara_zh = local_chara_info[chara_en_lower]['name']
+            chara_zh_by_chara_en.append(chara_zh)
+
+            for per_wish_zh in wish_info_zh:
+                for chara_zh_obj in per_wish_zh['chara']:
+                    if chara_zh_obj['name'] == chara_zh:
+                        if chara_zh_obj['star'] == 4:
+                            if chara_en_lower not in wish4star:
+                                wish4star.append(chara_en_lower)
+                        elif chara_zh_obj['star'] == 5:
+                            if chara_en_lower not in wish5star:
+                                wish5star.append(chara_en_lower)
+                            if chara_en not in short_name:
+                                short_name.append(chara_en)
+
+        wish_name_zh = []
+        if len(chara_zh_by_chara_en) != 0:
+            for per_wish_zh in wish_info_zh:
+                chara_zh_by_chara_zh = [
+                    obj['name'] for obj in per_wish_zh['chara']
+                ]
+                if utils.is_subset(chara_zh_by_chara_zh, chara_zh_by_chara_en):
+                    wish_name_zh.append(per_wish_zh["wish_name"])
+
+        per_obj = {
+            'name': wish_name_en,
+            'nameLower': wish_name_en_lower,
+            # todo 读取 local 数据，动态修改 image
+            'image': 'todo',
+            'shortName': short_name,
+            'start': wish_start,
+            'end': wish_end,
+            'wish5star': wish5star,
+            'wish4star': wish4star,
+            'version': wish_version,
+            'wishName': wish_name_zh,
+            'url': ["?", "?"]
+        }
+        combine_info.append(per_obj)
+
+    utils.OperateFile.save_dict_to_file(
+        combine_info, f"{OUTPUT_DIR_PREFIX}/combine_wish_info.json")
+
+
 def format_wish():
     wish_tmp_file_zh = get_output_wish_tmp_filename(utils.LANG.ZH_CN)
     wish_tmp_file_en = get_output_wish_tmp_filename(utils.LANG.EN_US)
@@ -186,11 +284,16 @@ def format_wish():
         title = obj['title']
         wish_version = utils.Game.get_version(title)
 
+        img = obj['img']
+        if len(img) >= 2:
+            img = img[:2]
+
         dict_en = {
             'wish_name': wish_name,
             'chara': chara,
             'wish_duration': wish_duration,
-            'version': wish_version
+            'version': wish_version,
+            'img': img,
         }
         wish_info_en.append(dict_en)
 
@@ -198,6 +301,12 @@ def format_wish():
         wish_info_zh, get_output_wish_info_filename(utils.LANG.ZH_CN))
     utils.OperateFile.save_dict_to_file(
         wish_info_en, get_output_wish_info_filename(utils.LANG.EN_US))
+
+    if len(wish_info_zh) == 0 or len(wish_info_en) == 0:
+        print("JSON IS NONE!!!")
+        return
+
+    combine_wish_info(wish_info_zh, wish_info_en)
 
 
 def main():
