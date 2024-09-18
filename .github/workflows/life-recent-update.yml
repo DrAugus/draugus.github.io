@@ -55,6 +55,12 @@ jobs:
       - name: Execute Python script
         run: |
           python latest.py 1
+
+  commit-and-pr:
+    runs-on: ubuntu-latest  
+    needs: py-life-recent
+    if: github.event_name != 'pull_request'
+    steps:
       - name: Commit files
         id: commit
         run: |

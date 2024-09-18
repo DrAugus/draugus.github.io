@@ -1,4 +1,4 @@
-name: Get mhy wish new
+name: Get mhy wish old
 on:
   push:
     branches:
@@ -32,11 +32,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  py-game-wish-new:
+  py-game-wish-old:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./script
+    defaults:
+      run:
+        working-directory: ./script
     steps:
       - name: Checkout repository content
         uses: actions/checkout@v4
@@ -47,12 +47,15 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r script/requirements.txt
+          pip install -r requirements.txt
       - name: Execute Python script
         run: |
-          python -m script.game.official_chara.2
-          python -m script.game.official_chara.8
-          python -m script.game.official_wish.2 1
+          python miyoushe.py
+          python hoyolab.py 1
+          python mihoyo2.py
+          python mihoyo2_old.py
+          python mihoyo8js.py
+          python mihoyo8char_img.py
       - name: Commit files
         id: commit
         run: |
@@ -81,7 +84,7 @@ jobs:
           commit-message: "feat: auto get mhy wish"
           committer: GitHub <noreply@github.com>
           author: GitHub <noreply@github.com>
-          branch: create-pull-request/patch-wish-new
+          branch: create-pull-request/patch
           base: master
           labels: |
             report
