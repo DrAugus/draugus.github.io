@@ -2,16 +2,16 @@
     "title": "",
     "items": [
         {
+            "title": "Git",
+            "desc": "Git sol git 撤销 modified的文件 撤销工作区（working director",
+            "link": "/code/version-ctrl/git",
+            "date": "2024-07-18"
+        },
+        {
             "title": "cmd",
             "desc": "cmd 系统常用 system base info uname uname -a uname -m",
             "link": "/code/os/linux/command",
             "date": "2024-05-21"
-        },
-        {
-            "title": "Git",
-            "desc": "Git sol does not point to a valid object 详细描述 git",
-            "link": "/code/version-ctrl/git",
-            "date": "2024-07-18"
         },
         {
             "title": "苹果究竟怎么了",
