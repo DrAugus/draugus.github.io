@@ -12,6 +12,11 @@ from collections import OrderedDict
 from bs4 import BeautifulSoup as be
 
 
+class LANG(Enum):
+    ZH_CN = 0
+    EN_US = 1
+
+
 def log_args(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -22,6 +27,10 @@ def log_args(func):
         return func(*args, **kwargs)
 
     return wrapper
+
+
+def strip_str_list(info: list):
+    return [v.strip() for v in info if v]
 
 
 def is_1d_array(arr):
@@ -438,6 +447,10 @@ class Game:
         return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
 
     @staticmethod
+    def i18n_filename(lang: LANG = LANG.ZH_CN):
+        return lang.name.lower()
+
+    @staticmethod
     # match "prefix"name(ele)
     # e.g. "Plane of Euthymia" Raiden Shogun (Electro)
     def match_en_char_prefix_name_ele(text):
@@ -488,6 +501,12 @@ class Game:
         if len(res) > 0:
             res = remove_dict_duplicates(res, 'name')
         return res
+
+    @staticmethod
+    def get_version(text):
+        start_tag = 'Version'
+        end_tag = 'Event'
+        return strip_str_list(find_all_substr(text, start_tag, end_tag))
 
     @staticmethod
     def get_duration(text):

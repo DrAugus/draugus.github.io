@@ -1,5 +1,4 @@
 from script import utils
-from script import type
 
 
 CAMP = "camp"
@@ -111,15 +110,15 @@ def camp_js_display(info_camp):
     if len(info_camp) != 2:
         return ""
 
-    if len(info_camp[type.LANG.ZH_CN.value]) != len(info_camp[type.LANG.EN_US.value]):
+    if len(info_camp[utils.LANG.ZH_CN.value]) != len(info_camp[utils.LANG.EN_US.value]):
         return ""
 
-    for index, one_camp in enumerate(info_camp[type.LANG.EN_US.value]):
+    for index, one_camp in enumerate(info_camp[utils.LANG.EN_US.value]):
         name = one_camp["camp_name"].replace(" ", "")
         name = name.replace(".", "")
         camp_dict[name] = {
             "id": one_camp["camp_name"],
-            "name": info_camp[type.LANG.ZH_CN.value][index]["camp_name"],
+            "name": info_camp[utils.LANG.ZH_CN.value][index]["camp_name"],
         }
 
     print(camp_dict)
@@ -133,10 +132,10 @@ def camp_by_id(info_camp):
     if len(info_camp) != 2:
         return ""
 
-    if len(info_camp[type.LANG.ZH_CN.value]) != len(info_camp[type.LANG.EN_US.value]):
+    if len(info_camp[utils.LANG.ZH_CN.value]) != len(info_camp[utils.LANG.EN_US.value]):
         return ""
 
-    info = info_camp[type.LANG.EN_US.value]
+    info = info_camp[utils.LANG.EN_US.value]
     for ca in info:
         name = ca["camp_name"].replace(" ", "").replace(".", "")
         camp_dict[ca["camp_channel"]] = name
@@ -206,20 +205,20 @@ def char_js_display(info_char, camp_map):
     if len(info_char) != 2:
         return ""
 
-    if len(info_char[type.LANG.ZH_CN.value]) != len(info_char[type.LANG.EN_US.value]):
+    if len(info_char[utils.LANG.ZH_CN.value]) != len(info_char[utils.LANG.EN_US.value]):
         return ""
 
-    for index, one_char in enumerate(info_char[type.LANG.EN_US.value]):
+    for index, one_char in enumerate(info_char[utils.LANG.EN_US.value]):
         key = utils.replace_characters(one_char["char_name"])
         try:
             char_dict[key] = {
                 "key": one_char["char_name"],
                 "id": key,
-                "name": info_char[type.LANG.ZH_CN.value][index]["char_name"],
+                "name": info_char[utils.LANG.ZH_CN.value][index]["char_name"],
                 "prefix": "",
                 "star": 5,
                 "event_exclusive": True,
-                "intro": info_char[type.LANG.ZH_CN.value][index]["char_line"],
+                "intro": info_char[utils.LANG.ZH_CN.value][index]["char_line"],
                 # 这里使用英文的 camp id
                 "camp": camp_map != ""
                 and camp_map[one_char["char_chan_id"]]

@@ -1,7 +1,6 @@
 # 2 means genshin
 
 from script import utils
-from script import type
 
 import os
 
@@ -115,10 +114,10 @@ def down_img(dir_prefix: str, name_img: str, list_img: list):
             utils.cp_file(filename, des_filename)
 
 
-def get_city(chan_ids: list, lang: type.LANG = type.LANG.ZH_CN):
-    if lang == type.LANG.EN_US:
+def get_city(chan_ids: list, lang: utils.LANG = utils.LANG.ZH_CN):
+    if lang == utils.LANG.EN_US:
         city_chan_id_dict = CITY_CHAN_ID_GLOBAL
-    elif lang == type.LANG.ZH_CN:
+    elif lang == utils.LANG.ZH_CN:
         city_chan_id_dict = CITY_CHAN_ID_ZH
     for id_str in chan_ids:
         id = int(id_str)
@@ -151,16 +150,16 @@ def get_chara_list(url: str):
     return data_list
 
 
-def get_chara_info(lang: type.LANG = type.LANG.EN_US):
+def get_chara_info(lang: utils.LANG = utils.LANG.EN_US):
     # FOR ENGLISH ONLY
-    if lang != type.LANG.EN_US:
+    if lang != utils.LANG.EN_US:
         return
 
-    if lang == type.LANG.EN_US:
+    if lang == utils.LANG.EN_US:
         des_dir = utils.Game.LANG_KEY_EN
         url = utils.Game.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
                                     CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
-    elif lang == type.LANG.ZH_CN:
+    elif lang == utils.LANG.ZH_CN:
         des_dir = utils.Game.LANG_KEY_ZH
         url = utils.Game.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
                                     CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
@@ -277,8 +276,8 @@ def compare_local_char_json():
 def main():
     write_i18n_chara()
     # get url, get name, info, img
-    get_chara_info(type.LANG.EN_US)
-    # get_chara_info(type.LANG.ZH_CN)
+    get_chara_info(utils.LANG.EN_US)
+    # get_chara_info(utils.LANG.ZH_CN)
     compare_local_char_json()
 
 
