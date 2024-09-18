@@ -4,7 +4,6 @@ import json
 import requests
 from bs4 import BeautifulSoup
 import re
-import op_file
 import utils
 import os
 
@@ -249,4 +248,4 @@ for i in range(len(post_id)):
 
 current_path = os.path.dirname(__file__)
 filename = current_path + "/auto/mhy2old.json"
-op_file.save_dict_to_file(all_info, filename)
+utils.OperateFile.save_dict_to_file(all_info, filename)

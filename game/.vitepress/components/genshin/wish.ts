@@ -827,6 +827,50 @@ export const WISH: WishAll = {
       version: "4.7",
       wishName: ["柔柔海露心", "众水的颂诗"],
       url: ["?", "?"]
+    }, {
+      name: ["Romaritime Meluserenity", "Chanson of Many Waters"],
+      image: [2, 3],
+      shortName: ["Navia", "Nilou"],
+      start: "2024/07/17 11:00:00 +0800",
+      end: "2024/08/06 17:59:00 +0800",
+      wish5star: ["navia", "nilou"],
+      wish4star: ["kirara", "kaveh", "ningguang"],
+      version: "4.8",
+      wishName: ["刺玫的铭誓", "翩舞歈莲"],
+      url: ["?", "?"]
+    }, {
+      name: ["Ambrosial Essence", "Discerner of Enigmas"],
+      image: [1, 4],
+      shortName: ["Emilie", "Yelan"],
+      start: "2024/08/06 18:00:00 +0800",
+      end: "2024/08/27 14:59:00 +0800",
+      wish5star: ["emilie", "yelan"],
+      wish4star: ["yanfei", "xiangling", "razor"],
+      version: "4.8",
+      wishName: ["凝露轻芳", "素霓伣天"],
+      url: ["?", "?"]
+    }, {
+      name: ["Sharktacular Surfari", "Leaves in the Wind"],
+      image: [1, 5],
+      shortName: ["Mualani", "Kaedehara Kazuha"],
+      start: "2024/08/28 11:00:00 +0800",
+      end: "2024/09/17 17:59:00 +0800",
+      wish5star: ["mualani", "kaedehara_kazuha"],
+      wish4star: ["kachina", "xinyan", "bennett"],
+      version: "5.0",
+      wishName: ["鲨鲨逐浪游", "叶落风随"],
+      url: ["?", "?"]
+    }, {
+      name: ["Seeker of Flame-Wrought Secrets", "Reign of Serenity"],
+      image: [1, 5],
+      shortName: ["Kinich", "Raiden Shogun"],
+      start: "2024/09/17 18:00:00 +0800",
+      end: "2024/10/08 14:59:00 +0800",
+      wish5star: ["kinich", "raiden_shogun"],
+      wish4star: ["thoma", "kujou_sara", "chevreuse"],
+      version: "5.0",
+      wishName: ["巡火猎秘", "影寂天下人"],
+      url: ["?", "?"]
     },
   ],
   weapons: [

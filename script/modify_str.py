@@ -1,4 +1,3 @@
-import op_file
 
 
 # 逐行读取 按空格分割 取第一部分
@@ -58,12 +57,12 @@ def get_some(line_str):
     # return res
 
 
-op_file.open_file("", get_some)
+utils.OperateFile.open_file("", get_some)
 
 print(res)
 print(str_res)
 
-op_file.write_file(res)
+utils.OperateFile.write_file(res)
 
 
 if __name__ == "__main__":

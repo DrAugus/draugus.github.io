@@ -4,8 +4,6 @@ import pandas as pd
 from openpyxl import load_workbook
 from collections import OrderedDict
 
-import op_file
-
 current_path = os.path.dirname(__file__)
 
 
@@ -80,7 +78,7 @@ def read_excel():
 
     df.to_excel(current_path + 'new_mod.xlsx')
 
-    op_file.write_str(output_txt, 
+    utils.OperateFile.write_str(output_txt, 
                       f'{current_path}/output/title_info')
 
     result = df[columns].to_dict("records")

@@ -1,4 +1,3 @@
-import op_file
 import os
 
 
@@ -54,7 +53,7 @@ def add_prefix(filename, str):
                 continue
             arr_res.append(str + line_str + '\n')
             line = file_handle.readline()
-        op_file.write_file(arr_res)
+        utils.OperateFile.write_file(arr_res)
 
 
 def add_suffix(filename, str):
@@ -68,7 +67,7 @@ def add_suffix(filename, str):
                 continue
             arr_res.append(line_str + str + '\n')
             line = file_handle.readline()
-        op_file.write_file(arr_res)
+        utils.OperateFile.write_file(arr_res)
 
 
 def replace_str(filename, a, b):
@@ -82,7 +81,7 @@ def replace_str(filename, a, b):
                 continue
             arr_res.append(line_str.replace(a, b))
             line = file_handle.readline()
-        op_file.write_file(arr_res)
+        utils.OperateFile.write_file(arr_res)
 
 
 def change_line(filename, a):
@@ -98,15 +97,15 @@ def change_line(filename, a):
             for ls in line_str:
                 arr_res.append(ls + '\n')
             line = file_handle.readline()
-        op_file.write_file(arr_res)
+        utils.OperateFile.write_file(arr_res)
 
 
 def invoke_similar_words():
-    op_file.open_and_read('', split_all_space)
+    utils.OperateFile.open_and_read('', split_all_space)
 
 
 def invoke_translate():
-    op_file.open_and_read('', translate)
+    utils.OperateFile.open_and_read('', translate)
 
 
 def invoke_add_prefix(str):

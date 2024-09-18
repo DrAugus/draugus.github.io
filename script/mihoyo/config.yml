@@ -11,7 +11,7 @@ SHOW_CHAR_INFO: 1
 # all event
 SHOW_ALL_EVENT: 0
 # url config
-URL_PAGE_SIZE: 99
+URL_PAGE_SIZE: 999
 URL_PAGE_NUM: 1
 # asc des
 URL_ORDER: asc

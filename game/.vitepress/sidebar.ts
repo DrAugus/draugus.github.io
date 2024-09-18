@@ -61,6 +61,7 @@ export const sidebar_zh = {
         ...combineLinkName(listLinkName, 'genshin'),
         { text: '提瓦特通用文字', link: "/genshin/language" },
         { text: '圣遗物', link: "/genshin/artifacts" },
+        { text: '区域特产', link: "/genshin/rscs-unique" },
         ...getWishSide('genshin')
     ],
 

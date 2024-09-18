@@ -21,19 +21,9 @@
 
 </template>
 
-<script>
+<script setup lang="ts">
 import json from "../../data/genshin/party-setup.json";
 
-export default {
-  name: "PartySetup",
-  data() {
-    return {
-      json,
-    };
-  }
-};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

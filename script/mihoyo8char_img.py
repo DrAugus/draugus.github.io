@@ -1,6 +1,5 @@
 import os
 import utils
-import op_file
 
 gid = 8
 
@@ -10,7 +9,7 @@ char_img_path = "/../game/public/image/zzz/characters"
 
 json_name = "mhy8char"
 json_file = current_path + f"/auto/{json_name}.json"
-json_info = op_file.load_dict_from_file(json_file)
+json_info = utils.OperateFile.load_dict_from_file(json_file)
 
 CHAR = json_info["CHAR"]
 

@@ -1,5 +1,7 @@
 # game
 
+## 关于所用框架的说明
+
 彻底弃用 vuepress 改用 vitepress
 
 使用 vuepress

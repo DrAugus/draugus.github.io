@@ -1,5 +1,4 @@
 import os
-import op_file
 
 current_depth = 0
 all_filename = []
@@ -205,7 +204,7 @@ def write2file():
     print('============\n\n\n')
 
     display_map(map_file)
-    op_file.write_file(modify_display(map_file), output_filename)
+    utils.OperateFile.write_file(modify_display(map_file), output_filename)
 
     # with open('.augus_output', "w") as f:
     #     print(display_map(map_file), file=f)

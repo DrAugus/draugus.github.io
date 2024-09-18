@@ -1,13 +1,12 @@
 import os
 import utils
-import op_file
 
 gid = 8
 
 current_path = os.path.dirname(__file__)
 json_name = "mhy8char"
 json_file = current_path + f"/auto/{json_name}.json"
-json_info = op_file.load_dict_from_file(json_file)
+json_info = utils.OperateFile.load_dict_from_file(json_file)
 
 JS_CHAR = json_info["JS_CHAR"]
 JS_CAMP = json_info["JS_CAMP"]
@@ -19,7 +18,7 @@ console.dir({json_name}, {{ depth: null }});
 """
 
     js_path = current_path + f"/auto/{json_name}.js"
-    op_file.write_file_anything(js, js_path)
+    utils.OperateFile.write_file_anything(js, js_path)
     return js_path
 
 
@@ -35,14 +34,14 @@ def execute_js(json_name):
 def modify_char_ts_file():
 
     json_name = "mhy8charOnly"
-    op_file.save_dict_to_file(JS_CHAR, current_path + f"/auto/{json_name}.json")
+    utils.OperateFile.save_dict_to_file(JS_CHAR, current_path + f"/auto/{json_name}.json")
     file_path = execute_js(json_name)
 
     ts_insert = """import { Camp, Element, Weapon } from "./utils";
 
 export const CHARACTER = """
 
-    op_file.prepend_to_file(file_path, ts_insert)
+    utils.OperateFile.prepend_to_file(file_path, ts_insert)
 
     get_char_ts = current_path + f"/auto/{json_name}.ts"
 
@@ -64,7 +63,7 @@ export const CHARACTER = """
 
         return line_str
 
-    op_file.open_and_read_no_strip(file_path, camp_modify, get_char_ts)
+    utils.OperateFile.open_and_read_no_strip(file_path, camp_modify, get_char_ts)
 
 
 # ALL INFO

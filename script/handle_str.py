@@ -1,4 +1,3 @@
-import op_file
 
 
 def temp_op(line_str):
@@ -46,7 +45,7 @@ def composeSide(line_str):
 
 
 def invoke_temp_op():
-    op_file.open_and_read('', temp_op)
+    utils.OperateFile.open_and_read('', temp_op)
 
 
 all_feature = '\n=========*****=========\n' \

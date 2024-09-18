@@ -1,3 +1,4 @@
+from enum import Enum
 import json
 import re
 import requests
@@ -8,6 +9,12 @@ import yaml
 from functools import wraps
 from datetime import datetime
 from collections import OrderedDict
+from bs4 import BeautifulSoup as be
+
+
+class LANG(Enum):
+    ZH_CN = 0
+    EN_US = 1
 
 
 def log_args(func):
@@ -20,6 +27,10 @@ def log_args(func):
         return func(*args, **kwargs)
 
     return wrapper
+
+
+def strip_str_list(info: list):
+    return [v.strip() for v in info if v]
 
 
 def is_1d_array(arr):
@@ -40,6 +51,10 @@ def get_url_data(api_url):
     response = requests.get(api_url)
     data = response.json()
     return data
+
+
+def is_subset(sub: list, all: list):
+    return set(sub).issubset(set(all))
 
 
 def str_to_dict(text):
@@ -75,8 +90,16 @@ def find_date(text):
 # escape 避免传入可能引起正则错误的符号
 # 包含 start_str end_str：r'({}.*?{})'
 # 不包含 start_str：r'{}(.*?{})'
-def find_all_substr(text, start_str, end_str):
-    pattern = r"{}(.*?{})".format(re.escape(start_str), re.escape(end_str))
+def find_all_substr(text, start_str, end_str, include_start=False, include_end=False):
+    if include_start and include_end:
+        pattern = r"({}.*?{})".format(re.escape(start_str), re.escape(end_str))
+    elif include_start:
+        pattern = r"({}.*?){}".format(re.escape(start_str), re.escape(end_str))
+    elif include_end:
+        pattern = r"{}(.*?{})".format(re.escape(start_str), re.escape(end_str))
+    else:
+        pattern = r"{}(.*?){}".format(re.escape(start_str), re.escape(end_str))
+
     return re.findall(pattern, text, re.IGNORECASE)
 
 
@@ -86,7 +109,8 @@ def find_nth_occurrence_1(string: str, substring: str, occurrence: int) -> int:
         return string.find(substring)
     else:
         return string.find(
-            substring, find_nth_occurrence_1(string, substring, occurrence - 1) + 1
+            substring, find_nth_occurrence_1(
+                string, substring, occurrence - 1) + 1
         )
 
 
@@ -166,9 +190,21 @@ def get_char_name(input_string):
     return result
 
 
+def remove_dict_duplicates(dicts, key):
+    seen = {}
+    unique_dicts = []
+    for d in dicts:
+        k = d[key]
+        if k not in seen:
+            seen[k] = d
+            unique_dicts.append(d)
+    return unique_dicts
+
+
 def get_only_name(character_info: list) -> list:
     character_info_only_name = [info.split("(")[0] for info in character_info]
-    character_info_only_name = [name.strip() for name in character_info_only_name]
+    character_info_only_name = [name.strip()
+                                for name in character_info_only_name]
     character_info_only_name = [
         clear_non_letters(clear) for clear in character_info_only_name
     ]
@@ -196,7 +232,8 @@ def get_duration(text):
         def got_dur(start: str, end: str):
             if start != None and end != None:
                 arr.append(
-                    {"start_time": format_date(start), "end_time": format_date(end)}
+                    {"start_time": format_date(
+                        start), "end_time": format_date(end)}
                 )
 
         # time_match = re.search(
@@ -209,7 +246,8 @@ def get_duration(text):
             got_dur(start_time, end_time)
             return
         elif len(time_match):
-            version_match = re.search(r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
+            version_match = re.search(
+                r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
                 version = version_match.group(1)
             else:
@@ -225,7 +263,8 @@ def get_duration(text):
         # 大版本更新时
         # update – 2024/01/17 11:59:00(server time)
         if "update" in find_des and "server time" in find_des:
-            version_match = re.search(r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
+            version_match = re.search(
+                r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
                 version = version_match.group(1)
             else:
@@ -288,11 +327,18 @@ def timestamp2date(ts: int):
 
 @log_args
 def wget_file(url: str, output):
-    if (
-        url.endswith(".png") or url.endswith(".jpg") or url.endswith(".jpeg")
-    ) and os.path.exists(output):
+    if url_is_img(url) and os.path.isfile(output):
         return
     os.system(f"wget '{url}' -O {output}")
+
+
+@log_args
+def cp_file(src: str, des: str):
+    if not os.path.isfile(src):
+        print("!!! ERROR SOURCE !!!")
+        return
+    if not os.path.isfile(des):
+        os.system(f'cp {src} {des}')
 
 
 # abc=123
@@ -314,6 +360,24 @@ def get_yaml_config(yaml_path):
     config_list = list(config)
     config_value = config_list[0]
     return config_value
+
+
+# 仅移除简单的
+def rm_simple_html_tag(txt: str):
+    return be(txt, "lxml").p.text.strip()
+
+
+def get_all_text_from_html(html_text):
+    soup = be(html_text, 'lxml')
+    # 提取所有文本（这里使用了get_text()方法，它会获取标签内的所有文本，忽略标签本身）
+    all_text = soup.get_text(strip=True)  # strip=True会去除多余的空白符
+    return all_text
+
+
+def get_all_img_from_html(html_text):
+    soup = be(html_text, 'lxml')
+    img_src = [img['src'] for img in soup.find_all('img')]
+    return img_src
 
 
 def is_match(sub_str: str, text: str):
@@ -346,5 +410,400 @@ def get_num_from_str(text):
     if len(numbers) == 0 or numbers[0] == '':
         return []
     # 将结果转换为float（如果可能的话），否则保持为str
-    numbers_float_or_str = [float(num) if "." in num else int(num) for num in numbers]
+    numbers_float_or_str = [
+        float(num) if "." in num else int(num) for num in numbers]
     return numbers_float_or_str
+
+
+IMAGE_EXTENSIONS = ('.png', '.jpg', '.jpeg', '.gif', '.bmp')
+
+
+def url_is_img(url: str, extensions=IMAGE_EXTENSIONS) -> bool:
+    return url.lower().endswith(extensions)
+
+
+def get_project_root():
+    # 获取当前文件的绝对路径
+    current_file_path = os.path.abspath(__file__)
+    # 获取当前文件所在的目录
+    current_dir = os.path.dirname(current_file_path)
+    # 假设项目根目录是当前目录的上级目录（根据实际情况可能需要多次使用os.path.dirname）
+    project_root = os.path.dirname(current_dir)
+    return project_root
+
+
+# list is [{key: val}, {key: val}, ...]
+def find_value_by_key(foo: list, key: str):
+    for obj in foo:
+        if not isinstance(obj, dict):
+            return None
+        if key in obj:
+            return obj[key]
+
+
+class Game:
+    LANG_KEY_EN = 'en-us'
+    LANG_KEY_ZH = 'zh-cn'
+
+    @staticmethod
+    def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, page: int = 1, pageSize: int = 99):
+        order = "&iOrder=6"
+        return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
+
+    @staticmethod
+    def i18n_filename(lang: LANG = LANG.ZH_CN):
+        return lang.name.lower()
+
+    @staticmethod
+    # match "prefix"name(ele)
+    # e.g. "Plane of Euthymia" Raiden Shogun (Electro)
+    def match_en_char_prefix_name_ele(text):
+        pattern = r'"([^"]+)"\s*([\w\s]+?)\s*\(\s*([^()]+)\s*\)'
+        match = re.findall(pattern, text)
+        res = []
+        for m in match:
+            prefix, name, ele = m
+            res.append({
+                'prefix': prefix,
+                'name': name,
+                'ele': ele
+            })
+        if len(res) > 0:
+            res = remove_dict_duplicates(res, 'name')
+        return res
+
+    @staticmethod
+    # match xxx·xxx(xx)
+    # e.g.「一心净土·雷电将军(雷)」
+    def match_zh_char_prefix_name_ele(text):
+        matches = find_all_substr(text, '「', '」')
+        res = []
+        for m in matches:
+            condition_brackets = '(' in m or '（' in m
+            condition_separation_dot = '·' in m
+            if not condition_brackets or not condition_separation_dot:
+                continue
+
+            if '(' in m:
+                brackets = '('
+            elif '（' in m:
+                brackets = '（'
+
+            split_separation_dot = m.split('·')
+            prefix = split_separation_dot[0].strip()
+            name_and_ele = split_separation_dot[1]
+            split_brackets = name_and_ele.split(brackets)
+            name = split_brackets[0].strip()
+            ele = split_brackets[1].strip()[:-1]
+
+            res.append({
+                'prefix': prefix,
+                'name': name,
+                'ele': ele
+            })
+
+        if len(res) > 0:
+            res = remove_dict_duplicates(res, 'name')
+
+        if len(res) == 4:
+            for idx, obj in enumerate(res):
+                obj['star'] = 5 if idx == 0 else 4
+
+        return res
+
+    @staticmethod
+    def get_version(text):
+        start_tag = 'Version'
+        end_tag = 'Event'
+        return strip_str_list(find_all_substr(text, start_tag, end_tag))
+
+    @staticmethod
+    def get_duration(text):
+        arr = []
+
+        def got_dur(start: str, end: str):
+            if start != None and end != None:
+                arr.append(
+                    {"start_time": format_date(
+                        start), "end_time": format_date(end)}
+                )
+
+        # time_match = re.search(
+        #     r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}(:\d{1,2})?)", text
+        # )
+        time_match = find_date(text)
+        if len(time_match) >= 2:
+            start_time = time_match[0]
+            end_time = time_match[1]
+            got_dur(start_time, end_time)
+        elif len(time_match):
+            version_match = re.search(
+                r"Version (\d+\.\d+)", text, re.IGNORECASE)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time = time_match[0]
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+
+        # 大版本更新时
+        # update – 2024/01/17 11:59:00(server time)
+        if "update" in text and "server time" in text:
+            version_match = re.search(
+                r"Version (\d+\.\d+)", text, re.IGNORECASE)
+            if version_match:
+                version = version_match.group(1)
+            else:
+                version = None
+
+            time_match = re.search(
+                r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})", text
+            )
+            if time_match:
+                time = time_match.group(1)
+            else:
+                time = None
+
+            if version != None and time != None:
+                # print(f'version:{version}', f'time:{time}')
+                got_dur(version, time)
+
+        # 小版本更新时
+        # Event Duration\n2023/12/06 12:00:00 – 2023/12/26 14:59:00(server time)
+        if "Event Duration" in text and "server time" in text:
+            # 正则表达式模式匹配 ISO 8601 风格的日期和时间
+            pattern = r"(\d{4}/\d{1,2}/\d{1,2}\s+\d{1,2}:\d{1,2}:\d{1,2})"
+            # 使用正则表达式搜索所有匹配的时间
+            matches = re.findall(pattern, text)
+            # 检查是否找到了两个匹配的时间，表示开始和结束时间
+            if matches and len(matches) == 2:
+                start_time, end_time = matches
+                got_dur(start_time, end_time)
+                # print(f"start_time:{start_time} end_time:{end_time}")
+
+        got_dur(None, None)
+
+        return arr
+
+
+class Genshin(Game):
+    class City(Enum):
+        Invalid = -1
+        Mondstadt = 0
+        Liyue = 1
+        Inazuma = 2
+        Sumeru = 3
+        Fontaine = 4
+        Natlan = 5
+        Snezhnaya = 6
+
+    @staticmethod
+    def get_wish_name_en(text):
+        start_tag = 'Event Wish "'
+        end_tag = '" - Boosted Drop Rate'
+        return find_all_substr(text, start_tag, end_tag)
+
+    @staticmethod
+    def get_wish_name_zh(text):
+        matches = find_all_substr(text, '「', '」')
+        if len(matches) != 1:
+            return ""
+        return matches[0]
+
+
+class OperateFile:
+
+    current_path = f"{get_project_root()}/script/"
+
+    @staticmethod
+    def check_filename(filename):
+        if filename is None or filename == "":
+            return OperateFile.current_path + "/.augus_output"
+        return filename
+
+    # str 为最终合并完成的 str 至少一行
+    @staticmethod
+    def write_file(arr, filename):
+        filename = OperateFile.check_filename(filename)
+        if not len(arr) or not isinstance(arr, list) or arr[0].find("\n") == -1:
+            print("str must be one more rows: ", arr)
+            return
+        with open(filename, "w", encoding="utf-8") as file:
+            for aa in arr:
+                file.write(aa)
+
+    @staticmethod
+    def write_file_anything(anything, filename):
+        filename = OperateFile.check_filename(filename)
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(anything)
+
+    @staticmethod
+    def open_and_read(filename, callback):
+        if not len(filename):
+            filename = OperateFile.current_path + "/test"
+        if OperateFile.current_path not in filename:
+            filename = OperateFile.current_path + filename
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line.strip()
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+            OperateFile.write_file(arr_res)
+
+    @staticmethod
+    def open_and_read_no_strip(filename, callback, output):
+        if filename is None or not len(filename):
+            filename = OperateFile.current_path + "/test"
+        if OperateFile.current_path not in filename:
+            filename = OperateFile.current_path + filename
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+            OperateFile.write_file(arr_res, output)
+
+    @staticmethod
+    def open_file(filename, callback):
+        if not len(filename):
+            filename = OperateFile.current_path + "/test"
+        filename = OperateFile.current_path + filename
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line.strip()
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+
+    @staticmethod
+    def prepend_to_file(filename, new_content):
+        """
+        在文件的开头插入新的内容。
+
+        参数:
+        - filename: 要更新的文件名（字符串）
+        - new_content: 要插入到文件开头的内容（字符串）
+        """
+        # 读取原文件内容
+        try:
+            with open(filename, "r", encoding="utf-8") as file:
+                old_content = file.read()
+        except FileNotFoundError:
+            old_content = ""  # 如果文件不存在，则视为空文件
+
+        updated_content = new_content + old_content
+
+        with open(filename, "w", encoding="utf-8") as file:
+            file.write(updated_content)
+
+    @staticmethod
+    def read_one_line():
+        filename_input = OperateFile.current_path + "/test"
+        filename_output = OperateFile.current_path + "/.augus_output"
+        # 打开input.txt文件进行读取
+        with open(filename_input, "r", encoding="utf-8") as file:
+            lines = file.readlines()
+
+        # 新建一个output.txt文件，如果文件已存在，则覆盖它
+        with open(filename_output, "w", encoding="utf-8") as file:
+            for line in lines:
+                # 将当前行写入文件
+                file.write(line)
+                # 如果当前行包含'id:'，则再次写入相同的行
+                if "id:" in line:
+                    newline = line.replace("id:", "key:")
+                    arr = newline.split('"')
+                    if len(arr) == 1:
+                        arr = arr[0].split("'")
+                    newline = arr[0] + '"' + \
+                        replace_characters(arr[1]) + '"' + arr[2]
+                    file.write(newline)
+
+    @staticmethod
+    def get_md_title(filename):
+        if not len(filename):
+            return ""
+        try:
+            with open(filename, "r", encoding="utf-8") as file_handle:
+                line = file_handle.readline()
+                while line:
+                    line_str = line.strip()
+                    if line_str.startswith("# "):
+                        html_tag = line_str.find("<")
+                        new_line = line_str[2:]
+                        if html_tag != -1:
+                            new_line = line_str[2:html_tag]
+                        return new_line
+                    line = file_handle.readline()
+        except FileNotFoundError:
+            return ""
+        return ""
+
+    @staticmethod
+    def save_dict_to_file(dict_data, file_path, format=True):
+        directory = os.path.dirname(file_path)
+        make_dir(directory)
+        with open(file_path, "w", encoding="utf-8") as f:
+            if format is True:
+                json.dump(dict_data, f, ensure_ascii=False, indent=4)
+            else:
+                json.dump(dict_data, f, ensure_ascii=False)
+
+    @staticmethod
+    def load_dict_from_file(file_path):
+        if os.path.exists(file_path):
+            with open(file_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        else:
+            return {}  # 如果文件不存在，返回一个空字典
+
+    @staticmethod
+    def read_file_and_truncate(file_path):
+        with open(file_path, "r", encoding="utf-8") as file:
+            # 读取文件内容，移除空行，并用空格替换
+            lines = [line.strip() for line in file if line.strip()]
+            # 用空格连接非空行，并截断到最多 500 个字符
+            content = " ".join(lines)[:500]
+            return content
+
+    @staticmethod
+    def op_one_line(txt):
+        if "frames" in txt:
+            res = txt.split("frames")[1]
+            return res
+        return txt
+
+    @staticmethod
+    def read_file_and_op_one_line(file_path):
+        with open(file_path, "r", encoding="utf-8") as file:
+            line = file.readline()
+            res = []
+            status = False
+            while line:
+                line_str = line.strip()
+                get_num = get_num_from_str(line_str)
+                for a in get_num:
+                    obj = {"status": status, "frames": a}
+                    res.append(obj)
+                    status = not status
+                print(get_num)
+                line = file.readline()
+            print(res)
+            OperateFile.save_dict_to_file(
+                res, OperateFile.current_path + "/.datafps.json")

@@ -5,7 +5,6 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import re
-import op_file
 import utils
 
 
@@ -122,7 +121,7 @@ def get_wish5star(text: str):
 
     def append_match(find_des):
         for vv in find_tag:
-            arr.extend(utils.find_all_substr(find_des, vv, ")"))
+            arr.extend(utils.find_all_substr(find_des, vv, ")", False, True))
 
     utils.got_insert_info(text, append_match)
 
@@ -179,7 +178,7 @@ def re_find(text_full: str, find_tag: str) -> list:
         find_index = utils.find_nth_occurrence_2(vv, find_tag, ")", 3)
         start_index = vv.find(find_tag)
         if find_index != -1:
-            got_new_str = vv[start_index + len(find_tag) : find_index]
+            got_new_str = vv[start_index + len(find_tag): find_index]
             break
     if got_new_str != "":
         got_new_str = got_new_str.replace("\n", "")
@@ -207,10 +206,14 @@ def get_chronicled_wish(text):
             index1 = find_des.find("5-Star Characters")
             res = find_des[index1:]
 
-            char5star = utils.find_all_substr(res, "5-Star Characters", "\n")
-            char5weapon = utils.find_all_substr(res, "5-Star Weapons", "\n")
-            char4star = utils.find_all_substr(res, "4-Star Characters", "\n")
-            char4weapon = utils.find_all_substr(res, "4-Star Weapons", "\n")
+            char5star = utils.find_all_substr(
+                res, "5-Star Characters", "\n", False, True)
+            char5weapon = utils.find_all_substr(
+                res, "5-Star Weapons", "\n", False, True)
+            char4star = utils.find_all_substr(
+                res, "4-Star Characters", "\n", False, True)
+            char4weapon = utils.find_all_substr(
+                res, "4-Star Weapons", "\n", False, True)
 
             if len(char5star):
                 char5star = [modify_name(s) for s in char5star]
@@ -273,13 +276,14 @@ def parse_wish(post_id, post_idx):
     end_tag = '" - Boosted Drop Rate'
     wish_name = get_arr_str_event_wish_name(clean_text, start_tag, end_tag)
     end_tag = '" - Chronicled'
-    wish_name.extend(get_arr_str_event_wish_name(clean_text, start_tag, end_tag))
+    wish_name.extend(get_arr_str_event_wish_name(
+        clean_text, start_tag, end_tag))
     print("wish name:", wish_name)
     print("wish name len:", len(wish_name))
     img_times = ["1"] * len(wish_name)
     for i in range(len(wish_name)):
         # print(find_res[i])
-        img_type = img_url[post_idx][i][img_url[post_idx][i].rfind(".", 0) :]
+        img_type = img_url[post_idx][i][img_url[post_idx][i].rfind(".", 0):]
         # print('img_type', img_type)
         img_name = modify_image_name(wish_name[i], img_times[i], img_type)
         print("img_name:", img_name)
@@ -339,7 +343,8 @@ def parse_wish(post_id, post_idx):
         "image": [1, 1],
         "shortName": only_name,
         "start": (
-            duration_text[0]["start_time"] + " +0800" if len(duration_text) else ""
+            duration_text[0]["start_time"] +
+            " +0800" if len(duration_text) else ""
         ),
         "end": duration_text[0]["end_time"] + " +0800" if len(duration_text) else "",
         "version": "xxx",
@@ -364,4 +369,4 @@ for i in range(len(post_id)):
 
 current_path = os.path.dirname(__file__)
 filename = current_path + "/auto/mhy2.json"
-op_file.save_dict_to_file(all_info, filename)
+utils.OperateFile.save_dict_to_file(all_info, filename)
