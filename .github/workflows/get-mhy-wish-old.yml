@@ -56,15 +56,6 @@ jobs:
           python mihoyo2_old.py
           python mihoyo8js.py
           python mihoyo8char_img.py
-
-  commit-and-pr:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./script
-    needs: py-game-wish-old
-    if: github.event_name != 'pull_request'
-    steps:
       - name: Commit files
         id: commit
         run: |
@@ -85,7 +76,7 @@ jobs:
       #     github_token: ${{ secrets.DEPLOY_GH }}
       #     branch: ${{ github.head_ref }}
       - name: Create Pull Request
-        if: ${{ steps.commit.outputs.has_changes == 'true' }}
+        if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.DEPLOY_GH }}

@@ -55,15 +55,6 @@ jobs:
       - name: Execute Python script
         run: |
           python latest.py 1
-
-  commit-and-pr:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./script
-    needs: py-life-recent
-    if: github.event_name != 'pull_request'
-    steps:
       - name: Commit files
         id: commit
         run: |
@@ -88,7 +79,7 @@ jobs:
           echo "=========="
           echo "$AUGAGU"
       - name: Push changes
-        if: ${{ steps.commit.outputs.has_changes == 'true' }}
+        if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.DEPLOY_GH }}
