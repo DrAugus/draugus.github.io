@@ -944,5 +944,16 @@
         "city": "Fontaine",
         "ele": "dendro",
         "weapon": "polearm"
+    },
+    "kinich": {
+        "id": "kinich",
+        "name": "基尼奇",
+        "prefix": "",
+        "star": 5,
+        "event_exclusive": true,
+        "intro": "与自称「圣龙」者同行的猎龙人，时常承接冷门委托，精于度量代价。",
+        "city": "Natlan",
+        "ele": "dendro",
+        "weapon": "claymore"
     }
 }
