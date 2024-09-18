@@ -34,9 +34,6 @@ on:
 jobs:
   py-game-wish:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./script
     steps:
       - name: Checkout repository content
         uses: actions/checkout@v4
@@ -73,7 +70,7 @@ jobs:
       #     github_token: ${{ secrets.DEPLOY_GH }}
       #     branch: ${{ github.head_ref }}
       - name: Create Pull Request
-        if: ${{ steps.commit.outputs.has_changes == 'true' }}
+        if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.DEPLOY_GH }}
