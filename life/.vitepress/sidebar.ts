@@ -1,3 +1,4 @@
+import { setJourneySidebar } from "./data/trip/journey";
 import { setTravelogueSidebar } from "./data/trip/travelogue";
 
 const prefixArticle = '/course/literature/article';
@@ -49,7 +50,6 @@ const sidebarTrip = [
 
     {
         text: '出行', collapsed: false, items: [
-            { text: '赶路日记', link: '/trip/rush-diary' },
             { text: '飞机', link: '/trip/airplane' },
             { text: '机场', link: '/trip/airport' },
             { text: '火车站', link: '/trip/railway' },
@@ -79,6 +79,10 @@ const sidebarTripTravelogue = [
 ]
     .concat(...setTravelogueSidebar());
 
+const sidebarTripJourney = [
+    { text: '赶路', link: '/trip/journey/' },
+]
+    .concat(...setJourneySidebar());
 
 const sidebarArtsSpeech = [
     { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/arts/speech/craig-federighi' },
@@ -713,6 +717,7 @@ export const sidebar = {
     // 
     '/trip/': sidebarTrip,
     '/trip/travelogue/': sidebarTripTravelogue,
+    '/trip/journey/': sidebarTripJourney,
     // arts
     '/arts/speech/': sidebarArtsSpeech,
     //

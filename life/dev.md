@@ -6,7 +6,7 @@
 
 - 最新的游记，[link](./trip/travelogue/20240508)
 - 旅行航线，[link](./trip/flights)
-- 最新的赶路日记，[link](./trip/rush-diary)
+- 最新的赶路日记，[link](./trip/journey/)
 - 游记更新，内容更新，修正流水账记录方式，[link](./trip/travelogue/)
 :::
 

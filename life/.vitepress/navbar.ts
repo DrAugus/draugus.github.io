@@ -9,6 +9,7 @@ export const navbar = [
       { text: '介绍', link: '/trip/' },
       { text: '游记', link: '/trip/travelogue/' },
       { text: '去哪', link: '/trip/where' },
+      { text: '赶路', link: '/trip/journey/' },
     ],
     activeMatch: '^/trip',
   },

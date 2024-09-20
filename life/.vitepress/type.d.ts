@@ -102,6 +102,12 @@ export interface TravelogueInfo {
   city: string | string[],
 }
 
+export interface Journey {
+  title?: string,
+  date: Date,
+  info?: string,
+}
+
 export interface TravelBillIntroItem {
   tips: string,
   // 酒店
