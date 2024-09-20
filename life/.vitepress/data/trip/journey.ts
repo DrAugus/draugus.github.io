@@ -2,6 +2,7 @@ import { CardData, CardLink, LinkName, Journey } from "../../type";
 import { modifyDate, modifyDate1 } from "../../utils";
 
 const dataJourney: Journey[] = [
+    { date: new Date('2024/01/01') },
     { date: new Date('2024/02/14') },
     { date: new Date('2024/02/07') },
     { date: new Date('2023/10/19') },
@@ -9,6 +10,7 @@ const dataJourney: Journey[] = [
     { date: new Date('2023/09/30') },
     { date: new Date('2023/06/22') },
     { date: new Date('2023/06/26') },
+    { date: new Date('2024/09/17') },
 ];
 
 const linkPrefix = '/trip/journey/';
