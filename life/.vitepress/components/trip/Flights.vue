@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import EChartsModel from "../EChartsMapModel.vue";
 import { FLIGHT_DATA } from '../../data/trip/flight';
-import { mapAirports } from '../../data/trip/airports';
+import { mapAirportsByAbbrZH } from '../../data/trip/airports';
 
 const planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
 
@@ -30,13 +30,16 @@ let countAirport = new Map();
 let yearFlight: Map<number, number> = new Map();
 const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
 
-    if (!item.departureAirport || !item.arrivalAirport) { return res; }
+    if (!item.departure || !item.arrival) { return res; }
 
-    const depAirport = mapAirports[item.departureAirport];
-    const arrAirport = mapAirports[item.arrivalAirport];
+    const itemDepAirport = item.departure.airport;
+    const itemArrAirport = item.arrival.airport;
 
-    countAirport.set(item.departureAirport, (countAirport.get(item.departureAirport) || 0) + 1);
-    countAirport.set(item.arrivalAirport, (countAirport.get(item.arrivalAirport) || 0) + 1);
+    const depAirport = mapAirportsByAbbrZH[itemDepAirport];
+    const arrAirport = mapAirportsByAbbrZH[itemArrAirport];
+
+    countAirport.set(itemDepAirport, (countAirport.get(itemDepAirport) || 0) + 1);
+    countAirport.set(itemArrAirport, (countAirport.get(itemArrAirport) || 0) + 1);
 
     const depCoord: number[] = [depAirport.longitude, depAirport.latitude]
     const arrCoord: number[] = [arrAirport.longitude, arrAirport.latitude]
@@ -53,12 +56,12 @@ const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
 
     arrInfo.push({
         name: arrAirport.city,
-        airport: item.arrivalAirport,
+        airport: itemArrAirport,
         coord: arrCoord
     })
     arrInfo.push({
         name: depAirport.city,
-        airport: item.departureAirport,
+        airport: itemDepAirport,
         coord: depCoord
     })
 

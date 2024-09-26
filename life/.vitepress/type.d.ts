@@ -176,6 +176,7 @@ export interface Airport {
   code: string,
   name: string,
   nameLocal: string,
+  abbrZH: string,
   city: string,
   country: string,
   longitude: number,
@@ -202,20 +203,23 @@ interface FlightTicket {
   fuelSurcharge: number,
 }
 
-// 全部以实际飞行数据录入
+interface FlightAirport {
+  plannedTime: Date,
+  actualTime: Date,
+  airport: string,
+  terminal: number | null,    // 真的有机场没有航站楼
+}
+
 export interface Flight {
-  date: Date,
-  number: string,
+  date: Date,                 // 飞行日期
+  number: string,             // 航班号
   airplane: Airplane,         // 飞机信息
   airlineCode: string,        // CZ8902
   seatClass: string,          // 公务舱(O)
-  departureTime: Date,
-  departureAirport: string,
-  duration: number,           // 飞行时长 分钟数
   distance: number,           // 飞行里程 km
-  arrivalTime: Date,
-  arrivalAirport: string,
-  price: FlightTicket,        // 票价
+  departure: FlightAirport,
+  arrival: FlightAirport,
+  price: FlightTicket | null, // 票价 (null 为价格丢失)
 }
 
 export interface Suixinfei {
