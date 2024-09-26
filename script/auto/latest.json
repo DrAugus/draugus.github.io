@@ -1,4 +1,8 @@
 {
+    "life/trip/china/guangxi/index.md": {
+        "title": "广西",
+        "date": 1716915828
+    },
     "life/disease/record/self/20240915.md": {
         "title": "20240915",
         "date": 1726815910.0
@@ -98,10 +102,6 @@
     "life/code/program/lang/regex.md": {
         "title": "正则表达式",
         "date": 1720604343.0
-    },
-    "life/trip/china/guangxi/index.md": {
-        "title": "广西",
-        "date": 1716915828
     },
     "life/code/framework/ffmpeg.md": {
         "title": "FFmpeg",
