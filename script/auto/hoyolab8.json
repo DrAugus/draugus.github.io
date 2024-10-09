@@ -1,26 +1,22 @@
 [
     {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552250",
-        "name": [
-            "Mellow Waveride"
-        ],
-        "name_lower": [
-            "mellow_waveride_"
-        ],
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=33585928",
+        "name": [],
+        "name_lower": [],
         "image": [
             1
         ],
         "shortName": [
-            "Ellen"
+            "Caesar"
         ],
-        "start": "2024/07/24 11:59:59 +0800",
-        "end": "2024/07/24 11:59:59 +0800",
+        "start": "1.2 +0800",
+        "end": "2024/10/16 11:59:59 +0800",
         "version": "xxx",
         "wish5star": [
-            "ellen"
+            "caesar"
         ],
         "wish4star": [
-            "soukaku",
+            "piper",
             "anton"
         ],
         "wishName": [],
@@ -29,15 +25,62 @@
         ]
     },
     {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552247",
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=32068208",
+        "name": [],
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [
+            "Qingyi"
+        ],
+        "start": "1.1 +0800",
+        "end": "2024/09/04 11:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "qingyi"
+        ],
+        "wish4star": [
+            "billy",
+            "corin"
+        ],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31334773",
+        "name": [],
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [
+            "Yuan"
+        ],
+        "start": "2024/07/24 12:00:00 +0800",
+        "end": "2024/08/13 14:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [
+            "yuan"
+        ],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=33585926",
         "name": "Brilliant Fixation",
         "name_lower": [],
         "image": [
             1
         ],
         "shortName": [],
-        "start": "",
-        "end": "",
+        "start": "1.2 +0800",
+        "end": "2024/10/16 11:59:59 +0800",
         "version": "xxx",
         "wish5star": [],
         "wish4star": [],
@@ -47,15 +90,15 @@
         ]
     },
     {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552246",
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=32779011",
         "name": "Brilliant Fixation",
         "name_lower": [],
         "image": [
             1
         ],
         "shortName": [],
-        "start": "",
-        "end": "",
+        "start": "2024/09/04 12:00:00 +0800",
+        "end": "2024/09/24 14:59:59 +0800",
         "version": "xxx",
         "wish5star": [],
         "wish4star": [],
@@ -65,15 +108,33 @@
         ]
     },
     {
-        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30552245",
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=32068185",
         "name": "Brilliant Fixation",
         "name_lower": [],
         "image": [
             1
         ],
         "shortName": [],
-        "start": "",
-        "end": "",
+        "start": "1.1 +0800",
+        "end": "2024/09/04 11:59:59 +0800",
+        "version": "xxx",
+        "wish5star": [],
+        "wish4star": [],
+        "wishName": [],
+        "url": [
+            ""
+        ]
+    },
+    {
+        "api_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=31334769",
+        "name": "Brilliant Fixation",
+        "name_lower": [],
+        "image": [
+            1
+        ],
+        "shortName": [],
+        "start": "2024/07/24 12:00:00 +0800",
+        "end": "2024/08/13 14:59:59 +0800",
         "version": "xxx",
         "wish5star": [],
         "wish4star": [],
