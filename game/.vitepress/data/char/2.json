@@ -955,5 +955,16 @@
         "city": "Natlan",
         "ele": "dendro",
         "weapon": "claymore"
+    },
+    "xilonen": {
+        "id": "xilonen",
+        "name": "希诺宁",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "纳茨卡延的铁匠，善于在工作的重担与舒适的生活之间找到平衡点。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }
