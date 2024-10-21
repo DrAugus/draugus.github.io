@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "探索",
+            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
+            "link": "/trip/fd1",
+            "date": "2024-10-19"
+        },
+        {
+            "title": "探索",
+            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
+            "link": "/trip/flights-dev",
+            "date": "2024-10-19"
+        },
+        {
             "title": "广西",
             "desc": "广西 柳州 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有） 白天鱼峰山公园，龙潭公园，柳侯公",
             "link": "/trip/china/guangxi/index",
@@ -108,18 +120,6 @@
             "desc": "南京 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20230225",
             "date": "2024-06-21"
-        },
-        {
-            "title": "VS Code",
-            "desc": "VS Code tips 文本自动换行 文本超出显示时，需要拖动下面的滑块才能看到超出的部分， -",
-            "link": "/code/dev-env/vscode",
-            "date": "2024-07-26"
-        },
-        {
-            "title": "Jira",
-            "desc": "Jira 使用指南 过滤 issue 并通知 参看官方文档 使用 cron expressions",
-            "link": "/code/devops/jira",
-            "date": "2024-08-13"
         }
     ]
 }
