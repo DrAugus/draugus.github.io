@@ -30,22 +30,6 @@ let textStyle = {
   borderColor: '#fff',
   borderWidth: 1,
 };
-let LabelsData = [
-  {
-    name: '自提点1',
-    position: [116.461009, 39.991443],
-    zooms: [10, 20],
-    opacity: 1,
-    zIndex: 10,
-    icon,
-    text: {
-      content: '中邮速递易',
-      direction: 'right',
-      offset: [-20, -5],
-      style: textStyle
-    }
-  },
-];
 
 const findInChinaCities = (name: string) => {
   for (const city of citiesData) {

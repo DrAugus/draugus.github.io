@@ -10,7 +10,8 @@ export default defineConfig({
         noExternal: [
             'echarts', 'vue-echarts',
             'resize-detector', 'zrender',
-            '@amap/amap-jsapi-loader', 'AMapLoader'
+            '@amap/amap-jsapi-loader', 'AMapLoader',
+            '@kjgl77/datav-vue3'
         ],
     },
     // https://vitejs.dev/config/server-options.html#server-proxy
