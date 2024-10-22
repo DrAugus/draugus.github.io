@@ -2,6 +2,42 @@
     "title": "",
     "items": [
         {
+            "title": "使用提示",
+            "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
+            "link": "/code/os/windows/tips",
+            "date": "2024-07-27"
+        },
+        {
+            "title": "小猫",
+            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
+            "link": "/daily/cat",
+            "date": "2024-05-23"
+        },
+        {
+            "title": "日用价格参考",
+            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
+            "link": "/daily/goods-price",
+            "date": "2024-05-23"
+        },
+        {
+            "title": "2024/10/01",
+            "desc": "2024/10/01 外卖买了路上吃的东西，一直没送到，很焦虑，既焦虑没吃的，又焦虑赶不上车 决定",
+            "link": "/trip/journey/20241001",
+            "date": "2024-10-21"
+        },
+        {
+            "title": "2024/10/05",
+            "desc": "2024/10/05 痛苦经历，每次都会决定再也不坐卧铺！！！但最终都会向生活妥协…… 反正也是不",
+            "link": "/trip/journey/20241005",
+            "date": "2024-10-21"
+        },
+        {
+            "title": "2024/10/19",
+            "desc": "2024/10/19 不是，哥们 你自己升舱，老婆在后面坐经济舱 无可厚非 但是素质能不能高点，坐",
+            "link": "/trip/journey/20241019",
+            "date": "2024-10-21"
+        },
+        {
             "title": "探索",
             "desc": "探索 import PlaceVisited from '../.vitepress/compon",
             "link": "/trip/fd1",
@@ -84,42 +120,6 @@
             "desc": "2024/02/07 >小雨转阴 2°C 早上出门还是晚了，不过预想到可能打不到车，07:20就开",
             "link": "/trip/journey/20240207",
             "date": "2024-09-20"
-        },
-        {
-            "title": "2024/02/14",
-            "desc": "2024/02/14 13:10出门，10多分钟即可到车站。没想到，外面居然排队这么多人，安检速度",
-            "link": "/trip/journey/20240214",
-            "date": "2024-09-20"
-        },
-        {
-            "title": "赶路",
-            "desc": "赶路 到处跑，到处跑。旅途消耗，接下来去哪儿呢 import ACardLinks from '.",
-            "link": "/trip/journey/index",
-            "date": "2024-09-20"
-        },
-        {
-            "title": "Git",
-            "desc": "Git sol git 撤销 modified的文件 撤销工作区（working director",
-            "link": "/code/version-ctrl/git",
-            "date": "2024-07-18"
-        },
-        {
-            "title": "cmd",
-            "desc": "cmd 系统常用 system base info uname uname -a uname -m",
-            "link": "/code/os/linux/command",
-            "date": "2024-05-21"
-        },
-        {
-            "title": "苹果究竟怎么了",
-            "desc": "苹果究竟怎么了 崩溃记录 存储已满 2024年08月15日 早上起来，手机存储空间爆了 255.9",
-            "link": "/daily/apple/reflect",
-            "date": "2024-08-24"
-        },
-        {
-            "title": "南京",
-            "desc": "南京 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20230225",
-            "date": "2024-06-21"
         }
     ]
 }

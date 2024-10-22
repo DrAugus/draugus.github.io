@@ -1,4 +1,28 @@
 {
+    "life/code/os/windows/tips.md": {
+        "title": "使用提示",
+        "date": 1722099577.0
+    },
+    "life/daily/cat.md": {
+        "title": "小猫",
+        "date": 1716460074
+    },
+    "life/daily/goods-price.md": {
+        "title": "日用价格参考",
+        "date": 1716460074
+    },
+    "life/trip/journey/20241001.md": {
+        "title": "2024/10/01",
+        "date": 1729506251.0
+    },
+    "life/trip/journey/20241005.md": {
+        "title": "2024/10/05",
+        "date": 1729506251.0
+    },
+    "life/trip/journey/20241019.md": {
+        "title": "2024/10/19",
+        "date": 1729506251.0
+    },
     "life/trip/fd1.md": {
         "title": "探索",
         "date": 1729297813.0
@@ -118,10 +142,6 @@
     "life/code/libs/opencv.md": {
         "title": "OpenCV",
         "date": 1721963864.0
-    },
-    "life/code/os/windows/tips.md": {
-        "title": "使用提示",
-        "date": 1722099577.0
     },
     "life/trip/permanent-residence.md": {
         "title": "常住地居住感受",
@@ -417,14 +437,6 @@
     },
     "life/course/science/calculus.md": {
         "title": "微积分",
-        "date": 1716460074
-    },
-    "life/daily/cat.md": {
-        "title": "小猫",
-        "date": 1716460074
-    },
-    "life/daily/goods-price.md": {
-        "title": "日用价格参考",
         "date": 1716460074
     },
     "life/course/latest.md": {
