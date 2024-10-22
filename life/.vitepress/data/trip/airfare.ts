@@ -141,6 +141,13 @@ export const AIRFARE_DATA: AirfareInfo[] = [
         costAbove800km: 50,
         taxAirport: 50,
         details: "2024年6月5日（出票日期）起，成人旅客：800公里以上航线每位旅客收取50元燃油附加费，800公里（含）以下航线每位旅客收取30元燃油附加费。相较于调整前分别降低了20元和10元。"
+    }, {
+        date: new Date('2024/10/05'),
+        dateModify: '起',
+        costBelow800km: 10,
+        costAbove800km: 20,
+        taxAirport: 50,
+        details: "2024年10月5日（出票日期）起，成人旅客：800公里（含）以下航段向每位成人旅客收取燃油费从30元下降至10元，800公里以上航段向每位成人旅客收取燃油费从50元下降至20元。"
     }
 ]
 

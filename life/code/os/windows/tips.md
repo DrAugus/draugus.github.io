@@ -1,5 +1,14 @@
 # 使用提示
 
+## QA
+
+### 开机自启动，如新版 outlook 开机自启
+
+打开文件资源管理器，在地址栏中键入 `shell:startup`，然后按 Enter。  
+这将打开一个文件夹，当您登录 Windows 时，快捷方式会在其中打开。
+
+[参考链接](https://answers.microsoft.com/zh-hans/outlook_com/forum/all/%e5%a6%82%e4%bd%95%e5%85%b3%e9%97%adoutlook/4e5a854d-1d21-4435-8368-efbd150a070c)
+
 ## 快捷键
 
 Windows系统中的常用快捷键可以极大地提高用户的操作效率，以下是一些常用的快捷键及其功能介绍：
