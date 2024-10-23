@@ -2,23 +2,23 @@
     {
         "img_url": [
             [
-                "https://upload-os-bbs.hoyolab.com/upload/2024/06/20/0/6eb598c1e597742de52aede98949d5ff_2494949888003000342.jpeg",
-                "https://upload-os-bbs.hoyolab.com/upload/2024/06/20/0/dad653cd0d05d855ed74474c473ed3e2_2487057028963381089.jpeg",
-                "https://upload-os-bbs.hoyolab.com/upload/2024/06/20/0/8498b7ea05e401f022cfa5489d07fc71_310087367442193773.jpeg"
+                "https://upload-os-bbs.hoyolab.com/upload/2024/10/06/0/cb6bc66ea52831db26ecc32052b55624_1164933379887802631.jpeg",
+                "https://upload-os-bbs.hoyolab.com/upload/2024/10/06/0/31612ce67adb70f819b734a288b146e4_3396890663088724333.jpeg",
+                "https://upload-os-bbs.hoyolab.com/upload/2024/10/06/0/d2d5265050e0455dd44ae239770e7170_5817720916961488534.jpeg"
             ]
         ]
     },
     {
-        "post_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=30071782",
+        "post_url": "https://bbs-api-os.hoyolab.com/community/post/wapi/getPostFull?post_id=34010550",
         "wish_char": {
             "name": [
-                "Romaritime Meluserenity",
-                "Chanson of Many Waters",
+                "Forgefire's Blessing",
+                "Of Silken Clouds Woven",
                 "Epitome Invocation"
             ],
             "name_lower": [
-                "romaritime_meluserenity",
-                "chanson_of_many_waters",
+                "forgefire's_blessing",
+                "of_silken_clouds_woven",
                 "epitome_invocation"
             ],
             "image": [
@@ -26,20 +26,20 @@
                 1
             ],
             "shortName": [
-                "Sigewinne",
-                "Furina"
+                "Xilonen",
+                "Chiori"
             ],
-            "start": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
-            "end": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
+            "start": "u3013After the Version 5.1 updateu20142024/10/29 17:59u3013",
+            "end": "u3013After the Version 5.1 updateu20142024/10/29 17:59u3013",
             "version": "xxx",
             "wish5star": [
-                "sigewinne",
-                "furina"
+                "xilonen",
+                "chiori"
             ],
             "wish4star": [
-                "noelle",
-                "gaming",
-                "rosaria"
+                "dori",
+                "candace",
+                "collei"
             ],
             "wishName": [],
             "url": [
@@ -53,21 +53,20 @@
                 1
             ],
             "shortName": [
-                "Silvershower Heartstrings",
-                "Splendor of Tranquil Waters"
+                "Peak Patrol Song",
+                "Uraku Misugiri"
             ],
-            "start": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
-            "end": "u30132024/6/25 18:00u20142024/7/16 14:59u3013",
+            "start": "u3013After the Version 5.1 updateu20142024/10/29 17:59u3013",
+            "end": "u3013After the Version 5.1 updateu20142024/10/29 17:59u3013",
             "version": "xxx",
             "wish5star": [
-                "Silvershower Heartstrings",
-                "Splendor of Tranquil Waters"
+                "Peak Patrol Song",
+                "Uraku Misugiri"
             ],
             "wish4star": [
-                "Lion's Roar",
-                "Favonius Lance",
+                "Sturdy Bone",
                 "Favonius Codex",
-                "Sacrificial Bow"
+                "Rust"
             ],
             "url": [
                 ""
