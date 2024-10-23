@@ -154,6 +154,22 @@
     "CHAR": [
         [
             {
+                "char_name": "莱特",
+                "char_color": "#d96059",
+                "char_line": "有人想要挑战一下常胜冠军吗？",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/5dbe769445d8664de826afa830e63d8b_815126013622097545.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/4fcbe0b3d97cf0bd90ee5f79181809fc_3361821456713249015.png",
+                "char_chan_id": "889"
+            },
+            {
+                "char_name": "月城柳",
+                "char_color": "#fbd8d2",
+                "char_line": "对空六课副课长月城柳，向您问好。",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/79e4b1e0f1025aebdefddb3be13df67c_6291222720087711466.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/909e27d4a1f840fff6d1856068be06f2_2839084200021298822.png",
+                "char_chan_id": "312"
+            },
+            {
                 "char_name": "柏妮思",
                 "char_color": "#cfb684",
                 "char_line": "你看起来不太热烈呢，<br/>要「燃」一下吗~",
@@ -339,6 +355,22 @@
             }
         ],
         [
+            {
+                "char_name": "Lighter",
+                "char_color": "#d96059",
+                "char_line": "Is anyone up for challenging the<br/>undefeated Champion?",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/5dbe769445d8664de826afa830e63d8b_815126013622097545.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/4fcbe0b3d97cf0bd90ee5f79181809fc_3361821456713249015.png",
+                "char_chan_id": "889"
+            },
+            {
+                "char_name": "Tsukishiro Yanagi",
+                "char_color": "#fbd8d2",
+                "char_line": "Hello, I'm Tsukishiro Yanagi, Deputy Chief of Section 6.",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/79e4b1e0f1025aebdefddb3be13df67c_6291222720087711466.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/909e27d4a1f840fff6d1856068be06f2_2839084200021298822.png",
+                "char_chan_id": "312"
+            },
             {
                 "char_name": "Burnice",
                 "char_color": "#cfb684",
@@ -526,6 +558,30 @@
         ]
     ],
     "JS_CHAR": {
+        "lighter": {
+            "key": "Lighter",
+            "id": "lighter",
+            "name": "莱特",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "有人想要挑战一下常胜冠军吗？",
+            "camp": "SonsofCalydon",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "tsukishiro_yanagi": {
+            "key": "Tsukishiro Yanagi",
+            "id": "tsukishiro_yanagi",
+            "name": "月城柳",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "对空六课副课长月城柳，向您问好。",
+            "camp": "Section6",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
         "burnice": {
             "key": "Burnice",
             "id": "burnice",
