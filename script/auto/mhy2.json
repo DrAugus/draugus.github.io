@@ -1,13 +1,13 @@
 [
     {
         "name": [
-            "Romaritime Meluserenity",
-            "Chanson of Many Waters",
+            "Forgefire's Blessing",
+            "Of Silken Clouds Woven",
             "Epitome Invocation"
         ],
         "name_lower": [
-            "romaritime_meluserenity",
-            "chanson_of_many_waters",
+            "forgefire's_blessing",
+            "of_silken_clouds_woven",
             "epitome_invocation"
         ],
         "image": [
@@ -15,37 +15,37 @@
             1
         ],
         "shortName": [
-            "Sigewinne",
-            "Noelle",
-            "Gaming",
-            "Rosaria",
-            "Furina",
-            "Noelle",
-            "Gaming",
-            "Rosaria"
+            "Xilonen",
+            "Dori",
+            "Candace",
+            "Collei",
+            "Chiori",
+            "Dori",
+            "Candace",
+            "Collei"
         ],
-        "start": "2024/6/25 18:00 +0800",
-        "end": "2024/7/16 14:59 +0800",
+        "start": "5.1 +0800",
+        "end": "2024/10/29 17:59 +0800",
         "version": "xxx",
         "wish5star": [
-            "sigewinne",
-            "noelle",
-            "gaming",
-            "rosaria",
-            "furina",
-            "noelle",
-            "gaming",
-            "rosaria"
+            "xilonen",
+            "dori",
+            "candace",
+            "collei",
+            "chiori",
+            "dori",
+            "candace",
+            "collei"
         ],
         "wish4star": [
-            "sigewinne",
-            "noelle",
-            "gaming",
-            "rosaria",
-            "furina",
-            "noelle",
-            "gaming",
-            "rosaria"
+            "xilonen",
+            "dori",
+            "candace",
+            "collei",
+            "chiori",
+            "dori",
+            "candace",
+            "collei"
         ],
         "chronicle": [],
         "wishName": [],
