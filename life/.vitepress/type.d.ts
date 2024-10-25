@@ -233,7 +233,23 @@ export interface ApplePrice {
   device: string,
   price?: number | number[],
   lowest: number,
-  discountDate?: Date,
+  purchaseDate?: Date,
+}
+
+type PurchasePlatform = '淘宝' | '京东' | '官网' | '天猫官方旗舰店' | '线下官方店' | string
+
+export interface ApplePurchased {
+  device: string,
+  priceSale?: number,
+  pricePurchase: number,
+  platform: PurchasePlatform,
+  date: Date,
+}
+
+export interface AirPods {
+  device: string,
+  model: string[],
+  yearIntroduced: number, /* 推出年份 */
 }
 
 export interface CityRestaurant {

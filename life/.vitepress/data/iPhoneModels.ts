@@ -24,5 +24,6 @@ export const IPHONE_MODELS: AppleModels[] = [
   { generation: 15.0, model: 'iPhone SE(3rd generation)', announced: new Date('2022/03/08') },
   { generation: 16.0, model: ['iPhone 14', 'iPhone 14 Plus', 'iPhone 14 Pro', 'iPhone 14 Pro Max'], announced: new Date('2022/09/07') },
   { generation: 17.0, model: ['iPhone 15', 'iPhone 15 Plus', 'iPhone 15 Pro', 'iPhone 15 Pro Max'], announced: new Date('2023/09/12') },
+  { generation: 18.0, model: ['iPhone 16', 'iPhone 16 Plus', 'iPhone 16 Pro', 'iPhone 16 Pro Max'], announced: new Date('2024/09/10') },
 ]
 

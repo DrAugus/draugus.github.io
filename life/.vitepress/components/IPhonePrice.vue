@@ -19,11 +19,13 @@
     </div>
 
     <table>
-        <tr>
-            <th>型号</th>
-            <th>发售日</th>
-            <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
-        </tr>
+        <tbody>
+            <tr>
+                <th>型号</th>
+                <th>发售日</th>
+                <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
+            </tr>
+        </tbody>
 
         <tr v-for="(item, index) in iPhoneModelRef" :key="index"
             :style="{ backgroundColor: getModelBgColor('iPhone ' + item) }">
@@ -96,9 +98,6 @@ const getCapacityName = (num) => {
 };
 
 const convertedCapacityName = iPhoneCapacity.map(number => getCapacityName(number));
-
-
-
 
 var app: any = {};
 
@@ -195,6 +194,24 @@ const labelOption = {
     }
 };
 
+const setSeries = () => {
+    let series: any[] = [];
+    for (let i = 0; i < iPhoneCapacity.length; ++i) {
+        let tmp = {
+            name: convertedCapacityName[i],
+            type: 'bar',
+            // barGap: 0,   
+            label: labelOption,
+            emphasis: {
+                focus: 'series'
+            },
+            data: iPhonePriceByModel[iPhoneCapacity[i]]
+        };
+        series.push(tmp);
+    }
+    return series;
+}
+
 option = {
     tooltip: {
         trigger: 'axis',
@@ -231,54 +248,7 @@ option = {
         }
     ],
 
-    series: [
-        {
-            name: convertedCapacityName[0],
-            type: 'bar',
-            barGap: 0,
-            label: labelOption,
-            emphasis: {
-                focus: 'series'
-            },
-            data: iPhonePriceByModel[iPhoneCapacity[0]]
-        },
-        {
-            name: convertedCapacityName[1],
-            type: 'bar',
-            label: labelOption,
-            emphasis: {
-                focus: 'series'
-            },
-            data: iPhonePriceByModel[iPhoneCapacity[1]]
-        },
-        {
-            name: convertedCapacityName[2],
-            type: 'bar',
-            label: labelOption,
-            emphasis: {
-                focus: 'series'
-            },
-            data: iPhonePriceByModel[iPhoneCapacity[2]]
-        },
-        {
-            name: convertedCapacityName[3],
-            type: 'bar',
-            label: labelOption,
-            emphasis: {
-                focus: 'series'
-            },
-            data: iPhonePriceByModel[iPhoneCapacity[3]]
-        },
-        {
-            name: convertedCapacityName[4],
-            type: 'bar',
-            label: labelOption,
-            emphasis: {
-                focus: 'series'
-            },
-            data: iPhonePriceByModel[iPhoneCapacity[4]]
-        },
-    ]
+    series: setSeries()
 };
 
 // console.log(iPhoneObj)
@@ -431,7 +401,7 @@ const getModelBgColor = (model: string): string => {
         return '';
     }
     const gen = value.gen;
-    const color = getColorScheme(ColorScheme.FreshGrassAndWood);
+    const color = getColorScheme(ColorScheme.ElegantSky);
     const key = gen % color.length;
     return color[key];
 }

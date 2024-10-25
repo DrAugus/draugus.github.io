@@ -695,6 +695,7 @@ const sidebarDisease = [
     { text: '牙', link: '/disease/tooth' },
     {
         text: '记录-自己的', collapsed: false, items: [
+            { text: '2024/10/24 感冒', link: `${prefixDiseaseRecord}/self/20241024` },
             { text: '2024/02/23 发烧', link: `${prefixDiseaseRecord}/self/20240223` },
             { text: '2024/01/25 感冒', link: `${prefixDiseaseRecord}/self/20240125` },
             { text: '2022/12/21 发烧', link: `${prefixDiseaseRecord}/self/20221221` },
