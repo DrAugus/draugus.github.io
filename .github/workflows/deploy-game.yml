@@ -83,7 +83,7 @@ jobs:
 
       # current repo
       - name: Deploy to GitHub Pages Home Site
-        uses: crazy-max/ghaction-github-pages@v4.0.0
+        uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
           build_dir: ${{ matrix.deploy-dir }}
           jekyll: false
@@ -101,7 +101,7 @@ jobs:
         run: pnpm game:build
 
       - name: Deploy to GitHub Pages in augusmeow
-        uses: crazy-max/ghaction-github-pages@v4.0.0
+        uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
           repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
           target_branch: gh-pages
