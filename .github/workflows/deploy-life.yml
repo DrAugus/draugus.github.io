@@ -72,7 +72,7 @@ jobs:
         if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4.0.0
+        uses: crazy-max/ghaction-github-pages@v4.1.0
         with:
           repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
           target_branch: gh-pages
