@@ -1,9 +1,9 @@
 import { setJourneySidebar } from "./data/trip/journey";
 import { setTravelogueSidebar } from "./data/trip/travelogue";
 
-const prefixArticle = '/course/literature/article';
-const prefixHistory = '/course/history';
-const prefixLang = '/course/literature/language';
+const prefixArticle = '/article';
+const prefixHistory = '/history';
+const prefixLang = '/language';
 const prefixXiwen = '/xiwen';
 const prefixDiseaseRecord = '/disease/record';
 const prefixCommandTools = '/tools/cmd-line-tools';
@@ -84,8 +84,8 @@ const sidebarTripJourney = [
 ]
     .concat(...setJourneySidebar());
 
-const sidebarArtsSpeech = [
-    { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/arts/speech/craig-federighi' },
+const sidebarSpeech = [
+    { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/speech/craig-federighi' },
 ];
 
 
@@ -140,117 +140,6 @@ const sidebarXiwen = [
     { text: '尽忠报国全粤义民申谕英夷告示', link: prefixXiwen + '/尽忠报国全粤义民申谕英夷告示' },
     { text: '谕南京等处文武官员军民人等告示', link: prefixXiwen + '/谕南京等处文武官员军民人等告示' },
 ];
-const sidebarCourse = [
-    {
-        text: '哲学', collapsed: false, items: [
-            { text: '哲学', link: '/course/philosophy/' },
-        ]
-    }, {
-        text: '经济学', collapsed: false, items: [
-            { text: '微观经济学', link: '/course/economics/microeconomics' },
-        ]
-    }, {
-        text: '法学', collapsed: false, items: [
-            { text: '法学', link: '/course/law/' },
-        ]
-    }, {
-        text: '教育学', collapsed: false, items: [
-            { text: '教育学', link: '/course/education/' },
-        ]
-    }, {
-        text: '文学', collapsed: false, items: [
-            { text: '文学', link: '/course/literature/' },
-        ]
-    }, {
-        text: '历史学', collapsed: false, items: [
-            { text: '历史学', link: '/course/history/' },
-        ]
-    }, {
-        text: '理学', collapsed: false, items: [
-            { text: '数学术语中英文', link: '/course/science/math-term' },
-            { text: '离散数学', link: '/course/science/discrete-math' },
-            { text: '概率论', link: '/course/science/probability-theory' },
-            { text: '线性代数', link: '/course/science/linear-algebra' },
-            { text: '微积分', link: '/course/science/calculus' },
-        ]
-    }, {
-        text: '工学', collapsed: false, items: [
-            { text: '数据结构与算法', link: '/course/engineering/dsa' },
-        ]
-    }, {
-        text: '农学', collapsed: false, items: [
-            { text: '农学', link: '/course/agronomy/' },
-        ]
-    },
-    {
-        text: '医学', collapsed: false, items: [
-            { text: '医学', link: '/course/medicine/' },
-        ]
-    },
-    {
-        text: '军事学', collapsed: false, items: [
-            { text: '军事学', link: '/course/military-science/' },
-        ]
-    },
-    {
-        text: '管理学', collapsed: false, items: [
-            { text: '管理学', link: '/course/management/' },
-        ]
-    }, {
-        text: '艺术学', collapsed: false, items: [
-            { text: '乐理', link: '/course/art/music_theory' },
-            { text: '连音', link: '/course/art/tuplet' },]
-    }
-];
-const sidebarPhilosophy = [
-    { text: '哲学', link: '/course/philosophy/' },
-];
-const sidebarEconomics = [
-    { text: '微观经济学', link: '/course/economics/microeconomics' },
-];
-const sidebarLaw = [
-    { text: '法学', link: '/course/law/' },
-    { text: '中国人口', link: '/course/law/population-cn' },
-];
-const sidebarEducation = [
-    { text: '教育学', link: '/course/education/' },
-];
-const sidebarLiterature = [
-    // { text: '文学', link: '/course/literature/' },
-    {
-        text: "语言", items: [
-            { text: '中文', link: prefixLang + '/chinese' },
-            { text: '英语单词', link: prefixLang + '/english-words' },
-            { text: '英语简单句', link: prefixLang + '/english' },
-            { text: '法语', link: prefixLang + '/french' },
-            { text: '德语', link: prefixLang + '/german' },
-            { text: '日语', link: prefixLang + '/japanese' },
-            { text: '意大利语', link: prefixLang + '/italian' },
-            {
-                text: '英语专辑',
-                collapsed: false,
-                items: [
-                    { text: '常用电话提示音', link: prefixLang + '/english/dial-number' },
-                    { text: '词组 俚语', link: prefixLang + '/english/phrase' },
-                ],
-            },
-            { text: '人名汇总', link: prefixLang + '/name' },
-            { text: '发音体系', link: prefixLang + '/pronunciation' },
-            { text: '相似', link: prefixLang + '/similar' },
-        ]
-    }, {
-        text: '文章',
-        items: [
-            { text: '猫', link: prefixArticle + '/猫' },
-            { text: '庄子·秋水', link: prefixArticle + '/庄子·秋水' },
-            { text: '归去来兮辞', link: prefixArticle + '/归去来兮辞' },
-            { text: '道德经', link: prefixArticle + '/道德经' },
-            { text: '逍遥游·北冥有鱼', link: prefixArticle + '/逍遥游·北冥有鱼' },
-            { text: '聪明人和傻子和奴才', link: prefixArticle + '/聪明人和傻子和奴才' },
-            { text: 'A Cup of Tea', link: prefixArticle + '/a-cup-of-tea' },
-        ]
-    }
-];
 const sidebarHistory = [
     // { text: '历史学', link: '/course/history/' },
     { text: '中国历史', link: prefixHistory + '/china' },
@@ -271,31 +160,34 @@ const sidebarHistory = [
         ],
     },
 ];
-const sidebarScience = [
-    { text: '数学术语中英文', link: '/course/science/math-term' },
-    { text: '离散数学', link: '/course/science/discrete-math' },
-    { text: '概率论', link: '/course/science/probability-theory' },
-    { text: '线性代数', link: '/course/science/linear-algebra' },
-    { text: '微积分', link: '/course/science/calculus' },
-];
-const sidebarEngineering = [
-    { text: '数据结构与算法', link: '/course/engineering/dsa' },
-];
-const sidebarAgronomy = [
-    { text: '农学', link: '/course/agronomy/' },
-];
-const sidebarMedicine = [
-    { text: '医学', link: '/course/medicine/' },
-];
-const sidebarMilitaryScience = [
-    { text: '军事学', link: '/course/military-science/' },
-];
-const sidebarManagement = [
-    { text: '管理学', link: '/course/management/' },
-];
-const sidebarArt = [
-    { text: '乐理', link: '/course/art/music_theory' },
-    { text: '连音', link: '/course/art/tuplet' }
+const sidebarArticle = [
+    { text: '猫', link: prefixArticle + '/猫' },
+    { text: '庄子·秋水', link: prefixArticle + '/庄子·秋水' },
+    { text: '归去来兮辞', link: prefixArticle + '/归去来兮辞' },
+    { text: '道德经', link: prefixArticle + '/道德经' },
+    { text: '逍遥游·北冥有鱼', link: prefixArticle + '/逍遥游·北冥有鱼' },
+    { text: '聪明人和傻子和奴才', link: prefixArticle + '/聪明人和傻子和奴才' },
+    { text: 'A Cup of Tea', link: prefixArticle + '/a-cup-of-tea' },
+]
+const sidebarLanguage = [
+    { text: '中文', link: prefixLang + '/chinese' },
+    { text: '英语单词', link: prefixLang + '/english-words' },
+    { text: '英语简单句', link: prefixLang + '/english' },
+    { text: '法语', link: prefixLang + '/french' },
+    { text: '德语', link: prefixLang + '/german' },
+    { text: '日语', link: prefixLang + '/japanese' },
+    { text: '意大利语', link: prefixLang + '/italian' },
+    {
+        text: '英语专辑',
+        collapsed: false,
+        items: [
+            { text: '常用电话提示音', link: prefixLang + '/english/dial-number' },
+            { text: '词组 俚语', link: prefixLang + '/english/phrase' },
+        ],
+    },
+    { text: '人名汇总', link: prefixLang + '/name' },
+    { text: '发音体系', link: prefixLang + '/pronunciation' },
+    { text: '相似', link: prefixLang + '/similar' },
 ];
 
 const sidebarCodeOS = [
@@ -719,25 +611,15 @@ export const sidebar = {
     '/trip/': sidebarTrip,
     '/trip/travelogue/': sidebarTripTravelogue,
     '/trip/journey/': sidebarTripJourney,
-    // arts
-    '/arts/speech/': sidebarArtsSpeech,
+    // 
+    '/speech/': sidebarSpeech,
+    '/history/': sidebarHistory,
+    '/article/': sidebarArticle,
+    '/language/': sidebarLanguage,
     //
     '/xiwen/': sidebarXiwen,
     //
     // '/course/': sidebarCourse,
-    '/course/philosophy/': sidebarPhilosophy,
-    '/course/economics/': sidebarEconomics,
-    '/course/law/': sidebarLaw,
-    '/course/education/': sidebarEducation,
-    '/course/literature/': sidebarLiterature,
-    '/course/history/': sidebarHistory,
-    '/course/science/': sidebarScience,
-    '/course/engineering/': sidebarEngineering,
-    '/course/agronomy/': sidebarAgronomy,
-    '/course/medicine/': sidebarMedicine,
-    '/course/military-science/': sidebarMilitaryScience,
-    '/course/management/': sidebarManagement,
-    '/course/art/': sidebarArt,
     //
     '/tools/': sidebarTools,
     //
