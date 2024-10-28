@@ -237,6 +237,12 @@ export const afterToday = (t: string) => parseDayjs(t).isAfter(today);
 
 export const durationDay = (s: string, e: string) => parseDayjs(e).diff(parseDayjs(s), "day", true);
 export const durationTodayDay = (t: string) => parseDayjs(t).diff(today, "day", true);
+export const durationTodayMillisecond = (t: string) => parseDayjs(t).diff(today, "ms", true);
+
+// 通过差值，计算今天之后的对应时间
+export const calFutureDate = (dur: number) => today.add(dur, 'ms');
+
+export const d2ms = (day: number) => day * 24 * 60 * 60 * 1000;
 
 //秒转换
 export const secondsFormat = (s) => {

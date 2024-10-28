@@ -3,6 +3,9 @@ import json from "../../data/genshin/rscs-unique.json";
 import { City } from "./utils";
 import { CHARACTER } from "./characters";
 
+// todo
+// 设计头像 Components 便于其他界面使用
+
 let showZH = {};
 for (let city in json) {
     let zhCity: string = City[city].name;
@@ -20,9 +23,17 @@ for (let city in json) {
 </script>
 <template>
     <div v-for="(v, k, i) in showZH">
-        <h3>{{ k }}</h3>
-        <div v-for="(vv, ii) in v">
-            {{ vv }}
-        </div>
+        <p>
+            <span class="f-w-600"> {{ k + " " }}</span>
+            <span v-for="(vv, ii) in v">
+                {{ vv + " " }}
+            </span>
+        </p>
     </div>
 </template>
+
+<style lang="css" scoped>
+.f-w-600 {
+    font-weight: 600;
+}
+</style>
