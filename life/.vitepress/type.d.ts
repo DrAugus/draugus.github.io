@@ -14,7 +14,7 @@ export interface OfficialInfo {
   platform?: Platform | Platform[],
 }
 
-interface LibsInfo {
+export interface LibsInfo {
   intro?: string,
   repo?: string,
   homepage?: string,

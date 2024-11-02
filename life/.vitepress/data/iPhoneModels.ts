@@ -2,6 +2,8 @@ import type { AppleModels } from '../type';
 
 // DATA from https://en.wikipedia.org/wiki/List_of_iPhone_models
 
+// https://www.apple.com.cn/newsroom/2016/09/07Apple-Introduces-iPhone-7-iPhone-7-Plus-The-Best-Most-Advanced-iPhone-Ever/
+
 export const IPHONE_MODELS: AppleModels[] = [
   { generation: 1.0, model: 'iPhone', announced: new Date('2007/01/09') },
   { generation: 2.0, model: 'iPhone 3G', announced: new Date('2008/06/09') },

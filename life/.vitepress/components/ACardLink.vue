@@ -91,8 +91,8 @@ const modifyLink = (obj: LinkName, res: string) => {
       </div>
       <span v-if="date" class="italic">{{ date }}</span>
       <div v-if="desc">
-        <p v-if="typeof desc === 'string'" class="desc" v-html="desc"></p>
-        <p v-else-if="'desc instanceof LibsInfo'" class="desc">
+        <div v-if="typeof desc === 'string'" class="desc" v-html="desc"></div>
+        <div v-else-if="'desc instanceof LibsInfo'" class="desc">
           <ul>
             <li v-if="desc.intro" class="desc intro" v-html="'<b>Intro: </b>' + desc.intro"> </li>
             <li v-if="desc.repo" class="desc" v-html="splitRepo('Repo', desc.repo)"> </li>
@@ -102,7 +102,7 @@ const modifyLink = (obj: LinkName, res: string) => {
               <li v-for="(v, i) in desc.others" class="desc" v-html="splitLink(v.text, v.link)"> </li>
             </div>
           </ul>
-        </p>
+        </div>
 
       </div>
 

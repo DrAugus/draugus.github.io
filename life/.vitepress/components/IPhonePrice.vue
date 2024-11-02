@@ -21,17 +21,19 @@
     <table>
         <tbody>
             <tr>
-                <th>型号</th>
-                <th>发售日</th>
+                <th>iPhone 型号</th>
+                <!-- <th>发售日</th> -->
                 <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
             </tr>
         </tbody>
 
         <tr v-for="(item, index) in iPhoneModelRef" :key="index"
             :style="{ backgroundColor: getModelBgColor('iPhone ' + item) }">
-            <td> {{ 'iPhone ' + item }} </td>
-            <td> {{ getModelDate('iPhone ' + item) }}</td>
-            <td class="table-text-center" v-for="(vv, ii) in capacity" :key="ii">
+            <td class="no-wrap"> {{ item }}
+                <span class="VPBadge warning">{{ getModelYear('iPhone ' + item) }}</span>
+            </td>
+            <!-- <td class="no-wrap"> {{ getModelDate('iPhone ' + item) }}</td> -->
+            <td class="table-text-center no-wrap" v-for="(vv, ii) in capacity" :key="ii">
                 {{ iPhonePriceRef[index][vv] ? '￥' + iPhonePriceRef[index][vv] : '-' }}
             </td>
         </tr>
@@ -82,7 +84,7 @@ for (let cap of iPhoneCapacity) {
 }
 
 
-const getCapacityName = (num) => {
+const getCapacityName = (num: number) => {
     const powers = ['GB', 'TB', 'PB'];
     const exponent = Math.log2(num) + 1;
     let unitIndex = Math.floor(exponent / 10);
@@ -97,7 +99,11 @@ const getCapacityName = (num) => {
     return `${result}${unit}`;
 };
 
-const convertedCapacityName = iPhoneCapacity.map(number => getCapacityName(number));
+function convertCapacityName(capacity: number[]) {
+    return capacity.map(number => getCapacityName(number));
+}
+
+const convertedCapacityName = convertCapacityName(iPhoneCapacity);
 
 var app: any = {};
 
@@ -194,7 +200,7 @@ const labelOption = {
     }
 };
 
-const setSeries = () => {
+const setSeries = (obj: any) => {
     let series: any[] = [];
     for (let i = 0; i < iPhoneCapacity.length; ++i) {
         let tmp = {
@@ -205,7 +211,7 @@ const setSeries = () => {
             emphasis: {
                 focus: 'series'
             },
-            data: iPhonePriceByModel[iPhoneCapacity[i]]
+            data: obj[iPhoneCapacity[i]]
         };
         series.push(tmp);
     }
@@ -248,7 +254,7 @@ option = {
         }
     ],
 
-    series: setSeries()
+    series: setSeries(iPhonePriceByModel)
 };
 
 // console.log(iPhoneObj)
@@ -323,21 +329,42 @@ for (let i = 0; i < iPhoneModel.length; i++) {
 }
 
 const indices = (obj) => obj.map(item => item.index);
-const extractedValues = (sourceArr, indexArr) => indexArr.map(index => sourceArr[index]);
+function extractedValues<T>(sourceArr: T[], indexArr: number[]) {
+    return indexArr.map(index => sourceArr[index]);
+}
 
 // console.log("Models:", allModels);
 
 
-const capacity = iPhoneCapacity;
-const capacityName = convertedCapacityName;
+let capacity = ref(iPhoneCapacity);
+let capacityName = ref(convertedCapacityName);
+// console.log("capacityName:", capacityName);
 
 let iPhoneModelRef = ref(iPhoneModel);
 let iPhonePriceRef = ref(iPhonePrice);
+
+function hasCapacity(arr) {
+    const uniqueKeys: number[] = [];
+    const keysSet = new Set<number>();
+
+    arr.forEach(obj => {
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)) {
+                keysSet.add(key);
+            }
+        }
+    });
+
+    uniqueKeys.push(...keysSet);
+    return uniqueKeys;
+}
 
 const filterModel = (model: string) => {
     if (model === '') {
         iPhoneModelRef.value = iPhoneModel;
         iPhonePriceRef.value = iPhonePrice;
+        capacityName.value = convertedCapacityName;
+        capacity.value = iPhoneCapacity;
         return;
     }
 
@@ -346,11 +373,15 @@ const filterModel = (model: string) => {
     if (itModelsInfo) {
         indexModels = [...itModelsInfo].map(item => item.index);
     }
-
     // console.log("indexModels", indexModels);
 
+    const filterPrice = extractedValues(iPhonePrice, indexModels);
+    // console.log("filterPrice", filterPrice);
+    const indexCapacity = hasCapacity(filterPrice);
+    capacityName.value = convertCapacityName(indexCapacity);
+    capacity.value = indexCapacity;
+    iPhonePriceRef.value = filterPrice;
     iPhoneModelRef.value = extractedValues(iPhoneModel, indexModels);
-    iPhonePriceRef.value = extractedValues(iPhonePrice, indexModels);
     // console.log("iPhoneModelRef", iPhoneModelRef);
     // console.log("iPhonePriceRef", iPhonePriceRef);
 
@@ -361,9 +392,7 @@ const filterModel = (model: string) => {
 
     // console.log(iPhonePriceByModel, result);
 
-    for (let i = 0; i <= iPhoneCapacity.length; i++) {
-        option.series[i].data = result[iPhoneCapacity[i]];
-    }
+    option.series = setSeries(result);
     option = option;
 };
 
@@ -393,6 +422,14 @@ const getModelDate = (model: string) => {
         return '';
     }
     return modifyDate(value.announced);
+};
+
+const getModelYear = (model: string) => {
+    const value = mapModels.get(model);
+    if (value === undefined) {
+        return '';
+    }
+    return value.announced.getFullYear() + "年";
 };
 
 const getModelBgColor = (model: string): string => {
@@ -433,5 +470,13 @@ const getModelBgColor = (model: string): string => {
 
 .all-button:hover {
     background-color: #33d6ff;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    overflow: hidden;
+    /* 可选，防止内容溢出表格单元格 */
+    text-overflow: ellipsis;
+    /* 可选，用省略号表示被截断的内容 */
 }
 </style>
