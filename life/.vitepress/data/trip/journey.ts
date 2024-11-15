@@ -11,6 +11,7 @@ const dataJourney: Journey[] = [
     { date: new Date('2023/06/22') },
     { date: new Date('2023/06/26') },
     { date: new Date('2024/09/17') },
+    { date: new Date('2024/05/13') },
 ];
 
 const linkPrefix = '/trip/journey/';

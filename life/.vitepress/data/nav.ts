@@ -790,6 +790,11 @@ export const NAV_DATA: CardData[] = [
         title: '复旦大学东亚语言数据中心',
         // desc: '',
         link: 'http://ccdc.fudan.edu.cn/bases/index.jsp'
+      }, {
+        icon: 'https://bijinhyakka.com/wp-content/themes/bijinhyakka/favicon.ico',
+        title: '美人百花',
+        // desc: '',
+        link: 'https://bijinhyakka.com/archives/new_release/'
       },
     ]
   },
