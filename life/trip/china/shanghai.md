@@ -42,5 +42,9 @@
 
 ## 美食
 
+:::info 没吃过的
+
 - GREEN & SAFE(新天地店)   <Badge type="warning" text="人均 ¥200" />  <Badge type="tip" text="西餐" />
 - Va Bene贝尼西餐厅   <Badge type="warning" text="人均 ¥368" />  <Badge type="tip" text="牛排" />
+- 豪生酒家(徐汇区广元路156号)  <Badge type="warning" text="人均 ¥200" /> <Badge type="tip" text="本帮菜" />
+:::

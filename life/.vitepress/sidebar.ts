@@ -584,7 +584,9 @@ const sidebarDisease = [
     { text: '病痛', link: '/disease/' },
     { text: '胃镜', link: '/disease/gastroscopy' },
     { text: '眼睛变化', link: '/disease/eyes' },
+    { text: '痤疮', link: '/disease/acne-vulgaris' },
     { text: '牙', link: '/disease/tooth' },
+    { text: '过敏症状', link: '/disease/igg' },
     {
         text: '记录-自己的', collapsed: false, items: [
             { text: '2024/10/24 感冒', link: `${prefixDiseaseRecord}/self/20241024` },
