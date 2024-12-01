@@ -2,6 +2,60 @@
     "title": "",
     "items": [
         {
+            "title": "复杂度",
+            "desc": "复杂度 查找 插入 删除 ---- 数组 O(n) O(1) O(n) 有序数组 O(logn)",
+            "link": "/code/dsa/complexity",
+            "date": "2024-12-01"
+        },
+        {
+            "title": "注册会计师",
+            "desc": "注册会计师 相关链接 - 中国注册会计师协会：官网 - 网上报名：入口 考试时间 > 参考2025",
+            "link": "/exam/certificate/cpa",
+            "date": "2024-12-01"
+        },
+        {
+            "title": "Linux 问题收集",
+            "desc": "Linux 问题收集 命令行使用代理 export HTTPSPROXY=yourproxy_ad",
+            "link": "/code/os/linux/qa",
+            "date": "2024-07-12"
+        },
+        {
+            "title": "使用提示",
+            "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
+            "link": "/code/os/windows/tips",
+            "date": "2024-07-27"
+        },
+        {
+            "title": "猜价",
+            "desc": "猜价 今天是谁来挑选餐厅呢？ AUG JOY 价格大侦探，由 {{ personChose }}",
+            "link": "/daily/guess-bill",
+            "date": "2024-11-30"
+        },
+        {
+            "title": "公务员考试",
+            "desc": "公务员考试 相关链接 - 国家公务员首页 - 国考：报名入口 - 国考：缴费入口 - 国考通知通告",
+            "link": "/exam/certificate/gwy",
+            "date": "2024-11-30"
+        },
+        {
+            "title": "会计专业技术资格考试",
+            "desc": "会计专业技术资格考试 相关链接 官网 考试安排 以2023年的安排为参考 一、考试报名 （一）报名",
+            "link": "/exam/certificate/kzp",
+            "date": "2024-11-30"
+        },
+        {
+            "title": "中小学教师资格证",
+            "desc": "中小学教师资格证 相关链接 官网 报名 要求 各类别报考学历条件要求如下 - 报考幼儿园教师资格的",
+            "link": "/exam/certificate/ntce",
+            "date": "2024-11-30"
+        },
+        {
+            "title": "软考高级系统架构",
+            "desc": "软考高级系统架构 相关链接 - 官网 - 报名 报名 机考收费调整 自2023年下半年起，全国计算",
+            "link": "/exam/certificate/ruankao-high-lv",
+            "date": "2024-11-30"
+        },
+        {
             "title": "2024/05/13",
             "desc": "2024/05/13 周一 计划 12:27-14:35 C8659 桂林-南宁东 142 15:",
             "link": "/trip/journey/20240513",
@@ -66,60 +120,6 @@
             "desc": "英语简单句 import SentenceEnglish from '../.vitepress/",
             "link": "/language/english",
             "date": "2024-10-28"
-        },
-        {
-            "title": "相似",
-            "desc": "相似 import Similar from '../.vitepress/components/",
-            "link": "/language/similar",
-            "date": "2024-10-28"
-        },
-        {
-            "title": "使用提示",
-            "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
-            "link": "/code/os/windows/tips",
-            "date": "2024-07-27"
-        },
-        {
-            "title": "日用价格参考",
-            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
-            "link": "/daily/goods-price",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "2024/10/01",
-            "desc": "2024/10/01 外卖买了路上吃的东西，一直没送到，很焦虑，既焦虑没吃的，又焦虑赶不上车 决定",
-            "link": "/trip/journey/20241001",
-            "date": "2024-10-21"
-        },
-        {
-            "title": "2024/10/05",
-            "desc": "2024/10/05 痛苦经历，每次都会决定再也不坐卧铺！！！但最终都会向生活妥协…… 反正也是不",
-            "link": "/trip/journey/20241005",
-            "date": "2024-10-21"
-        },
-        {
-            "title": "2024/10/19",
-            "desc": "2024/10/19 不是，哥们 你自己升舱，老婆在后面坐经济舱 无可厚非 但是素质能不能高点，坐",
-            "link": "/trip/journey/20241019",
-            "date": "2024-10-21"
-        },
-        {
-            "title": "探索",
-            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
-            "link": "/trip/fd1",
-            "date": "2024-10-19"
-        },
-        {
-            "title": "探索",
-            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
-            "link": "/trip/flights-dev",
-            "date": "2024-10-19"
-        },
-        {
-            "title": "广西",
-            "desc": "广西 柳州 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有） 白天鱼峰山公园，龙潭公园，柳侯公",
-            "link": "/trip/china/guangxi/index",
-            "date": "2024-05-28"
         }
     ]
 }

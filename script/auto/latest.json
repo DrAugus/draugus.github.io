@@ -1,4 +1,40 @@
 {
+    "life/code/dsa/complexity.md": {
+        "title": "复杂度",
+        "date": 1733044739.0
+    },
+    "life/exam/certificate/cpa.md": {
+        "title": "注册会计师",
+        "date": 1733044739.0
+    },
+    "life/code/os/linux/qa.md": {
+        "title": "Linux 问题收集",
+        "date": 1720772837.0
+    },
+    "life/code/os/windows/tips.md": {
+        "title": "使用提示",
+        "date": 1722099577.0
+    },
+    "life/daily/guess-bill.md": {
+        "title": "猜价",
+        "date": 1732963606.0
+    },
+    "life/exam/certificate/gwy.md": {
+        "title": "公务员考试",
+        "date": 1732963606.0
+    },
+    "life/exam/certificate/kzp.md": {
+        "title": "会计专业技术资格考试",
+        "date": 1732963606.0
+    },
+    "life/exam/certificate/ntce.md": {
+        "title": "中小学教师资格证",
+        "date": 1732963606.0
+    },
+    "life/exam/certificate/ruankao-high-lv.md": {
+        "title": "软考高级系统架构",
+        "date": 1732963606.0
+    },
     "life/trip/journey/20240513.md": {
         "title": "2024/05/13",
         "date": 1731643010.0
@@ -46,10 +82,6 @@
     "life/language/similar.md": {
         "title": "相似",
         "date": 1730090464.0
-    },
-    "life/code/os/windows/tips.md": {
-        "title": "使用提示",
-        "date": 1722099577.0
     },
     "life/daily/goods-price.md": {
         "title": "日用价格参考",
@@ -194,10 +226,6 @@
     "life/random-notes/what-is.md": {
         "title": "这是什么？",
         "date": 1721963864.0
-    },
-    "life/code/os/linux/qa.md": {
-        "title": "Linux 问题收集",
-        "date": 1720772837.0
     },
     "life/code/version-ctrl/github.md": {
         "title": "GitHub",
