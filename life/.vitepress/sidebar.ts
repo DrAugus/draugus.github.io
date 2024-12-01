@@ -530,7 +530,8 @@ const sidebarExam = [
             { text: '考证', link: '/exam/certificate/' },
             { text: '软考高级系统架构', link: '/exam/certificate/ruankao-high-lv' },
             { text: '教师资格证', link: '/exam/certificate/ntce' },
-            { text: '全国会计专业技术资格', link: '/exam/certificate/cpa' },
+            { text: '注册会计师', link: '/exam/certificate/cpa' },
+            { text: '全国会计专业技术资格', link: '/exam/certificate/kzp' },
             { text: '公务员考试', link: '/exam/certificate/gwy' },
         ]
     },

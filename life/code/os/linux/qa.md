@@ -2,7 +2,7 @@
 
 ## 命令行使用代理
 
-`export HTTPS_PROXY=your_proxy_addr`
+`export HTTPS_PROXY=your_proxy_addr`，Windows 平台参考[这里](../windows/tips#qa)
 
 ## zsh: 权限不够解决方法
 
@@ -22,6 +22,7 @@ ps -ef | grep flask | grep -v grep | awk '{print $2}' | xargs kill -9
 ```
 
 命令分析
+
 |命令 |作用|
 |:--:|:--:|
 |`ps -ef \| grep flask` |找到所有 flask 进程|

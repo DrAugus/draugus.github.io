@@ -4,9 +4,10 @@ outline: [2, 4]
 
 # 中小学教师资格证
 
-## 官网
+:::warning 相关链接
 
 [官网](https://ntce.neea.edu.cn/html1/folder/1507/1076-1.htm)
+:::
 
 ## 报名
 

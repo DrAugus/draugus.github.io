@@ -1,11 +1,12 @@
 # 公务员考试
 
-## 相关链接
+:::warning 相关链接
 
 - 国家公务员[首页](http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/home/gkhome.html)
 - 国考：[报名入口](http://bm.scs.gov.cn/pp/gkweb/core/web/ui/business/auth/login.html)
 - 国考：[缴费入口](http://gwy.cpta.com.cn/gagwy/login/login_qt.htm)
 - 国考通知通告：[中央机关及其直属机构2024年度考试录用公务员公告](https://www.gov.cn/govweb/lianbo/bumen/202310/content_6909133.htm)
+:::
 
 ## 时间线
 
