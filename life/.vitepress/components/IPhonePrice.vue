@@ -19,24 +19,25 @@
     </div>
 
     <table>
-        <tbody>
+        <thead>
             <tr>
                 <th>iPhone 型号</th>
                 <!-- <th>发售日</th> -->
                 <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
             </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(item, index) in iPhoneModelRef" :key="index"
+                :style="{ backgroundColor: getModelBgColor('iPhone ' + item) }">
+                <td class="no-wrap"> {{ item }}
+                    <span class="VPBadge warning">{{ getModelYear('iPhone ' + item) }}</span>
+                </td>
+                <!-- <td class="no-wrap"> {{ getModelDate('iPhone ' + item) }}</td> -->
+                <td class="table-text-center no-wrap" v-for="(vv, ii) in capacity" :key="ii">
+                    {{ iPhonePriceRef[index][vv] ? '￥' + iPhonePriceRef[index][vv] : '-' }}
+                </td>
+            </tr>
         </tbody>
-
-        <tr v-for="(item, index) in iPhoneModelRef" :key="index"
-            :style="{ backgroundColor: getModelBgColor('iPhone ' + item) }">
-            <td class="no-wrap"> {{ item }}
-                <span class="VPBadge warning">{{ getModelYear('iPhone ' + item) }}</span>
-            </td>
-            <!-- <td class="no-wrap"> {{ getModelDate('iPhone ' + item) }}</td> -->
-            <td class="table-text-center no-wrap" v-for="(vv, ii) in capacity" :key="ii">
-                {{ iPhonePriceRef[index][vv] ? '￥' + iPhonePriceRef[index][vv] : '-' }}
-            </td>
-        </tr>
     </table>
 
 

@@ -2,14 +2,14 @@
     <!-- <button :on-click="sortOrder()">sort</button> -->
 
     <table>
-        <tbody class="table-center">
-
+        <thead class="table-center">
             <tr>
                 <td v-for="(v, i) in versions" :colspan="v.len" class="td-font">
                     {{ v.ver }}</td>
                 <td></td>
             </tr>
-
+        </thead>
+        <tbody class="table-center">
             <tr v-for="(v, i) in rows">
                 <td class="td-w-h" v-for="(vv, ii) in v" :style="{ background: getColor(vv.l, vv.m) }">
                     <span v-if="vv.l" class="td-font"> {{ vv.l }}</span>

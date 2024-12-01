@@ -2,19 +2,23 @@
     <TitleFormat :title="'五十音'" :number="2"></TitleFormat>
 
     <table>
-        <tr>
-            <th></th>
-            <th class="head-letter" v-for="(v, i) in row1"> {{ v }}</th>
-        </tr>
-        <tr v-for="(v, i) in hira2d">
-            <td class="head-letter" v-if="i != hira2d.length - 1">{{ v[0] }}</td>
-            <td v-else></td>
-            <td v-for="(vv, ii) in v">
-                {{ vv }} <br />
-                <span class="kana">{{ kana2d[i][ii] }} </span>
-                <span class="pron">{{ pron2d[i][ii] }}</span>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th></th>
+                <th class="head-letter" v-for="(v, i) in row1"> {{ v }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(v, i) in hira2d">
+                <td class="head-letter" v-if="i != hira2d.length - 1">{{ v[0] }}</td>
+                <td v-else></td>
+                <td v-for="(vv, ii) in v">
+                    {{ vv }} <br />
+                    <span class="kana">{{ kana2d[i][ii] }} </span>
+                    <span class="pron">{{ pron2d[i][ii] }}</span>
+                </td>
+            </tr>
+        </tbody>
     </table>
 
     <TitleFormat :title="'ALL'" :number="2"></TitleFormat>
@@ -50,7 +54,7 @@
 
     </details>
 </template>
-  
+
 <script setup lang="ts">
 import japanese from "../../data/language/japanese.json";
 import { computed } from 'vue';
@@ -98,7 +102,7 @@ const getImgSrc = (dir, s) => {
 };
 
 </script>
-  
+
 <style scoped>
 tr td,
 tr th {
@@ -160,4 +164,3 @@ img {
     border-style: none;
 }
 </style>
-  

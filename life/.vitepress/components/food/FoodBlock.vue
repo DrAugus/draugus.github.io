@@ -17,18 +17,18 @@
       表格显示
     </summary>
     <table>
-      <tr>
-        <th>拉黑店家</th>
-        <th>原因</th>
-      </tr>
-      <tr v-for="(item, index) in blockFood">
-
-        <td>{{ item.split(",")[0] }} </td>
-        <td>{{ item.split(",")[1] }}</td>
-
-
-      </tr>
-
+      <thead>
+        <tr>
+          <th>拉黑店家</th>
+          <th>原因</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(item, index) in blockFood">
+          <td>{{ item.split(",")[0] }} </td>
+          <td>{{ item.split(",")[1] }}</td>
+        </tr>
+      </tbody>
     </table>
   </details>
 </template>

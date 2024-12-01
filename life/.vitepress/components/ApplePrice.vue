@@ -1,6 +1,6 @@
 <template>
     <table>
-        <tbody>
+        <thead>
             <tr>
                 <th>设备</th>
                 <th>官网</th>
@@ -8,18 +8,19 @@
                 <th>优惠幅度</th>
                 <th>购买日期</th>
             </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(item, i) in filterPriceData">
+                <td>{{ item.device }} </td>
+                <td v-if="Array.isArray(item.price)">
+                    <span v-for="(vv, ii) in item.price">{{ vv + ' ' }}</span>
+                </td>
+                <td v-else>{{ item.price }} </td>
+                <td>{{ item.lowest }} </td>
+                <td>{{ discount(item) }} </td>
+                <td>{{ item.purchaseDate ? modifyDate(item.purchaseDate) : '-' }} </td>
+            </tr>
         </tbody>
-
-        <tr v-for="(item, i) in filterPriceData">
-            <td>{{ item.device }} </td>
-            <td v-if="Array.isArray(item.price)">
-                <span v-for="(vv, ii) in item.price">{{ vv + ' ' }}</span>
-            </td>
-            <td v-else>{{ item.price }} </td>
-            <td>{{ item.lowest }} </td>
-            <td>{{ discount(item) }} </td>
-            <td>{{ item.purchaseDate ? modifyDate(item.purchaseDate) : '-' }} </td>
-        </tr>
     </table>
 
 
@@ -30,7 +31,7 @@
     </p>
 
     <table>
-        <tbody>
+        <thead>
             <tr>
                 <th>设备</th>
                 <th>官网</th>
@@ -39,16 +40,17 @@
                 <th>购买平台</th>
                 <th>购买日期</th>
             </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(item, i) in filterPurchasedDataRef">
+                <td>{{ item.device }} </td>
+                <td>{{ item.priceSale ? item.priceSale : '-' }} </td>
+                <td>{{ item.pricePurchase }} </td>
+                <td>{{ discount(item) }} </td>
+                <td>{{ item.platform }} </td>
+                <td>{{ modifyDate(item.date) }} </td>
+            </tr>
         </tbody>
-
-        <tr v-for="(item, i) in filterPurchasedDataRef">
-            <td>{{ item.device }} </td>
-            <td>{{ item.priceSale ? item.priceSale : '-' }} </td>
-            <td>{{ item.pricePurchase }} </td>
-            <td>{{ discount(item) }} </td>
-            <td>{{ item.platform }} </td>
-            <td>{{ modifyDate(item.date) }} </td>
-        </tr>
     </table>
 
 </template>

@@ -119,7 +119,7 @@ export default {
         <h3>还款总额构成</h3>
 
         <table>
-            <tbody>
+            <thead>
                 <tr>
                     <th>{{ (repaymentTotal / 10000).toFixed(2) }}万</th>
                     <th></th>
@@ -128,6 +128,8 @@ export default {
                     <th>{{ (totalInterest / 10000).toFixed(2) }}万</th>
                     <th>{{ loanPeriod }}</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr>
                     <td>总额</td>
                     <td>=</td>
@@ -141,7 +143,7 @@ export default {
         <p>贷款占比 {{ principalRatio }}% 利息占比 {{ interestRatio }}%</p>
 
         <table>
-            <tbody>
+            <thead>
                 <tr>
                     <th>期数</th>
                     <th>还款金额</th>
@@ -149,6 +151,8 @@ export default {
                     <th>还款利息</th>
                     <th>剩余本金</th>
                 </tr>
+            </thead>
+            <tbody>
                 <tr v-for="(row, index) in repaymentResults" :key="index">
                     <td>{{ index + 1 }}</td>
                     <td>{{ row.repayment }}</td>

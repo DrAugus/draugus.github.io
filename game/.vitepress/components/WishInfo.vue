@@ -7,27 +7,28 @@
 
   <div v-if="DISPLAY === WishInfoType.Table">
     <table>
-      <tr>
-        <th class="table-center">版本</th>
-        <th class="table-center">日期</th>
-        <th colspan="2" class="table-center"> {{ getWishNameStr(gameName) }}信息</th>
-        <th colspan="2" class="table-center">5星(up次数)</th>
-
-      </tr>
-      <tr v-for="(v, i) in char">
-
-        <td class="table-center">{{ v.version }}</td>
-        <td class="table-center">{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
-        <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
-          <img v-bind:src="`/image/${getGameNameStr(gameName)}/wish/${combineWishPic(v.name[ii], v.image[ii])}`"
-            width="320" @error="replaceImg" alt="">
-        </td>
-        <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
-          <span v-if="v.wish5star"> {{ CHARACTER[v.wish5star[ii]].name }}</span>
-          <Badge :text="v.image[ii] + ''" />
-        </td>
-
-      </tr>
+      <thead>
+        <tr>
+          <th class="table-center">版本</th>
+          <th class="table-center">日期</th>
+          <th colspan="2" class="table-center"> {{ getWishNameStr(gameName) }}信息</th>
+          <th colspan="2" class="table-center">5星(up次数)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(v, i) in char">
+          <td class="table-center">{{ v.version }}</td>
+          <td class="table-center">{{ formatDayjs(v.start) + "~" + formatDayjs(v.end) }}</td>
+          <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
+            <img v-bind:src="`/image/${getGameNameStr(gameName)}/wish/${combineWishPic(v.name[ii], v.image[ii])}`"
+              width="320" @error="replaceImg" alt="">
+          </td>
+          <td class="table-center" v-for="(vv, ii) in v.name" :colspan="v.name.length > 1 ? 1 : 2">
+            <span v-if="v.wish5star"> {{ CHARACTER[v.wish5star[ii]].name }}</span>
+            <Badge :text="v.image[ii] + ''" />
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 

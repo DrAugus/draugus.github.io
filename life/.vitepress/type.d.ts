@@ -266,4 +266,18 @@ interface Restaurant {
   specialDishes: string[],            // 特色菜品，也可以视为推荐菜的一种  
   recommendedDishes: string[],        // 明确标注为推荐的菜品  
   notRecommendedDishes: string[],     // 明确标注为不推荐的菜品 
-}  
+}
+
+interface TimeComplexity {
+  best: string,
+  average: string,
+  worst: string,
+}
+
+export interface Complexity {
+  type: string,
+  method: string,
+  time: TimeComplexity,
+  space: string,
+  stable: boolean,
+}
