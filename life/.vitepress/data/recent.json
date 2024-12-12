@@ -2,6 +2,30 @@
     "title": "",
     "items": [
         {
+            "title": "基础知识",
+            "desc": "基础知识 main 函数之前之后 在C或C++中，main函数之前会执行一些初始化操作，例如： 1",
+            "link": "/code/interview/basin",
+            "date": "2024-12-12"
+        },
+        {
+            "title": "非技术问题",
+            "desc": "非技术问题 自我评价 - 你的优势和劣势是什么？ - 最近在看什么书吗，有没有接触过什么新技术？",
+            "link": "/code/interview/non-tech",
+            "date": "2024-12-12"
+        },
+        {
+            "title": "libuv",
+            "desc": "libuv libuv is a multi-platform support library w",
+            "link": "/code/libs/libuv",
+            "date": "2024-12-12"
+        },
+        {
+            "title": "C 语言",
+            "desc": "C 语言 我们要让计算机做计算,就需要像这样找出计算的步骤,然后用编程语言写出来 计算机做的所有的",
+            "link": "/course/c",
+            "date": "2024-12-12"
+        },
+        {
             "title": "复杂度",
             "desc": "复杂度 查找 插入 删除 ---- 数组 O(n) O(1) O(n) 有序数组 O(logn)",
             "link": "/code/dsa/complexity",
@@ -95,30 +119,6 @@
             "title": "中国编年史",
             "desc": "中国编年史 import History from '../.vitepress/componen",
             "link": "/history/china",
-            "date": "2024-10-28"
-        },
-        {
-            "title": "战争",
-            "desc": "战争 import War from '../.vitepress/components/arts",
-            "link": "/history/war",
-            "date": "2024-10-28"
-        },
-        {
-            "title": "中文",
-            "desc": "中文 import Chinese from '../.vitepress/components/",
-            "link": "/language/chinese",
-            "date": "2024-10-28"
-        },
-        {
-            "title": "英语单词",
-            "desc": "英语单词 import WordsEnglish from '../.vitepress/comp",
-            "link": "/language/english-words",
-            "date": "2024-10-28"
-        },
-        {
-            "title": "英语简单句",
-            "desc": "英语简单句 import SentenceEnglish from '../.vitepress/",
-            "link": "/language/english",
             "date": "2024-10-28"
         }
     ]
