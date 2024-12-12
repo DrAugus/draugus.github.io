@@ -620,10 +620,24 @@ class OperateFile:
     current_path = f"{get_project_root()}/script/"
 
     @staticmethod
-    def check_filename(filename):
-        if filename is None or filename == "":
-            return OperateFile.current_path + "/.augus_output"
+    def get_filename_input(filename):
+        if filename is None or not len(filename):
+            filename = OperateFile.current_path + "test"
+        if OperateFile.current_path not in filename:
+            filename = OperateFile.current_path + filename
         return filename
+
+    @staticmethod
+    def get_filename_output(filename):
+        if filename is None or not len(filename):
+            filename = OperateFile.current_path + ".augus_output"
+        if OperateFile.current_path not in filename:
+            filename = OperateFile.current_path + filename
+        return filename
+
+    @staticmethod
+    def check_filename(filename):
+        return OperateFile.get_filename_output(filename)
 
     # str 为最终合并完成的 str 至少一行
     @staticmethod
@@ -644,10 +658,7 @@ class OperateFile:
 
     @staticmethod
     def open_and_read(filename, callback):
-        if not len(filename):
-            filename = OperateFile.current_path + "/test"
-        if OperateFile.current_path not in filename:
-            filename = OperateFile.current_path + filename
+        filename = OperateFile.get_filename_input(filename)
         with open(filename, "r", encoding="utf-8") as file_handle:
             line = file_handle.readline()
             arr_res = []
@@ -661,10 +672,7 @@ class OperateFile:
 
     @staticmethod
     def open_and_read_no_strip(filename, callback, output):
-        if filename is None or not len(filename):
-            filename = OperateFile.current_path + "/test"
-        if OperateFile.current_path not in filename:
-            filename = OperateFile.current_path + filename
+        filename = OperateFile.get_filename_input(filename)
         with open(filename, "r", encoding="utf-8") as file_handle:
             line = file_handle.readline()
             arr_res = []
@@ -678,9 +686,7 @@ class OperateFile:
 
     @staticmethod
     def open_file(filename, callback):
-        if not len(filename):
-            filename = OperateFile.current_path + "/test"
-        filename = OperateFile.current_path + filename
+        filename = OperateFile.get_filename_input(filename)
         with open(filename, "r", encoding="utf-8") as file_handle:
             line = file_handle.readline()
             arr_res = []
@@ -690,6 +696,20 @@ class OperateFile:
                 # print('res', res)
                 arr_res.append(res)
                 line = file_handle.readline()
+
+    @staticmethod
+    def get_dict_by_read_file(filename, callback):
+        filename = OperateFile.get_filename_input(filename)
+        with open(filename, "r", encoding="utf-8") as file_handle:
+            line = file_handle.readline()
+            arr_res = []
+            while line:
+                line_str = line.strip()
+                res = callback(line_str)
+                # print('res', res)
+                arr_res.append(res)
+                line = file_handle.readline()
+            return arr_res
 
     @staticmethod
     def prepend_to_file(filename, new_content):
@@ -714,8 +734,8 @@ class OperateFile:
 
     @staticmethod
     def read_one_line():
-        filename_input = OperateFile.current_path + "/test"
-        filename_output = OperateFile.current_path + "/.augus_output"
+        filename_input = OperateFile.get_filename_input()
+        filename_output = OperateFile.get_filename_output()
         # 打开input.txt文件进行读取
         with open(filename_input, "r", encoding="utf-8") as file:
             lines = file.readlines()
