@@ -319,7 +319,6 @@ const sidebarCodeDSA = [
 const sidebarCodeInterview = [
     { text: '基础知识', link: '/code/interview/basin' },
     { text: '程序设计', link: '/code/interview/program' },
-    { text: '编译', link: '/code/interview/compile' },
     { text: '算法与数据结构', link: '/code/interview/dsa' },
     { text: '数据库', link: '/code/interview/db' },
     { text: '操作系统', link: '/code/interview/os' },
