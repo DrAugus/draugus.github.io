@@ -92,7 +92,7 @@ const modifyLink = (obj: LinkName, res: string) => {
       <span v-if="date" class="italic">{{ date }}</span>
       <div v-if="desc">
         <div v-if="typeof desc === 'string'" class="desc" v-html="desc"></div>
-        <div v-else-if="'desc instanceof LibsInfo'" class="desc">
+        <div v-else class="desc">
           <ul>
             <li v-if="desc.intro" class="desc intro" v-html="'<b>Intro: </b>' + desc.intro"> </li>
             <li v-if="desc.repo" class="desc" v-html="splitRepo('Repo', desc.repo)"> </li>

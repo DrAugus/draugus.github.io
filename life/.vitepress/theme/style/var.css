@@ -11,3 +11,11 @@
     --vp-c-brand-darker: #e1458b;
     --vp-c-brand-dimm: rgba(100, 108, 255, .08);
 }
+
+.vp-doc tr {
+    white-space: nowrap;
+    overflow: hidden;
+    /* 可选，防止内容溢出表格单元格 */
+    text-overflow: ellipsis;
+    /* 可选，用省略号表示被截断的内容 */
+}

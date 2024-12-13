@@ -18,7 +18,7 @@ export default defineConfig({
             rel: "stylesheet",
             href: "//unpkg.com/heti/umd/heti.min.css",
         },],
-        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
     // https://vitepress.dev/guide/sitemap-generation
     sitemap: {
