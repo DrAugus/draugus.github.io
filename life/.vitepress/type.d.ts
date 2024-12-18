@@ -246,6 +246,14 @@ export interface ApplePurchased {
   date: Date,
 }
 
+export interface AppleSubscribe {
+  name: string,
+  price: number,
+  start: Date,
+  end?: Date,
+  info?: string,
+}
+
 export interface AirPods {
   device: string,
   model: string[],

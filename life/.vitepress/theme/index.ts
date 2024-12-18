@@ -3,7 +3,6 @@ import './style/var.css'
 import { useData } from 'vitepress'
 import { h } from 'vue'
 import AsideSponsors from './components/AsideSponsors.vue'
-import RegisterSW from './components/RegisterSW.vue'
 
 export default {
   ...Theme,
@@ -18,8 +17,7 @@ export default {
     }
 
     return h(Theme.Layout, props, {
-      'aside-bottom': () => h(AsideSponsors),
-      'layout-bottom': () => h(RegisterSW)
+      'aside-bottom': () => h(AsideSponsors)
     })
   },
 }
