@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "小猫",
+            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
+            "link": "/daily/cat",
+            "date": "2024-05-23"
+        },
+        {
             "title": "基础知识",
             "desc": "基础知识 main 函数之前之后 在C或C++中，main函数之前会执行一些初始化操作，例如： 1",
             "link": "/code/interview/basin",
@@ -108,12 +114,6 @@
             "desc": "中国人口 import Population from '../.vitepress/compon",
             "link": "/course/population-cn",
             "date": "2024-10-28"
-        },
-        {
-            "title": "小猫",
-            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
-            "link": "/daily/cat",
-            "date": "2024-05-23"
         },
         {
             "title": "中国编年史",
