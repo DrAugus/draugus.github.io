@@ -955,5 +955,38 @@
         "city": "Natlan",
         "ele": "dendro",
         "weapon": "claymore"
+    },
+    "ororon": {
+        "id": "ororon",
+        "name": "欧洛伦",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "来自「烟谜主」、总是神情自若的年轻人。要捕捉他得费点功夫。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "chasca": {
+        "id": "chasca",
+        "name": "恰斯卡",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "特拉洛坎的调停人，无论是人还是龙挑起的「争端」，无论是以言辞还是弹药加以「调停」，一切矛盾，皆止于此。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "xilonen": {
+        "id": "xilonen",
+        "name": "希诺宁",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "纳茨卡延的铁匠，善于在工作的重担与舒适的生活之间找到平衡点。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }
