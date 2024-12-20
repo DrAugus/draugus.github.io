@@ -1,10 +1,11 @@
 import { defineConfig } from 'vitepress';
 import { navbar } from './navbar';
 import { sidebar } from './sidebar';
+import { pwa } from './pwa';
 
 export default defineConfig({
     // These are app level configs.
-    title: 'Augusの享乐',
+    title: 'Augusの享楽',
     description: '吃什么 去哪玩',
     base: "/",
     lastUpdated: true,
@@ -107,5 +108,10 @@ export default defineConfig({
             detailsLabel: '详细信息'
         },
         math: true
+    },
+    vite: {
+        plugins: [
+            pwa(),
+        ],
     },
 });

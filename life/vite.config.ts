@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
 
 // refer
 //  https://github.com/ecomfe/vue-echarts/issues/652#issuecomment-1250203941
@@ -32,36 +31,4 @@ export default defineConfig({
             }
         }
     },
-    plugins: [
-        VitePWA({
-            registerType: 'autoUpdate',
-            injectRegister: 'auto',
-            // devOptions: {
-            //     enabled: true,
-            // },
-            workbox: {
-                globPatterns: ['**/*.{js,css,html,ico,png,svg,jpg,jpeg}'],
-                maximumFileSizeToCacheInBytes: 20971520, // 10Mb
-            },
-            includeAssets: ['favicon.ico', 'home.png', 'logo.png'],
-            manifest: {
-                name: 'Augusの享楽',
-                short_name: 'Augusの享楽',
-                description: 'Augusの享楽',
-                theme_color: '#ffffff',
-                icons: [
-                    {
-                        src: 'home.png',
-                        sizes: '192x192',
-                        type: 'image/png',
-                    },
-                    {
-                        src: 'home.png',
-                        sizes: '512x512',
-                        type: 'image/png',
-                    },
-                ],
-            },
-        })
-    ],
 });
