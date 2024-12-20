@@ -13,7 +13,14 @@ export const navbar = [
     ],
     activeMatch: '^/trip',
   },
-  { text: '日常', link: '/daily/', activeMatch: '^/daily' },
+  {
+    text: '日常', items: [
+      { text: '介绍', link: '/daily/' },
+      { text: '小猫', link: '/daily/cat' },
+      { text: '日用价格', link: '/daily/goods-price' },
+      { text: '苹果购买记录', link: '/daily/apple/price' },
+    ], activeMatch: '^/daily'
+  },
   // { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
   { text: '课程', link: '/course/', activeMatch: '^/course' },
   {

@@ -3,6 +3,21 @@ export function isStringNumeric(s: string): boolean {
     return !isNaN(n) && !isNaN(Number(parseFloat(s)));
 }
 
+//格式化日期
+import dayjs from "dayjs";
+const today = dayjs();
+export const parseDayjs = (date: string | Date) =>
+    typeof date === 'string' ? dayjs(date, "YYYY-MM-DD HH:mm:ss") : dayjs(date);
+export const formatDayjs = (date: string | Date) =>
+    parseDayjs(date).format("YYYY-MM-DD HH:mm");
+
+export const durationDay = (s: string | Date, e: string | Date) => parseDayjs(e).diff(parseDayjs(s), "day", true);
+export const durationTodayDay = (t: string | Date) => parseDayjs(t).diff(today, "day", true);
+
+export const durationMonth = (s: string | Date, e: string | Date) => parseDayjs(e).diff(parseDayjs(s), "month", true);
+export const monthsFromToday2X   = (t: string | Date) => parseDayjs(t).diff(today, "month", true);
+export const monthsFromX2Today  = (t: string | Date) => today.diff(t, "month", true);
+
 // 2021/01/01
 export const modifyDate = (date: Date): string =>
     date.toLocaleDateString('zh-CN', {

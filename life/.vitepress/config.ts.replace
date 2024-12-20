@@ -1,10 +1,12 @@
 import { defineConfig } from 'vitepress';
 import { navbar } from './navbar';
 import { sidebar } from './sidebar';
+import { pwa } from './pwa';
 
 export default defineConfig({
     // These are app level configs.
-    title: 'Augusの享乐',
+    lang: 'zh-CN',
+    title: 'Augusの享楽',
     description: '吃什么 去哪玩',
     base: "/life/",
     lastUpdated: true,
@@ -20,6 +22,7 @@ export default defineConfig({
         },],
         // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ],
+    // https://vitepress.dev/guide/sitemap-generation
     sitemap: {
         hostname: 'https://augusmeow.github.io/life/'
     },
@@ -106,5 +109,10 @@ export default defineConfig({
             detailsLabel: '详细信息'
         },
         math: true
+    },
+    vite: {
+        plugins: [
+            pwa(),
+        ],
     },
 });

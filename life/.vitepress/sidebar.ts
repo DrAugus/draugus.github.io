@@ -16,25 +16,36 @@ const sidebarEat = [
 const sidebarDaily = [
     // { text: '日常', link: '/daily/' },
     { text: '小猫', link: '/daily/cat' },
-    { text: '日用价格', link: '/daily/goods-price' },
-    { text: '买房吗', link: '/daily/house' },
-    { text: '买车吗', link: '/daily/car' },
-    { text: '办卡吗', link: '/daily/card' },
-    { text: '户口', link: '/daily/hukou' },
-    { text: '租房', link: '/daily/rent' },
-    { text: '看剧', link: '/daily/entertainment' },
-    { text: '通勤', link: '/daily/commuting' },
-    { text: '月亮', link: '/daily/moon' },
-    { text: '踩雷商品', link: '/daily/bad-product' },
     {
+        text: '日用消费', collapsed: false, items: [
+            { text: '日用价格', link: '/daily/goods-price' },
+            { text: '踩雷商品', link: '/daily/bad-product' },]
+    }, {
+        text: '居住房产', collapsed: false, items: [
+            { text: '户口', link: '/daily/hukou' },
+            { text: '买房吗', link: '/daily/house' },
+            { text: '租房', link: '/daily/rent' },
+        ]
+    }, {
+        text: '出行交通', collapsed: false, items: [
+            { text: '买车吗', link: '/daily/car' },
+            { text: '通勤', link: '/daily/commuting' },
+        ]
+    }, {
+        text: '娱乐休闲', collapsed: false, items: [
+            { text: '办卡吗', link: '/daily/card' },
+            { text: '看剧', link: '/daily/entertainment' },
+            { text: '月亮', link: '/daily/moon' },
+        ]
+    }, {
         text: 'Apple', collapsed: false, items: [
+            { text: '已购设备价格', link: '/daily/apple/price' },
             { text: '官方日历订阅', link: '/daily/apple/calendar' },
             { text: 'iPhone', link: '/daily/apple/iphone' },
             { text: '评测', link: '/daily/apple/review' },
             // { text: '价格波动', link: '/daily/apple/price' },
             { text: '苹果究竟怎么了', link: '/daily/apple/reflect' },
             { text: '技术规格', link: '/daily/apple/specs' },
-            { text: '设备价格', link: '/daily/apple/price' },
             { text: '天才吧', link: '/daily/apple/genius-bar' },
             { text: 'iCloud', link: '/daily/apple/iCloud' },
             { text: 'Apple ID', link: '/daily/apple/id' },

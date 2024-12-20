@@ -23,8 +23,18 @@
         </tbody>
     </table>
 
+    <TitleFormat :title="`购买过的东西，总计消耗 ${totalPurchasedPrice} 元`" :number="2" />
 
-    <p>购买过的东西，总计消耗 {{ totalPurchasedPrice }} 元</p>
+    设备总消耗 <b>{{ totalPurchasedPrice }}</b> 元，如果包含订阅的 <b>{{ allSubscribe().toFixed(2) }}</b>元，则总计为
+    <b>{{ (totalPurchasedPrice + allSubscribe()).toFixed(2) }}</b>元
+
+    <div class="warning custom-block">
+        <p class="custom-block-title">订阅</p>
+        <p>总计消耗 {{ allSubscribe().toFixed(2) }} </p>
+        <ul>
+            <li v-for="(appleSub, i) in APPLE_SUBSCRIBE" v-html="modifiedSubscribe(appleSub)"> </li>
+        </ul>
+    </div>
 
     <p>
         <button @click="sortByDate"> 日期排序 </button>
@@ -57,10 +67,14 @@
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue';
+import TitleFormat from './TitleFormat.vue';
+
 import { APPLE_PRICE } from '../data/appleprice';
 import { APPLE_PURCHASED } from '../data/applepurchased';
-import { ApplePrice, ApplePurchased } from '../type';
-import { modifyDate } from '../utils';
+import { APPLE_SUBSCRIBE } from '../data/applesubscribe';
+
+import { ApplePrice, ApplePurchased, AppleSubscribe } from '../type';
+import { durationMonth, monthsFromX2Today, modifyDate, modifyDate1 } from '../utils';
 const filterPriceData = APPLE_PRICE.filter(obj => obj.device);
 const filterPurchasedData = APPLE_PURCHASED.filter(obj => obj.device);
 const totalPurchasedPrice = filterPurchasedData.reduce((sum, product) => sum + product.pricePurchase, 0);;
@@ -104,4 +118,25 @@ function sortByDate() {
         filterPurchasedDataRef.value = items;
     }
 }
+
+function calSubscribeTotal(appleSubs: AppleSubscribe) {
+    let durMonth = appleSubs.end ? durationMonth(appleSubs.start, appleSubs.end) : monthsFromX2Today(appleSubs.start);
+    // console.log(durMonth);
+    return durMonth * appleSubs.price;
+}
+
+function modifiedSubscribe(appleSubs: AppleSubscribe) {
+    let dateDisplay = `${modifyDate1(appleSubs.start)}-`;
+    dateDisplay += appleSubs.end ? modifyDate1(appleSubs.end) : '至今';
+    return `${appleSubs.name}(￥${appleSubs.price}): ${dateDisplay}，共计 <b>${calSubscribeTotal(appleSubs).toFixed(2)}元</b>`
+}
+
+function allSubscribe() {
+    let total = 0;
+    for (let appleSub of APPLE_SUBSCRIBE) {
+        total += calSubscribeTotal(appleSub);
+    }
+    return total;
+}
+
 </script>

@@ -5,6 +5,7 @@ import { pwa } from './pwa';
 
 export default defineConfig({
     // These are app level configs.
+    lang: 'zh-CN',
     title: 'Augusの享楽',
     description: '吃什么 去哪玩',
     base: "/",
