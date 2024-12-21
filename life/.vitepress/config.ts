@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress';
 import { navbar } from './navbar';
 import { sidebar } from './sidebar';
-import { pwa } from './pwa';
+import { withPwa } from '@vite-pwa/vitepress'
 
-export default defineConfig({
+export default withPwa(defineConfig({
     // These are app level configs.
     lang: 'zh-CN',
     title: 'Augusの享楽',
@@ -21,8 +21,14 @@ export default defineConfig({
             href: "//unpkg.com/heti/umd/heti.min.css",
         },],
         // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', {
+            name: 'keywords',
+            content: 'PWA, VitePress, Augus, Vite, Life, AugusMeow',
+        }],
     ],
-    // https://vitepress.dev/guide/sitemap-generation
+    // refer
+    //  https://vitepress.dev/guide/sitemap-generation
+    //  https://github.com/vite-pwa/vitepress/tree/main/examples
     sitemap: {
         hostname: 'https://augusmeow.github.io'
     },
@@ -110,9 +116,78 @@ export default defineConfig({
         },
         math: true
     },
-    vite: {
-        plugins: [
-            pwa(),
-        ],
+    // https://github.com/vite-pwa/vite-plugin-pwa/blob/main/docs/scripts/pwa.ts
+    pwa: {
+        outDir: '.vitepress/dist',
+        registerType: 'prompt',
+        includeManifestIcons: false,
+        selfDestroying: true,
+        manifest: {
+            id: '/',
+            name: 'Augusの享楽',
+            short_name: 'Augusの享楽',
+            description: 'Augusの享楽',
+            theme_color: '#ffffff',
+            icons: [
+                {
+                    src: 'home.png',
+                    sizes: '192x192',
+                    type: 'image/png',
+                },
+                {
+                    src: 'home.png',
+                    sizes: '512x512',
+                    type: 'image/png',
+                },
+            ],
+        },
+        workbox: {
+            globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+            maximumFileSizeToCacheInBytes: 20971520, // 10Mb
+            runtimeCaching: [
+                {
+                    urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+                    handler: 'CacheFirst',
+                    options: {
+                        cacheName: 'google-fonts-cache',
+                        expiration: {
+                            maxEntries: 10,
+                            maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+                        },
+                        cacheableResponse: {
+                            statuses: [0, 200],
+                        },
+                    },
+                },
+                {
+                    urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+                    handler: 'CacheFirst',
+                    options: {
+                        cacheName: 'gstatic-fonts-cache',
+                        expiration: {
+                            maxEntries: 10,
+                            maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+                        },
+                        cacheableResponse: {
+                            statuses: [0, 200],
+                        },
+                    },
+                },
+                {
+                    urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/i,
+                    handler: 'NetworkFirst',
+                    options: {
+                        cacheName: 'jsdelivr-images-cache',
+                        expiration: {
+                            maxEntries: 10,
+                            maxAgeSeconds: 60 * 60 * 24 * 7, // <== 7 days
+                        },
+                        cacheableResponse: {
+                            statuses: [0, 200],
+                        },
+                    },
+                },
+            ],
+        },
     },
-});
+}));
