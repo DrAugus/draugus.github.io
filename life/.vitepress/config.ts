@@ -23,7 +23,7 @@ export default withPwa(defineConfig({
         // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
         ['meta', {
             name: 'keywords',
-            content: 'PWA, VitePress, Augus, Vite, Life, AugusMeow',
+            content: 'PWA, VitePress, Augus, Vite, Life, AugusMeow, Trip, Travel, 旅行',
         }],
     ],
     // refer
@@ -116,6 +116,7 @@ export default withPwa(defineConfig({
         },
         math: true
     },
+    // https://vite-pwa-org.netlify.app/frameworks/vitepress.html
     // https://github.com/vite-pwa/vite-plugin-pwa/blob/main/docs/scripts/pwa.ts
     pwa: {
         outDir: '.vitepress/dist',

@@ -1,9 +1,11 @@
 import { defineConfig } from 'vitepress';
 import { navbar_zh } from './navbar';
 import { sidebar_zh } from './sidebar';
+import { withPwa } from '@vite-pwa/vitepress'
 
-export default defineConfig({
+export default withPwa(defineConfig({
   // These are app level configs.
+  lang: 'zh-CN',
   title: 'Augus Game',
   description: 'Game',
   base: "/",
@@ -15,6 +17,10 @@ export default defineConfig({
       href: '/favicon.ico',
     }],
     // ['meta', { name: 'theme-color', content: '#3c8772' }],
+    ['meta', {
+      name: 'keywords',
+      content: 'PWA, VitePress, Augus, Vite, Game, AugusMeow, 游戏, 原神, Genshin Impact, Genshin, 崩坏星穹铁道, ZZZ, 祈愿, 抽卡, banner',
+    }],
   ],
   sitemap: {
     hostname: 'https://draugus.github.io'
@@ -48,7 +54,46 @@ export default defineConfig({
     algolia: {
       appId: 'TMOT9B7BHV',
       apiKey: '8870d1a7427df92c33d2db21368d01d1',
-      indexName: 'augusmeowio'
+      indexName: 'augusmeowio',
+      placeholder: '搜索',
+      translations: {
+        button: {
+          buttonText: '搜索',
+          buttonAriaLabel: '搜索'
+        },
+        modal: {
+          searchBox: {
+            resetButtonTitle: '清除查询条件',
+            resetButtonAriaLabel: '清除查询条件',
+            cancelButtonText: '取消',
+            cancelButtonAriaLabel: '取消'
+          },
+          startScreen: {
+            recentSearchesTitle: '搜索历史',
+            noRecentSearchesText: '没有搜索历史',
+            saveRecentSearchButtonTitle: '保存至搜索历史',
+            removeRecentSearchButtonTitle: '从搜索历史中移除',
+            favoriteSearchesTitle: '收藏',
+            removeFavoriteSearchButtonTitle: '从收藏中移除'
+          },
+          errorScreen: {
+            titleText: '无法获取结果',
+            helpText: '你可能需要检查你的网络连接'
+          },
+          footer: {
+            selectText: '选择',
+            navigateText: '切换',
+            closeText: '关闭',
+            searchByText: '搜索提供者'
+          },
+          noResultsScreen: {
+            noResultsText: '无法找到相关结果',
+            suggestedQueryText: '你可以尝试查询',
+            reportMissingResultsText: '你认为该查询应该有结果？',
+            reportMissingResultsLinkText: '点击反馈'
+          }
+        }
+      }
     },
   },
   markdown: {
@@ -59,5 +104,78 @@ export default defineConfig({
       infoLabel: '信息',
       detailsLabel: '详细信息'
     },
-  }
-});
+  },
+  pwa: {
+    outDir: '.vitepress/dist',
+    registerType: 'prompt',
+    includeManifestIcons: false,
+    selfDestroying: true,
+    manifest: {
+      id: '/',
+      name: 'AugusのGame',
+      short_name: 'AugusのGame',
+      description: 'AugusのGame',
+      theme_color: '#ffffff',
+      icons: [
+        {
+          src: 'home.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: 'home.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+    },
+    workbox: {
+      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+      maximumFileSizeToCacheInBytes: 20971520, // 10Mb
+      runtimeCaching: [
+        {
+          urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'google-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          },
+        },
+        {
+          urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+          handler: 'CacheFirst',
+          options: {
+            cacheName: 'gstatic-fonts-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          },
+        },
+        {
+          urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/i,
+          handler: 'NetworkFirst',
+          options: {
+            cacheName: 'jsdelivr-images-cache',
+            expiration: {
+              maxEntries: 10,
+              maxAgeSeconds: 60 * 60 * 24 * 7, // <== 7 days
+            },
+            cacheableResponse: {
+              statuses: [0, 200],
+            },
+          },
+        },
+      ],
+    },
+  },
+}));

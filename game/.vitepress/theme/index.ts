@@ -3,6 +3,7 @@ import Theme from 'vitepress/theme'
 import { useData } from 'vitepress'
 import { h } from 'vue'
 import AsideSponsors from './components/AsideSponsors.vue'
+import ReloadPrompt from './components/ReloadPrompt.vue'
 
 export default {
   ...Theme,
@@ -18,6 +19,7 @@ export default {
 
     return h(Theme.Layout, props, {
       // 'aside-bottom': () => h(AsideSponsors)
+      'layout-bottom': () => h(ReloadPrompt),
     })
   },
 }

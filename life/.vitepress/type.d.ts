@@ -289,3 +289,12 @@ export interface Complexity {
   space: string,
   stable: boolean,
 }
+
+export type Mapping = {
+  [key: string]: number;
+};
+
+export interface Lottery {
+  'welfare': Mapping;
+  'sports': Mapping;
+}
