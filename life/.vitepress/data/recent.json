@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "中了吗？彩票",
+            "desc": "中了吗？彩票 import Lottery from \"../.vitepress/compone",
+            "link": "/random-notes/lottery",
+            "date": "2024-12-21"
+        },
+        {
             "title": "Tauri",
             "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
             "link": "/dev/tauri",
@@ -113,12 +119,6 @@
             "title": "道德经",
             "desc": "道德经 import Article from '../.vitepress/components",
             "link": "/article/道德经",
-            "date": "2024-10-28"
-        },
-        {
-            "title": "中国人口",
-            "desc": "中国人口 import Population from '../.vitepress/compon",
-            "link": "/course/population-cn",
             "date": "2024-10-28"
         }
     ]
