@@ -3,27 +3,32 @@ import { navbar_zh } from './navbar';
 import { sidebar_zh } from './sidebar';
 import { withPwa } from '@vite-pwa/vitepress'
 
+const ogUrl = 'https://draugus.github.io'
+
 export default withPwa(defineConfig({
   // These are app level configs.
   lang: 'zh-CN',
   title: 'Augus Game',
-  description: 'Game',
+  description: '原神启动',
   base: "/",
   lastUpdated: true,
   cleanUrls: true,
   head: [
-    ['link', {
-      rel: 'icon',
-      href: '/favicon.ico',
-    }],
     // ['meta', { name: 'theme-color', content: '#3c8772' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', }],
+    ['meta', { name: 'author', content: 'Augus' }],
     ['meta', {
       name: 'keywords',
       content: 'PWA, VitePress, Augus, Vite, Game, AugusMeow, 游戏, 原神, Genshin Impact, Genshin, 崩坏星穹铁道, ZZZ, 祈愿, 抽卡, banner',
     }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'AugusのGame' }],
+    ['meta', { property: 'og:description', content: '原神启动' }],
+    ['meta', { property: 'og:url', content: ogUrl }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
   ],
   sitemap: {
-    hostname: 'https://draugus.github.io'
+    hostname: ogUrl
   },
   themeConfig: {
     logo: '/logo/logo.jpg',
@@ -114,7 +119,7 @@ export default withPwa(defineConfig({
       id: '/',
       name: 'AugusのGame',
       short_name: 'AugusのGame',
-      description: 'AugusのGame',
+      description: '原神启动',
       theme_color: '#ffffff',
       icons: [
         {

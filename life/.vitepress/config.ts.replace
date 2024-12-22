@@ -3,6 +3,8 @@ import { navbar } from './navbar';
 import { sidebar } from './sidebar';
 import { withPwa } from '@vite-pwa/vitepress'
 
+const ogUrl = 'https://augusmeow.github.io'
+
 export default withPwa(defineConfig({
     // These are app level configs.
     lang: 'zh-CN',
@@ -12,25 +14,25 @@ export default withPwa(defineConfig({
     lastUpdated: true,
     cleanUrls: true,
     head: [
-        ['link', {
-            rel: 'icon',
-            href: '/logo.png',
-        }],
-        ["link", {
-            rel: "stylesheet",
-            href: "//unpkg.com/heti/umd/heti.min.css",
-        },],
         // ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['link', { rel: 'icon', href: '/logo.png', }],
+        ["link", { rel: "stylesheet", href: "//unpkg.com/heti/umd/heti.min.css", },],
+        ['meta', { name: 'author', content: 'Augus' }],
         ['meta', {
             name: 'keywords',
-            content: 'PWA, VitePress, Augus, Vite, Life, AugusMeow',
+            content: 'PWA, VitePress, Augus, Vite, Life, AugusMeow, Trip, Travel, 旅行',
         }],
+        ['meta', { property: 'og:type', content: 'website' }],
+        ['meta', { property: 'og:title', content: 'Augusの享楽' }],
+        ['meta', { property: 'og:description', content: '吃什么 去哪玩' }],
+        ['meta', { property: 'og:url', content: ogUrl }],
+        ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ],
     // refer
     //  https://vitepress.dev/guide/sitemap-generation
     //  https://github.com/vite-pwa/vitepress/tree/main/examples
     sitemap: {
-        hostname: 'https://augusmeow.github.io'
+        hostname: ogUrl
     },
     themeConfig: {
         logo: '/logo.png',
@@ -116,6 +118,7 @@ export default withPwa(defineConfig({
         },
         math: true
     },
+    // https://vite-pwa-org.netlify.app/frameworks/vitepress.html
     // https://github.com/vite-pwa/vite-plugin-pwa/blob/main/docs/scripts/pwa.ts
     pwa: {
         outDir: '.vitepress/dist',
