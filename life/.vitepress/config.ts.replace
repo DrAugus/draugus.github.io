@@ -133,12 +133,12 @@ export default withPwa(defineConfig({
             theme_color: '#ffffff',
             icons: [
                 {
-                    src: 'home.png',
+                    src: 'home-192x192.png',
                     sizes: '192x192',
                     type: 'image/png',
                 },
                 {
-                    src: 'home.png',
+                    src: 'home-512x512.png',
                     sizes: '512x512',
                     type: 'image/png',
                 },

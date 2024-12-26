@@ -176,6 +176,15 @@ const AIRPORTS: Airport[] = [
         longitude: 116.584556,
         latitude: 40.080111
     }, {
+        code: 'PKX',
+        name: 'Beijing Daxing International Airport',
+        nameLocal: '北京大兴国际机场',
+        abbrZH: '大兴机场',
+        city: 'Beijing',
+        country: 'China',
+        longitude: 116.420523,
+        latitude: 39.542600
+    }, {
         code: 'CGO',
         name: 'Zhengzhou Xinzheng International Airport',
         nameLocal: '郑州新郑国际机场',
