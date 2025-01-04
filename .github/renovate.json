@@ -8,7 +8,7 @@
   },
   "packageRules": [
     {
-      "packageNames": [
+      "matchPackageNames": [
         "vuepress",
         "@vuepress/client",
         "@vuepress/utils",
