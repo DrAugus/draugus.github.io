@@ -2,6 +2,36 @@
     "title": "",
     "items": [
         {
+            "title": "面试记录",
+            "desc": "面试记录 > 一些体验极差的面试记录 H3C 新华三技术有限公司 2024.12.28 周六 BO",
+            "link": "/code/interview/record",
+            "date": "2025-01-14"
+        },
+        {
+            "title": "银行卡",
+            "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
+            "link": "/daily/card",
+            "date": "2025-01-14"
+        },
+        {
+            "title": "境外银行卡办理指南",
+            "desc": "境外银行卡办理指南 境内卡参考这篇 储蓄卡/借记卡 汇丰 HK 汇丰 ONE 去当地开户即可，需要",
+            "link": "/trip/card",
+            "date": "2025-01-14"
+        },
+        {
+            "title": "黑龙江",
+            "desc": "黑龙江 哈尔滨 details 旅行参考 by 老乡pls 2023.04 第一天晚上去中央大街，",
+            "link": "/trip/china/heilongjiang/index",
+            "date": "2024-05-28"
+        },
+        {
+            "title": "贵阳 ",
+            "desc": "贵阳import CityLink from '../../.vitepress/componen",
+            "link": "/trip/travelogue/20240426",
+            "date": "2024-05-21"
+        },
+        {
             "title": "机场评测",
             "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
             "link": "/trip/airport",
@@ -12,12 +42,6 @@
             "desc": "北京 美食 北京美食推荐 北京名菜: 北京烤鸭、铜锅涮肉、京酱肉丝、炙子烤肉、宫保鸡丁、抓炒鱼片、",
             "link": "/trip/china/beijing",
             "date": "2024-12-26"
-        },
-        {
-            "title": "黑龙江",
-            "desc": "黑龙江 哈尔滨 details 旅行参考 by 老乡pls 2024.01.10 第一天晚上去中央",
-            "link": "/trip/china/heilongjiang/index",
-            "date": "2024-05-28"
         },
         {
             "title": "中了吗？彩票",
@@ -96,30 +120,6 @@
             "desc": "公务员考试 相关链接 - 国家公务员首页 - 国考：报名入口 - 国考：缴费入口 - 国考通知通告",
             "link": "/exam/certificate/gwy",
             "date": "2024-11-30"
-        },
-        {
-            "title": "会计专业技术资格考试",
-            "desc": "会计专业技术资格考试 相关链接 官网 考试安排 以2023年的安排为参考 一、考试报名 （一）报名",
-            "link": "/exam/certificate/kzp",
-            "date": "2024-11-30"
-        },
-        {
-            "title": "中小学教师资格证",
-            "desc": "中小学教师资格证 相关链接 官网 报名 要求 各类别报考学历条件要求如下 - 报考幼儿园教师资格的",
-            "link": "/exam/certificate/ntce",
-            "date": "2024-11-30"
-        },
-        {
-            "title": "软考高级系统架构",
-            "desc": "软考高级系统架构 相关链接 - 官网 - 报名 报名 机考收费调整 自2023年下半年起，全国计算",
-            "link": "/exam/certificate/ruankao-high-lv",
-            "date": "2024-11-30"
-        },
-        {
-            "title": "2024/05/13",
-            "desc": "2024/05/13 周一 计划 12:27-14:35 C8659 桂林-南宁东 142 15:",
-            "link": "/trip/journey/20240513",
-            "date": "2024-11-15"
         }
     ]
 }
