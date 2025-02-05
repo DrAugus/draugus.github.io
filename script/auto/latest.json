@@ -1,4 +1,28 @@
 {
+    "life/dev.md": {
+        "title": "施工",
+        "date": 1722913051.0
+    },
+    "life/recent.md": {
+        "title": "最近更新",
+        "date": 1718349622.0
+    },
+    "life/trip/card.md": {
+        "title": "境外银行卡办理指南",
+        "date": 1736828882.0
+    },
+    "life/trip/explore.md": {
+        "title": "探索",
+        "date": 1718349622.0
+    },
+    "life/trip/fd1.md": {
+        "title": "探索",
+        "date": 1729297813.0
+    },
+    "life/trip/flights-dev.md": {
+        "title": "探索",
+        "date": 1729297813.0
+    },
     "life/code/cpp/tips/qa.md": {
         "title": "遇到的问题速查",
         "date": 1716329120
@@ -17,10 +41,6 @@
     },
     "life/code/interview/record.md": {
         "title": "面试记录",
-        "date": 1736828882.0
-    },
-    "life/trip/card.md": {
-        "title": "境外银行卡办理指南",
         "date": 1736828882.0
     },
     "life/trip/china/heilongjiang/index.md": {
@@ -163,14 +183,6 @@
         "title": "2024/10/19",
         "date": 1729506251.0
     },
-    "life/trip/fd1.md": {
-        "title": "探索",
-        "date": 1729297813.0
-    },
-    "life/trip/flights-dev.md": {
-        "title": "探索",
-        "date": 1729297813.0
-    },
     "life/trip/china/guangxi/index.md": {
         "title": "广西",
         "date": 1716915828
@@ -190,10 +202,6 @@
     "life/trip/journey/20240917.md": {
         "title": "2024/09/17",
         "date": 1726815910.0
-    },
-    "life/dev.md": {
-        "title": "施工",
-        "date": 1722913051.0
     },
     "life/trip/journey/20230622.md": {
         "title": "2023/06/22",
@@ -347,10 +355,6 @@
         "title": "日本的行政区划",
         "date": 1718950538.0
     },
-    "life/trip/explore.md": {
-        "title": "探索",
-        "date": 1718349622.0
-    },
     "life/trip/travelogue/20220810.md": {
         "title": "长沙",
         "date": 1718936526.0
@@ -449,10 +453,6 @@
     },
     "life/career/tax.md": {
         "title": "年度报税",
-        "date": 1718349622.0
-    },
-    "life/recent.md": {
-        "title": "最近更新",
         "date": 1718349622.0
     },
     "life/code-notes/cmd-line-tools/iterm2.md": {

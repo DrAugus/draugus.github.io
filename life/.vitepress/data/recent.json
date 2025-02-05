@@ -2,6 +2,42 @@
     "title": "",
     "items": [
         {
+            "title": "施工",
+            "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 旅行航线，link - 最新的赶路日记，lin",
+            "link": "/dev",
+            "date": "2024-08-06"
+        },
+        {
+            "title": "最近更新",
+            "desc": "最近更新 import ACardLinks from './.vitepress/compone",
+            "link": "/recent",
+            "date": "2024-06-14"
+        },
+        {
+            "title": "境外银行卡办理指南",
+            "desc": "境外银行卡办理指南 境内卡参考这篇 储蓄卡/借记卡 汇丰 HK 汇丰 ONE 去当地开户即可，需要",
+            "link": "/trip/card",
+            "date": "2025-01-14"
+        },
+        {
+            "title": "探索",
+            "desc": "探索 探索城市及次数 点击下方地图标签可跳转旅行游记import PlaceVisited fro",
+            "link": "/trip/explore",
+            "date": "2024-06-14"
+        },
+        {
+            "title": "探索",
+            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
+            "link": "/trip/fd1",
+            "date": "2024-10-19"
+        },
+        {
+            "title": "探索",
+            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
+            "link": "/trip/flights-dev",
+            "date": "2024-10-19"
+        },
+        {
             "title": "遇到的问题速查",
             "desc": "遇到的问题速查 > 代码过程遇到的一些问题速查表 无法在 linux 正常编译 thread cm",
             "link": "/code/cpp/tips/qa",
@@ -29,12 +65,6 @@
             "title": "面试记录",
             "desc": "面试记录 > 一些体验极差的面试记录 H3C 新华三技术有限公司 2024.12.28 周六 BO",
             "link": "/code/interview/record",
-            "date": "2025-01-14"
-        },
-        {
-            "title": "境外银行卡办理指南",
-            "desc": "境外银行卡办理指南 境内卡参考这篇 储蓄卡/借记卡 汇丰 HK 汇丰 ONE 去当地开户即可，需要",
-            "link": "/trip/card",
             "date": "2025-01-14"
         },
         {
@@ -90,36 +120,6 @@
             "desc": "非技术问题 自我评价 - 你的优势和劣势是什么？ - 最近在看什么书吗，有没有接触过什么新技术？",
             "link": "/code/interview/non-tech",
             "date": "2024-12-12"
-        },
-        {
-            "title": "libuv",
-            "desc": "libuv libuv is a multi-platform support library w",
-            "link": "/code/libs/libuv",
-            "date": "2024-12-12"
-        },
-        {
-            "title": "C 语言",
-            "desc": "C 语言 我们要让计算机做计算,就需要像这样找出计算的步骤,然后用编程语言写出来 计算机做的所有的",
-            "link": "/course/c",
-            "date": "2024-12-12"
-        },
-        {
-            "title": "复杂度",
-            "desc": "复杂度 查找 插入 删除 ---- 数组 O(n) O(1) O(n) 有序数组 O(logn)",
-            "link": "/code/dsa/complexity",
-            "date": "2024-12-01"
-        },
-        {
-            "title": "注册会计师",
-            "desc": "注册会计师 相关链接 - 中国注册会计师协会：官网 - 网上报名：入口 考试时间 > 参考2025",
-            "link": "/exam/certificate/cpa",
-            "date": "2024-12-01"
-        },
-        {
-            "title": "Linux 问题收集",
-            "desc": "Linux 问题收集 命令行使用代理 export HTTPSPROXY=yourproxy_ad",
-            "link": "/code/os/linux/qa",
-            "date": "2024-07-12"
         }
     ]
 }
