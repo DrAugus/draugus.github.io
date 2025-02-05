@@ -10,14 +10,15 @@
 
     <details class="details custom-block">
         <summary>表格显示</summary>
+        <button @click="toggleVisibilityTaxAirport">是否显示基建</button>
         <table>
             <thead>
                 <tr>
                     <th style="text-align:center;">日期</th>
                     <th style="text-align:center;">&lt;= 800km 燃油 ￥</th>
                     <th style="text-align:center;">&gt; 800km 燃油 ￥</th>
-                    <th style="text-align:center;">基建 ￥</th>
-                    <th style="text-align:center;">总税费 ¥</th>
+                    <th style="text-align:center;" v-if="isVisibleTaxAirport">基建 ￥</th>
+                    <th style="text-align:center;" v-if="isVisibleTaxAirport">总税费 ¥</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,8 +26,8 @@
                     <td style="text-align:center;">{{ value }}</td>
                     <td style="text-align:center;">{{ below800km[index] }}</td>
                     <td style="text-align:center;">{{ above800km[index] }}</td>
-                    <td style="text-align:center;">{{ taxAirport[index] }}</td>
-                    <td style="text-align:center;">{{ taxTotal[index] }}</td>
+                    <td style="text-align:center;" v-if="isVisibleTaxAirport">{{ taxAirport[index] }}</td>
+                    <td style="text-align:center;" v-if="isVisibleTaxAirport">{{ taxTotal[index] }}</td>
                 </tr>
             </tbody>
         </table>
@@ -37,6 +38,9 @@
 import EChartsModel from "../EChartsModel.vue";
 import { AIRFARE_DATA } from "../../data/trip/airfare";
 import { modifyDate1 } from "../../utils";
+import { ref } from "vue";
+
+let isVisibleTaxAirport = ref(false);
 
 let getAllDate = AIRFARE_DATA.map(obj => modifyDate1(obj.date));
 const getAllDateModify = AIRFARE_DATA.map(obj => obj.dateModify);
@@ -56,7 +60,7 @@ let taxTotal = taxAirport.map((value, index) => {
 
 let opt = {
     title: {
-        text: '机票价格波动'
+        text: '飞机燃油价格波动'
     },
     tooltip: {
         trigger: 'axis',
@@ -143,21 +147,21 @@ let opt = {
         //     // },
         //     data: below800km,
         // },
-        {
-            name: "基建",
-            type: 'bar',
-            // stack: 'Total',
-            label: {
-                show: true
-            },
-            data: taxAirport,
-            markLine: {
-                data: [{ type: "average" }]
-            },
-            markPoint: {
-                data: [{ type: "max" }]
-            }
-        },
+        // {
+        //     name: "基建",
+        //     type: 'bar',
+        //     // stack: 'Total',
+        //     label: {
+        //         show: true
+        //     },
+        //     data: taxAirport,
+        //     markLine: {
+        //         data: [{ type: "average" }]
+        //     },
+        //     markPoint: {
+        //         data: [{ type: "max" }]
+        //     }
+        // },
     ]
 };
 
@@ -169,6 +173,10 @@ above800km = [...above800km].reverse();
 taxAirport = [...taxAirport].reverse();
 details = [...details].reverse();
 taxTotal = [...taxTotal].reverse()
+
+function toggleVisibilityTaxAirport() {
+    isVisibleTaxAirport.value = !isVisibleTaxAirport.value;
+}
 
 </script>
 

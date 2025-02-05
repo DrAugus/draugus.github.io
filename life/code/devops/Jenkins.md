@@ -1,14 +1,10 @@
----
-icon: vscode-icons:file-type-jenkins
----
-
 # Jenkins
 
 ## pipeline
 
 ## [matrix](https://www.jenkins.io/doc/book/pipeline/syntax/#declarative-matrix)
 
-```jenkinsfile
+```groovy
 stage("compile-all") {
     when {
         anyOf {
@@ -76,7 +72,7 @@ MyLib.myFunc('John')
 
 在 Jenkins Pipeline 中使用 curl 异步发送 HTTP 请求非常容易。首先，您需要安装 curl 插件，然后使用sh 'curl'命令来发送请求。例如：
 
-```jenkinsfile
+```groovy
 pipeline {
     agent any
     stages {
@@ -91,7 +87,7 @@ pipeline {
 
 另外，如果您需要在 Pipeline 中等待远程请求的响应，则可以利用 Jenkins 内置的 waitUntil 方法，如下所示：
 
-```jenkinsfile
+```groovy
 pipeline {
     agent any
     stages {
@@ -109,7 +105,7 @@ pipeline {
 
 此外，您还可以使用 Jenkins 的 HTTP Request 插件，它提供了一种更加可靠和易于使用的方式来发送和管理 HTTP 请求，如下所示：
 
-```jenkinsfile
+```groovy
 pipeline {
     agent any
     stages {

@@ -70,7 +70,7 @@ run `addr2line -e yourSegfaultingProgram 00007f9bebcca90d`
 - `sp` - stack pointer
 - `error` - An error code for page faults; see below for what this means on x86 ([link]).
 
-```h
+```cpp
 /*
  * Page fault error code bits:
  *

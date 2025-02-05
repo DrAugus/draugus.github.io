@@ -254,6 +254,8 @@ def main():
             output += f"api_url:\n{api_all}\n"
             for url in api_all:
                 data_dict = get_data_dict(url)
+                if data_dict is None:
+                    continue
                 warp_arr = get_warp_list(gid, data_dict)
                 output += get_output(gid, warp_arr)
             write_local(gid, output)

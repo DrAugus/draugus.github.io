@@ -601,6 +601,7 @@ const sidebarDisease = [
     { text: '过敏症状', link: '/disease/igg' },
     {
         text: '记录-自己的', collapsed: false, items: [
+            { text: '2025/01/28 感冒', link: `${prefixDiseaseRecord}/self/20250128` },
             { text: '2024/10/24 感冒', link: `${prefixDiseaseRecord}/self/20241024` },
             { text: '2024/02/23 发烧', link: `${prefixDiseaseRecord}/self/20240223` },
             { text: '2024/01/25 感冒', link: `${prefixDiseaseRecord}/self/20240125` },
@@ -608,8 +609,7 @@ const sidebarDisease = [
             { text: '2022/11/28 感冒', link: `${prefixDiseaseRecord}/self/20221128` },
             { text: '2022/06/14 中暑', link: `${prefixDiseaseRecord}/self/20220614` },
         ]
-    },
-    {
+    }, {
         text: '记录-别人的', collapsed: false, items: [
             { text: '2022/12/22 发烧', link: `${prefixDiseaseRecord}/others/20221222` },
             { text: '2022/06/24 扁桃体炎', link: `${prefixDiseaseRecord}/others/20220624` },

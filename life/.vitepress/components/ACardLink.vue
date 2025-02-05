@@ -94,7 +94,7 @@ const modifyLink = (obj: LinkName, res: string) => {
         <div v-if="typeof desc === 'string'" class="desc" v-html="desc"></div>
         <div v-else class="desc">
           <ul>
-            <li v-if="desc.intro" class="desc intro" v-html="'<b>Intro: </b>' + desc.intro"> </li>
+            <li v-if="desc.intro" class="desc intro" v-html="`<b>Intro: </b>${desc.intro}`"> </li>
             <li v-if="desc.repo" class="desc" v-html="splitRepo('Repo', desc.repo)"> </li>
             <li v-if="desc.homepage" class="desc" v-html="splitLink('homepage', desc.homepage)"> </li>
             <li v-if="desc.guide" class="desc" v-html="splitLink('guide', desc.guide)"> </li>
