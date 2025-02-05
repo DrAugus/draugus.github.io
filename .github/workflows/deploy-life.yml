@@ -6,6 +6,7 @@ on:
       - master
     paths:
       - "life/**"
+      - "life/.vitepress/data/recent.json"
       - ".github/workflows/deploy-life.yml"
       - "**/package.json"
       - "**/pnpm-lock.yaml"
@@ -15,6 +16,7 @@ on:
       - master
     paths:
       - "life/**"
+      - "life/.vitepress/data/recent.json"
       - ".github/workflows/deploy-life.yml"
       - "**/package.json"
       - "**/pnpm-lock.yaml"

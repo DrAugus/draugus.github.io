@@ -18,3 +18,11 @@
 
 [refer1]: https://harishgarg.com/writing/openai-api-gpt-3-is-not-available-in-your-country-do-this-instead/
 [refer2]: https://beta.openai.com/docs/supported-countries
+
+## [ChatGPT](https://openai.com/blog/chatgpt/)
+
+ChatGPT: Optimizing Language Models for Dialogue
+
+[try](https://chat.openai.com/auth/login)
+
+[jailbreakchat](https://www.jailbreakchat.com)

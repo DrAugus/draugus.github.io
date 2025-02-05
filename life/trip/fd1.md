@@ -1,4 +1,5 @@
 ---
+aside: false
 outline: false
 lastUpdated: false
 ---

@@ -258,9 +258,8 @@ const sidebarTools = [
             { text: 'vim', link: '/tools/text-edit/vim' },
         ],
     }, {
-        text: 'OpenAI', collapsed: false, items: [
-            { text: 'OpenAI', link: '/tools/openai/' },
-            { text: 'ChatGPT', link: '/tools/openai/chatgpt' },
+        text: 'AI', collapsed: false, items: [
+            { text: 'OpenAI', link: '/tools/ai/openai' },
         ],
     }, {
         text: '杂项', collapsed: false, items: [
