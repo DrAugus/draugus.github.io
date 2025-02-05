@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "遇到的问题速查",
+            "desc": "遇到的问题速查 > 代码过程遇到的一些问题速查表 无法在 linux 正常编译 thread cm",
+            "link": "/code/cpp/tips/qa",
+            "date": "2024-05-21"
+        },
+        {
+            "title": "Jenkins",
+            "desc": "Jenkins pipeline matrix use method 在 Jenkins pipe",
+            "link": "/code/devops/Jenkins",
+            "date": "2025-02-05"
+        },
+        {
+            "title": "病毒性感冒（猜测）",
+            "desc": "病毒性感冒（猜测） 01/28 周二 除夕 带亲戚一起开车，晚上到家后，妹喝了药，说防止感染。说是",
+            "link": "/disease/record/self/20250128",
+            "date": "2025-02-05"
+        },
+        {
             "title": "银行卡",
             "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
             "link": "/daily/card",
@@ -102,24 +120,6 @@
             "desc": "Linux 问题收集 命令行使用代理 export HTTPSPROXY=yourproxy_ad",
             "link": "/code/os/linux/qa",
             "date": "2024-07-12"
-        },
-        {
-            "title": "使用提示",
-            "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
-            "link": "/code/os/windows/tips",
-            "date": "2024-07-27"
-        },
-        {
-            "title": "猜价",
-            "desc": "猜价 今天是谁来挑选餐厅呢？ AUG JOY 价格大侦探，由 {{ personChose }}",
-            "link": "/daily/guess-bill",
-            "date": "2024-11-30"
-        },
-        {
-            "title": "公务员考试",
-            "desc": "公务员考试 相关链接 - 国家公务员首页 - 国考：报名入口 - 国考：缴费入口 - 国考通知通告",
-            "link": "/exam/certificate/gwy",
-            "date": "2024-11-30"
         }
     ]
 }
