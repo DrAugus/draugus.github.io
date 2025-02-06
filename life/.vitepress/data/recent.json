@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "基础",
+            "desc": "基础 关键字 keywords in C++ 这里只列举常考的关键字，其他关键字参考上方的链接 -",
+            "link": "/code/cpp/basin",
+            "date": "2025-02-05"
+        },
+        {
+            "title": "病毒性感冒（猜测）",
+            "desc": "病毒性感冒（猜测） 01/28 周二 除夕 带亲戚一起开车，晚上到家后，妹喝了药，说防止感染。说是",
+            "link": "/disease/record/self/20250128",
+            "date": "2025-02-05"
+        },
+        {
             "title": "施工",
             "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 旅行航线，link - 最新的赶路日记，lin",
             "link": "/dev",
@@ -47,12 +59,6 @@
             "title": "Jenkins",
             "desc": "Jenkins pipeline matrix use method 在 Jenkins pipe",
             "link": "/code/devops/Jenkins",
-            "date": "2025-02-05"
-        },
-        {
-            "title": "病毒性感冒（猜测）",
-            "desc": "病毒性感冒（猜测） 01/28 周二 除夕 带亲戚一起开车，晚上到家后，妹喝了药，说防止感染。说是",
-            "link": "/disease/record/self/20250128",
             "date": "2025-02-05"
         },
         {
@@ -113,12 +119,6 @@
             "title": "基础知识",
             "desc": "基础知识 main 函数之前之后 在C或C++中，main函数之前会执行一些初始化操作，例如： 1",
             "link": "/code/interview/basin",
-            "date": "2024-12-12"
-        },
-        {
-            "title": "非技术问题",
-            "desc": "非技术问题 自我评价 - 你的优势和劣势是什么？ - 最近在看什么书吗，有没有接触过什么新技术？",
-            "link": "/code/interview/non-tech",
             "date": "2024-12-12"
         }
     ]
