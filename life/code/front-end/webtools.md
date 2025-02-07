@@ -1,10 +1,5 @@
 # Web Tools
 
-- node
-- npm
-- pnpm
-- yarn
-
 ## node
 
 ### install
@@ -102,3 +97,11 @@ ExperimentalWarning: The Fetch API is an experimental feature. This feature coul
 [node download]: https://nodejs.org/en/download/
 [pnpm install]: https://pnpm.io/installation
 [nuxt explain]: https://github.com/nuxt/framework/issues/9524#issuecomment-1337698628
+
+### 升级
+
+```bash
+pnpm install package@latest --save-dev
+pnpm install vite@latest --save-dev
+pnpm install vitepress@latest --save-dev
+```
