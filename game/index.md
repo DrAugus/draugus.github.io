@@ -89,5 +89,6 @@ features:
 <Events />
 
 <script setup>
+// import EventsWish from "./.vitepress/components/EventsWish.vue";
 import Events from "./.vitepress/components/Events.vue";
 </script>

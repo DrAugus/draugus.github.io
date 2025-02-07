@@ -1,7 +1,7 @@
 import { WISH } from "./wish";
 import { processEvent } from "../eventHandle";
 import { getWishIndex, getWishInfo } from "../wishInfo";
-import { GameName, WishType, getDeadline } from '../utils';
+import { GameName, WishType, getTimeLeft } from '../utils';
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
@@ -31,11 +31,11 @@ export const future = getWishInfo(wishCharacters, objWishIndex.comingIndex, game
 
 export const wishDeadline = (): string =>
     current.able ?
-        getDeadline(dayjs(), dayjs(wishCharacters[objWishIndex.wishIndex[0]].end)) :
+        getTimeLeft(dayjs(), dayjs(wishCharacters[objWishIndex.wishIndex[0]].end)) :
         '';
 export const wishBegin = (): string =>
     future.able ?
-        getDeadline(dayjs(), dayjs(wishCharacters[objWishIndex.comingIndex[0]].start)) :
+        getTimeLeft(dayjs(), dayjs(wishCharacters[objWishIndex.comingIndex[0]].start)) :
         '';
 
 // console.log(wishDeadline(), wishBegin());
@@ -47,11 +47,11 @@ export const futureChronicled = getWishInfo(wishChronicled, objWishChronicledInd
 
 export const wishDeadlineChronicled = (): string =>
     currentChronicled.able ?
-        getDeadline(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.wishIndex[0]].end)) :
+        getTimeLeft(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.wishIndex[0]].end)) :
         '';
 export const wishBeginChronicled = (): string =>
     futureChronicled.able ?
-        getDeadline(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.comingIndex[0]].start)) :
+        getTimeLeft(dayjs(), dayjs(wishChronicled[objWishChronicledIndex.comingIndex[0]].start)) :
         '';
 
 // console.log(wishDeadlineChronicled(), wishBeginChronicled());

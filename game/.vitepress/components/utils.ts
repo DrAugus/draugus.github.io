@@ -1,9 +1,11 @@
 import type { TimelineHomeHero, WishInfo, Characters } from "./type";
 
 export enum GameName {
-  Genshin,
-  HSR,
-  ZZZ,
+  Genshin,    //原神
+  HSR,        //星穹铁道
+  ZZZ,        //绝区零
+  WW,         //鸣潮 Wuthering Waves
+  IN,         //无限暖暖 infinity nikki
 }
 
 export enum Rarity {
@@ -111,6 +113,23 @@ export const getTimelineHomeHero =
     return tl;
 
   };
+
+export const getGameName = (game: GameName) => {
+  switch (game) {
+    case GameName.Genshin:
+      return '原神';
+    case GameName.HSR:
+      return '星穹铁道';
+    case GameName.ZZZ:
+      return '绝区零';
+    case GameName.WW:
+      return '鸣潮';
+    case GameName.IN:
+      return '无限暖暖';
+    default:
+      return '';
+  }
+};
 
 export const getCategoriesName = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return '国家';
@@ -254,7 +273,7 @@ export const secondsFormat = (s) => {
   return day + "天" + hour + "时" + minute + "分" + second + "秒";
 };
 
-export const getDeadline = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
+export const getTimeLeft = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
 
 //返回始末时间之间的所有日期
 export const getDuration = (type: string, start: Date, end: Date): Date[] => {
@@ -289,3 +308,13 @@ export const filterObject = (obj, callback) =>
     .filter(([key, val]) => callback(val, key)));
 
 export const combineQuoteZh = (str: string) => str ? `「${str}」` : '';
+
+export const getBadgeType = (type: number) => {
+  let map = {
+    0: 'info',
+    1: 'tip',
+    2: 'warning',
+    3: 'danger',
+  };
+  return map[type] || map[type % 4];
+}

@@ -1,7 +1,7 @@
 import { WISH } from "./wish";
 import { processEvent } from "../eventHandle";
 import { getWishIndex, getWishInfo } from "../wishInfo";
-import { GameName, WishType, getDeadline } from '../utils';
+import { GameName, WishType, getTimeLeft } from '../utils';
 
 import dayjs from "dayjs";
 import "dayjs/locale/zh";
@@ -23,11 +23,11 @@ export const future = getWishInfo(wishCharacters, objWish.comingIndex, game);
 
 export const wishDeadline = () =>
     current.able ?
-        getDeadline(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) :
+        getTimeLeft(dayjs(), dayjs(wishCharacters[objWish.wishIndex[0]].end)) :
         -1;
 export const wishBegin = () =>
     future.able ?
-        getDeadline(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) :
+        getTimeLeft(dayjs(), dayjs(wishCharacters[objWish.comingIndex[0]].start)) :
         -1;
 
 // console.log(wishDeadline(), wishBegin());

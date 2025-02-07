@@ -1,3 +1,11 @@
+export enum GameName {
+  Genshin,    //原神
+  HSR,        //星穹铁道
+  ZZZ,        //绝区零
+  WW,         //鸣潮 Wuthering Waves
+  IN,         //无限暖暖 infinity nikki
+}
+
 export interface NameList {
   // english
   id: string,
@@ -102,4 +110,14 @@ export interface Wish {
 export interface WishMixed {
   characters: string[],
   weapons: string[],
+}
+
+export interface Event {
+  name: string,
+  description?: string,
+  image?: string,
+  start: string,
+  end: string,
+  reward?: number,
+  game: GameName,
 }
