@@ -28,7 +28,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest] # macos-latest, windows-latest
-        node: [16]
+        node: 22
         deploy-dir: [game/.vitepress/dist]
         deploy-user: [augusmeow]
         deploy-repo: [game]
