@@ -1,8 +1,13 @@
 <template>
     <div v-for="event in filteredEvents" :key="event.name">
         <div>
-            <Badge :text="getGameName(event.game)" :type="getBadgeType(event.game)" /> {{ event.name }}
-            <span v-if="event.description">({{ event.description }})</span>，还有
+            <span class="self-badge" :style="setBackgroundColor(getGameThemeColor(event.game))">
+                {{ getGameName(event.game) }}</span>
+            <img class="VPImage" :src="'/logo/' + getGameIcon(event.game)" width="15px" height="15px" alt="">
+            {{ event.name }}
+            <span v-if="event.description">({{ event.description }})</span>
+            <span v-if="event.reward"> ，可以获取{{ +event.reward }}</span>
+            ，还有
             <Timer :endTime="event.end" />结束
         </div>
         <img v-if="event.image" :src="event.image" alt="Event Background" />
@@ -14,7 +19,7 @@
 import { computed } from 'vue';
 import { EVENTS } from './event';
 import Timer from './Timer.vue';
-import { getBadgeType, getGameName } from './utils';
+import { getGameIcon, getGameName, getGameThemeColor, setBackgroundColor } from './utils';
 // 获取当前日期
 const now = new Date();
 
@@ -31,6 +36,22 @@ const filteredEvents = computed(() => {
     });
 });
 
-
-
 </script>
+
+<style scoped>
+img {
+    display: unset;
+}
+
+.self-badge {
+    display: inline-block;
+    margin-left: 2px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0 10px;
+    line-height: 22px;
+    font-size: 12px;
+    font-weight: 500;
+    transform: translateY(-2px);
+}
+</style>

@@ -131,6 +131,50 @@ export const getGameName = (game: GameName) => {
   }
 };
 
+export const getGameIcon = (game: GameName) => {
+  const nameIcon = (name: string) => `ico-${name}.ico`;
+  switch (game) {
+    case GameName.Genshin:
+      return nameIcon('genshin');
+    case GameName.HSR:
+      return nameIcon('hsr');
+    case GameName.ZZZ:
+      return nameIcon('zzz');
+    case GameName.WW:
+      return nameIcon('ww');
+    case GameName.IN:
+      return nameIcon('in');
+    default:
+      return '';
+  }
+}
+
+export const getGameThemeColor = (game: GameName) => {
+  switch (game) {
+    case GameName.Genshin: return '#B388FF';
+    case GameName.HSR: return '#4CAF50';
+    case GameName.ZZZ: return '#FF6347';
+    case GameName.WW: return '#00BFFF';
+    case GameName.IN: return '#FFC0CB';
+    default: return '';
+  }
+}
+
+export const getGameRewardName = (game: GameName) => {
+  switch (game) {
+    case GameName.Genshin: return '原石';
+    case GameName.HSR: return '星穹';
+    case GameName.ZZZ: return '星币';
+    case GameName.WW: return '星币';
+    case GameName.IN: return '星币';
+    default: return '';
+  }
+}
+
+export const setBackgroundColor = (color: string) => {
+  return { backgroundColor: color };
+}
+
 export const getCategoriesName = (gameName: GameName) => {
   if (gameName === GameName.Genshin) return '国家';
   if (gameName === GameName.HSR) return '星球';
@@ -264,13 +308,28 @@ export const calFutureDate = (dur: number) => today.add(dur, 'ms');
 export const d2ms = (day: number) => day * 24 * 60 * 60 * 1000;
 
 //秒转换
-export const secondsFormat = (s) => {
+export const secondsFormat = (s: number) => {
   const day = Math.floor(s / (24 * 3600)); // Math.floor()向下取整
   const hour = Math.floor((s - day * 24 * 3600) / 3600);
   const minute = Math.floor((s - day * 24 * 3600 - hour * 3600) / 60);
   const second = s - day * 24 * 3600 - hour * 3600 - minute * 60;
-  if (day < 0 || hour < 0 || minute < 0 || second < 0) return '';
-  return day + "天" + hour + "时" + minute + "分" + second + "秒";
+
+  const padZero = (num: number) => (num < 10 ? '0' + num : num);
+
+  if (day < 0 || hour < 0 || minute < 0 || second < 0) {
+    return '';
+  }
+
+  let result = '';
+  if (day > 0) {
+    result = `${day}天${padZero(hour)}时`;
+  } else if (hour > 0) {
+    result = `${hour}时${padZero(minute)}分`;
+  } else {
+    result = `${minute}分${padZero(second)}秒`;
+  }
+
+  return result;
 };
 
 export const getTimeLeft = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
