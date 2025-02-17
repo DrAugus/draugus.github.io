@@ -30,9 +30,6 @@ jobs:
 
     runs-on: ${{ matrix.os }}
 
-    # # only me, deploy
-    # if: github.actor == 'DrAugus'
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4

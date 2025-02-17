@@ -12,7 +12,7 @@ export const EVENTS: Event[] = [
         name: "游逸旅闻·诗汇之章",
         description: "",
         start: "2025/02/11 10:00:00 +0800",
-        end: "2025/03/25 03:59:59 +0800",
+        end: "2025/03/25 14:59:59 +0800",
         reward: 120,
         game: GameName.Genshin
     }, {
@@ -79,7 +79,7 @@ export const EVENTS: Event[] = [
     }, {
         name: "深境再临",
         start: "2025/02/03 06:00:00 +0800",
-        end: "2025/03/04 03:59:59 +0800",
+        end: "2025/03/03 03:59:59 +0800",
         reward: 700,
         game: GameName.WW
     }, {
@@ -164,5 +164,44 @@ export const EVENTS: Event[] = [
         start: "2025/02/14 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
         game: GameName.IN
+    }, {
+        name: "冥歌海墟",
+        start: "2025/02/13 04:00:00 +0800",
+        end: "2025/03/16 03:59:59 +0800",
+        game: GameName.WW
+    }, {
+        name: "千道门扉的异想",
+        start: "2025/02/13 04:00:00 +0800",
+        end: "2025/02/23 03:59:59 +0800",
+        game: GameName.WW
+    }, {
+        name: "全息战略·幻痛",
+        start: "2025/02/13 04:00:00 +0800",
+        end: "2025/03/27 03:59:59 +0800",
+        game: GameName.WW
+    }, {
+        name: "深境再临",
+        start: "2025/03/04 04:00:00 +0800",
+        end: "2025/04/01 03:59:59 +0800",
+        reward: 700,
+        game: GameName.WW
+    }, {
+        name: "貘枕之章",
+        start: "2025/02/12 04:00:00 +0800",
+        end: "2025/03/04 17:59:59 +0800",
+        reward: 700,
+        game: GameName.Genshin
+    }, {
+        name: "幻想真境剧诗",
+        start: "2025/02/01 04:00:00 +0800",
+        end: "2025/03/01 03:59:59 +0800",
+        reward: 620,
+        game: GameName.Genshin
+    }, {
+        name: "深境螺旋",
+        start: "2025/02/16 04:00:00 +0800",
+        end: "2025/03/16 03:59:59 +0800",
+        reward: 800,
+        game: GameName.Genshin
     },
 ]

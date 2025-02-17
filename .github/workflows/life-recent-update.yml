@@ -32,10 +32,15 @@ permissions:
 
 jobs:
   py-life-recent:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./script
+    strategy:
+      matrix:
+        os: [ubuntu-latest] # macos-latest, windows-latest
+        deploy-dir: [life/.vitepress/dist]
+        deploy-user: [augusmeow]
+        deploy-repo: [life, augusmeow.github.io]
+
+    runs-on: ${{ matrix.os }}
+
     steps:
       - name: Checkout repository content
         uses: actions/checkout@v4
@@ -48,15 +53,33 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: pnpm/action-setup@v4.1.0
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+
       - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Install dependencies python
+        working-directory: ./script
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Execute Python script
+        working-directory: ./script
         run: |
           python latest.py 1
       - name: Commit files
         id: commit
+        working-directory: ./script
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -83,9 +106,40 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.DEPLOY_GH }}
+          # 无须考虑无法触发自动构建。
+          # 因为：由 GitHub Actions 内部操作产生的提交默认不会触发其他工作流，这是为了避免出现无限循环的工作流调用。
           # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008 
           # head_ref / ref_name  
           # branch: ${{ github.ref_name }}
+
+
+      - name: Change config
+        run: mv ./life/.vitepress/config.ts.replace ./life/.vitepress/config.ts
+        if: ${{ matrix.deploy-repo == 'life' }}
+
+      # 运行构建脚本
+      - name: Build VitePress site
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: pnpm life:build
+
+      - name: Add google
+        run: |
+          echo "google-site-verification: googlea936c3462e7f8864.html" >> ./life/.vitepress/dist/googlea936c3462e7f8864.html
+        if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4.1.0
+        with:
+          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
+          target_branch: gh-pages
+          build_dir: ${{ matrix.deploy-dir }}
+          jekyll: false
+        env:
+          GH_PAT: ${{ secrets.DEPLOY_GH }}
+
+
+
       # - name: Create Pull Request
       #   if: ${{ steps.commit.outputs.has_changes == 'true' }}
       #   uses: peter-evans/create-pull-request@v6
@@ -103,3 +157,5 @@ jobs:
       #     assignees: DrAugus
       #     # Review cannot be requested from pull request author.
       #     # reviewers: DrAugus
+
+      
