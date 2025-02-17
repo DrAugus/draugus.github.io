@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "江西",
+            "desc": "江西 老三样 打平火 南昌 上饶 鹰潭 游玩 天师府，龙虎山，大上清宫 高速自驾路过，下高速歇脚。",
+            "link": "/trip/china/jiangxi/index",
+            "date": "2025-02-17"
+        },
+        {
             "title": "上海",
             "desc": "上海 景点 交通 游玩 开放 预约 票价 平台 推荐 :-:-:-:-: 甜爱路地铁3/8号线虹口",
             "link": "/trip/china/shanghai",
@@ -114,12 +120,6 @@
             "desc": "中了吗？彩票 import Lottery from \"../.vitepress/compone",
             "link": "/random-notes/lottery",
             "date": "2024-12-21"
-        },
-        {
-            "title": "Tauri",
-            "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
-            "link": "/dev/tauri",
-            "date": "2024-12-20"
         }
     ]
 }
