@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "上海",
+            "desc": "上海 景点 交通 游玩 开放 预约 票价 平台 推荐 :-:-:-:-: 甜爱路地铁3/8号线虹口",
+            "link": "/trip/china/shanghai",
+            "date": "2025-02-17"
+        },
+        {
             "title": "Web Tools",
             "desc": "Web Tools node install > [refer][node install] us",
             "link": "/code/front-end/webtools",
@@ -114,12 +120,6 @@
             "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
             "link": "/dev/tauri",
             "date": "2024-12-20"
-        },
-        {
-            "title": "小猫",
-            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
-            "link": "/daily/cat",
-            "date": "2024-05-23"
         }
     ]
 }
