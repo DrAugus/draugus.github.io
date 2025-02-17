@@ -298,3 +298,54 @@ export interface Lottery {
   'welfare': Mapping;
   'sports': Mapping;
 }
+
+export interface AttractionInfo {
+  /** 景点的名称 */
+  name: string;
+
+  /** 景点的详细信息或描述 */
+  description?: string;
+
+  /** 景点相关的交通信息 */
+  transportation: string;
+
+  /** 建议游玩时长 */
+  playDuration: string;
+
+  /** 开放时间，可以是字符串格式的时间段或数组 */
+  openingHours: string | string[]; // 例如 "9:00-17:00" 或 ["9:00-12:00", "13:00-17:00"]
+
+  /** 是否需要预约，布尔值 */
+  needReservation: boolean;
+
+  /** 票价信息，可以是字符串或更复杂的对象 */
+  ticketPrice: string | {
+    adult: number; // 成人票价
+    child?: number; // 儿童票价（可选）
+    senior?: number; // 老人票价（可选）
+    // 可以添加更多票价类型
+  };
+
+  /** 售票平台或渠道 */
+  platform: string | string[]; // 例如 "官网" 或 ["美团", "携程"]
+
+  /** 是否推荐，布尔值或带有理由的对象 */
+  recommendation: boolean | {
+    isRecommended: boolean;
+    reason?: string; // 推荐理由（可选）
+  };
+}
+
+export interface FoodRecord {
+  name: string;               // 名字
+  description?: string;       // 描述（可选）
+  city: string;               // 城市
+  location: string;           // 位置
+  businessHours: string;      // 营业时间
+  pricePerPerson: number;     // 人均消费
+  restaurantType: string | string[];     // 餐厅类型
+  recommendation: boolean | {
+    isRecommended: boolean;
+    reason?: string; // 推荐理由（可选）
+  };
+}

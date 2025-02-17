@@ -8,6 +8,51 @@ export enum GameName {
   IN,         //无限暖暖 infinity nikki
 }
 
+export enum GameItems {
+  GachaCurrencyItem = 0,    // 氪金抽卡道具
+  StaminaCurrencyItem,      // 体力货币道具
+  XPBoostItem,              // 经验升级道具
+}
+
+export enum GachaCurrencyItems {
+  Item1 = 0,
+  Diamond,
+  Item3,
+  Item4,
+  Item5,
+  Item6,
+}
+
+export enum StaminaCurrencyItems {
+  Coin = 0,
+  Item2,
+  Item3,
+}
+
+export enum XPBoostItems {
+  Item1 = 0,
+  Item2,
+  Item3,
+  Item4,
+  Item5,
+  Item6,
+  Item7,
+  Item8,
+  Item9,
+}
+
+function isGachaCurrencyItems(item: number): item is GachaCurrencyItems {
+  return GachaCurrencyItems[item] !== undefined;
+}
+
+function isStaminaCurrencyItems(item: number): item is StaminaCurrencyItems {
+  return StaminaCurrencyItems[item] !== undefined;
+}
+
+function isXPBoostItems(item: number): item is XPBoostItems {
+  return XPBoostItems[item] !== undefined;
+}
+
 export enum Rarity {
 
 }
@@ -114,6 +159,35 @@ export const getTimelineHomeHero =
 
   };
 
+
+export const mapGameItemName = new Map<GameName, Map<GameItems, string[]>>([
+  [GameName.Genshin, new Map([
+    [GameItems.GachaCurrencyItem, ["创世结晶", "原石", "纠缠之缘", "相遇之缘", "无主的星尘", "无主的星辉"]],
+    [GameItems.StaminaCurrencyItem, ["摩拉", "原粹树脂", "脆弱树脂"]],
+    [GameItems.XPBoostItem, ["圣遗物", "祝圣油膏", "祝圣精华", "流浪者的经验", "冒险家的经验", "大英雄的经验", "精锻用杂矿", "精锻用良矿", "精锻用魔矿"]]
+  ])],
+  [GameName.HSR, new Map([
+    [GameItems.GachaCurrencyItem, ["古老月华", "星琼", "星轨专票", "星轨通票", "未熄的余烬", "未熄的星芒"]],
+    [GameItems.StaminaCurrencyItem, ["信用点", "开拓力", "燃料"]],
+    [GameItems.XPBoostItem, ["遗器", "遗失碎金", "遗失晶块", "旅情见闻", "冒险记录", "漫游指南", "稀薄以太", "凝缩以太", "提纯以太"]]
+  ])],
+  [GameName.ZZZ, new Map([
+    [GameItems.GachaCurrencyItem, []],
+    [GameItems.StaminaCurrencyItem, []],
+    [GameItems.XPBoostItem, []]
+  ])],
+  [GameName.WW, new Map([
+    [GameItems.GachaCurrencyItem, ["月相", "星声", "浮金波纹", "涡声波纹", "残振珊瑚", "余波珊瑚"]],
+    [GameItems.StaminaCurrencyItem, ["贝币", "结晶波片", "结晶溶剂"]],
+    [GameItems.XPBoostItem, ["声骸", "中级密音筒", "高级密音筒", "初级共鸣促剂", "中级共鸣促剂", "高级共鸣促剂", "初级能源核心", "中级能源核心", "高级能源核心"]]
+  ])],
+  [GameName.IN, new Map([
+    [GameItems.GachaCurrencyItem, ["无垠星石", "钻石", "启示水晶", "共鸣水晶", "澎湃浪花", "静谧水滴"]],
+    [GameItems.StaminaCurrencyItem, ["噗灵", "活跃能量", "能量结晶"]],
+    [GameItems.XPBoostItem, ["", "", "", "", "", "", "", "", ""]]
+  ])]
+]);
+
 export const getGameName = (game: GameName) => {
   switch (game) {
     case GameName.Genshin:
@@ -160,15 +234,27 @@ export const getGameThemeColor = (game: GameName) => {
   }
 }
 
-export const getGameRewardName = (game: GameName) => {
-  switch (game) {
-    case GameName.Genshin: return '原石';
-    case GameName.HSR: return '星穹';
-    case GameName.ZZZ: return '星币';
-    case GameName.WW: return '星币';
-    case GameName.IN: return '星币';
-    default: return '';
+export const getGameItemName = (game: GameName, item: GachaCurrencyItems | StaminaCurrencyItems | XPBoostItems) => {
+  let gameItem = mapGameItemName.get(game);
+  if (gameItem === undefined) {
+    return '';
   }
+  if (isGachaCurrencyItems(item)) {
+    const gachaItems = gameItem.get(GameItems.GachaCurrencyItem);
+    return gachaItems ? gachaItems[item] : '';
+  }
+  else if (isStaminaCurrencyItems(item)) {
+    const staminaItems = gameItem.get(GameItems.StaminaCurrencyItem);
+    return staminaItems ? staminaItems[item] : '';
+  }
+  else if (isXPBoostItems(item)) {
+    const xpItems = gameItem.get(GameItems.XPBoostItem);
+    return xpItems ? xpItems[item] : '';
+  } else {
+
+  }
+
+  return "";
 }
 
 export const setBackgroundColor = (color: string) => {

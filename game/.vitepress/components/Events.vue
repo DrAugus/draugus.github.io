@@ -6,7 +6,8 @@
             <img class="VPImage" :src="'/logo/' + getGameIcon(event.game)" width="15px" height="15px" alt="">
             {{ event.name }}
             <span v-if="event.description">({{ event.description }})</span>
-            <span v-if="event.reward"> ，可以获取{{ +event.reward }}</span>
+            <span v-if="event.reward"> ，可以获取
+                {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
             ，还有
             <Timer :endTime="event.end" />结束
         </div>
@@ -19,7 +20,7 @@
 import { computed } from 'vue';
 import { EVENTS } from './event';
 import Timer from './Timer.vue';
-import { getGameIcon, getGameName, getGameThemeColor, setBackgroundColor } from './utils';
+import { getGameIcon, getGameName, getGameThemeColor, setBackgroundColor, getGameItemName, GachaCurrencyItems } from './utils';
 // 获取当前日期
 const now = new Date();
 

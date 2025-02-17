@@ -36,15 +36,76 @@
 - 上海玻璃博物馆 → 同济大学博物馆
 - 广富林文化遗址 → 上海大观园
 
+## 游玩
+
+不推荐
+
+- 田子坊
+
 ## 游记
 
 [2023/03/11](../travelogue/20230311)
 
 ## 美食
 
-:::info 没吃过的
+推荐
+<ul v-for="(v, i) in foodSH">
+    <li>
+        {{ v.name }}  
+        <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
+        <span v-if="!Array.isArray(v.restaurantType)">
+            <Badge type="tip" :text="v.restaurantType" />
+        </span>
+        <span v-else>
+            <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :text="vv" />
+        </span>
+        {{ v.location }}
+    </li>
+</ul>
+
+没吃过的 TODO
 
 - GREEN & SAFE(新天地店)   <Badge type="warning" text="人均 ¥200" />  <Badge type="tip" text="西餐" />
 - Va Bene贝尼西餐厅   <Badge type="warning" text="人均 ¥368" />  <Badge type="tip" text="牛排" />
 - 豪生酒家(徐汇区广元路156号)  <Badge type="warning" text="人均 ¥200" /> <Badge type="tip" text="本帮菜" />
-:::
+- 泰廊餐厅 <Badge type="warning" text="人均 ¥179" /> <Badge type="tip" text="泰国菜" /><Badge type="tip" text="越南菜" />
+- simply thai 天泰 <Badge type="warning" text="人均 ¥110" /> <Badge type="tip" text="泰国菜" /><Badge type="tip" text="越南菜" />
+- 旧款宁波饭店 <Badge type="warning" text="人均 ¥173" /> <Badge type="tip" text="中餐厅" />
+- 提篮桥一号葱油饼 <Badge type="warning" text="人均 ¥10" /> <Badge type="tip" text="小吃" />
+- 水丰锅贴 <Badge type="warning" text="人均 ¥19" /> <Badge type="tip" text="小吃" />
+- 味香斋 <Badge type="warning" text="人均 ¥31" /> <Badge type="tip" text="面馆" />
+- 金泽咖喱 <Badge type="warning" text="人均 ¥54" /> <Badge type="tip" text="日料" />
+- 沪西老弄堂面馆<Badge type="warning" text="人均 ¥44" /> <Badge type="tip" text="面馆" />
+- 阿姐炸道 <Badge type="warning" text="人均 ¥37" /> <Badge type="tip" text="炸串" />
+
+--------
+
+TODO
+
+<table>
+    <thead >
+        <tr>
+            <td v-for="(v, i) in TableHead" >
+                {{ v }}</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr v-for="(v, i) in attractionsSH">
+            <td>{{v.name}}</td>
+            <td>{{v.transportation}}</td>
+            <td>{{v.playDuration}}</td>
+            <td>{{v.openingHours}}</td>
+            <td>{{v.needReservation}}</td>
+            <td>{{v.ticketPrice}}</td>
+            <td>{{v.platform}}</td>
+            <td>{{v.recommendation}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<script setup>
+import {attractionsSH, TableHead} from "../../.vitepress/data/trip/attraction";
+import {filterFoodByCity} from "../../.vitepress/data/trip/food";
+
+const foodSH = filterFoodByCity("上海");
+</script>
