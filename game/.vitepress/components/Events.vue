@@ -4,12 +4,15 @@
             <span class="self-badge" :style="setBackgroundColor(getGameThemeColor(event.game))">
                 {{ getGameName(event.game) }}</span>
             <img class="VPImage" :src="'/logo/' + getGameIcon(event.game)" width="15px" height="15px" alt="">
-            {{ event.name }}
-            <span v-if="event.description">({{ event.description }})</span>
-            <span v-if="event.reward"> ，可以获取
-                {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
-            ，还有
-            <Timer :endTime="event.end" />结束
+            <span :class="event.completed ? 'deleted-text' : ''">
+                {{ event.name }}
+                <span v-if="event.description">({{ event.description }})</span>
+                <span v-if="event.reward"> ，可以获取
+                    {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
+                ，还有
+                <Timer :endTime="event.end" />结束
+            </span>
+            <span v-if="event.completed">✅</span>
         </div>
         <img v-if="event.image" :src="event.image" alt="Event Background" />
     </div>
@@ -54,5 +57,9 @@ img {
     font-size: 12px;
     font-weight: 500;
     transform: translateY(-2px);
+}
+
+.deleted-text {
+    text-decoration: line-through;
 }
 </style>

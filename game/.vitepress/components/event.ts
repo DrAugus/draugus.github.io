@@ -101,12 +101,14 @@ export const EVENTS: Event[] = [
         name: "花焰飘游嘉年华·飘游的奇想",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "花焰飘游嘉年华·花焰随行",
         description: "花焰飘游嘉年华快讯",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "朝岁节·灯火福满盈",
@@ -118,35 +120,53 @@ export const EVENTS: Event[] = [
         name: "朝岁节·萦音怀古",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "朝岁节·朝岁共赏",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "朝岁节·朝岁留影",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "朝岁节·心巧手巧奇巧板",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "朝岁节·朝岁游艺",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "朝岁节·弦歌共岁",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "俯瞰日·自在飘游的俯噉时光",
         start: "2025/01/24 06:00:00 +0800",
+        end: "2025/02/26 03:59:59 +0800",
+        completed: true,
+        game: GameName.IN
+    }, {
+        name: "俯瞰日·艾莉森的旅行小铺",
+        start: "2025/02/14 11:00:00 +0800",
+        end: "2025/02/26 03:59:59 +0800",
+        completed: true,
+        game: GameName.IN
+    }, {
+        name: "俯瞰日·晴日时光",
+        start: "2025/02/14 11:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
         game: GameName.IN
     }, {
@@ -196,7 +216,8 @@ export const EVENTS: Event[] = [
         start: "2025/02/01 04:00:00 +0800",
         end: "2025/03/01 03:59:59 +0800",
         reward: 620,
-        game: GameName.Genshin
+        game: GameName.Genshin,
+        completed: true,
     }, {
         name: "深境螺旋",
         start: "2025/02/16 04:00:00 +0800",

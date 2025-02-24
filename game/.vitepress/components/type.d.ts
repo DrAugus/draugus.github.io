@@ -120,4 +120,5 @@ export interface Event {
   end: string,
   reward?: number,
   game: GameName,
+  completed?: boolean,
 }
