@@ -47,6 +47,55 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
         },
         backspace: 1,
         game: GameName.HSR
+    }, {
+        name: "尘辉兑换·星尘兑换",
+        first: "2025/02/01 04:00:00 +0800",
+        duration: {
+            value: 1,
+            unit: 'month',
+        },
+        backspace: 1,
+        game: GameName.Genshin
+    }, {
+        name: "幻想真境剧诗",
+        first: "2025/02/01 04:00:00 +0800",
+        reward: 620,
+        game: GameName.Genshin,
+        duration: {
+            value: 1,
+            unit: 'month',
+        },
+        backspace: 1,
+    }, {
+        name: "深境螺旋",
+        first: "2025/02/16 04:00:00 +0800",
+        reward: 800,
+        game: GameName.Genshin,
+        duration: {
+            value: 1,
+            unit: 'month',
+        },
+        backspace: 1,
+    }, {
+        name: "深境再临",
+        first: "2025/02/03 04:00:00 +0800",
+        reward: 700,
+        game: GameName.WW,
+        duration: {
+            value: 28,
+            unit: 'day',
+        },
+        backspace: 1,
+    }, {
+        name: "冥歌海墟",
+        first: "2025/03/17 04:00:00 +0800",
+        reward: 800,
+        game: GameName.WW,
+        duration: {
+            value: 28,
+            unit: 'day',
+        },
+        backspace: 1,
     },
 ]
 
@@ -124,12 +173,6 @@ export const EVENTS: Event[] = [
         name: "全息战略·幻痛",
         start: "2025/01/02 06:00:00 +0800",
         end: "2025/02/13 03:59:59 +0800",
-        game: GameName.WW
-    }, {
-        name: "深境再临",
-        start: "2025/02/03 06:00:00 +0800",
-        end: "2025/03/03 03:59:59 +0800",
-        reward: 700,
         game: GameName.WW
     }, {
         name: "晨昏卷隐",
@@ -240,7 +283,7 @@ export const EVENTS: Event[] = [
     }, {
         name: "冥歌海墟",
         start: "2025/02/13 04:00:00 +0800",
-        end: "2025/03/16 03:59:59 +0800",
+        end: "2025/03/17 03:59:59 +0800",
         game: GameName.WW
     }, {
         name: "千道门扉的异想",
@@ -251,12 +294,6 @@ export const EVENTS: Event[] = [
         name: "全息战略·幻痛",
         start: "2025/02/13 04:00:00 +0800",
         end: "2025/03/27 03:59:59 +0800",
-        game: GameName.WW
-    }, {
-        name: "深境再临",
-        start: "2025/03/04 04:00:00 +0800",
-        end: "2025/04/01 03:59:59 +0800",
-        reward: 700,
         game: GameName.WW
     }, {
         name: "貘枕之章",

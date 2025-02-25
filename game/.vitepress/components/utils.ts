@@ -498,6 +498,34 @@ export function getPreviousMonthSameDay(date:Date) {
   // 返回结果
   return prevDate;
 }
+
+/**
+ * 获取下一个月的相同日（注意：如果下一个月的天数少于当前日，则可能需要额外处理）
+ * @param {Date} date - 基准日期
+ * @returns {Date} 下一个月的相同日（或根据需要自行处理天数不匹配的情况）
+ */
+export function getNextMonthSameDay(date:Date) {
+  let nextDate = new Date(date.getTime()); // 创建日期副本
+  let day = nextDate.getDate();
+  nextDate.setMonth(nextDate.getMonth() + 1);
+ 
+  // 通常情况下，我们想要的是下一个月的相同日。
+  // 但是，如果当前日期是某个月的最后一天（比如31日），而下一个月没有那么多天（比如4月只有30天），
+  // 那么 setMonth 会将日期设置为下一个月的最后一天之前的某一天。
+  // 在这个函数中，我们不会改变这个行为，而是让调用者知道可能需要检查并处理这种情况。
+  // 如果需要的话，调用者可以在调用此函数后检查 nextDate.getDate() 是否等于原始 day，
+  // 如果不等，则知道发生了“回滚”并相应地处理。
+ 
+  // 然而，对于大多数日期（不是月底的31日或某些2月的29/28日），这个方法是有效的。
+  // 如果调用者确信他们的日期不会是这些特殊情况，或者他们愿意处理这些情况，
+  // 那么这个方法就可以按预期工作。
+ 
+  // 注意：对于2月29日（闰年），如果下一年不是闰年，那么这个方法将返回3月1日，
+  // 因为JavaScript的Date对象会自动处理闰年和非闰年的差异。
+ 
+  return nextDate;
+}
+ 
  
 
 // https://stackoverflow.com/questions/5072136/javascript-filter-for-objects

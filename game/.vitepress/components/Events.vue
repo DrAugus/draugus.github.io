@@ -43,7 +43,7 @@
 import { computed } from 'vue';
 import { EVENTS, PERMANENT_EVENTS } from './event';
 import Timer from './Timer.vue';
-import { getGameIcon, getGameName, getGameThemeColor, setBackgroundColor, getGameItemName, GachaCurrencyItems, compareTimeParts, getPreviousMonthSameDay } from './utils';
+import { getGameIcon, getGameName, getGameThemeColor, setBackgroundColor, getGameItemName, GachaCurrencyItems, compareTimeParts, getPreviousMonthSameDay, getNextMonthSameDay } from './utils';
 // 获取当前日期
 const now = new Date();
 
@@ -81,9 +81,10 @@ function handlePermanent() {
         const dateFirst = new Date(event.first);
         const msFirst = dateFirst.getTime();
         const msDiff = msNow - msFirst;
+        const msBackspace = event.backspace * 1000;
+
         if (event.duration.unit === 'day') {
             const msDuration = event.duration.value * 24 * 60 * 60 * 1000;
-            const msBackspace = event.backspace * 1000;
             const a = msDiff % msDuration;
             tmp.start = new Date(msNow - a);
             tmp.end = new Date(msNow - a + msDuration - msBackspace);
@@ -93,6 +94,10 @@ function handlePermanent() {
             }
         } else if (event.duration.unit === 'month') {
             // TODO
+            if (event.duration.value != 1) {
+                return;
+            }
+
             const dayFirst = dateFirst.getDate();
             const dayNow = now.getDate();
             if (dayNow === dayFirst) {
@@ -103,12 +108,37 @@ function handlePermanent() {
                     tmp.start = dateFirst;
                     // 而后修改年月日
                     tmp.start.setFullYear(previousMonthDate.getFullYear(), previousMonthDate.getMonth(), previousMonthDate.getDate());
+                    tmp.end = getNextMonthSameDay(tmp.start);
+                    tmp.end = new Date(tmp.end.getTime() - msBackspace);
+                } else {
+                    tmp.start = dateFirst;
+                    tmp.start.setFullYear(now.getFullYear(), now.getMonth(), now.getDate());
+                    tmp.end = getNextMonthSameDay(tmp.start);
+                    tmp.end = new Date(tmp.end.getTime() - msBackspace);
                 }
-            } else {
+                resPermanent.push(tmp);
+            } else if (dayNow > dayFirst) {
+                tmp.start = dateFirst;
+                tmp.start.setFullYear(now.getFullYear(), now.getMonth());
+                tmp.end = getNextMonthSameDay(tmp.start);
+                tmp.end = new Date(tmp.end.getTime() - msBackspace);
+                resPermanent.push(tmp);
+            } else if (dayNow < dayFirst) {
+                const previousMonthDate = getPreviousMonthSameDay(now);
+                tmp.start = dateFirst;
+                tmp.start.setFullYear(previousMonthDate.getFullYear(), previousMonthDate.getMonth());
+                tmp.end = getNextMonthSameDay(tmp.start);
+                tmp.end = new Date(tmp.end.getTime() - msBackspace);
+                resPermanent.push(tmp);
             }
         }
     })
-    return resPermanent;
+
+    return resPermanent.sort((a, b) => {
+        const endA = new Date(a.end);
+        const endB = new Date(b.end);
+        return endA.getTime() - endB.getTime();
+    });;
 }
 
 const PermanentEvents = handlePermanent();
