@@ -122,3 +122,19 @@ export interface Event {
   game: GameName,
   completed?: boolean,
 }
+
+export interface PermanentEvent {
+  name: string,
+  description?: string,
+  image?: string,
+  first: string,        // 首次开始时间，其实并不是首次开始时间，而是标记一下
+  // 持续时间
+  duration: {
+    value: number,
+    unit:'day' | 'month',
+  },
+  backspace:number, // 消减 以秒计
+  reward?: number,
+  game: GameName,
+  deprecated?:boolean,
+}

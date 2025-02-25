@@ -1,5 +1,54 @@
-import { Event } from "./type";
+import { Event, PermanentEvent } from "./type";
 import { GameName } from "./utils";
+
+export const PERMANENT_EVENTS: PermanentEvent[] = [
+    {
+        name: "逐光捡金·末日幻影",
+        first: "2025/01/20 04:00:00 +0800",
+        duration: {
+            value: 42,
+            unit: 'day',
+        },
+        backspace: 1,
+        game: GameName.HSR
+    }, {
+        name: "逐光捡金·虚构叙事",
+        first: "2025/02/03 04:00:00 +0800",
+        duration: {
+            value: 42,
+            unit: 'day',
+        },
+        backspace: 1,
+        game: GameName.HSR
+    }, {
+        name: "逐光捡金·混沌回忆",
+        first: "2025/02/17 04:00:00 +0800",
+        duration: {
+            value: 42,
+            unit: 'day',
+        },
+        backspace: 1,
+        game: GameName.HSR
+    }, {
+        name: "无名勋礼",
+        first: "2025/02/26 06:00:00 +0800",
+        duration: {
+            value: 40,
+            unit: 'day',
+        },
+        backspace: 7201, // 2h1s
+        game: GameName.HSR
+    }, {
+        name: "余烬兑换",
+        first: "2025/02/01 04:00:00 +0800",
+        duration: {
+            value: 1,
+            unit: 'month',
+        },
+        backspace: 1,
+        game: GameName.HSR
+    },
+]
 
 export const EVENTS: Event[] = [
     {
@@ -168,21 +217,25 @@ export const EVENTS: Event[] = [
         name: "俯瞰日·晴日时光",
         start: "2025/02/14 11:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "当期奇旅·深度突破",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/17 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "当期奇旅·搭配天王再临!",
         start: "2025/01/24 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "当期奇旅·奇迹之冠",
         start: "2025/02/14 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        completed: true,
         game: GameName.IN
     }, {
         name: "冥歌海墟",
@@ -224,5 +277,46 @@ export const EVENTS: Event[] = [
         end: "2025/03/16 03:59:59 +0800",
         reward: 800,
         game: GameName.Genshin
+    }, {
+        name: "旧日日遗梦之歌·「女王赠礼」限时签到",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/12 09:59:59 +0800",
+        reward: 1200,
+        game: GameName.IN
+    }, {
+        name: "旧日日遗梦之歌·「诡秘奇闻」",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
+    }, {
+        name: "旧日日遗梦之歌·旧日幽歌纪念册",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
+    }, {
+        name: "旧日日遗梦之歌·寻梦于迷途之中",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
+    }, {
+        name: "旧日日遗梦之歌·幻花迷境",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
+    }, {
+        name: "旧日日遗梦之歌·行宫寻珍",
+        start: "2025/03/05 04:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
+    }, {
+        name: "宴席白牛关爱日·宴席白牛关爱行动",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
+    }, {
+        name: "宴席白牛关爱日·宴席白牛染色",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.IN
     },
 ]

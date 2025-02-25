@@ -442,6 +442,64 @@ export const getDuration = (type: string, start: Date, end: Date): Date[] => {
   return $array;
 };
 
+
+/**
+ * 比较两个Date对象的时、分、秒部分（忽略日期）
+ * @param {Date} date1 - 第一个Date对象
+ * @param {Date} date2 - 第二个Date对象
+ * @returns {number} 如果date1的时间早于date2，则返回-1；如果时间相同，则返回0；如果date1的时间晚于date2，则返回1
+ */
+export function compareTimeParts(date1: Date, date2: Date) {
+  // 辅助函数：获取给定Date对象自当天午夜以来的总秒数
+  function getTimeOfDayInSeconds(date) {
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    return hours * 3600 + minutes * 60 + seconds;
+  }
+
+  // 获取两个Date对象的时间部分（自午夜以来的总秒数）
+  const timeOfDay1 = getTimeOfDayInSeconds(date1);
+  const timeOfDay2 = getTimeOfDayInSeconds(date2);
+
+  // 比较时间部分并返回结果
+  if (timeOfDay1 < timeOfDay2) {
+    return -1; // date1的时间早于date2
+  } else if (timeOfDay1 > timeOfDay2) {
+    return 1;  // date1的时间晚于date2
+  } else {
+    return 0;  // date1和date2的时间相同
+  }
+}
+
+/**
+ * 获取上一个月的相同日（如果上一个月的天数少于当前日，则返回上一个月的最后一天）
+ * @param {Date} date - 基准日期
+ * @returns {Date} 上一个月的相同日或最后一天
+ */
+export function getPreviousMonthSameDay(date:Date) {
+  // 创建一个新的Date对象，避免修改原始日期
+  let prevDate = new Date(date);
+ 
+  // 获取当前日期的日
+  let day = prevDate.getDate();
+ 
+  // 减去一个月
+  prevDate.setMonth(prevDate.getMonth() - 1);
+ 
+  // 如果上一个月的天数少于当前日，则设置为上一个月的最后一天
+  if (prevDate.getDate() < day) {
+    prevDate.setDate(0); // 设置为上个月的最后一天（setDate(0)会自动调整为上个月的最后一天）
+  } else {
+    // 否则，设置为上一个月的相同日
+    prevDate.setDate(day);
+  }
+ 
+  // 返回结果
+  return prevDate;
+}
+ 
+
 // https://stackoverflow.com/questions/5072136/javascript-filter-for-objects
 export const objFilter = (obj, predicate) =>
   Object.keys(obj)
