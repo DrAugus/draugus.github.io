@@ -278,6 +278,7 @@ export const EVENTS: Event[] = [
         name: "当期奇旅·奇迹之冠",
         start: "2025/02/14 06:00:00 +0800",
         end: "2025/02/26 03:59:59 +0800",
+        reward: 900,
         completed: true,
         game: GameName.IN
     }, {
@@ -302,23 +303,21 @@ export const EVENTS: Event[] = [
         reward: 700,
         game: GameName.Genshin
     }, {
-        name: "幻想真境剧诗",
-        start: "2025/02/01 04:00:00 +0800",
-        end: "2025/03/01 03:59:59 +0800",
-        reward: 620,
-        game: GameName.Genshin,
-        completed: true,
-    }, {
-        name: "深境螺旋",
-        start: "2025/02/16 04:00:00 +0800",
-        end: "2025/03/16 03:59:59 +0800",
-        reward: 800,
-        game: GameName.Genshin
-    }, {
         name: "旧日日遗梦之歌·「女王赠礼」限时签到",
         start: "2025/02/26 11:00:00 +0800",
         end: "2025/03/12 09:59:59 +0800",
         reward: 1200,
+        game: GameName.IN
+    }, {
+        name: "当期奇旅·奇迹之冠",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/12 09:59:59 +0800",
+        reward: 900,
+        game: GameName.IN
+    }, {
+        name: "旧日日遗梦之歌·幽歌吟咏的遗愿",
+        start: "2025/02/26 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
         game: GameName.IN
     }, {
         name: "旧日日遗梦之歌·「诡秘奇闻」",

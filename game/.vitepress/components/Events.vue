@@ -11,7 +11,8 @@
                 <span v-if="event.reward"> ，可以获取
                     {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
                 ，还有
-                <Timer :endTime="event.end" />结束
+                <Timer :endTime="event.end" :dayWarningLv1="3" :dayWarningLv2="7" />
+                结束
             </span>
             <span v-if="event.completed">✅</span>
         </div>
@@ -30,7 +31,8 @@
                 <span v-if="event.reward"> ，可以获取
                     {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
                 ，还有
-                <Timer :endTime="event.end" />结束
+                <Timer :endTime="event.end" :dayWarningLv1="3" :dayWarningLv2="7" />
+                结束
             </span>
             <span v-if="event.completed">✅</span>
         </div>

@@ -225,11 +225,11 @@ export const getGameIcon = (game: GameName) => {
 
 export const getGameThemeColor = (game: GameName) => {
   switch (game) {
-    case GameName.Genshin: return '#B388FF';
-    case GameName.HSR: return '#4CAF50';
+    case GameName.Genshin: return '#8FBC8F';
+    case GameName.HSR: return '#c29fdb';
     case GameName.ZZZ: return '#FF6347';
-    case GameName.WW: return '#00BFFF';
-    case GameName.IN: return '#FFC0CB';
+    case GameName.WW: return '#5893cf';
+    case GameName.IN: return '#ED8AA1';
     default: return '';
   }
 }
@@ -418,7 +418,9 @@ export const secondsFormat = (s: number) => {
   return result;
 };
 
-export const getTimeLeft = (start, end) => secondsFormat(Math.floor(end.diff(start) / 1000));
+export const getSecondDiff = (start, end) => Math.floor(end.diff(start) / 1000);
+
+export const getTimeLeft = (start, end) => secondsFormat(getSecondDiff(start, end));
 
 //返回始末时间之间的所有日期
 export const getDuration = (type: string, start: Date, end: Date): Date[] => {
@@ -477,16 +479,16 @@ export function compareTimeParts(date1: Date, date2: Date) {
  * @param {Date} date - 基准日期
  * @returns {Date} 上一个月的相同日或最后一天
  */
-export function getPreviousMonthSameDay(date:Date) {
+export function getPreviousMonthSameDay(date: Date) {
   // 创建一个新的Date对象，避免修改原始日期
   let prevDate = new Date(date);
- 
+
   // 获取当前日期的日
   let day = prevDate.getDate();
- 
+
   // 减去一个月
   prevDate.setMonth(prevDate.getMonth() - 1);
- 
+
   // 如果上一个月的天数少于当前日，则设置为上一个月的最后一天
   if (prevDate.getDate() < day) {
     prevDate.setDate(0); // 设置为上个月的最后一天（setDate(0)会自动调整为上个月的最后一天）
@@ -494,7 +496,7 @@ export function getPreviousMonthSameDay(date:Date) {
     // 否则，设置为上一个月的相同日
     prevDate.setDate(day);
   }
- 
+
   // 返回结果
   return prevDate;
 }
@@ -504,29 +506,29 @@ export function getPreviousMonthSameDay(date:Date) {
  * @param {Date} date - 基准日期
  * @returns {Date} 下一个月的相同日（或根据需要自行处理天数不匹配的情况）
  */
-export function getNextMonthSameDay(date:Date) {
+export function getNextMonthSameDay(date: Date) {
   let nextDate = new Date(date.getTime()); // 创建日期副本
   let day = nextDate.getDate();
   nextDate.setMonth(nextDate.getMonth() + 1);
- 
+
   // 通常情况下，我们想要的是下一个月的相同日。
   // 但是，如果当前日期是某个月的最后一天（比如31日），而下一个月没有那么多天（比如4月只有30天），
   // 那么 setMonth 会将日期设置为下一个月的最后一天之前的某一天。
   // 在这个函数中，我们不会改变这个行为，而是让调用者知道可能需要检查并处理这种情况。
   // 如果需要的话，调用者可以在调用此函数后检查 nextDate.getDate() 是否等于原始 day，
   // 如果不等，则知道发生了“回滚”并相应地处理。
- 
+
   // 然而，对于大多数日期（不是月底的31日或某些2月的29/28日），这个方法是有效的。
   // 如果调用者确信他们的日期不会是这些特殊情况，或者他们愿意处理这些情况，
   // 那么这个方法就可以按预期工作。
- 
+
   // 注意：对于2月29日（闰年），如果下一年不是闰年，那么这个方法将返回3月1日，
   // 因为JavaScript的Date对象会自动处理闰年和非闰年的差异。
- 
+
   return nextDate;
 }
- 
- 
+
+
 
 // https://stackoverflow.com/questions/5072136/javascript-filter-for-objects
 export const objFilter = (obj, predicate) =>
