@@ -1,4 +1,12 @@
 {
+    "life/code/program/lang/python.md": {
+        "title": "Python",
+        "date": 1716866579
+    },
+    "life/trip/flights.md": {
+        "title": "航线",
+        "date": 1718677787.0
+    },
     "life/trip/china/jiangxi/index.md": {
         "title": "江西",
         "date": 1739787156.0
@@ -291,10 +299,6 @@
         "title": "江苏",
         "date": 1716791141
     },
-    "life/code/program/lang/python.md": {
-        "title": "Python",
-        "date": 1716866579
-    },
     "life/code/program/lang/regex.md": {
         "title": "正则表达式",
         "date": 1720604343.0
@@ -437,10 +441,6 @@
     },
     "life/code-notes/tools/echarts-geo.md": {
         "title": "Echarts geo",
-        "date": 1718677787.0
-    },
-    "life/trip/flights.md": {
-        "title": "航线",
         "date": 1718677787.0
     },
     "life/random-notes/bachelor.md": {
