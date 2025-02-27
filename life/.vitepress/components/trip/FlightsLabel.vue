@@ -8,7 +8,8 @@
         <div class="flight-tag" @click="emitShowDetails">
             <div class="flight-info">
                 <div class="title">
-                    LOGO
+                    <img :src="`/img/trip/airline/${flight.airlineCode}.svg`" alt="airline-logo" class="airline-logo"
+                    width="20px" />
                     <span class="airline-name">{{ getAirlineZhAbbrByIata(flight.airlineCode) }}</span>
                     <span class="flight-number">{{ flight.number }}</span>
                 </div>
@@ -66,9 +67,9 @@ const emitShowDetails = () => {
 }
 
 .airline-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
 
 .modal-overlay {

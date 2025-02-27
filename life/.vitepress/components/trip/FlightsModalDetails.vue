@@ -1,7 +1,11 @@
 <template>
     <div v-if="isVisible" class="modal-overlay">
         <div class="modal-content" v-if="flight">
-            <h5>LOGO {{ getAirlineZhAbbrByIata(flight.airlineCode) }} {{ flight.number }}</h5>
+            <div class="flight-top">
+                <img :src="`/img/trip/airline/${flight.airlineCode}.svg`" alt="airline-logo" class="airline-logo" />
+                <span class="font-bold font-18">
+                    {{ getAirlineZhAbbrByIata(flight.airlineCode) }} {{ flight.number }}</span>
+            </div>
             <div class="flight-label">
                 <div class="flight-planned">
                     <span class="font-bold">{{ getAirportInfo(flight) }}</span><br>
@@ -158,6 +162,11 @@ function getPriceDisplay(price: number) {
     background-color: #c9302c;
 }
 
+.flight-top {
+    display: flex;
+    align-items: center;
+}
+
 .flight-label {
     display: flex;
     justify-content: space-between;
@@ -187,6 +196,15 @@ function getPriceDisplay(price: number) {
     text-align: right;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.airline-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.font-18 {
+    font-size: 18px;
 }
 
 .font-14 {
