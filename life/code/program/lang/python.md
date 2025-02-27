@@ -5,9 +5,10 @@
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+# 如果在国内，可以在上面两行后面加上 `-i https://pypi.tuna.tsinghua.edu.cn/simple`
+python -m pip install --upgrade pip -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-
-如果在国内，可以在上面两行后面加上 `-i https://pypi.tuna.tsinghua.edu.cn/simple`
 
 :::details 其他源
 

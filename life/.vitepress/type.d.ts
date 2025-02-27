@@ -193,9 +193,14 @@ export interface Airplane {
 }
 
 export interface Airline {
-  name: string,
-  country: string,
+  chineseName: string;            // 航空公司(中文)
+  chineseAbbr: string;            // 航司中文名缩写
+  englishName: string;            // 航空公司(英文)
+  iataCode: string;               // IATA代码
+  icaoCode: string;               // 三字代码
+  region: string;                 // 地区
 }
+ 
 
 interface FlightTicket {
   ticketPrice: number,

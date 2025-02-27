@@ -8,6 +8,8 @@ import pandas as pd
 from openpyxl import load_workbook
 from collections import OrderedDict
 
+import utils
+
 current_path = os.path.dirname(__file__)
 
 
@@ -187,4 +189,30 @@ def modify_res(rs):
             dic["model"].append(item.model)
 
 
-read_excel()
+#  表格头部是 航空公司(中文)	航空公司(英文)	IATA代码	三字代码	地区
+def read_excel_airline():
+    # 读取Excel文件
+    filename = current_path + "/airline.xlsx"
+    sheet_name = "Sheet1"  # 替换为你的工作表名称
+    df = pd.read_excel(filename, sheet_name=sheet_name)
+
+    # 创建新的列 "航空中文缩写"
+    df["航空中文缩写"] = df["航空公司(中文)"].apply(
+        lambda x: x[:4] if pd.notnull(x) else '')
+
+    columns = ["航空公司(中文)", "航空公司(英文)", "IATA代码", "三字代码", "地区", "航空中文缩写"]
+    result = df[columns].to_dict("records")
+
+    for obj in result:
+        if isinstance(obj.get("三字代码"), (int, float)):
+            obj["三字代码"] = str(obj["三字代码"])
+
+    # 输出结果
+    print(result)
+    return result
+
+
+# res = read_excel_airline()
+# utils.OperateFile.save_dict_to_file(
+#     res, current_path + "/.augus_output"
+# )

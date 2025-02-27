@@ -15,8 +15,8 @@ export const durationDay = (s: string | Date, e: string | Date) => parseDayjs(e)
 export const durationTodayDay = (t: string | Date) => parseDayjs(t).diff(today, "day", true);
 
 export const durationMonth = (s: string | Date, e: string | Date) => parseDayjs(e).diff(parseDayjs(s), "month", true);
-export const monthsFromToday2X   = (t: string | Date) => parseDayjs(t).diff(today, "month", true);
-export const monthsFromX2Today  = (t: string | Date) => today.diff(t, "month", true);
+export const monthsFromToday2X = (t: string | Date) => parseDayjs(t).diff(today, "month", true);
+export const monthsFromX2Today = (t: string | Date) => today.diff(t, "month", true);
 
 // 2021/01/01
 export const modifyDate = (date: Date): string =>
@@ -29,6 +29,43 @@ export const modifyDate = (date: Date): string =>
 // 2021年1月1日
 export const modifyDate1 = (date: Date): string =>
     `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+
+// 09:11
+export const modifyTime = (date: Date): string =>
+    date.toLocaleTimeString('zh-CN', {
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+    });
+
+//秒转换
+export const secondsFormat = (s: number, isHandleZero?: boolean) => {
+    const day = Math.floor(s / (24 * 3600)); // Math.floor()向下取整
+    const hour = Math.floor((s - day * 24 * 3600) / 3600);
+    const minute = Math.floor((s - day * 24 * 3600 - hour * 3600) / 60);
+    const second = s - day * 24 * 3600 - hour * 3600 - minute * 60;
+
+    const padZero = (num: number) => {
+        if (isHandleZero)
+            return (num < 10 ? '0' + num : num);
+        return num;
+    };
+
+    if (day < 0 || hour < 0 || minute < 0 || second < 0) {
+        return '';
+    }
+
+    let result = '';
+    if (day > 0) {
+        result = `${day}天${padZero(hour)}时`;
+    } else if (hour > 0) {
+        result = `${hour}时${padZero(minute)}分`;
+    } else {
+        result = `${minute}分${padZero(second)}秒`;
+    }
+
+    return result;
+};
 
 export function extractNumbers(str: string) {
     const regex = /\d+/g; // \d 表示一个数字，+ 表示一个或多个，g 表示全局搜索  
@@ -56,3 +93,4 @@ export const getColorScheme = (colorScheme: ColorScheme): string[] => {
             break;
     }
 };
+
