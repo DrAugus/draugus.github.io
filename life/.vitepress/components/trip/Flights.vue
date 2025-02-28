@@ -1,8 +1,6 @@
 <template>
     <h2>历史行程</h2>
 
-    <span> {{ `一共飞行了${totalFlights}次` }}</span>
-
     <div class="flight-list">
         <FlightsLabel v-for="flight in sortedFlightData" :key="setKey(flight)" :flight="flight"
             @show-details="handleShowDetails(setKey(flight))" />
@@ -21,7 +19,6 @@ import { Flight } from '../../type';
 import FlightsLabel from './FlightsLabel.vue';
 import FlightsModalDetails from './FlightsModalDetails.vue';
 
-const totalFlights = FLIGHT_DATA.length;
 const sortedFlightData = FLIGHT_DATA.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 const visibleFlightDetails = ref<Record<string, boolean>>({});

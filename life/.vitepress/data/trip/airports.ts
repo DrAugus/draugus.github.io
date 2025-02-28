@@ -9,8 +9,8 @@ const AIRPORTS: Airport[] = [
         name: 'Hangzhou Xiaoshan International Airport',
         nameLocal: '杭州萧山国际机场',
         abbrZH: '杭州萧山',
-        city: 'Hangzhou',
-        country: 'China',
+        city: '杭州',
+        region: '中国',
         longitude: 120.434453,
         latitude: 30.229503,
     }, {
@@ -18,8 +18,8 @@ const AIRPORTS: Airport[] = [
         name: 'Nanjing Lukou International Airport',
         nameLocal: '南京禄口国际机场',
         abbrZH: '南京禄口',
-        city: 'Nanjing',
-        country: 'China',
+        city: '南京',
+        region: '中国',
         longitude: 118.862025,
         latitude: 31.742042
     }, {
@@ -27,8 +27,8 @@ const AIRPORTS: Airport[] = [
         name: 'Shanghai Hongqiao International Airport',
         nameLocal: '上海虹桥国际机场',
         abbrZH: '上海虹桥',
-        city: 'Shanghai',
-        country: 'China',
+        city: '上海',
+        region: '中国',
         longitude: 121.336319,
         latitude: 31.197875
     }, {
@@ -36,8 +36,8 @@ const AIRPORTS: Airport[] = [
         name: 'Shanghai Pudong International Airport',
         nameLocal: '上海浦东国际机场',
         abbrZH: '上海浦东',
-        city: 'Shanghai',
-        country: 'China',
+        city: '上海',
+        region: '中国',
         longitude: 121.805214,
         latitude: 31.143378
     }, {
@@ -45,8 +45,8 @@ const AIRPORTS: Airport[] = [
         name: 'Changchun Longjia International Airport',
         nameLocal: '长春龙嘉国际机场',
         abbrZH: '长春龙嘉',
-        city: 'Changchun',
-        country: 'China',
+        city: '长春',
+        region: '中国',
         longitude: 125.1201,
         latitude: 43.5412
     }, {
@@ -54,8 +54,8 @@ const AIRPORTS: Airport[] = [
         name: 'Shenyang Taoxian International Airport',
         nameLocal: '沈阳桃仙国际机场',
         abbrZH: '沈阳桃仙',
-        city: 'Shenyang',
-        country: 'China',
+        city: '沈阳',
+        region: '中国',
         longitude: 123.2901,
         latitude: 41.3824
     }, {
@@ -63,8 +63,8 @@ const AIRPORTS: Airport[] = [
         name: 'Chengdu Shuangliu International Airport',
         nameLocal: '成都双流国际机场',
         abbrZH: '成都双流',
-        city: 'Chengdu',
-        country: 'China',
+        city: '成都',
+        region: '中国',
         longitude: 103.947086,
         latitude: 30.578528
     }, {
@@ -72,8 +72,8 @@ const AIRPORTS: Airport[] = [
         name: 'Dalian Zhoushuizi International Airport',
         nameLocal: '大连周水子国际机场',
         abbrZH: '大连周水子',
-        city: 'Dalian',
-        country: 'China',
+        city: '大连',
+        region: '中国',
         longitude: 121.5386,
         latitude: 38.965667
     }, {
@@ -81,8 +81,8 @@ const AIRPORTS: Airport[] = [
         name: 'Guangzhou Baiyun International Airport',
         nameLocal: '广州白云国际机场',
         abbrZH: '广州白云',
-        city: 'Guangzhou',
-        country: 'China',
+        city: '广州',
+        region: '中国',
         longitude: 113.298786,
         latitude: 23.392436
     }, {
@@ -90,17 +90,26 @@ const AIRPORTS: Airport[] = [
         name: 'Zhuhai Jinwan Airport',
         nameLocal: '珠海金湾机场',
         abbrZH: '珠海金湾',
-        city: 'Zhuhai',
-        country: 'China',
+        city: '珠海',
+        region: '中国',
         longitude: 113.376,
         latitude: 22.0064
+    }, {
+        code: 'SWA',
+        name: 'Jieyang Chaoshan International Airport',
+        nameLocal: '揭阳潮汕国际机场',
+        abbrZH: '揭阳潮汕',
+        city: '揭阳',
+        region: '中国',
+        longitude: 116.512436,
+        latitude: 23.542034
     }, {
         code: 'NNY',
         name: 'Nanyang Jiangying Airport',
         nameLocal: '南阳姜营机场',
         abbrZH: '南阳姜营',
-        city: 'Nanyang',
-        country: 'China',
+        city: '南阳',
+        region: '中国',
         longitude: 112.615,
         latitude: 32.9808
     }, {
@@ -108,8 +117,8 @@ const AIRPORTS: Airport[] = [
         name: "Xi'an Xianyang International Airport",
         nameLocal: '西安咸阳国际机场',
         abbrZH: '西安咸阳',
-        city: "Xi'an",
-        country: 'China',
+        city: "西安",
+        region: '中国',
         longitude: 108.751592,
         latitude: 34.447119
     }, {
@@ -117,8 +126,8 @@ const AIRPORTS: Airport[] = [
         name: 'Guiyang Longdongbao International Airport',
         nameLocal: '贵阳龙洞堡国际机场',
         abbrZH: '贵阳龙洞堡',
-        city: 'Guiyang',
-        country: 'China',
+        city: '贵阳',
+        region: '中国',
         longitude: 106.800703,
         latitude: 26.538522
     }, {
@@ -126,8 +135,8 @@ const AIRPORTS: Airport[] = [
         name: 'Kunming Changshui International Airport',
         nameLocal: '昆明长水国际机场',
         abbrZH: '昆明长水',
-        city: 'Kunming',
-        country: 'China',
+        city: '昆明',
+        region: '中国',
         longitude: 102.743536,
         latitude: 24.992364
     }, {
@@ -135,8 +144,8 @@ const AIRPORTS: Airport[] = [
         name: 'Xiamen Gaoqi International Airport',
         nameLocal: '厦门高崎国际机场',
         abbrZH: '厦门高崎',
-        city: 'Xiamen',
-        country: 'China',
+        city: '厦门',
+        region: '中国',
         longitude: 118.127739,
         latitude: 24.544036
     }, {
@@ -144,8 +153,8 @@ const AIRPORTS: Airport[] = [
         name: 'Nanchang Changbei International Airport',
         nameLocal: '南昌昌北国际机场',
         abbrZH: '南昌昌北',
-        city: 'Nanchang',
-        country: 'China',
+        city: '南昌',
+        region: '中国',
         longitude: 115.9,
         latitude: 28.865
     }, {
@@ -153,8 +162,8 @@ const AIRPORTS: Airport[] = [
         name: 'Fuzhou Changle International Airport',
         nameLocal: '福州长乐国际机场',
         abbrZH: '福州长乐',
-        city: 'Fuzhou',
-        country: 'China',
+        city: '福州',
+        region: '中国',
         longitude: 119.663272,
         latitude: 25.935064
     }, {
@@ -162,8 +171,8 @@ const AIRPORTS: Airport[] = [
         name: 'Ningbo Lishe International Airport',
         nameLocal: '宁波栎社国际机场',
         abbrZH: '宁波栎社',
-        city: 'Ningbo',
-        country: 'China',
+        city: '宁波',
+        region: '中国',
         longitude: 121.461906,
         latitude: 29.826683
     }, {
@@ -171,8 +180,8 @@ const AIRPORTS: Airport[] = [
         name: 'Beijing Capital International Airport',
         nameLocal: '北京首都国际机场',
         abbrZH: '北京首都',
-        city: 'Beijing',
-        country: 'China',
+        city: '北京',
+        region: '中国',
         longitude: 116.584556,
         latitude: 40.080111
     }, {
@@ -180,8 +189,8 @@ const AIRPORTS: Airport[] = [
         name: 'Beijing Daxing International Airport',
         nameLocal: '北京大兴国际机场',
         abbrZH: '大兴机场',
-        city: 'Beijing',
-        country: 'China',
+        city: '北京',
+        region: '中国',
         longitude: 116.420523,
         latitude: 39.542600
     }, {
@@ -189,8 +198,8 @@ const AIRPORTS: Airport[] = [
         name: 'Zhengzhou Xinzheng International Airport',
         nameLocal: '郑州新郑国际机场',
         abbrZH: '郑州新郑',
-        city: 'Zhengzhou',
-        country: 'China',
+        city: '郑州',
+        region: '中国',
         longitude: 113.840889,
         latitude: 34.519672
     }, {
@@ -198,8 +207,8 @@ const AIRPORTS: Airport[] = [
         name: 'Chongqing Jiangbei International Airport',
         nameLocal: '重庆江北国际机场',
         abbrZH: '重庆江北',
-        city: 'Chongqing',
-        country: 'China',
+        city: '重庆',
+        region: '中国',
         longitude: 106.641678,
         latitude: 29.719217
     }, {
@@ -207,8 +216,8 @@ const AIRPORTS: Airport[] = [
         name: 'Kashi Laining International Airport',
         nameLocal: '喀什徕宁国际机场',
         abbrZH: '喀什徕宁',
-        city: 'Kashi',
-        country: 'China',
+        city: '喀什',
+        region: '中国',
         longitude: 76.019956,
         latitude: 39.542922
     }, {
@@ -216,8 +225,8 @@ const AIRPORTS: Airport[] = [
         name: 'Urumqi Diwopu International Airport',
         nameLocal: '乌鲁木齐地窝堡国际机场',
         abbrZH: '乌鲁木齐地窝堡',
-        city: 'Urumqi',
-        country: 'China',
+        city: '乌鲁木齐',
+        region: '中国',
         longitude: 87.474244,
         latitude: 43.907106
     }, {
@@ -225,8 +234,8 @@ const AIRPORTS: Airport[] = [
         name: 'Harbin Taiping International Airport',
         nameLocal: '哈尔滨太平国际机场',
         abbrZH: '哈尔滨太平',
-        city: 'Harbin',
-        country: 'China',
+        city: '哈尔滨',
+        region: '中国',
         longitude: 126.250328,
         latitude: 45.623403
     }, {
@@ -234,8 +243,8 @@ const AIRPORTS: Airport[] = [
         name: 'Mudanjiang Hailang International Airport',
         nameLocal: '牡丹江海浪国际机场',
         abbrZH: '牡丹江海浪',
-        city: 'Mudanjiang',
-        country: 'China',
+        city: '牡丹江',
+        region: '中国',
         longitude: 129.568972,
         latitude: 44.524072
     }, {
@@ -243,8 +252,8 @@ const AIRPORTS: Airport[] = [
         name: 'Dali Fengyi Airport',
         nameLocal: '大理凤仪机场',
         abbrZH: '大理凤仪',
-        city: 'Dali',
-        country: 'China',
+        city: '大理',
+        region: '中国',
         longitude: 100.319444,
         latitude: 25.649444
     }, {
@@ -252,8 +261,8 @@ const AIRPORTS: Airport[] = [
         name: 'Guilin Liangjiang International Airport',
         nameLocal: '桂林两江国际机场',
         abbrZH: '桂林两江',
-        city: 'Guilin',
-        country: 'China',
+        city: '桂林',
+        region: '中国',
         longitude: 110.039197,
         latitude: 25.218106
     }, {
@@ -261,8 +270,8 @@ const AIRPORTS: Airport[] = [
         name: 'Liuzhou Bailian Airport',
         nameLocal: '柳州白莲机场',
         abbrZH: '柳州白莲',
-        city: 'Liuzhou',
-        country: 'China',
+        city: '柳州',
+        region: '中国',
         longitude: 109.391,
         latitude: 24.2075
     }, {
@@ -270,8 +279,8 @@ const AIRPORTS: Airport[] = [
         name: 'Nanning Wuxu International Airport',
         nameLocal: '南宁吴圩国际机场',
         abbrZH: '南宁吴圩',
-        city: 'Nanning',
-        country: 'China',
+        city: '南宁',
+        region: '中国',
         longitude: 108.172442,
         latitude: 22.608267
     }, {
@@ -279,8 +288,8 @@ const AIRPORTS: Airport[] = [
         name: 'Changsha Huanghua International Airport',
         nameLocal: '长沙黄花国际机场',
         abbrZH: '长沙黄花',
-        city: 'Changcha',
-        country: 'China',
+        city: '长沙',
+        region: '中国',
         longitude: 113.219633,
         latitude: 28.189158
     }, {
@@ -288,8 +297,8 @@ const AIRPORTS: Airport[] = [
         name: "Shenzhen Bao'an International Airport",
         nameLocal: '深圳宝安国际机场',
         abbrZH: '深圳宝安',
-        city: 'Shenzhen',
-        country: 'China',
+        city: '深圳',
+        region: '中国',
         longitude: 113.810664,
         latitude: 22.639258
     }, {
@@ -297,8 +306,8 @@ const AIRPORTS: Airport[] = [
         name: 'Wuhan Tianhe International Airport',
         nameLocal: '武汉天河国际机场',
         abbrZH: '武汉天河',
-        city: 'Wuhan',
-        country: 'China',
+        city: '武汉',
+        region: '中国',
         longitude: 114.2081,
         latitude: 30.783758
     }, {
@@ -306,8 +315,8 @@ const AIRPORTS: Airport[] = [
         name: 'Lanzhou Zhongchuan International Airport',
         nameLocal: '兰州中川国际机场',
         abbrZH: '兰州中川',
-        city: 'Lanzhou',
-        country: 'China',
+        city: '兰州',
+        region: '中国',
         longitude: 103.620775,
         latitude: 36.515242
     }, {
@@ -315,8 +324,8 @@ const AIRPORTS: Airport[] = [
         name: 'Xishuangbanna Gasa International Airport',
         nameLocal: '西双版纳嘎洒国际机场',
         abbrZH: '西双版纳嘎洒',
-        city: 'Jinghong',
-        country: 'China',
+        city: '景洪',
+        region: '中国',
         longitude: 100.759611,
         latitude: 21.973914
     }, {
@@ -324,8 +333,8 @@ const AIRPORTS: Airport[] = [
         name: 'Sanya Phoenix International Airport',
         nameLocal: '三亚凤凰国际机场',
         abbrZH: '三亚凤凰',
-        city: 'Sanya',
-        country: 'China',
+        city: '三亚',
+        region: '中国',
         longitude: 109.412272,
         latitude: 18.302897
     }, {
@@ -333,8 +342,8 @@ const AIRPORTS: Airport[] = [
         name: 'Haikou Meilan International Airport',
         nameLocal: '海口美兰国际机场',
         abbrZH: '海口美兰',
-        city: 'Haikou',
-        country: 'China',
+        city: '海口',
+        region: '中国',
         longitude: 110.458961,
         latitude: 19.934856
     }, {
@@ -343,16 +352,25 @@ const AIRPORTS: Airport[] = [
         nameLocal: '',
         abbrZH: '',
         city: '',
-        country: 'China',
+        region: '中国',
         longitude: 0,
         latitude: 0
+    }, {
+        code: 'HKG',
+        name: 'Hong Kong International Airport',
+        nameLocal: '香港國際機場',
+        abbrZH: '香港国际',
+        city: '香港',
+        region: '香港',
+        longitude: 113.922901,
+        latitude: 22.303733
     }, {
         code: 'NRT',
         name: 'Narita International Airport',
         nameLocal: '成田国際空港',
         abbrZH: '东京成田',
-        city: 'Tokyo',
-        country: 'Japan',
+        city: '东京',
+        region: '日本',
         longitude: 140.386389,
         latitude: 35.764722
     }, {
@@ -360,17 +378,17 @@ const AIRPORTS: Airport[] = [
         name: 'Haneda Airport',
         nameLocal: '羽田空港',
         abbrZH: '东京羽田',
-        city: 'Tokyo',
-        country: 'Japan',
+        city: '东京',
+        region: '日本',
         longitude: 139.781113,
         latitude: 35.553333
     }, {
         code: 'KIX',
         name: 'Kansai International Airport',
         nameLocal: '関西国際空港',
-        abbrZH: '大版关西',
-        city: 'Osaka',
-        country: 'Japan',
+        abbrZH: '大阪关西',
+        city: '大阪',
+        region: '日本',
         longitude: 135.244167,
         latitude: 34.4347222
     }

@@ -3,6 +3,11 @@ export interface LinkName {
   link: string,
 }
 
+export interface CalTimes {
+  text: string,
+  times: number,
+}
+
 type Platform = 'Windows' | 'Linux' | 'Mac';
 
 export interface OfficialInfo {
@@ -178,7 +183,7 @@ export interface Airport {
   nameLocal: string,
   abbrZH: string,
   city: string,
-  country: string,
+  region: string,
   longitude: number,
   latitude: number,
 }
@@ -200,7 +205,7 @@ export interface Airline {
   icaoCode: string;               // 三字代码
   region: string;                 // 地区
 }
- 
+
 
 interface FlightTicket {
   ticketPrice: number,

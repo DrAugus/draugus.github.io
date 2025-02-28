@@ -239,8 +239,8 @@ const option = {
             {
                 name: 'Japan',
                 itemStyle: {
-                    areaColor: 'red',
-                    color: 'red'
+                    // areaColor: 'red',
+                    // color: 'red'
                 }
             }
         ]
