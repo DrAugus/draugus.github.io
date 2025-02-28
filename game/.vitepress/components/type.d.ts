@@ -131,10 +131,11 @@ export interface PermanentEvent {
   // 持续时间
   duration: {
     value: number,
-    unit:'day' | 'month',
+    unit: 'day' | 'month',
   },
-  backspace:number, // 消减 以秒计
+  backspace: number, // 消减 以秒计
   reward?: number,
   game: GameName,
-  deprecated?:boolean,
+  deprecated?: boolean,
+  completedDate?: Date[],
 }

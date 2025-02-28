@@ -78,7 +78,9 @@ function handlePermanent() {
             end: new Date(),
             reward: event.reward,
             game: event.game,
+            completed: false,
         }
+        let pushOne = false;
 
         const dateFirst = new Date(event.first);
         const msFirst = dateFirst.getTime();
@@ -92,7 +94,7 @@ function handlePermanent() {
             tmp.end = new Date(msNow - a + msDuration - msBackspace);
 
             if (isBeforeNow(tmp.start)) {
-                resPermanent.push(tmp);
+                pushOne = true;
             }
         } else if (event.duration.unit === 'month') {
             // TODO
@@ -118,21 +120,37 @@ function handlePermanent() {
                     tmp.end = getNextMonthSameDay(tmp.start);
                     tmp.end = new Date(tmp.end.getTime() - msBackspace);
                 }
-                resPermanent.push(tmp);
+                pushOne = true;
             } else if (dayNow > dayFirst) {
                 tmp.start = dateFirst;
                 tmp.start.setFullYear(now.getFullYear(), now.getMonth());
                 tmp.end = getNextMonthSameDay(tmp.start);
                 tmp.end = new Date(tmp.end.getTime() - msBackspace);
-                resPermanent.push(tmp);
+                pushOne = true;
             } else if (dayNow < dayFirst) {
                 const previousMonthDate = getPreviousMonthSameDay(now);
                 tmp.start = dateFirst;
                 tmp.start.setFullYear(previousMonthDate.getFullYear(), previousMonthDate.getMonth());
                 tmp.end = getNextMonthSameDay(tmp.start);
                 tmp.end = new Date(tmp.end.getTime() - msBackspace);
-                resPermanent.push(tmp);
+                pushOne = true;
             }
+        }
+
+        if (pushOne) {
+            // 处理是否完成
+            if (event.completedDate) {
+                for (let completed of event.completedDate) {
+                    const start = new Date(tmp.start);
+                    const end = new Date(tmp.end);
+                    if (completed >= start && now <= end) {
+                        tmp.completed = true;
+                        break;
+                    }
+                }
+            }
+
+            resPermanent.push(tmp);
         }
     })
 

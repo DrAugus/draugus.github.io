@@ -10,7 +10,8 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'day',
         },
         backspace: 1,
-        game: GameName.HSR
+        game: GameName.HSR,
+        completedDate: [new Date("2025/02/27")],
     }, {
         name: "逐光捡金·虚构叙事",
         first: "2025/02/03 04:00:00 +0800",
@@ -66,6 +67,7 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'month',
         },
         backspace: 1,
+        completedDate: [new Date("2025/02/27")],
     }, {
         name: "深境螺旋",
         first: "2025/02/16 04:00:00 +0800",
@@ -96,6 +98,24 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'day',
         },
         backspace: 1,
+    }, {
+        name: "静谧水滴兑换",
+        first: "2025/02/01 04:00:00 +0800",
+        duration: {
+            value: 1,
+            unit: 'month',
+        },
+        backspace: 1,
+        game: GameName.IN
+    }, {
+        name: "奇迹之旅",
+        first: "2025/02/26 11:00:00 +0800",
+        duration: {
+            value: 1,
+            unit: 'month',
+        },
+        backspace: 25200,
+        game: GameName.IN
     },
 ]
 
