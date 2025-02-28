@@ -2,6 +2,354 @@ import { Flight } from "../../type";
 
 export const FLIGHT_DATA: Flight[] = [
     {
+        date: new Date('2024-06-08'),
+        number: 'CZ8682',
+        airplane: {
+            model: '波音737-81B',
+            number: 'B5021'
+        },
+        airlineCode: 'CZ',
+        seatClass: 'R',
+        distance: 1220,
+        departure: {
+            plannedTime: new Date('2024-06-08T15:40:00'),
+            actualTime: new Date('2024-06-08T15:38:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2024-06-08T17:45:00'),
+            actualTime: new Date('2024-06-08T17:16:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 20,
+            airportConstructionFee: 50,
+            fuelSurcharge: 70,
+        }
+    }, {
+        date: new Date('2024-09-11'),
+        number: 'CZ8682',
+        airplane: {
+            model: '波音737-81B(WL)',
+            number: 'B5698'
+        },
+        airlineCode: 'CZ',
+        seatClass: 'S',
+        distance: 1220,
+        departure: {
+            plannedTime: new Date('2024-09-11T11:30:00'),
+            actualTime: new Date('2024-09-11T11:59:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2024-09-11T13:30:00'),
+            actualTime: new Date('2024-09-11T14:04:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 380,
+            airportConstructionFee: 50,
+            fuelSurcharge: 50,
+        }
+    }, {
+        date: new Date('2024-06-10'),
+        number: 'CZ8681',
+        airplane: {
+            model: '波音737-800(WL)',
+            number: 'B1405'
+        },
+        airlineCode: 'CZ',
+        seatClass: 'R',
+        distance: 1220,
+        departure: {
+            plannedTime: new Date('2024-06-10T12:50:00'),
+            actualTime: new Date('2024-06-10T12:53:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2024-06-10T15:00:00'),
+            actualTime: new Date('2024-06-10T14:40:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 20,
+            airportConstructionFee: 50,
+            fuelSurcharge: 70,
+        }
+    }, {
+        date: new Date('2024-09-14'),
+        number: 'HU7454',
+        airplane: {
+            model: '波音737-84P(WL)',
+            number: 'B5855'
+        },
+        airlineCode: 'HU',
+        seatClass: 'N',
+        distance: 1043,
+        departure: {
+            plannedTime: new Date('2024-09-14T09:45:00'),
+            actualTime: new Date('2024-09-14T09:57:00'),
+            airport: "南阳姜营",
+        },
+        arrival: {
+            plannedTime: new Date('2024-09-14T11:30:00'),
+            actualTime: new Date('2024-09-14T11:21:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 470,
+            airportConstructionFee: 50,
+            fuelSurcharge: 50,
+        }
+    }, {
+        date: new Date('2024-09-17'),
+        number: 'MF8329',
+        airplane: {
+            model: '波音737-85C(WL)',
+            number: 'B5750'
+        },
+        airlineCode: 'MF',
+        seatClass: 'Z',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2024-09-17T17:30:00'),
+            actualTime: new Date('2024-09-17T17:53:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2024-09-17T20:00:00'),
+            actualTime: new Date('2024-09-17T19:39:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 350,
+            airportConstructionFee: 50,
+            fuelSurcharge: 50,
+        }
+    }, {
+        date: new Date('2024-10-15'),
+        number: 'JD5746',
+        airplane: {
+            model: '空客321-251(N)(X)',
+            number: 'B30F1'
+        },
+        airlineCode: 'JD',
+        seatClass: 'T',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2024-10-15T22:55:00'),
+            actualTime: new Date('2024-10-15T23:02:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2024-10-16T01:10:00'),
+            actualTime: new Date('2024-10-16T00:49:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 260,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2024-10-19'),
+        number: 'JD5745',
+        airplane: {
+            model: '空客321-251(N)(X)',
+            number: 'B322L'
+        },
+        airlineCode: 'JD',
+        seatClass: 'T',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2024-10-19T20:00:00'),
+            actualTime: new Date('2024-10-19T20:20:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2024-10-19T22:10:00'),
+            actualTime: new Date('2024-10-19T22:17:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 260,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2024-12-11'),
+        number: 'GT1050',
+        airplane: {
+            model: '空客319-132',
+            number: 'B6192'
+        },
+        airlineCode: 'GT',
+        seatClass: 'A',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2024-12-11T12:10:00'),
+            actualTime: new Date('2024-12-11T12:32:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2024-12-11T14:50:00'),
+            actualTime: new Date('2024-12-11T14:58:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 570,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-01-26'),
+        number: 'SC8843',
+        airplane: {
+            model: '波音737-800(WL)',
+            number: 'B7668'
+        },
+        airlineCode: 'SC',
+        seatClass: 'T',
+        distance: 773,
+        departure: {
+            plannedTime: new Date('2025-01-26T10:45:00'),
+            actualTime: new Date('2025-01-26T10:41:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2025-01-26T12:15:00'),
+            actualTime: new Date('2025-01-26T11:52:00'),
+            airport: "海口美兰",
+            terminal: 1,
+        },
+        price: {
+            ticketPrice: 250,
+            airportConstructionFee: 50,
+            fuelSurcharge: 15,
+        }
+    }, {
+        date: new Date('2025-01-26'),
+        number: 'SC2328',
+        airplane: {
+            model: '波音737-85P(WL)',
+            number: 'B5490'
+        },
+        airlineCode: 'SC',
+        seatClass: 'T',
+        distance: 1873,
+        departure: {
+            plannedTime: new Date('2025-01-26T14:35:00'),
+            actualTime: new Date('2025-01-26T14:44:00'),
+            airport: "海口美兰",
+            terminal: 1,
+        },
+        arrival: {
+            plannedTime: new Date('2025-01-26T17:25:00'),
+            actualTime: new Date('2025-01-26T17:07:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 250,
+            airportConstructionFee: 50,
+            fuelSurcharge: 15,
+        }
+    }, {
+        date: new Date('2025-02-02'),
+        number: 'MU8499',
+        airplane: {
+            model: '波音737-86D(WL)',
+            number: 'B5523'
+        },
+        airlineCode: 'MU',
+        seatClass: 'L',
+        distance: 1220,
+        departure: {
+            plannedTime: new Date('2025-02-02T19:25:00'),
+            actualTime: new Date('2025-02-02T19:25:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2025-02-02T21:45:00'),
+            actualTime: new Date('2025-02-02T21:26:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 790,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-02-20'),
+        number: 'JD5603',
+        airplane: {
+            model: '空客320-251(N)',
+            number: 'B1249'
+        },
+        airlineCode: 'JD',
+        seatClass: 'N',
+        distance: 1043,
+        departure: {
+            plannedTime: new Date('2025-02-20T20:35:00'),
+            actualTime: new Date('2025-02-20T20:51:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2025-02-20T22:50:00'),
+            actualTime: new Date('2025-02-20T22:39:00'),
+            airport: "南阳姜营",
+        },
+        price: {
+            ticketPrice: 470,
+            airportConstructionFee: 50,
+            fuelSurcharge: 40,
+        }
+    }, {
+        date: new Date('2025-02-23'),
+        number: 'JD5604',
+        airplane: {
+            model: '空客320-214(SL)',
+            number: 'B8171'
+        },
+        airlineCode: 'JD',
+        seatClass: 'U',
+        distance: 1043,
+        departure: {
+            plannedTime: new Date('2025-02-23T22:50:00'),
+            actualTime: new Date('2025-02-23T23:01:00'),
+            airport: "南阳姜营",
+        },
+        arrival: {
+            plannedTime: new Date('2025-02-24T00:50:00'),
+            actualTime: new Date('2025-02-24T00:28:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 380,
+            airportConstructionFee: 50,
+            fuelSurcharge: 40,
+        }
+    }, {
         date: new Date('2017/02/22'),
         number: 'EU2765',
         airplane: {

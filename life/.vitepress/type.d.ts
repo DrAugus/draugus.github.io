@@ -212,7 +212,7 @@ interface FlightAirport {
   plannedTime: Date,
   actualTime: Date,
   airport: string,
-  terminal: number | null,    // 真的有机场没有航站楼
+  terminal?: number,    // 真的有机场没有航站楼
 }
 
 export interface Flight {

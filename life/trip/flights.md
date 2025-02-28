@@ -5,7 +5,7 @@ lastUpdated: false
 ---
 
 
-# 航线
+# 飞行行程
 
 <Flights />
 <FlightsChart />

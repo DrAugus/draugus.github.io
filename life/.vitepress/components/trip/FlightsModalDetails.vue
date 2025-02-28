@@ -34,11 +34,11 @@
                 <span class="font-12">
                     <span class="font-grey">含税票价</span><span>{{ ` ${getTotalTicketPrice(flight)}` }}</span><br>
                     <span class="font-grey">机票价格</span><span>{{ ` ${getPriceDisplay(flight.price.ticketPrice)}`
-                        }}</span><br>
+                    }}</span><br>
                     <span class="font-grey">民航基金</span><span>{{ `
                         ${getPriceDisplay(flight.price.airportConstructionFee)}` }}</span><br>
                     <span class="font-grey">燃油费</span><span>{{ ` ${getPriceDisplay(flight.price.fuelSurcharge)}`
-                        }}</span><br>
+                    }}</span><br>
                 </span>
             </div>
 
@@ -55,7 +55,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue';
 import { Flight } from '../../type';
 import { modifyDate1, modifyDate, modifyTime, secondsFormat } from "../../utils";
 import { getAirlineZhAbbrByIata } from '../../data/trip/airlines';
@@ -197,6 +196,7 @@ function getPriceDisplay(price: number) {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 .airline-logo {
     width: 30px;
     height: 30px;

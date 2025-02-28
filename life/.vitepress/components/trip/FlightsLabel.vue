@@ -3,21 +3,30 @@
     <div class="flight-item">
 
 
-        <span>{{ modifyDate1(flight.date) }}</span>
+        <span class="flight-date">{{ modifyDate1(flight.date) }}</span>
 
         <div class="flight-tag" @click="emitShowDetails">
             <div class="flight-info">
-                <div class="title">
+                <div class="flight-title">
                     <img :src="`/img/trip/airline/${flight.airlineCode}.svg`" alt="airline-logo" class="airline-logo"
-                    width="20px" />
+                        width="20px" />
                     <span class="airline-name">{{ getAirlineZhAbbrByIata(flight.airlineCode) }}</span>
                     <span class="flight-number">{{ flight.number }}</span>
                 </div>
-                <div class="departure">{{ modifyTime(flight.departure.plannedTime) }} {{ flight.departure.airport }}
-                    <span v-if="flight.departure.terminal">{{ `T${flight.departure.terminal}` }}</span>
+                <div class="flight-departure">
+                    <span class="flight-time">
+                        {{ modifyTime(flight.departure.plannedTime) }}
+                    </span>
+                    <span class="flight-airport"> {{ flight.departure.airport }}
+                        <span v-if="flight.departure.terminal">{{ `T${flight.departure.terminal}` }} </span>
+                    </span>
                 </div>
-                <div class="arrival">{{ modifyTime(flight.arrival.plannedTime) }} {{ flight.arrival.airport }}
-                    <span v-if="flight.arrival.terminal">{{ `T${flight.arrival.terminal}` }}</span>
+                <div class="flight-arrival">
+                    <span class="flight-time">{{ modifyTime(flight.arrival.plannedTime) }}
+                    </span>
+                    <span class="flight-airport"> {{ flight.arrival.airport }}
+                        <span v-if="flight.arrival.terminal">{{ `T${flight.arrival.terminal}` }}</span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -27,7 +36,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue';
 import { modifyDate1, modifyTime } from "../../utils";
 import { Flight } from '../../type';
 import { getAirlineZhAbbrByIata } from '../../data/trip/airlines';
@@ -56,15 +64,44 @@ const emitShowDetails = () => {
     cursor: pointer;
 }
 
-.flight-info {
-    text-align: center;
-}
-
-.title {
+.flight-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 5px;
 }
+
+.flight-date {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+
+.flight-info {
+    width: 200px;
+    text-align: left;
+}
+
+.flight-departure {
+    display: flex;
+    gap: 5px;
+}
+
+.flight-arrival {
+    display: flex;
+    gap: 5px;
+}
+
+.flight-time {
+    width: 45px;
+    text-align: left;
+}
+
+.flight-airport {
+    text-align: left;
+}
+
+
 
 .airline-logo {
     width: 20px;
@@ -95,13 +132,12 @@ const emitShowDetails = () => {
 }
 
 .flight-item {
-    /* 默认宽度，手机端 */
     width: 100%;
 }
 
 @media (min-width: 768px) {
     .flight-item {
-        /* 电脑端宽度 */
+        /* 减去 gap */
         width: calc(50% - 10px);
     }
 }
