@@ -2,7 +2,6 @@
 
     <div class="flight-item">
 
-
         <span class="flight-date">{{ modifyDate1(flight.date) }}</span>
 
         <div class="flight-tag" @click="emitShowDetails">

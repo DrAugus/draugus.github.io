@@ -55,9 +55,9 @@
 </template>
 
 <script setup lang="ts">
-import { Flight } from '../../type';
-import { modifyDate1, modifyDate, modifyTime, secondsFormat } from "../../utils";
 import { getAirlineZhAbbrByIata } from '../../data/trip/airlines';
+import { Flight } from '../../type';
+import { modifyDate, modifyTime, secondsFormat } from "../../utils";
 
 const props = defineProps<{
     isVisible: boolean;

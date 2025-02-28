@@ -1,9 +1,7 @@
 <template>
     <h2>历史行程</h2>
 
-    <div v-for="(v, i) in sortedFlightData">
-        {{ modifyDate1(v.date) }} {{ v.departure.airport }} {{ v.arrival.airport }} {{ v.number }}
-    </div>
+    <span> {{ `一共飞行了${totalFlights}次` }}</span>
 
     <div class="flight-list">
         <FlightsLabel v-for="flight in sortedFlightData" :key="setKey(flight)" :flight="flight"
@@ -17,12 +15,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 import { FLIGHT_DATA } from '../../data/trip/flight';
+import { Flight } from '../../type';
 import FlightsLabel from './FlightsLabel.vue';
 import FlightsModalDetails from './FlightsModalDetails.vue';
-import { modifyDate1, modifyTime } from "../../utils";
-import { Flight } from '../../type';
+
+const totalFlights = FLIGHT_DATA.length;
 const sortedFlightData = FLIGHT_DATA.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 const visibleFlightDetails = ref<Record<string, boolean>>({});
@@ -46,9 +45,6 @@ const findFlightByNumber = (key: string): Flight | undefined => {
     });
 };
 
-// 使用 computed 属性来过滤出当前可见的航班详细信息，但在这个例子中我们不需要它，
-// 因为我们已经在 v-for 循环中直接使用了 visibleFlightDetails。
-// 如果你想要基于其他条件过滤航班，你可以在这里创建一个 computed 属性。
 </script>
 
 <style scoped>
