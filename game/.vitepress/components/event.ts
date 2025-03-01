@@ -47,7 +47,8 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'month',
         },
         backspace: 1,
-        game: GameName.HSR
+        game: GameName.HSR,
+        completedDate: [new Date("2025/03/01 18:00:00 +0800")],
     }, {
         name: "尘辉兑换·星尘兑换",
         first: "2025/02/01 04:00:00 +0800",
@@ -99,6 +100,25 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
         },
         backspace: 1,
     }, {
+        name: "千道门扉的异想",
+        first: "2025/02/17 04:00:00 +0800",
+        reward: 160,
+        game: GameName.WW,
+        duration: {
+            value: 7,
+            unit: 'day',
+        },
+        backspace: 1,
+    }, {
+        name: "海市兑换·残振珊瑚",
+        first: "2025/02/13 04:00:00 +0800",
+        game: GameName.WW,
+        duration: {
+            value: 42,
+            unit: 'day',
+        },
+        backspace: 57600,
+    }, {
         name: "静谧水滴兑换",
         first: "2025/02/01 04:00:00 +0800",
         duration: {
@@ -106,7 +126,8 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'month',
         },
         backspace: 1,
-        game: GameName.IN
+        game: GameName.IN,
+        completedDate: [new Date("2025/03/01 18:00:00 +0800")],
     }, {
         name: "奇迹之旅",
         first: "2025/02/26 11:00:00 +0800",
@@ -121,6 +142,18 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
 
 export const EVENTS: Event[] = [
     {
+        name: "嗷呜嗷呜事务所",
+        description: "生命花园培育出的奇美拉，竟然是奥赫玛居民的好帮手?成为这群小家伙的管理员，为有需要的人们解决更多麻烦吧!",
+        start: "2025/02/28 12:00:00 +0800",
+        end: "2025/04/07 03:59:59 +0800",
+        game: GameName.HSR,
+    }, {
+        name: "圣城鉴宝",
+        description: "近日奥赫玛市集上假货古玩猖獗，古玩店老板西塔罗斯急需一名鉴宝学徒协助他进行鉴定",
+        start: "2025/03/19 12:00:00 +0800",
+        end: "2025/04/07 03:59:59 +0800",
+        game: GameName.HSR,
+    }, {
         name: "春曦画桃符",
         description: "海灯节活动",
         start: "2025/01/24 10:00:00 +0800",
@@ -374,5 +407,42 @@ export const EVENTS: Event[] = [
         start: "2025/02/26 11:00:00 +0800",
         end: "2025/03/26 03:49:59 +0800",
         game: GameName.IN
+    }, {
+        name: "老人鱼海",
+        description: "航海主题。跟随菲比体验一段惊奇的航海之旅，在黎乔利群岛海域，漂泊者可以驾驶名为「拉结号」的贡多拉，捕捞当地各种特有的鱼类，通过不断获得捕鱼声誉成为捕鱼高手!",
+        start: "2025/02/13 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        game: GameName.WW,
+    }, {
+        name: "碧海赠礼",
+        description: "七日签到活动!",
+        start: "2025/02/13 11:00:00 +0800",
+        end: "2025/03/26 03:49:59 +0800",
+        completed: true,
+        game: GameName.WW,
+    }, {
+        name: "极限拉古那",
+        description: "限时联机跑酷!",
+        start: "2025/02/20 10:00:00 +0800",
+        end: "2025/03/10 03:49:59 +0800",
+        game: GameName.WW,
+    }, {
+        name: "仿声战略III",
+        description: "漂泊者将可进入特殊的模拟领域，在特殊增益的加持下连续挑战多个强大的敌人!",
+        start: "2025/02/27 10:00:00 +0800",
+        end: "2025/03/13 03:49:59 +0800",
+        game: GameName.WW,
+    }, {
+        name: "海算模演II",
+        description: "海算沙盘领域内，通过击败敌人，开启奇藏来尽可能获得更多【战略数据】积分及【低容变量】增益。",
+        start: "2025/03/06 10:00:00 +0800",
+        end: "2025/03/27 03:49:59 +0800",
+        game: GameName.WW,
+    }, {
+        name: "踏潮探历",
+        description: "限时探索委托!参与活动并于鸣鸣物流车处上传探历札记，即可获得奖励丰厚的“探历补给”!",
+        start: "2025/03/13 04:00:00 +0800",
+        end: "2025/03/27 03:49:59 +0800",
+        game: GameName.WW,
     },
 ]

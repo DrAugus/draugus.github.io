@@ -33,12 +33,14 @@
             <div class="flight-label" v-if="flight.price">
                 <span class="font-12">
                     <span class="font-grey">含税票价</span><span>{{ ` ${getTotalTicketPrice(flight)}` }}</span><br>
-                    <span class="font-grey">机票价格</span><span>{{ ` ${getPriceDisplay(flight.price.ticketPrice)}`
-                        }}</span><br>
+                    <span class="font-grey">机票价格</span><span>
+                        {{ ` ${getPriceDisplay(flight.price.ticketPrice)}` }}
+                    </span><br>
                     <span class="font-grey">民航基金</span><span>{{ `
                         ${getPriceDisplay(flight.price.airportConstructionFee)}` }}</span><br>
-                    <span class="font-grey">燃油费</span><span>{{ ` ${getPriceDisplay(flight.price.fuelSurcharge)}`
-                        }}</span><br>
+                    <span class="font-grey">燃油费</span>
+                    <span>
+                        {{ ` ${getPriceDisplay(flight.price.fuelSurcharge)}` }}</span><br>
                 </span>
             </div>
 

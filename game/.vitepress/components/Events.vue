@@ -7,7 +7,7 @@
             <img class="VPImage" :src="'/logo/' + getGameIcon(event.game)" width="15px" height="15px" alt="">
             <span :class="event.completed ? 'deleted-text' : ''">
                 {{ event.name }}
-                <span v-if="event.description">({{ event.description }})</span>
+                <span v-if="event.description">({{ handleDescription(event.description) }})</span>
                 <span v-if="event.reward"> ，可以获取
                     {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
                 ，还有
@@ -27,7 +27,7 @@
             <img class="VPImage" :src="'/logo/' + getGameIcon(event.game)" width="15px" height="15px" alt="">
             <span :class="event.completed ? 'deleted-text' : ''">
                 {{ event.name }}
-                <span v-if="event.description">({{ event.description }})</span>
+                <span v-if="event.description">({{ handleDescription(event.description) }})</span>
                 <span v-if="event.reward"> ，可以获取
                     {{ event.reward + getGameItemName(event.game, GachaCurrencyItems.Diamond) }}</span>
                 ，还有
@@ -143,7 +143,7 @@ function handlePermanent() {
                 for (let completed of event.completedDate) {
                     const start = new Date(tmp.start);
                     const end = new Date(tmp.end);
-                    if (completed >= start && now <= end) {
+                    if (completed >= start && completed <= end) {
                         tmp.completed = true;
                         break;
                     }
@@ -163,6 +163,16 @@ function handlePermanent() {
 
 const PermanentEvents = handlePermanent();
 // console.log(PermanentEvents);
+
+function handleDescription(desc: string) {
+    const maxLength = 10;
+    if (desc.length > maxLength) {
+        return desc.slice(0, maxLength) + '...';
+    }
+    return desc;
+}
+
+
 </script>
 
 <style scoped>
