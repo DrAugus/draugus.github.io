@@ -62,10 +62,11 @@ const sidebarTrip = [
     {
         text: '出行', collapsed: false, items: [
             { text: '飞机', link: '/trip/airplane' },
+            { text: '随心飞', link: '/trip/suixinfei' },
+            { text: '飞行行程', link: '/trip/flights' },
             { text: '机场', link: '/trip/airport' },
             { text: '火车站', link: '/trip/railway' },
             { text: '自驾游', link: '/trip/self-drive' },
-            { text: '随心飞', link: '/trip/suixinfei' },
             { text: '酒店', link: '/trip/hotel' },
         ]
     },
@@ -336,14 +337,24 @@ const sidebarCodeInterview = [
     { text: '系统设计', link: '/code/interview/sys-design' },
     { text: '非技术问题', link: '/code/interview/non-tech' },
 ];
+const prefixCodeCpp = '/code/cpp';
+const prefixCodeCppFeature = `${prefixCodeCpp}/feature`;
 const sidebarCodeCpp = [
-    { text: '特性', link: '/code/cpp/' },
     { text: '代码风格', link: '/code/cpp/style' },
     { text: '复杂声明', link: '/code/cpp/complex-declaration' },
     { text: 'printf', link: '/code/cpp/printf' },
     { text: '程序题', link: '/code/cpp/code' },
     { text: 'C 与 C++', link: '/code/cpp/c-cpp-diff' },
     {
+        text: '特性', collapsed: false, items: [
+            { text: '介绍', link: `${prefixCodeCppFeature}/` },
+            { text: 'C++11', link: `${prefixCodeCppFeature}/11` },
+            { text: 'C++14', link: `${prefixCodeCppFeature}/14` },
+            { text: 'C++17', link: `${prefixCodeCppFeature}/17` },
+            { text: 'C++20', link: `${prefixCodeCppFeature}/20` },
+            { text: 'C++23', link: `${prefixCodeCppFeature}/23` },
+        ]
+    }, {
         text: '基本概念', collapsed: false, items: [
             { text: '概念辨析', link: '/code/cpp/concept/' },
             { text: '类', link: '/code/cpp/concept/class' },

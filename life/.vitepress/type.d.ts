@@ -359,3 +359,13 @@ export interface FoodRecord {
     reason?: string; // 推荐理由（可选）
   };
 }
+
+export interface Flag {
+  id: string,
+  name: string,
+  svg: string,
+}
+
+export interface FlagMap {
+  [path: string]: Flag,
+}

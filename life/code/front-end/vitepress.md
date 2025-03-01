@@ -2,6 +2,35 @@
 
 ## 常用的，默认主题组件
 
+### Frontmatter Config
+
+```md
+---
+title: Docs with VitePress
+titleTemplate: Vite & Vue powered static site generator
+description: VitePress
+head:
+  - - meta
+    - name: description
+      content: hello
+  - - meta
+    - name: keywords
+      content: super duper SEO
+layout: doc | home | page
+navbar: false
+aside: boolean | 'left'
+editLink: true
+outline: number | [number, number] | 'deep' | false
+lastUpdated: false
+footer: false
+pageClass: custom-page-class
+---
+```
+
+```md
+{{ $frontmatter.title }}
+```
+
 ### Badge
 
 :::code-group
