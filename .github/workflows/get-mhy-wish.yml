@@ -68,7 +68,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.DEPLOY_GH }}
-          title: "feat: auto get mhy wish"
+          title: "feat: auto get mhy wish(new)"
           commit-message: "feat: auto get mhy wish"
           committer: GitHub <noreply@github.com>
           author: GitHub <noreply@github.com>
