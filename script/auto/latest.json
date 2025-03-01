@@ -1,4 +1,8 @@
 {
+    "life/daily/apple/price.md": {
+        "title": "设备价格",
+        "date": 1718165336
+    },
     "life/trip/flights.md": {
         "title": "航线",
         "date": 1718677787.0
@@ -513,10 +517,6 @@
     },
     "life/daily/apple/calendar.md": {
         "title": "官方日历订阅",
-        "date": 1718165336
-    },
-    "life/daily/apple/price.md": {
-        "title": "设备价格",
         "date": 1718165336
     },
     "life/daily/bad-product.md": {

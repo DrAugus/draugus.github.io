@@ -2,8 +2,14 @@
     "title": "",
     "items": [
         {
+            "title": "设备价格",
+            "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价import",
+            "link": "/daily/apple/price",
+            "date": "2024-06-12"
+        },
+        {
             "title": "航线",
-            "desc": "飞行行程import Flights from '../.vitepress/components",
+            "desc": "飞行行程 import Flights from '../.vitepress/component",
             "link": "/trip/flights",
             "date": "2024-06-18"
         },
@@ -114,12 +120,6 @@
             "desc": "贵阳import CityLink from '../../.vitepress/componen",
             "link": "/trip/travelogue/20240426",
             "date": "2024-05-21"
-        },
-        {
-            "title": "机场评测",
-            "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
-            "link": "/trip/airport",
-            "date": "2024-05-27"
         }
     ]
 }
