@@ -1,6 +1,6 @@
 <template>
-    <div v-if="isVisible" class="modal-overlay">
-        <div class="modal-content" v-if="flight">
+    <div v-if="isVisible" class="modal-overlay" @click="emitClose">
+        <div class="modal-content" @click.stop v-if="flight">
             <div class="flight-top">
                 <img :src="`/img/trip/airline/${flight.airlineCode}.svg`" alt="airline-logo" class="airline-logo" />
                 <span class="font-bold font-18">
@@ -34,11 +34,11 @@
                 <span class="font-12">
                     <span class="font-grey">含税票价</span><span>{{ ` ${getTotalTicketPrice(flight)}` }}</span><br>
                     <span class="font-grey">机票价格</span><span>{{ ` ${getPriceDisplay(flight.price.ticketPrice)}`
-                    }}</span><br>
+                        }}</span><br>
                     <span class="font-grey">民航基金</span><span>{{ `
                         ${getPriceDisplay(flight.price.airportConstructionFee)}` }}</span><br>
                     <span class="font-grey">燃油费</span><span>{{ ` ${getPriceDisplay(flight.price.fuelSurcharge)}`
-                    }}</span><br>
+                        }}</span><br>
                 </span>
             </div>
 
@@ -47,7 +47,6 @@
                     <span class="font-grey">舱位</span><span>{{ ` ${flight.seatClass}` }}</span>
                 </span>
             </div>
-
 
             <button class="close-button" @click="emitClose">关闭</button>
         </div>
