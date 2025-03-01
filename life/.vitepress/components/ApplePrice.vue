@@ -23,14 +23,13 @@
         </tbody>
     </table>
 
-    <TitleFormat :title="`购买过的东西，总计消耗 ${totalPurchasedPrice} 元`" :number="2" />
+    <TitleFormat :title="`购买过的东西，总计消耗 ${totalPurchasedPrice.toFixed(2)} 元`" :number="2" />
 
-    设备总消耗 <b>{{ totalPurchasedPrice }}</b> 元，如果包含订阅的 <b>{{ allSubscribe().toFixed(2) }}</b>元，则总计为
+    设备总消耗 <b>{{ totalPurchasedPrice.toFixed(2) }}</b> 元，如果包含订阅的 <b>{{ allSubscribe().toFixed(2) }}</b>元，则总计为
     <b>{{ (totalPurchasedPrice + allSubscribe()).toFixed(2) }}</b>元
 
     <div class="warning custom-block">
-        <p class="custom-block-title">订阅</p>
-        <p>总计消耗 {{ allSubscribe().toFixed(2) }} </p>
+        <p class="custom-block-title">订阅 总计消耗 {{ allSubscribe().toFixed(2) }}</p>
         <ul>
             <li v-for="(appleSub, i) in APPLE_SUBSCRIBE" v-html="modifiedSubscribe(appleSub)"> </li>
         </ul>
@@ -77,7 +76,7 @@ import { ApplePrice, ApplePurchased, AppleSubscribe } from '../type';
 import { durationMonth, monthsFromX2Today, modifyDate, modifyDate1 } from '../utils';
 const filterPriceData = APPLE_PRICE.filter(obj => obj.device);
 const filterPurchasedData = APPLE_PURCHASED.filter(obj => obj.device);
-const totalPurchasedPrice = filterPurchasedData.reduce((sum, product) => sum + product.pricePurchase, 0);;
+const totalPurchasedPrice = filterPurchasedData.reduce((sum, product) => sum + product.pricePurchase, 0);
 
 let filterPurchasedDataRef = ref(filterPurchasedData);
 
@@ -118,6 +117,10 @@ function sortByDate() {
         filterPurchasedDataRef.value = items;
     }
 }
+onMounted(async () => {
+    sortOrder.value = 1;
+    sortByDate();
+})
 
 function calSubscribeTotal(appleSubs: AppleSubscribe) {
     let durMonth = appleSubs.end ? durationMonth(appleSubs.start, appleSubs.end) : monthsFromX2Today(appleSubs.start);

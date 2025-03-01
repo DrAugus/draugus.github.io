@@ -162,5 +162,11 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         pricePurchase: 1246,
         platform: "官网",
         date: new Date('2019/06/12'),
+    }, {
+        device: "AirPods Pro 2",
+        priceSale: 1899,
+        pricePurchase: 1436.07,
+        platform: "京东",
+        date: new Date('2025/03/01'),
     },
 ];
