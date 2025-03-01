@@ -1,26 +1,26 @@
 name: Life recent auto update
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - "life/**"
-      - "!life/.vitepress/**"
-      - "!life/*"
-      - ".github/workflows/life-recent-update.yml"
-      - "script/requirements.txt"
-    # paths-ignore:
-    #   - "life/.vitepress/**"
-  pull_request:
-    types: [opened, synchronize]
-    branches:
-      - master
-    paths:
-      - "life/**"
-      - "!life/.vitepress/**"
-      - "!life/*"
-      - ".github/workflows/life-recent-update.yml"
-      - "script/requirements.txt"
+  # push:
+  #   branches:
+  #     - master
+  #   paths:
+  #     - "life/**"
+  #     - "!life/.vitepress/**"
+  #     - "!life/*"
+  #     - ".github/workflows/life-recent-update.yml"
+  #     - "script/requirements.txt"
+  #   # paths-ignore:
+  #   #   - "life/.vitepress/**"
+  # pull_request:
+  #   types: [opened, synchronize]
+  #   branches:
+  #     - master
+  #   paths:
+  #     - "life/**"
+  #     - "!life/.vitepress/**"
+  #     - "!life/*"
+  #     - ".github/workflows/life-recent-update.yml"
+  #     - "script/requirements.txt"
   schedule:
     # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m.
     - cron: "0 16 * * *"
