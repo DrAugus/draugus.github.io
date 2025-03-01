@@ -2,6 +2,48 @@
     "title": "",
     "items": [
         {
+            "title": "C++11",
+            "desc": "C++11 线程库 C++11中提供了一个多线程库，它可以让程序员在C++代码中创建和管理多线程。",
+            "link": "/code/cpp/feature/11",
+            "date": "2025-03-01"
+        },
+        {
+            "title": "C++14",
+            "desc": "C++14",
+            "link": "/code/cpp/feature/14",
+            "date": "2025-03-01"
+        },
+        {
+            "title": "C++17",
+            "desc": "C++17",
+            "link": "/code/cpp/feature/17",
+            "date": "2025-03-01"
+        },
+        {
+            "title": "C++20",
+            "desc": "C++20",
+            "link": "/code/cpp/feature/20",
+            "date": "2025-03-01"
+        },
+        {
+            "title": "C++23",
+            "desc": "C++23",
+            "link": "/code/cpp/feature/23",
+            "date": "2025-03-01"
+        },
+        {
+            "title": "Vitepress",
+            "desc": "Vitepress 常用的，默认主题组件 Frontmatter Config md {{ $fr",
+            "link": "/code/front-end/vitepress",
+            "date": "2025-03-01"
+        },
+        {
+            "title": "常住地居住感受",
+            "desc": "常住地居住感受 沈阳 2014年9月 - 2020年7月 成都 2020年7月 - 2021年4月",
+            "link": "/trip/permanent-residence",
+            "date": "2024-05-21"
+        },
+        {
             "title": "设备价格",
             "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价import",
             "link": "/daily/apple/price",
@@ -78,48 +120,6 @@
             "desc": "探索 import PlaceVisited from '../.vitepress/compon",
             "link": "/trip/fd1",
             "date": "2024-10-19"
-        },
-        {
-            "title": "探索",
-            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
-            "link": "/trip/flights-dev",
-            "date": "2024-10-19"
-        },
-        {
-            "title": "遇到的问题速查",
-            "desc": "遇到的问题速查 > 代码过程遇到的一些问题速查表 无法在 linux 正常编译 thread cm",
-            "link": "/code/cpp/tips/qa",
-            "date": "2024-05-21"
-        },
-        {
-            "title": "Jenkins",
-            "desc": "Jenkins pipeline matrix use method 在 Jenkins pipe",
-            "link": "/code/devops/Jenkins",
-            "date": "2025-02-05"
-        },
-        {
-            "title": "银行卡",
-            "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
-            "link": "/daily/card",
-            "date": "2025-01-14"
-        },
-        {
-            "title": "面试记录",
-            "desc": "面试记录 > 一些体验极差的面试记录 H3C 新华三技术有限公司 2024.12.28 周六 BO",
-            "link": "/code/interview/record",
-            "date": "2025-01-14"
-        },
-        {
-            "title": "黑龙江",
-            "desc": "黑龙江 哈尔滨 details 旅行参考 by 老乡pls 2023.04 第一天晚上去中央大街，",
-            "link": "/trip/china/heilongjiang/index",
-            "date": "2024-05-28"
-        },
-        {
-            "title": "贵阳 ",
-            "desc": "贵阳import CityLink from '../../.vitepress/componen",
-            "link": "/trip/travelogue/20240426",
-            "date": "2024-05-21"
         }
     ]
 }
