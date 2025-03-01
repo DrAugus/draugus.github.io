@@ -13,21 +13,51 @@
                 <span>飞行时长</span>
                 <span class="font-24">{{ totalHours }}</span>
             </div>
-
         </div>
 
         <div class="flight-statistics-item">
             <div class="flight-statistics-abstract">
                 <div class="top-row">
-                    <div class="box">
-                        <span class="font-12 font-grey">大洲</span> <br>
-                        <span class="font-24">1</span>
+                    <div class="box flex-row">
+                        <span class="align-left">
+                            <span class="font-12 font-grey">大洲</span> <br>
+                            <span class="font-24">1</span>
+                        </span>
+                        <div class="align-right">
+                            <br>
+                            <div class="circle-list">
+                                <span class="circle font-12">亚洲 </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="box"> <span class="font-12 font-grey">国家/地区</span> <br>
-                        <span class="font-24">{{ flightRegion.length }}</span>
+                    <div class="box flex-row">
+                        <span class="align-left">
+                            <span class="font-12 font-grey">国家/地区</span>
+                            <br>
+                            <span class="font-24">{{ flightRegion.length }}</span>
+                        </span>
+                        <div class="align-right">
+                            <br>
+                            <div class="circle-list">
+                                <span class="icon" v-for="(v, i) in flightRegion.slice(0, 2)">
+                                    <div v-html="getRegionFlag(v[TimesInfo.Text])"></div>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="box"> <span class="font-12 font-grey">城市</span> <br>
-                        <span class="font-24">{{ flightCity.length }}</span>
+                    <div class="box flex-row">
+                        <span class="align-left">
+                            <span class="font-12 font-grey">城市</span> <br>
+                            <span class="font-24">{{ flightCity.length }}</span>
+                        </span>
+                        <div class="align-right">
+                            <br>
+                            <div class="circle-list">
+                                <span class="circle font-12" v-for="(v, i) in flightCity.slice(0, 2)">
+                                    {{ v[TimesInfo.Text] }}
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="bottom-row">
@@ -39,7 +69,7 @@
                         </span>
                         <span class="align-right">
                             <span class="font-10 align-right label1"> 去过最多</span> <br>
-                            <span class="font-12">{{ flightAirport.slice(0, 1)[0][0] }}</span>
+                            <span class="font-12">{{ flightAirport[0][TimesInfo.Text] }}</span>
                         </span>
                     </div>
                     <div class="box flex-row">
@@ -49,7 +79,7 @@
                         </span>
                         <span class="align-right">
                             <span class="font-10 align-right label2"> 飞行最多</span> <br>
-                            <span class="font-12">{{ flightAirline.slice(0, 1)[0][0] }}</span>
+                            <span class="font-12">{{ flightAirline[0][TimesInfo.Text] }}</span>
                         </span>
                     </div>
                 </div>
@@ -62,9 +92,15 @@
 
 
 <script setup lang="ts">
+import { mapFlagsByName } from '../../data/flags';
 import { mapAirportsByAbbrZH } from '../../data/trip/airports';
 import { FLIGHT_DATA } from '../../data/trip/flight';
 import { Flight } from '../../type';
+
+enum TimesInfo {
+    Text = 0,
+    Times,
+}
 
 const totalFlights = FLIGHT_DATA.length;
 const sortedFlightData = FLIGHT_DATA.sort((a, b) => b.date.getTime() - a.date.getTime());
@@ -78,7 +114,7 @@ function getFlightAirport() {
         airport.set(arr, (airport.get(arr) || 0) + 1);
     }
     // change to array 
-    let arrAirport = Array.from(airport).sort((a, b) => b[1] - a[1]);
+    let arrAirport = Array.from(airport).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrAirport;
 }
 const flightAirport = getFlightAirport();
@@ -91,7 +127,7 @@ function getFlightCity() {
         let city = mapAirportsByAbbrZH[airport].city;
         cities.set(city, (cities.get(city) || 0) + 1);
     }
-    let arrCities = Array.from(cities).sort((a, b) => b[1] - a[1]);
+    let arrCities = Array.from(cities).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrCities;
 }
 const flightCity = getFlightCity();
@@ -103,7 +139,7 @@ function getFlightRegion() {
         let region = mapAirportsByAbbrZH[airport].region;
         regions.set(region, (regions.get(region) || 0) + 1);
     }
-    let arrRegions = Array.from(regions).sort((a, b) => b[1] - a[1]);
+    let arrRegions = Array.from(regions).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrRegions;
 }
 const flightRegion = getFlightRegion();
@@ -118,15 +154,19 @@ function getFlightAirline() {
         let key = `${cityDep}-${cityArr}`;
         airlines.set(key, (airlines.get(key) || 0) + 1);
     }
-    let arrAirlines = Array.from(airlines).sort((a, b) => b[1] - a[1]);
+    let arrAirlines = Array.from(airlines).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrAirlines;
 }
 const flightAirline = getFlightAirline();
 
+function getRegionFlag(region: string) {
+    return mapFlagsByName[region].svg;
+}
+
 // 获取毫秒数
 function getFlightDuration(flight: Flight) {
     let msDur = flight.arrival.actualTime.getTime() - flight.departure.actualTime.getTime();
-    return msDur
+    return msDur;
 }
 
 const totalMileage = sortedFlightData.reduce((acc, flight) => acc + flight.distance, 0);
@@ -165,8 +205,6 @@ const totalHours = ms2HourAndMin(totalMilliseconds);
     }
 }
 
-
-
 .font-grey {
     color: grey;
 }
@@ -198,6 +236,31 @@ const totalHours = ms2HourAndMin(totalMilliseconds);
     border: 1px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
+    background-color: #dfdfdf;
+}
+
+.circle-list {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #77d794;
+    padding: 3px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .label1 {

@@ -48,7 +48,7 @@ const findFlightByNumber = (key: string): Flight | undefined => {
 .flight-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 10px;
+    gap: 5px;
+    margin: 5px;
 }
 </style>

@@ -1,33 +1,37 @@
 <template>
 
+    <!-- {{ modifyDate1(flight.date) }} -->
+
     <div class="flight-item">
 
-        <span class="flight-date">{{ modifyDate1(flight.date) }}</span>
+        <div class="flight-date">
+            <span>2025年</span><br>
+            <span>12月25日</span>
+        </div>
 
         <div class="flight-tag" @click="emitShowDetails">
-            <div class="flight-info">
-                <div class="flight-title">
-                    <img :src="`/img/trip/airline/${flight.airlineCode}.svg`" alt="airline-logo" class="airline-logo"
-                        width="20px" />
-                    <span class="airline-name">{{ getAirlineZhAbbrByIata(flight.airlineCode) }}</span>
-                    <span class="flight-number">{{ flight.number }}</span>
-                </div>
-                <div class="flight-departure">
-                    <span class="flight-time">
-                        {{ modifyTime(flight.departure.plannedTime) }}
-                    </span>
-                    <span class="flight-airport"> {{ flight.departure.airport }}
-                        <span v-if="flight.departure.terminal">{{ `T${flight.departure.terminal}` }} </span>
-                    </span>
-                </div>
-                <div class="flight-arrival">
-                    <span class="flight-time">{{ modifyTime(flight.arrival.plannedTime) }}
-                    </span>
-                    <span class="flight-airport"> {{ flight.arrival.airport }}
-                        <span v-if="flight.arrival.terminal">{{ `T${flight.arrival.terminal}` }}</span>
-                    </span>
-                </div>
+            <div class="flight-title">
+                <img :src="`/img/trip/airline/${flight.airlineCode}.svg`" alt="airline-logo" class="airline-logo"
+                    width="20px" />
+                <span class="airline-name">{{ getAirlineZhAbbrByIata(flight.airlineCode) }}</span>
+                <span class="flight-number">{{ flight.number }}</span>
             </div>
+            <div class="flight-departure">
+                <span class="flight-time">
+                    {{ modifyTime(flight.departure.plannedTime) }}
+                </span>
+                <span class="flight-airport"> {{ flight.departure.airport }}
+                    <span v-if="flight.departure.terminal">{{ `T${flight.departure.terminal}` }} </span>
+                </span>
+            </div>
+            <div class="flight-arrival">
+                <span class="flight-time">{{ modifyTime(flight.arrival.plannedTime) }}
+                </span>
+                <span class="flight-airport"> {{ flight.arrival.airport }}
+                    <span v-if="flight.arrival.terminal">{{ `T${flight.arrival.terminal}` }}</span>
+                </span>
+            </div>
+
         </div>
     </div>
 
@@ -53,7 +57,6 @@ const emitShowDetails = () => {
 };
 </script>
 
-
 <style scoped>
 .flight-tag {
     display: inline-block;
@@ -61,6 +64,8 @@ const emitShowDetails = () => {
     border-radius: 10px;
     background-color: #f0f0f0;
     cursor: pointer;
+    width: 200px;
+    text-align: left;
 }
 
 .flight-title {
@@ -72,13 +77,10 @@ const emitShowDetails = () => {
 
 .flight-date {
     display: inline-block;
-    width: 140px;
+    width: 70px;
     text-align: right;
-}
-
-.flight-info {
-    width: 200px;
-    text-align: left;
+    align-content: center;
+    justify-content: center;
 }
 
 .flight-departure {
@@ -99,8 +101,6 @@ const emitShowDetails = () => {
 .flight-airport {
     text-align: left;
 }
-
-
 
 .airline-logo {
     width: 20px;
@@ -132,12 +132,35 @@ const emitShowDetails = () => {
 
 .flight-item {
     width: 100%;
+    display: flex;
+    gap: 5px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 630px) {
     .flight-item {
         /* 减去 gap */
-        width: calc(50% - 10px);
+        width: calc(50% - 5px);
+    }
+}
+
+@media (min-width: 960px) {
+    .flight-item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 975px) {
+    .flight-item {
+        /* 减去 gap */
+        width: calc(50% - 5px);
+    }
+}
+
+/* 270px date + label */
+@media (min-width: 1258px) {
+    .flight-item {
+        /* 减去 gap */
+        width: calc(33% - 5px);
     }
 }
 </style>
