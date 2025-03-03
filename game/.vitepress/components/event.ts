@@ -109,6 +109,7 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'day',
         },
         backspace: 1,
+        completedDate: [new Date("2025/03/02")],
     }, {
         name: "海市兑换·残振珊瑚",
         first: "2025/02/13 04:00:00 +0800",
@@ -172,6 +173,7 @@ export const EVENTS: Event[] = [
         start: "2025/02/14 10:00:00 +0800",
         end: "2025/03/03 03:59:59 +0800",
         reward: 970,
+        completed: true,
         game: GameName.Genshin
     }, {
         name: "征战勇者淬炼之界",
@@ -353,6 +355,7 @@ export const EVENTS: Event[] = [
         name: "貘枕之章",
         start: "2025/02/12 04:00:00 +0800",
         end: "2025/03/04 17:59:59 +0800",
+        completed: true,
         reward: 700,
         game: GameName.Genshin
     }, {
