@@ -11,7 +11,9 @@
         </thead>
         <tbody>
             <tr v-for="(item, i) in filterPriceData">
-                <td>{{ item.device }} </td>
+                <td>
+                    <TextEllipsisHoverShow :text="item.device" :maxLen="16" />
+                </td>
                 <td v-if="Array.isArray(item.price)">
                     <span v-for="(vv, ii) in item.price">{{ vv + ' ' }}</span>
                 </td>
@@ -52,7 +54,9 @@
         </thead>
         <tbody>
             <tr v-for="(item, i) in filterPurchasedDataRef">
-                <td>{{ item.device }} </td>
+                <td>
+                    <TextEllipsisHoverShow :text="item.device" :maxLen="16" />
+                </td>
                 <td>{{ item.priceSale ? item.priceSale : '-' }} </td>
                 <td>{{ item.pricePurchase }} </td>
                 <td>{{ discount(item) }} </td>
@@ -65,15 +69,16 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import TitleFormat from './TitleFormat.vue';
+import TextEllipsisHoverShow from './TextEllipsisHoverShow.vue';
 
 import { APPLE_PRICE } from '../data/appleprice';
 import { APPLE_PURCHASED } from '../data/applepurchased';
 import { APPLE_SUBSCRIBE } from '../data/applesubscribe';
 
 import { ApplePrice, ApplePurchased, AppleSubscribe } from '../type';
-import { durationMonth, monthsFromX2Today, modifyDate, modifyDate1 } from '../utils';
+import { durationMonth, modifyDate, modifyDate1, monthsFromX2Today } from '../utils';
 const filterPriceData = APPLE_PRICE.filter(obj => obj.device);
 const filterPurchasedData = APPLE_PURCHASED.filter(obj => obj.device);
 const totalPurchasedPrice = filterPurchasedData.reduce((sum, product) => sum + product.pricePurchase, 0);

@@ -168,5 +168,10 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         pricePurchase: 1436.07,
         platform: "京东",
         date: new Date('2025/03/01'),
+    },{
+        device: "BELKIN 苹果无线充电器 Qi2认证磁吸无线快充 15W快充 面板式三合一 折叠款 WIZ029白色", 
+        pricePurchase: 528.68,
+        platform: "京东",
+        date: new Date('2024/09/28'),
     },
 ];
