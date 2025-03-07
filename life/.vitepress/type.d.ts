@@ -369,3 +369,8 @@ export interface Flag {
 export interface FlagMap {
   [path: string]: Flag,
 }
+
+export interface Point {
+  x: number,
+  y: number,
+}

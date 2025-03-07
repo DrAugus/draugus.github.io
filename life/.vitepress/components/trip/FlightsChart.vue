@@ -1,5 +1,5 @@
 <template>
-    <h2>旅行航线图</h2>
+    <h2>旅行航线图(ECharts)</h2>
 
     <EChartsModel :option="option" />
 
