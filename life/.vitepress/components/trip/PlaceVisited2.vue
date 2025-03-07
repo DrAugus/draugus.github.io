@@ -74,6 +74,13 @@ interface CityTimes {
   city: string,
   times: number,
   resident: boolean,
+  adcode?: number,
+  color?: string,
+}
+
+// code: CityTimes
+interface CityTimesMap {
+  [path: string]: CityTimes,
 }
 
 const extractCityAndTimes = (data: ExploreRecord[]) =>
@@ -115,6 +122,15 @@ const chinaCityVisitedTimes = extractCityAndTimes(VISITED_CHINA);
 // console.log(chinaCityVisitedTimes);
 const japanCityVisitedTimes = extractCityAndTimes(VISITED_JAPAN);
 // console.log(japanCityVisitedTimes);
+const provinceName = VISITED_CHINA.map(item => item.id);
+const provinceCode = provinceName.map(item => {
+  for (const city of citiesData) {
+    if (item === city.name) {
+      return city.adcode;
+    }
+  }
+});
+// console.log(provinceCode);
 
 const getLastTravelogueLink = (city: string) => {
 
@@ -141,87 +157,6 @@ const getLastTravelogueLink = (city: string) => {
   return linkTravelogue(last.date);
 };
 
-const getChinaMarkers = (AMap) => {
-  let markers: any[] = [];
-  for (let cityInfo of chinaCityVisitedTimes) {
-
-    const city = cityInfo.city;
-    const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
-
-    let curCityData = findInChinaCities(city);
-    let number = cityInfo.times;
-    if (cityInfo.resident) number += 100;
-    if (curCityData && number) {
-      let color = getColorByNumber(number);
-      textStyle.backgroundColor = color;
-      let marker = new AMap.LabelMarker({
-        name: city,
-        position: [curCityData.x, curCityData.y],
-        zIndex: number,
-        text: {
-          content: content,
-          direction: 'center',
-          style: textStyle,
-        }
-      });
-      const link = getLastTravelogueLink(city);
-      if (link !== '') {
-        marker.on('click', function (e) {
-          // 在新标签页打开链接
-          window.open(link, '_blank');
-        });
-      } else {
-        marker.on('click', function (e) {
-          // 在新标签页打开链接
-          window.alert(city + "没有旅行日记，看看其他城市吧");
-        });
-      }
-      markers.push(marker);
-    }
-  }
-  return markers;
-};
-
-const getGlobalMarkers = (AMap) => {
-  let markers: any[] = [];
-  for (let cityInfo of japanCityVisitedTimes) {
-
-    const city = cityInfo.city;
-    let curCityData = findInGlobalCities(city);
-    const nameCity = curCityData?.name;
-    const content = nameCity + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
-    let number = cityInfo.times;
-    if (cityInfo.resident) number += 100;
-    if (curCityData && number) {
-      let color = getColorByNumber(number);
-      textStyle.backgroundColor = color;
-      let marker = new AMap.LabelMarker({
-        name: nameCity,
-        position: [curCityData.lng, curCityData.lat],
-        zIndex: number,
-        text: {
-          content: content,
-          direction: 'center',
-          style: textStyle,
-        }
-      });
-      const link = getLastTravelogueLink(city);
-      if (link !== '') {
-        marker.on('click', function (e) {
-          // 在新标签页打开链接
-          window.open(link, '_blank');
-        });
-      } else {
-        marker.on('click', function (e) {
-          // 在新标签页打开链接
-          window.alert(city + "没有旅行日记，看看其他城市吧");
-        });
-      }
-      markers.push(marker);
-    }
-  }
-  return markers;
-};
 
 function getColorByNumber(number) {
   let color;
@@ -236,6 +171,38 @@ function getColorByNumber(number) {
   }
 
   return color;
+}
+
+function mapChinaCityTimes() {
+  let ctMap = new Map();
+  for (let cityInfo of chinaCityVisitedTimes) {
+    const city = cityInfo.city;
+    const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
+
+    let curCityData = findInChinaCities(city);
+    let number = cityInfo.times;
+    if (cityInfo.resident) number += 100;
+    if (curCityData && number) {
+      let adcode = Number(curCityData.adcode);
+      let color = getColorByNumber(number);
+      ctMap[adcode] = {
+        city: city,
+        times: number,
+        resident: cityInfo.resident,
+        adcode: adcode,
+        color: color,
+      };
+    }
+  }
+  return ctMap;
+}
+const mapChinaCityTimesData = mapChinaCityTimes();
+// console.log(mapChinaCityTimesData);
+
+var centers = {
+  'RUS': [93.729504, 68.718195],
+  'USA': [-113.877655, 52.652266],
+  'JPN': [136.824904, 38.00712]
 }
 
 const aMapLoader: any = ref(null);
@@ -255,28 +222,100 @@ onMounted(async () => {
         plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
       })
         .then((AMap) => {
+
+
+          var getColorByRandom = function () {
+            var rg = Math.random() * 155 + 50;
+            return 'rgb(' + rg + ',' + rg + ',255)';
+          }
+          // var disCountry = new AMap.DistrictLayer.Country({
+          //   zIndex: 10,
+          //   SOC: 'JPN',
+          //   depth: 1,
+          //   styles: {
+          //     'nation-stroke': '#22ffff',
+          //     'coastline-stroke': [0.85, 0.63, 0.94, 1],
+          //     'province-stroke': 'white',
+          //     'fill': function (props) {
+          //       console.log(props);
+          //       return getColorByRandom()
+          //     }
+          //   }
+          // })
+
+          // 创建省份图层
+          // var disProvince;
+          function initPro(code: number[], dep: number) {
+            let disProvince = new AMap.DistrictLayer.Province({
+              zIndex: 12,
+              adcode: code,
+              depth: dep,
+              styles: {
+                'fill': function (properties) {
+                  // properties为可用于做样式映射的字段，包含
+                  // NAME_CHN:中文名称
+                  // adcode_pro
+                  // adcode_cit
+                  // adcode
+                  var adcode = properties.adcode;
+                  let has = mapChinaCityTimesData[adcode]
+                  if (has) {
+                    return has.color;
+                  } else {
+                    return 'rgba(255,255,255,0.5)';
+                  }
+                },
+                'province-stroke': 'cornflowerblue',
+                'city-stroke': 'white', // 中国地级市边界
+                'county-stroke': 'rgba(255,255,255,0.5)' // 中国区县边界
+              }
+            });
+            return disProvince
+          }
+          // 颜色辅助方法
+          var colors = {};
+          var getColorByAdcode = function (adcode) {
+            if (!colors[adcode]) {
+              var gb = Math.random() * 155 + 50;
+              colors[adcode] = 'rgb(' + gb + ',' + gb + ',255)';
+            }
+
+            return colors[adcode];
+          };
+
+          // // 按钮事件
+          // function changeAdcode(e) {
+          //   var code = e.target.value;
+          //   if (code != 100000) {
+          //     initPro(code, depth);
+          //   }
+          // }
+
+          // function changeDepth(e) {
+          //   var dep = e.target.value;
+          //   initPro(adCode, dep);
+          // }
+
+          let adCodes = provinceCode
+          let disProvince = initPro(adCodes, 1);
+
+
           map = new AMap.Map("container", {
             zoom: 4.5,
             center: [109.610747, 35.15261],
             viewMode: '3D',
-            // pitch: 60,
+            pitch: 0,
             // showIndoorMap: false,
             // showLabel: false,
             // mapStyle: 'amap://styles/whitesmoke',
             // mapStyle: 'amap://styles/dark',
             mapStyle: 'amap://styles/fresh',
+            layers: [
+              disProvince,
+              // disCountry,
+              AMap.createDefaultLayer()
+            ],
           });
-          let layer = new AMap.LabelsLayer({
-            zooms: [3, 20],
-            zIndex: 1000,
-            collision: false,
-            allowCollision: false,
-          });
-          layer.add([]);
-          // 图层添加到地图
-          map.add(layer);
-          layer.add(getChinaMarkers(AMap));
-          layer.add(getGlobalMarkers(AMap));
         })
         .catch((e) => {
           console.log(e);

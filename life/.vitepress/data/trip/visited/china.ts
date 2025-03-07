@@ -570,7 +570,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     date: {
                         start: new Date('2024/01/26'),
                     },
-                    intro: "g高铁"
+                    intro: "高铁"
                 },],
             },
         ]
@@ -586,6 +586,29 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         end: new Date('2022/08/12'),
                     },
                     intro: "游玩"
+                }],
+            },
+        ]
+    }, {
+        id: '江西',
+        items: [
+            {
+                id: '吉安',
+                info: [{
+                    date: {
+                        start: new Date('2025/02/09'),
+                        end: new Date('2025/02/10'),
+                    },
+                    intro: "自驾"
+                }],
+            }, {
+                id: '鹰潭',
+                info: [{
+                    date: {
+                        start: new Date('2025/02/10'),
+                        end: new Date('2025/02/11'),
+                    },
+                    intro: "自驾"
                 }],
             },
         ]
