@@ -16,6 +16,20 @@
                 "camp_kv": ""
             },
             {
+                "camp_name": "反舌鸟",
+                "camp_channel": "1149",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/154604/30ec8a80943918347736947cce8642be_6345936522683940323.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/154604/ebe000d132344f7117673fce19474ac8_4592360850253024598.png",
+                "camp_kv": ""
+            },
+            {
+                "camp_name": "防卫军·白银小队",
+                "camp_channel": "1146",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/154526/690ccddf1a97e4fae0a9fbc0ea1d3090_4390618834066488608.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/154526/e60ebb3da6cd8adc2efb77bb4e3e1435_7894100540886120750.png",
+                "camp_kv": ""
+            },
+            {
                 "camp_name": "阵营不明",
                 "camp_channel": "926",
                 "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/129796/fb8e50f12b6c4623b6b65d9edffd76dd_512658389550731406.png",
@@ -88,6 +102,20 @@
                 "camp_kv": ""
             },
             {
+                "camp_name": "Mockingbird",
+                "camp_channel": "1149",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/154604/30ec8a80943918347736947cce8642be_6345936522683940323.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/154604/ebe000d132344f7117673fce19474ac8_4592360850253024598.png",
+                "camp_kv": ""
+            },
+            {
+                "camp_name": "Defense Force - Silver Squad",
+                "camp_channel": "1146",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/154526/690ccddf1a97e4fae0a9fbc0ea1d3090_4390618834066488608.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/154526/e60ebb3da6cd8adc2efb77bb4e3e1435_7894100540886120750.png",
+                "camp_kv": ""
+            },
+            {
                 "camp_name": "Faction Unknown",
                 "camp_channel": "926",
                 "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/129796/fb8e50f12b6c4623b6b65d9edffd76dd_512658389550731406.png",
@@ -154,6 +182,14 @@
             "id": "Stars of Lyra",
             "name": "天琴座"
         },
+        "Mockingbird": {
+            "id": "Mockingbird",
+            "name": "反舌鸟"
+        },
+        "DefenseForce-SilverSquad": {
+            "id": "Defense Force - Silver Squad",
+            "name": "防卫军·白银小队"
+        },
         "FactionUnknown": {
             "id": "Faction Unknown",
             "name": "阵营不明"
@@ -186,6 +222,22 @@
     "CHAR": [
         [
             {
+                "char_name": "雨果",
+                "char_color": "#667ad9",
+                "char_line": "「亲爱的朋友，我必如雪崩再来。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/f187608aaeac692b4c6202aea992df20_3648921785296803268.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/931ae0d821ace45a375a4332bf3e038e_8061430778645257430.png",
+                "char_chan_id": "1149"
+            },
+            {
+                "char_name": "薇薇安",
+                "char_color": "#cdbcf3",
+                "char_line": "「不要关上窗，飞鸟会衔来爱意，衔走死亡。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/6aa9864333ed958f50eccfa0bd2f1e3a_5371935286784919823.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/f6b7a0a29487f8153da57fe124f048a9_4437497753091967697.png",
+                "char_chan_id": "1149"
+            },
+            {
                 "char_name": "扳机",
                 "char_color": "#e3b348",
                 "char_line": "「我，看到你了。」",
@@ -202,12 +254,12 @@
                 "char_chan_id": "889"
             },
             {
-                "char_name": "银心锡兵·安比",
+                "char_name": "零号·安比",
                 "char_color": "#ffc34e",
                 "char_line": "「大战前重新整装待发。嗯，是很经典的电影桥段。」",
-                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/8e0e1cba626d231144ae0d377b8d767b_8175356330687894494.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/d2a1cab6e7b61c7120da7c3c82f7a123_8903133836681961016.png",
-                "char_chan_id": "926"
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/b0b79acc2242d0a05c338ea187b95ab5_8269376756759669834.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/d173d2ea2b2304b6a907ea74022df992_6892899806043106478.png",
+                "char_chan_id": "1146"
             },
             {
                 "char_name": "伊芙琳·舒瓦利耶",
@@ -436,6 +488,22 @@
         ],
         [
             {
+                "char_name": "Hugo",
+                "char_color": "#667ad9",
+                "char_line": "\"My dear friend, I'll be back, like an avalanche.\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/f187608aaeac692b4c6202aea992df20_3648921785296803268.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/931ae0d821ace45a375a4332bf3e038e_8061430778645257430.png",
+                "char_chan_id": "1149"
+            },
+            {
+                "char_name": "Vivian",
+                "char_color": "#cdbcf3",
+                "char_line": "\"Do not close the window, for the birds will bring love and carry away death.\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/6aa9864333ed958f50eccfa0bd2f1e3a_5371935286784919823.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/f6b7a0a29487f8153da57fe124f048a9_4437497753091967697.png",
+                "char_chan_id": "1149"
+            },
+            {
                 "char_name": "Trigger",
                 "char_color": "#e3b348",
                 "char_line": "\"I see you.\"",
@@ -452,12 +520,12 @@
                 "char_chan_id": "889"
             },
             {
-                "char_name": "Silver Soldier - Anby",
+                "char_name": "Soldier 0 - Anby",
                 "char_color": "#ffc34e",
                 "char_line": "\"Suiting up before the big battle. Hmm, a classic movie trope.\"",
-                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/8e0e1cba626d231144ae0d377b8d767b_8175356330687894494.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/d2a1cab6e7b61c7120da7c3c82f7a123_8903133836681961016.png",
-                "char_chan_id": "926"
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/b0b79acc2242d0a05c338ea187b95ab5_8269376756759669834.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/d173d2ea2b2304b6a907ea74022df992_6892899806043106478.png",
+                "char_chan_id": "1146"
             },
             {
                 "char_name": "Evelyn Chevalier",
@@ -686,6 +754,30 @@
         ]
     ],
     "JS_CHAR": {
+        "hugo": {
+            "key": "Hugo",
+            "id": "hugo",
+            "name": "雨果",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「亲爱的朋友，我必如雪崩再来。」",
+            "camp": "Mockingbird",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "vivian": {
+            "key": "Vivian",
+            "id": "vivian",
+            "name": "薇薇安",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「不要关上窗，飞鸟会衔来爱意，衔走死亡。」",
+            "camp": "Mockingbird",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
         "trigger": {
             "key": "Trigger",
             "id": "trigger",
@@ -710,15 +802,15 @@
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
         },
-        "silver_soldier_anby": {
-            "key": "Silver Soldier - Anby",
-            "id": "silver_soldier_anby",
-            "name": "银心锡兵·安比",
+        "soldier_0_anby": {
+            "key": "Soldier 0 - Anby",
+            "id": "soldier_0_anby",
+            "name": "零号·安比",
             "prefix": "",
             "star": 5,
             "event_exclusive": true,
             "intro": "「大战前重新整装待发。嗯，是很经典的电影桥段。」",
-            "camp": "FactionUnknown",
+            "camp": "DefenseForce-SilverSquad",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
         },
