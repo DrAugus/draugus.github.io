@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "机场评测",
+            "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
+            "link": "/trip/airport",
+            "date": "2024-05-27"
+        },
+        {
             "title": "航线",
             "desc": "飞行行程 import Flights from '../.vitepress/component",
             "link": "/trip/flights",
@@ -114,12 +120,6 @@
             "desc": "最近更新 import ACardLinks from './.vitepress/compone",
             "link": "/recent",
             "date": "2024-06-14"
-        },
-        {
-            "title": "境外银行卡办理指南",
-            "desc": "境外银行卡办理指南 境内卡参考这篇 储蓄卡/借记卡 汇丰 HK 汇丰 ONE 去当地开户即可，需要",
-            "link": "/trip/card",
-            "date": "2025-01-14"
         }
     ]
 }
