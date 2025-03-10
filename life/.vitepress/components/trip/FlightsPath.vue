@@ -7,14 +7,14 @@
 import { onMounted, onUnmounted, ref } from "vue";
 import { mapAirportsByAbbrZH } from '../../data/trip/airports';
 import { FLIGHT_DATA } from '../../data/trip/flight';
-import { Point } from "../../type";
+import { Airport, Point } from "../../type";
 
 
 interface Edge {
-    fromName: string,
-    toName: string,
-    coords: number[][],
+    depAirport: Airport,
+    arrAirport: Airport,
     date: Date,
+    distance: number,
 }
 
 interface infoMark {
@@ -24,9 +24,10 @@ interface infoMark {
 }
 
 let arrInfo: infoMark[] = []
-let countAirport = new Map();
 let yearFlight: Map<number, number> = new Map();
-const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
+let newData = FLIGHT_DATA.slice(0)
+// newData = newData.filter(item => item.departure.airport === '杭州萧山' && item.arrival.airport === '桂林两江')
+const myEdge: Edge[] = newData.reduce((res: Edge[], item) => {
 
     if (!item.departure || !item.arrival) { return res; }
 
@@ -36,55 +37,91 @@ const myEdge: Edge[] = FLIGHT_DATA.reduce((res: Edge[], item) => {
     const depAirport = mapAirportsByAbbrZH[itemDepAirport];
     const arrAirport = mapAirportsByAbbrZH[itemArrAirport];
 
-    countAirport.set(itemDepAirport, (countAirport.get(itemDepAirport) || 0) + 1);
-    countAirport.set(itemArrAirport, (countAirport.get(itemArrAirport) || 0) + 1);
+    if (!depAirport || !arrAirport) { return res; }
 
-    const depCoord: number[] = [depAirport.longitude, depAirport.latitude]
-    const arrCoord: number[] = [arrAirport.longitude, arrAirport.latitude]
-
-    const year = item.date.getFullYear();
-    yearFlight.set(year, (yearFlight.get(year) || 0) + 1)
+    // const year = item.date.getFullYear();
+    // yearFlight.set(year, (yearFlight.get(year) || 0) + 1)
 
     res.push({
-        fromName: depAirport.city,
-        toName: arrAirport.city,
-        coords: [depCoord, arrCoord],
+        depAirport: depAirport,
+        arrAirport: arrAirport,
         date: item.date,
+        distance: item.distance,
     })
 
-    arrInfo.push({
-        name: arrAirport.city,
-        airport: itemArrAirport,
-        coord: arrCoord
-    })
-    arrInfo.push({
-        name: depAirport.city,
-        airport: itemDepAirport,
-        coord: depCoord
-    })
+    // arrInfo.push({
+    //     name: arrAirport.city,
+    //     airport: itemArrAirport,
+    //     coord: arrCoord
+    // })
+    // arrInfo.push({
+    //     name: depAirport.city,
+    //     airport: itemDepAirport,
+    //     coord: depCoord
+    // })
 
     return res
 }, [] as Edge[])
 
-// console.log(myEdge)
-// console.log(countAirport)
+console.log('myEdge', myEdge);
+console.log('myEdge len', myEdge.length);
 // console.log(arrInfo)
 // console.log(yearFlight)
-arrInfo.forEach((v, i) => {
-    if (v.airport) {
-        let c = countAirport.get(v.airport)
-        v.coord.push(parseInt(c) * 10)
-    }
-})
-// console.log(arrInfo)
-let newArrInfo: any[] = []
-arrInfo.forEach((v, i) => {
-    let obj = {
-        name: v.name,
-        value: v.coord
-    }
-    newArrInfo.push(obj)
-})
+
+// // console.log(arrInfo)
+// let newArrInfo: any[] = []
+// arrInfo.forEach((v, i) => {
+//     let obj = {
+//         name: v.name,
+//         value: v.coord
+//     }
+//     newArrInfo.push(obj)
+// })
+
+function calAirportCount() {
+    let countAirport = new Map();
+    FLIGHT_DATA.forEach(item => {
+        const itemDepAirport = item.departure.airport;
+        const itemArrAirport = item.arrival.airport;
+        countAirport.set(itemDepAirport, (countAirport.get(itemDepAirport) || 0) + 1);
+        countAirport.set(itemArrAirport, (countAirport.get(itemArrAirport) || 0) + 1);
+    })
+    return countAirport;
+}
+const countAirport = calAirportCount();
+
+interface AirportDA {
+    depAirport: string,
+    arrAirport: string,
+}
+
+function calFlightCount(): Map<string, number> {
+    const routeCountMap = new Map<string, number>();
+    FLIGHT_DATA.forEach(item => {
+        const routeKey: AirportDA = {
+            depAirport: item.departure.airport,
+            arrAirport: item.arrival.airport,
+        }
+        const routeKey2: AirportDA = {
+            depAirport: item.arrival.airport,
+            arrAirport: item.departure.airport,
+        }
+        const stringifyKey = JSON.stringify(routeKey);
+        const stringifyKey2 = JSON.stringify(routeKey2);
+
+        if (routeCountMap.has(stringifyKey)) {
+            routeCountMap.set(stringifyKey, (routeCountMap.get(stringifyKey) || 0) + 1);
+        } else if (routeCountMap.has(stringifyKey2)) {
+            routeCountMap.set(stringifyKey2, (routeCountMap.get(stringifyKey2) || 0) + 1);
+        } else {
+            routeCountMap.set(stringifyKey, 1);
+        }
+    })
+    return routeCountMap;
+}
+let mapCountFlight = calFlightCount();
+// console.log(mapCountFlight);
+
 
 let color = [
     '#a6c84c',
@@ -160,147 +197,6 @@ function point2arr(point: Point): number[] {
     return [point.x, point.y]
 }
 
-// 计算AB两点构成的圆弧(短弧)是否为顺时针方向
-function isShortArcClockwise(pointA: Point, pointB: Point) {
-    // 计算向量 AB
-    const vectorAB = {
-        x: pointB.x - pointA.x,
-        y: pointB.y - pointA.y
-    };
-
-    // 计算 AB 的中点 M
-    const midPointM = {
-        x: (pointA.x + pointB.x) / 2,
-        y: (pointA.y + pointB.y) / 2
-    };
-
-    // 垂直于 AB 的单位向量
-    const perpendicularVector = {
-        x: -vectorAB.y,
-        y: vectorAB.x
-    };
-    const length = Math.sqrt(perpendicularVector.x * perpendicularVector.x + perpendicularVector.y * perpendicularVector.y);
-    const unitPerpendicularVector = {
-        x: perpendicularVector.x / length,
-        y: perpendicularVector.y / length
-    };
-
-    // 微小偏移量
-    const offset = 0.001;
-
-    // 得到两个候选点 P1 和 P2
-    const candidatePoint1 = {
-        x: midPointM.x + offset * unitPerpendicularVector.x,
-        y: midPointM.y + offset * unitPerpendicularVector.y
-    };
-    const candidatePoint2 = {
-        x: midPointM.x - offset * unitPerpendicularVector.x,
-        y: midPointM.y - offset * unitPerpendicularVector.y
-    };
-
-    // 计算点 A、B 到候选点的距离
-    const distA1 = Math.sqrt(Math.pow(pointA.x - candidatePoint1.x, 2) + Math.pow(pointA.y - candidatePoint1.y, 2));
-    const distB1 = Math.sqrt(Math.pow(pointB.x - candidatePoint1.x, 2) + Math.pow(pointB.y - candidatePoint1.y, 2));
-    const distA2 = Math.sqrt(Math.pow(pointA.x - candidatePoint2.x, 2) + Math.pow(pointA.y - candidatePoint2.y, 2));
-    const distB2 = Math.sqrt(Math.pow(pointB.x - candidatePoint2.x, 2) + Math.pow(pointB.y - candidatePoint2.y, 2));
-
-    // 选择更合适的候选点作为圆心
-    let center;
-    if (Math.abs(distA1 - distB1) < Math.abs(distA2 - distB2)) {
-        center = candidatePoint1;
-    } else {
-        center = candidatePoint2;
-    }
-
-    // 计算从圆心到点 A 和点 B 的向量
-    const vectorOA = {
-        x: pointA.x - center.x,
-        y: pointA.y - center.y
-    };
-    const vectorOB = {
-        x: pointB.x - center.x,
-        y: pointB.y - center.y
-    };
-
-    // 计算向量叉积
-    const crossProduct = vectorOA.x * vectorOB.y - vectorOA.y * vectorOB.x;
-
-    // 根据叉积的正负判断方向
-    return crossProduct < 0;
-}
-
-function calculateCenterPoint(pointA: Point, pointB: Point) {
-    const isClockwise = isShortArcClockwise(pointA, pointB);
-
-    // 计算线段 AB 的中点 D 的坐标
-    const midpointD = {
-        x: (pointA.x + pointB.x) / 2,
-        y: (pointA.y + pointB.y) / 2
-    };
-
-    // 计算线段 AB 的长度
-    const lengthAB = Math.sqrt(Math.pow(pointB.x - pointA.x, 2) + Math.pow(pointB.y - pointA.y, 2));
-
-    // 计算线段 CD 的长度
-    const lengthCD = lengthAB / 6;
-
-    // 计算线段 AB 的斜率
-    let slopeAB;
-    if (pointB.x - pointA.x === 0) {
-        // 处理线段 AB 垂直于 x 轴的情况
-        slopeAB = Infinity;
-    } else {
-        slopeAB = (pointB.y - pointA.y) / (pointB.x - pointA.x);
-    }
-
-    // 计算线段 AB 垂直平分线的斜率
-    let slopePerpendicular;
-    if (slopeAB === Infinity) {
-        slopePerpendicular = 0;
-    } else if (slopeAB === 0) {
-        slopePerpendicular = Infinity;
-    } else {
-        slopePerpendicular = -1 / slopeAB;
-    }
-
-    // 计算垂直平分线与 x 轴正方向的夹角
-    let angle;
-    if (slopePerpendicular === Infinity) {
-        angle = Math.PI / 2;
-    } else {
-        angle = Math.atan(slopePerpendicular);
-    }
-
-    // 根据圆弧方向确定点 C 的位置
-    let sign = isClockwise ? -1 : 1;
-    const pointC = {
-        x: midpointD.x + sign * lengthCD * Math.cos(angle),
-        y: midpointD.y + sign * lengthCD * Math.sin(angle)
-    };
-
-    // 设圆心 O 的坐标为 (x, y)
-    // 根据圆心到点 A 和点 C 的距离相等，即 (x - xA)^2 + (y - yA)^2 = (x - xC)^2 + (y - yC)^2
-    // 展开可得：x^2 - 2xA*x + xA^2 + y^2 - 2yA*y + yA^2 = x^2 - 2xC*x + xC^2 + y^2 - 2yC*y + yC^2
-    // 化简得：2(xC - xA)x + 2(yC - yA)y = xC^2 - xA^2 + yC^2 - yA^2
-
-    const A = 2 * (pointC.x - pointA.x);
-    const B = 2 * (pointC.y - pointA.y);
-    const C = Math.pow(pointC.x, 2) - Math.pow(pointA.x, 2) + Math.pow(pointC.y, 2) - Math.pow(pointA.y, 2);
-
-    // 再结合垂直平分线方程 y - yD = slopePerpendicular * (x - xD)，即 y = slopePerpendicular * (x - xD) + yD
-    // 代入上式求解 x
-    let x, y;
-    if (slopePerpendicular === Infinity) {
-        x = midpointD.x;
-        y = (C - A * x) / B;
-    } else {
-        x = (C - B * (midpointD.y - slopePerpendicular * midpointD.x)) / (A + B * slopePerpendicular);
-        y = slopePerpendicular * (x - midpointD.x) + midpointD.y;
-    }
-    let res: Point = { x, y };
-    return res;
-}
-
 // 地球半径，单位：米
 const EARTH_RADIUS = 6378137;
 
@@ -318,10 +214,137 @@ function mercatorProjection(lon: number, lat: number) {
     return { x, y } as Point;
 }
 
-// const pointA = { x: 0, y: 0 };
-// const pointB = { x: 6, y: 0 };
-// const centerPoint = calculateCenterPoint(pointA, pointB);
-// console.log(`圆心 O 的坐标为: (${centerPoint.x}, ${centerPoint.y})`);
+// 计算二维平面上两点间的距离
+function calculateDistance(pointA: Point, pointB: Point): number {
+    const dx = pointB.x - pointA.x;
+    const dy = pointB.y - pointA.y;
+    return Math.sqrt(dx * dx + dy * dy);
+}
+
+// 判断从点A到点B是顺时针还是逆时针方向
+function isClockwise(A: Point, B: Point): boolean {
+    const crossProduct = A.x * B.y - A.y * B.x;
+    return crossProduct < 0;
+}
+
+// 计算两点间的中点
+function getMidpoint(A: Point, B: Point): Point {
+    return {
+        x: (A.x + B.x) / 2,
+        y: (A.y + B.y) / 2
+    };
+}
+
+// 计算线段 AB 的垂直平分线上距离 AB 线段 offset 长度的两个点
+function getPerpendicularPoints(A: Point, B: Point, offset: number): Point {
+    console.log('getPerpendicularPoints', A, B, offset);
+    // 先计算中点
+    const midpoint = getMidpoint(A, B);
+
+    // 计算线段 AB 的斜率
+    const dx = B.x - A.x;
+    const dy = B.y - A.y;
+    const slopeAB = dy / dx;
+
+    // 计算垂直平分线的斜率
+    let slopePerpendicular: number;
+    if (slopeAB === 0) {
+        // 当 AB 线段水平时，垂直平分线垂直于 x 轴
+        slopePerpendicular = Infinity;
+    } else if (!isFinite(slopeAB)) {
+        // 当 AB 线段垂直时，垂直平分线平行于 x 轴
+        slopePerpendicular = 0;
+    } else {
+        slopePerpendicular = -1 / slopeAB;
+    }
+
+    // 计算垂直平分线上距离 AB 线段 offset 长度的两个点
+    let point1: Point;
+    let point2: Point;
+    if (slopePerpendicular === Infinity) {
+        // 垂直平分线垂直于 x 轴
+        point1 = { x: midpoint.x, y: midpoint.y + offset };
+        // point2 = { x: midpoint.x, y: midpoint.y - offset };
+    } else if (slopePerpendicular === 0) {
+        // 垂直平分线平行于 x 轴
+        point1 = { x: midpoint.x + offset, y: midpoint.y };
+        // point2 = { x: midpoint.x - offset, y: midpoint.y };
+    } else {
+        // 一般情况
+        const angle = Math.atan(slopePerpendicular);
+        point1 = {
+            x: midpoint.x + offset * Math.cos(angle),
+            y: midpoint.y + offset * Math.sin(angle)
+        };
+        // point2 = {
+        //     x: midpoint.x - offset * Math.cos(angle),
+        //     y: midpoint.y - offset * Math.sin(angle)
+        // };
+    }
+
+    return point1;
+}
+
+const OFFSET = 1
+// 每次遍历 map -1，仅在循环中调用此函数
+function calControlPoint(edge: Edge) {
+    let pointA = {
+        x: edge.depAirport.longitude,
+        y: edge.depAirport.latitude,
+    }
+    let pointB = {
+        x: edge.arrAirport.longitude,
+        y: edge.arrAirport.latitude,
+    }
+
+    const flight1: AirportDA = { depAirport: edge.depAirport.abbrZH, arrAirport: edge.arrAirport.abbrZH };
+    const flight2: AirportDA = { depAirport: edge.arrAirport.abbrZH, arrAirport: edge.depAirport.abbrZH };
+
+    const flight1stringify = JSON.stringify(flight1);
+    const flight2stringify = JSON.stringify(flight2);
+
+    // 每次遍历 -1
+    const count1 = mapCountFlight.get(flight1stringify);
+    const count2 = mapCountFlight.get(flight2stringify);
+    if (count1) {
+        mapCountFlight.set(flight1stringify, count1 - 1);
+    }
+    if (count2) {
+        mapCountFlight.set(flight2stringify, count2 - 1);
+    }
+
+    let multi = OFFSET;
+    const count = count1 || count2;
+    if (count === undefined) {
+        multi = OFFSET;
+    } else {
+        // 偶数为负
+        multi = (count % 2) ? count / 2 * OFFSET : - count / 2 * OFFSET;
+    }
+
+    let ret = getPerpendicularPoints(pointA, pointB, edge.distance / 500 * multi);
+    console.log(ret)
+
+    let res = point2arr(ret)
+
+    return res;
+}
+
+function calCircleMarkerRadius(count: number) {
+    let ret = 0;
+    if (count < 5) {
+        ret = 3;
+    } else if (count < 10) {
+        ret = 5;
+    } else if (count < 20) {
+        ret = 8;
+    } else if (count < 50) {
+        ret = 10;
+    } else {
+        ret = 12;
+    }
+    return ret;
+}
 
 onMounted(async () => {
     // 检查 window 对象是否存在  
@@ -349,7 +372,6 @@ onMounted(async () => {
                         mapStyle: 'amap://styles/fresh',
                     });
 
-
                     // generateCurvePath();
                     // // 创建航线飞线
                     // polyline = new AMap.Polyline({
@@ -370,48 +392,73 @@ onMounted(async () => {
                     // startAnimation();
 
                     myEdge.forEach(path => {
-                        // 使用AMap.Polyline绘制航线
-                        new AMap.Polyline({
-                            path: path.coords, // 设置航线起点和终点
-                            strokeColor: "#FF33FF", // 航线颜色
-                            strokeOpacity: 1,
-                            strokeWeight: 2,
-                            strokeStyle: "solid",
-                            map: map, // 将航线添加到地图上
-                            lineCap: 'round', // 线端点样式
-                            lineJoin: 'round', // 线拐点样式
-                        });
 
-                        // let depCoord = path.coords[0];
-                        // let arrCoord = path.coords[1];
-                        // let center = calculateCenterPoint(
-                        //     mercatorProjection(depCoord[0], depCoord[1]),
-                        //     mercatorProjection(arrCoord[0], arrCoord[1]),
-                        // );
-                        // let centerCoord = point2arr(center);
-                        // console.log(centerCoord);
-
-                        // var bezierCurve = new AMap.BezierCurve({
-                        //     path: [depCoord, centerCoord, arrCoord],
-                        //     isOutline: true,
-                        //     outlineColor: '#ffeeff',
-                        //     borderWeight: 3,
-                        //     strokeColor: "#3366FF",
+                        // // 使用AMap.Polyline绘制航线
+                        // new AMap.Polyline({
+                        //     path: path.coords, // 设置航线起点和终点
+                        //     strokeColor: "#FF33FF", // 航线颜色
                         //     strokeOpacity: 1,
-                        //     strokeWeight: 6,
-                        //     // 线样式还支持 'dashed'
+                        //     strokeWeight: 2,
                         //     strokeStyle: "solid",
-                        //     // strokeStyle是dashed时有效
-                        //     strokeDasharray: [10, 10],
-                        //     lineJoin: 'round',
-                        //     lineCap: 'round',
-                        //     zIndex: 50,
-                        // })
+                        //     map: map, // 将航线添加到地图上
+                        //     lineCap: 'round', // 线端点样式
+                        //     lineJoin: 'round', // 线拐点样式
+                        // });
 
-                        // map.add(bezierCurve);
+                        let depCoord = [path.depAirport.longitude, path.depAirport.latitude];
+                        let arrCoord = [path.arrAirport.longitude, path.arrAirport.latitude];
+                        let controlPoint = calControlPoint(path);
+
+                        let bezierCurve = new AMap.BezierCurve({
+                            path: [
+                                depCoord,
+                                controlPoint.concat(arrCoord)
+                            ],
+                            // isOutline: true,
+                            // outlineColor: '#ffeeff',
+                            borderWeight: 1,
+                            strokeColor: "#f08080",
+                            // showDir: true,
+                            lineCap: 'round',
+                            zIndex: 50,
+                        })
+
+                        map.add(bezierCurve);
+
+                        // //引入贝塞尔曲线编辑器插件
+                        // map.plugin(["AMap.BezierCurveEditor"], function () {
+                        //     //实例化贝塞尔曲线编辑器，传入地图实例和要进行编辑的贝塞尔曲线实例
+                        //     let bezierCurveEditor = new AMap.BezierCurveEditor(map, bezierCurve);
+                        //     //开启编辑模式
+                        //     bezierCurveEditor.open();
+                        //     //绑定 adjust 事件，调整曲线上某个点时触发此事件
+                        //     bezierCurveEditor.on("adjust", function (event) {
+                        //         console.log("触发事件：adjust");
+                        //     });
+                        // });
+
                     });
 
+                    // 圆点标记
+                    countAirport.forEach((count, airport) => {
+                        const airportObj = mapAirportsByAbbrZH[airport];
+                        //创建圆形点标记 CircleMarker 实例
+                        var circleMarker = new AMap.CircleMarker({
+                            center: [airportObj.longitude, airportObj.latitude], //圆心
+                            radius: calCircleMarkerRadius(count), //半径
+                            // strokeColor: "white", //轮廓线颜色
+                            // strokeWeight: 2, //轮廓线宽度
+                            strokeOpacity: 0, //轮廓线透明度
+                            fillColor: "#f08080", //圆点填充颜色
+                            fillOpacity: 1, //圆点填充透明度
+                            zIndex: 70, //圆点覆盖物的叠加顺序
+                            // cursor: "pointer", //鼠标悬停时的鼠标样式
+                        });
 
+                        map.add(circleMarker);
+                        // //将覆盖物调整到合适视野
+                        // map.setFitView([circleMarker]);
+                    })
                 })
                 .catch((e) => {
                     console.log(e);

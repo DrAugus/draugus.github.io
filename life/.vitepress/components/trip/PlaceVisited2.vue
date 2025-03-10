@@ -299,6 +299,7 @@ onMounted(async () => {
           let adCodes = provinceCode
           let disProvince = initPro(adCodes, 1);
 
+          // TODO 增加右下角图例解释
 
           map = new AMap.Map("container", {
             zoom: 4.5,

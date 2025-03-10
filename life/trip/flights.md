@@ -8,8 +8,8 @@ lastUpdated: false
 # 飞行行程
 
 <FlightsStatistics />
-<Flights />
 <FlightsPath />  
+<Flights />
 
 <script setup>
 import Flights from '../.vitepress/components/trip/Flights.vue';
