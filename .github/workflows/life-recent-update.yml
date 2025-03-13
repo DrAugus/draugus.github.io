@@ -22,8 +22,8 @@ on:
   #     - ".github/workflows/life-recent-update.yml"
   #     - "script/requirements.txt"
   schedule:
-    # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m.
-    - cron: "0 16 * * *"
+    # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m. Only Sunday
+    - cron: "0 16 * * 0"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -78,85 +78,30 @@ jobs:
           echo "${{steps.commit.outputs.has_changes}}"
           echo "=========="
           echo "$AUGAGU"
-      - name: Push changes
-        if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.DEPLOY_GH }}
-          # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008 
-          # head_ref / ref_name  
-          # branch: ${{ github.ref_name }}
-      # - name: Create Pull Request
-      #   if: ${{ steps.commit.outputs.has_changes == 'true' }}
-      #   uses: peter-evans/create-pull-request@v6
+      # - name: Push changes
+      #   if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
+      #   uses: ad-m/github-push-action@master
       #   with:
-      #     token: ${{ secrets.DEPLOY_GH }}
-      #     title: "docs: life latest"
-      #     commit-message: "docs: life latest"
-      #     committer: GitHub <noreply@github.com>
-      #     author: GitHub <noreply@github.com>
-      #     branch: create-pull-request/patch-life-recent-update
-      #     base: master
-      #     labels: |
-      #       report
-      #       automated pr
-      #     assignees: DrAugus
-      #     # Review cannot be requested from pull request author.
-      #     # reviewers: DrAugus
+      #     github_token: ${{ secrets.DEPLOY_GH }}
+      #     # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008 
+      #     # head_ref / ref_name  
+      #     # branch: ${{ github.ref_name }}
 
-  deploy-life:
-    needs: py-life-recent
-    strategy:
-      matrix:
-        os: [ubuntu-latest] # macos-latest, windows-latest
-        deploy-dir: [life/.vitepress/dist]
-        deploy-user: [augusmeow]
-        deploy-repo: [life, augusmeow.github.io]
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      # 改为每周 pr，直接提交无法触发其他更新，
+      - name: Create Pull Request
+        if: ${{ steps.commit.outputs.has_changes == 'true' }}
+        uses: peter-evans/create-pull-request@v6
         with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-
-      - uses: pnpm/action-setup@v4.1.0
-        name: Install pnpm
-        id: pnpm-install
-        with:
-          version: 7
-
-      - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
-
-      - name: Change config
-        run: mv ./life/.vitepress/config.ts.replace ./life/.vitepress/config.ts
-        if: ${{ matrix.deploy-repo == 'life' }}
-
-      # 运行构建脚本
-      - name: Build VitePress site
-        env:
-          NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm life:build
-
-      - name: Add google
-        run: |
-          echo "google-site-verification: googlea936c3462e7f8864.html" >> ./life/.vitepress/dist/googlea936c3462e7f8864.html
-        if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
-
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4.1.0
-        with:
-          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
-          target_branch: gh-pages
-          build_dir: ${{ matrix.deploy-dir }}
-          jekyll: false
-        env:
-          GH_PAT: ${{ secrets.DEPLOY_GH }}      
+          token: ${{ secrets.DEPLOY_GH }}
+          title: "docs: life latest"
+          commit-message: "docs: life latest"
+          committer: GitHub <noreply@github.com>
+          author: GitHub <noreply@github.com>
+          branch: create-pull-request/patch-life-recent-update
+          base: master
+          labels: |
+            report
+            automated pr
+          assignees: DrAugus
+          # Review cannot be requested from pull request author.
+          # reviewers: DrAugus

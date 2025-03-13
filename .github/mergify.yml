@@ -59,15 +59,20 @@ pull_request_rules:
       merge:
         method: merge
 
-  # - name: automatic merge for python script latest life
-  #   conditions:
-  #     - author=DrAugus
-  #     - "title=docs: life latest"
-  #     - -check-failure~=^deploy-
-  #     - -check-failure~=^py-
-  #   actions:
-  #     merge:
-  #       method: merge
+  - name: automatic merge for python script latest life
+    conditions:
+      - author=DrAugus
+      - "title=docs: life latest"
+      # deploy life
+      - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+      - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+      - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+      - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+    actions:
+      merge:
+        method: merge
 
   # - name: automatic merge for auto get mhy wish
   #   conditions:
