@@ -60,12 +60,17 @@ onMounted(async () => {
                         // 设置鼠标划过点标记显示的文字提示
                         marker.setTitle(item.nameLocal);
 
+                        let labelContent = item.abbrZH;
+                        if (labelContent == '') {
+                            // labelContent = item.name.split(' ')[0];
+                        }
+
                         // 设置label标签
                         // label默认蓝框白底左上角显示，样式className为：amap-marker-label
                         marker.setLabel({
                             direction: 'right',
                             offset: new AMap.Pixel(5, 0),  //设置文本标注偏移量
-                            content: item.abbrZH, //设置文本标注内容
+                            content: labelContent, //设置文本标注内容
                         });
                     })
 
