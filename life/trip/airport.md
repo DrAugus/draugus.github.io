@@ -14,6 +14,12 @@
 
 ## 机场列表
 
+<AirportAMap />
+
+<script setup>
+import AirportAMap from '../.vitepress/components/trip/AirportAMap.vue';
+</script>
+
 ### 杭州萧山国际机场
 
 :::tip 公共交通时间计算
