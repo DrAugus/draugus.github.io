@@ -19,68 +19,86 @@
             <div class="flight-statistics-abstract">
                 <div class="top-row">
                     <div class="box flex-row">
-                        <span class="align-left">
-                            <span class="font-12 font-grey">大洲</span> <br>
-                            <span class="font-24">1</span>
-                        </span>
-                        <div class="align-right">
-                            <br>
-                            <div class="circle-list">
-                                <span class="circle font-12">亚洲 </span>
+                        <div class="box-top">
+                            <span class="font-12 font-grey">大洲</span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">1</span>
+                            </span>
+                            <div class="align-right">
+                                <div class="circle-list">
+                                    <span class="circle font-12">亚洲 </span>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                     <div class="box flex-row">
-                        <span class="align-left">
+                        <div class="box-top">
                             <span class="font-12 font-grey">国家/地区</span>
-                            <br>
-                            <span class="font-24">{{ flightRegion.length }}</span>
-                        </span>
-                        <div class="align-right">
-                            <br>
-                            <div class="circle-list">
-                                <span class="icon" v-for="(v, i) in flightRegion.slice(0, 2)">
-                                    <div v-html="getRegionFlag(v[TimesInfo.Text])"></div>
-                                </span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ flightRegion.length }}</span>
+                            </span>
+                            <div class="align-right">
+                                <div class="circle-list">
+                                    <span class="icon" v-for="(v, i) in flightRegion.slice(0, 2)">
+                                        <div v-html="getRegionFlag(v[TimesInfo.Text])"></div>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="box flex-row">
-                        <span class="align-left">
-                            <span class="font-12 font-grey">城市</span> <br>
-                            <span class="font-24">{{ flightCity.length }}</span>
-                        </span>
-                        <div class="align-right">
-                            <br>
-                            <div class="circle-list">
-                                <span class="circle font-12" v-for="(v, i) in flightCity.slice(0, 2)">
-                                    {{ v[TimesInfo.Text] }}
-                                </span>
+                        <div class="box-top">
+                            <span class="font-12 font-grey">城市</span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ flightCity.length }}</span>
+                            </span>
+                            <div class="align-right">
+                                <div class="circle-list">
+                                    <span class="circle font-12" v-for="(v, i) in flightCity.slice(0, 2)">
+                                        {{ v[TimesInfo.Text] }}
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-row">
                     <div class="box flex-row">
-                        <span class="align-left">
-                            <span class="font-12 font-grey">机场</span>
-                            <br>
-                            <span class="font-24">{{ flightAirport.length }}</span>
-                        </span>
-                        <span class="align-right">
-                            <span class="font-10 align-right label1"> 去过最多</span> <br>
-                            <span class="font-12">{{ flightAirport[0][TimesInfo.Text] }}</span>
-                        </span>
+                        <div class="box-top">
+                            <span class="align-left">
+                                <span class="font-12 font-grey">机场</span> </span>
+                            <span class="align-right"> <span class="font-10 align-right label1"> 去过最多</span> </span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ flightAirport.length }}</span>
+                            </span>
+                            <span class="align-right">
+                                <span class="font-12">{{ flightAirport[0][TimesInfo.Text] }}</span>
+                            </span>
+                        </div>
                     </div>
                     <div class="box flex-row">
-                        <span class="align-left">
-                            <span class="font-12 font-grey">航线</span> <br>
-                            <span class="font-24">{{ flightAirline.length }}</span>
-                        </span>
-                        <span class="align-right">
-                            <span class="font-10 align-right label2"> 飞行最多</span> <br>
-                            <span class="font-12">{{ flightAirline[0][TimesInfo.Text] }}</span>
-                        </span>
+                        <div class="box-top">
+                            <span class="align-left">
+                                <span class="font-12 font-grey">航线</span> </span>
+                            <span class="align-right"> <span class="font-10 align-right label2"> 飞行最多</span> </span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ flightAirline.length }}</span>
+                            </span>
+                            <span class="align-right">
+                                <span class="font-12">{{ flightAirline[0][TimesInfo.Text] }}</span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -277,8 +295,7 @@ const totalHours = ms2HourAndMin(totalMilliseconds);
 
 .flex-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 }
 
 .top-row {
@@ -301,5 +318,17 @@ const totalHours = ms2HourAndMin(totalMilliseconds);
 
 .align-right {
     text-align: right;
+}
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+
+.box-bottom {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
 }
 </style>

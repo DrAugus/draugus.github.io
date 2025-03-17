@@ -5,8 +5,8 @@
     <div class="flight-item">
 
         <div class="flight-date">
-            <span>2025年</span><br>
-            <span>12月25日</span>
+            <span>{{ `${flight.date.getFullYear()}年` }}</span><br>
+            <span>{{ `${flight.date.getMonth() + 1}月${flight.date.getDate()}日` }}</span>
         </div>
 
         <div class="flight-tag" @click="emitShowDetails">

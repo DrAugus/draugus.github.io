@@ -1449,5 +1449,59 @@ export const FLIGHT_DATA: Flight[] = [
             terminal: 1,
         },
         price: null
+    }, {
+        date: new Date('2025-03-14'),
+        number: 'CZ3512',
+        airplane: {
+            model: '波音737 MAX 8',
+            number: 'B205L'
+        },
+        airlineCode: 'CZ',
+        seatClass: 'X',
+        distance: 1099,
+        departure: {
+            plannedTime: new Date('2025-03-14T16:35:00+08:00'),
+            actualTime: new Date('2025-03-14T17:59:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 4,
+        },
+        arrival: {
+            plannedTime: new Date('2025-03-14T19:00:00+08:00'),
+            actualTime: new Date('2025-03-14T19:50:00+08:00'),
+            airport: "广州白云",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 0,
+            airportConstructionFee: 50,
+            fuelSurcharge: 40,
+        }
+    }, {
+        date: new Date('2025-03-16'),
+        number: 'MU5216',
+        airplane: {
+            model: '空客321-211(SL)',
+            number: 'B8570'
+        },
+        airlineCode: 'MU',
+        seatClass: 'X',
+        distance: 1099,
+        departure: {
+            plannedTime: new Date('2025-03-16T18:00:00+08:00'),
+            actualTime: new Date('2025-03-16T18:17:00+08:00'),
+            airport: "广州白云",
+            terminal: 1,
+        },
+        arrival: {
+            plannedTime: new Date('2025-03-16T19:55:00+08:00'),
+            actualTime: new Date('2025-03-16T19:59:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 0,
+            airportConstructionFee: 50,
+            fuelSurcharge: 40,
+        }
     },
 ];

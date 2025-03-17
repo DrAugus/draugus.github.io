@@ -361,8 +361,8 @@ onMounted(async () => {
             })
                 .then((AMap) => {
                     map = new AMap.Map("container", {
-                        zoom: 4.5,
-                        center: [109.610747, 35.15261],
+                        zoom: 5,
+                        center: [120, 30],
                         viewMode: '3D',
                         // pitch: 60,
                         // showIndoorMap: false,
