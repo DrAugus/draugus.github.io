@@ -18,7 +18,8 @@
         <div class="flight-statistics-item">
             <div class="flight-statistics-abstract">
                 <div class="top-row">
-                    <div class="box flex-row">
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.region)">
                         <div class="box-top">
                             <span class="font-12 font-grey">大洲</span>
                         </div>
@@ -32,36 +33,37 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="box flex-row">
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.region)">
                         <div class="box-top">
                             <span class="font-12 font-grey">国家/地区</span>
                         </div>
                         <div class="box-bottom">
                             <span class="align-left">
-                                <span class="font-24">{{ flightRegion.length }}</span>
+                                <span class="font-24">{{ arrFlightRegion.length }}</span>
                             </span>
                             <div class="align-right">
                                 <div class="circle-list">
-                                    <span class="icon" v-for="(v, i) in flightRegion.slice(0, 2)">
+                                    <span class="icon" v-for="(v, i) in arrFlightRegion.slice(0, 2)">
                                         <div v-html="getRegionFlag(v[TimesInfo.Text])"></div>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="box flex-row">
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.city)">
                         <div class="box-top">
                             <span class="font-12 font-grey">城市</span>
                         </div>
                         <div class="box-bottom">
                             <span class="align-left">
-                                <span class="font-24">{{ flightCity.length }}</span>
+                                <span class="font-24">{{ arrFlightCity.length }}</span>
                             </span>
                             <div class="align-right">
                                 <div class="circle-list">
-                                    <span class="circle font-12" v-for="(v, i) in flightCity.slice(0, 2)">
+                                    <span class="circle font-12" v-for="(v, i) in arrFlightCity.slice(0, 2)">
                                         {{ v[TimesInfo.Text] }}
                                     </span>
                                 </div>
@@ -70,7 +72,8 @@
                     </div>
                 </div>
                 <div class="bottom-row">
-                    <div class="box flex-row">
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.airport)">
                         <div class="box-top">
                             <span class="align-left">
                                 <span class="font-12 font-grey">机场</span> </span>
@@ -78,14 +81,15 @@
                         </div>
                         <div class="box-bottom">
                             <span class="align-left">
-                                <span class="font-24">{{ flightAirport.length }}</span>
+                                <span class="font-24">{{ arrFlightAirport.length }}</span>
                             </span>
                             <span class="align-right">
-                                <span class="font-12">{{ flightAirport[0][TimesInfo.Text] }}</span>
+                                <span class="font-12">{{ arrFlightAirport[0][TimesInfo.Text] }}</span>
                             </span>
                         </div>
                     </div>
-                    <div class="box flex-row">
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.route)">
                         <div class="box-top">
                             <span class="align-left">
                                 <span class="font-12 font-grey">航线</span> </span>
@@ -93,35 +97,122 @@
                         </div>
                         <div class="box-bottom">
                             <span class="align-left">
-                                <span class="font-24">{{ flightAirline.length }}</span>
+                                <span class="font-24">{{ arrFlightRoute.length }}</span>
                             </span>
                             <span class="align-right">
-                                <span class="font-12">{{ flightAirline[0][TimesInfo.Text] }}</span>
+                                <span class="font-12">{{ arrFlightRoute[0][TimesInfo.Text] }}</span>
                             </span>
                         </div>
                     </div>
+
+                </div>
+                <div class="bottom-row">
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.airline)">
+                        <div class="box-top">
+                            <span class="align-left">
+                                <span class="font-12 font-grey">航司</span> </span>
+                            <span class="align-right"> <span class="font-10 align-right label1"> 航司排行</span> </span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ arrFlightAirline.length }}</span>
+                            </span>
+                            <span class="align-right">
+                                <span class="font-12">{{ arrFlightAirline[0][TimesInfo.Text] }}</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.planeModel)">
+                        <div class="box-top">
+                            <span class="align-left">
+                                <span class="font-12 font-grey">机型</span> </span>
+                            <span class="align-right"> <span class="font-10 align-right label2"> 机型排行</span> </span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ arrFlightAirplaneModel.length }}</span>
+                            </span>
+                            <span class="align-right">
+                                <span class="font-12">{{ arrFlightAirplaneModel[0][TimesInfo.Text] }}</span>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
     </div>
 
+
+    <FlightsRank v-for="(isVisible, key) in visibleFlightRank" :key="key" :is-visible="isVisible" :rank="findRank(key)"
+        @close="handleCloseRank(key)" />
+
+
 </template>
 
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import { mapFlagsByName } from '../../data/flags';
 import { mapAirportsByAbbrZH } from '../../data/trip/airports';
 import { FLIGHT_DATA } from '../../data/trip/flight';
-import { Flight } from '../../type';
+import { CalTimes, Flight, FlightRank } from '../../type';
+import { getAirlineZhAbbrByIata } from '../../data/trip/airlines';
+import FlightsRank from './FlightsRank.vue';
 
 enum TimesInfo {
     Text = 0,
     Times,
 }
 
+const rankKeys = {
+    region: '洲与国家/地区',
+    city: '城市',
+    airport: '机场',
+    route: '航线',
+    airline: '航司',
+    planeModel: '机型',
+}
+
 const totalFlights = FLIGHT_DATA.length;
 const sortedFlightData = FLIGHT_DATA.sort((a, b) => b.date.getTime() - a.date.getTime());
+
+
+const visibleFlightRank = ref<Record<string, boolean>>({});
+
+const handleShowRank = (key: string) => {
+    visibleFlightRank.value[key] = true;
+};
+
+const handleCloseRank = (key: string) => {
+    visibleFlightRank.value[key] = false;
+};
+
+const emit = defineEmits<{
+    (e: 'show-rank', key: string): void;
+}>();
+
+const emitShowRank = (key: string) => {
+    emit('show-rank', key);
+    // console.log("emit------", key);
+    handleShowRank(key);
+};
+
+// change [string, number][] to CalTimes[]
+function timesArrModified(timesInfo: [any, any][]): CalTimes[] {
+    let ret: CalTimes[] = [];
+    timesInfo.forEach(item => {
+        let obj: CalTimes = {
+            text: item[TimesInfo.Text],
+            times: item[TimesInfo.Times],
+        };
+        ret.push(obj);
+    })
+    return ret;
+}
 
 function getFlightAirport() {
     let airport = new Map();
@@ -135,34 +226,37 @@ function getFlightAirport() {
     let arrAirport = Array.from(airport).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrAirport;
 }
-const flightAirport = getFlightAirport();
-// console.log(flightAirport)
+const arrFlightAirport = getFlightAirport();
+// console.log(arrFlightAirport)
 
 function getFlightCity() {
     let cities = new Map();
-    for (let airportTimes of flightAirport) {
-        let airport = airportTimes[0];
+    for (let airportTimes of arrFlightAirport) {
+        let airport = airportTimes[TimesInfo.Text];
+        let times = airportTimes[TimesInfo.Times];
         let city = mapAirportsByAbbrZH[airport].city;
-        cities.set(city, (cities.get(city) || 0) + 1);
+        cities.set(city, (cities.get(city) || 0) + times);
     }
     let arrCities = Array.from(cities).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrCities;
 }
-const flightCity = getFlightCity();
+const arrFlightCity = getFlightCity();
+// console.log(arrFlightCity);
 
 function getFlightRegion() {
     let regions = new Map();
-    for (let airportTimes of flightAirport) {
-        let airport = airportTimes[0];
+    for (let airportTimes of arrFlightAirport) {
+        let airport = airportTimes[TimesInfo.Text];
+        let times = airportTimes[TimesInfo.Times];
         let region = mapAirportsByAbbrZH[airport].region;
-        regions.set(region, (regions.get(region) || 0) + 1);
+        regions.set(region, (regions.get(region) || 0) + times);
     }
     let arrRegions = Array.from(regions).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrRegions;
 }
-const flightRegion = getFlightRegion();
+const arrFlightRegion = getFlightRegion();
 
-function getFlightAirline() {
+function getFlightRoute() {
     let airlines = new Map();
     for (let flight of sortedFlightData) {
         let dep = flight.departure.airport;
@@ -175,7 +269,105 @@ function getFlightAirline() {
     let arrAirlines = Array.from(airlines).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
     return arrAirlines;
 }
-const flightAirline = getFlightAirline();
+const arrFlightRoute = getFlightRoute();
+
+function getAirplaneModel() {
+    let model = new Map();
+    for (let flight of FLIGHT_DATA) {
+        let mod = flight.airplane.model;
+        let modified = mod.split('(')[0];
+
+        let key = modified;
+        model.set(key, (model.get(key) || 0) + 1);
+    }
+    let arrModel = Array.from(model).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
+    return arrModel;
+}
+const arrFlightAirplaneModel = getAirplaneModel();
+// console.log(arrFlightAirplaneModel);
+
+const modelNameZH = ['空客', '波音', '中国商飞', '其他'];
+function getAirplaneModelName() {
+    let model = new Map();
+    for (let airplaneModel of arrFlightAirplaneModel) {
+        let mod: string = airplaneModel[TimesInfo.Text];
+        let times: number = airplaneModel[TimesInfo.Times];
+        modelNameZH.forEach(nameZH => {
+            if (mod.indexOf(nameZH) !== -1) {
+                model.set(nameZH, (model.get(nameZH) || 0) + times);
+            }
+        })
+    }
+    let arrModel = Array.from(model).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
+    return arrModel;
+}
+const arrFlightAirplaneModelName = getAirplaneModelName();
+// console.log(arrFlightAirplaneModelName);
+
+function getAirline() {
+    let airline = new Map();
+    for (let flight of FLIGHT_DATA) {
+        let al = getAirlineZhAbbrByIata(flight.airlineCode);
+        let key = al;
+        airline.set(key, (airline.get(key) || 0) + 1);
+    }
+    let arrAirline = Array.from(airline).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
+    return arrAirline;
+}
+const arrFlightAirline = getAirline();
+// console.log(arrFlightAirline);
+
+const customColors = [
+    '#f56c6c',
+    '#e6a23c',
+    '#5cb87a',
+    '#1989fa',
+    '#6f7ad3',
+    '#67c23a',
+]
+
+const findRank = (key: string): FlightRank | undefined => {
+    let fr: FlightRank = {
+        title: '',
+        details: [],
+    }
+    switch (key) {
+        case rankKeys.region:
+            fr.title = '全球飞行足迹';
+            fr.details = timesArrModified(arrFlightRegion);
+            fr.progressColor = customColors[0];
+            break;
+        case rankKeys.city:
+            fr.title = '城市足迹';
+            fr.details = timesArrModified(arrFlightCity);
+            fr.progressColor = customColors[1];
+            break;
+        case rankKeys.airport:
+            fr.title = '机场排行榜';
+            fr.details = timesArrModified(arrFlightAirport);
+            fr.progressColor = customColors[2];
+            break;
+        case rankKeys.route:
+            fr.title = '航线排行榜';
+            fr.details = timesArrModified(arrFlightRoute);
+            fr.progressColor = customColors[3];
+            break;
+        case rankKeys.airline:
+            fr.title = '航司排行榜';
+            fr.details = timesArrModified(arrFlightAirline);
+            fr.progressColor = customColors[4];
+            break;
+        case rankKeys.planeModel:
+            fr.title = '机型排行榜';
+            fr.abstract = timesArrModified(arrFlightAirplaneModelName);
+            fr.details = timesArrModified(arrFlightAirplaneModel);
+            fr.progressColor = customColors[5];
+            break;
+    }
+    if (fr.title === '')
+        return undefined;
+    return fr;
+};
 
 function getRegionFlag(region: string) {
     return mapFlagsByName[region].svg;

@@ -232,6 +232,13 @@ export interface Flight {
   price: FlightTicket | null, // 票价 (null 为价格丢失)
 }
 
+export interface FlightRank {
+  title: string,
+  abstract?: CalTimes[],
+  details: CalTimes[],
+  progressColor?: string,
+}
+
 export interface Suixinfei {
   date: Date,
   departure: string,

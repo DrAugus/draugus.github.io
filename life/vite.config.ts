@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import ElementPlus from 'unplugin-element-plus/vite';
 
 // refer
 //  https://github.com/ecomfe/vue-echarts/issues/652#issuecomment-1250203941
@@ -6,6 +7,7 @@ import { defineConfig } from 'vite';
 //  https://vitejs.dev/config/ssr-options.html
 //   
 export default defineConfig({
+    plugins: [ElementPlus()],
     ssr: {
         noExternal: [
             'echarts', 'vue-echarts',

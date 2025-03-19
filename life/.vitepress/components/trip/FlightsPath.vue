@@ -63,8 +63,8 @@ const myEdge: Edge[] = newData.reduce((res: Edge[], item) => {
     return res
 }, [] as Edge[])
 
-console.log('myEdge', myEdge);
-console.log('myEdge len', myEdge.length);
+// console.log('myEdge', myEdge);
+// console.log('myEdge len', myEdge.length);
 // console.log(arrInfo)
 // console.log(yearFlight)
 
@@ -237,7 +237,7 @@ function getMidpoint(A: Point, B: Point): Point {
 
 // 计算线段 AB 的垂直平分线上距离 AB 线段 offset 长度的两个点
 function getPerpendicularPoints(A: Point, B: Point, offset: number): Point {
-    console.log('getPerpendicularPoints', A, B, offset);
+    // console.log('getPerpendicularPoints', A, B, offset);
     // 先计算中点
     const midpoint = getMidpoint(A, B);
 
@@ -323,7 +323,7 @@ function calControlPoint(edge: Edge) {
     }
 
     let ret = getPerpendicularPoints(pointA, pointB, edge.distance / 500 * multi);
-    console.log(ret)
+    // console.log(ret)
 
     let res = point2arr(ret)
 
