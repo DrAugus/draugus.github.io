@@ -7,13 +7,18 @@ import ElementPlus from 'unplugin-element-plus/vite';
 //  https://vitejs.dev/config/ssr-options.html
 //   
 export default defineConfig({
-    plugins: [ElementPlus()],
+    plugins: [
+        ElementPlus({
+            // useSource: true,
+        }),
+    ],
     ssr: {
         noExternal: [
             'echarts', 'vue-echarts',
             'resize-detector', 'zrender',
             '@amap/amap-jsapi-loader', 'AMapLoader',
-            '@kjgl77/datav-vue3'
+            '@kjgl77/datav-vue3',
+            'element-plus',
         ],
     },
     // https://vitejs.dev/config/server-options.html#server-proxy
