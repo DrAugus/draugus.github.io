@@ -112,6 +112,16 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     start: new Date('2023/10/06'),
                 },
                 intro: "高铁转车"
+            }, {
+                date: {
+                    start: new Date('2024/05/02'),
+                },
+                intro: "游玩"
+            }, {
+                date: {
+                    start: new Date('2025/02/18'),
+                },
+                intro: "游玩"
             },
         ]
     },
@@ -187,6 +197,12 @@ export const VISITED_CHINA: ExploreRecord[] = [
                             end: new Date('2024/04/18'),
                         },
                         intro: "游玩"
+                    }, {
+                        date: {
+                            start: new Date('2025/01/26'),
+                            end: new Date('2025/01/26'),
+                        },
+                        intro: "转机"
                     }
                 ]
             }
@@ -214,6 +230,12 @@ export const VISITED_CHINA: ExploreRecord[] = [
                             end: new Date('2024/04/05'),
                         },
                         intro: "飞机落地，高铁去hk"
+                    }, {
+                        date: {
+                            start: new Date('2025/03/14'),
+                            end: new Date('2025/03/16'),
+                        },
+                        intro: "办事"
                     },
                 ]
             },
@@ -252,6 +274,13 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     intro: "游玩"
                 }]
             }, {
+                id: '揭阳', info: [{
+                    date: {
+                        start: new Date('2024/04/10'),
+                    },
+                    intro: "飞机"
+                }]
+            }, {
                 id: '珠海', info: [{
                     date: {
                         start: new Date('2024/04/18'),
@@ -277,7 +306,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
         id: '广西',
         items: [
             {
-                id: '柳州', info: [{
+                id: '柳州', resident: true, info: [{
                     date: {
                         start: new Date('2023/06/30'),
                         end: new Date('2023/07/02'),
@@ -293,6 +322,32 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     date: {
                         start: new Date('2024/03/29'),
                         end: new Date('2024/03/31'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/08/17'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/11/15'),
+                        end: new Date('2024/11/17'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/12/14'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2025/01/23'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2025/02/08'),
                     },
                     intro: "游玩"
                 },]
@@ -515,6 +570,11 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         start: new Date('2023/04/22'),
                     },
                     intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2024/12/08'),
+                    },
+                    intro: "办事"
                 },]
             },
             {
@@ -535,43 +595,56 @@ export const VISITED_CHINA: ExploreRecord[] = [
         items: [
             {
                 id: '郑州',
-                info: [{
-                    date: {
-                        start: new Date('2017/02/22'),
+                info: [
+                    {
+                        date: {
+                            start: new Date('2017/02/22'),
+                        },
+                        intro: "飞机"
+                    }, {
+                        date: {
+                            start: new Date('2019/01/03'),
+                            end: new Date('2019/01/04'),
+                        },
+                        intro: "游玩"
+                    }, {
+                        date: {
+                            start: new Date('2020/10/04'),
+                        },
+                        intro: "飞机"
+                    }, {
+                        date: {
+                            start: new Date('2020/10/07'),
+                        },
+                        intro: "飞机"
+                    }, {
+                        date: {
+                            start: new Date('2022/02/12'),
+                        },
+                        intro: "飞机"
+                    }, {
+                        date: {
+                            start: new Date('2022/02/16'),
+                        },
+                        intro: "飞机"
+                    }, {
+                        date: {
+                            start: new Date('2024/01/26'),
+                        },
+                        intro: "高铁"
+                    }, {
+                        date: {
+                            start: new Date('2025/01/26'),
+                            end: new Date('2025/01/26'),
+                        },
+                        intro: "转机"
+                    }, {
+                        date: {
+                            start: new Date('2025/02/02'),
+                        },
+                        intro: "飞机"
                     },
-                    intro: "飞机"
-                }, {
-                    date: {
-                        start: new Date('2019/01/03'),
-                        end: new Date('2019/01/04'),
-                    },
-                    intro: "游玩"
-                }, {
-                    date: {
-                        start: new Date('2020/10/04'),
-                    },
-                    intro: "飞机"
-                }, {
-                    date: {
-                        start: new Date('2020/10/07'),
-                    },
-                    intro: "飞机"
-                }, {
-                    date: {
-                        start: new Date('2022/02/12'),
-                    },
-                    intro: "飞机"
-                }, {
-                    date: {
-                        start: new Date('2022/02/16'),
-                    },
-                    intro: "飞机"
-                }, {
-                    date: {
-                        start: new Date('2024/01/26'),
-                    },
-                    intro: "高铁"
-                },],
+                ],
             },
         ]
     },

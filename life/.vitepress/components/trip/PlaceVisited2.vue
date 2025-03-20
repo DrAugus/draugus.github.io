@@ -59,14 +59,14 @@ const findInGlobalCities = (name: string): GlobalCity | null => {
   return null;
 };
 
-let colorLegend = {
-  // 10: '#fde7a9',
+const colorLegend = {
+  // 2: '#fde7a9',
   3: '#f9c02f',
-  // 5: '#f5a54f',
-  5: '#f18334',
+  5: '#f5a54f',
+  8: '#f18334',
   10: '#cc5f42',
   5000: '#a94d36',
-  100000: '#792a17',
+  // 100000: '#792a17',
 };
 
 
@@ -182,6 +182,7 @@ function mapChinaCityTimes() {
     let curCityData = findInChinaCities(city);
     let number = cityInfo.times;
     if (cityInfo.resident) number += 100;
+    console.log(number)
     if (curCityData && number) {
       let adcode = Number(curCityData.adcode);
       let color = getColorByNumber(number);
@@ -245,7 +246,7 @@ onMounted(async () => {
 
           // 创建省份图层
           // var disProvince;
-          function initPro(code: number[], dep: number) {
+          function initPro(code: (string | undefined)[], dep: number) {
             let disProvince = new AMap.DistrictLayer.Province({
               zIndex: 12,
               adcode: code,
@@ -270,7 +271,7 @@ onMounted(async () => {
                 'county-stroke': 'rgba(255,255,255,0.5)' // 中国区县边界
               }
             });
-            return disProvince
+            return disProvince;
           }
           // 颜色辅助方法
           var colors = {};
@@ -302,8 +303,8 @@ onMounted(async () => {
           // TODO 增加右下角图例解释
 
           map = new AMap.Map("container", {
-            zoom: 4.5,
-            center: [109.610747, 35.15261],
+            zoom: 7,
+            center: [119.724457,30.234375], // 临安
             viewMode: '3D',
             pitch: 0,
             // showIndoorMap: false,
@@ -336,12 +337,31 @@ onUnmounted(() => {
 </script>
 
 <template>
+
+  <h3>色卡说明</h3>
+  <div class="flex" v-for="(v, i) in colorLegend">
+    <div class="box" :style="{ backgroundColor: v }"> </div>
+    <span v-if="i < 100">{{ `小于${i}次` }}</span>
+    <span v-else>常住</span>
+  </div>
+
   <div id="container"></div>
 </template>
 
 <style scoped>
 #container {
   width: 100%;
-  height: 800px;
+  height: 600px;
+}
+
+.flex {
+  display: flex;
+}
+
+.box {
+  width: 30px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 3px;
 }
 </style>

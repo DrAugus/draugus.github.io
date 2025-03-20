@@ -59,14 +59,14 @@ const findInGlobalCities = (name: string): GlobalCity | null => {
   return null;
 };
 
-let colorLegend = {
-  // 10: '#fde7a9',
+const colorLegend = {
+  // 2: '#fde7a9',
   3: '#f9c02f',
-  // 5: '#f5a54f',
-  5: '#f18334',
+  5: '#f5a54f',
+  8: '#f18334',
   10: '#cc5f42',
   5000: '#a94d36',
-  100000: '#792a17',
+  // 100000: '#792a17',
 };
 
 
@@ -256,8 +256,8 @@ onMounted(async () => {
       })
         .then((AMap) => {
           map = new AMap.Map("container", {
-            zoom: 4.5,
-            center: [109.610747, 35.15261],
+            zoom: 6,
+            center: [117.495663, 30.674264],// 池州坐标
             viewMode: '3D',
             // pitch: 60,
             // showIndoorMap: false,
@@ -302,6 +302,6 @@ onUnmounted(() => {
 <style scoped>
 #container {
   width: 100%;
-  height: 800px;
+  height: 600px;
 }
 </style>
