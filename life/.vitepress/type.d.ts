@@ -206,6 +206,18 @@ export interface Airline {
   region: string;                 // 地区
 }
 
+interface CoBrandedCardBenefit {
+  cardLevel: string;                                    // 卡等级
+  redemptionRatio: string | string[];                   // 兑换比例
+  redemptionCap: string;                                // 兑换上限
+  annualFeeReduction: string;                           // 年费减免
+}
+
+export interface MileageRedemption {
+  bank: string;                                         // 银行名称
+  coBrandedCardName: string;                            // 联名卡名字
+  coBrandedCardBenefits: CoBrandedCardBenefit[];
+}
 
 interface FlightTicket {
   ticketPrice: number,

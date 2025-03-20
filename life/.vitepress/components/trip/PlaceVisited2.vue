@@ -182,7 +182,6 @@ function mapChinaCityTimes() {
     let curCityData = findInChinaCities(city);
     let number = cityInfo.times;
     if (cityInfo.resident) number += 100;
-    console.log(number)
     if (curCityData && number) {
       let adcode = Number(curCityData.adcode);
       let color = getColorByNumber(number);
@@ -304,7 +303,7 @@ onMounted(async () => {
 
           map = new AMap.Map("container", {
             zoom: 7,
-            center: [119.724457,30.234375], // 临安
+            center: [119.724457, 30.234375], // 临安
             viewMode: '3D',
             pitch: 0,
             // showIndoorMap: false,

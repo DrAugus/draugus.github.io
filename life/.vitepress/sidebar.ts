@@ -64,6 +64,7 @@ const sidebarTrip = [
             { text: '飞机', link: '/trip/airplane' },
             { text: '随心飞', link: '/trip/suixinfei' },
             { text: '飞行行程', link: '/trip/flights' },
+            { text: '里程兑换', link: '/trip/miles-exchange' },
             { text: '机场', link: '/trip/airport' },
             { text: '火车站', link: '/trip/railway' },
             { text: '自驾游', link: '/trip/self-drive' },
