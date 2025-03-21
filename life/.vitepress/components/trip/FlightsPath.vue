@@ -391,6 +391,8 @@ onMounted(async () => {
                     // // animatePolyline(polyline, path, 1000);
                     // startAnimation();
 
+                    let tmpI = 0;
+
                     myEdge.forEach(path => {
 
                         // // 使用AMap.Polyline绘制航线
@@ -404,6 +406,7 @@ onMounted(async () => {
                         //     lineCap: 'round', // 线端点样式
                         //     lineJoin: 'round', // 线拐点样式
                         // });
+                        tmpI++;
 
                         let depCoord = [path.depAirport.longitude, path.depAirport.latitude];
                         let arrCoord = [path.arrAirport.longitude, path.arrAirport.latitude];
@@ -417,7 +420,7 @@ onMounted(async () => {
                             // isOutline: true,
                             // outlineColor: '#ffeeff',
                             borderWeight: 1,
-                            strokeColor: "#f08080",
+                            strokeColor: tmpI % 2 ? "#af0532" : "#105dc1",
                             // showDir: true,
                             lineCap: 'round',
                             zIndex: 50,

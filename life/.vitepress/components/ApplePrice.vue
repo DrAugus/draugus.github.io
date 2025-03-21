@@ -1,29 +1,4 @@
 <template>
-    <table>
-        <thead>
-            <tr>
-                <th>设备</th>
-                <th>官网</th>
-                <th>最低价</th>
-                <th>优惠幅度</th>
-                <th>购买日期</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item, i) in filterPriceData">
-                <td>
-                    <TextEllipsisHoverShow :text="item.device" :maxLen="16" />
-                </td>
-                <td v-if="Array.isArray(item.price)">
-                    <span v-for="(vv, ii) in item.price">{{ vv + ' ' }}</span>
-                </td>
-                <td v-else>{{ item.price }} </td>
-                <td>{{ item.lowest }} </td>
-                <td>{{ discount(item) }} </td>
-                <td>{{ item.purchaseDate ? modifyDate(item.purchaseDate) : '-' }} </td>
-            </tr>
-        </tbody>
-    </table>
 
     <TitleFormat :title="`购买过的东西，总计消耗 ${totalPurchasedPrice.toFixed(2)} 元`" :number="2" />
 
@@ -37,73 +12,111 @@
         </ul>
     </div>
 
-    <p>
-        <button @click="sortByDate"> 日期排序 </button>
-    </p>
 
-    <table>
-        <thead>
-            <tr>
-                <th>设备</th>
-                <th>官网</th>
-                <th>购买价</th>
-                <th>优惠幅度</th>
-                <th>购买平台</th>
-                <th>购买日期</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item, i) in filterPurchasedDataRef">
-                <td>
-                    <TextEllipsisHoverShow :text="item.device" :maxLen="16" />
-                </td>
-                <td>{{ item.priceSale ? item.priceSale : '-' }} </td>
-                <td>{{ item.pricePurchase }} </td>
-                <td>{{ discount(item) }} </td>
-                <td>{{ item.platform }} </td>
-                <td>{{ modifyDate(item.date) }} </td>
-            </tr>
-        </tbody>
-    </table>
+    <el-radio-group v-model="tableLayout">
+        <el-radio-button value="fixed">fixed</el-radio-button>
+        <el-radio-button value="auto">auto</el-radio-button>
+    </el-radio-group>
+
+    <el-table :data="filterPurchasedDataRef" :table-layout="tableLayout" empty-text="-" stripe border
+        style="width: 100%">
+        <el-table-column sortable fixed show-overflow-tooltip prop="device" label="设备" />
+        <el-table-column sortable label="类型" prop="deviceType">
+            <template #default="scope">
+                <el-tag :type="tagDisplay(scope.row)" disable-transitions>{{ deviceTypeDisplay(scope.row) }}</el-tag>
+            </template>
+        </el-table-column>
+        <el-table-column prop="priceSale" label="官网" />
+        <el-table-column sortable prop="pricePurchase" label="购买价" />
+        <el-table-column label="优惠幅度" :formatter="discount" />
+        <el-table-column show-overflow-tooltip prop="platform" label="购买平台">
+            <template #default="scope">
+                <el-tag :type="platformDisplay(scope.row)" disable-transitions>{{ scope.row.platform }}</el-tag>
+            </template>
+        </el-table-column>
+        <el-table-column sortable :sort-by="row => new Date(row.date).toISOString()" label="购买日期"
+            :formatter="purchaseDateDisplay" />
+    </el-table>
 
 </template>
 
 <script setup lang="ts">
+import type { TableInstance } from 'element-plus';
+import { ElRadioButton, ElRadioGroup, ElTable, ElTableColumn, ElTag } from 'element-plus';
 import { onMounted, ref } from 'vue';
 import TitleFormat from './TitleFormat.vue';
-import TextEllipsisHoverShow from './TextEllipsisHoverShow.vue';
 
-import { APPLE_PRICE } from '../data/appleprice';
 import { APPLE_PURCHASED } from '../data/applepurchased';
 import { APPLE_SUBSCRIBE } from '../data/applesubscribe';
 
-import { ApplePrice, ApplePurchased, AppleSubscribe } from '../type';
+import { ApplePurchased, AppleSubscribe } from '../type';
 import { durationMonth, modifyDate, modifyDate1, monthsFromX2Today } from '../utils';
-const filterPriceData = APPLE_PRICE.filter(obj => obj.device);
+
 const filterPurchasedData = APPLE_PURCHASED.filter(obj => obj.device);
 const totalPurchasedPrice = filterPurchasedData.reduce((sum, product) => sum + product.pricePurchase, 0);
 
 let filterPurchasedDataRef = ref(filterPurchasedData);
 
+const tableLayout = ref<TableInstance['tableLayout']>('fixed')
+
 const fix2 = (n: number) => (n * 100).toFixed(2) + '%';
 
-function discount(item: ApplePrice): string;
-function discount(item: ApplePurchased): string;
-function discount(item: ApplePrice | ApplePurchased): string {
-    if ('price' in item) {
-        if (!item.price) return '-';
-        const max = Array.isArray(item.price) ? Math.max(...item.price) : item.price;
-        const rate = (max - item.lowest) / max;
-        if (rate === 0) return '-';
-        return fix2(rate);
-    } else if ('pricePurchase' in item) {
-        if (!item.priceSale) return '-';
-        const max = item.priceSale;
-        const rate = (max - item.pricePurchase) / max;
-        if (rate === 0) return '-';
-        return fix2(rate);
+function platformDisplay(item: ApplePurchased) {
+    switch (item.platform) {
+        case '淘宝':
+            return "warning";
+        case '京东':
+            return "danger";
+        case '官网':
+        case '天猫官方':
+        case '线下官方店':
+            return "success";
+        default:
+            return "info";
     }
-    return '-';
+}
+
+function tagDisplay(item: ApplePurchased) {
+    switch (item.deviceType) {
+        case 'Mac':
+            return "primary";
+        case 'iPad':
+            return "success";
+        case 'iPhone':
+            return "warning";
+        case 'AirPods':
+            return "primary";
+        case 'Watch':
+            return "danger";
+        case 'Vision':
+        case 'TV & Home':
+        case 'Accessories':
+        default:
+            return "info";
+    }
+}
+
+function deviceTypeDisplay(item: ApplePurchased) {
+    switch (item.deviceType) {
+        case "Accessories":
+            return "配件";
+        case "TV & Home":
+            return "家居";
+        default:
+            return item.deviceType;
+    }
+}
+
+function purchaseDateDisplay(item: ApplePurchased) {
+    return modifyDate(item.date);
+}
+
+function discount(item: ApplePurchased): string {
+    if (!item.priceSale) return '-';
+    const max = item.priceSale;
+    const rate = (max - item.pricePurchase) / max;
+    if (rate === 0) return '-';
+    return fix2(rate);
 }
 
 let sortOrder = ref(0);

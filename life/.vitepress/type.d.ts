@@ -258,17 +258,11 @@ export interface Suixinfei {
   price: number,
 }
 
-export interface ApplePrice {
-  device: string,
-  price?: number | number[],
-  lowest: number,
-  purchaseDate?: Date,
-}
-
-type PurchasePlatform = '淘宝' | '京东' | '官网' | '天猫官方旗舰店' | '线下官方店' | string
+type PurchasePlatform = '淘宝' | '京东' | '官网' | '天猫官方' | '线下官方店' | string
 
 export interface ApplePurchased {
   device: string,
+  deviceType: 'Mac' | 'iPad' | 'iPhone' | 'AirPods' | 'Watch' | 'Vision' | 'TV & Home' | 'Accessories',
   priceSale?: number,
   pricePurchase: number,
   platform: PurchasePlatform,
