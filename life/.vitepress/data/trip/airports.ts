@@ -222,9 +222,9 @@ export const AIRPORTS: Airport[] = [
         latitude: 39.542922
     }, {
         code: 'URC',
-        name: 'Urumqi Diwopu International Airport',
-        nameLocal: '乌鲁木齐地窝堡国际机场',
-        abbrZH: '乌鲁木齐地窝堡',
+        name: 'Urumqi Tianshan International Airport',
+        nameLocal: '乌鲁木齐天山国际机场',
+        abbrZH: '乌鲁木齐天山',
         city: '乌鲁木齐',
         region: '中国',
         longitude: 87.474244,
