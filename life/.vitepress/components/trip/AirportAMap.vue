@@ -1,6 +1,6 @@
 <template>
     <h2>机场分布图</h2>
-    <div id="container" style="width: 100%; height: 500px;"></div>
+    <div id="amap-container-aug"></div>
 </template>
 
 <script setup lang="ts">
@@ -24,7 +24,7 @@ onMounted(async () => {
                 plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
             })
                 .then((AMap) => {
-                    map = new AMap.Map("container", {
+                    map = new AMap.Map("amap-container-aug", {
                         zoom: 6.5,
                         center: [119, 31],
                         viewMode: '3D',
@@ -91,12 +91,49 @@ onUnmounted(() => {
     map?.destroy();
 });
 
+// 用于存储 VPDoc 元素引用
+const vpDocRef = ref<HTMLElement | null>(null);
+// 用于存储 amap-container-aug 元素引用
+const containerRef = ref<HTMLElement | null>(null);
+// 用于存储屏幕宽度
+const screenWidth = ref<number>(window.innerWidth);
+// 检测是否为移动设备
+const isMobile = ref(false);
 
+onMounted(() => {
+    // 通过class获取元素，这里假设只有一个class为VPDoc的元素
+    const vpDocElements = document.querySelectorAll('.VPDoc');
+    if (vpDocElements.length > 0) {
+        vpDocRef.value = vpDocElements[0] as HTMLElement;
+    }
+
+    containerRef.value = document.getElementById('amap-container-aug');
+
+    const handleResize = () => {
+        screenWidth.value = window.innerWidth;
+    };
+    window.addEventListener('resize', handleResize);
+
+    // 检测是否为移动设备
+    isMobile.value = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    if (isMobile.value && vpDocRef.value && containerRef.value) {
+        const style = window.getComputedStyle(vpDocRef.value);
+        const paddingLeft = parseFloat(style.paddingLeft);
+
+        containerRef.value.style.width = `${screenWidth.value}px`;
+        containerRef.value.style.left = `-${paddingLeft}px`;
+    }
+
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+});
 </script>
 
 <style scoped>
-#mapContainer {
+#amap-container-aug {
     width: 100%;
-    height: 500px;
+    height: 300px;
 }
 </style>
