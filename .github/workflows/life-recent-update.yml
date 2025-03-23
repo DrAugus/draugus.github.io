@@ -78,30 +78,30 @@ jobs:
           echo "${{steps.commit.outputs.has_changes}}"
           echo "=========="
           echo "$AUGAGU"
-      # - name: Push changes
-      #   if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
-      #   uses: ad-m/github-push-action@master
-      #   with:
-      #     github_token: ${{ secrets.DEPLOY_GH }}
-      #     # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008 
-      #     # head_ref / ref_name  
-      #     # branch: ${{ github.ref_name }}
-
-      # 改为每周 pr，直接提交无法触发其他更新，
-      - name: Create Pull Request
-        if: ${{ steps.commit.outputs.has_changes == 'true' }}
-        uses: peter-evans/create-pull-request@v7
+      # 还有更好的操作，直接推送。而后在凌晨1点自动构建，免得 pr 了
+      - name: Push changes
+        if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
+        uses: ad-m/github-push-action@master
         with:
-          token: ${{ secrets.DEPLOY_GH }}
-          title: "docs: life latest"
-          commit-message: "docs: life latest"
-          committer: GitHub <noreply@github.com>
-          author: GitHub <noreply@github.com>
-          branch: create-pull-request/patch-life-recent-update
-          base: master
-          labels: |
-            report
-            automated pr
-          assignees: DrAugus
-          # Review cannot be requested from pull request author.
-          # reviewers: DrAugus
+          github_token: ${{ secrets.DEPLOY_GH }}
+          # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008 
+          # head_ref / ref_name  
+          # branch: ${{ github.ref_name }}
+
+      # - name: Create Pull Request
+      #   if: ${{ steps.commit.outputs.has_changes == 'true' }}
+      #   uses: peter-evans/create-pull-request@v7
+      #   with:
+      #     token: ${{ secrets.DEPLOY_GH }}
+      #     title: "docs: life latest"
+      #     commit-message: "docs: life latest"
+      #     committer: GitHub <noreply@github.com>
+      #     author: GitHub <noreply@github.com>
+      #     branch: create-pull-request/patch-life-recent-update
+      #     base: master
+      #     labels: |
+      #       report
+      #       automated pr
+      #     assignees: DrAugus
+      #     # Review cannot be requested from pull request author.
+      #     # reviewers: DrAugus

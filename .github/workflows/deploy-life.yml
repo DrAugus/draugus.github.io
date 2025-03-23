@@ -18,6 +18,11 @@ on:
       - ".github/workflows/deploy-life.yml"
       - "**/package.json"
       - "**/pnpm-lock.yaml"
+  schedule:
+    # This is run at UTC 17:00 p.m., aka UTC+8 1:00 a.m. Only Sunday
+    - cron: "0 17 * * 0"
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   deploy-life:
