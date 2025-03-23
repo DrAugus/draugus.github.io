@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "广东",
+            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 details 不愿透露姓名的群友推荐 广州特色，各类",
+            "link": "/trip/china/guangdong/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "航空里程兑换",
+            "desc": "航空里程兑换 import AirlineMiles from '../.vitepress/co",
+            "link": "/trip/miles-exchange",
+            "date": "2025-03-20"
+        },
+        {
+            "title": "自驾游",
+            "desc": "自驾游 时效性 本文有很强的时效性，不仅仅本文，本网站都有很强的时效性，所有感受尽可能会加上当时发",
+            "link": "/trip/self-drive",
+            "date": "2024-05-21"
+        },
+        {
             "title": "机场评测",
             "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
             "link": "/trip/airport",
@@ -102,24 +120,6 @@
             "desc": "基础 关键字 keywords in C++ 这里只列举常考的关键字，其他关键字参考上方的链接 -",
             "link": "/code/cpp/basin",
             "date": "2025-02-05"
-        },
-        {
-            "title": "病毒性感冒（猜测）",
-            "desc": "病毒性感冒（猜测） 01/28 周二 除夕 带亲戚一起开车，晚上到家后，妹喝了药，说防止感染。说是",
-            "link": "/disease/record/self/20250128",
-            "date": "2025-02-05"
-        },
-        {
-            "title": "施工",
-            "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 旅行航线，link - 最新的赶路日记，lin",
-            "link": "/dev",
-            "date": "2024-08-06"
-        },
-        {
-            "title": "最近更新",
-            "desc": "最近更新 import ACardLinks from './.vitepress/compone",
-            "link": "/recent",
-            "date": "2024-06-14"
         }
     ]
 }
