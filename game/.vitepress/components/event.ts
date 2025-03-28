@@ -447,5 +447,25 @@ export const EVENTS: Event[] = [
         start: "2025/03/13 04:00:00 +0800",
         end: "2025/03/27 03:49:59 +0800",
         game: GameName.WW,
+    }, {
+        name: "荣花竞捷之争",
+        description: "限时探索委托!参与邀请「深黯的谜烟·欧洛伦(雷)」",
+        start: "2025/03/28 10:00:00 +0800",
+        end: "2025/04/14 03:59:59 +0800",
+        game: GameName.Genshin,
+    }, {
+        name: "蘑境菌奇",
+        description: "限时探索委托!时限内完成部族纪闻任务，可额外获得原石、角色突破素材等奖励",
+        start: "2025/03/26 06:00:00 +0800",
+        end: "2025/04/15 17:59:59 +0800",
+        reward: 60,
+        game: GameName.Genshin,
+    }, {
+        name: "圣山所在是安饶之陆",
+        description: "在时限内完成相应探索任务，可获得额外奖励",
+        reward: 400,
+        start: "2025/03/26 06:00:00 +0800",
+        end: "2025/06/17 14:59:59 +0800",
+        game: GameName.Genshin,
     },
 ]
