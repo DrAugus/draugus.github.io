@@ -22,7 +22,7 @@
     "typed.js": "2.1.0",
     "unplugin-element-plus": "^0.9.1",
     "vite": "^6.1.0",
-    "vite-plugin-pwa": "^0.21.1",
+    "vite-plugin-pwa": "^1.0.0",
     "vitepress": "1.6.3",
     "vue": "^3.4.21",
     "vue-echarts": "^6.6.8"
