@@ -13,7 +13,7 @@
     "@amap/amap-jsapi-loader": "^1.0.1",
     "@kjgl77/datav-vue3": "^1.7.4",
     "@mdit-vue/shared": "^2.0.0",
-    "@vite-pwa/vitepress": "^0.5.3",
+    "@vite-pwa/vitepress": "^1.0.0",
     "dayjs": "1.11.13",
     "echarts": "^5.4.3",
     "element-plus": "^2.9.6",

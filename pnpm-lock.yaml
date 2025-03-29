@@ -9,7 +9,7 @@ importers:
     specifiers:
       '@mdit-vue/shared': ^2.0.0
       '@types/leaflet': 1.9.17
-      '@vite-pwa/vitepress': ^0.5.3
+      '@vite-pwa/vitepress': ^1.0.0
       '@vue-leaflet/vue-leaflet': 0.10.1
       dayjs: 1.11.13
       leaflet: 1.9.4
@@ -22,7 +22,7 @@ importers:
     devDependencies:
       '@mdit-vue/shared': 2.1.3
       '@types/leaflet': 1.9.17
-      '@vite-pwa/vitepress': 0.5.3_vite-plugin-pwa@1.0.0
+      '@vite-pwa/vitepress': 1.0.0_vite-plugin-pwa@1.0.0
       '@vue-leaflet/vue-leaflet': 0.10.1_djz4a6b4kfy7ektfbstl227b2u
       dayjs: 1.11.13
       leaflet: 1.9.4
@@ -38,7 +38,7 @@ importers:
       '@amap/amap-jsapi-loader': ^1.0.1
       '@kjgl77/datav-vue3': ^1.7.4
       '@mdit-vue/shared': ^2.0.0
-      '@vite-pwa/vitepress': ^0.5.3
+      '@vite-pwa/vitepress': ^1.0.0
       dayjs: 1.11.13
       echarts: ^5.4.3
       element-plus: ^2.9.6
@@ -55,7 +55,7 @@ importers:
       '@amap/amap-jsapi-loader': 1.0.1
       '@kjgl77/datav-vue3': 1.7.4_vue@3.5.13
       '@mdit-vue/shared': 2.1.3
-      '@vite-pwa/vitepress': 0.5.3_vite-plugin-pwa@1.0.0
+      '@vite-pwa/vitepress': 1.0.0_vite-plugin-pwa@1.0.0
       dayjs: 1.11.13
       echarts: 5.6.0
       element-plus: 2.9.7_vue@3.5.13
@@ -2446,11 +2446,11 @@ packages:
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
     dev: true
 
-  /@vite-pwa/vitepress/0.5.3_vite-plugin-pwa@1.0.0:
-    resolution: {integrity: sha512-ZNtBxZhS5Enp66z01gKuovTQzSorIpc6o9FEVwOk7kNivzuc4Q5RB04fcbBI1qqHE67rDmm+XqVQw0nj801gmw==}
+  /@vite-pwa/vitepress/1.0.0_vite-plugin-pwa@1.0.0:
+    resolution: {integrity: sha512-i5RFah4urA6tZycYlGyBslVx8cVzbZBcARJLDg5rWMfAkRmyLtpRU6usGfVOwyN9kjJ2Bkm+gBHXF1hhr7HptQ==}
     peerDependencies:
-      '@vite-pwa/assets-generator': ^0.2.6
-      vite-plugin-pwa: '>=0.20.5 <1'
+      '@vite-pwa/assets-generator': ^1.0.0
+      vite-plugin-pwa: ^1.0.0
     peerDependenciesMeta:
       '@vite-pwa/assets-generator':
         optional: true
