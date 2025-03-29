@@ -16,20 +16,20 @@ importers:
       sass: ^1.70.0
       typed.js: 2.1.0
       vite: ^6.1.0
-      vite-plugin-pwa: ^0.21.1
+      vite-plugin-pwa: ^1.0.0
       vitepress: ^1.6.3
       vue: ^3.4.15
     devDependencies:
       '@mdit-vue/shared': 2.1.3
       '@types/leaflet': 1.9.17
-      '@vite-pwa/vitepress': 0.5.3_vite-plugin-pwa@0.21.2
+      '@vite-pwa/vitepress': 0.5.3_vite-plugin-pwa@1.0.0
       '@vue-leaflet/vue-leaflet': 0.10.1_djz4a6b4kfy7ektfbstl227b2u
       dayjs: 1.11.13
       leaflet: 1.9.4
       sass: 1.86.0
       typed.js: 2.1.0
       vite: 6.2.2_sass@1.86.0
-      vite-plugin-pwa: 0.21.2_vite@6.2.2
+      vite-plugin-pwa: 1.0.0_vite@6.2.2
       vitepress: 1.6.3_sass@1.86.0
       vue: 3.5.13
 
@@ -47,7 +47,7 @@ importers:
       typed.js: 2.1.0
       unplugin-element-plus: ^0.9.1
       vite: ^6.1.0
-      vite-plugin-pwa: ^0.21.1
+      vite-plugin-pwa: ^1.0.0
       vitepress: 1.6.3
       vue: ^3.4.21
       vue-echarts: ^6.6.8
@@ -55,7 +55,7 @@ importers:
       '@amap/amap-jsapi-loader': 1.0.1
       '@kjgl77/datav-vue3': 1.7.4_vue@3.5.13
       '@mdit-vue/shared': 2.1.3
-      '@vite-pwa/vitepress': 0.5.3_vite-plugin-pwa@0.21.2
+      '@vite-pwa/vitepress': 0.5.3_vite-plugin-pwa@1.0.0
       dayjs: 1.11.13
       echarts: 5.6.0
       element-plus: 2.9.7_vue@3.5.13
@@ -64,7 +64,7 @@ importers:
       typed.js: 2.1.0
       unplugin-element-plus: 0.9.1
       vite: 6.2.2_sass@1.86.0
-      vite-plugin-pwa: 0.21.2_vite@6.2.2
+      vite-plugin-pwa: 1.0.0_vite@6.2.2
       vitepress: 1.6.3_b33fsbbstdfalljavqmbocotda
       vue: 3.5.13
       vue-echarts: 6.7.3_echarts@5.6.0+vue@3.5.13
@@ -2446,7 +2446,7 @@ packages:
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
     dev: true
 
-  /@vite-pwa/vitepress/0.5.3_vite-plugin-pwa@0.21.2:
+  /@vite-pwa/vitepress/0.5.3_vite-plugin-pwa@1.0.0:
     resolution: {integrity: sha512-ZNtBxZhS5Enp66z01gKuovTQzSorIpc6o9FEVwOk7kNivzuc4Q5RB04fcbBI1qqHE67rDmm+XqVQw0nj801gmw==}
     peerDependencies:
       '@vite-pwa/assets-generator': ^0.2.6
@@ -2455,7 +2455,7 @@ packages:
       '@vite-pwa/assets-generator':
         optional: true
     dependencies:
-      vite-plugin-pwa: 0.21.2_vite@6.2.2
+      vite-plugin-pwa: 1.0.0_vite@6.2.2
     dev: true
 
   /@vitejs/plugin-vue/5.2.3_vite@5.4.14+vue@3.5.13:
@@ -5058,11 +5058,11 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite-plugin-pwa/0.21.2_vite@6.2.2:
-    resolution: {integrity: sha512-vFhH6Waw8itNu37hWUJxL50q+CBbNcMVzsKaYHQVrfxTt3ihk3PeLO22SbiP1UNWzcEPaTQv+YVxe4G0KOjAkg==}
+  /vite-plugin-pwa/1.0.0_vite@6.2.2:
+    resolution: {integrity: sha512-X77jo0AOd5OcxmWj3WnVti8n7Kw2tBgV1c8MCXFclrSlDV23ePzv2eTDIALXI2Qo6nJ5pZJeZAuX0AawvRfoeA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      '@vite-pwa/assets-generator': ^0.2.6
+      '@vite-pwa/assets-generator': ^1.0.0
       vite: ^3.1.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     peerDependenciesMeta:
       '@vite-pwa/assets-generator':
