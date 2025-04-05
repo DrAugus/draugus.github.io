@@ -1032,5 +1032,27 @@
         "city": "Natlan",
         "ele": "geo",
         "weapon": "sword"
+    },
+    "iansan": {
+        "id": "iansan",
+        "name": "伊安珊",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "「沃陆之邦」健身俱乐部的总教练，闻名纳塔的营养师，同时也是「归火圣夜巡礼优胜者培训班」的创建者。如果你对自身的「力量」感到迷茫，她绝对是最适合你的导师。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "varesa": {
+        "id": "varesa",
+        "name": "瓦雷莎",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "平日里悠闲松弛的果园主，斗志燃烧时，则会戴上独特的假面，拿出传奇英雄的气势。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }
