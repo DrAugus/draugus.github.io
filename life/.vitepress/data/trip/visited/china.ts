@@ -199,8 +199,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         intro: "游玩"
                     }, {
                         date: {
-                            start: new Date('2025/01/26'),
-                            end: new Date('2025/01/26'),
+                            start: new Date('2025/01/26'), 
                         },
                         intro: "转机"
                     }
@@ -449,8 +448,6 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     intro: "游玩"
                 },]
             },
-            { id: '无锡', info: [] },
-            { id: '扬州', info: [] },
         ]
     },
     {
@@ -576,17 +573,38 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     },
                     intro: "办事"
                 },]
-            },
-            {
+            }, {
                 id: '舟山', info: [{
                     date: {
                         start: new Date('2023/04/15'),
                     },
                     intro: "游玩"
                 },]
-            },
-            {
-                id: '湖州', info: [{}, {}]
+            }, {
+                id: '湖州', info: [{
+                    date: {
+                        start: new Date('2021/05/30'),
+                    },
+                    intro: "游玩"
+                }, {
+                    date: {
+                        start: new Date('2022/03/05'),
+                        end: new Date('2022/03/06'),
+                    },
+                    intro: "团建"
+                }, {
+                    date: {
+                        start: new Date('2025/04/02'),
+                    },
+                    intro: "游玩"
+                },]
+            }, {
+                id: '嘉兴', info: [{
+                    date: {
+                        start: new Date('2025/04/04'),
+                    },
+                    intro: "游玩"
+                },]
             },
         ]
     },
@@ -634,8 +652,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         intro: "高铁"
                     }, {
                         date: {
-                            start: new Date('2025/01/26'),
-                            end: new Date('2025/01/26'),
+                            start: new Date('2025/01/26'), 
                         },
                         intro: "转机"
                     }, {
@@ -645,6 +662,13 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         intro: "飞机"
                     },
                 ],
+            }, {
+                id: '信阳', info: [{
+                    date: {
+                        start: new Date('2024/10/02'),
+                    },
+                    intro: "转车"
+                }]
             },
         ]
     },

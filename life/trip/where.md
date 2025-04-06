@@ -4,7 +4,7 @@ outline: [2, 4]
 sidebar: false
 ---
 
-# 去哪儿
+# 去哪儿<a href="/trip/"><Badge type="tip" text="旅行主页↗" /></a>
 
 走过蓝色星球，[旅途记录](./travelogue/)，[探索](./explore)驻足
 

@@ -67,7 +67,6 @@ const sidebarTrip = [
             { text: '里程兑换', link: '/trip/miles-exchange' },
             { text: '机场', link: '/trip/airport' },
             { text: '火车站', link: '/trip/railway' },
-            { text: '自驾游', link: '/trip/self-drive' },
             { text: '酒店', link: '/trip/hotel' },
         ]
     },
@@ -96,6 +95,10 @@ const sidebarTripJourney = [
     { text: '赶路', link: '/trip/journey/' },
 ]
     .concat(...setJourneySidebar());
+
+const sidebarTripDrive = [
+    { text: '自驾', link: '/trip/drive/' },
+]
 
 const sidebarSpeech = [
     { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/speech/craig-federighi' },
@@ -636,6 +639,7 @@ export const sidebar = {
     '/trip/': sidebarTrip,
     '/trip/travelogue/': sidebarTripTravelogue,
     '/trip/journey/': sidebarTripJourney,
+    '/trip/drive/': sidebarTripDrive,
     // 
     '/speech/': sidebarSpeech,
     '/history/': sidebarHistory,

@@ -21,6 +21,9 @@ const dataTravelogue: TravelogueInfo[] = [
     { title: '海口', date: new Date('2024/04/15'), city: '海口' },
     { title: '贵阳', date: new Date('2024/04/26'), city: '贵阳' },
     { title: '武汉', date: new Date('2024/05/08'), city: '武汉' },
+    { title: '上海', date: new Date('2025/02/18'), city: '上海' },
+    { title: '湖州', date: new Date('2025/04/02'), city: '湖州' },
+    { title: '嘉兴', date: new Date('2025/04/04'), city: '嘉兴' },
 ];
 
 const linkPrefix = '/trip/travelogue/';

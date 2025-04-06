@@ -467,5 +467,11 @@ export const EVENTS: Event[] = [
         start: "2025/03/26 06:00:00 +0800",
         end: "2025/06/17 14:59:59 +0800",
         game: GameName.Genshin,
+    }, {
+        name: "无极限超激格斗赛",
+        description: "地下激斗挑战赛",
+        start: "2025/04/07 10:00:00 +0800",
+        end: "2025/04/21 03:59:59 +0800",
+        game: GameName.Genshin,
     },
 ]

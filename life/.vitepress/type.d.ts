@@ -55,6 +55,18 @@ interface DateRange {
   end?: Date,
 }
 
+export interface CatLitter {
+  brand: string;
+  specification: string;
+  pricePerKg: {
+    min: number;
+    max?: number;
+  };
+  commonSpecification?: string;
+  advantages?: string;
+  disadvantages?: string;
+}
+
 interface ExploreInfo {
   date?: DateRange,
   intro?: string,
@@ -111,6 +123,11 @@ export interface Journey {
   title?: string,
   date: Date,
   info?: string,
+}
+
+export interface Drive {
+  title?: string,
+  date: DateRange,
 }
 
 export interface TravelBillIntroItem {

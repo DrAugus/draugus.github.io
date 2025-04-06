@@ -10,6 +10,7 @@ export const navbar = [
       { text: '游记', link: '/trip/travelogue/' },
       { text: '去哪', link: '/trip/where' },
       { text: '赶路', link: '/trip/journey/' },
+      { text: '自驾', link: '/trip/drive/' },
     ],
     activeMatch: '^/trip',
   },

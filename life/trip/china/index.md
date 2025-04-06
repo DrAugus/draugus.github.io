@@ -1,4 +1,4 @@
-# 中国
+# 中国<a href="/trip/"><Badge type="tip" text="旅行主页↗" /></a>
 
 欢迎来到中国
 
