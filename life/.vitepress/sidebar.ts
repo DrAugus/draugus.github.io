@@ -50,7 +50,12 @@ const sidebarDaily = [
             { text: 'iCloud', link: '/daily/apple/iCloud' },
             { text: 'Apple ID', link: '/daily/apple/id' },
         ]
-    },
+    }, {
+        text: '电器使用', collapsed: false, items: [
+            { text: '电视', link: '/daily/appliance/tv' },
+            { text: '冰箱', link: '/daily/appliance/fridge' },
+        ]
+    }
 ];
 const sidebarTrip = [
     { text: '规划指南', link: '/trip/' },

@@ -31,6 +31,15 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
         backspace: 1,
         game: GameName.HSR
     }, {
+        name: "商店·戏言成真",
+        first: "2025/02/17 04:00:00 +0800",
+        duration: {
+            value: 42,
+            unit: 'day',
+        },
+        backspace: 1,
+        game: GameName.HSR
+    }, {
         name: "无名勋礼",
         first: "2025/02/26 06:00:00 +0800",
         duration: {
