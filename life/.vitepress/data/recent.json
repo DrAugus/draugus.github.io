@@ -2,6 +2,30 @@
     "title": "",
     "items": [
         {
+            "title": "冰箱",
+            "desc": "冰箱 温度档位 冰箱温度调节器，数字越大，制冷效果越强。 - 冬季/冰箱物品较少：5 ~ 6 档",
+            "link": "/daily/appliance/fridge",
+            "date": "2025-04-10"
+        },
+        {
+            "title": "电视机",
+            "desc": "电视机",
+            "link": "/daily/appliance/tv",
+            "date": "2025-04-10"
+        },
+        {
+            "title": "买房吗",
+            "desc": "买房吗 杭州买房 - 为什么买？ - 升值吗？周边配套如果增多就会升值，如果不配置周边立即报废 -",
+            "link": "/daily/house",
+            "date": "2025-04-10"
+        },
+        {
+            "title": "广东",
+            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 details 不愿透露姓名的群友推荐 广州特色，各类",
+            "link": "/trip/china/guangdong/index",
+            "date": "2024-05-27"
+        },
+        {
             "title": "浙江",
             "desc": "浙江 杭州 美食 吃的 - 夏星酒馆 - 赤坂亭 - 荆九爷爆炒桥头三嫩 - 胡集酒肆·唐潮西域菜",
             "link": "/trip/china/zhejiang/index",
@@ -20,22 +44,10 @@
             "date": "2025-02-17"
         },
         {
-            "title": "广东",
-            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 details 不愿透露姓名的群友推荐 广州特色，各类",
-            "link": "/trip/china/guangdong/index",
-            "date": "2024-05-27"
-        },
-        {
             "title": "航空里程兑换",
             "desc": "航空里程兑换 import AirlineMiles from '../.vitepress/co",
             "link": "/trip/miles-exchange",
             "date": "2025-03-20"
-        },
-        {
-            "title": "自驾游",
-            "desc": "自驾游 时效性 本文有很强的时效性，不仅仅本文，本网站都有很强的时效性，所有感受尽可能会加上当时发",
-            "link": "/trip/self-drive",
-            "date": "2024-05-21"
         },
         {
             "title": "机场评测",
@@ -108,18 +120,6 @@
             "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价import",
             "link": "/daily/apple/price",
             "date": "2024-06-12"
-        },
-        {
-            "title": "常住地居住感受",
-            "desc": "常住地居住感受 沈阳 2014年9月 - 2020年7月 成都 2020年7月 - 2021年4月",
-            "link": "/trip/permanent-residence",
-            "date": "2024-05-21"
-        },
-        {
-            "title": "上海",
-            "desc": "上海 景点 交通 游玩 开放 预约 票价 平台 推荐 :-:-:-:-: 甜爱路地铁3/8号线虹口",
-            "link": "/trip/china/shanghai",
-            "date": "2025-02-17"
         }
     ]
 }
