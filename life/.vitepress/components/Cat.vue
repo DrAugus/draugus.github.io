@@ -1,6 +1,6 @@
 <template>
     <el-table :data="catLitterData" style="width: 100%" :empty-text="`???`">
-        <el-table-column prop="brand" label="猫砂品牌">
+        <el-table-column prop="brand" sortable label="猫砂品牌">
             <template #default="scope">
                 <div class="no-wrap">{{ scope.row.brand }}</div>
             </template>

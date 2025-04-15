@@ -50,7 +50,7 @@ features:
     link: /trip/travelogue/
     linkText: 查看游记内容  
   - title: 随心飞介绍
-    details: 买随心飞真的划算吗？自由职业者也不划算吧？
+    details: 谁买谁上当！
     link: /trip/suixinfei
   - title: 旅行账单
     details: 踏上远方的路，也留下了一路的花费印记

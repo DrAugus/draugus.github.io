@@ -404,3 +404,9 @@ export interface Point {
   x: number,
   y: number,
 }
+
+export interface Question {
+  id: number,
+  question: string,
+  date: Date,
+}

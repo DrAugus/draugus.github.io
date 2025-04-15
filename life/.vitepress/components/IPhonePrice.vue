@@ -1,6 +1,4 @@
 <template>
-
-
     <TitleFormat :title="'价格'" :number="2"></TitleFormat>
 
     <div>
@@ -40,7 +38,6 @@
         </tbody>
     </table>
 
-
     <details class="details custom-block">
         <summary>图表</summary>
         <EChartsModel :option="option" />
@@ -48,13 +45,13 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue';
+import { ref } from 'vue';
+import { IPHONE_MODELS } from '../data/iPhoneModels';
 import EChartsModel from "./EChartsModel.vue";
 import TitleFormat from './TitleFormat.vue';
-import { IPHONE_MODELS } from '../data/iPhoneModels';
 
 import iPhoneObj from '../data/iPhone.json';
-import { ColorScheme, extractNumbers, getColorScheme, isStringNumeric, modifyDate } from "../utils";
+import { ColorScheme, getColorScheme, isStringNumeric, modifyDate } from "../utils";
 
 const iPhoneCapacity = iPhoneObj.capacity;
 const year = iPhoneObj.year;
