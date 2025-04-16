@@ -2,12 +2,16 @@
 import { onMounted, onUnmounted, ref } from "vue";
 // import AMapLoader from "@amap/amap-jsapi-loader";
 
+import { ElButton, ElLoading } from 'element-plus';
+
 import { citiesData } from "../../data/trip/cities";
 import japanCities from "../../data/trip/citiesjp.json";
 import { VISITED_CHINA } from "../../data/trip/visited/china";
 import { VISITED_JAPAN } from "../../data/trip/visited/japan";
 import { sortedLastTravelogue, isEqualCity, linkTravelogue } from '../../data/trip/travelogue';
 import { ExploreRecord } from "../../type";
+
+const isShowMark = ref(false);
 
 let map: any = null;
 
@@ -74,6 +78,13 @@ interface CityTimes {
   city: string,
   times: number,
   resident: boolean,
+  adcode?: number,
+  color?: string,
+}
+
+// code: CityTimes
+interface CityTimesMap {
+  [path: string]: CityTimes,
 }
 
 const extractCityAndTimes = (data: ExploreRecord[]) =>
@@ -115,6 +126,15 @@ const chinaCityVisitedTimes = extractCityAndTimes(VISITED_CHINA);
 // console.log(chinaCityVisitedTimes);
 const japanCityVisitedTimes = extractCityAndTimes(VISITED_JAPAN);
 // console.log(japanCityVisitedTimes);
+const provinceName = VISITED_CHINA.map(item => item.id);
+const provinceCode = provinceName.map(item => {
+  for (const city of citiesData) {
+    if (item === city.name) {
+      return city.adcode;
+    }
+  }
+});
+// console.log(provinceCode);
 
 const getLastTravelogueLink = (city: string) => {
 
@@ -238,9 +258,71 @@ function getColorByNumber(number) {
   return color;
 }
 
+function mapChinaCityTimes() {
+  let ctMap = new Map();
+  for (let cityInfo of chinaCityVisitedTimes) {
+    const city = cityInfo.city;
+    const content = city + ': ' + (cityInfo.resident ? "常住" : cityInfo.times);
+
+    let curCityData = findInChinaCities(city);
+    let number = cityInfo.times;
+    if (cityInfo.resident) number += 100;
+    if (curCityData && number) {
+      let adcode = Number(curCityData.adcode);
+      let color = getColorByNumber(number);
+      ctMap[adcode] = {
+        city: city,
+        times: number,
+        resident: cityInfo.resident,
+        adcode: adcode,
+        color: color,
+      };
+    }
+  }
+  return ctMap;
+}
+const mapChinaCityTimesData = mapChinaCityTimes();
+// console.log(mapChinaCityTimesData);
+
+var centers = {
+  'RUS': [93.729504, 68.718195],
+  'USA': [-113.877655, 52.652266],
+  'JPN': [136.824904, 38.00712]
+}
+
 const aMapLoader: any = ref(null);
 
-onMounted(async () => {
+// 创建省份图层
+// var disProvince;
+function initPro(AMap: any, code: (string | undefined)[], dep: number) {
+  let disProvince = new AMap.DistrictLayer.Province({
+    zIndex: 12,
+    adcode: code,
+    depth: dep,
+    styles: {
+      'fill': function (properties) {
+        // properties为可用于做样式映射的字段，包含
+        // NAME_CHN:中文名称
+        // adcode_pro
+        // adcode_cit
+        // adcode
+        var adcode = properties.adcode;
+        let has = mapChinaCityTimesData[adcode]
+        if (has) {
+          return has.color;
+        } else {
+          return 'rgba(255,255,255,0.5)';
+        }
+      },
+      'province-stroke': 'cornflowerblue',
+      'city-stroke': 'white', // 中国地级市边界
+      'county-stroke': 'rgba(255,255,255,0.5)' // 中国区县边界
+    }
+  });
+  return disProvince;
+}
+
+const drawMap = async () => {
 
   // 检查 window 对象是否存在  
   if (typeof window !== 'undefined') {
@@ -255,28 +337,68 @@ onMounted(async () => {
         plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
       })
         .then((AMap) => {
+
+
+          var getColorByRandom = function () {
+            var rg = Math.random() * 155 + 50;
+            return 'rgb(' + rg + ',' + rg + ',255)';
+          }
+          // var disCountry = new AMap.DistrictLayer.Country({
+          //   zIndex: 10,
+          //   SOC: 'JPN',
+          //   depth: 1,
+          //   styles: {
+          //     'nation-stroke': '#22ffff',
+          //     'coastline-stroke': [0.85, 0.63, 0.94, 1],
+          //     'province-stroke': 'white',
+          //     'fill': function (props) {
+          //       console.log(props);
+          //       return getColorByRandom()
+          //     }
+          //   }
+          // })
+
+
+          // 颜色辅助方法
+          var colors = {};
+          var getColorByAdcode = function (adcode) {
+            if (!colors[adcode]) {
+              var gb = Math.random() * 155 + 50;
+              colors[adcode] = 'rgb(' + gb + ',' + gb + ',255)';
+            }
+
+            return colors[adcode];
+          };
+
+          // // 按钮事件
+          // function changeAdcode(e) {
+          //   var code = e.target.value;
+          //   if (code != 100000) {
+          //     initPro(code, depth);
+          //   }
+          // }
+
+          // function changeDepth(e) {
+          //   var dep = e.target.value;
+          //   initPro(adCode, dep);
+          // }
+
+          // TODO 增加右下角图例解释
+
           map = new AMap.Map("amap-container-aug", {
-            zoom: 6,
-            center: [117.495663, 30.674264],// 池州坐标
+            zoom: 7,
+            center: [119.724457, 30.234375], // 临安
             viewMode: '3D',
-            // pitch: 60,
+            pitch: 0,
             // showIndoorMap: false,
             // showLabel: false,
             // mapStyle: 'amap://styles/whitesmoke',
             // mapStyle: 'amap://styles/dark',
             mapStyle: 'amap://styles/fresh',
           });
-          let layer = new AMap.LabelsLayer({
-            zooms: [3, 20],
-            zIndex: 1000,
-            collision: false,
-            allowCollision: false,
-          });
-          layer.add([]);
-          // 图层添加到地图
-          map.add(layer);
-          layer.add(getChinaMarkers(AMap));
-          layer.add(getGlobalMarkers(AMap));
+
+          adjustMapLayer(AMap);
+
         })
         .catch((e) => {
           console.log(e);
@@ -287,12 +409,45 @@ onMounted(async () => {
   } else {
     console.log('Window object is not available, skipping AMapLoader import.');
   }
+}
 
+onMounted(async () => {
+  drawMap();
 });
 
 onUnmounted(() => {
   map?.destroy();
 });
+
+const showMark = () => {
+  isShowMark.value = !isShowMark.value;
+  drawMap();
+}
+
+const adjustMapLayer = (AMap: any) => {
+  let layer = new AMap.LabelsLayer({
+    zooms: [3, 20],
+    zIndex: 1000,
+    collision: false,
+    allowCollision: false,
+  });
+  layer.add([]);
+  // 图层添加到地图
+  map.add(layer);
+
+  if (isShowMark.value) {
+    layer.add(getChinaMarkers(AMap));
+    layer.add(getGlobalMarkers(AMap));
+  } else {
+    let adCodes = provinceCode;
+    let disProvince = initPro(AMap, adCodes, 1);
+    map.add([
+      disProvince,
+      // disCountry,
+      AMap.createDefaultLayer()
+    ])
+  }
+}
 
 // 用于存储 VPDoc 元素引用
 const vpDocRef = ref<HTMLElement | null>(null);
@@ -333,9 +488,38 @@ onMounted(() => {
   };
 });
 
+const openFullScreen = () => {
+  const loading = ElLoading.service({
+    lock: true,
+    text: 'Loading',
+    background: 'rgba(0, 0, 0, 0.7)',
+  })
+  setTimeout(() => {
+    loading.close();
+    showMark();
+  }, 400)
+}
 </script>
 
 <template>
+  <el-button @click="openFullScreen()">
+    {{ isShowMark ? '点亮城市' : '城市探索次数' }}
+  </el-button>
+
+  <div v-if="isShowMark">
+    <span>
+      点击下方地图标签可跳转
+      <a href="./travelogue/">旅行游记</a>。
+    </span>
+  </div>
+
+  <h3>色卡说明</h3>
+  <div class="flex" v-for="(v, i) in colorLegend">
+    <div class="box" :style="{ backgroundColor: v }"> </div>
+    <span v-if="i < 100">{{ `小于${i}次` }}</span>
+    <span v-else>常住</span>
+  </div>
+
   <div id="amap-container-aug"></div>
 </template>
 
@@ -343,5 +527,16 @@ onMounted(() => {
 #amap-container-aug {
   width: 100%;
   height: 600px;
+}
+
+.flex {
+  display: flex;
+}
+
+.box {
+  width: 30px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 3px;
 }
 </style>
