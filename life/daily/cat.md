@@ -65,8 +65,8 @@ todo
 
 ### 洗澡
 
+2024 未洗澡  
 2023 未洗澡  
-2024 未洗澡
 
 <script setup>
 import Cat from '../.vitepress/components/Cat.vue'

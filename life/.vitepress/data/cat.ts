@@ -105,5 +105,20 @@ export const catLitterData: CatLitter[] = [
         specification: "混合豆腐猫砂(1.5mm)",
         pricePerKg: { min: 5.34 },
         commonSpecification: "￥13.35/2.5kg",
+    }, {
+        brand: "有宠说",
+        specification: "木薯混合猫砂4合1",
+        pricePerKg: { min: 3.01 },
+        commonSpecification: "￥7.53/2.5kg",
+    }, {
+        brand: "Romod 瑞梦迪",
+        specification: "经典豆腐混合猫砂",
+        pricePerKg: { min: 6.98 },
+        commonSpecification: "￥87.22/7.5kg",
+    }, {
+        brand: "HS 憨仕",
+        specification: "白茶清香混合猫砂",
+        pricePerKg: { min: 3.54 },
+        commonSpecification: "￥8.5/2.4kg",
     },
 ];

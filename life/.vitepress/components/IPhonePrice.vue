@@ -1,6 +1,9 @@
 <template>
     <TitleFormat :title="'价格'" :number="2"></TitleFormat>
-
+    <div class="tip custom-block">
+        <p class="custom-block-title">温馨提示</p>
+        <p>以下价格均为官网首发价</p>
+    </div>
     <div>
         <span>
             {{ " " }}
@@ -16,27 +19,12 @@
         </span>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>iPhone 型号</th>
-                <!-- <th>发售日</th> -->
-                <th class="table-text-center" v-for="(item, index) in capacityName" :key="index">{{ item }}</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item, index) in iPhoneModelRef" :key="index"
-                :style="{ backgroundColor: getModelBgColor('iPhone ' + item) }">
-                <td class="no-wrap"> {{ item }}
-                    <span class="VPBadge warning">{{ getModelYear('iPhone ' + item) }}</span>
-                </td>
-                <!-- <td class="no-wrap"> {{ getModelDate('iPhone ' + item) }}</td> -->
-                <td class="table-text-center no-wrap" v-for="(vv, ii) in capacity" :key="ii">
-                    {{ iPhonePriceRef[index][vv] ? '￥' + iPhonePriceRef[index][vv] : '-' }}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <el-table :data="tableData" style="width: 100%" fit>
+        <el-table-column prop="model" sortable label="iPhone 型号" width="120" fixed show-overflow-tooltip
+            :tooltip-formatter="({ row }) => `iPhone ${row.model}`" />
+        <el-table-column prop="year" sortable label="年份" show-overflow-tooltip width="80" />
+        <el-table-column v-for="(v, i) in capacityName" :key="i" :prop="v" :label="v" sortable show-overflow-tooltip />
+    </el-table>
 
     <details class="details custom-block">
         <summary>图表</summary>
@@ -45,7 +33,9 @@
 </template>
 
 <script setup lang="ts">
+import { ElTable, ElTableColumn } from 'element-plus';
 import { ref } from 'vue';
+
 import { IPHONE_MODELS } from '../data/iPhoneModels';
 import EChartsModel from "./EChartsModel.vue";
 import TitleFormat from './TitleFormat.vue';
@@ -283,7 +273,7 @@ type ModelInfo = {
 // key num value {model, index}
 let allModels: Map<string, ModelInfo[]> = new Map();
 
-let iPhoneModelName = ['Mini', '数字版', 'Plus', 'Pro', 'Pro Max'];
+let iPhoneModelName = ['SE', 'Mini', '数字版', 'Plus', 'Pro', 'Pro Max'];
 iPhoneModel.forEach(value => {
     let numbers = value.match(/\d+/g);
     if (numbers) {
@@ -315,6 +305,10 @@ for (let i = 0; i < iPhoneModel.length; i++) {
             }
         } else if (name === 'Pro') {
             if (value.includes(name) && !value.includes("Pro Max")) {
+                pushToModel(name, value, i);
+            }
+        } else if (name === 'SE') {
+            if (value.includes(name) || value.includes("e")) {
                 pushToModel(name, value, i);
             }
         } else {
@@ -363,6 +357,7 @@ const filterModel = (model: string) => {
         iPhonePriceRef.value = iPhonePrice;
         capacityName.value = convertedCapacityName;
         capacity.value = iPhoneCapacity;
+        tableData.value = getTableData();
         return;
     }
 
@@ -392,6 +387,8 @@ const filterModel = (model: string) => {
 
     option.series = setSeries(result);
     option = option;
+
+    tableData.value = getTableData();
 };
 
 
@@ -441,6 +438,29 @@ const getModelBgColor = (model: string): string => {
     return color[key];
 }
 
+const tableData = ref([]);
+
+const getTableData = () => {
+    let ret: any = [];
+    let obj = iPhoneCapacity.reduce((acc, key) => {
+        let nameCap = getCapacityName(key);
+        acc[nameCap] = '-';
+        return acc;
+    }, {});
+    iPhoneModelRef.value.forEach((item, index) => {
+        let obj2 = { ...obj };
+        obj2['model'] = item;
+        obj2['year'] = getModelYear('iPhone ' + item);
+        capacity.value.forEach((item2, index2) => {
+            let nameCap = getCapacityName(item2);
+            obj2[nameCap] = iPhonePriceRef.value[index][item2] ? '￥' + iPhonePriceRef.value[index][item2] : '-';
+        });
+        ret.push(obj2);
+    })
+    return ret;
+}
+tableData.value = getTableData();
+
 </script>
 
 <style scoped>
@@ -476,5 +496,12 @@ const getModelBgColor = (model: string): string => {
     /* 可选，防止内容溢出表格单元格 */
     text-overflow: ellipsis;
     /* 可选，用省略号表示被截断的内容 */
+}
+
+.vp-doc table {
+    display: unset;
+    border-collapse: unset;
+    margin: unset;
+    overflow-x: unset;
 }
 </style>

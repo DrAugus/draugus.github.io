@@ -20,7 +20,7 @@
 
     <el-table :data="filterPurchasedDataRef" :table-layout="tableLayout" empty-text="-" stripe border
         style="width: 100%">
-        <el-table-column sortable fixed show-overflow-tooltip prop="device" label="设备" />
+        <el-table-column sortable fixed show-overflow-tooltip width="200" prop="device" label="设备" />
         <el-table-column sortable label="类型" prop="deviceType">
             <template #default="scope">
                 <el-tag :type="tagDisplay(scope.row)" disable-transitions>{{ deviceTypeDisplay(scope.row) }}</el-tag>
@@ -161,3 +161,12 @@ function allSubscribe() {
 }
 
 </script>
+
+<style lang="css" scoped>
+.vp-doc table {
+    display: unset;
+    border-collapse: unset;
+    margin: unset;
+    overflow-x: unset;
+}
+</style>
