@@ -1,6 +1,6 @@
 # 银行卡
 
-境外卡参考[这篇](../trip/card)
+境外卡参考[这篇](../trip/overseas-bank-card)
 
 ## 储蓄卡/借记卡
 

@@ -73,6 +73,7 @@ const sidebarTrip = [
             { text: '机场', link: '/trip/airport' },
             { text: '火车站', link: '/trip/railway' },
             { text: '酒店', link: '/trip/hotel' },
+            { text: '公共交通', link: '/trip/public-transport' },
         ]
     },
 
@@ -83,8 +84,8 @@ const sidebarTrip = [
             { text: '签证', link: '/trip/visa' },
             { text: '往来港澳通行证', link: '/trip/eep' },
             { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
-            { text: '境外银行卡', link: '/trip/card' },
-            { text: '境外手机卡', link: '/trip/phone-number' },
+            { text: '境外银行卡', link: '/trip/overseas-bank-card' },
+            { text: '境外手机卡', link: '/trip/overseas-sim-card' },
 
         ]
     },
