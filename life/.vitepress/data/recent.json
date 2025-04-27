@@ -2,6 +2,54 @@
     "title": "",
     "items": [
         {
+            "title": "关键字",
+            "desc": "关键字 constexpr 它的主要作用是在编译时求值。这意味着，被 constexpr 修饰的表",
+            "link": "/code/cpp/keywords",
+            "date": "2025-04-24"
+        },
+        {
+            "title": "基础知识",
+            "desc": "基础知识 sizeof 在C++中，sizeof运算符用于获取数据类型或变量所占用的字节数。以下是",
+            "link": "/code/interview/basin",
+            "date": "2024-12-12"
+        },
+        {
+            "title": "数据库",
+            "desc": "数据库 数据库事务 数据库事务是指作为单个逻辑工作单元执行的一系列数据库操作。 事务有四个重要的特",
+            "link": "/code/interview/db",
+            "date": "2025-04-24"
+        },
+        {
+            "title": "算法与数据结构",
+            "desc": "算法与数据结构 曼彻斯特编码和差分曼彻斯特编码 以下是关于曼彻斯特编码和差分曼彻斯特编码的介绍：",
+            "link": "/code/interview/dsa",
+            "date": "2025-04-24"
+        },
+        {
+            "title": "银行卡",
+            "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
+            "link": "/daily/card",
+            "date": "2025-01-14"
+        },
+        {
+            "title": "日用价格参考",
+            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
+            "link": "/daily/goods-price",
+            "date": "2024-05-23"
+        },
+        {
+            "title": "江西",
+            "desc": "江西 老三样 打平火 南昌 上饶 Day1：抵达上饶→望仙谷（夜宿望仙谷） Day2：望仙谷→葛仙",
+            "link": "/trip/china/jiangxi/index",
+            "date": "2025-02-17"
+        },
+        {
+            "title": "公共交通",
+            "desc": "公共交通",
+            "link": "/trip/public-transport",
+            "date": "2025-04-24"
+        },
+        {
             "title": "iPhone",
             "desc": "iPhone import IPhonePrice from '../../.vitepress/",
             "link": "/daily/apple/iphone",
@@ -17,12 +65,6 @@
             "title": "小猫",
             "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
             "link": "/daily/cat",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "日用价格参考",
-            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
-            "link": "/daily/goods-price",
             "date": "2024-05-23"
         },
         {
@@ -78,48 +120,6 @@
             "desc": "上海 import CityLink from '../../.vitepress/compone",
             "link": "/trip/travelogue/20250218",
             "date": "2025-04-16"
-        },
-        {
-            "title": "湖州",
-            "desc": "湖州 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20250402",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "嘉兴",
-            "desc": "嘉兴 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20250404",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "探索",
-            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
-            "link": "/trip/explore",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "冰箱",
-            "desc": "冰箱 温度档位 冰箱温度调节器，数字越大，制冷效果越强。 - 冬季/冰箱物品较少：5 ~ 6 档",
-            "link": "/daily/appliance/fridge",
-            "date": "2025-04-10"
-        },
-        {
-            "title": "电视机",
-            "desc": "电视机",
-            "link": "/daily/appliance/tv",
-            "date": "2025-04-10"
-        },
-        {
-            "title": "买房吗",
-            "desc": "买房吗 杭州买房 - 为什么买？ - 升值吗？周边配套如果增多就会升值，如果不配置周边立即报废 -",
-            "link": "/daily/house",
-            "date": "2025-04-10"
-        },
-        {
-            "title": "广东",
-            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 details 不愿透露姓名的群友推荐 广州特色，各类",
-            "link": "/trip/china/guangdong/index",
-            "date": "2024-05-27"
         }
     ]
 }
