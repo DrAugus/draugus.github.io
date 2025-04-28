@@ -2859,8 +2859,8 @@ export const AIRPORTS: Airport[] = [
     {
         code: "WEF",
         name: "Weifang Airport",
-        nameLocal: "",
-        abbrZH: "",
+        nameLocal: "潍坊机场",
+        abbrZH: "潍坊机场",
         city: "Weifang",
         region: "CN",
         longitude: 119.1190032959,
@@ -3660,6 +3660,15 @@ export const AIRPORTS: Airport[] = [
         region: "中国",
         longitude: 100.671853,
         latitude: 38.80508
+    }, {
+        code: "HZA",
+        name: "Heze Mudan Airport",
+        nameLocal: "菏泽牡丹机场",
+        abbrZH: "牡丹机场",
+        city: "菏泽",
+        region: "中国",
+        longitude: 115.735995,
+        latitude: 35.208004
     }
 
 ]

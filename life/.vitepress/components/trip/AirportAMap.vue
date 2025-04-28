@@ -30,7 +30,7 @@ onMounted(async () => {
                         viewMode: '3D',
                         // pitch: 60,
                         // showIndoorMap: false,
-                        showLabel: false,
+                        showLabel: true,
                         // mapStyle: 'amap://styles/whitesmoke',
                         // mapStyle: 'amap://styles/dark',
                         mapStyle: 'amap://styles/fresh',

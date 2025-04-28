@@ -7,9 +7,9 @@ const data = [
   // {
   //   items: [{ img: withBase('/img/alipay.png') }]
   // },
-  // {
-  //   items: [{ img: withBase('/img/wechatpay.png') }]
-  // }
+  {
+    items: [{ img: withBase('/img/coffee.jpg') }]
+  }
 ]
 </script>
 

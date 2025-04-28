@@ -339,7 +339,6 @@ const sidebarCodeDSA = [
 ];
 const sidebarCodeInterview = [
     { text: '基础知识', link: '/code/interview/basin' },
-    { text: '程序设计', link: '/code/interview/program' },
     { text: '算法与数据结构', link: '/code/interview/dsa' },
     { text: '数据库', link: '/code/interview/db' },
     { text: '操作系统', link: '/code/interview/os' },
@@ -470,6 +469,7 @@ const sidebarCodeProgram = [
     },
     { text: '疑难排查', link: '/code/program/problems' },
     { text: '一些有的没的', link: '/code/program/others' },
+    { text: '代码练习', link: '/code/program/practice/' },
     {
         text: '分布式', collapsed: false, items: [
             { text: 'Raft论文', link: '/code/program/distributed/raft' },
