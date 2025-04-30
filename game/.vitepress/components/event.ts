@@ -488,5 +488,40 @@ export const EVENTS: Event[] = [
         start: "2025/04/21 10:00:00 +0800",
         end: "2025/05/02 03:59:59 +0800",
         game: GameName.Genshin,
+    }, {
+        name: "「节拍撞球·梅兹特利篇」活动：元素击球挑战",
+        start: "2025/04/28 10:00",
+        end: "2025/05/06 03:59",
+        game: GameName.Genshin,
     },
+    {
+        name: "「奇逸角技隆隆擂台」活动：趣味多人挑战",
+        start: "2025/04/21 10:00",
+        end: "2025/05/02 03:59",
+        game: GameName.Genshin,
+    },
+    {
+        name: "「祝圣移涌」活动：圣遗物双倍掉落",
+        start: "2025/04/14 04:00",
+        end: "2025/04/21 03:59",
+        game: GameName.Genshin,
+    },
+    {
+        name: "「无极限超激格斗赛」活动：地下激斗挑战赛",
+        start: "2025/04/07 10:00",
+        end: "2025/04/21 03:59",
+        game: GameName.Genshin,
+    },
+    {
+        name: "「荣花纪行」活动说明",
+        start: "2025/5/5 03:59",
+        end: "2025/5/5 02:59",
+        game: GameName.Genshin,
+    },
+    {
+        name: "「地脉移涌」活动：「藏金之花」「启示之花」双倍掉落",
+        start: "2025/03/17 04:00",
+        end: "2025/03/24 03:59",
+        game: GameName.Genshin,
+    }
 ]

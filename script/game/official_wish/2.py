@@ -66,6 +66,14 @@ def get_output_wish_info_filename(lang):
     return f"{OUTPUT_DIR_PREFIX}/wish_info_{utils.Game.i18n_filename(lang)}.json"
 
 
+def get_output_event_tmp_filename(lang):
+    return f"{OUTPUT_DIR_PREFIX}/event_tmp_{utils.Game.i18n_filename(lang)}.json"
+
+
+def get_output_event_info_filename(lang):
+    return f"{OUTPUT_DIR_PREFIX}/event_info_{utils.Game.i18n_filename(lang)}.json"
+
+
 def get_wish_list(url: str):
     url_response = utils.get_url_data(url)
     data = url_response['data']
@@ -141,8 +149,56 @@ def get_wish_tmp_file():
     wish_filter(utils.LANG.EN_US)
 
 
+def event_filter(lang: utils.LANG = utils.LANG.ZH_CN):
+    if lang == utils.LANG.ZH_CN:
+        url = utils.Game.attach_url(
+            URL_ZH_PREFIX, APP_ID_ZH, CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
+    elif lang == utils.LANG.EN_US:
+        url = utils.Game.attach_url(
+            URL_GLOBAL_PREFIX, APP_ID_GLOBAL, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
+
+    data_list = get_wish_list(url)
+    if GET_MORE_WISH:
+        data_list = get_more_wish_list(lang)
+    if data_list is None:
+        return
+    list_content = []
+    for obj in data_list:
+        condition_obj = 'sTitle' in obj and 'sContent' in obj
+        title = obj['sTitle']
+        content = obj['sContent']
+
+        if lang == utils.LANG.ZH_CN:
+            condition_title = isinstance(
+                title, str) and '祈愿' not in title and '活动' in title
+            condition_content = '活动' in content and '活动时间' in content
+        elif lang == utils.LANG.EN_US:
+            condition_title = isinstance(title, str) and 'Wishes' not in title and (
+                'Event' in title or 'event' in title)
+            condition_content = 'event' in content and 'Event Duration' in content
+
+        if condition_obj and condition_title and condition_content:
+            modified_content = utils.get_all_text_from_html(content)
+            imgs = utils.get_all_img_from_html(content)
+            tmp = {
+                'content': modified_content,
+                'title': title,
+                'img': imgs
+            }
+            list_content.append(tmp)
+
+    utils.OperateFile.save_dict_to_file(
+        list_content, get_output_event_tmp_filename(lang))
+
+
+def get_event_tmp_file():
+    event_filter(utils.LANG.ZH_CN)
+    event_filter(utils.LANG.EN_US)
+
 # 根据祈愿信息给角色信息完善
 # 完善 prefix element
+
+
 def append_chara_more_info():
     # todo
     print()
@@ -309,13 +365,65 @@ def format_wish():
     combine_wish_info(wish_info_zh, wish_info_en)
 
 
+def format_event():
+    event_tmp_file_zh = get_output_event_tmp_filename(utils.LANG.ZH_CN)
+    event_tmp_file_en = get_output_event_tmp_filename(utils.LANG.EN_US)
+    json_event_tmp_zh = utils.OperateFile.load_dict_from_file(
+        event_tmp_file_zh)
+    json_event_tmp_en = utils.OperateFile.load_dict_from_file(
+        event_tmp_file_en)
+    if json_event_tmp_zh == {} or json_event_tmp_en == {}:
+        print("LOCAL FILE IS NOT EXIST!!!")
+        return
+
+    # json is arr, every ele is obj
+    # obj keys are: content(str), title(str), img(links arr)
+
+    def check_obj_keys(obj: dict):
+        if 'title' not in obj or 'content' not in obj or 'img' not in obj:
+            print("FORMAT ERROR!!!")
+            return False
+        return True
+
+    event_info_zh = []
+
+    for obj in json_event_tmp_zh:
+        if not check_obj_keys(obj):
+            return
+        title = obj['title']
+        event_name = title
+        if event_name == "":
+            continue
+
+        content = obj['content']
+        event_duration = utils.Game.get_duration(content)
+        if len(event_duration) == 0:
+            continue
+
+        dict_zh = {
+            'event_name': event_name,
+            'start_time': event_duration[0]['start_time'],
+            'end_time': event_duration[0]['end_time'],
+        }
+        event_info_zh.append(dict_zh)
+
+    utils.OperateFile.save_dict_to_file(
+        event_info_zh, get_output_event_info_filename(utils.LANG.ZH_CN))
+
+    if len(event_info_zh) == 0:
+        print("JSON IS NONE!!!")
+        return
+
+
 def main():
     if not OFFLINE:
         print(" ====== online ====== ")
         get_wish_tmp_file()
+        get_event_tmp_file()
 
     print(" ====== offline ====== ")
     format_wish()
+    format_event()
 
 
 if __name__ == "__main__":

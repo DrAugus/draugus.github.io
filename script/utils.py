@@ -246,6 +246,13 @@ def get_duration(text):
             got_dur(start_time, end_time)
             return
         elif len(time_match):
+
+            if '版本更新后' in find_des:
+                start_time = time_match[0]
+                end_time = time_match[0]
+                got_dur(start_time, end_time)
+                return
+
             version_match = re.search(
                 r"Version (\d+\.\d+)", find_des, re.IGNORECASE)
             if version_match:
