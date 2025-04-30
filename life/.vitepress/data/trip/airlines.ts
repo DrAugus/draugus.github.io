@@ -966,7 +966,7 @@ export const AIRLINES: Airline[] = [
         iataCode: "HO",
         icaoCode: "18",
         region: "上海",
-        chineseAbbr: "上海吉祥"
+        chineseAbbr: "吉祥航空"
     },
     {
         chineseName: "海南航空公司",

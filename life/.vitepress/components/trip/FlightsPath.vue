@@ -420,7 +420,7 @@ onMounted(async () => {
                             // isOutline: true,
                             // outlineColor: '#ffeeff',
                             borderWeight: 1,
-                            strokeColor: tmpI % 2 ? "#af0532" : "#105dc1",
+                            strokeColor: tmpI % 2 ? "#4caf50" : "#ff7f0e",
                             // showDir: true,
                             lineCap: 'round',
                             zIndex: 50,

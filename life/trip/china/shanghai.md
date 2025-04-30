@@ -49,19 +49,8 @@
 ## 美食
 
 推荐
-<ul v-for="(v, i) in foodSH">
-    <li>
-        {{ v.name }}  
-        <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
-        <span v-if="!Array.isArray(v.restaurantType)">
-            <Badge type="tip" :text="v.restaurantType" />
-        </span>
-        <span v-else>
-            <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :text="vv" />
-        </span>
-        {{ v.location }}
-    </li>
-</ul>
+
+<Food :foods="foodSH" />
 
 没吃过的 TODO
 
@@ -104,8 +93,7 @@ TODO
 </table>
 
 <script setup>
-import {attractionsSH, TableHead} from "../../.vitepress/data/trip/attraction";
-import {filterFoodByCity} from "../../.vitepress/data/trip/food";
-
-const foodSH = filterFoodByCity("上海");
+import { attractionsSH, TableHead } from "../../.vitepress/data/trip/attraction";
+import { foodSH } from "../../.vitepress/data/trip/food";
+import Food from "../../.vitepress/components/trip/Food.vue";
 </script>

@@ -1503,5 +1503,59 @@ export const FLIGHT_DATA: Flight[] = [
             airportConstructionFee: 50,
             fuelSurcharge: 40,
         }
+    }, {
+        date: new Date('2025-04-24'),
+        number: 'HO2045',
+        airplane: {
+            model: '空客320-214',
+            number: 'B6922'
+        },
+        airlineCode: 'HO',
+        seatClass: 'T',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2025-04-24T18:40:00+08:00'),
+            actualTime: new Date('2025-04-24T19:03:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2025-04-24T21:05:00+08:00'),
+            actualTime: new Date('2025-04-24T21:07:00+08:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 690,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-04-27'),
+        number: 'JD5746',
+        airplane: {
+            model: '空客330-243',
+            number: 'B1043'
+        },
+        airlineCode: 'JD',
+        seatClass: 'F',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2025-04-27T23:15:00+08:00'),
+            actualTime: new Date('2025-04-27T23:30:00+08:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2025-04-28T01:10:00+08:00'),
+            actualTime: new Date('2025-04-28T01:09:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 320,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
     },
 ];

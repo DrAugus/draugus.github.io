@@ -1,0 +1,76 @@
+<template>
+    <div class="mb-4">
+        <el-button type="success" @click="sortFood">人均排序</el-button>
+    </div>
+    <br />
+    <div class="mb-4">
+        <el-button text type="success" @click="filterTag()">全部</el-button>
+        <el-button @click="filterTag(v)" text v-for="(v, i) in tags">{{ v }}</el-button>
+    </div>
+    <ul>
+        <li v-for="(v, i) in sortedFoods">
+            {{ v.name }}
+            <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
+            <span v-if="!Array.isArray(v.restaurantType)">
+                <Badge type="tip" :text="v.restaurantType" />
+            </span>
+            <span v-else>
+                <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :text="vv" />
+            </span>
+            {{ v.location }}
+        </li>
+    </ul>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { ElButton } from 'element-plus';
+
+import { FoodRecord } from '../../type';
+
+const props = defineProps<{
+    foods: FoodRecord[],
+}>();
+
+const key = ref(0);
+const sortedFoods = ref(props.foods);
+
+const tags = Array.from(
+    new Set(
+        props.foods.flatMap(obj =>
+            Array.isArray(obj.restaurantType) ? obj.restaurantType : [obj.restaurantType]
+        )
+    )
+);
+
+
+const sortFood = () => {
+    key.value = key.value + 1;
+    if (key.value > 2) key.value = 0;
+    if (key.value === 0) {
+        sortedFoods.value = props.foods;
+    } else if (key.value === 1) {
+        sortedFoods.value = [...props.foods].sort((a, b) => {
+            return b.pricePerPerson - a.pricePerPerson;
+        });
+    } else if (key.value === 2) {
+        sortedFoods.value = [...props.foods].sort((a, b) => {
+            return a.pricePerPerson - b.pricePerPerson;
+        });
+    }
+}
+
+const filterTag = (tag?: string) => {
+    sortedFoods.value = props.foods;
+    if (tag === undefined) {
+        return;
+    }
+    sortedFoods.value = sortedFoods.value.filter((item: FoodRecord) => {
+        if (Array.isArray(item.restaurantType)) {
+            return item.restaurantType.includes(tag);
+        } else {
+            return item.restaurantType === tag;
+        }
+    });
+}
+</script>

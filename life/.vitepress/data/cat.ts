@@ -32,7 +32,7 @@ export const catLitterData: CatLitter[] = [
     {
         brand: "pidan",
         specification: "经典混合猫砂",
-        pricePerKg: { min: 8.96 },
+        pricePerKg: { min: 5.69, max: 8.96 },
         disadvantages: "底部灰尘也蛮多的"
     },
     {
@@ -120,5 +120,11 @@ export const catLitterData: CatLitter[] = [
         specification: "白茶清香混合猫砂",
         pricePerKg: { min: 3.54 },
         commonSpecification: "￥8.5/2.4kg",
+    }, {
+        brand: "永驰",
+        specification: "混合绿茶5:5",
+        pricePerKg: { min: 2.1 },
+        commonSpecification: "￥10.38/5kg",
+        disadvantages: "包装袋很简陋，矿砂过多，灰尘大"
     },
 ];

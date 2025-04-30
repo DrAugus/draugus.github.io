@@ -6,39 +6,19 @@
 
 吃的
 
-- 夏星酒馆<Badge type="warning" text="人均 ¥90" />  <Badge type="tip" text="韩国料理" />
-- 赤坂亭  <Badge type="warning" text="人均 ¥380" />  <Badge type="tip" text="日料" /> <Badge type="tip" text="烧烤" /><Badge type="tip" text="肉" />
-- 荆九爷爆炒桥头三嫩  <Badge type="warning" text="人均 ¥76" />  <Badge type="tip" text="川菜" />
-- 胡集酒肆·唐潮西域菜  <Badge type="warning" text="人均 ¥97" />  <Badge type="tip" text="新疆菜" />
-- 蛙小侠   <Badge type="warning" text="人均 ¥80" />  <Badge type="tip" text="川湘菜" /><Badge type="tip" text="蛙" />
-- 小牛家村·贵州黄牛肉火锅  <Badge type="warning" text="人均 ¥77" />  <Badge type="tip" text="牛肉火锅" />
-- AJIYA味屋日式烧肉 <Badge type="warning" text="人均 ¥180" />  <Badge type="tip" text="日式烤肉" />
-- 牛New寿喜烧<Badge type="warning" text="人均 ¥170" />  <Badge type="tip" text="牛肉" /><Badge type="tip" text="自助" />
-- 一绪に寿喜烧 <Badge type="warning" text="人均 ¥170" />  <Badge type="tip" text="牛肉" /><Badge type="tip" text="自助" />
-- 木屋烧烤 <Badge type="warning" text="人均 ¥108" />  <Badge type="tip" text="烤串" />
-- 黔老头·贵州酸汤牛肉火锅 <Badge type="warning" text="人均 ¥90" />  <Badge type="tip" text="牛肉火锅" />
-- 串王阿三 <Badge type="warning" text="人均 ¥90" />  <Badge type="tip" text="烤串" />
-- 炉边酒叙·东北菜·冰煮羊·精酿啤酒·夜宵  <Badge type="warning" text="人均 ¥92" />  <Badge type="tip" text="烤串" />
-- 桂语山房 <Badge type="warning" text="人均 ¥800" />  <Badge type="tip" text="杭帮菜" />
-- 辣得香湘菜馆 <Badge type="warning" text="人均 ¥76" /> <Badge type="tip" text="湘菜" />  
-- 吃饭皇帝大<Badge type="warning" text="人均 ¥95" /> <Badge type="tip" text="湘菜" />
-- 喜樘海鲜餐厅<Badge type="warning" text="人均 ¥135" /> <Badge type="tip" text="海鲜" />
-- 東大方 <Badge type="warning" text="人均 ¥103" /><Badge type="tip" text="浙菜" />
-- 湘绯·杭城拾佳湘菜 <Badge type="warning" text="人均 ¥89" /><Badge type="tip" text="湘菜" />
-- 隐食·喜樂餐厅 <Badge type="warning" text="人均 ¥113" /><Badge type="tip" text="创意菜" />
-- 鲁员外地锅鸡地锅鱼<Badge type="warning" text="人均 ¥77" /><Badge type="tip" text="地锅鸡" />
-- 三两好友深夜食堂 <Badge type="warning" text="人均 ¥107" /><Badge type="tip" text="海鲜" /> <Badge type="tip" text="烤乳猪" />
-- 牛大倌黄牛肉火锅<Badge type="warning" text="人均 ¥70" /> <Badge type="tip" text="牛肉火锅" />
-- 东海鲜生海鲜酒楼<Badge type="warning" text="人均 ¥85" /><Badge type="tip" text="海鲜" />
-- 313羊庄铁锅烀<Badge type="warning" text="人均 ¥118" />   <Badge type="tip" text="烤全羊" /><Badge type="tip" text="烧烤龙虾" /><Badge type="tip" text="牛羊肉火锅" />
-- 绿茶<Badge type="warning" text="人均 ¥100" /> <Badge type="tip" text="杭帮菜" />  <Badge type="tip" text="融合菜" />
-- 阿英川菜馆<Badge type="warning" text="人均 ¥96" /> <Badge type="tip" text="川菜" />
-- 三分银·辣之源贵州菜 <Badge type="warning" text="人均 ¥88" /><Badge type="tip" text="黔菜" />  
+<Food :foods="foodHZ" />
 
 酒吧
 
-- 酒隐（预调酒）  <Badge type="tip" text="莫斯科骡子" /><Badge type="warning" text="￥78" /><Badge type="tip" text="房东的猫" /><Badge type="warning" text="￥88" /><Badge type="tip" text="碎桃" /><Badge type="warning" text="￥88" /><Badge type="tip" text="吉娃娃" /><Badge type="warning" text="￥118" />
-- TASTE ROOM（啤酒）
+- 酒隐<Badge type="danger" text="预调酒" /> <Badge type="tip" text="莫斯科骡子" /><Badge type="warning" text="￥78" /><Badge type="tip" text="房东的猫" /><Badge type="warning" text="￥88" /><Badge type="tip" text="碎桃" /><Badge type="warning" text="￥88" /><Badge type="tip" text="吉娃娃" /><Badge type="warning" text="￥118" />
+- TASTE ROOM<Badge type="danger" text="啤酒" />
+- Bar 福吧<Badge type="danger" text="清吧" /> 杭州市上城区柳营路5号101室
+- 鼓茶爵士俱乐部 GOOD CHA JAZZ CLUB<Badge type="danger" text="Live House" /> 杭州市上城区斗富一桥西河下5-2号
+- 黄楼爵士俱乐部<Badge type="danger" text="Live House" /> 杭州市上城区柳营路6号(青藤茶楼对面)
+
+:::details angela 推荐
+好喝到福吧，听爵士去黄楼或鼓茶爵士
+:::
 
 千万别吃
 
@@ -80,12 +60,12 @@
 - 西溪湿地（西湖西北部）
 - 宋城（西湖最南部）
 - 河坊街步行街
+- 拱宸桥，运河游船，刀剑博物馆，扇博物馆
+- 西湖文化广场各种博物馆，记得提前预约，之江馆
+- 各种寺庙，法喜寺、灵隐寺
+- 湘湖，还是别去了(未来可期？那就未来再去)
 - 钱江世纪公园
 - 城市阳台 建议周二、六去 注意查看是否有灯光秀 晚上去
-- 拱宸桥，运河游船，刀剑博物馆，扇博物馆
-- 西湖文化广场各种博物馆，记得提前预约
-- 湘湖，还是别去了(未来可期？那就未来再去)
-- 各种寺庙，法喜寺、灵隐寺
 
 **西湖景点盘点**  
 **太子湾**赏花，参考时间3/10-4/16，预计三月中下旬进入盛花期。全天按每2小时分设为5个预约时段，其中8:00—10:00，10:00—12:00，12:00—14:00，14:00—16:00四个时间段可预约人数为各1万人，16:00—17:00可预约人数为5千人。
@@ -269,3 +249,8 @@ Day3: 神仙居景区
 ▶Day2：**云和梯田**【世界梯田博物馆→游客中心→观云索道直接到白银谷站→七星墩→银王亭→乌涧飞瀑→银官桥→风雨石门→银矿文化展示馆→老茶坊→坑根石寨→九曲云环→日出云海→天开云顶→农耕小道→索道九曲云环站→（索道）游客中心】→（景区班车）丽水站→（高铁13分钟）缙云西站→（25分钟左右车程）**仙都景区**
 
 ▶Day3：仙都景区【朱潭山→鼎湖峰→黄帝祠宇→飞天广场→仙都观→小赤壁→倪翁洞→岩宕书院】→（班车或打车30分钟左右）缙云西站返程
+
+<script setup>
+import { foodHZ } from "../../../.vitepress/data/trip/food";
+import Food from "../../../.vitepress/components/trip/Food.vue";
+</script>
