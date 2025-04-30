@@ -1,11 +1,16 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig, UserConfig } from 'vitepress';
+
+// Extend UserConfig to include the 'pwa' property
+interface ExtendedUserConfig extends UserConfig {
+    pwa?: Record<string, any>;
+}
 import { navbar } from './navbar';
 import { sidebar } from './sidebar';
 import { withPwa } from '@vite-pwa/vitepress'
 
 const ogUrl = 'https://augusmeow.github.io'
 
-export default withPwa(defineConfig({
+export default withPwa(defineConfig(<ExtendedUserConfig>{
     // These are app level configs.
     lang: 'zh-CN',
     title: 'Augusの享楽',
