@@ -324,90 +324,86 @@ function initPro(AMap: any, code: (string | undefined)[], dep: number) {
 
 const drawMap = async () => {
 
-  // 检查 window 对象是否存在  
-  if (typeof window !== 'undefined') {
-    try {
-      // 动态导入 AMapLoader  
-      const { default: AMapLoader } = await import('@amap/amap-jsapi-loader');
-      aMapLoader.value = AMapLoader;
-      // 使用 aMapLoader.value 来初始化地图等  
-      aMapLoader.value.load({
-        key: "86d5b3834c7e9dd95ac4517948ce435c", // 申请好的Web端开发者Key，首次调用 load 时必填
-        version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-        plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
-      })
-        .then((AMap) => {
+
+  try {
+    // 动态导入 AMapLoader  
+    const { default: AMapLoader } = await import('@amap/amap-jsapi-loader');
+    aMapLoader.value = AMapLoader;
+    // 使用 aMapLoader.value 来初始化地图等  
+    aMapLoader.value.load({
+      key: "86d5b3834c7e9dd95ac4517948ce435c", // 申请好的Web端开发者Key，首次调用 load 时必填
+      version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
+      plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+    })
+      .then((AMap) => {
 
 
-          var getColorByRandom = function () {
-            var rg = Math.random() * 155 + 50;
-            return 'rgb(' + rg + ',' + rg + ',255)';
+        var getColorByRandom = function () {
+          var rg = Math.random() * 155 + 50;
+          return 'rgb(' + rg + ',' + rg + ',255)';
+        }
+        // var disCountry = new AMap.DistrictLayer.Country({
+        //   zIndex: 10,
+        //   SOC: 'JPN',
+        //   depth: 1,
+        //   styles: {
+        //     'nation-stroke': '#22ffff',
+        //     'coastline-stroke': [0.85, 0.63, 0.94, 1],
+        //     'province-stroke': 'white',
+        //     'fill': function (props) {
+        //       console.log(props);
+        //       return getColorByRandom()
+        //     }
+        //   }
+        // })
+
+
+        // 颜色辅助方法
+        var colors = {};
+        var getColorByAdcode = function (adcode) {
+          if (!colors[adcode]) {
+            var gb = Math.random() * 155 + 50;
+            colors[adcode] = 'rgb(' + gb + ',' + gb + ',255)';
           }
-          // var disCountry = new AMap.DistrictLayer.Country({
-          //   zIndex: 10,
-          //   SOC: 'JPN',
-          //   depth: 1,
-          //   styles: {
-          //     'nation-stroke': '#22ffff',
-          //     'coastline-stroke': [0.85, 0.63, 0.94, 1],
-          //     'province-stroke': 'white',
-          //     'fill': function (props) {
-          //       console.log(props);
-          //       return getColorByRandom()
-          //     }
-          //   }
-          // })
 
+          return colors[adcode];
+        };
 
-          // 颜色辅助方法
-          var colors = {};
-          var getColorByAdcode = function (adcode) {
-            if (!colors[adcode]) {
-              var gb = Math.random() * 155 + 50;
-              colors[adcode] = 'rgb(' + gb + ',' + gb + ',255)';
-            }
+        // // 按钮事件
+        // function changeAdcode(e) {
+        //   var code = e.target.value;
+        //   if (code != 100000) {
+        //     initPro(code, depth);
+        //   }
+        // }
 
-            return colors[adcode];
-          };
+        // function changeDepth(e) {
+        //   var dep = e.target.value;
+        //   initPro(adCode, dep);
+        // }
 
-          // // 按钮事件
-          // function changeAdcode(e) {
-          //   var code = e.target.value;
-          //   if (code != 100000) {
-          //     initPro(code, depth);
-          //   }
-          // }
+        // TODO 增加右下角图例解释
 
-          // function changeDepth(e) {
-          //   var dep = e.target.value;
-          //   initPro(adCode, dep);
-          // }
-
-          // TODO 增加右下角图例解释
-
-          map = new AMap.Map("amap-container-aug", {
-            zoom: 7,
-            center: [119.724457, 30.234375], // 临安
-            viewMode: '3D',
-            pitch: 0,
-            // showIndoorMap: false,
-            // showLabel: false,
-            // mapStyle: 'amap://styles/whitesmoke',
-            // mapStyle: 'amap://styles/dark',
-            mapStyle: 'amap://styles/fresh',
-          });
-
-          adjustMapLayer(AMap);
-
-        })
-        .catch((e) => {
-          console.log(e);
+        map = new AMap.Map("amap-container-aug", {
+          zoom: 7,
+          center: [119.724457, 30.234375], // 临安
+          viewMode: '3D',
+          pitch: 0,
+          // showIndoorMap: false,
+          // showLabel: false,
+          // mapStyle: 'amap://styles/whitesmoke',
+          // mapStyle: 'amap://styles/dark',
+          mapStyle: 'amap://styles/fresh',
         });
-    } catch (error) {
-      console.error('Failed to load AMapLoader:', error);
-    }
-  } else {
-    console.log('Window object is not available, skipping AMapLoader import.');
+
+        adjustMapLayer(AMap);
+
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  } catch (error) {
+    console.error('Failed to load AMapLoader:', error);
   }
 }
 
@@ -453,12 +449,12 @@ const adjustMapLayer = (AMap: any) => {
 const vpDocRef = ref<HTMLElement | null>(null);
 // 用于存储 amap-container-aug 元素引用
 const containerRef = ref<HTMLElement | null>(null);
-// 用于存储屏幕宽度
-const screenWidth = ref<number>(window.innerWidth);
 // 检测是否为移动设备
 const isMobile = ref(false);
 
 onMounted(() => {
+  // 用于存储屏幕宽度
+  const screenWidth = ref<number>(window.innerWidth);
   // 通过class获取元素，这里假设只有一个class为VPDoc的元素
   const vpDocElements = document.querySelectorAll('.VPDoc');
   if (vpDocElements.length > 0) {
