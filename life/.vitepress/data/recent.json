@@ -2,6 +2,66 @@
     "title": "",
     "items": [
         {
+            "title": "如何删除单向链表的中间节点",
+            "desc": "如何删除单向链表的中间节点 要删除单向链表中间的节点，需要找到链表的中间节点，并修改前一个节点的指",
+            "link": "/code/program/practice/1",
+            "date": "2025-04-30"
+        },
+        {
+            "title": "荒岛求生",
+            "desc": "荒岛求生 题目描述 有一个荒岛，只有左右两个港口，只有一座桥连接这两个港口，现在有一群人需要从两个",
+            "link": "/code/program/practice/2",
+            "date": "2025-04-30"
+        },
+        {
+            "title": "精准核酸检测",
+            "desc": "精准核酸检测 题目描述 为了达到新冠疫情精准防控的需要，为了避免全员核酸检测带来的浪费，需要精准圈",
+            "link": "/code/program/practice/3",
+            "date": "2025-04-30"
+        },
+        {
+            "title": "猜数字",
+            "desc": "猜数字 题目描述 一个人设定一组四码的数字作为谜底，另一方猜。 每猜一个数，出数者就要根据这个数字",
+            "link": "/code/program/practice/4",
+            "date": "2025-04-30"
+        },
+        {
+            "title": "小猫",
+            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
+            "link": "/daily/cat",
+            "date": "2024-05-23"
+        },
+        {
+            "title": "日用价格参考",
+            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
+            "link": "/daily/goods-price",
+            "date": "2024-05-23"
+        },
+        {
+            "title": "上海",
+            "desc": "上海 景点 交通 游玩 开放 预约 票价 平台 推荐 :-:-:-:-: 甜爱路地铁3/8号线虹口",
+            "link": "/trip/china/shanghai",
+            "date": "2025-02-17"
+        },
+        {
+            "title": "浙江",
+            "desc": "浙江 杭州 美食 吃的 酒吧 - 酒隐 - TASTE ROOM - Bar 福吧 杭州市上城区柳",
+            "link": "/trip/china/zhejiang/index",
+            "date": "2025-03-29"
+        },
+        {
+            "title": "嘉兴",
+            "desc": "嘉兴 import CityLink from '../../.vitepress/compone",
+            "link": "/trip/travelogue/20250404",
+            "date": "2025-04-16"
+        },
+        {
+            "title": "设备价格",
+            "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价 detail",
+            "link": "/daily/apple/price",
+            "date": "2024-06-12"
+        },
+        {
             "title": "关键字",
             "desc": "关键字 constexpr 它的主要作用是在编译时求值。这意味着，被 constexpr 修饰的表",
             "link": "/code/cpp/keywords",
@@ -32,12 +92,6 @@
             "date": "2025-01-14"
         },
         {
-            "title": "日用价格参考",
-            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
-            "link": "/daily/goods-price",
-            "date": "2024-05-23"
-        },
-        {
             "title": "江西",
             "desc": "江西 老三样 打平火 南昌 上饶 Day1：抵达上饶→望仙谷（夜宿望仙谷） Day2：望仙谷→葛仙",
             "link": "/trip/china/jiangxi/index",
@@ -56,18 +110,6 @@
             "date": "2025-04-16"
         },
         {
-            "title": "设备价格",
-            "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价 detail",
-            "link": "/daily/apple/price",
-            "date": "2024-06-12"
-        },
-        {
-            "title": "小猫",
-            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
-            "link": "/daily/cat",
-            "date": "2024-05-23"
-        },
-        {
             "title": "河北",
             "desc": "河北",
             "link": "/trip/china/hebei/index",
@@ -77,48 +119,6 @@
             "title": "内蒙古",
             "desc": "内蒙古",
             "link": "/trip/china/neimenggu/index",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "宁夏",
-            "desc": "宁夏",
-            "link": "/trip/china/ningxia/index",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "青海",
-            "desc": "青海",
-            "link": "/trip/china/qinghai/index",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "山东",
-            "desc": "山东",
-            "link": "/trip/china/shandong/index",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "新疆",
-            "desc": "新疆",
-            "link": "/trip/china/xinjiang/index",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "西藏",
-            "desc": "西藏",
-            "link": "/trip/china/xizang/index",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "浙江",
-            "desc": "浙江 杭州 美食 吃的 - 夏星酒馆 - 赤坂亭 - 荆九爷爆炒桥头三嫩 - 胡集酒肆·唐潮西域菜",
-            "link": "/trip/china/zhejiang/index",
-            "date": "2025-03-29"
-        },
-        {
-            "title": "上海",
-            "desc": "上海 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20250218",
             "date": "2025-04-16"
         }
     ]
