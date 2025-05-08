@@ -199,7 +199,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         intro: "游玩"
                     }, {
                         date: {
-                            start: new Date('2025/01/26'), 
+                            start: new Date('2025/01/26'),
                         },
                         intro: "转机"
                     }
@@ -431,7 +431,14 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         start: new Date('2024/01/01'),
                     },
                     intro: "送机"
-                },]
+                }, {
+                    date: {
+                        start: new Date('2025/05/05'),
+                        end: new Date('2025/05/06'),
+                    },
+                    intro: "自驾"
+                },
+                ]
             },
             {
                 id: '苏州', info: [{
@@ -652,7 +659,7 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         intro: "高铁"
                     }, {
                         date: {
-                            start: new Date('2025/01/26'), 
+                            start: new Date('2025/01/26'),
                         },
                         intro: "转机"
                     }, {
@@ -706,6 +713,15 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         end: new Date('2025/02/11'),
                     },
                     intro: "自驾"
+                }],
+            }, {
+                id: '景德镇',
+                info: [{
+                    date: {
+                        start: new Date('2025/05/03'),
+                        end: new Date('2025/05/05'),
+                    },
+                    intro: "游玩"
                 }],
             },
         ]

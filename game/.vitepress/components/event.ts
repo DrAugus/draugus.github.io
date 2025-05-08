@@ -108,7 +108,16 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'day',
         },
         backspace: 1,
-    }, {
+    },{
+        name: "全息战略·幻痛",
+        first: "2025/04/29 12:00:00 +0800", 
+        game: GameName.WW,
+        duration: {
+            value: 43,
+            unit: 'day',
+        },
+        backspace: 1,
+    },  {
         name: "千道门扉的异想",
         first: "2025/02/17 04:00:00 +0800",
         reward: 160,
