@@ -5,7 +5,8 @@ on:
       - master
     paths:
       - ".github/workflows/borrow-server.yml"
-
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest

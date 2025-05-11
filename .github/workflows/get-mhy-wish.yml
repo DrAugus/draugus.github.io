@@ -24,7 +24,8 @@ on:
     - cron: "0 4 * * 2"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+permissions:
+  contents: write
 jobs:
   py-game-wish:
     runs-on: ubuntu-latest

@@ -4,7 +4,8 @@ on:
     branches:
       - dev-game
       - dev-py
-
+permissions:
+  contents: write
 jobs:
   pull-request:
     name: Open PR to master

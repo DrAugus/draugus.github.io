@@ -22,7 +22,8 @@ on:
       - ".github/workflows/deploy-game.yml"
       - "**/package.json"
       - "**/pnpm-lock.yaml"
-
+permissions:
+  contents: write
 jobs:
   deploy-game:
     strategy:
