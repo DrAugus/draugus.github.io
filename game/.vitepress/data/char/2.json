@@ -1054,5 +1054,27 @@
         "city": "Natlan",
         "ele": "electro",
         "weapon": "catalyst"
+    },
+    "ifa": {
+        "id": "ifa",
+        "name": "伊法",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "来自「花羽会」的兽医，深受人与动物的欢迎与喜爱。身边圆圆的生物是助手。",
+        "city": "Natlan",
+        "ele": "anemo",
+        "weapon": "catalyst"
+    },
+    "escoffier": {
+        "id": "escoffier",
+        "name": "爱可菲",
+        "prefix": "",
+        "star": 5,
+        "event_exclusive": true,
+        "intro": "闻名枫丹的严苛主厨，一丝不苟地探寻着料理的极致。",
+        "city": "Fontaine",
+        "ele": "cryo",
+        "weapon": "polearm"
     }
 }
