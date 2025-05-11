@@ -275,7 +275,9 @@ const sidebarTools = [
     }, {
         text: '杂项', collapsed: false, items: [
             { text: 'RBAC', link: '/tools/others/rbac' },
-            { text: 'Excel', link: '/tools/others/excel' },]
+            { text: 'Excel', link: '/tools/others/excel' },
+            { text: 'Word', link: '/tools/others/word' },
+        ]
     },
     {
         text: '一些工具', collapsed: false, items: [

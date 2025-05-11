@@ -12,8 +12,8 @@
     --vp-c-brand-dimm: rgba(100, 108, 255, .08);
 }
 
-.vp-doc tr {
+/* .vp-doc tr {
     white-space: nowrap;
     overflow: hidden; 
     text-overflow: ellipsis; 
-}
+} */

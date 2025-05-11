@@ -410,3 +410,9 @@ export interface Question {
   question: string,
   date: Date,
 }
+
+export interface AirportBankRights {
+  bank: string,
+  card: string | string[],
+  rules: string | string[],
+}
