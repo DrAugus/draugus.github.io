@@ -1,20 +1,19 @@
-#
+# 6 means hsr
 
 # news chan id 中文官网
-# 16:00 2024/09/05 统计 数值似乎不太对 以最多的 719 为准吧
-# 719: 最新     3164
-# 720: 新闻     3057
-# 721: 公告     96
-# 722: 活动     15
-# 723: all?     2931
+# 17:00 2025/05/15 统计
+# 255: 最新     496
+# 256: 新闻     208
+# 257: 公告     251
+# 258: 活动     37
 
 # news chan id 英文官网
-# 15:00 2024/09/18 统计 数值似乎不太对 以最多的 395 为准吧
-# 395: Latest   1499
-# 396: Info     1129
-# 397: Updates  139
-# 398: Events   231
-# 399: all?     1152
+# 17:00 2025/05/15 统计
+# 248: Latest   241
+# 249: News     156
+# 250: Notices  57
+# 251: Events   28
+
 
 import argparse
 
@@ -22,27 +21,26 @@ from script import utils
 
 ####### just backup meaningless #######
 url_global = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/a1b1f9d3315447cc/getContentList?iAppId=32&iChanId=395&iPageSize=99&iPage=1&sLangKey=en-us"
-url_zh = "https://api-takumi-static.mihoyo.com/content_v2_user/app/16471662a82d418a/getContentList?iAppId=43&iChanId=719&iPageSize=99&iPage=1&sLangKey=zh-cn"
+url_zh = "https://act-api-takumi-static.mihoyo.com/content_v2_user/app/1963de8dc19e461c/getContentList?iPage=1&iPageSize=5&sLangKey=zh-cn&isPreview=0&iChanId=255"
 
 url_city_name = ""
 #######################################
 
-URL_GLOBAL_PREFIX = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/a1b1f9d3315447cc/getContentList"
-URL_ZH_PREFIX = "https://api-takumi-static.mihoyo.com/content_v2_user/app/16471662a82d418a/getContentList"
+ID_GAME = 6
 
-APP_ID_GLOBAL = 32
-APP_ID_ZH = 43
+URL_GLOBAL_PREFIX = "https://sg-public-api-static.hoyoverse.com/content_v2_user/app/113fe6d3b4514cdd/getContentList"
+URL_ZH_PREFIX = "https://act-api-takumi-static.mihoyo.com/content_v2_user/app/1963de8dc19e461c/getContentList"
 
-CHAN_ID_GLOBAL = 395
-CHAN_ID_ZH = 719
+CHAN_ID_GLOBAL = 248
+CHAN_ID_ZH = 255
 
-OUTPUT_DIR_PREFIX = f"{utils.get_project_root()}/script/auto/output/wish/2"
+OUTPUT_DIR_PREFIX = f"{utils.get_project_root()}/script/auto/output/wish/{ID_GAME}"
 
 OFFLINE = True
 GET_MORE_WISH = False
 MORE_WISH_PAGE = 5
 
-JSON_LOCAL_CHAR_FILENAME = f"{utils.get_project_root()}/game/.vitepress/data/char/2.json"
+JSON_LOCAL_CHAR_FILENAME = f"{utils.get_project_root()}/game/.vitepress/data/char/{ID_GAME}.json"
 
 #######################################
 parser = argparse.ArgumentParser(description="Process some integers.")
@@ -74,6 +72,10 @@ def get_output_event_info_filename(lang):
     return f"{OUTPUT_DIR_PREFIX}/event_info_{utils.Game.i18n_filename(lang)}.json"
 
 
+def get_output_event_info_filename_final(lang):
+    return f"{OUTPUT_DIR_PREFIX}/event_info_{utils.Game.i18n_filename(lang)}"
+
+
 def get_wish_list(url: str):
     url_response = utils.get_url_data(url)
     data = url_response['data']
@@ -93,11 +95,11 @@ def get_more_wish_list(lang: utils.LANG):
     more_list = []
     for idx in range(1, MORE_WISH_PAGE+1):
         if lang == utils.LANG.ZH_CN:
-            url = utils.Game.attach_url(
-                URL_ZH_PREFIX, APP_ID_ZH, CHAN_ID_ZH, utils.Game.LANG_KEY_ZH, idx)
+            url = utils.HSR.attach_url(
+                URL_ZH_PREFIX,  CHAN_ID_ZH, utils.Game.LANG_KEY_ZH, idx)
         elif lang == utils.LANG.EN_US:
-            url = utils.Game.attach_url(
-                URL_GLOBAL_PREFIX, APP_ID_GLOBAL, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN, idx)
+            url = utils.HSR.attach_url(
+                URL_GLOBAL_PREFIX, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN, idx)
 
         data_list = get_wish_list(url)
         more_list.extend(data_list)
@@ -106,11 +108,11 @@ def get_more_wish_list(lang: utils.LANG):
 
 def wish_filter(lang: utils.LANG = utils.LANG.ZH_CN):
     if lang == utils.LANG.ZH_CN:
-        url = utils.Game.attach_url(
-            URL_ZH_PREFIX, APP_ID_ZH, CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
+        url = utils.HSR.attach_url(
+            URL_ZH_PREFIX,  CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
     elif lang == utils.LANG.EN_US:
-        url = utils.Game.attach_url(
-            URL_GLOBAL_PREFIX, APP_ID_GLOBAL, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
+        url = utils.HSR.attach_url(
+            URL_GLOBAL_PREFIX,  CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
 
     data_list = get_wish_list(url)
     if GET_MORE_WISH:
@@ -119,18 +121,28 @@ def wish_filter(lang: utils.LANG = utils.LANG.ZH_CN):
         return
     list_content = []
     for obj in data_list:
-        condition_obj = 'sTitle' in obj and 'sContent' in obj
+        condition_obj = 'sTitle' in obj and 'sContent' in obj and 'sIntro' in obj
+        if not condition_obj:
+            print("!!! WISH FILTER MEET ERROR DATA !!!")
+            continue
         title = obj['sTitle']
+        intro = obj['sIntro']
         content = obj['sContent']
+        condition_final = False
 
         if lang == utils.LANG.ZH_CN:
-            condition_title = isinstance(title, str) and '祈愿' in title
-            condition_content = '集录祈愿' not in content
+            condition_title = isinstance(title, str) and '跃迁' in title
+            condition_intro = isinstance(title, str) and '跃迁' in intro
+            condition_content = '跃迁' in content
+            condition_final = (
+                condition_title or condition_intro) and condition_content
         elif lang == utils.LANG.EN_US:
-            condition_title = isinstance(title, str) and 'Wishes' in title
-            condition_content = 'Chronicled Wish' not in content
+            condition_title = isinstance(title, str) and 'Warp' in title
+            condition_intro = isinstance(title, str) and 'Warp' in intro
+            condition_content = 'Warp' in content
+            condition_final = condition_title or condition_intro or condition_content
 
-        if condition_obj and condition_title and condition_content:
+        if condition_final:
             modified_content = utils.get_all_text_from_html(content)
             imgs = utils.get_all_img_from_html(content)
             tmp = {
@@ -151,11 +163,11 @@ def get_wish_tmp_file():
 
 def event_filter(lang: utils.LANG = utils.LANG.ZH_CN):
     if lang == utils.LANG.ZH_CN:
-        url = utils.Game.attach_url(
-            URL_ZH_PREFIX, APP_ID_ZH, CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
+        url = utils.HSR.attach_url(
+            URL_ZH_PREFIX, CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
     elif lang == utils.LANG.EN_US:
-        url = utils.Game.attach_url(
-            URL_GLOBAL_PREFIX, APP_ID_GLOBAL, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
+        url = utils.HSR.attach_url(
+            URL_GLOBAL_PREFIX, CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
 
     data_list = get_wish_list(url)
     if GET_MORE_WISH:
@@ -164,20 +176,21 @@ def event_filter(lang: utils.LANG = utils.LANG.ZH_CN):
         return
     list_content = []
     for obj in data_list:
-        condition_obj = 'sTitle' in obj and 'sContent' in obj
+        condition_obj = 'sTitle' in obj and 'sContent' in obj and 'sIntro' in obj
+        if not condition_obj:
+            print("!!! EVENT FILTER MEET ERROR DATA !!!")
+            continue
         title = obj['sTitle']
+        intro = obj['sIntro']
         content = obj['sContent']
+        condition_final = False
 
         if lang == utils.LANG.ZH_CN:
-            condition_title = isinstance(
-                title, str) and '祈愿' not in title and '活动' in title
             condition_content = '活动' in content and '活动时间' in content
         elif lang == utils.LANG.EN_US:
-            condition_title = isinstance(title, str) and 'Wishes' not in title and (
-                'Event' in title or 'event' in title)
-            condition_content = 'event' in content and 'Event Duration' in content
+            condition_content = 'event' in content and 'Event Duration' in content and 'Event Warp' not in content
 
-        if condition_obj and condition_title and condition_content:
+        if condition_content:
             modified_content = utils.get_all_text_from_html(content)
             imgs = utils.get_all_img_from_html(content)
             tmp = {
@@ -385,6 +398,15 @@ def format_event():
             return False
         return True
 
+    def add_seconds(time: str):
+        cal_colon = time.split(':')
+        if len(cal_colon) == 2:
+            return f"{time}:{cal_colon[1]}"
+        return time
+
+    def add_time_zone(time: str):
+        return time + " +0800"
+
     event_info_zh = []
 
     for obj in json_event_tmp_zh:
@@ -402,17 +424,33 @@ def format_event():
 
         dict_zh = {
             'event_name': event_name,
-            'start_time': event_duration[0]['start_time'],
-            'end_time': event_duration[0]['end_time'],
+            'start_time': add_time_zone(add_seconds(event_duration[0]['start_time'])),
+            'end_time': add_time_zone(add_seconds(event_duration[0]['end_time'])),
+            'game_name': 'HSR'
         }
+
         event_info_zh.append(dict_zh)
 
     utils.OperateFile.save_dict_to_file(
         event_info_zh, get_output_event_info_filename(utils.LANG.ZH_CN))
+    replace_json_file_2_ts(
+        get_output_event_info_filename(utils.LANG.ZH_CN),
+        get_output_event_info_filename_final(utils.LANG.ZH_CN),
+        ['"event_name"', '"start_time"', '"end_time"', '"game_name"', '"HSR"'],
+        ['name', 'start', 'end', 'game', 'GameName.HSR']
+    )
 
     if len(event_info_zh) == 0:
         print("JSON IS NONE!!!")
         return
+
+
+def replace_json_file_2_ts(file_in: str, file_out: str, field_src: list, field_dst: list):
+    def handle_one(line: str):
+        for src, dst in zip(field_src, field_dst):
+            line = line.replace(src, dst)
+        return line
+    utils.OperateFile.open_and_read_no_strip(file_in, handle_one, file_out)
 
 
 def main():
@@ -422,7 +460,7 @@ def main():
         get_event_tmp_file()
 
     print(" ====== offline ====== ")
-    format_wish()
+    # format_wish()
     format_event()
 
 

@@ -108,16 +108,16 @@ export const PERMANENT_EVENTS: PermanentEvent[] = [
             unit: 'day',
         },
         backspace: 1,
-    },{
+    }, {
         name: "全息战略·幻痛",
-        first: "2025/04/29 12:00:00 +0800", 
+        first: "2025/04/29 12:00:00 +0800",
         game: GameName.WW,
         duration: {
             value: 43,
             unit: 'day',
         },
         backspace: 1,
-    },  {
+    }, {
         name: "千道门扉的异想",
         first: "2025/02/17 04:00:00 +0800",
         reward: 160,
@@ -532,5 +532,28 @@ export const EVENTS: Event[] = [
         start: "2025/03/17 04:00",
         end: "2025/03/24 03:59",
         game: GameName.Genshin,
-    }
+    }, {
+        name: "「异器盈界300%」活动：隧洞遗器限时三倍掉落",
+        start: "2025/05/09 04:00:00 +0800",
+        end: "2025/05/19 03:59:59 +0800",
+        game: GameName.HSR
+    },
+    {
+        name: "3.2版本活动跃迁（其二）",
+        start: "2025/04/30 12:00:00 +0800",
+        end: "2025/05/20 15:00:00 +0800",
+        game: GameName.HSR
+    },
+    {
+        name: "听歌领80星琼！星穹铁道新歌《不虚此行》已上线音乐平台",
+        start: "2025/4/27 12:00:00 +0800",
+        end: "2025/5/10 23:59:59 +0800",
+        game: GameName.HSR
+    },
+    {
+        name: "「星芒启明」：完成挑战获得命运的足迹、星琼等奖励！",
+        start: "2025/04/28 12:00:00 +0800",
+        end: "2025/05/19 03:59:59 +0800",
+        game: GameName.HSR
+    },
 ]

@@ -157,12 +157,12 @@ def get_chara_info(lang: utils.LANG = utils.LANG.EN_US):
 
     if lang == utils.LANG.EN_US:
         des_dir = utils.Game.LANG_KEY_EN
-        url = utils.Game.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
-                                    CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
+        url = utils.Genshin.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
+                                       CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
     elif lang == utils.LANG.ZH_CN:
         des_dir = utils.Game.LANG_KEY_ZH
-        url = utils.Game.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
-                                    CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
+        url = utils.Genshin.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
+                                       CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
     data_list = get_chara_list(url)
     if data_list is None:
         return
@@ -216,15 +216,15 @@ def read_i18n_chara():
 
 def write_i18n_chara():
 
-    url = utils.Game.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
-                                CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
+    url = utils.Genshin.attach_url(URL_GLOBAL_PREFIX, APP_ID_GLOBAL,
+                                   CHAR_CHAN_ID_GLOBAL, utils.Game.LANG_KEY_EN)
     data_list = get_chara_list(url)
     if data_list is None:
         return
     name_en, intro_en = get_chara_name_and_intro(data_list)
 
-    url = utils.Game.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
-                                CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
+    url = utils.Genshin.attach_url(URL_ZH_PREFIX, APP_ID_ZH,
+                                   CHAR_CHAN_ID_ZH, utils.Game.LANG_KEY_ZH)
     data_list = get_chara_list(url)
     if data_list is None:
         return

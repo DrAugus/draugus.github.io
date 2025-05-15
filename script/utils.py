@@ -453,11 +453,6 @@ class Game:
     LANG_KEY_ZH = 'zh-cn'
 
     @staticmethod
-    def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, page: int = 1, pageSize: int = 99):
-        order = "&iOrder=6"
-        return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
-
-    @staticmethod
     def i18n_filename(lang: LANG = LANG.ZH_CN):
         return lang.name.lower()
 
@@ -609,6 +604,11 @@ class Genshin(Game):
         Snezhnaya = 6
 
     @staticmethod
+    def attach_url(url_prefix: str, appId: int, chanId: int, langKey: str, page: int = 1, pageSize: int = 99):
+        order = "&iOrder=6"
+        return f'{url_prefix}?iAppId={appId}&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
+
+    @staticmethod
     def get_wish_name_en(text):
         start_tag = 'Event Wish "'
         end_tag = '" - Boosted Drop Rate'
@@ -620,6 +620,13 @@ class Genshin(Game):
         if len(matches) != 1:
             return ""
         return matches[0]
+
+
+class HSR(Game):
+    @staticmethod
+    def attach_url(url_prefix: str, chanId: int, langKey: str, page: int = 1, pageSize: int = 99):
+        order = "&iOrder=6"
+        return f'{url_prefix}?isPreview=0&iChanId={chanId}&iPageSize={pageSize}&iPage={page}&sLangKey={langKey}'
 
 
 class OperateFile:
