@@ -8,7 +8,7 @@ importers:
   game:
     specifiers:
       '@mdit-vue/shared': ^2.0.0
-      '@types/leaflet': 1.9.17
+      '@types/leaflet': 1.9.18
       '@vite-pwa/vitepress': ^1.0.0
       '@vue-leaflet/vue-leaflet': 0.10.1
       dayjs: 1.11.13
@@ -21,9 +21,9 @@ importers:
       vue: ^3.4.15
     devDependencies:
       '@mdit-vue/shared': 2.1.4
-      '@types/leaflet': 1.9.17
+      '@types/leaflet': 1.9.18
       '@vite-pwa/vitepress': 1.0.0_vite-plugin-pwa@1.0.0
-      '@vue-leaflet/vue-leaflet': 0.10.1_djz4a6b4kfy7ektfbstl227b2u
+      '@vue-leaflet/vue-leaflet': 0.10.1_2dvg3xrfpnwaogbxq442wwfakm
       dayjs: 1.11.13
       leaflet: 1.9.4
       sass: 1.89.0
@@ -2379,8 +2379,8 @@ packages:
       '@types/unist': 3.0.3
     dev: true
 
-  /@types/leaflet/1.9.17:
-    resolution: {integrity: sha512-IJ4K6t7I3Fh5qXbQ1uwL3CFVbCi6haW9+53oLWgdKlLP7EaS21byWFJxxqOx9y8I0AP0actXSJLVMbyvxhkUTA==}
+  /@types/leaflet/1.9.18:
+    resolution: {integrity: sha512-ht2vsoPjezor5Pmzi5hdsA7F++v5UGq9OlUduWHmMZiuQGIpJ2WS5+Gg9HaAA79gNh1AIPtCqhzejcIZ3lPzXQ==}
     dependencies:
       '@types/geojson': 7946.0.16
     dev: true
@@ -2467,7 +2467,7 @@ packages:
       vue: 3.5.14
     dev: true
 
-  /@vue-leaflet/vue-leaflet/0.10.1_djz4a6b4kfy7ektfbstl227b2u:
+  /@vue-leaflet/vue-leaflet/0.10.1_2dvg3xrfpnwaogbxq442wwfakm:
     resolution: {integrity: sha512-RNEDk8TbnwrJl8ujdbKgZRFygLCxd0aBcWLQ05q/pGv4+d0jamE3KXQgQBqGAteE1mbQsk3xoNcqqUgaIGfWVg==}
     peerDependencies:
       '@types/leaflet': ^1.5.7
@@ -2476,7 +2476,7 @@ packages:
       '@types/leaflet':
         optional: true
     dependencies:
-      '@types/leaflet': 1.9.17
+      '@types/leaflet': 1.9.18
       leaflet: 1.9.4
       vue: 3.5.14
     transitivePeerDependencies:
