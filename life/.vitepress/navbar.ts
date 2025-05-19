@@ -32,6 +32,7 @@ export const navbar = [
         items: [
           { text: '配环境', link: '/tools/nipeima' },
           { text: '全部工具', link: '/tools/' },
+          { text: '学习路线', link: '/code/learn/' },
         ],
         activeMatch: '^/tools',
       },
@@ -45,6 +46,11 @@ export const navbar = [
       { text: '小小震撼', link: '/code/shock/' },
     ],
     activeMatch: '^/code',
+  },
+  {
+    text: '医学', items: [
+      { text: '学习路线', link: '/medicine/learn/' },
+    ], activeMatch: '^/medicine'
   },
   {
     text: '待定',

@@ -212,6 +212,14 @@ const sidebarLanguage = [
     { text: '相似', link: prefixLang + '/similar' },
 ];
 
+const sidebarMedicine = [
+
+]
+const sidebarMedicineLearn = [
+    { text: '医学', link: '/medicine/learn/branch' },
+    { text: '从医', link: '/medicine/learn/path' },
+]
+
 const sidebarCodeOS = [
     {
         text: 'MacOS', collapsed: false, items: [
@@ -286,6 +294,11 @@ const sidebarTools = [
             { text: 'gitalk 评论接入教程', link: '/tools/tools/gitalk' },
         ],
     },
+];
+const prefixCodeLearn = '/code/learn';
+const sidebarCodeLearn = [
+    { text: 'C++', link: '/code/learn/cpp' },
+    { text: '算法', link: '/code/learn/dsa' },
 ];
 const sidebarCodeDSA = [
     { text: 'QA', link: '/code/dsa/qa' },
@@ -656,10 +669,14 @@ export const sidebar = {
     //
     '/xiwen/': sidebarXiwen,
     //
+    '/medicine/': sidebarMedicine,
+    '/medicine/learn/': sidebarMedicineLearn,
+    //
     // '/course/': sidebarCourse,
     //
     '/tools/': sidebarTools,
     //
+    '/code/learn/': sidebarCodeLearn,
     '/code/os/': sidebarCodeOS,
     '/code/api/': sidebarCodeAPI,
     '/code/dsa/': sidebarCodeDSA,

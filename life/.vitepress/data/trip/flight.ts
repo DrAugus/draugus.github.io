@@ -1472,7 +1472,8 @@ export const FLIGHT_DATA: Flight[] = [
             terminal: 2,
         },
         price: {
-            ticketPrice: 0,
+            isMileage: true,
+            ticketPrice: 12000,
             airportConstructionFee: 50,
             fuelSurcharge: 40,
         }
@@ -1499,7 +1500,8 @@ export const FLIGHT_DATA: Flight[] = [
             terminal: 3,
         },
         price: {
-            ticketPrice: 0,
+            isMileage: true,
+            ticketPrice: 12000,
             airportConstructionFee: 50,
             fuelSurcharge: 40,
         }
@@ -1554,6 +1556,34 @@ export const FLIGHT_DATA: Flight[] = [
         },
         price: {
             ticketPrice: 320,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-05-17'),
+        number: 'CZ3840',
+        airplane: {
+            model: '波音737-81B(WL)',
+            number: 'B5446'
+        },
+        airlineCode: 'CZ',
+        seatClass: 'X',
+        distance: 841,
+        departure: {
+            plannedTime: new Date('2025-05-17T15:50:00+08:00'),
+            actualTime: new Date('2025-05-17T16:14:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 4,
+        },
+        arrival: {
+            plannedTime: new Date('2025-05-17T17:40:00+08:00'),
+            actualTime: new Date('2025-05-17T17:43:00+08:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        price: {
+            isMileage: true,
+            ticketPrice: 6000,
             airportConstructionFee: 50,
             fuelSurcharge: 20,
         }

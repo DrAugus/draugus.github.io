@@ -34,7 +34,9 @@
                 <span class="font-12">
                     <span class="font-grey">含税票价</span><span>{{ ` ${getTotalTicketPrice(flight)}` }}</span><br>
                     <span class="font-grey">机票价格</span><span>
-                        {{ ` ${getPriceDisplay(flight.price.ticketPrice)}` }}
+                        {{ flight.price.isMileage ?
+                            ` ${flight.price.ticketPrice}里程` :
+                            ` ${getPriceDisplay(flight.price.ticketPrice)}` }}
                     </span><br>
                     <span class="font-grey">民航基金</span><span>{{ `
                         ${getPriceDisplay(flight.price.airportConstructionFee)}` }}</span><br>
@@ -101,7 +103,7 @@ function getDistanceAndDuration(flight: Flight) {
 function getTotalTicketPrice(flight: Flight) {
     if (flight.price) {
         let total = 0;
-        if (flight.price.ticketPrice) {
+        if (flight.price.ticketPrice && !flight.price.isMileage) {
             total += flight.price.ticketPrice;
         }
         if (flight.price.airportConstructionFee) {

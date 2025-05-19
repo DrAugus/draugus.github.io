@@ -296,7 +296,31 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 88,
         restaurantType: "黔菜",
         recommendation: true,
-    }
+    }, {
+        name: "群乐饭店",
+        city: "杭州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 99,
+        restaurantType: "杭帮菜",
+        recommendation: true,
+    }, {
+        name: "方家厨房",
+        city: "杭州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 103,
+        restaurantType: "杭帮菜",
+        recommendation: true,
+    }, {
+        name: "费大厨辣椒炒肉",
+        city: "杭州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 80,
+        restaurantType: "湘菜",
+        recommendation: true,
+    },
 ]
 
 export const filterFoodByCity = (city: string) => foodRecords.filter((record) => record.city === city);

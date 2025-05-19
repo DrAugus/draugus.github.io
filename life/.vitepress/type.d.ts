@@ -237,6 +237,7 @@ export interface MileageRedemption {
 }
 
 interface FlightTicket {
+  isMileage?: boolean,
   ticketPrice: number,
   airportConstructionFee: number,
   fuelSurcharge: number,
