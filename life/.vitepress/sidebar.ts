@@ -1,4 +1,5 @@
 import { setJourneySidebar } from "./data/trip/journey";
+import { setTripPlaceSidebar } from "./data/trip/place";
 import { setTravelogueSidebar } from "./data/trip/travelogue";
 
 const prefixArticle = '/article';
@@ -19,7 +20,9 @@ const sidebarDaily = [
     {
         text: '日用消费', collapsed: false, items: [
             { text: '日用价格', link: '/daily/goods-price' },
-            { text: '踩雷商品', link: '/daily/bad-product' },]
+            { text: '踩雷商品', link: '/daily/bad-product' },
+            { text: '穿着尺寸', link: '/daily/cloth' },
+        ]
     }, {
         text: '居住房产', collapsed: false, items: [
             { text: '户口', link: '/daily/hukou' },
@@ -91,6 +94,10 @@ const sidebarTrip = [
     },
 
 ];
+
+const sidebarTripPlace = [
+    { text: '去哪', link: '/trip/where' }
+].concat(...setTripPlaceSidebar());
 
 const sidebarTripTravelogue = [
     { text: '游记', link: '/trip/travelogue/' },
@@ -658,6 +665,8 @@ export const sidebar = {
     '/daily/': sidebarDaily,
     // 
     '/trip/': sidebarTrip,
+    '/trip/china/': sidebarTripPlace,
+    '/trip/abroad/': sidebarTripPlace,
     '/trip/travelogue/': sidebarTripTravelogue,
     '/trip/journey/': sidebarTripJourney,
     '/trip/drive/': sidebarTripDrive,

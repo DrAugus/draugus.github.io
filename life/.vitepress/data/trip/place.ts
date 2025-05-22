@@ -1,77 +1,71 @@
-import type { CardData, CardLink, Province } from '../../type';
+import type { CardData, CardLink, LinkName, Province } from '../../type';
 import { PROVINCE_CHINA, sortProvince } from './province';
 
-const prefixTrip = '/trip';
-const prefixTripChina = '/trip/china';
-const prefixTripAbroad = '/trip/abroad';
+// 定义常量
+const PREFIX_TRIP = '/trip';
+const PREFIX_TRIP_CHINA = `${PREFIX_TRIP}/china`;
+const PREFIX_TRIP_ABROAD = `${PREFIX_TRIP}/abroad`;
+const PREFIX_TRIP_ABROAD_ASIA = `${PREFIX_TRIP_ABROAD}/asia`;
+const PREFIX_TRIP_ABROAD_EUROPE = `${PREFIX_TRIP_ABROAD}/europe`;
 
-// 图标使用的 emojione, 如 emojione:flag-for-china
-
+// 获取排序后的省份列表
 const getSortedProvince = (): Province[] => {
     const sorted: Province[] = [];
-    sortProvince.forEach(v => {
-        sorted.push(PROVINCE_CHINA[v]);
-    });
-
-    Object.keys(PROVINCE_CHINA).forEach(k => {
-        if (sortProvince.indexOf(parseInt(k)) == -1) {
+    sortProvince.forEach((v) => sorted.push(PROVINCE_CHINA[v]));
+    Object.keys(PROVINCE_CHINA).forEach((k) => {
+        if (sortProvince.indexOf(parseInt(k)) === -1) {
             sorted.push(PROVINCE_CHINA[k]);
         }
     });
-
     return sorted;
 };
 
-const hkma: CardLink[] = [
+// 生成图标 SVG
+const generateSvg = (content: string): string => {
+    return `<svg xmlns="http://www.w3.org/2000/svg"><text x="50%" y="50%" font-size="14" fill="#0099ff" text-anchor="middle" dominant-baseline="middle">${content}</text></svg>`;
+};
+
+// 定义港澳地区的 CardLink
+const HKMA: CardLink[] = [
     {
         icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><circle cx="31.9" cy="32" r="30" fill="#ed4c5c"/><path fill="#fff" d="M29.9 27.8c.7-1.8 2.4-2.1 3.3-4.4c.4-1-.3-3 .1-4c.9-2.3 3.2-1.9 3.2-1.9c-4.1-1.5-8.7.6-10.2 4.6c-1.5 4 .6 8.5 4.7 9.9c-1.1-1.2-1.7-2.6-1.1-4.2"/><circle cx="30.3" cy="21.3" r=".9" fill="#ed4c5c"/><path fill="#fff" d="M26.5 31.8c-1.5-1.2-1.3-2.9-3.3-4.4c-.9-.7-3-.6-3.9-1.3c-2-1.5-.8-3.6-.8-3.6c-2.7 3.4-2.1 8.3 1.4 10.9c3.4 2.6 8.4 2 11.1-1.3c-1.6.6-3.1.7-4.5-.3"/><circle cx="20.8" cy="29.5" r=".9" fill="#ed4c5c"/><path fill="#fff" d="M29.4 36.2c-1.6 1.1-3.2.3-5.3 1.7c-.9.6-1.5 2.6-2.4 3.2c-2.1 1.4-3.8-.3-3.8-.3c2.4 3.6 7.4 4.5 11 2.1c3.6-2.4 4.6-7.2 2.2-10.8c.1 1.7-.3 3.1-1.7 4.1"/><path fill="#ed4c5c" d="M25 40.3c.3-.4.9-.5 1.3-.2s.5.9.2 1.3s-.9.5-1.3.2s-.5-.9-.2-1.3"/><path fill="#fff" d="M34.5 34.9c.5 1.8-.7 3.1 0 5.5c.3 1 2 2.2 2.3 3.3c.7 2.4-1.5 3.4-1.5 3.4c4.2-1.2 6.6-5.5 5.4-9.6c-1.2-4.1-5.6-6.5-9.8-5.3c1.8.3 3.1 1 3.6 2.7"/><path fill="#ed4c5c" d="M37.6 40.2c-.3-.4-.2-1 .2-1.3c.4-.3 1-.2 1.3.2c.3.4.2 1-.2 1.3c-.5.4-1 .3-1.3-.2"/><path fill="#fff" d="M34.8 29.7c2 .1 2.8 1.6 5.3 1.7c1.1 0 2.8-1.2 3.9-1.2c2.5.1 2.8 2.4 2.8 2.4c.2-4.3-3.3-7.9-7.6-8c-4.4-.1-8 3.2-8.2 7.5c.9-1.5 2.1-2.5 3.8-2.4"/><path fill="#ed4c5c" d="M41.4 28.5c-.5.2-1-.1-1.2-.6c-.2-.5.1-1 .6-1.2c.5-.2 1 .1 1.2.6c.2.5-.1 1.1-.6 1.2"/></svg>' },
         title: '香港',
         desc: '',
-        link: prefixTripChina + '/hongkong'
+        link: `${PREFIX_TRIP_CHINA}/hongkong`
     },
     {
         icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#83bf4f"/><path fill="#fff" d="M37.5 30.4c-.7.2-1.4.5-2 .9c.1-.6.2-1.2.2-1.9c0-3.6-3.6-7.4-3.6-7.4s-3.6 3.9-3.6 7.4c0 .7.1 1.3.2 1.9c-.6-.4-1.3-.8-2.1-1c-3.9-1.1-8.5 1.3-8.5 1.3s3.2 5 7.1 6.1c3.3.9 5.8-1.6 6.7-1.9h.4c1 .4 3.4 2.8 6.7 1.9c3.9-1.1 7.1-6.1 7.1-6.1s-4.8-2.3-8.6-1.2M24.7 48c2.2 1.3 4.6 2 7.3 2s5.1-.7 7.3-2zm-4.4-4c.5.7 1.1 1.4 1.8 2h19.8c.7-.6 1.3-1.3 1.8-2z"/><path fill="#ffe62e" d="m32 18.1l2.5 1.9l-1-3l2.5-1.9l-3-.1l-1-3l-1 3l-3 .1l2.5 1.9l-1 3zm-7.3 1.2l1.8.3l-1.4-1.3l.7-1.8l-1.6 1l-1.4-1.3l.4 1.8l-1.5.9l1.8.3l.4 1.9zm-5.4 5.4l1.8-.8l-1.9-.4l-.3-1.8l-.9 1.5l-1.8-.4l1.3 1.4l-1 1.6l1.8-.7l1.3 1.4zm25.4 0l-.3 1.8l1.3-1.4l1.8.7l-1-1.6l1.3-1.4l-1.8.4l-.9-1.5l-.3 1.8l-1.9.4zm-5.4-5.4l.8 1.8l.4-1.9l1.8-.3l-1.5-.9l.4-1.8l-1.4 1.3l-1.6-1l.7 1.8l-1.4 1.3z"/><path fill="#fff" d="M46.3 40H35.6c-2.4 0-2.6-1.7-2.6-2h-2c0 .2-.1 2-2.6 2H17.7c.3.7.6 1.4 1 2h9.7c1.8 0 2.9-.6 3.6-1.4c.7.8 1.8 1.4 3.6 1.4h9.7c.4-.6.7-1.3 1-2"/></svg>' },
         title: '澳门',
         desc: '',
-        link: prefixTripChina + '/macao'
+        link: `${PREFIX_TRIP_CHINA}/macao`
     }
 ];
 
+// 获取中国地区的 CardLink
 const getChinaCardLink = (): CardLink[] => {
-    let cardLink: CardLink[] = [];
-
-    let svg = (abbreviation: string) => `<svg xmlns="http://www.w3.org/2000/svg"><text x="50%" y="50%" font-size="14" fill="#0099ff" text-anchor="middle" dominant-baseline="middle">${abbreviation}</text></svg>`;
-
-    getSortedProvince().forEach(v => {
-        let one: CardLink = {
-            icon: { svg: svg(v.abbreviation) },
+    return getSortedProvince().reduce((cardLink: CardLink[], v: Province) => {
+        const one: CardLink = {
+            icon: { svg: generateSvg(v.abbreviation) },
             title: v.name,
             desc: '',
-            link: `${prefixTripChina}/${v.pinyin}`
+            link: `${PREFIX_TRIP_CHINA}/${v.pinyin}`
         };
-        if (v.name != v.capital) {
+        if (v.name !== v.capital) {
             one.link += '/';
         }
         cardLink.push(one);
-
-        // 添加 港澳
-        if (v.name == '广东') {
-            cardLink.push(...hkma);
+        if (v.name === '广东') {
+            cardLink.push(...HKMA);
         }
-    });
-
-    return cardLink;
-
+        return cardLink;
+    }, []);
 };
 
-
-
+// 定义旅游数据
 export const TRIP_DATA: CardData[] = [
     {
         title: '中国',
-        items: [
-            ...getChinaCardLink()
-        ]
+        items: getChinaCardLink()
     },
     {
         title: '国外',
@@ -80,18 +74,19 @@ export const TRIP_DATA: CardData[] = [
                 icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><path fill="#008db3" d="M62 32c0 16.6-13.4 30-30 30S2 48.6 2 32c0-4.4.9-8.5 2.6-12.3l32-17.3c2.3.4 4.5 1 6.5 1.8l.7 1.5l1.2-.8C55 9.8 62 20.1 62 32"/><g fill="#ffc942"><path d="M7.5 20.9c.9 1.8 2.1-.6 2 1.2c-.1 1.8 1.2 5.8 2 5.3s.8-3.5 2.1-3.8c1.4-.4 3.3-2.7 3.9-1.6c.6 1 .4 2.9.9 2.5c.5-.4 1.2 0 1.1 1.3c-.1 1.3 1.1 3.1 1.5 3.8s-2.1-2-3.3-3.6c-1.2-1.6.9 3.4 2.4 5.3s7.4 3.2 8.9 4c1.5.8 5.7-1.5 4.1-1.4c0 0-3.7.5-5-.2s-4.4-.7-5-1.6c-.5-.9-.5-2.3-1.5-3.6c-.9-1.3-1.5-3.6-.3-2.6s2.6 1.2 2.8.5c.2-.7-2.4-3-.8-4c1.6-1 3.2-.3 3.9-1c.8-.8 2.6-3.1 2.1-4.2c-.4-1.1-.5-1.9 0-2.2c.5-.3-2.5-.3-1.3-1.2c1.2-.9 2.5-1.6 2.6 0c.1 1.6 0 3.1.6 3.1s1.5-1.8 1.3-2.6c-.3-.8.3-2.5 1.5-2.6c1.2-.1 2.6-2.1 2.9-4s.3-3.5-.6-3.3c-.8.2-.9-1 .3-2c-1.5-.3-3-.4-4.6-.4C19.8 2 9.3 9.3 4.6 19.7c1 0 2.3.1 2.9 1.2m35.1-13c-.7 1.2 1.1-.5 2.3-3c-.6-.3-1.2-.5-1.8-.8c.1 1.1.1 2.9-.5 3.8"/><path d="M34.3 16.9c1.4-.9 3.6-.9 3.6-2.8s5.4-5.1 4.1-5c-1.3.1-3.8 2.5-3.8.9s0-4.6-.3-5.4c-.4-.9-.2 4.4-.6 5.3c-.4.9 0 4.2-1.1 4.6c-1.2.4-3.2 1.3-3.2 2.5s-.1.8 1.3-.1m1.5 15.8c.7.6-.4 2.2.4 1.8c.8-.3 1.7.6 2.1 0c.4-.5.5-.9 1.7.2c1.3 1 2.2.8 1.4 0c-.8-.8-1.5-2.2-3.2-2.7c0 0-1.8-.2-3-.8c0 0-1.7-.9-2.3-.3c-.5.6-.5-1.6-.9-1.2c-.4.4.2 1.7-1 1.4c-1.2-.3-1.6.1-1.9-.9s-2.1-.5-.7-1.2c1.4-.7 2.1-1 2.1-.4c.1.6 1.4-.5.9-2.1c-.5-1.5-1.9-1-1.8-3c0-.9-1.4.3-1.1 1.4c.2 1.1-.3 1.3-.8 2.2c-.6.9-2.7 2.9-3.2 2.9c-.6 0-.4 1.1 0 1.8s2.4.8 2.8.9c.4.1.9-3.1 1-2.2c.1.9.3 3.4.6 2.8c.3-.6 1.4.2 1.4-.3s-.5-1.5.6-1s2.6.9 2.5.3c-.2-.7 1.7-.2 2.4.4M29.2 26c.5 2.1-.7 2.5-1.1 2.1s1-2.6 1.1-2.1m11.5 13.7c-1.7-1.5-2.4-3.9-2.8-4.2c-.7-.6-.4 2-.6 2.6c-.2.5-1.2-.6-1.6-.9c-.5-.2-.2-.6 0-1c.2-.5-.9-.9-1.7-.7c-.8.2-.8-.1-1.1.6s-.1 1.2-.9.8c-.8-.4-1.3.2-1.9.8c-.6.6-.8.9-1 1.3c-.2.5-3.4.2-3.4 1.7s1.3 2.7 1 3.8s.2 2.3 1.2 1.8c1-.6 2.4-.4 2.8-.9c.4-.5 3.1-1.2 3.5-.3c.5.9 1 1.3 1.8 1.3s.9.8.9 1.3c0 .6 1.2.1 1.9.3c.7.2 2.3.1 2.5-1.3c.1-1.3.9-2.2 1.1-2.9s-.1-2.7-1.7-4.1m-1.5 9.1c-.8-.1-.2 1.8.3 1.9c.5.2.8-1.1.7-1.9c0-.6-.2.1-1 0m12.6-1.7c-.5.1-.9-1.3-1.3-1c-.7.6.8 1.9 0 2.6c-.8.7-1 1.9-1.7 2s-1.6 1-1 1.5c.6.5 1.6 0 1.9-1c.3-1 .6-1.4 1.3-1.7s.6-1.1 1.3-1.6c.7-.3 0-.8-.5-.8"/></g></svg>' },
                 title: '亚洲',
                 desc: '',
-                link: prefixTripAbroad + '/asia/'
+                link: PREFIX_TRIP_ABROAD_ASIA
             },
             {
                 icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><path fill="#008db3" d="m58.4 22.7l1.6 20C55.8 54 44.8 62 32 62C15.4 62 2 48.6 2 32S15.4 2 32 2c6 0 11.6 1.8 16.3 4.8z"/><g fill="#ffc942"><path d="M48.3 6.8c.3 1 .6 2.1-.4 1.6c-1.7-.9-3.9-1.9-3.2-1.2s1 1.5-.1 1.4c-1.1-.1-3.1-.4-4 .9c-.9 1.3-2.1 1-2.4 1.5c-.3.5-.8 2.6-1.7 1.9c-.9-.6-2.7-2.9-1.2-2.3c1.5.6 3.2-.1 1.8-1.7c-1.4-1.6-2.8-1-3.4-1.9c-.6-.9-2.6-2-4.1.2c-1.4 2.2-2.7 5.1-3.5 5.7c-.8.6-2.5 1.7-2.2 2.6c.2.9.3 3 1.2 2.4s1.4-.9 1.8-.3c.3.6.2 1.8.9 1.8c0 0 1.4-1 1.5-1.9c.1-.9-1-1.4-.2-2.7s2.6-3.8 2.2-2.5c-.4 1.2-1.3 3-.6 3.8c.6.8 4.1-.2 2.5.6c-1.6.8-2.4 1.4-2.7 2.4c-.3 1-.6 1.8-1.4 1.4s-1.8-.2-2.2-.2s-.6-1.8-1.3-1.4c-.6.4.2 1.7-.5 1.8c-.7.1-.8.9-1.6 1.5s-1.9 1.8-2.6 1.9s1.1 1 .8 1.8c-.3.9-1.9.8-2.5.9s-.1 1.3-.4 2c-.3.7.3 1.4 1.3 1.4s2-.2 2.1-1.1c.1-.9 1-2.4 1.7-2.1c.6.3 2.1-.6 2.4-.1c.3.5 2.2 2.2 2 2.4s-1.3.7-.9.9c0 0 .3.5.5.4s.7-1.4 1-1.6s.3-.9-.1-1.2c-.5-.3-2.2-1.5-1.8-2.1s1.3.7 1.7 1.1c.4.4 1 .9 1 1.8s.6.9.6 1.3c.1.5.3.6.8.6c.5-.1.7-1.2.5-1.5c-.3-.3-.3-.9.3-.9s1.3-.5 1.3-.8c0-.3.6-2.1 1-2.1s.7.7.8 1.1c.2.4 1.2-.3 1-.7c-.2-.4.1-.5.4-.5c.3 0 .1.8.3 1c.3.2 1.7 1.1 1.2 1.6s-1.2.2-1.7-.2s-1.8-.2-2.2.2c-.3.4-.6.6-1.2.6s-.5 1.1 0 1.5c.5.5 1.2.1 1.7.4c.5.3 1.3-.4 1.4.1c.1.5-.1 2-.6 2.1c-.5.1-2.1.4-3.2-.1c-1.2-.5-2.3-.7-2.4-.2c-.1.6-.1 1-.9.5s-1.5-.8-2-.8s-.5-.9-.4-1.6c.1-.7-1.2-.5-2-.3s-2.4.7-3.4.7s-1.4.2-1.6.6s-1.1.4-1.1 1.2c0 .8.1 1-.7 1.4c-.9.3-1.1 1.9-1.5 2.3c-.4.4.4 1.4 0 2c-.4.5-.8 1.9-.1 2.2c.7.3 1.4 1.7 1.7 2.2c.3.5 1.4 1 2.5.8c1.1-.2 3.1-.8 4.2-.3s2.2.4 1.7 1.4c-.6 1 .3 2.3 1 3c.7.7.5 2.5.1 3c-.4.6-.3 1.6.1 2.1s.6 1.7.6 2.1c0 .5.8 1.4.9 2.3c.1 1-.6 2.1.3 2.1c.9 0 3.2.1 3.4-.3s2-2 2.5-2.7s1.5-1.9 1.2-2.6c-.6-.5-.2-1 .8-1.4c1-.4 1-3.2.5-3.9c-.5-.7.4-2.4 1.5-2.9s3.7-5.1 2.9-4.7c-.9.4-2.6.7-3.2.3c-.6-.4-4.1-6.4-3.6-6.8s3.3 5.5 3.8 6.2c.5.8 5.2-2.1 5.8-2.8c.5-.7-.3-1.4-.6-1.4s-1.4-.7-1.7-.3s-2.3-2.9-1.6-2.6c.7.3 2.2 1.3 3.6 2.1s3-.5 3.9 1c1 1.5 1.6.5 1.5 1.2s1.2 3.6 1.7 4.5c.4.9 1.3-.4 1.4-1.4c.1-1.1 2.2-2.8 3-3.4c.7-.6 2.1.3 2.3 1.5c.2 1.2 1.2-.2 1.2.7c0 1-.2 2.3.5 3.5c1.4-3.5 2.1-7 2.1-10.8c0-10.6-5.5-19.9-13.7-25.2m-31.9 3.8c-.6.2-1.2.9-2 .5s-2.5.2-1.4 1.1c1 1 .6 1.6 1.6 1.7s1.6-1.3 2.3-1.2s.2-2.3-.5-2.1"/><path d="M40.7 49.7c-.7.1-.5 1.5-1.3 1.7c-.7.2-.1.8-.5 1.3c-.3.5-.5 1.7 0 2.3c.5.7.7.7 1.3-.4c.6-1 2-5 .5-4.9M20.6 17.3c-.3 0-.6.2-.9.2c-.3.1-.5.5-.5.9c0 .5.8.6.5.9c-.3.3-1.9.6-1.7 1.1s.5.9.2 1.4c-.3.5.3.6.9.4s1-.9.9-1.3c-.1-.5.9-.6.6-.2s-.8 1.4-.5 1.7c.3.3-.8.8-.4 1c.4.2 1.5-.8 2.1-.6s.8-.2.9-.7c.1-.6-.8-1.3-1.1-2c-.3-.8-.1-2.8-1-2.8"/></g></svg>' },
                 title: '欧洲',
                 desc: '',
-                link: prefixTripAbroad + '/europe/'
-            },
+                link: PREFIX_TRIP_ABROAD_EUROPE
+            }
         ]
     }
 ];
 
+// 定义亚洲旅游数据
 export const TRIP_ASIA_DATA: CardData[] = [
     {
         title: '',
@@ -100,14 +95,60 @@ export const TRIP_ASIA_DATA: CardData[] = [
                 icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f5f5f5"/><circle cx="32" cy="32" r="12" fill="#ed4c5c"/></svg>' },
                 title: '日本',
                 desc: '',
-                link: prefixTripAbroad + '/asia/japan'
+                link: `${PREFIX_TRIP_ABROAD_ASIA}/japan`
             },
             {
                 icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="#f5f5f5"/><path fill="#ed4c5c" d="M23.4 33.7c2.8 1.9 6.7 1.1 8.6-1.7c1.9-2.8 5.7-3.6 8.6-1.7c2.7 1.8 3.5 5.3 2 8c3.3-5.6 1.8-12.9-3.8-16.6c-5.7-3.8-13.4-2.3-17.2 3.4c-.1.2-.2.4-.3.5c-1.4 2.9-.5 6.3 2.1 8.1"/><path fill="#003478" d="M42.3 38.9c.1-.2.2-.4.3-.5c-.1.1-.2.3-.3.5"/><path fill="#428bc1" d="M40.6 30.3c-2.8-1.9-6.7-1.1-8.6 1.7c-1.9 2.8-5.7 3.6-8.6 1.7c-2.7-1.8-3.5-5.3-2-8c-3.4 5.6-1.8 12.9 3.8 16.6c5.7 3.8 13.4 2.3 17.2-3.4c.1-.2.2-.4.3-.5c1.4-2.9.5-6.3-2.1-8.1"/><path fill="#3e4347" d="M7.8 23.3L14.7 13l-.7-.5l-.7-.4l-6.9 10.3l.7.4zm1.9 1.3l.7.4l6.8-10.3l-.6-.4l-.7-.5L9 24.1zm8.7-9.1l-6.8 10.3l.7.5l.7.4l6.8-10.3l-.7-.4zm30.1 27l.7.5l3.2-4.8l-.7-.5l-.7-.4l-3.2 4.8zm7.7-1.8L53 45.5l.7.5l.7.4l3.2-4.8l-.7-.4zm-4.4 4l3.2-4.8l-.7-.5l-.7-.4l-3.2 4.8l.7.4zm-3.7-1.5l-.7-.4l-3.2 4.8l.7.4l.7.5l3.2-4.8zm2.5 1.7l-.6-.4l-3.2 4.8l.6.4l.7.5l3.2-4.8zm1.9 1.3L49.3 51l.7.5l.7.4l3.2-4.8l-.7-.5zm-45.4-5l-.7.4l6.9 10.3l.7-.4l.7-.5l-6.9-10.3zm6.3 3.7l-.7.5l3.2 4.8l.7-.5l.6-.4l-3.2-4.8zm-1.1-7.2l-.7.5l6.8 10.3l.7-.5l.7-.4L13 37.3zM9 39.9l3.2 4.8l.7-.5l.7-.4l-3.2-4.8l-.7.4zm44.2-22.5l.7-.5l-3.2-4.8l-.7.4l-.7.5l3.2 4.8zm-5.1 3.4l.7-.5l-3.2-4.8l-.7.5l-.7.4l3.2 4.8zm4.9-2.3l3.2 4.8l.7-.5l.7-.4l-3.2-4.8l-.7.4zm1.3 6.1l.7-.5l-6.9-10.3l-.7.5l-.6.4L53.6 25zm-2.6 1.7l.7-.5l-3.2-4.8l-.7.5l-.7.4l3.2 4.8z"/></svg>' },
                 title: '韩国',
                 desc: '',
-                link: prefixTripAbroad + '/asia/korean'
-            },
+                link: `${PREFIX_TRIP_ABROAD_ASIA}/korean`
+            }
         ]
     }
 ];
+
+// 定义欧洲旅游数据
+export const TRIP_EUROPE_DATA: CardData[] = [
+    {
+        title: '',
+        items: [
+            {
+                icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><mask id="circleFlagsUk0"><circle cx="256" cy="256" r="256" fill="#fff"/></mask><g mask="url(#circleFlagsUk0)"><path fill="#eee" d="m0 0l8 22l-8 23v23l32 54l-32 54v32l32 48l-32 48v32l32 54l-32 54v68l22-8l23 8h23l54-32l54 32h32l48-32l48 32h32l54-32l54 32h68l-8-22l8-23v-23l-32-54l32-54v-32l-32-48l32-48v-32l-32-54l32-54V0l-22 8l-23-8h-23l-54 32l-54-32h-32l-48 32l-48-32h-32l-54 32L68 0z"/><path fill="#0052b4" d="M336 0v108L444 0Zm176 68L404 176h108zM0 176h108L0 68ZM68 0l108 108V0Zm108 512V404L68 512ZM0 444l108-108H0Zm512-108H404l108 108Zm-68 176L336 404v108z"/><path fill="#d80027" d="M0 0v45l131 131h45zm208 0v208H0v96h208v208h96V304h208v-96H304V0zm259 0L336 131v45L512 0zM176 336L0 512h45l131-131zm160 0l176 176v-45L381 336z"/></g></svg>' },
+                title: '英国',
+                desc: '',
+                link: `${PREFIX_TRIP_ABROAD_EUROPE}/uk`
+            }
+        ]
+    }
+];
+
+// 设置旅游地点侧边栏数据
+export const setTripPlaceSidebar = () => {
+    // 定义地区数据映射
+    const regionDataMap: Record<string, CardData[]> = {
+        '亚洲': TRIP_ASIA_DATA,
+        '欧洲': TRIP_EUROPE_DATA
+    };
+
+    // 通用转换函数
+    const convertToSidebarItems = (items: CardLink[]) =>
+        items.map(item => ({ text: item.title, link: item.link }));
+
+    return [
+        {
+            text: '中国',
+            collapsed: false,
+            items: convertToSidebarItems(getChinaCardLink())
+        },
+        {
+            text: '国外',
+            collapsed: false,
+            items: (TRIP_DATA.find(item => item.title === '国外')?.items || []).map(item => ({
+                text: item.title,
+                items: regionDataMap[item.title]?.[0]?.items
+                    ? convertToSidebarItems(regionDataMap[item.title][0].items)
+                    : []
+            }))
+        }
+    ];
+};

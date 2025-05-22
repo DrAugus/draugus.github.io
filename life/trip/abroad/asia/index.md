@@ -1,9 +1,3 @@
----
-layoutClass: layout-card
-outline: [2, 4]
-sidebar: false
----
-
 # 亚洲
 
 欢迎来到亚洲
