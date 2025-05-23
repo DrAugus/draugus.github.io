@@ -127,12 +127,16 @@ const tr = async (AMap, map) => {
         let startMarker = new AMap.Marker({
             position: path[0],
             icon: 'https://webapi.amap.com/theme/v1.3/markers/n/start.png',
+            // 高德地图Marker缩放位置变化
+            // https://www.cnblogs.com/hanshuai/p/14927181.html
+            offset: new AMap.Pixel(-10, -31),
             map: map
         })
 
         let endMarker = new AMap.Marker({
             position: path[path.length - 1],
             icon: 'https://webapi.amap.com/theme/v1.3/markers/n/end.png',
+            offset: new AMap.Pixel(-10, -31),
             map: map
         })
 
@@ -140,6 +144,7 @@ const tr = async (AMap, map) => {
             let midMarker = new AMap.Marker({
                 position: item.location,
                 icon: 'https://webapi.amap.com/theme/v1.3/markers/n/mid.png',
+                offset: new AMap.Pixel(-10, -31),
                 map: map
             })
         })
