@@ -1,6 +1,6 @@
 <template>
     <h2>{{ title }}</h2>
-    <div id="amap-container-aug"></div>
+    <div id="amap-container-aug" :style="{ height: `${pxHeight}px` }"></div>
 </template>
 
 <script setup lang="ts">
@@ -9,7 +9,10 @@ import { onMounted, onUnmounted, ref } from "vue";
 const props = defineProps<{
     title: string,
     func: Function,
+    height?: number,
 }>();
+
+const pxHeight = props.height || 300;
 
 let map: any = null;
 const aMapLoader: any = ref(null);
@@ -110,6 +113,5 @@ onMounted(() => {
 <style scoped>
 #amap-container-aug {
     width: 100%;
-    height: 300px;
 }
 </style>

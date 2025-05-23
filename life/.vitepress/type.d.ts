@@ -56,15 +56,15 @@ interface DateRange {
 }
 
 export interface CatLitter {
-  brand: string;
-  specification: string;
+  brand: string,
+  specification: string,
   pricePerKg: {
-    min: number;
-    max?: number;
-  };
-  commonSpecification?: string;
-  advantages?: string;
-  disadvantages?: string;
+    min: number,
+    max?: number,
+  },
+  commonSpecification?: string,
+  advantages?: string,
+  disadvantages?: string,
 }
 
 interface ExploreInfo {
@@ -125,9 +125,23 @@ export interface Journey {
   info?: string,
 }
 
-export interface Drive {
-  title?: string,
-  date: DateRange,
+type GeoCoordinates = {
+  longitude: number,
+  latitude: number,
+}
+
+type DriveLocation = {
+  district: string,
+  details?:string,
+  coordinates: GeoCoordinates,
+  time: Date,
+}
+
+export interface DriveInfo {
+  title: string,
+  departure: DriveLocation,
+  arrival: DriveLocation,
+  waypoint?: DriveLocation | DriveLocation[],
 }
 
 export interface TravelBillIntroItem {
@@ -215,25 +229,25 @@ export interface Airplane {
 }
 
 export interface Airline {
-  chineseName: string;            // 航空公司(中文)
-  chineseAbbr: string;            // 航司中文名缩写
-  englishName: string;            // 航空公司(英文)
-  iataCode: string;               // IATA代码
-  icaoCode: string;               // 三字代码
-  region: string;                 // 地区
+  chineseName: string,            // 航空公司(中文)
+  chineseAbbr: string,            // 航司中文名缩写
+  englishName: string,            // 航空公司(英文)
+  iataCode: string,               // IATA代码
+  icaoCode: string,               // 三字代码
+  region: string,                 // 地区
 }
 
 interface CoBrandedCardBenefit {
-  cardLevel: string;                                    // 卡等级
-  redemptionRatio: string | string[];                   // 兑换比例
-  redemptionCap: string;                                // 兑换上限
-  annualFeeReduction: string;                           // 年费减免
+  cardLevel: string,                                    // 卡等级
+  redemptionRatio: string | string[],                   // 兑换比例
+  redemptionCap: string,                                // 兑换上限
+  annualFeeReduction: string,                           // 年费减免
 }
 
 export interface MileageRedemption {
-  bank: string;                                         // 银行名称
-  coBrandedCardName: string;                            // 联名卡名字
-  coBrandedCardBenefits: CoBrandedCardBenefit[];
+  bank: string,                                         // 银行名称
+  coBrandedCardName: string,                            // 联名卡名字
+  coBrandedCardBenefits: CoBrandedCardBenefit[],
 }
 
 interface FlightTicket {
@@ -332,63 +346,63 @@ export interface Complexity {
 }
 
 export type Mapping = {
-  [key: string]: number;
-};
+  [key: string]: number,
+}
 
 export interface Lottery {
-  'welfare': Mapping;
-  'sports': Mapping;
+  'welfare': Mapping,
+  'sports': Mapping,
 }
 
 export interface AttractionInfo {
   /** 景点的名称 */
-  name: string;
+  name: string,
 
   /** 景点的详细信息或描述 */
-  description?: string;
+  description?: string,
 
   /** 景点相关的交通信息 */
-  transportation: string;
+  transportation: string,
 
   /** 建议游玩时长 */
-  playDuration: string;
+  playDuration: string,
 
   /** 开放时间，可以是字符串格式的时间段或数组 */
-  openingHours: string | string[]; // 例如 "9:00-17:00" 或 ["9:00-12:00", "13:00-17:00"]
+  openingHours: string | string[], // 例如 "9:00-17:00" 或 ["9:00-12:00", "13:00-17:00"]
 
   /** 是否需要预约，布尔值 */
-  needReservation: boolean;
+  needReservation: boolean,
 
   /** 票价信息，可以是字符串或更复杂的对象 */
   ticketPrice: string | {
-    adult: number; // 成人票价
-    child?: number; // 儿童票价（可选）
-    senior?: number; // 老人票价（可选）
+    adult: number, // 成人票价
+    child?: number, // 儿童票价（可选）
+    senior?: number, // 老人票价（可选）
     // 可以添加更多票价类型
-  };
+  },
 
   /** 售票平台或渠道 */
-  platform: string | string[]; // 例如 "官网" 或 ["美团", "携程"]
+  platform: string | string[], // 例如 "官网" 或 ["美团", "携程"]
 
   /** 是否推荐，布尔值或带有理由的对象 */
   recommendation: boolean | {
-    isRecommended: boolean;
-    reason?: string; // 推荐理由（可选）
-  };
+    isRecommended: boolean,
+    reason?: string, // 推荐理由（可选）
+  },
 }
 
 export interface FoodRecord {
-  name: string;               // 名字
-  description?: string;       // 描述（可选）
-  city: string;               // 城市
-  location: string;           // 位置
-  businessHours: string;      // 营业时间
-  pricePerPerson: number;     // 人均消费
-  restaurantType: string | string[];     // 餐厅类型
+  name: string,               // 名字
+  description?: string,       // 描述（可选）
+  city: string,               // 城市
+  location: string,           // 位置
+  businessHours: string,      // 营业时间
+  pricePerPerson: number,     // 人均消费
+  restaurantType: string | string[],     // 餐厅类型
   recommendation: boolean | {
-    isRecommended: boolean;
-    reason?: string; // 推荐理由（可选）
-  };
+    isRecommended: boolean,
+    reason?: string, // 推荐理由（可选）
+  },
 }
 
 export interface Flag {

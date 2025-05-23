@@ -1,5 +1,5 @@
 <template>
-    <DrawAMap title="机场分布图" :func="tr" />
+    <DrawAMap title="机场分布图" :func="tr" :height="600" />
 </template>
 
 <script setup lang="ts">
