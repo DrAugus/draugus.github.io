@@ -1,5 +1,7 @@
 # 自驾游<a href="/trip/"><Badge type="tip" text="旅行主页↗" /></a>
 
+<DriveAMap />
+
 :::warning 时效性
 本文有很强的时效性，不仅仅本文，本网站都有很强的时效性，所有感受尽可能会加上当时发生的时间
 :::
@@ -32,3 +34,7 @@
 :::danger 大暴雨高速行驶
 时速 120km/h 时，行进不稳，如遇路面有少许积水，即可逼停车辆，有非常大的冲力，有猛踩刹车的感觉。如果旁边车道有大车、挂车并行或超车，会感觉双倍的大暴雨，超车极其危险，晃动强烈。大暴雨最好保持 110km/h 时速及以下较为稳妥。
 :::
+
+<script setup>
+import DriveAMap from '../../.vitepress/components/trip/DriveAMap.vue';
+</script>

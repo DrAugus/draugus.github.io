@@ -14,7 +14,12 @@ const props = defineProps<{
 let map: any = null;
 const aMapLoader: any = ref(null);
 
+const secretKey = import.meta.env.VITE_AMAP_KEY;
+
 onMounted(async () => {
+    window._AMapSecurityConfig = {
+        securityJsCode: secretKey,
+    };
     try {
         // 动态导入 AMapLoader  
         const { default: AMapLoader } = await import('@amap/amap-jsapi-loader');
@@ -23,7 +28,7 @@ onMounted(async () => {
         aMapLoader.value.load({
             key: "86d5b3834c7e9dd95ac4517948ce435c", // 申请好的Web端开发者Key，首次调用 load 时必填
             version: "2.0", // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-            plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
+            plugins: ['AMap.Driving'], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
         })
             .then((AMap) => {
                 map = new AMap.Map("amap-container-aug", {
