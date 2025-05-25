@@ -2,6 +2,78 @@
     "title": "",
     "items": [
         {
+            "title": "自驾游",
+            "desc": "自驾游 时效性 本文有很强的时效性，不仅仅本文，本网站都有很强的时效性，所有感受尽可能会加上当时发",
+            "link": "/trip/drive/index",
+            "date": "2025-05-23"
+        },
+        {
+            "title": "穿着尺寸",
+            "desc": "穿着尺寸 上衣尺寸 中间数字一般为胸围 裤子尺寸这类标签，它们一般由三部分组成，分别代表身高、腰围",
+            "link": "/daily/cloth",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "亚洲",
+            "desc": "亚洲 欢迎来到亚洲 import ACardLinks from '../../../.vitep",
+            "link": "/trip/abroad/asia/index",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "欧洲",
+            "desc": "欧洲 欢迎来到欧洲 当前资产不够去欧洲，未来可期，近期不再考虑了 import ACardLink",
+            "link": "/trip/abroad/europe/index",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "广东",
+            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 details 不愿透露姓名的群友推荐 广州特色，各类",
+            "link": "/trip/china/guangdong/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "天津",
+            "desc": "天津 旅行参考 details by-大学同学-本地ly 比较有名的就是滨江道，古文化街，意式风情",
+            "link": "/trip/china/tianjin",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "去哪儿",
+            "desc": "去哪儿 走过蓝色星球，旅途记录，探索驻足 import ACardLinks from '../.",
+            "link": "/trip/where",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "非技术问题",
+            "desc": "非技术问题 为啥想来报这个岗位？为什么考虑来这边呢？ 自我评价 - 你的优势和劣势是什么？ - 最",
+            "link": "/code/interview/non-tech",
+            "date": "2024-12-12"
+        },
+        {
+            "title": "C++",
+            "desc": "C++ 想要精通C++并成为高手 你好呀！想要精通C++并成为高手，确实需要系统性的学习和大量的实",
+            "link": "/code/learn/cpp",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "算法",
+            "desc": "算法 算法为什么这么巧妙？ 算法的“巧妙”其实源于人类对问题本质的抽象提炼和数学/逻辑规律的精准捕",
+            "link": "/code/learn/dsa",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "医学",
+            "desc": "医学 !depart 医学分支 医学作为一门综合性学科，其分支领域广泛且复杂，涵盖了从基础研究到临",
+            "link": "/medicine/learn/branch",
+            "date": "2025-05-19"
+        },
+        {
+            "title": "从医",
+            "desc": "从医 若想在乡镇或县医院简单从医，可从明确目标与规划、获取学历与资质、提升临床技能、积累实践经验、",
+            "link": "/medicine/learn/path",
+            "date": "2025-05-19"
+        },
+        {
             "title": "基础知识",
             "desc": "基础知识 sizeof 在C++中，sizeof运算符用于获取数据类型或变量所占用的字节数。以下是",
             "link": "/code/interview/basin",
@@ -48,78 +120,6 @@
             "desc": "荒岛求生 题目描述 有一个荒岛，只有左右两个港口，只有一座桥连接这两个港口，现在有一群人需要从两个",
             "link": "/code/program/practice/2",
             "date": "2025-04-30"
-        },
-        {
-            "title": "精准核酸检测",
-            "desc": "精准核酸检测 题目描述 为了达到新冠疫情精准防控的需要，为了避免全员核酸检测带来的浪费，需要精准圈",
-            "link": "/code/program/practice/3",
-            "date": "2025-04-30"
-        },
-        {
-            "title": "猜数字",
-            "desc": "猜数字 题目描述 一个人设定一组四码的数字作为谜底，另一方猜。 每猜一个数，出数者就要根据这个数字",
-            "link": "/code/program/practice/4",
-            "date": "2025-04-30"
-        },
-        {
-            "title": "小猫",
-            "desc": "小猫 没有做好足够的心理/经济准备，不要养猫。 因为养猫一养就是十几年，在各方面都不成熟的情况下，",
-            "link": "/daily/cat",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "上海",
-            "desc": "上海 景点 交通 游玩 开放 预约 票价 平台 推荐 :-:-:-:-: 甜爱路地铁3/8号线虹口",
-            "link": "/trip/china/shanghai",
-            "date": "2025-02-17"
-        },
-        {
-            "title": "浙江",
-            "desc": "浙江 杭州 美食 吃的 酒吧 - 酒隐 - TASTE ROOM - Bar 福吧 杭州市上城区柳",
-            "link": "/trip/china/zhejiang/index",
-            "date": "2025-03-29"
-        },
-        {
-            "title": "嘉兴",
-            "desc": "嘉兴 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20250404",
-            "date": "2025-04-16"
-        },
-        {
-            "title": "设备价格",
-            "desc": "设备价格 关于 除非特别说明 显示价格均为 RMB 官网 ¥/¥ 表示 首发价/现价 detail",
-            "link": "/daily/apple/price",
-            "date": "2024-06-12"
-        },
-        {
-            "title": "关键字",
-            "desc": "关键字 constexpr 它的主要作用是在编译时求值。这意味着，被 constexpr 修饰的表",
-            "link": "/code/cpp/keywords",
-            "date": "2025-04-24"
-        },
-        {
-            "title": "数据库",
-            "desc": "数据库 数据库事务 数据库事务是指作为单个逻辑工作单元执行的一系列数据库操作。 事务有四个重要的特",
-            "link": "/code/interview/db",
-            "date": "2025-04-24"
-        },
-        {
-            "title": "算法与数据结构",
-            "desc": "算法与数据结构 曼彻斯特编码和差分曼彻斯特编码 以下是关于曼彻斯特编码和差分曼彻斯特编码的介绍：",
-            "link": "/code/interview/dsa",
-            "date": "2025-04-24"
-        },
-        {
-            "title": "银行卡",
-            "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
-            "link": "/daily/card",
-            "date": "2025-01-14"
-        },
-        {
-            "title": "江西",
-            "desc": "江西 老三样 打平火 南昌 上饶 Day1：抵达上饶→望仙谷（夜宿望仙谷） Day2：望仙谷→葛仙",
-            "link": "/trip/china/jiangxi/index",
-            "date": "2025-02-17"
         }
     ]
 }
