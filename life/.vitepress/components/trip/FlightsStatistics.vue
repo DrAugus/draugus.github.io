@@ -140,6 +140,22 @@
                         </div>
                     </div>
 
+                    <div class="box flex-row" @click="emitShowRank(rankKeys.planeModel2)">
+                        <div class="box-top">
+                            <span class="align-left">
+                                <span class="font-12 font-grey">机型(不带-)</span> </span>
+                            <span class="align-right"> <span class="font-10 align-right label2"> 机型排行</span> </span>
+                        </div>
+                        <div class="box-bottom">
+                            <span class="align-left">
+                                <span class="font-24">{{ arrFlightAirplaneModel2.length }}</span>
+                            </span>
+                            <span class="align-right">
+                                <span class="font-12">{{ arrFlightAirplaneModel2[0][TimesInfo.Text] }}</span>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -175,6 +191,7 @@ const rankKeys = {
     route: '航线',
     airline: '航司',
     planeModel: '机型',
+    planeModel2: '机型2',
 }
 
 const totalFlights = FLIGHT_DATA.length;
@@ -286,6 +303,24 @@ function getAirplaneModel() {
 const arrFlightAirplaneModel = getAirplaneModel();
 // console.log(arrFlightAirplaneModel);
 
+function getAirplaneModel2() {
+    let model = new Map();
+    for (let flight of FLIGHT_DATA) {
+        let mod = flight.airplane.model;
+        let modified = mod.split('(')[0];
+        if (modified.indexOf('-') !== -1) {
+            modified = modified.split('-')[0];
+        }
+
+        let key = modified;
+        model.set(key, (model.get(key) || 0) + 1);
+    }
+    let arrModel = Array.from(model).sort((a, b) => b[TimesInfo.Times] - a[TimesInfo.Times]);
+    return arrModel;
+}
+const arrFlightAirplaneModel2 = getAirplaneModel2();
+// console.log(arrFlightAirplaneModel2);
+
 const modelNameZH = ['空客', '波音', '中国商飞', '其他'];
 function getAirplaneModelName() {
     let model = new Map();
@@ -361,6 +396,12 @@ const findRank = (key: string): FlightRank | undefined => {
             fr.title = '机型排行榜';
             fr.abstract = timesArrModified(arrFlightAirplaneModelName);
             fr.details = timesArrModified(arrFlightAirplaneModel);
+            fr.progressColor = customColors[5];
+            break;
+        case rankKeys.planeModel2:
+            fr.title = '机型排行榜';
+            fr.abstract = timesArrModified(arrFlightAirplaneModelName);
+            fr.details = timesArrModified(arrFlightAirplaneModel2);
             fr.progressColor = customColors[5];
             break;
     }
