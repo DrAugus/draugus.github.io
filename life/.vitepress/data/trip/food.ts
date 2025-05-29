@@ -62,6 +62,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 380,
         restaurantType: ["日料", "烧烤", "肉"],
         recommendation: true,
+        closed: true,
     },
     {
         name: "荆九爷爆炒桥头三嫩",

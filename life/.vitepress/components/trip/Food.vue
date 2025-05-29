@@ -9,7 +9,10 @@
     </div>
     <ul>
         <li v-for="(v, i) in sortedFoods">
-            {{ v.name }}
+            <span v-if="v.closed">
+                <del> {{ v.name }}</del> (已倒闭)
+            </span>
+            <span v-else> {{ v.name }}</span>
             <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
             <span v-if="!Array.isArray(v.restaurantType)">
                 <Badge type="tip" :text="v.restaurantType" />

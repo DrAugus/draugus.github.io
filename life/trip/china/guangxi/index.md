@@ -20,7 +20,6 @@
 - 桂林米粉
 - 啤酒鱼
 - 油茶
-
 - 欣桂厨<Badge type="warning" text="人均 ¥48" />  <Badge type="tip" text="广西菜" />
 - 小食候湘<Badge type="warning" text="人均 ¥48" />  <Badge type="tip" text="湘菜" /> <Badge text="小炒黄牛肉 ￥42" /><Badge text="茄子炒豆角 ￥22" /><Badge text="麻婆豆腐 ￥9.9" />
 - 勺得  <Badge type="warning" text="人均 ¥40" />  <Badge type="tip" text="广西菜" /><Badge text="坛酸牛肉沫" /><Badge text="老桂林糖醋蓑衣蛋" />

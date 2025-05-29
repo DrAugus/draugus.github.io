@@ -972,6 +972,33 @@ export const FLIGHT_DATA: Flight[] = [
         },
         price: null
     }, {
+        date: new Date('2019-01-03'),
+        number: 'EU2770',
+        airplane: {
+            model: '空客320-214(SL)',
+            number: 'B8878'
+        },
+        airlineCode: 'EU',
+        seatClass: 'N',
+        distance: 1339,
+        departure: {
+            plannedTime: new Date('2019-01-03T19:20:00+08:00'),
+            actualTime: new Date('2019-01-03T19:25:00+08:00'),
+            airport: "沈阳桃仙",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2019-01-03T21:55:00+08:00'),
+            actualTime: new Date('2019-01-03T21:54:00+08:00'),
+            airport: "郑州新郑",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 350,
+            airportConstructionFee: 50,
+            fuelSurcharge: 30,
+        }
+    }, {
         date: new Date('2020/07/27'),
         number: '3U8466',
         airplane: {

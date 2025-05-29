@@ -211,5 +211,33 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         pricePurchase: 448.24,
         platform: "京东",
         date: new Date('2025/03/26'),
+    }, {
+        device: "MacBook Pro Retina 银色 15.4英寸 Mid2012 2.3GHz i7 8GB 256GB",
+        deviceType: "Mac",
+        priceSale: 16488,
+        pricePurchase: 585,
+        platform: "咸鱼",
+        date: new Date('2025/05/28'),
+    }, {
+        device: "Mac mini M4 24GB 512GB 10Gb以太网",
+        deviceType: "Mac",
+        priceSale: 8249,
+        pricePurchase: 5569.21,
+        platform: "京东",
+        date: new Date('2025/05/29'),
+    }, {
+        device: "带有数字小键盘的妙控键盘 - 中文 (拼音)",
+        deviceType: "Accessories",
+        priceSale: 899,
+        pricePurchase: 607.5,
+        platform: "京东",
+        date: new Date('2025/05/29'),
+    }, {
+        device: "妙控板 (USB-C) - 白色多点触控表面",
+        deviceType: "Accessories",
+        priceSale: 899,
+        pricePurchase: 718.05,
+        platform: "京东",
+        date: new Date('2025/05/29'),
     },
 ];

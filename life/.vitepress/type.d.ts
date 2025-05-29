@@ -132,7 +132,7 @@ type GeoCoordinates = {
 
 type DriveLocation = {
   district: string,
-  details?:string,
+  details?: string,
   coordinates: GeoCoordinates,
   time: Date,
 }
@@ -403,6 +403,7 @@ export interface FoodRecord {
     isRecommended: boolean,
     reason?: string, // 推荐理由（可选）
   },
+  closed?: boolean,
 }
 
 export interface Flag {
