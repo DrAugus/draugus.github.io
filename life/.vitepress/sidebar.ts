@@ -1,3 +1,4 @@
+import { COURSE_NOTES, COURSE_STRUCTURE, COURSES } from "./data/course";
 import { setJourneySidebar } from "./data/trip/journey";
 import { setTripPlaceSidebar } from "./data/trip/place";
 import { setTravelogueSidebar } from "./data/trip/travelogue";
@@ -226,6 +227,22 @@ const sidebarMedicineLearn = [
     { text: '医学', link: '/medicine/learn/branch' },
     { text: '从医', link: '/medicine/learn/path' },
 ]
+
+const sidebarCourse = [
+    {
+        text: '培养方案', collapsed: false, items: [
+            ...COURSE_STRUCTURE
+        ]
+    }, {
+        text: '课程', collapsed: false, items: [
+            ...COURSES
+        ]
+    }, {
+        text: '笔记', collapsed: false, items: [
+            ...COURSE_NOTES
+        ]
+    },
+];
 
 const sidebarCodeOS = [
     {
@@ -681,7 +698,7 @@ export const sidebar = {
     '/medicine/': sidebarMedicine,
     '/medicine/learn/': sidebarMedicineLearn,
     //
-    // '/course/': sidebarCourse,
+    '/course/': sidebarCourse,
     //
     '/tools/': sidebarTools,
     //

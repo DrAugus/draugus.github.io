@@ -11,14 +11,11 @@ export const COURSES: LinkName[] = [
 ];
 
 export const COURSE_NOTES: LinkName[] = [
-    { text: '连音', link: '/course/tuplet' },
-    { text: '中国人口', link: '/course/population-cn' },
-    { text: '数学术语中英文', link: '/course/math-term' },
+    { text: '连音', link: '/course/notes/tuplet' },
+    { text: '中国人口', link: '/course/notes/population-cn' },
+    { text: '数学术语中英文', link: '/course/notes/math-term' },
 ];
 
-
-
-
-
-
-
+export const COURSE_STRUCTURE: LinkName[] = [
+    { text: '计算机科学', link: '/course/structure/cs' },
+];

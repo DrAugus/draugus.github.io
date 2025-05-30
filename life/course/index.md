@@ -27,11 +27,12 @@
 - [learn OpenGL](https://learnopengl.com/)  
 - learn OpenGL 英文网站[中文翻译版](https://learnopengl-cn.github.io/)
 
+<StyledEntryCollection :title="'培养方案'" :items=COURSE_STRUCTURE />
 <StyledEntryCollection :title="'科目'" :items=COURSES />
 <StyledEntryCollection :title="'散记'" :items=COURSE_NOTES />
 
 <script setup>
-import { COURSES, COURSE_NOTES } from "../.vitepress/data/course.ts";
+import { COURSES, COURSE_NOTES, COURSE_STRUCTURE } from "../.vitepress/data/course.ts";
 import StyledEntryCollection from "../.vitepress/components/StyledEntryCollection.vue";
 
 </script>

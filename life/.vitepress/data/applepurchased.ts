@@ -222,7 +222,7 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         device: "Mac mini M4 24GB 512GB 10Gb以太网",
         deviceType: "Mac",
         priceSale: 8249,
-        pricePurchase: 5569.21,
+        pricePurchase: 5539.21,
         platform: "京东",
         date: new Date('2025/05/29'),
     }, {
@@ -236,7 +236,7 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         device: "妙控板 (USB-C) - 白色多点触控表面",
         deviceType: "Accessories",
         priceSale: 899,
-        pricePurchase: 718.05,
+        pricePurchase: 645.88,
         platform: "京东",
         date: new Date('2025/05/29'),
     },
