@@ -30,9 +30,42 @@ sudo apt install cmake python3 python3-pip
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
+::::danger 可能会报错 
+`curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused`
 
-todo
+直接使用镜像加速（参看[中科大镜像站](https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git)），参考 [brew 正确姿势](https://www.cnblogs.com/chenyablog/p/14343707.html)
+
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install)"
+```
+
+:::details 或者继续尝试用官方的
+需要修改一下 host，ip 从 `ipaddress.com` 中获取
+
+```bash
+vim /etc/hosts
+```
+
+添加
+```bash
+199.232.68.133 raw.githubusercontent.com 
+199.232.68.133 user-images.githubusercontent.com 
+199.232.68.133 avatars2.githubusercontent.com 
+199.232.68.133 avatars1.githubusercontent.com 
+```
+
+:::
+::::
+
+推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
+也可以使用 zsh-highlight（官方[安装指南](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)）：
+
+```bash
+brew install zsh-syntax-highlighting
+echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+```
+
+xcode [history version](../code/os/macos/xcode#history-version)
 
 ## Windows
 
@@ -45,8 +78,8 @@ todo
 一台新机器，首先要安装的也是必需的，是下面这些软件
 
 - 压缩软件：bandizip [官网](https://www.bandisoft.com/bandizip/) [下载页](https://www.bandisoft.com/bandizip/dl.php?web)
-- VPN 软件：clash [第三方下载链接](https://zmssr.lanzoum.com/ie1is16ec5uj) <Badge type="tip" text="开发者必备" />
-- 访问 GitHub：[FastGithub](https://github.com/WangGithubUser/FastGitHub/releases/)，解决 GitHub 打不开，GitHub 加速神器
+- VPN 软件：clash [第三方下载链接](https://zmssr.lanzoum.com/ie1is16ec5uj) <Badge type="tip" text="开发者必备" /> ([intro](https://a76yyyy.github.io/clash/))
+- 访问 GitHub：[FastGithub](https://github.com/WangGithubUser/FastGitHub/releases/)，解决 GitHub 打不开，GitHub 加速神器（清华大学[镜像](https://cloud.tsinghua.edu.cn/d/df482a15afb64dfeaff8/)）
 
 上面的软件安装优先级很高，安装完毕之后，便于继续安装下面的软件
 
