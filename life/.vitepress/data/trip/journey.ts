@@ -1,17 +1,22 @@
-import { CardData, CardLink, LinkName, Journey } from "../../type";
-import { modifyDate, modifyDate1 } from "../../utils";
+import { CardData, CardLink, Journey } from "../../type";
+import { modifyDate, modifyDate1, setTripSidebar } from "../../utils";
 
 const dataJourney: Journey[] = [
-    { date: new Date('2024/01/01') },
+    { date: new Date('2024/10/19') },
     { date: new Date('2024/02/14') },
-    { date: new Date('2024/02/07') },
-    { date: new Date('2023/10/19') },
-    { date: new Date('2023/10/06') },
+    { date: new Date('2024/09/11') },
+    { date: new Date('2024/10/15') },
+    { date: new Date('2024/10/05') },
     { date: new Date('2023/09/30') },
+    { date: new Date('2024/10/01') },
     { date: new Date('2023/06/22') },
+    { date: new Date('2023/10/06') },
+    { date: new Date('2024/05/13') },
     { date: new Date('2023/06/26') },
     { date: new Date('2024/09/17') },
-    { date: new Date('2024/05/13') },
+    { date: new Date('2024/02/07') },
+    { date: new Date('2023/10/19') },
+    { date: new Date('2024/01/01') },
 ];
 
 const linkPrefix = '/trip/journey/';
@@ -23,37 +28,7 @@ export const sortedLastJourney = [...dataJourney].sort((a, b) => {
     return 0;
 });
 
-export const setJourneySidebar = () => {
-    const result: any[] = [];
-    sortedLastJourney.forEach(obj => {
-        const year = obj.date.getFullYear();
-        const month = obj.date.getMonth() + 1;
-        let yearItem = result.find(item => item.text === `${year}年`);
-        if (!yearItem) {
-            yearItem = {
-                text: `${year}年`,
-                collapsed: false,
-                items: []
-            };
-            result.push(yearItem);
-        }
-        let monthItem = yearItem.items.find(item => item.text === `${month}月`);
-        if (!monthItem) {
-            monthItem = {
-                text: `${month}月`,
-                items: []
-            };
-            yearItem.items.push(monthItem);
-        }
-        let day = obj.date.getDate();
-        let linkName: LinkName = {
-            text: `${day}日`,
-            link: linkJourney(obj.date)
-        };
-        monthItem.items.push(linkName);
-    });
-    return result;
-};
+export const setJourneySidebar = setTripSidebar(sortedLastJourney, linkJourney)
 
 const getJourneyCard = (): CardData[] => {
 

@@ -125,6 +125,12 @@ export interface Journey {
   info?: string,
 }
 
+export interface Flying {
+  title?: string,
+  date: Date,
+  info?: string,
+}
+
 type GeoCoordinates = {
   longitude: number,
   latitude: number,

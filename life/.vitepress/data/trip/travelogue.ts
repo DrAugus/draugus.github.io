@@ -1,5 +1,5 @@
-import { CardData, CardLink, LinkName, TravelogueInfo } from "../../type";
-import { modifyDate, modifyDate1 } from "../../utils";
+import { CardData, CardLink, TravelogueInfo } from "../../type";
+import { modifyDate, modifyDate1, setTripSidebar } from "../../utils";
 
 const dataTravelogue: TravelogueInfo[] = [
     { title: '长沙', date: new Date('2022/08/10'), city: '长沙' },
@@ -36,37 +36,7 @@ export const sortedLastTravelogue = [...dataTravelogue].sort((a, b) => {
     return 0;
 });
 
-export const setTravelogueSidebar = () => {
-    const result: any[] = [];
-    sortedLastTravelogue.forEach(travelogue => {
-        const year = travelogue.date.getFullYear();
-        const month = travelogue.date.getMonth() + 1;
-        let yearItem = result.find(item => item.text === `${year}年`);
-        if (!yearItem) {
-            yearItem = {
-                text: `${year}年`,
-                collapsed: false,
-                items: []
-            };
-            result.push(yearItem);
-        }
-        let monthItem = yearItem.items.find(item => item.text === `${month}月`);
-        if (!monthItem) {
-            monthItem = {
-                text: `${month}月`,
-                items: []
-            };
-            yearItem.items.push(monthItem);
-        }
-        let day = travelogue.date.getDate();
-        let linkName: LinkName = {
-            text: `${day}日 ${travelogue.title}`,
-            link: linkTravelogue(travelogue.date)
-        };
-        monthItem.items.push(linkName);
-    });
-    return result;
-};
+export const setTravelogueSidebar = setTripSidebar(sortedLastTravelogue, linkTravelogue);
 
 export const isEqualCity = (cityA: string, cityB: string) => {
     if (cityA === cityB) { return true; }

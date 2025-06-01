@@ -222,7 +222,7 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         device: "Mac mini M4 24GB 512GB 10Gb以太网",
         deviceType: "Mac",
         priceSale: 8249,
-        pricePurchase: 5539.21,
+        pricePurchase: 5523.21,
         platform: "京东",
         date: new Date('2025/05/29'),
     }, {

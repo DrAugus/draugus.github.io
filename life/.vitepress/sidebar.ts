@@ -1,4 +1,5 @@
 import { COURSE_NOTES, COURSE_PATH, COURSE_STRUCTURE, COURSES } from "./data/course";
+import { setFlyingSidebar } from "./data/trip/flying";
 import { setJourneySidebar } from "./data/trip/journey";
 import { setTripPlaceSidebar } from "./data/trip/place";
 import { setTravelogueSidebar } from "./data/trip/travelogue";
@@ -91,13 +92,11 @@ const sidebarTripPlace = [
 
 const sidebarTripTravelogue = [
     { text: '游记', link: '/trip/travelogue/' },
-]
-    .concat(...setTravelogueSidebar());
+].concat(...setTravelogueSidebar);
 
 const sidebarTripJourney = [
     { text: '赶路', link: '/trip/journey/' },
-]
-    .concat(...setJourneySidebar());
+].concat(...setJourneySidebar);
 
 const sidebarTripDrive = [
     { text: '自驾', link: '/trip/drive/' },
@@ -108,7 +107,7 @@ const sidebarTripFlying = [
     { text: '机场', link: '/trip/flying/airport' },
     { text: '随心飞', link: '/trip/flying/suixinfei' },
     { text: '里程兑换', link: '/trip/flying/miles-exchange' },
-]
+].concat(...setFlyingSidebar)
 
 const sidebarSpeech = [
     { text: 'Questionable Advice from One Very Lucky Berkeley Engineer', link: '/speech/craig-federighi' },

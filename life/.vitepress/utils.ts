@@ -5,6 +5,7 @@ export function isStringNumeric(s: string): boolean {
 
 //格式化日期
 import dayjs from "dayjs";
+import { LinkName } from "./type";
 const today = dayjs();
 export const parseDayjs = (date: string | Date) =>
     typeof date === 'string' ? dayjs(date, "YYYY-MM-DD HH:mm:ss") : dayjs(date);
@@ -132,3 +133,38 @@ export function rgbToHex(r: number, g: number, b: number): string {
         return hex.length === 1 ? '0' + hex : hex;
     }).join('')}`;
 }
+
+export const setTripSidebar = (sortedData: any[], linkModify: Function) => {
+    const result: any[] = [];
+    sortedData.forEach(obj => {
+        const year = obj.date.getFullYear();
+        const month = obj.date.getMonth() + 1;
+        let yearItem = result.find(item => item.text === `${year}年`);
+        if (!yearItem) {
+            yearItem = {
+                text: `${year}年`,
+                collapsed: false,
+                items: []
+            };
+            result.push(yearItem);
+        }
+        let monthItem = yearItem.items.find(item => item.text === `${month}月`);
+        if (!monthItem) {
+            monthItem = {
+                text: `${month}月`,
+                items: []
+            };
+            yearItem.items.push(monthItem);
+        }
+        let day = obj.date.getDate();
+        let linkName: LinkName = {
+            text: `${day}日`,
+            link: linkModify(obj.date)
+        };
+        if (obj.title) {
+            linkName.text = `${day}日 ${obj.title}`;
+        }
+        monthItem.items.push(linkName);
+    });
+    return result;
+};

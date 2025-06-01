@@ -655,7 +655,7 @@ class OperateFile:
 
     # str 为最终合并完成的 str 至少一行
     @staticmethod
-    def write_file(arr, filename):
+    def write_file(arr, filename=None):
         filename = OperateFile.check_filename(filename)
         if not len(arr) or not isinstance(arr, list) or arr[0].find("\n") == -1:
             print("str must be one more rows: ", arr)
