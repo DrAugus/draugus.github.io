@@ -1,5 +1,11 @@
 # 飞机
 
+## 机票价格
+
+收集因疫情导致的机票价格波动
+
+<Airfare />
+
 ## 航线
 
 全球航线图[参考](https://map.variflight.com/)
@@ -46,12 +52,6 @@
 
 :::
 
-## 机票价格
-
-收集因疫情导致的机票价格波动
-
-<Airfare />
-
 <script setup>
-import Airfare from '../.vitepress/components/trip/Airfare.vue'
+import Airfare from '../../.vitepress/components/trip/Airfare.vue'
 </script>

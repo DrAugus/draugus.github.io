@@ -19,3 +19,9 @@ export const COURSE_NOTES: LinkName[] = [
 export const COURSE_STRUCTURE: LinkName[] = [
     { text: '计算机科学', link: '/course/structure/cs' },
 ];
+
+export const COURSE_PATH: LinkName[] = [
+    { text: 'C++', link: '/course/path/cpp' },
+    { text: '算法', link: '/course/path/dsa' },
+    { text: '医学', link: '/course/path/medicine' },
+];

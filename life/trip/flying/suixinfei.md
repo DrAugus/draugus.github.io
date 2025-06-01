@@ -337,7 +337,7 @@
 
 畅游中国，随心飞备选，要注意飞行日天气，提防误机。
 
-[探索进度](./china/#探索进度)
+[探索进度](../china/#探索进度)
 
 **还想飞？往哪里飞？纯上当**！就看看吧，从杭州起飞的航班，根本没有几班，虹桥更少，浦东别考虑了。义乌、宁波的航班也很多，可以考虑一下
 
@@ -396,9 +396,9 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import { modifyDate } from "../.vitepress/utils";
-import AnalyseSuixinfei from '../.vitepress/components/trip/AnalyseSuixinfei.vue';
-import { SUIXINFEI2024 } from '../.vitepress/data/trip/suixinfei2024';
+import { modifyDate } from "../../.vitepress/utils";
+import AnalyseSuixinfei from '../../.vitepress/components/trip/AnalyseSuixinfei.vue';
+import { SUIXINFEI2024 } from '../../.vitepress/data/trip/suixinfei2024';
 
 const flyTimes = ref('');
 

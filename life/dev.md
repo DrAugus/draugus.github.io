@@ -9,7 +9,7 @@ outline: false
 
 :::tip 旅行部分
 
-- 旅行航线，[link](./trip/flights)
+- 旅行航线，[link](./trip/flying/flights)
 - 最新的赶路日记，[link](./trip/journey/)
 - 游记更新，内容更新，修正流水账记录方式，[link](./trip/travelogue/)
 :::

@@ -18,7 +18,7 @@ hero:
       link: /trip/      
     - theme: brand
       text: 去哪
-      link: /trip/where
+      link: /trip/where/
     - theme: brand
       text: 游记
       link: /trip/travelogue/
@@ -42,7 +42,7 @@ features:
   - title: 去哪儿
     # icon: 🚀
     details: 看看近期准备去哪？终点并不意味着一切，
-    link: /trip/where
+    link: /trip/where/
     linkText: 冲冲即刻出发
   - title: 旅途游记
     # icon: 🚀

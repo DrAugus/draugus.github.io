@@ -9,7 +9,7 @@
 ❌非贵宾厅：到达机场，进入起飞大厅，值机/办理托运，国内/国际安检，候机，登机口刷机票登机，成功登机。  
 ❌贵宾厅（安检前的贵宾厅）：到达机场，前台出示身份证打印登机牌/办理托运，进入休息室休息，等待服务人员提醒登机，vip 安检口，乘坐 vip 接送车，到达登机口走 vip 通道入机。  
 ❌贵宾厅（安检后的贵宾厅）：到达机场，同一般通道办完各种值机、托运、安检，而后在安检后的贵宾厅休息，乘坐 vip 接送车，到达登机口走 vip 通道入机。  
-✔**贵宾楼**：直接到机场，找到贵宾厅。会需要你的身份证，服务人员打印登机牌。当然托运也是专人服务。按服务员所说位置，进去休息，吃喝玩乐。完全不用担心飞机什么时候起飞，服务人员会来叫你（或者给你打电话）去登机。提醒后，会带领你前往专属安检通道，无需排队。安检过后，坐上专属巴士，直达飞机阶梯下。  
+✅**贵宾楼**：直接到机场，找到贵宾厅。会需要你的身份证，服务人员打印登机牌。当然托运也是专人服务。按服务员所说位置，进去休息，吃喝玩乐。完全不用担心飞机什么时候起飞，服务人员会来叫你（或者给你打电话）去登机。提醒后，会带领你前往专属安检通道，无需排队。安检过后，坐上专属巴士，直达飞机阶梯下。  
 
 ### 贵宾
 
@@ -45,8 +45,8 @@
 <AirportAMap />
 
 <script setup>
-import AirportAMap from '../.vitepress/components/trip/AirportAMap.vue';
-import AirportBankVIP from '../.vitepress/components/trip/AirportBankVIP.vue';
+import AirportAMap from '../../.vitepress/components/trip/AirportAMap.vue';
+import AirportBankVIP from '../../.vitepress/components/trip/AirportBankVIP.vue';
 </script>
 
 ### 杭州萧山国际机场

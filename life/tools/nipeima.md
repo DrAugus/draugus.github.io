@@ -30,7 +30,7 @@ sudo apt install cmake python3 python3-pip
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-::::danger 可能会报错 
+::::danger 可能会报错
 `curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused`
 
 直接使用镜像加速（参看[中科大镜像站](https://lug.ustc.edu.cn/wiki/mirrors/help/brew.git)），参考 [brew 正确姿势](https://www.cnblogs.com/chenyablog/p/14343707.html)
@@ -47,6 +47,7 @@ vim /etc/hosts
 ```
 
 添加
+
 ```bash
 199.232.68.133 raw.githubusercontent.com 
 199.232.68.133 user-images.githubusercontent.com 
@@ -57,8 +58,19 @@ vim /etc/hosts
 :::
 ::::
 
-推荐安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
-也可以使用 zsh-highlight（官方[安装指南](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)）：
+推荐安装 oh my zsh
+
+```bash
+# install
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# auto suggestion
+brew install zsh-autosuggestions
+echo "source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+```
+
+也可以安装 [fish](./cmd-line-tools/fish) 命令行，[官网](https://fishshell.com/)  
+
+zsh-highlight（官方[安装指南](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)）：
 
 ```bash
 brew install zsh-syntax-highlighting

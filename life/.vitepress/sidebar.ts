@@ -1,4 +1,4 @@
-import { COURSE_NOTES, COURSE_STRUCTURE, COURSES } from "./data/course";
+import { COURSE_NOTES, COURSE_PATH, COURSE_STRUCTURE, COURSES } from "./data/course";
 import { setJourneySidebar } from "./data/trip/journey";
 import { setTripPlaceSidebar } from "./data/trip/place";
 import { setTravelogueSidebar } from "./data/trip/travelogue";
@@ -68,22 +68,11 @@ const sidebarTrip = [
     { text: '探索', link: '/trip/explore' },
     { text: '常住地', link: '/trip/permanent-residence' },
 
-    {
-        text: '出行', collapsed: false, items: [
-            { text: '飞机', link: '/trip/airplane' },
-            { text: '随心飞', link: '/trip/suixinfei' },
-            { text: '飞行行程', link: '/trip/flights' },
-            { text: '里程兑换', link: '/trip/miles-exchange' },
-            { text: '机场', link: '/trip/airport' },
-            { text: '火车站', link: '/trip/railway' },
-            { text: '酒店', link: '/trip/hotel' },
-            { text: '公共交通', link: '/trip/public-transport' },
-        ]
-    },
-
+    { text: '火车站', link: '/trip/railway' },
+    { text: '酒店', link: '/trip/hotel' },
+    { text: '公共交通', link: '/trip/public-transport' },
     {
         text: '出境', collapsed: false, items: [
-
             { text: '护照', link: '/trip/passport' },
             { text: '签证', link: '/trip/visa' },
             { text: '往来港澳通行证', link: '/trip/eep' },
@@ -97,7 +86,7 @@ const sidebarTrip = [
 ];
 
 const sidebarTripPlace = [
-    { text: '去哪', link: '/trip/where' }
+    { text: '去哪', link: '/trip/where/' }
 ].concat(...setTripPlaceSidebar());
 
 const sidebarTripTravelogue = [
@@ -112,6 +101,13 @@ const sidebarTripJourney = [
 
 const sidebarTripDrive = [
     { text: '自驾', link: '/trip/drive/' },
+];
+const sidebarTripFlying = [
+    { text: '飞机', link: '/trip/flying/airplane' },
+    { text: '飞行行程', link: '/trip/flying/flights' },
+    { text: '机场', link: '/trip/flying/airport' },
+    { text: '随心飞', link: '/trip/flying/suixinfei' },
+    { text: '里程兑换', link: '/trip/flying/miles-exchange' },
 ]
 
 const sidebarSpeech = [
@@ -240,6 +236,10 @@ const sidebarCourse = [
     }, {
         text: '笔记', collapsed: false, items: [
             ...COURSE_NOTES
+        ]
+    }, {
+        text: '学习路线', collapsed: false, items: [
+            ...COURSE_PATH
         ]
     },
 ];
@@ -682,11 +682,13 @@ export const sidebar = {
     '/daily/': sidebarDaily,
     // 
     '/trip/': sidebarTrip,
+    '/trip/where/': sidebarTripPlace,
     '/trip/china/': sidebarTripPlace,
     '/trip/abroad/': sidebarTripPlace,
     '/trip/travelogue/': sidebarTripTravelogue,
     '/trip/journey/': sidebarTripJourney,
     '/trip/drive/': sidebarTripDrive,
+    '/trip/flying/': sidebarTripFlying,
     // 
     '/speech/': sidebarSpeech,
     '/history/': sidebarHistory,

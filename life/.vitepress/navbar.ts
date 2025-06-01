@@ -7,19 +7,29 @@ export const navbar = [
     text: '旅行',
     items: [
       { text: '介绍', link: '/trip/' },
-      { text: '游记', link: '/trip/travelogue/' },
-      { text: '去哪', link: '/trip/where' },
-      { text: '赶路', link: '/trip/journey/' },
-      { text: '自驾', link: '/trip/drive/' },
+      {
+        text: '',
+        items: [
+          { text: '去哪', link: '/trip/where/' },
+          { text: '飞行', link: '/trip/flying/' },
+          { text: '游记', link: '/trip/travelogue/' },
+          { text: '赶路', link: '/trip/journey/' },
+          { text: '自驾', link: '/trip/drive/' },
+        ],
+      },
     ],
     activeMatch: '^/trip',
   },
   {
     text: '日常', items: [
       { text: '介绍', link: '/daily/' },
-      { text: '小猫', link: '/daily/cat' },
-      { text: '日用价格', link: '/daily/goods-price' },
-      { text: '苹果购买记录', link: '/daily/apple/price' },
+      {
+        text: '',
+        items: [
+          { text: '小猫', link: '/daily/cat' },
+          { text: '日用价格', link: '/daily/goods-price' },
+          { text: '苹果购买记录', link: '/daily/apple/price' },],
+      },
     ], activeMatch: '^/daily'
   },
   // { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
@@ -32,7 +42,6 @@ export const navbar = [
         items: [
           { text: '配环境', link: '/tools/nipeima' },
           { text: '全部工具', link: '/tools/' },
-          { text: '学习路线', link: '/code/learn/' },
         ],
         activeMatch: '^/tools',
       },
@@ -46,11 +55,6 @@ export const navbar = [
       { text: '小小震撼', link: '/code/shock/' },
     ],
     activeMatch: '^/code',
-  },
-  {
-    text: '医学', items: [
-      { text: '学习路线', link: '/medicine/learn/' },
-    ], activeMatch: '^/medicine'
   },
   {
     text: '待定',
