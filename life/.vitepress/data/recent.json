@@ -2,124 +2,124 @@
     "title": "",
     "items": [
         {
-            "title": "自驾游",
-            "desc": "自驾游 时效性 本文有很强的时效性，不仅仅本文，本网站都有很强的时效性，所有感受尽可能会加上当时发",
-            "link": "/trip/drive/index",
-            "date": "2025-05-23"
+            "title": "Python",
+            "desc": "Python Install details 其他源 - 阿里云 - 中国科技大学 <http",
+            "link": "/code/program/lang/python",
+            "date": "2024-05-28"
         },
         {
-            "title": "穿着尺寸",
-            "desc": "穿着尺寸 上衣尺寸 中间数字一般为胸围 裤子尺寸这类标签，它们一般由三部分组成，分别代表身高、腰围",
-            "link": "/daily/cloth",
-            "date": "2025-05-19"
-        },
-        {
-            "title": "亚洲",
-            "desc": "亚洲 欢迎来到亚洲 import ACardLinks from '../../../.vitep",
-            "link": "/trip/abroad/asia/index",
-            "date": "2025-05-19"
-        },
-        {
-            "title": "欧洲",
-            "desc": "欧洲 欢迎来到欧洲 当前资产不够去欧洲，未来可期，近期不再考虑了 import ACardLink",
-            "link": "/trip/abroad/europe/index",
-            "date": "2025-05-19"
-        },
-        {
-            "title": "广东",
-            "desc": "广东 广州 游记 游记参看港珠澳广深 攻略 details 不愿透露姓名的群友推荐 广州特色，各类",
-            "link": "/trip/china/guangdong/index",
+            "title": "日本",
+            "desc": "日本 旅游局 日本国家旅游局，中文站点 游记 夏季游记，参看 日本东京/大版/京都20230720",
+            "link": "/trip/abroad/asia/japan",
             "date": "2024-05-27"
         },
         {
-            "title": "天津",
-            "desc": "天津 旅行参考 details by-大学同学-本地ly 比较有名的就是滨江道，古文化街，意式风情",
-            "link": "/trip/china/tianjin",
-            "date": "2025-05-19"
+            "title": "2025/05/27",
+            "desc": "2025/05/27 飞机上带娃，不管的家长，真的令人窒息。 娃一直在乱叫，睡着都给我叫醒了，真是",
+            "link": "/trip/flying/20250527",
+            "date": "2025-06-01"
+        },
+        {
+            "title": "2024/10/15",
+            "desc": "2024/10/15 其实没有赶路日记 只是记录一下16日，凌晨01:30机场大巴的逆天 01:1",
+            "link": "/trip/journey/20241015",
+            "date": "2025-06-01"
+        },
+        {
+            "title": "学习路线",
+            "desc": "学习路线 医学学习路线 医学学习是一个系统且漫长的过程，通常可分为以下几个阶段： 本科阶段（5年）",
+            "link": "/course/path/medicine",
+            "date": "2025-05-31"
+        },
+        {
+            "title": "施工",
+            "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 旅行航线，link - 最新的赶路日记，lin",
+            "link": "/dev",
+            "date": "2024-08-06"
+        },
+        {
+            "title": "配环境",
+            "desc": "配环境 简单参考一下 当你获得一台全新机器，根据系统不同，可以参考下方的开发环境配置 Linux",
+            "link": "/tools/nipeima",
+            "date": "2024-07-12"
+        },
+        {
+            "title": "Echarts geo",
+            "desc": "Echarts geo 参考示例 Echarts geo-lines 本站实现",
+            "link": "/tools/tools/echarts-geo",
+            "date": "2025-05-31"
+        },
+        {
+            "title": "飞行行程",
+            "desc": "飞行行程 import Flights from '../../.vitepress/compon",
+            "link": "/trip/flying/flights",
+            "date": "2025-05-31"
+        },
+        {
+            "title": "飞行",
+            "desc": "飞行",
+            "link": "/trip/flying/index",
+            "date": "2025-05-31"
+        },
+        {
+            "title": "航空里程兑换",
+            "desc": "航空里程兑换 import AirlineMiles from '../../.vitepress",
+            "link": "/trip/flying/miles-exchange",
+            "date": "2025-05-31"
+        },
+        {
+            "title": "规划指南",
+            "desc": "规划指南 两岸青山相对出 孤帆一片日边来 走过(探索)，看过，记过(游记)。未来就在前方(去哪儿呢",
+            "link": "/trip/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "赶路",
+            "desc": "赶路 到处跑，到处跑。旅途消耗，接下来去哪儿呢 import ACardLinks from '.",
+            "link": "/trip/journey/index",
+            "date": "2024-09-20"
+        },
+        {
+            "title": "游记",
+            "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
+            "link": "/trip/travelogue/index",
+            "date": "2024-05-27"
         },
         {
             "title": "去哪儿",
             "desc": "去哪儿 走过蓝色星球，旅途记录，探索驻足 import ACardLinks from '../.",
-            "link": "/trip/where",
-            "date": "2024-05-27"
+            "link": "/trip/where/index",
+            "date": "2025-05-31"
         },
         {
-            "title": "非技术问题",
-            "desc": "非技术问题 为啥想来报这个岗位？为什么考虑来这边呢？ 自我评价 - 你的优势和劣势是什么？ - 最",
-            "link": "/code/interview/non-tech",
-            "date": "2024-12-12"
+            "title": "Mac Basin",
+            "desc": "Mac Basin 低版本操作系统 - 原装 App 版本过低，无法安装；可以去苹果系统之家搜索原",
+            "link": "/code/os/macos/base",
+            "date": "2025-05-31"
         },
         {
-            "title": "C++",
-            "desc": "C++ 想要精通C++并成为高手 你好呀！想要精通C++并成为高手，确实需要系统性的学习和大量的实",
-            "link": "/code/learn/cpp",
-            "date": "2025-05-19"
+            "title": "Xcode",
+            "desc": "Xcode history version 参考 - macOS 版本对应的 Xcode 版本，以",
+            "link": "/code/os/macos/xcode",
+            "date": "2025-05-31"
         },
         {
-            "title": "算法",
-            "desc": "算法 算法为什么这么巧妙？ 算法的“巧妙”其实源于人类对问题本质的抽象提炼和数学/逻辑规律的精准捕",
-            "link": "/code/learn/dsa",
-            "date": "2025-05-19"
+            "title": "中国人口",
+            "desc": "中国人口 import Population from '../../.vitepress/com",
+            "link": "/course/notes/population-cn",
+            "date": "2025-05-29"
         },
         {
-            "title": "医学",
-            "desc": "医学 !depart 医学分支 医学作为一门综合性学科，其分支领域广泛且复杂，涵盖了从基础研究到临",
-            "link": "/medicine/learn/branch",
-            "date": "2025-05-19"
+            "title": "计算机科学 Computer Science",
+            "desc": "计算机科学 Computer Science 牛津大学计算机培养课程参考：structure，fu",
+            "link": "/course/structure/cs",
+            "date": "2025-05-29"
         },
         {
-            "title": "从医",
-            "desc": "从医 若想在乡镇或县医院简单从医，可从明确目标与规划、获取学历与资质、提升临床技能、积累实践经验、",
-            "link": "/medicine/learn/path",
-            "date": "2025-05-19"
-        },
-        {
-            "title": "基础知识",
-            "desc": "基础知识 sizeof 在C++中，sizeof运算符用于获取数据类型或变量所占用的字节数。以下是",
-            "link": "/code/interview/basin",
-            "date": "2024-12-12"
-        },
-        {
-            "title": "买车吗",
-            "desc": "买车吗 开车消耗 停车费：公司400或者免费。租房400，有房有车位0。无房，月停车费800。 油",
-            "link": "/daily/car",
-            "date": "2025-05-11"
-        },
-        {
-            "title": "日用价格参考",
-            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
-            "link": "/daily/goods-price",
-            "date": "2024-05-23"
-        },
-        {
-            "title": "Word",
-            "desc": "Word ☑",
-            "link": "/tools/others/word",
-            "date": "2025-05-11"
-        },
-        {
-            "title": "机场评测",
-            "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
-            "link": "/trip/airport",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "景德镇",
-            "desc": "景德镇 import CityLink from '../../.vitepress/compon",
-            "link": "/trip/travelogue/20250503",
-            "date": "2025-05-11"
-        },
-        {
-            "title": "如何删除单向链表的中间节点",
-            "desc": "如何删除单向链表的中间节点 要删除单向链表中间的节点，需要找到链表的中间节点，并修改前一个节点的指",
-            "link": "/code/program/practice/1",
-            "date": "2025-04-30"
-        },
-        {
-            "title": "荒岛求生",
-            "desc": "荒岛求生 题目描述 有一个荒岛，只有左右两个港口，只有一座桥连接这两个港口，现在有一群人需要从两个",
-            "link": "/code/program/practice/2",
-            "date": "2025-04-30"
+            "title": "银行卡",
+            "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
+            "link": "/daily/card",
+            "date": "2025-01-14"
         }
     ]
 }
