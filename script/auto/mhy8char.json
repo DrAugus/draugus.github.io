@@ -242,7 +242,7 @@
             {
                 "char_name": "橘福福",
                 "char_color": "#ffce6d",
-                "char_line": "「草木尚知食尘饮露，修炼术法断不可饿着肚子呀。」",
+                "char_line": "「云岿山上有猛虎，仗义行侠好威风！」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/4a9b2cf4fe774bab5b4c120bbe3ee182_5096951012147369687.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/dbbf26de8101c4e37e36eeaac7eacca8_9026544933917816900.png",
                 "char_chan_id": "1185"
@@ -532,7 +532,7 @@
             {
                 "char_name": "Ju Fufu",
                 "char_color": "#ffce6d",
-                "char_line": "\"Even plants know to feed from the soil and drink dew — there's no way we can practice on an empty stomach!\"",
+                "char_line": "\"Fierce tigers prowl Yunkui Summit, where righteous heroes display their might!\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/4a9b2cf4fe774bab5b4c120bbe3ee182_5096951012147369687.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/dbbf26de8101c4e37e36eeaac7eacca8_9026544933917816900.png",
                 "char_chan_id": "1185"
@@ -827,7 +827,7 @@
             "prefix": "",
             "star": 5,
             "event_exclusive": true,
-            "intro": "「草木尚知食尘饮露，修炼术法断不可饿着肚子呀。」",
+            "intro": "「云岿山上有猛虎，仗义行侠好威风！」",
             "camp": "YunkuiSummit",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
