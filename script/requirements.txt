@@ -4,7 +4,7 @@ lxml==5.4.0
 matplotlib==3.10.3
 numpy==2.2.6
 openpyxl==3.1.5
-pandas==2.2.3
+pandas==2.3.0
 PyYAML==6.0.2
 Requests==2.32.3
 selenium==4.33.0
