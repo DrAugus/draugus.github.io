@@ -3669,7 +3669,16 @@ export const AIRPORTS: Airport[] = [
         region: "中国",
         longitude: 115.735995,
         latitude: 35.208004
-    }
+    }, {
+        code: "MXZ",
+        name: "Meizhou Meixian Airport",
+        nameLocal: "梅州梅县机场",
+        abbrZH: "梅州梅县",
+        city: "梅州",
+        region: "中国",
+        longitude: 116.102902,
+        latitude: 24.260405
+    },
 
 ]
 

@@ -1668,5 +1668,113 @@ export const FLIGHT_DATA: Flight[] = [
             airportConstructionFee: 50,
             fuelSurcharge: 20,
         }
+    }, {
+        date: new Date('2025-06-02'),
+        number: 'JD5745',
+        airplane: {
+            model: '空客330-343(X)',
+            number: 'B8679'
+        },
+        airlineCode: 'JD',
+        seatClass: 'U',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2025-06-02T20:05:00+08:00'),
+            actualTime: new Date('2025-06-02T20:20:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-02T22:10:00+08:00'),
+            actualTime: new Date('2025-06-02T22:10:00+08:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 304,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-06-04'),
+        number: 'JD5746',
+        airplane: {
+            model: '空客320-251(N)',
+            number: 'B1249'
+        },
+        airlineCode: 'JD',
+        seatClass: 'T',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2025-06-04T23:15:00+08:00'),
+            actualTime: new Date('2025-06-04T23:04:00+08:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-05T01:05:00+08:00'),
+            actualTime: new Date('2025-06-05T00:48:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 304,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-06-06'),
+        number: 'BK3142',
+        airplane: {
+            model: '波音737-800(WL)',
+            number: 'B206E'
+        },
+        airlineCode: 'BK',
+        seatClass: 'X',
+        distance: 1133,
+        departure: {
+            plannedTime: new Date('2025-06-06T22:35:00+08:00'),
+            actualTime: new Date('2025-06-06T22:54:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-07T00:40:00+08:00'),
+            actualTime: new Date('2025-06-07T00:44:00+08:00'),
+            airport: "天津滨海",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 128,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-06-08'),
+        number: 'MF8230',
+        airplane: {
+            model: '波音737-85C(WL)',
+            number: 'B1969'
+        },
+        airlineCode: 'MF',
+        seatClass: 'Z',
+        distance: 1133,
+        departure: {
+            plannedTime: new Date('2025-06-08T21:55:00+08:00'),
+            actualTime: new Date('2025-06-08T22:57:00+08:00'),
+            airport: "天津滨海",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-08T23:45:00+08:00'),
+            actualTime: new Date('2025-06-09T00:28:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 390,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
     },
 ];
