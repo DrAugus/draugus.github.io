@@ -39,6 +39,7 @@ const sidebarDaily = [
     }, {
         text: '娱乐休闲', collapsed: false, items: [
             { text: '办卡吗', link: '/daily/card' },
+            { text: '年利率', link: '/daily/apr' },
             { text: '看剧', link: '/daily/entertainment' },
             { text: '月亮', link: '/daily/moon' },
         ]
@@ -80,7 +81,7 @@ const sidebarTrip = [
             { text: '护照和签证的区别', link: '/trip/passport-vs-visa' },
             { text: '境外银行卡', link: '/trip/overseas-bank-card' },
             { text: '境外手机卡', link: '/trip/overseas-sim-card' },
-
+            { text: '汇率', link: '/trip/exchange-rate' },
         ]
     },
 

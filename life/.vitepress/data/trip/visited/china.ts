@@ -125,7 +125,17 @@ export const VISITED_CHINA: ExploreRecord[] = [
             },
         ]
     },
-    { id: '天津' },
+    {
+        id: '天津', info: [
+            {
+                date: {
+                    start: new Date('2025/06/06'),
+                    end: new Date('2025/06/08'),
+                },
+                intro: "游玩"
+            }
+        ]
+    },
     {
         id: '福建',
         items: [
@@ -154,22 +164,22 @@ export const VISITED_CHINA: ExploreRecord[] = [
         ]
     }, {
         id: '内蒙古', items: [
-            {
-                id: '鄂尔多斯', info: [
-                    {
-                        date: {
-                            start: new Date('2020/07/27'),
-                            end: new Date('2020/07/28'),
-                        },
-                        intro: "转机"
-                    }, {
-                        date: {
-                            start: new Date('2020/11/06'),
-                        },
-                        intro: "转机"
-                    }
-                ]
-            }
+            // {
+            //     id: '鄂尔多斯', info: [
+            //         {
+            //             date: {
+            //                 start: new Date('2020/07/27'),
+            //                 end: new Date('2020/07/28'),
+            //             },
+            //             intro: "转机"
+            //         }, {
+            //             date: {
+            //                 start: new Date('2020/11/06'),
+            //             },
+            //             intro: "转机"
+            //         }
+            //     ]
+            // }
         ]
     },
     {
@@ -364,7 +374,14 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         end: new Date('2023/06/12'),
                     },
                     intro: "游玩"
-                },]
+                }, {
+                    date: {
+                        start: new Date('2025/06/03'),
+                        end: new Date('2025/06/04'),
+                    },
+                    intro: "办事"
+                },
+                ]
             }, {
                 id: '桂林', resident: true, info: [{
                     date: {

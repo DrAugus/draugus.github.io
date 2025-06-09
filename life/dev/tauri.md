@@ -76,3 +76,20 @@ pnpm tauri signer generate -w ~/.tauri/myapp.key
 ### Rust 更新
 
 run `rustup update`
+
+### defined multiple times
+
+```
+error[E0255]: the name `__cmd__add_info` is defined multiple times
+   --> src\lib.rs:115:8
+    |
+114 | #[command]
+    | ---------- previous definition of the macro `__cmd__add_info` here
+115 | pub fn add_info(info: Saving) -> Result<(), String> {
+    |        ^^^^^^^^ `__cmd__add_info` reimported here
+    |
+    = note: `__cmd__add_info` must be defined only once in the macro namespace of this module
+
+```
+
+`pub` 和 `#[command]` 冲突了，移除 `pub` 即可
