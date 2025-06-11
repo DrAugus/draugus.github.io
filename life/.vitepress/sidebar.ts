@@ -247,19 +247,19 @@ const sidebarCourse = [
 const sidebarCodeOS = [
     {
         text: 'MacOS', collapsed: false, items: [
-            { text: 'Mac Primary', link: '/code/os/macos/base' },
-            { text: 'Solution', link: '/code/os/macos/sol' },
+            { text: '使用提示', link: '/code/os/macos/tips' },
+            { text: 'Xcode', link: '/code/os/macos/xcode' },
         ]
     },
     {
         text: 'Linux', collapsed: false, items: [
-            { text: 'Linux 记录  ', link: '/code/os/linux/' },
+            { text: '使用提示', link: '/code/os/linux/tips' },
+            { text: 'Linux 记录  ', link: '/code/os/linux/record' },
             { text: 'Linux 系统分类', link: '/code/os/linux/sys_category' },
             { text: '查看 Linux 的基本信息', link: '/code/os/linux/sys_base_info' },
             { text: 'Install', link: '/code/os/linux/install' },
             { text: 'CMD', link: '/code/os/linux/command' },
             { text: 'GDB', link: '/code/os/linux/gdb' },
-            { text: 'Linux 问题收集', link: '/code/os/linux/qa' },
         ]
     },
     {

@@ -1,14 +1,16 @@
-# Linux 问题收集
+# 使用指南
 
-## 命令行使用代理
+## QA
+
+### 命令行使用代理
 
 `export HTTPS_PROXY=your_proxy_addr`，Windows 平台参考[这里](../windows/tips#qa)
 
-## zsh: 权限不够解决方法
+### zsh: 权限不够解决方法
 
 `chmod u+x *.sh`
 
-## 杀掉进程
+### 杀掉进程
 
 [Linux下如何通过一行命令查找并杀掉进程](https://www.cnblogs.com/wintest/p/12749090.html)
 
@@ -30,7 +32,7 @@ ps -ef | grep flask | grep -v grep | awk '{print $2}' | xargs kill -9
 |`awk '{print $2}'` |提取找到的进程行记录中第二列的参数，也就是flask的进程号|
 |`xargs kill -9` |把前面的参数都传递给后面的命令 kill -9|
 
-## 解决linux的-bash: ./xx: Permission denied
+### 解决linux的-bash: ./xx: Permission denied
 
 在linux下执行sh文件时提示下面信息：
 
@@ -40,7 +42,7 @@ ps -ef | grep flask | grep -v grep | awk '{print $2}' | xargs kill -9
 
 解决：`chmod 777 xx.sh`
 
-## g++: command not found
+### g++: command not found
 
 G++没有装或却没有更新
 
@@ -55,7 +57,7 @@ apt-get update gcc #(更新)
 apt-get install g++
 ```
 
-## 修改 Linux 环境变量
+### 修改 Linux 环境变量
 
 临时生效 `export NAME='value'`
 

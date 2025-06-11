@@ -311,7 +311,7 @@ function initPro(AMap: any, code: (string | undefined)[], dep: number) {
         if (has) {
           return has.color;
         } else {
-          return 'rgba(255,255,255,0.5)';
+          // return 'rgba(255,255,0,0.5)';
         }
       },
       'province-stroke': 'cornflowerblue',
@@ -474,7 +474,6 @@ onMounted(() => {
   if (isMobile.value && vpDocRef.value && containerRef.value) {
     const style = window.getComputedStyle(vpDocRef.value);
     const paddingLeft = parseFloat(style.paddingLeft);
-
     containerRef.value.style.width = `${screenWidth.value}px`;
     containerRef.value.style.left = `-${paddingLeft}px`;
   }
@@ -495,12 +494,22 @@ const openFullScreen = () => {
     showMark();
   }, 400)
 }
+
+const props = defineProps<{
+  isFull: Boolean,
+}>();
 </script>
 
 <template>
-  <el-button @click="openFullScreen()">
+  <el-button class="mr-4 mt-4" @click="openFullScreen()">
     {{ isShowMark ? '点亮城市' : '城市探索次数' }}
   </el-button>
+
+  <a :href="isFull ? './explore' : './explore-full'">
+    <el-button type="primary" class="mr-4 mt-4">
+      {{ isFull ? '退出全屏' : '全屏显示' }}
+    </el-button>
+  </a>
 
   <div v-if="isShowMark">
     <span>
