@@ -2,6 +2,54 @@
     "title": "",
     "items": [
         {
+            "title": "使用提示",
+            "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
+            "link": "/code/os/windows/tips",
+            "date": "2024-07-27"
+        },
+        {
+            "title": "官方日历订阅",
+            "desc": "官方日历订阅 iOS18 可以直接在手机上订阅，不需要输入链接，直接搜索即可 添加其他地区的节假日",
+            "link": "/daily/apple/calendar",
+            "date": "2024-06-12"
+        },
+        {
+            "title": "探索",
+            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
+            "link": "/trip/explore-full",
+            "date": "2025-06-11"
+        },
+        {
+            "title": "探索",
+            "desc": "探索 import PlaceVisited from '../.vitepress/compon",
+            "link": "/trip/explore",
+            "date": "2024-06-14"
+        },
+        {
+            "title": "机场评测",
+            "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
+            "link": "/trip/flying/airport",
+            "date": "2025-06-11"
+        },
+        {
+            "title": "年利率",
+            "desc": "年利率 年利率（Annual Percentage Rate，APR）：就是单利，比如银行说存（贷",
+            "link": "/daily/apr",
+            "date": "2025-06-09"
+        },
+        {
+            "title": "Tauri",
+            "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
+            "link": "/dev/tauri",
+            "date": "2024-12-20"
+        },
+        {
+            "title": "汇率",
+            "desc": "汇率 import ExchangeRate from '../.vitepress/compon",
+            "link": "/trip/exchange-rate",
+            "date": "2025-06-09"
+        },
+        {
             "title": "Python",
             "desc": "Python Install details 其他源 - 阿里云 - 中国科技大学 <http",
             "link": "/code/program/lang/python",
@@ -72,54 +120,6 @@
             "desc": "规划指南 两岸青山相对出 孤帆一片日边来 走过(探索)，看过，记过(游记)。未来就在前方(去哪儿呢",
             "link": "/trip/index",
             "date": "2024-05-27"
-        },
-        {
-            "title": "赶路",
-            "desc": "赶路 到处跑，到处跑。旅途消耗，接下来去哪儿呢 import ACardLinks from '.",
-            "link": "/trip/journey/index",
-            "date": "2024-09-20"
-        },
-        {
-            "title": "游记",
-            "desc": "游记 旅行的美好应该被记录下来。旅途消耗，接下来去哪儿呢 import ACardLinks fr",
-            "link": "/trip/travelogue/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "去哪儿",
-            "desc": "去哪儿 走过蓝色星球，旅途记录，探索驻足 import ACardLinks from '../.",
-            "link": "/trip/where/index",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "Mac Basin",
-            "desc": "Mac Basin 低版本操作系统 - 原装 App 版本过低，无法安装；可以去苹果系统之家搜索原",
-            "link": "/code/os/macos/base",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "Xcode",
-            "desc": "Xcode history version 参考 - macOS 版本对应的 Xcode 版本，以",
-            "link": "/code/os/macos/xcode",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "中国人口",
-            "desc": "中国人口 import Population from '../../.vitepress/com",
-            "link": "/course/notes/population-cn",
-            "date": "2025-05-29"
-        },
-        {
-            "title": "计算机科学 Computer Science",
-            "desc": "计算机科学 Computer Science 牛津大学计算机培养课程参考：structure，fu",
-            "link": "/course/structure/cs",
-            "date": "2025-05-29"
-        },
-        {
-            "title": "银行卡",
-            "desc": "银行卡 境外卡参考这篇 储蓄卡/借记卡 每个银行分摊资产，每个银行最好不要超过 50w 雨露均沾，",
-            "link": "/daily/card",
-            "date": "2025-01-14"
         }
     ]
 }

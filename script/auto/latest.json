@@ -1,4 +1,36 @@
 {
+    "life/code/os/windows/tips.md": {
+        "title": "使用提示",
+        "date": 1722099577.0
+    },
+    "life/daily/apple/calendar.md": {
+        "title": "官方日历订阅",
+        "date": 1718165336
+    },
+    "life/trip/explore-full.md": {
+        "title": "探索",
+        "date": 1749642961.0
+    },
+    "life/trip/explore.md": {
+        "title": "探索",
+        "date": 1718349622.0
+    },
+    "life/trip/flying/airport.md": {
+        "title": "机场评测",
+        "date": 1749642961.0
+    },
+    "life/daily/apr.md": {
+        "title": "年利率",
+        "date": 1749447464.0
+    },
+    "life/dev/tauri.md": {
+        "title": "Tauri",
+        "date": 1734705093.0
+    },
+    "life/trip/exchange-rate.md": {
+        "title": "汇率",
+        "date": 1749447464.0
+    },
     "life/code/program/lang/python.md": {
         "title": "Python",
         "date": 1716866579
@@ -251,10 +283,6 @@
         "title": "湖州",
         "date": 1744778329.0
     },
-    "life/trip/explore.md": {
-        "title": "探索",
-        "date": 1718349622.0
-    },
     "life/daily/appliance/fridge.md": {
         "title": "冰箱",
         "date": 1744272623.0
@@ -371,10 +399,6 @@
         "title": "中了吗？彩票",
         "date": 1734767572.0
     },
-    "life/dev/tauri.md": {
-        "title": "Tauri",
-        "date": 1734705093.0
-    },
     "life/code/libs/libuv.md": {
         "title": "libuv",
         "date": 1733974568.0
@@ -394,10 +418,6 @@
     "life/code/os/linux/qa.md": {
         "title": "Linux 问题收集",
         "date": 1720772837.0
-    },
-    "life/code/os/windows/tips.md": {
-        "title": "使用提示",
-        "date": 1722099577.0
     },
     "life/daily/guess-bill.md": {
         "title": "猜价",
@@ -754,10 +774,6 @@
     "life/random-notes/exercise.md": {
         "title": "锻炼",
         "date": 1718219927
-    },
-    "life/daily/apple/calendar.md": {
-        "title": "官方日历订阅",
-        "date": 1718165336
     },
     "life/daily/bad-product.md": {
         "title": "踩雷产品",
