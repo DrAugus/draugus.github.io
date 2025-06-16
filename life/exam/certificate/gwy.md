@@ -8,6 +8,14 @@
 - 国考通知通告：[中央机关及其直属机构2024年度考试录用公务员公告](https://www.gov.cn/govweb/lianbo/bumen/202310/content_6909133.htm)
 :::
 
+:::details 公务员晋升之路
+![1](/img/career/gwy-promotion.jpg)
+:::
+
+:::details 国家公务员职级
+![1](/img/career/gwy-lv.jpg)
+:::
+
 ## 时间线
 
 2023年10月15日8:00至10月24日18:00期间登录专题网站进行报名并提交报考申请  

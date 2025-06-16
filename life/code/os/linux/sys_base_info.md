@@ -47,9 +47,7 @@
 - `crontab -l` # 查看当前用户的计划任务服务
 - `chkconfig –list` # 列出所有系统服务
 - `chkconfig –list | grep on` # 列出所有启动的系统服务程序
-
 - `rpm -qa` # 查看所有安装的软件包
-
 - 查看/proc/uptime文件计算系统启动时间：`cat /proc/uptime`
   输出: 5113396.94 575949.85
   第一数字即是系统已运行的时间5113396.94秒，运用系统工具date即可算出系统启动时间
