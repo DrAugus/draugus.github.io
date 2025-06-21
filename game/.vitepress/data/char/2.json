@@ -1076,5 +1076,27 @@
         "city": "Fontaine",
         "ele": "cryo",
         "weapon": "polearm"
+    },
+    "dahlia": {
+        "id": "dahlia",
+        "name": "塔利雅",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "西风教会的助祭，风神巴巴托斯的传道者，同时也是教会合唱团的领唱。如果想要寻求风神的指示，那就去找他吧。记着带上足够多的烦恼，他喜欢听别人讲这个。",
+        "city": "Mondstadt",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "skirk": {
+        "id": "skirk",
+        "name": "丝柯克",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "来历不明的强大武者，自称是坎瑞亚五大罪人之一「极恶骑」苏尔特洛奇的弟子，同时也是「公子」达达利亚的师父。",
+        "city": "Natlan",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }
