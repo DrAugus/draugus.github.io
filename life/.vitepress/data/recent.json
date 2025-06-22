@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "查看Linux的基本信息",
+            "desc": "查看Linux的基本信息 - Linux查看版本当前操作系统内核信息 uname -a - Lin",
+            "link": "/code/os/linux/sys_base_info",
+            "date": "2025-06-16"
+        },
+        {
+            "title": "公务员考试",
+            "desc": "公务员考试 相关链接 - 国家公务员首页 - 国考：报名入口 - 国考：缴费入口 - 国考通知通告",
+            "link": "/exam/certificate/gwy",
+            "date": "2024-11-30"
+        },
+        {
+            "title": "飞行",
+            "desc": "飞行 机票价格 飞行行程 机场 随心飞",
+            "link": "/trip/flying/index",
+            "date": "2025-05-31"
+        },
+        {
             "title": "使用提示",
             "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
             "link": "/code/os/windows/tips",
@@ -102,24 +120,6 @@
             "desc": "飞行行程 import Flights from '../../.vitepress/compon",
             "link": "/trip/flying/flights",
             "date": "2025-05-31"
-        },
-        {
-            "title": "飞行",
-            "desc": "飞行",
-            "link": "/trip/flying/index",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "航空里程兑换",
-            "desc": "航空里程兑换 import AirlineMiles from '../../.vitepress",
-            "link": "/trip/flying/miles-exchange",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "规划指南",
-            "desc": "规划指南 两岸青山相对出 孤帆一片日边来 走过(探索)，看过，记过(游记)。未来就在前方(去哪儿呢",
-            "link": "/trip/index",
-            "date": "2024-05-27"
         }
     ]
 }

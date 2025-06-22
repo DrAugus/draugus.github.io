@@ -1,4 +1,16 @@
 {
+    "life/code/os/linux/sys_base_info.md": {
+        "title": "查看Linux的基本信息",
+        "date": 1750036622.0
+    },
+    "life/exam/certificate/gwy.md": {
+        "title": "公务员考试",
+        "date": 1732963606.0
+    },
+    "life/trip/flying/index.md": {
+        "title": "飞行",
+        "date": 1748690458.0
+    },
     "life/code/os/windows/tips.md": {
         "title": "使用提示",
         "date": 1722099577.0
@@ -65,10 +77,6 @@
     },
     "life/trip/flying/flights.md": {
         "title": "飞行行程",
-        "date": 1748690458.0
-    },
-    "life/trip/flying/index.md": {
-        "title": "飞行",
         "date": 1748690458.0
     },
     "life/trip/flying/miles-exchange.md": {
@@ -421,10 +429,6 @@
     },
     "life/daily/guess-bill.md": {
         "title": "猜价",
-        "date": 1732963606.0
-    },
-    "life/exam/certificate/gwy.md": {
-        "title": "公务员考试",
         "date": 1732963606.0
     },
     "life/exam/certificate/kzp.md": {
