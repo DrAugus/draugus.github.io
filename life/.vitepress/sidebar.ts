@@ -592,6 +592,7 @@ const sidebarCareer = [
 const sidebarDev = [
     { text: '地图数据集', link: '/dev/map-data' },
     { text: 'Tauri', link: '/dev/tauri' },
+    { text: 'App Store', link: '/dev/app-store' },
 ];
 const sidebarExam = [
     { text: '高考', link: '/exam/gaokao' },

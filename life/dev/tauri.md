@@ -8,11 +8,39 @@ What is Tauri?(Tauri [v2.0](https://v2.tauri.app/start/))
 
 ```bash
 pnpm create tauri-app
-# 选择你的项目名，技术栈等等，创建完毕后
+# 输入你的项目名，选择技术栈等等，创建完毕后
 cd tauri-app
 pnpm install
 pnpm tauri dev
 ```
+
+第一步  
+修改你的界面，替换原有的模板界面，完善你的功能逻辑。
+
+选择软件样式，如选择 `element-plus` 按需引入
+
+```bash
+pnpm add element-plus -D
+pnpm add unplugin-element-plus -D
+```
+
+:::code-group
+
+```ts [vite.config.ts]
+import ElementPlus from 'unplugin-element-plus/vite';
+
+export default defineConfig(async () => ({
+  plugins: [
+    ElementPlus({
+      // useSource: true,
+    }),
+  ],
+}));  
+```
+
+:::
+
+`Cargo.toml` 中的，`description`、`authors` 注意修改。
 
 ## Build
 
@@ -26,6 +54,70 @@ sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev
 ```
 
 :::
+
+### Build iOS  
+
+```bash
+pnpm tauri ios init
+```
+
+:::warning `tauri ios init` 可能遇到的问题
+
+```bash
+# 如果缺少 rustup
+brew install rustup # danger: 不能这么安装
+# 可能提示缺少 toolchain 中国人先 设置源 再安装 toolchain
+# 设置 rustup 的镜像源（清华）
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+export RUSTUP_UPDATE_ROOT=https://mirrors.tuna.tsinghua.edu.cn/rustup/rustup
+rustup default stable
+# 再次运行 pnpm tauri ios init 会提示缺少 cocoapods
+brew intall cocoapods
+pnpm tauri ios init
+```
+
+:::
+
+在 Xcode 中打开项目
+
+```bash
+pnpm tauri ios build --open
+```
+
+之后，你的项目名字假设为 demo，则在 demo_iOS 应用中（TARGETS 里）选择 Signing & Capabilities - All - Signing 打开 Auto  
+而后执行 `tauri ios build --export-method app-store-connect`
+
+```bash
+pnpm tauri ios build --export-method app-store-connect
+```
+
+:::details 遇到错误 error[E0463]: can't find crate for `std`
+
+```rs
+error[E0463]: can't find crate for `std`
+  |
+  = note: the `aarch64-apple-ios` target may not be installed
+  = help: consider downloading the target with `rustup target add aarch64-apple-ios`
+
+For more information about this error, try `rustc --explain E0463`.
+```
+
+是因为前面用 brew 装了 rustup，不能这么安装，需要去官网执行命令安装
+
+:::
+
+The generated IPA file can be found in `src-tauri/gen/apple/build/arm64/$APPNAME.ipa`.  
+Now you can use the `altool` CLI to upload your iOS app to the App Store:
+
+```bash
+export APPNAME=
+export APPLE_API_KEY_ID=
+export APPLE_API_ISSUER=
+xcrun altool --upload-app --type ios --file "src-tauri/gen/apple/build/arm64/$APPNAME.ipa" --apiKey $APPLE_API_KEY_ID --apiIssuer $APPLE_API_ISSUER
+```
+
+[**Authentication**](https://tauri.app/distribute/app-store/#authentication)  
+To create a new API key, open the [App Store Connect's Users and Access page](https://appstoreconnect.apple.com/access/users), select the Integrations(集成) > Individual Keys tab, click on the Add button and select a name and the Developer access.
 
 ## Pipelines(Github Action)
 
@@ -72,6 +164,10 @@ pnpm tauri signer generate -w ~/.tauri/myapp.key
 :::
 
 ## QA
+
+### ICON
+
+准备一个尺寸为 1240 x 1240 的 PNG 图片或者正方形的 SVG，文件命名为 `app-icon.png`，放在项目的根目录。而后执行 `pnpm tauri icon` 即可一键生成所有图标。
 
 ### Rust 更新
 

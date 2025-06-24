@@ -126,9 +126,13 @@
 
                     <div class="box flex-row" @click="emitShowRank(rankKeys.planeModel)">
                         <div class="box-top">
-                            <span class="align-left">
-                                <span class="font-12 font-grey">机型</span> </span>
-                            <span class="align-right"> <span class="font-10 align-right label2"> 机型排行</span> </span>
+                            <el-text class="align-left w-60px" truncated>
+                                <span class="font-12 font-grey">机型(完整型号)</span>
+                            </el-text>
+                            <el-text class="align-right w-60px" truncated>
+                                <span class="font-10 align-right label2">
+                                    机型排行</span>
+                            </el-text>
                         </div>
                         <div class="box-bottom">
                             <span class="align-left">
@@ -143,7 +147,7 @@
                     <div class="box flex-row" @click="emitShowRank(rankKeys.planeModel2)">
                         <div class="box-top">
                             <span class="align-left">
-                                <span class="font-12 font-grey">机型(不带-)</span> </span>
+                                <span class="font-12 font-grey">机型</span> </span>
                             <span class="align-right"> <span class="font-10 align-right label2"> 机型排行</span> </span>
                         </div>
                         <div class="box-bottom">
@@ -171,12 +175,13 @@
 
 
 <script setup lang="ts">
+import { ElText } from 'element-plus';
 import { ref } from 'vue';
 import { mapFlagsByName } from '../../data/flags';
+import { getAirlineZhAbbrByIata } from '../../data/trip/airlines';
 import { mapAirportsByAbbrZH } from '../../data/trip/airports';
 import { FLIGHT_DATA } from '../../data/trip/flight';
 import { CalTimes, Flight, FlightRank } from '../../type';
-import { getAirlineZhAbbrByIata } from '../../data/trip/airlines';
 import FlightsRank from './FlightsRank.vue';
 
 enum TimesInfo {
@@ -196,7 +201,6 @@ const rankKeys = {
 
 const totalFlights = FLIGHT_DATA.length;
 const sortedFlightData = FLIGHT_DATA.sort((a, b) => b.date.getTime() - a.date.getTime());
-
 
 const visibleFlightRank = ref<Record<string, boolean>>({});
 
@@ -321,7 +325,7 @@ function getAirplaneModel2() {
 const arrFlightAirplaneModel2 = getAirplaneModel2();
 // console.log(arrFlightAirplaneModel2);
 
-const modelNameZH = ['空客', '波音', '中国商飞', '其他'];
+const modelNameZH = ['空客', '波音', '中国商飞', '巴航', '其他'];
 function getAirplaneModelName() {
     let model = new Map();
     for (let airplaneModel of arrFlightAirplaneModel) {
@@ -488,6 +492,7 @@ const totalHours = ms2HourAndMin(totalMilliseconds);
     border-radius: 10px;
     box-sizing: border-box;
     background-color: #dfdfdf;
+    min-width: 120px;
 }
 
 .circle-list {

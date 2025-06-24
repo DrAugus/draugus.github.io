@@ -505,11 +505,13 @@ const props = defineProps<{
     {{ isShowMark ? '点亮城市' : '城市探索次数' }}
   </el-button>
 
-  <a :href="isFull ? './explore' : './explore-full'">
-    <el-button type="primary" class="mr-4 mt-4">
-      {{ isFull ? '退出全屏' : '全屏显示' }}
-    </el-button>
-  </a>
+  <div v-if="!isMobile">
+    <a :href="isFull ? './explore' : './explore-full'">
+      <el-button type="primary" class="mr-4 mt-4">
+        {{ isFull ? '退出全屏' : '全屏显示' }}
+      </el-button>
+    </a>
+  </div>
 
   <div v-if="isShowMark">
     <span>

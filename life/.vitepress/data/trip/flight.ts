@@ -1830,5 +1830,57 @@ export const FLIGHT_DATA: Flight[] = [
             airportConstructionFee: 50,
             fuelSurcharge: 20,
         }
+    }, {
+        date: new Date('2025-06-20'),
+        number: 'GS6556',
+        airplane: {
+            model: '巴航ERJ190',
+            number: 'B3172'
+        },
+        airlineCode: 'GS',
+        seatClass: 'S',
+        distance: 980,
+        departure: {
+            plannedTime: new Date('2025-06-20T18:30:00+08:00'),
+            actualTime: new Date('2025-06-20T20:06:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-20T20:25:00+08:00'),
+            actualTime: new Date('2025-06-20T21:36:00+08:00'),
+            airport: "梅州梅县",
+        },
+        price: {
+            ticketPrice: 299,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
+    }, {
+        date: new Date('2025-06-23'),
+        number: 'GS6555',
+        airplane: {
+            model: '巴航ERJ190',
+            number: 'B3212'
+        },
+        airlineCode: 'GS',
+        seatClass: 'S',
+        distance: 980,
+        departure: {
+            plannedTime: new Date('2025-06-23T15:30:00+08:00'),
+            actualTime: new Date('2025-06-23T17:26:00+08:00'),
+            airport: "梅州梅县",
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-24T17:20:00+08:00'),
+            actualTime: new Date('2025-06-24T18:51:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 299,
+            airportConstructionFee: 50,
+            fuelSurcharge: 20,
+        }
     },
 ];

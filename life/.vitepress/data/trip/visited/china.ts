@@ -308,6 +308,21 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     },
                     intro: "澳门临时落脚"
                 }]
+            }, {
+                id: '梅州', info: [{
+                    date: {
+                        start: new Date('2025/06/20'),
+                        end: new Date('2025/06/23'),
+                    },
+                    intro: "游玩"
+                }]
+            }, {
+                id: '河源', info: [{
+                    date: {
+                        start: new Date('2025/06/22'),
+                    },
+                    intro: "游玩"
+                }]
             },
         ]
     },
