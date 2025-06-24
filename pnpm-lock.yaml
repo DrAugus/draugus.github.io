@@ -14,14 +14,14 @@ importers:
         specifier: ^2.0.0
         version: 2.1.4
       '@types/leaflet':
-        specifier: 1.9.18
-        version: 1.9.18
+        specifier: 1.9.19
+        version: 1.9.19
       '@vite-pwa/vitepress':
         specifier: ^1.0.0
         version: 1.0.0(vite-plugin-pwa@1.0.0(vite@7.0.0(sass@1.89.2)(terser@5.43.1))(workbox-build@7.3.0)(workbox-window@7.3.0))
       '@vue-leaflet/vue-leaflet':
         specifier: 0.10.1
-        version: 0.10.1(@types/leaflet@1.9.18)(leaflet@1.9.4)
+        version: 0.10.1(@types/leaflet@1.9.19)(leaflet@1.9.4)
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
@@ -1332,8 +1332,8 @@ packages:
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
 
-  '@types/leaflet@1.9.18':
-    resolution: {integrity: sha512-ht2vsoPjezor5Pmzi5hdsA7F++v5UGq9OlUduWHmMZiuQGIpJ2WS5+Gg9HaAA79gNh1AIPtCqhzejcIZ3lPzXQ==}
+  '@types/leaflet@1.9.19':
+    resolution: {integrity: sha512-pB+n2daHcZPF2FDaWa+6B0a0mSDf4dPU35y5iTXsx7x/PzzshiX5atYiS1jlBn43X7XvM8AP+AB26lnSk0J4GA==}
 
   '@types/linkify-it@5.0.0':
     resolution: {integrity: sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==}
@@ -4208,7 +4208,7 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  '@types/leaflet@1.9.18':
+  '@types/leaflet@1.9.19':
     dependencies:
       '@types/geojson': 7946.0.16
 
@@ -4254,12 +4254,12 @@ snapshots:
       vite: 5.4.19(sass@1.89.2)(terser@5.43.1)
       vue: 3.5.17
 
-  '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.18)(leaflet@1.9.4)':
+  '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.19)(leaflet@1.9.4)':
     dependencies:
       leaflet: 1.9.4
       vue: 3.5.17
     optionalDependencies:
-      '@types/leaflet': 1.9.18
+      '@types/leaflet': 1.9.19
     transitivePeerDependencies:
       - typescript
 
