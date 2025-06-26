@@ -51,8 +51,8 @@ jobs:
       - uses: pnpm/action-setup@v4.1.0
         name: Install pnpm
         id: pnpm-install
-        with:
-          version: 7
+        # with: # Install only pnpm with packageManager
+        #   version: 7
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
