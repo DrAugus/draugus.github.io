@@ -57,8 +57,16 @@ sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev
 
 ### Build iOS  
 
+参考 tauri 官方[分发](https://tauri.app/distribute/app-store/)
+
 ```bash
 pnpm tauri ios init
+```
+
+After running `tauri ios init` to setup the Xcode project, you can use the `tauri icon` command to update the app icons.
+
+```bash
+pnpm tauri icon /path/to/app-icon.png --ios-color '#fff' # 官方没加引号不好使，加了引号即 ok
 ```
 
 :::warning `tauri ios init` 可能遇到的问题
@@ -102,7 +110,7 @@ error[E0463]: can't find crate for `std`
 For more information about this error, try `rustc --explain E0463`.
 ```
 
-是因为前面用 brew 装了 rustup，不能这么安装，需要去官网执行命令安装
+是因为前面用 brew 装了 rustup，不能这么安装，需要去官网执行命令安装（参考：[uninstalling rust and reinstalling (without using brew)](https://github.com/tauri-apps/tauri/issues/12026#issuecomment-2558936709)）
 
 :::
 
@@ -118,6 +126,21 @@ xcrun altool --upload-app --type ios --file "src-tauri/gen/apple/build/arm64/$AP
 
 [**Authentication**](https://tauri.app/distribute/app-store/#authentication)  
 To create a new API key, open the [App Store Connect's Users and Access page](https://appstoreconnect.apple.com/access/users), select the Integrations(集成) > Individual Keys tab, click on the Add button and select a name and the Developer access.
+
+:::warning 可能遇到的问题
+
+1. Multitasking iPad
+
+Validation failed (409) Invalid bundle. Apps that support Multitasking on iPad must provide the app’s launch screen using an Xcode storyboard, or using UILaunchScreen if the app’s MinimumOSVersion is 14 or higher. Verify that the UILaunchStoryboardName key is included in your com.appname.app bundle if you’re using a storyboard. For details, see: <https://developer.apple.com/documentation/bundleresources/information_property_list/uilaunchstoryboardname> (ID: 58111d82-29b8-458a-8616-199fa31b6783)
+
+**SOL**: TARGETS - General - Deployment Info - 勾选 **Requires full screen**
+
+2. Alpha icon
+
+Validation failed (409) Invalid large app icon. The large app icon in the asset catalog in “appname.app” can’t be transparent or contain an alpha channel. For details, visit: <https://developer.apple.com/design/human-interface-guidelines/app-icons>. (ID: e293c85f-d4c4-4609-8ab3-40837f8af198)
+
+**SOL**: 打开图片，选择 文件 - 导出，去掉 alpha 勾选，保存重新用 `tauri icon` 生成即可
+:::
 
 ## Pipelines(Github Action)
 
@@ -175,7 +198,7 @@ run `rustup update`
 
 ### defined multiple times
 
-```
+```rs
 error[E0255]: the name `__cmd__add_info` is defined multiple times
    --> src\lib.rs:115:8
     |

@@ -57,6 +57,8 @@ npm -v
 
 ```shell
 npm install -g pnpm
+# update
+npm install -g pnpm@latest
 ```
 
 ## yarn

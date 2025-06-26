@@ -27,3 +27,34 @@
 HKEY_CURRENT_USER - Console 将下面的全删了
 
 ![image.png](https://i.loli.net/2021/10/30/DF8ik9cX1VdbowW.png)
+
+## .bat 使用 pause 不管用怎么办
+
+正常来说是有用的。
+
+但是有可能上一个命令直接把进程关了啥的，窗口就直接关闭了，等不到你 pause。
+
+比如 `npm publish --registry http://xxxx`
+
+设计两个脚本，一个是真正执行你任务的脚本 `yourscript.bat`，然后一个是用户使用的脚本 `test.bat`，其内容是：
+
+```bat
+start /B yourscript.bat
+pause
+```
+
+## 跨脚本执行
+
+:::danger 提示错误
+Assertion failed: process_title, file c:\ws\deps\uv\src\win\util.c, line 412
+:::
+
+```bat
+@REM start ""
+@REM 第一个 "" 是窗口标题（如果为空就会出现上面的问题）。
+@REM 去掉 /B 参数后，每个 start 会打开一个新窗口运行指定的批处理文件。
+
+start "build_game" "build_game.bat"
+start "build_life" "build_life.bat"
+pause
+```

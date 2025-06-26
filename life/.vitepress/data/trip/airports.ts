@@ -766,9 +766,9 @@ export const AIRPORTS: Airport[] = [
     {
         code: "UKB",
         name: "Kobe Airport",
-        nameLocal: "",
-        abbrZH: "",
-        city: "Kobe",
+        nameLocal: "神户空港",
+        abbrZH: "神户机场",
+        city: "神户",
         region: "JP",
         longitude: 135.2239990234,
         latitude: 34.6328010559
@@ -1276,9 +1276,9 @@ export const AIRPORTS: Airport[] = [
     {
         code: "ITM",
         name: "Osaka International Airport",
-        nameLocal: "",
-        abbrZH: "",
-        city: "Osaka",
+        nameLocal: "大阪国際空港",
+        abbrZH: "大阪机场",
+        city: "大阪",
         region: "JP",
         longitude: 135.43800354,
         latitude: 34.7854995728

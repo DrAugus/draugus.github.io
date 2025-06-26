@@ -2,6 +2,10 @@
 
 ## QA
 
+### bat 脚本相关
+
+参看 [cmd](./cmd)
+
 ### 开机自启动，如新版 outlook 开机自启
 
 打开文件资源管理器，在地址栏中键入 `shell:startup`，然后按 Enter。  

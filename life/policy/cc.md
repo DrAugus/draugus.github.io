@@ -6,6 +6,9 @@ editLink: false
 outline: false
 lastUpdated: false
 footer: false
+titleTemplate: Clip Coupons
+description: Clip Coupons Privacy Policy
+layout: home
 ---
 
 # Privacy Policy
