@@ -2,6 +2,66 @@
     "title": "",
     "items": [
         {
+            "title": "痤疮",
+            "desc": "痤疮 可能的过敏源 现象：脸上迅速爆油，产油不断 可能的食物：自己炒菜，炒茄子，放了大量的油，辅料",
+            "link": "/disease/acne-vulgaris",
+            "date": "2025-06-26"
+        },
+        {
+            "title": "感冒 4.7",
+            "desc": "感冒 4.7 本次病症全程伴有手指脱皮、起皮 4.7 早上起来就一直流鼻涕，很难擤，就觉得是鼻炎。",
+            "link": "/disease/record/self/20250407",
+            "date": "2025-06-26"
+        },
+        {
+            "title": "晕？中暑？颈椎？",
+            "desc": "晕？中暑？颈椎？ 早上一如既往在8:25闹钟醒来，觉得头晕，也许是睡的时间太短了？坚持坐起来，天旋",
+            "link": "/disease/record/self/20250625",
+            "date": "2025-06-26"
+        },
+        {
+            "title": "香港",
+            "desc": "香港 旅游局 香港旅游事务署 游记 游记参看港珠澳广深 推荐 地方推荐 - 香港艺术馆 - 香港太",
+            "link": "/trip/china/hongkong",
+            "date": "2024-06-14"
+        },
+        {
+            "title": "Web Tools",
+            "desc": "Web Tools node install > [refer][node install] us",
+            "link": "/code/front-end/webtools",
+            "date": "2025-02-07"
+        },
+        {
+            "title": "CMD",
+            "desc": "CMD CMD 命令 可以用cmd /?查看帮助信息 cmd /c dir 是执行完dir命令后关",
+            "link": "/code/os/windows/cmd",
+            "date": "2025-06-24"
+        },
+        {
+            "title": "使用提示",
+            "desc": "使用提示 QA bat 脚本相关 参看 cmd 开机自启动，如新版 outlook 开机自启 打开",
+            "link": "/code/os/windows/tips",
+            "date": "2024-07-27"
+        },
+        {
+            "title": "Tauri",
+            "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
+            "link": "/dev/tauri",
+            "date": "2024-12-20"
+        },
+        {
+            "title": "Privacy Policy",
+            "desc": "Privacy Policy Last updated: June 24, 2025 This P",
+            "link": "/policy/cc",
+            "date": "2025-06-24"
+        },
+        {
+            "title": "App Store",
+            "desc": "App Store 苹果开发账户 下载 Developer App 注册，年费 $99。等待注册成",
+            "link": "/dev/app-store",
+            "date": "2025-06-23"
+        },
+        {
             "title": "查看Linux的基本信息",
             "desc": "查看Linux的基本信息 - Linux查看版本当前操作系统内核信息 uname -a - Lin",
             "link": "/code/os/linux/sys_base_info",
@@ -18,12 +78,6 @@
             "desc": "飞行 机票价格 飞行行程 机场 随心飞",
             "link": "/trip/flying/index",
             "date": "2025-05-31"
-        },
-        {
-            "title": "使用提示",
-            "desc": "使用提示 QA 开机自启动，如新版 outlook 开机自启 打开文件资源管理器，在地址栏中键入",
-            "link": "/code/os/windows/tips",
-            "date": "2024-07-27"
         },
         {
             "title": "官方日历订阅",
@@ -56,12 +110,6 @@
             "date": "2025-06-09"
         },
         {
-            "title": "Tauri",
-            "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
-            "link": "/dev/tauri",
-            "date": "2024-12-20"
-        },
-        {
             "title": "汇率",
             "desc": "汇率 import ExchangeRate from '../.vitepress/compon",
             "link": "/trip/exchange-rate",
@@ -72,54 +120,6 @@
             "desc": "Python Install details 其他源 - 阿里云 - 中国科技大学 <http",
             "link": "/code/program/lang/python",
             "date": "2024-05-28"
-        },
-        {
-            "title": "日本",
-            "desc": "日本 旅游局 日本国家旅游局，中文站点 游记 夏季游记，参看 日本东京/大版/京都20230720",
-            "link": "/trip/abroad/asia/japan",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "2025/05/27",
-            "desc": "2025/05/27 飞机上带娃，不管的家长，真的令人窒息。 娃一直在乱叫，睡着都给我叫醒了，真是",
-            "link": "/trip/flying/20250527",
-            "date": "2025-06-01"
-        },
-        {
-            "title": "2024/10/15",
-            "desc": "2024/10/15 其实没有赶路日记 只是记录一下16日，凌晨01:30机场大巴的逆天 01:1",
-            "link": "/trip/journey/20241015",
-            "date": "2025-06-01"
-        },
-        {
-            "title": "学习路线",
-            "desc": "学习路线 医学学习路线 医学学习是一个系统且漫长的过程，通常可分为以下几个阶段： 本科阶段（5年）",
-            "link": "/course/path/medicine",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "施工",
-            "desc": "施工 还差什么？想起来了再写吧，，， 旅行部分 - 旅行航线，link - 最新的赶路日记，lin",
-            "link": "/dev",
-            "date": "2024-08-06"
-        },
-        {
-            "title": "配环境",
-            "desc": "配环境 简单参考一下 当你获得一台全新机器，根据系统不同，可以参考下方的开发环境配置 Linux",
-            "link": "/tools/nipeima",
-            "date": "2024-07-12"
-        },
-        {
-            "title": "Echarts geo",
-            "desc": "Echarts geo 参考示例 Echarts geo-lines 本站实现",
-            "link": "/tools/tools/echarts-geo",
-            "date": "2025-05-31"
-        },
-        {
-            "title": "飞行行程",
-            "desc": "飞行行程 import Flights from '../../.vitepress/compon",
-            "link": "/trip/flying/flights",
-            "date": "2025-05-31"
         }
     ]
 }

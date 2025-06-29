@@ -1,4 +1,44 @@
 {
+    "life/disease/acne-vulgaris.md": {
+        "title": "痤疮",
+        "date": 1750915493.0
+    },
+    "life/disease/record/self/20250407.md": {
+        "title": "感冒 4.7",
+        "date": 1750915493.0
+    },
+    "life/disease/record/self/20250625.md": {
+        "title": "晕？中暑？颈椎？",
+        "date": 1750915493.0
+    },
+    "life/trip/china/hongkong.md": {
+        "title": "香港",
+        "date": 1718349654.0
+    },
+    "life/code/front-end/webtools.md": {
+        "title": "Web Tools",
+        "date": 1738931518.0
+    },
+    "life/code/os/windows/cmd.md": {
+        "title": "CMD",
+        "date": 1750783038.0
+    },
+    "life/code/os/windows/tips.md": {
+        "title": "使用提示",
+        "date": 1722099577.0
+    },
+    "life/dev/tauri.md": {
+        "title": "Tauri",
+        "date": 1734705093.0
+    },
+    "life/policy/cc.md": {
+        "title": "Privacy Policy",
+        "date": 1750783038.0
+    },
+    "life/dev/app-store.md": {
+        "title": "App Store",
+        "date": 1750640666.0
+    },
     "life/code/os/linux/sys_base_info.md": {
         "title": "查看Linux的基本信息",
         "date": 1750036622.0
@@ -10,10 +50,6 @@
     "life/trip/flying/index.md": {
         "title": "飞行",
         "date": 1748690458.0
-    },
-    "life/code/os/windows/tips.md": {
-        "title": "使用提示",
-        "date": 1722099577.0
     },
     "life/daily/apple/calendar.md": {
         "title": "官方日历订阅",
@@ -34,10 +70,6 @@
     "life/daily/apr.md": {
         "title": "年利率",
         "date": 1749447464.0
-    },
-    "life/dev/tauri.md": {
-        "title": "Tauri",
-        "date": 1734705093.0
     },
     "life/trip/exchange-rate.md": {
         "title": "汇率",
@@ -350,10 +382,6 @@
     "life/trip/permanent-residence.md": {
         "title": "常住地居住感受",
         "date": 1716329120
-    },
-    "life/code/front-end/webtools.md": {
-        "title": "Web Tools",
-        "date": 1738931518.0
     },
     "life/code/cpp/basin.md": {
         "title": "基础",
@@ -722,10 +750,6 @@
     "life/code-notes/nipeima.md": {
         "title": "配环境",
         "date": 1716791141
-    },
-    "life/trip/china/hongkong.md": {
-        "title": "香港",
-        "date": 1718349654.0
     },
     "life/trip/china/macao.md": {
         "title": "澳门",
