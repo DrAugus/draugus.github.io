@@ -33,6 +33,7 @@ pull_request_rules:
           # deploy
           - files~=^life/
           - files~=^game/
+          - files=package.json
           - files=pnpm-lock.yaml
           # py
           - files~=^script/

@@ -1882,5 +1882,59 @@ export const FLIGHT_DATA: Flight[] = [
             airportConstructionFee: 50,
             fuelSurcharge: 20,
         }
+    }, {
+        date: new Date('2025-06-26'),
+        number: 'JD5745',
+        airplane: {
+            model: '空客330-343(X)',
+            number: 'B1042'
+        },
+        airlineCode: 'JD',
+        seatClass: 'N',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2025-06-26T20:05:00+08:00'),
+            actualTime: new Date('2025-06-26T22:00:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        arrival: {
+            plannedTime: new Date('2025-06-26T22:10:00+08:00'),
+            actualTime: new Date('2025-06-26T23:54:00+08:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        price: {
+            ticketPrice: 543,
+            airportConstructionFee: 50,
+            fuelSurcharge: 10,
+        }
+    }, {
+        date: new Date('2025-06-30'),
+        number: 'JD5746',
+        airplane: {
+            model: '空客330-243',
+            number: 'B8982'
+        },
+        airlineCode: 'JD',
+        seatClass: 'S',
+        distance: 1230,
+        departure: {
+            plannedTime: new Date('2025-06-30T23:15:00+08:00'),
+            actualTime: new Date('2025-06-30T23:38:00+08:00'),
+            airport: "桂林两江",
+            terminal: 2,
+        },
+        arrival: {
+            plannedTime: new Date('2025-07-01T01:05:00+08:00'),
+            actualTime: new Date('2025-07-01T01:26:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 3,
+        },
+        price: {
+            ticketPrice: 299,
+            airportConstructionFee: 50,
+            fuelSurcharge: 10,
+        }
     },
 ];

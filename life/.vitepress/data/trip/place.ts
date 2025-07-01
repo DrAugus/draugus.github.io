@@ -137,7 +137,7 @@ export const setTripPlaceSidebar = () => {
     return [
         {
             text: '中国',
-            collapsed: false,
+            collapsed: true,
             items: convertToSidebarItems(getChinaCardLink())
         },
         {
