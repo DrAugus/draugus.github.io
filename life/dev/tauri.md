@@ -66,7 +66,7 @@ pnpm tauri ios init
 After running `tauri ios init` to setup the Xcode project, you can use the `tauri icon` command to update the app icons.
 
 ```bash
-pnpm tauri icon /path/to/app-icon.png --ios-color '#fff' # 官方没加引号不好使，加了引号即 ok
+pnpm tauri icon app-icon.png --ios-color '#fff' # 官方没加引号不好使，加了引号即 ok
 ```
 
 :::warning `tauri ios init` 可能遇到的问题
@@ -121,6 +121,9 @@ Now you can use the `altool` CLI to upload your iOS app to the App Store:
 export APPNAME=
 export APPLE_API_KEY_ID=
 export APPLE_API_ISSUER=
+```
+
+```bash
 xcrun altool --upload-app --type ios --file "src-tauri/gen/apple/build/arm64/$APPNAME.ipa" --apiKey $APPLE_API_KEY_ID --apiIssuer $APPLE_API_ISSUER
 ```
 
@@ -140,6 +143,20 @@ Validation failed (409) Invalid bundle. Apps that support Multitasking on iPad m
 Validation failed (409) Invalid large app icon. The large app icon in the asset catalog in “appname.app” can’t be transparent or contain an alpha channel. For details, visit: <https://developer.apple.com/design/human-interface-guidelines/app-icons>. (ID: e293c85f-d4c4-4609-8ab3-40837f8af198)
 
 **SOL**: 打开图片，选择 文件 - 导出，去掉 alpha 勾选，保存重新用 `tauri icon` 生成即可
+
+3. project.yml
+
+missing project.yml file in the Xcode project directory: Operation not permitted (os error 1)  
+       **Error** missing project.yml file in the Xcode project directory: Operation not permitted (os error 1)  
+ ELIFECYCLE  Command failed with exit code 1.
+
+**SQL**: [set the property `ENABLE_USER_SCRIPT_SANDBOXING` to **'No'**.](https://stackoverflow.com/a/76626156)
+
+4. permission not found
+
+Permission updater:default not found, expected one of...
+
+**SQL**: 看是否是平台对应的 [capabilities](https://v2.tauri.app/security/capabilities/) 漏掉了，有三种 `default`, `desktop`, `mobile`
 :::
 
 ## Pipelines(Github Action)
@@ -187,6 +204,16 @@ pnpm tauri signer generate -w ~/.tauri/myapp.key
 :::
 
 ## QA
+
+### iOS 开发相关
+
+#### 某些标签/组件在 iOS 显示异常
+
+排查 CSS 是否使用了 `env`，Tauri 的 iOS WebView 默认不支持 `env()` ……
+
+#### 应用上部和下部出现了黑边
+
+尚未发现诱因，可能是 Xcode 导致的，删除 `gen/apple` 目录，重新初始化 iOS 即可修复
 
 ### ICON
 

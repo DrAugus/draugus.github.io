@@ -1,6 +1,32 @@
 
 # Vue
 
+## QA
+
+### event
+
+在 Vue 中，`@input` 绑定的方法中的 `event` 对象是指原生的事件对象，而 `$event` 则是 Vue 包装过的事件对象。当我们在绑定 `@input` 时，使用 `$event` 可以保证我们在方法内部可以正确地获取到 input 元素的值，从而进行一些校验或其他操作。
+
+### `[Vue warn]`: Invalid prop: type check failed for prop xxx
+
+```err
+[Vue warn]: Invalid prop: type check failed for prop "cardId". Expected Number with value 7, got String with value "7". 
+```
+
+在路由配置中使用 `props: (route) => ({ ... })` 动态转换
+
+```ts
+// 修改路由配置
+{
+  path: '/manage/:cardId',
+  name: 'manage',
+  component: Manage,
+  props: (route) => ({
+    cardId: Number(route.params.cardId), // 动态转为数字
+  })
+}
+```
+
 ## tick
 
 tick 是 Vue.js 中的一个异步更新机制，用于在下一次 DOM 更新后运行一段代码。在使用 Vue.js 时，所有的 DOM 更新操作实际上都是异步的，Vue.js 会将它们放到一个队列里，然后在下一个 tick 中统一更新。这样可以提高性能和用户体验，避免出现大量的 DOM 重绘和回流。使用 `$nextTick()` 方法可以让我们在下一个 tick 中获得 DOM 更新后最新的状态。
@@ -121,9 +147,3 @@ Server-Side Rendering
 [attrs listeners]: https://segmentfault.com/a/1190000022708579
 [slot]: https://cn.vuejs.org/guide/components/slots.html#scoped-slots
 [vuejs-frameworks]: https://www.monocubed.com/blog/vuejs-frameworks/
-
-## QA
-
-### event
-
-在 Vue 中，`@input` 绑定的方法中的 `event` 对象是指原生的事件对象，而 `$event` 则是 Vue 包装过的事件对象。当我们在绑定 `@input` 时，使用 `$event` 可以保证我们在方法内部可以正确地获取到 input 元素的值，从而进行一些校验或其他操作。

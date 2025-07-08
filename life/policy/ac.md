@@ -6,8 +6,8 @@ editLink: false
 outline: false
 lastUpdated: false
 footer: false
-titleTemplate: 羊毛绒宝
-description: 羊毛绒宝隐私政策
+titleTemplate: 卡算子
+description: 卡算子隐私政策
 layout: home
 ---
 
