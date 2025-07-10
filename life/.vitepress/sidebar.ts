@@ -618,7 +618,9 @@ const sidebarThought = [
     { text: '结婚', link: '/thought/marry' },
     { text: '男女关系', link: '/thought/relationship-m-w' },
     { text: '命运的织机', link: '/thought/portended-fate' },
-    { text: '血腥暴力影视被和谐的感想  ', link: '/thought/restricted-film' },
+    { text: '血腥暴力影视被和谐的感想', link: '/thought/restricted-film' },
+    { text: '2018年的记录', link: '/thought/2018' },
+    { text: '红楼梦摘录', link: '/thought/honglou' },
     {
         text: '女人', items: [
             { text: '唉', link: prefixWoman + '/' },
@@ -648,6 +650,7 @@ const sidebarFunny = [
     { text: '禁放烟花爆竹', link: '/funny/no-fireworks' },
     { text: '三年疫情创造的246个名词', link: '/funny/covid-in-cn' },
     { text: '调休', link: '/funny/tiaoxiu' },
+    { text: '充电宝', link: '/funny/charger' },
 ];
 
 
@@ -666,6 +669,7 @@ const sidebarDisease = [
             { text: '2024/10/24 感冒', link: `${prefixDiseaseRecord}/self/20241024` },
             { text: '2024/02/23 发烧', link: `${prefixDiseaseRecord}/self/20240223` },
             { text: '2024/01/25 感冒', link: `${prefixDiseaseRecord}/self/20240125` },
+            { text: '2023/07/10 头痛', link: `${prefixDiseaseRecord}/self/20230710` },
             { text: '2022/12/21 发烧', link: `${prefixDiseaseRecord}/self/20221221` },
             { text: '2022/11/28 感冒', link: `${prefixDiseaseRecord}/self/20221128` },
             { text: '2022/06/14 中暑', link: `${prefixDiseaseRecord}/self/20220614` },
