@@ -91,9 +91,53 @@ export const getColorScheme = (colorScheme: ColorScheme): string[] => {
         case ColorScheme.GracefulViolet: return ['#f0e6f5', '#f9f2f4', '#d9d9d9'];
         default:
             return [];
-            break;
     }
 };
+
+export const COLORS: Record<
+    'BLUE' | 'GREEN' | 'PINK' | 'PURPLE',
+    string[][]> = {
+    // 蓝色系
+    BLUE: [
+        ['#fff4d6', '#dfd7d3', '#bec8c8', '#9bb7bb', '#80abb1', '#5496a2'],
+        ['#e7ffc9', '#c2ecd6', '#a4dee1', '#7ccbed', '#59bcf6', '#3aaeff'],
+        ['#eef5ff', '#e1edff', '#d6e5ff', '#c5d9ff', '#b8dOff', '#a9c6ff'],
+    ],
+    // 绿色系
+    GREEN: [
+        ['#ceeaea', '#b0dfdb', '#84cfc7', '#4bbaab', '#2bae9c', '#009f88'],
+        ['#FFF5D6', '#EAEFD0', '#D7EBC6', '#C0E6BE', '#ADE2B5', '#9BDEB1'],
+        ['#f1ffee', '#e1f5d3', '#d5ecbe', '#c5e2a3', '#b5d887', '#a5cd6c'],
+    ],
+    // 粉色系
+    PINK: [
+        ['#ffdce1', '#fccccf', '#fbb8c0', '#fa9faf', '#f8869f', '#f67590'],
+        ['#ffe6eb', '#ffd4e0', '#ffc2d1', '#ffadc2', '#ff99b3', '#ff8aa3'],
+        ['#f0d4db', '#e6bfc9', '#dcaab8', '#d295a7', '#c88096', '#be6b85'],
+        ['#fff1f5', '#fde9ef', '#fcdde6', '#facfda', '#f8c2d0', '#f6b9c9'],
+        ['#edd3e5', '#efd8e3', '#f3dfe0', '#f6e8dc', '#f9edda', '#fbf2d8'],
+        ['#fff2ea', '#ffe6dd', '#ffdacf', '#ffccc0', '#ffbaac', '#ffac9c'],
+    ],
+    // 紫色系
+    PURPLE: [
+        ['#fff1f6', '#f9e9f3', '#eddaef', '#e4ceec', '#dac1e8', '#d3b8e5'],
+    ],
+}
+
+export function hexToRgba(hex: string, alpha = 1) {
+    // 去掉 # 号（如果有）
+    hex = hex.replace(/^#/, '');
+
+    // 解析 RR、GG、BB
+    const r = parseInt(hex.substring(0, 2), 16);
+    const g = parseInt(hex.substring(2, 4), 16);
+    const b = parseInt(hex.substring(4, 6), 16);
+
+    // 返回 rgba 格式
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+
 
 // HSL 转 RGB 辅助函数
 export function hslToRgb(h: number, s: number, l: number): { r: number; g: number; b: number } {

@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from "vue";
 // import AMapLoader from "@amap/amap-jsapi-loader";
-
-import { ElButton, ElLoading } from 'element-plus';
-
+import { ElButton, ElLoading, ElTag } from 'element-plus';
+import { onMounted, onUnmounted, ref } from "vue";
 import { citiesData } from "../../data/trip/cities";
 import japanCities from "../../data/trip/citiesjp.json";
+import { isEqualCity, linkTravelogue, sortedLastTravelogue } from '../../data/trip/travelogue';
 import { VISITED_CHINA } from "../../data/trip/visited/china";
 import { VISITED_JAPAN } from "../../data/trip/visited/japan";
-import { sortedLastTravelogue, isEqualCity, linkTravelogue } from '../../data/trip/travelogue';
 import { ExploreRecord } from "../../type";
+import { COLORS, hexToRgba } from "../../utils";
 
 const isShowMark = ref(false);
 
@@ -63,13 +62,15 @@ const findInGlobalCities = (name: string): GlobalCity | null => {
   return null;
 };
 
+// 蓝色系
+let colors = COLORS.PINK[0];
 const colorLegend = {
   // 2: '#fde7a9',
-  3: '#f9c02f',
-  5: '#f5a54f',
-  8: '#f18334',
-  10: '#cc5f42',
-  5000: '#a94d36',
+  3: colors[1],
+  5: colors[2],
+  8: colors[3],
+  10: colors[4],
+  5000: colors[5],
   // 100000: '#792a17',
 };
 
@@ -254,6 +255,8 @@ function getColorByNumber(number) {
       }
     }
   }
+
+  color = hexToRgba(color, 0.9)
 
   return color;
 }
@@ -505,13 +508,13 @@ const props = defineProps<{
     {{ isShowMark ? '点亮城市' : '城市探索次数' }}
   </el-button>
 
-  <div v-if="!isMobile">
+  <!-- <div v-if="!isMobile">
     <a :href="isFull ? './explore' : './explore-full'">
       <el-button type="primary" class="mr-4 mt-4">
         {{ isFull ? '退出全屏' : '全屏显示' }}
       </el-button>
     </a>
-  </div>
+  </div> -->
 
   <div v-if="isShowMark">
     <span>
@@ -520,12 +523,12 @@ const props = defineProps<{
     </span>
   </div>
 
-  <h3>色卡说明</h3>
-  <div class="flex" v-for="(v, i) in colorLegend">
-    <div class="box" :style="{ backgroundColor: v }"> </div>
-    <span v-if="i < 100">{{ `小于${i}次` }}</span>
-    <span v-else>常住</span>
+  <h5>色卡说明</h5>
+  <div class="group-tag">
+    <el-tag v-for="(color, i) in colorLegend" :color="color">{{ i < 100 ? `小于${i}次` : '常住' }}</el-tag>
   </div>
+
+
 
   <div id="amap-container-aug"></div>
 </template>
@@ -536,14 +539,11 @@ const props = defineProps<{
   height: 600px;
 }
 
-.flex {
-  display: flex;
+.group-tag {
+  margin-bottom: 10px;
 }
 
-.box {
-  width: 30px;
-  height: 20px;
-  border-radius: 5px;
-  margin-right: 3px;
+.group-tag .el-tag {
+  color: black;
 }
 </style>

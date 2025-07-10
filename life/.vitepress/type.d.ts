@@ -71,6 +71,7 @@ interface ExploreInfo {
   date?: DateRange,
   intro?: string,
   link?: string,
+  areas?: string[],
 }
 
 export interface ExploreRecordItem {
@@ -437,4 +438,11 @@ export interface AirportBankRights {
   bank: string,
   card: string | string[],
   rules: string | string[],
+}
+
+export interface Interview {
+  question: string,
+  solution: string,
+  tag: string[],
+  link?: Record<string, string>,
 }

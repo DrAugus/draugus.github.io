@@ -769,12 +769,6 @@ export const NAV_DATA: CardData[] = [
     items: [
       {
         icon: '',
-        title: '中午吃什么',
-        // desc: '',
-        link: 'https://chishenme.xyz/'
-      },
-      {
-        icon: '',
         title: 'IP 地址查询',
         // desc: '',
         link: 'https://www.ipaddress.com/'
@@ -789,12 +783,17 @@ export const NAV_DATA: CardData[] = [
         icon: '',
         title: '复旦大学东亚语言数据中心',
         // desc: '',
-        link: 'http://ccdc.fudan.edu.cn/bases/index.jsp'
+        link: 'http://minoritylanguages.cn/'
       }, {
         icon: 'https://bijinhyakka.com/wp-content/themes/bijinhyakka/favicon.ico',
         title: '美人百花',
-        // desc: '',
+        desc: '流行感がありながら社会性もある、華やかで好印象なスタイルを提案する雑誌',
         link: 'https://bijinhyakka.com/archives/new_release/'
+      }, {
+        // icon: 'https://bijinhyakka.com/wp-content/themes/bijinhyakka/favicon.ico',
+        title: '48 Dress Types',
+        desc: '48 Dress Types And What They Mean With Examples & Pictures',
+        link: 'https://closetcachete.com/dress/type'
       },
     ]
   },

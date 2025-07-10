@@ -110,6 +110,7 @@ export const catLitterData: CatLitter[] = [
         specification: "木薯混合猫砂4合1",
         pricePerKg: { min: 3.01 },
         commonSpecification: "￥7.53/2.5kg",
+        advantages: "超级香"
     }, {
         brand: "Romod 瑞梦迪",
         specification: "经典豆腐混合猫砂",
@@ -126,5 +127,21 @@ export const catLitterData: CatLitter[] = [
         pricePerKg: { min: 2.1 },
         commonSpecification: "￥10.38/5kg",
         disadvantages: "包装袋很简陋，矿砂过多，灰尘大"
+    }, {
+        brand: "永驰",
+        specification: "绿茶豆腐猫砂",
+        pricePerKg: { min: 2.8 },
+        commonSpecification: "￥13.98/5kg",
+        disadvantages: "包装袋很简陋"
+    }, {
+        brand: "parlmu(帕蓝姆)",
+        specification: "玉米豆腐猫砂",
+        pricePerKg: { min: 5.15 },
+        commonSpecification: "￥12.87/2.5kg",
+    }, {
+        brand: "氓宠",
+        specification: "原味膨润土",
+        pricePerKg: { min: 1.57 },
+        commonSpecification: "￥7.83/5kg",
     },
 ];
