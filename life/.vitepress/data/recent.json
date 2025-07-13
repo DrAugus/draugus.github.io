@@ -2,124 +2,124 @@
     "title": "",
     "items": [
         {
-            "title": "日本",
-            "desc": "日本 旅游局 日本国家旅游局，中文站点 游记 夏季游记，参看 日本东京/大版/京都20230720",
-            "link": "/trip/abroad/asia/japan",
-            "date": "2024-05-27"
+            "title": "非技术问题",
+            "desc": "非技术问题 - 为啥想来报这个岗位？为什么考虑来这边呢？ - 意向部门 - 近期在面试什么公司 -",
+            "link": "/code/interview/non-tech",
+            "date": "2024-12-12"
         },
         {
-            "title": "机场评测",
-            "desc": "机场评测 停止安检前/停止值机前 30分钟 到达机场即可，如 17:35 值机截至，17:05 到",
-            "link": "/trip/flying/airport",
-            "date": "2025-06-11"
+            "title": "安徽",
+            "desc": "安徽 玩遍安徽路线（双城记/三城记） - 宣城、芜湖、马鞍山 合肥 芜湖 美食 渣肉蒸饭：上面是粉",
+            "link": "/trip/china/anhui/index",
+            "date": "2025-03-29"
         },
         {
-            "title": "2025/01/26",
-            "desc": "2025/01/26 TODO",
-            "link": "/trip/journey/20250126",
-            "date": "2025-07-01"
+            "title": "浙江",
+            "desc": "浙江 玩遍浙江路线（双城记） - 杭州、绍兴 - 湖州、嘉兴 - 宁波、舟山、台州 - 金华、衢州",
+            "link": "/trip/china/zhejiang/index",
+            "date": "2025-03-29"
+        },
+        {
+            "title": "2023/07/10",
+            "desc": "2023/07/10 唉 头痛 下午17:50出门的时候就感觉左耳附近不舒服 还以为是耳机问题 不",
+            "link": "/disease/record/self/20230710",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "滑稽的充电宝事件",
+            "desc": "滑稽的充电宝事件 TODO 这个地方还有什么惊喜 闹剧一个接一个 先是安检单独安检充电宝，绝缘盒，",
+            "link": "/funny/charger",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "2018",
+            "desc": "2018 Records 野有死麕，白茅包之。有女怀春，吉士诱之。 我脑袋里的西瓜籽可能是发芽了，",
+            "link": "/thought/2018",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "红楼梦 摘录 (2018)",
+            "desc": "红楼梦 摘录 (2018) 若姐妹们不理他，他倒还安静些；若一日姐妹们和他多说了一句话，他心上一喜",
+            "link": "/thought/honglou",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "这又是什么呢",
+            "desc": "这又是什么呢 原来社恐还能有这一层意思啊 —— 不认识/不熟，觉得很尴尬 最近悟出了什么道理？(原",
+            "link": "/thought/temp",
+            "date": "2025-07-09"
         },
         {
             "title": "2025/04/24",
-            "desc": "2025/04/24 TODO",
+            "desc": "2025/04/24 赶路还是焦急， 16:21刷卡上公交，地铁进来找好车厢，便于换乘。很快，换乘",
             "link": "/trip/journey/20250424",
             "date": "2025-07-01"
         },
         {
+            "title": "2025/04/27",
+            "desc": "2025/04/27 计划 20:00出发，21:00到达，去安检后贵宾厅休息。 01:10 到达",
+            "link": "/trip/journey/20250427",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "2025/05/17 周六",
+            "desc": "2025/05/17 周六 15:10登机，14:40到机场 13:20出发。13:12出门，13",
+            "link": "/trip/journey/20250517",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "2025/05/18 周日",
+            "desc": "2025/05/18 周日 此次软卧睡眠还可以，全程睡眠期间没有闻到烟臭味儿，可能是位置很居中 竟",
+            "link": "/trip/journey/20250518",
+            "date": "2025-07-09"
+        },
+        {
+            "title": "2025/06/08",
+            "desc": "2025/06/08 从未有过的如此舒适的起飞体验 厦航还是太稳了",
+            "link": "/trip/journey/20250608",
+            "date": "2025-07-09"
+        },
+        {
             "title": "2025/06/13",
-            "desc": "2025/06/13 TODO",
+            "desc": "2025/06/13 适逢机场大面积延误，19:25登机，18:51赶到贵宾厅已经很赶了，因为19",
             "link": "/trip/journey/20250613",
             "date": "2025-07-01"
         },
         {
             "title": "2025/06/16",
-            "desc": "2025/06/16 TODO",
+            "desc": "2025/06/16 飞行日记 2025/6/16 周一 天气预报下雨，实际天气，晴转多云，体感温",
             "link": "/trip/journey/20250616",
             "date": "2025-07-01"
         },
         {
-            "title": "2025/06/20",
-            "desc": "2025/06/20 跳转梅州游记",
-            "link": "/trip/journey/20250620",
-            "date": "2025-07-01"
-        },
-        {
             "title": "2025/06/26",
-            "desc": "2025/06/26 TODO",
+            "desc": "2025/06/26 原计划 20:05-22:10 大风大雨伴有雷声，看了天气，机场似乎无雨。",
             "link": "/trip/journey/20250626",
             "date": "2025-07-01"
         },
         {
             "title": "2025/06/30",
-            "desc": "2025/06/30 TODO",
+            "desc": "2025/06/30 110码的车速都非常晃动，感觉打车去机场就是拼八字 23:15起飞，22:5",
             "link": "/trip/journey/20250630",
             "date": "2025-07-01"
         },
         {
-            "title": "天津",
-            "desc": "天津 import CityLink from '../../.vitepress/compone",
-            "link": "/trip/travelogue/20250606",
-            "date": "2025-07-01"
+            "title": "景德镇",
+            "desc": "景德镇 import CityLink from '../../.vitepress/compon",
+            "link": "/trip/travelogue/20250503",
+            "date": "2025-05-11"
         },
         {
-            "title": "梅州河源",
-            "desc": "梅州河源 import CityLink from '../../.vitepress/compo",
-            "link": "/trip/travelogue/20250620",
-            "date": "2025-07-01"
-        },
-        {
-            "title": "痤疮",
-            "desc": "痤疮 可能的过敏源 现象：脸上迅速爆油，产油不断 可能的食物：自己炒菜，炒茄子，放了大量的油，辅料",
-            "link": "/disease/acne-vulgaris",
-            "date": "2025-06-26"
-        },
-        {
-            "title": "感冒 4.7",
-            "desc": "感冒 4.7 本次病症全程伴有手指脱皮、起皮 4.7 早上起来就一直流鼻涕，很难擤，就觉得是鼻炎。",
-            "link": "/disease/record/self/20250407",
-            "date": "2025-06-26"
-        },
-        {
-            "title": "晕？中暑？颈椎？",
-            "desc": "晕？中暑？颈椎？ 早上一如既往在8:25闹钟醒来，觉得头晕，也许是睡的时间太短了？坚持坐起来，天旋",
-            "link": "/disease/record/self/20250625",
-            "date": "2025-06-26"
-        },
-        {
-            "title": "香港",
-            "desc": "香港 旅游局 香港旅游事务署 游记 游记参看港珠澳广深 推荐 地方推荐 - 香港艺术馆 - 香港太",
-            "link": "/trip/china/hongkong",
-            "date": "2024-06-14"
-        },
-        {
-            "title": "Web Tools",
-            "desc": "Web Tools node install > [refer][node install] us",
-            "link": "/code/front-end/webtools",
-            "date": "2025-02-07"
-        },
-        {
-            "title": "CMD",
-            "desc": "CMD CMD 命令 可以用cmd /?查看帮助信息 cmd /c dir 是执行完dir命令后关",
-            "link": "/code/os/windows/cmd",
-            "date": "2025-06-24"
-        },
-        {
-            "title": "使用提示",
-            "desc": "使用提示 QA bat 脚本相关 参看 cmd 开机自启动，如新版 outlook 开机自启 打开",
-            "link": "/code/os/windows/tips",
-            "date": "2024-07-27"
+            "title": "Vue",
+            "desc": "Vue QA event 在 Vue 中，@input 绑定的方法中的 event 对象是指原生的",
+            "link": "/code/front-end/vue",
+            "date": "2025-07-07"
         },
         {
             "title": "Tauri",
             "desc": "Tauri What is Tauri?(Tauri v2.0) 创建一个项目 跟着官方教程，创建",
             "link": "/dev/tauri",
             "date": "2024-12-20"
-        },
-        {
-            "title": "Privacy Policy",
-            "desc": "Privacy Policy Last updated: June 24, 2025 This P",
-            "link": "/policy/cc",
-            "date": "2025-06-24"
         }
     ]
 }
