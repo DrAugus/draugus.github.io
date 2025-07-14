@@ -13,6 +13,11 @@
                 <del> {{ v.name }}</del> (已倒闭)
             </span>
             <span v-else> {{ v.name }}</span>
+            <span v-if="isChain(v)">
+                <el-tooltip class="box-item" effect="dark" :content="`总部：${v.headquartersCity}`" placement="top">
+                    <Badge type="danger" :text="`连锁`" />
+                </el-tooltip>
+            </span>
             <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
             <span v-if="!Array.isArray(v.restaurantType)">
                 <Badge type="tip" :text="v.restaurantType" />
@@ -26,8 +31,8 @@
 </template>
 
 <script setup lang="ts">
+import { ElButton, ElTooltip } from 'element-plus';
 import { ref } from 'vue';
-import { ElButton } from 'element-plus';
 
 import { FoodRecord } from '../../type';
 
@@ -45,6 +50,8 @@ const tags = Array.from(
         )
     )
 );
+
+const isChain = (food: FoodRecord) => food.headquartersCity ? food.headquartersCity != food.city : false;
 
 
 const sortFood = () => {

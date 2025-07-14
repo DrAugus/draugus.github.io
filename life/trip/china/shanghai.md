@@ -1,5 +1,7 @@
 # 上海
 
+<LinkTravelogue city="上海" />
+
 | 景点 | 交通 | 游玩 | 开放 | 预约 | 票价 | 平台 | 推荐 |
 |:----|:----|:----|:----|:----:|----:|----:|----:|
 |甜爱路|地铁3/8号线虹口足球场站1号口步行约800米|1h|24h|-|免费|-|是|
@@ -41,10 +43,6 @@
 不推荐
 
 - 田子坊
-
-## 游记
-
-[2023/03/11](../travelogue/20230311)
 
 ## 美食
 
@@ -96,4 +94,5 @@ TODO
 import { attractionsSH, TableHead } from "../../.vitepress/data/trip/attraction";
 import { foodSH } from "../../.vitepress/data/trip/food";
 import Food from "../../.vitepress/components/trip/Food.vue";
+import LinkTravelogue from "../../.vitepress/components/trip/LinkTravelogue.vue";
 </script>

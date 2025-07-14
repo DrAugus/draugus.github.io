@@ -2,9 +2,7 @@
 
 ## 广州
 
-### 游记
-
-游记参看[港珠澳广深](../../travelogue/20230429)
+<LinkTravelogue city="广州" />
 
 ### 攻略
 
@@ -56,11 +54,11 @@
 
 ## 深圳
 
-游记参看[港珠澳广深](../../travelogue/20230429)，[深港珠+柳州](../../travelogue/20230628)
+<LinkTravelogue city="深圳" />
 
 ## 珠海
 
-游记参看[港珠澳广深](../../travelogue/20230429)，[深港珠+柳州](../../travelogue/20230628)
+<LinkTravelogue city="珠海" />
 
 ### 出行
 
@@ -91,9 +89,11 @@
 
 计划：深圳-汕头，-> 潮州 -> 揭阳，揭阳飞机飞走
 
-游记参看[潮汕地区](../../travelogue/20240404)
+<LinkTravelogue city="汕头" />
 
 ### 汕头
+
+<LinkTravelogue city="汕头" />
 
 - 小公园：商业街，各种汕头照片网图都在这里可以找到  
 - 妈祖庙  
@@ -108,6 +108,8 @@
 
 ### 潮州
 
+<LinkTravelogue city="潮州" />
+
 潮汕茶馆品功夫茶，观潮剧，体验潮汕慢生活，建议品尝特色美食，老牌牛杂和原味鱼生。
 
 - 广济门城楼  
@@ -120,6 +122,8 @@
 
 ### 揭阳
 
+<LinkTravelogue city="揭阳" />
+
 ## 佛山
 
 :::tip 王刚美食推荐  
@@ -129,7 +133,13 @@
 
 ## 梅州
 
+<LinkTravelogue city="梅州" />
+
 泮坑风景区➡️客天下客家小镇景区➡️千佛塔➡️东山书院，客家博物馆➡️梅州学宫➡️江北老街➡️油罗街
 
 美食必吃  
 腌面+三及第汤，一口面一口汤，满足感爆棚。还有客家猪/牛肉丸，Q弹有嚼劲。各类粄类（笋粄、艾粄、萝卜粄、发粄），丰顺捆粄，来梅州一定要尝尝梅州腌面，带着炸蒜酥的香气吃面时配上三及第汤，堪称绝配。
+
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

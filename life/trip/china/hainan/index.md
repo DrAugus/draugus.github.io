@@ -2,7 +2,7 @@
 
 ## 海口
 
-游记参看，[海口20240415](../../travelogue/20240415)
+<LinkTravelogue city="海口" />
 
 :::warning 推荐
 
@@ -17,3 +17,8 @@
 :::
 
 ## 三亚
+
+<LinkTravelogue city="三亚" />
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

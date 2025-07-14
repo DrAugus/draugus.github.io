@@ -3,10 +3,7 @@
 :::danger 旅游局
 [香港旅游事务署](https://www.tourism.gov.hk/sc/index.php)
 :::
-
-## 游记
-
-游记参看[港珠澳广深](../travelogue/20230429)
+<LinkTravelogue city="香港" />
 
 ## 推荐
 
@@ -80,3 +77,7 @@
 - 油麻地、佐敦。油麻地和佐敦位于旺角和尖沙咀中间，交通方便，弥敦道上品牌商家林立，美食遍地。
 
 需要多备钱，住宅很贵，吃的很贵，可以去海洋馆。一天海洋馆，一天维多利亚港+旺角。维多利亚港 8 点灯光秀。可以去对面山上待到天黑以后坐缆车回。住的地方选旺角就可以，方便便宜。港澳 4 天就够。推荐飞广州，
+
+<script setup>
+import LinkTravelogue from "../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

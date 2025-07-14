@@ -16,5 +16,8 @@
 - 威尼斯人
 - 新濠天地
 :::
+<LinkTravelogue city="澳门" />
 
-游记参看[港珠澳广深](../travelogue/20230429)
+<script setup>
+import LinkTravelogue from "../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

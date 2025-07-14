@@ -2,7 +2,7 @@
 
 ## 贵阳
 
-游记参看，[贵阳20240426](../../travelogue/20240426)
+<LinkTravelogue city="贵阳" />
 
 :::warning 推荐
 
@@ -37,3 +37,7 @@
 
 - [黄果树瀑布官网](https://www.hgscn.com)
 - [小七孔官网](http://www.liboxiaoqikong.com)
+
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

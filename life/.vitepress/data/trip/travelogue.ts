@@ -26,6 +26,7 @@ const dataTravelogue: TravelogueInfo[] = [
     { title: '嘉兴', date: new Date('2025/04/04'), city: '嘉兴' },
     { title: '景德镇', date: new Date('2025/05/03'), city: '景德镇' },
     { title: '梅州河源', date: new Date('2025/06/20'), city: ['梅州', '河源'] },
+    { title: '金华衢州南昌', date: new Date('2025/07/11'), city: ['金华', '衢州', '南昌'] },
 ];
 
 const linkPrefix = '/trip/travelogue/';

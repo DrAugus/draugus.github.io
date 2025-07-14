@@ -644,6 +644,21 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     },
                     intro: "游玩"
                 },]
+            }, {
+                id: '金华', info: [{
+                    date: {
+                        start: new Date('2025/07/11'),
+                        end: new Date('2025/07/12'),
+                    },
+                    intro: "游玩"
+                },]
+            }, {
+                id: '衢州', info: [{
+                    date: {
+                        start: new Date('2025/07/12'),
+                    },
+                    intro: "游玩"
+                },]
             },
         ]
     },
@@ -761,6 +776,14 @@ export const VISITED_CHINA: ExploreRecord[] = [
                     },
                     intro: "游玩"
                 }],
+            }, {
+                id: '南昌', info: [{
+                    date: {
+                        start: new Date('2025/07/12'),
+                        end: new Date('2025/07/13'),
+                    },
+                    intro: "游玩"
+                },]
             },
         ]
     },

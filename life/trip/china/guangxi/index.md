@@ -1,6 +1,12 @@
 # 广西
 
+## 南宁
+
+<LinkTravelogue city="南宁" />
+
 ## 柳州
+
+<LinkTravelogue city="柳州" />
 
 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有）  
 白天鱼峰山公园，龙潭公园，柳侯公园，帽合公园（动物园）  
@@ -8,7 +14,7 @@
 
 ## 桂林
 
-游记参看，[桂林2023](../../travelogue/20230902)
+<LinkTravelogue city="桂林" />
 
 ### 旅行准备
 
@@ -36,3 +42,7 @@
 - 十里画廊
 - 两江四湖
 - 千古情景区
+
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

@@ -4,9 +4,7 @@
 [日本国家旅游局](https://www.japan.travel/jp/)，[中文站点](https://www.japan-travel.cn)
 :::
 
-## 游记
-
-夏季游记，[参看 日本东京/大版/京都20230720](../../travelogue/20230720)
+<LinkTravelogue city="Tokyo" />
 
 ## 推荐去处
 
@@ -215,6 +213,8 @@ Visit Japan Web 是指，提供办理入境手续的、“入境审查”、“�
 
 ## 東京
 
+<LinkTravelogue city="Tokyo" />
+
 ### 簡介
 
 東京是日本的首都，它時尚、繁華，卻不失古樸傳統；它是世界級的商業、金融中心，也是亞洲流行風潮的引領者，一座藝術之城；而小巷深處熱情親切的居酒屋、洋溢平民氣息的下町地區、動漫與高科技、各國文化的交融。這裡有集中世界名店的銀座、充滿奇趣幻想的迪士尼、櫻花爛漫的上野公園、被譽為不夜城的新宿、保留了日本傳統文化精華的淺草、年輕人新潮文化發源地澀谷、未來主義風格的台場，無論誰都能找到自己喜愛的地方。
@@ -234,6 +234,8 @@ Visit Japan Web 是指，提供办理入境手续的、“入境审查”、“�
 東京全年適合，春秋最佳。 12月-次年2月氣候寒冷，建議穿好毛衣、大衣、羽絨服等保暖衣物；3月-4月櫻花盛開，天氣回暖，但還是有些陰冷，需要防寒保暖；6月是梅雨季節，多雨潮濕，出門需備好雨具；7-10月是颱風季節，非常悶熱，需注意防曬。 4月初是東京的賞櫻季；6月繡球花盛開，可以去鎌倉邂逅藍紫色的花海；9月紅楓銀杏遍布，非常文藝。
 
 ## 大阪
+
+<LinkTravelogue city="Osaka" />
 
 ### 簡介
 
@@ -255,3 +257,7 @@ Visit Japan Web 是指，提供办理入境手续的、“入境审查”、“�
 
 - [trip guide](https://hk.trip.com/travel-guide)
 - [japan travel](https://www.japan.travel/hk/hk/) / [中文站点](https://www.japan-travel.cn)
+
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

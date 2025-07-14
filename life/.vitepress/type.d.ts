@@ -411,6 +411,7 @@ export interface FoodRecord {
     reason?: string, // 推荐理由（可选）
   },
   closed?: boolean,
+  headquartersCity?: string;        // 总部所在城市，与 city 不同则为连锁店
 }
 
 export interface Flag {

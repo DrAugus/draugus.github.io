@@ -2,7 +2,7 @@
 
 ## 武汉
 
-游记参看，[武汉20240508](../../travelogue/20240508)
+<LinkTravelogue city="武汉" />
 
 :::details 攻略 by gpt
 
@@ -17,3 +17,7 @@
 9. 范湖：又称“北海湖”，是武汉市北部一个自然湖泊，景色迷人，是一个清幽的景区。
 10. 微笑口袋公园：位于武汉市汉口区，是一个仙境般的小公园，具有强烈的艺术气息，是武汉最受欢迎的景点之一。
 :::
+
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

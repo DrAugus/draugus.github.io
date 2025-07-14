@@ -90,6 +90,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 80,
         restaurantType: ["蛙"],
         recommendation: true,
+        headquartersCity: "南宁"
     },
     {
         name: "小牛家村·贵州黄牛肉火锅",
@@ -117,6 +118,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 170,
         restaurantType: ["牛肉", "自助"],
         recommendation: true,
+        headquartersCity: "上海"
     },
     {
         name: "一绪に寿喜烧",
@@ -126,6 +128,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 170,
         restaurantType: ["牛肉", "自助"],
         recommendation: true,
+        headquartersCity: "上海"
     },
     {
         name: "木屋烧烤",
@@ -135,6 +138,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 108,
         restaurantType: "烤串",
         recommendation: true,
+        headquartersCity: "深圳"
     },
     {
         name: "黔老头·贵州酸汤牛肉火锅",
@@ -189,6 +193,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 95,
         restaurantType: "湘菜",
         recommendation: true,
+        headquartersCity: "长沙"
     },
     {
         name: "喜樘海鲜餐厅",
@@ -321,6 +326,7 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 80,
         restaurantType: "湘菜",
         recommendation: true,
+        headquartersCity: "长沙"
     },
 ]
 

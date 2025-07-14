@@ -2,7 +2,7 @@
 
 ## 南京
 
-游记参看，[2023/02/25](../../travelogue/20230225)
+<LinkTravelogue city="南京" />
 
 ### 游玩推荐
 
@@ -105,6 +105,8 @@
 
 ## 苏州
 
+<LinkTravelogue city="苏州" />
+
 ### 苏州游玩
 
 - 寒山寺  
@@ -133,11 +135,9 @@ Day 3
 
 陆振兴 陆长兴 东吴面馆都可以，比较接地气的面馆。要吃的精致一点，就同德兴 琼灵阁
 
-### 苏州游记
-
-[2022/09/06](../../travelogue/20220906)
-
 ## 无锡
+
+<LinkTravelogue city="无锡" />
 
 鼋头渚 Yuántóuzhǔ
 
@@ -226,6 +226,8 @@ D2下午
 
 ## 扬州
 
+<LinkTravelogue city="扬州" />
+
 :::warning 计划目的地
 D1瘦西湖(3小时) → 大明寺(1-3小时) → 扬州汉陵苑(1-3小时) → 何园(1-3小时) → 个园(1-3小时)  
 东关街，中国大运河博物馆，皮市街，文昌阁
@@ -248,3 +250,7 @@ D1瘦西湖(3小时) → 大明寺(1-3小时) → 扬州汉陵苑(1-3小时) →
 |大运河博物馆||是||每日19点开始放票|
 
 :::
+
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

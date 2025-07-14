@@ -2,7 +2,7 @@
 
 ## 长沙
 
-游记参看，[长沙20220810](../../travelogue/20220810)
+<LinkTravelogue city="长沙" />
 
 :::warning 橘子洲小火车
 小火车不要坐车头，巨抖无比
@@ -22,6 +22,15 @@
 
 ## 张家界
 
+<LinkTravelogue city="张家界" />
+
 ## 株洲
 
+<LinkTravelogue city="株洲" />
+
 ## 岳阳
+
+<LinkTravelogue city="岳阳" />
+<script setup>
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>
