@@ -4,7 +4,17 @@
 
 ## 南昌
 
+<LinkTravelogue city="南昌" />
+
+<Food :foods="foodNC" />
+
+千万别吃  
+
+- 青英小吃
+
 ## 上饶
+
+<LinkTravelogue city="上饶" />
 
 Day1：抵达上饶→望仙谷（夜宿望仙谷）  
 Day2：望仙谷→葛仙村（夜宿葛仙村）  
@@ -20,13 +30,19 @@ Day5：鄱阳湖→婺女洲→返程
 
 ## 鹰潭
 
-游玩
+<LinkTravelogue city="鹰潭" />
+
+### 游玩
 
 天师府，龙虎山，大上清宫
 
 高速自驾路过，下高速歇脚。鹰潭站附近的**赣饭王居民楼**，很不错
 
 ## 景德镇
+
+<LinkTravelogue city="景德镇" />
+
+### 游玩
 
 |景点|门票|开放时间|预约|平台|
 |----|----|----|----|----|
@@ -45,3 +61,9 @@ Day5：鄱阳湖→婺女洲→返程
 DAY1: 陶瓷博物馆，抚州弄，御窑博物馆，浙江路，陶溪川  
 DAY2: 三宝村，雕塑瓷厂，九集小镇，陶艺街，陶阳新村  
 DAY3: 瑶里古镇，东埠码头，寒溪村，瓷宫，昌南里艺术中心
+
+<script setup>
+import { foodNC } from "../../../.vitepress/data/trip/food";
+import Food from "../../../.vitepress/components/trip/Food.vue";
+import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
+</script>

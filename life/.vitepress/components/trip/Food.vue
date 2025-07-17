@@ -2,7 +2,6 @@
     <div class="mb-4">
         <el-button type="success" @click="sortFood">人均排序</el-button>
     </div>
-    <br />
     <div class="mb-4">
         <el-button text type="success" @click="filterTag()">全部</el-button>
         <el-button @click="filterTag(v)" text v-for="(v, i) in tags">{{ v }}</el-button>

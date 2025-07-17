@@ -224,6 +224,27 @@ Day3: 神仙居景区
 
 <LinkTravelogue city="金华" />
 
+### 美食
+
+<Food :foods="foodJH" />
+
+千万别吃  
+
+尚未探索
+
+- 盛武肥牛
+- 佬牛烤牛肉 （东关那家 江南的不好吃）
+- 香蟹园，
+- 菜肴故事 。
+- 一唔一食  芋艿牛肉、梅干菜鸡爪
+- 秋记和婺州里应该是同个老板。秋记我喜欢两头乌夹馒头，牛肉粒，生炒牛肉，鸡翅，辣鸡爪煲，北京烤鸭 这些都超好吃！
+- 大型聚餐推荐老金华，乡村大院，百老汇，农家乐。
+- 山溪竹园，东田里，棒棒汤溪菜馆，婺家小菜，厨娘当家，阳光绿洲。
+- 要带朋友逛古子城和万佛塔的话，可以吃婺州里，在这附近的确综合考虑环境和味道的话还算不错。
+- 金华煲  去壹辉不会出错，金鹰较实惠，永平种类少味道好
+
+### 游玩
+
 :::details 景点表格
 
 | 景点 | 票价 |游玩/开放时间 | 推荐 | 介绍 |
@@ -250,6 +271,18 @@ Day3: 神仙居景区
 
 <LinkTravelogue city="衢州" />
 
+### 美食
+
+<Food :foods="foodQZ" />
+
+千万别吃  
+
+- 小老汪饭店
+
+尚未探索
+
+- 本地人喜欢去 聚丰园 ，神农饭店，百老汇，本家宴，老佛伲，方家菜谱。。某老汪，某分利这种以辣为噱头的网红店，除了辣没有别的味道，骗骗外地人。
+
 ## 丽水
 
 <LinkTravelogue city="丽水" />
@@ -273,6 +306,8 @@ Day3: 神仙居景区
 
 <script setup>
 import { foodHZ } from "../../../.vitepress/data/trip/food";
+import { foodJH } from "../../../.vitepress/data/trip/food";
+import { foodQZ } from "../../../.vitepress/data/trip/food";
 import Food from "../../../.vitepress/components/trip/Food.vue";
 import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
 </script>

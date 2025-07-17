@@ -327,6 +327,94 @@ const foodRecords: FoodRecord[] = [
         restaurantType: "湘菜",
         recommendation: true,
         headquartersCity: "长沙"
+    }, {
+        name: "怡鑫鹏早餐",
+        city: "河源",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 10,
+        restaurantType: "面",
+        recommendation: true,
+    }, {
+        name: "新宜家面馆",
+        city: "梅州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 10,
+        restaurantType: "面",
+        recommendation: true,
+    }, {
+        name: "金苑酒家",
+        city: "梅州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 68,
+        restaurantType: "客家菜",
+        recommendation: true,
+    }, {
+        name: "原生记牛杂店",
+        city: "梅州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 34,
+        restaurantType: ["牛肉", "牛杂", "粉"],
+        recommendation: true,
+    }, {
+        name: "雷哥手擀面",
+        city: "金华",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 12,
+        restaurantType: "面",
+        recommendation: true,
+    }, {
+        name: "老厉饼",
+        city: "金华",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 5,
+        restaurantType: ["小吃", "饼"],
+        recommendation: true,
+    }, {
+        name: "秋记婺味",
+        city: "金华",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 117,
+        restaurantType: "江浙菜",
+        recommendation: true,
+    }, {
+        name: "老阮杜泽灌肠鸡蛋粿",
+        city: "衢州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 8,
+        restaurantType: ["小吃", "饼"],
+        recommendation: true,
+    }, {
+        name: "衢小七乌佬果",
+        city: "衢州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 10,
+        restaurantType: ["小吃", "早餐"],
+        recommendation: true,
+    }, {
+        name: "老三样",
+        city: "南昌",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 62,
+        restaurantType: "江西菜",
+        recommendation: true,
+    }, {
+        name: "打平火",
+        city: "南昌",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 45,
+        restaurantType: "江西菜",
+        recommendation: true,
     },
 ]
 
@@ -334,3 +422,8 @@ export const filterFoodByCity = (city: string) => foodRecords.filter((record) =>
 
 export const foodSH = filterFoodByCity("上海");
 export const foodHZ = filterFoodByCity("杭州");
+export const foodHY = filterFoodByCity("河源");
+export const foodMZ = filterFoodByCity("梅州");
+export const foodJH = filterFoodByCity("金华");
+export const foodQZ = filterFoodByCity("衢州");
+export const foodNC = filterFoodByCity("南昌");
