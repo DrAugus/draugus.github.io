@@ -16,6 +16,13 @@
                 "camp_kv": ""
             },
             {
+                "camp_name": "怪啖屋",
+                "camp_channel": "1191",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/156710/cf283b284cc983d5bc6bba06ff34bb1e_9140995365809133076.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/156710/cf27da50dabc87416669174768da9169_3382136686250433611.png",
+                "camp_kv": ""
+            },
+            {
                 "camp_name": "云岿山",
                 "camp_channel": "1185",
                 "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/3ddf53d0aed28fd888025c942878006a_7147213263568712794.png",
@@ -109,6 +116,13 @@
                 "camp_kv": ""
             },
             {
+                "camp_name": "Spook Shack",
+                "camp_channel": "1191",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/156710/cf283b284cc983d5bc6bba06ff34bb1e_9140995365809133076.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/156710/cf27da50dabc87416669174768da9169_3382136686250433611.png",
+                "camp_kv": ""
+            },
+            {
                 "camp_name": "Yunkui Summit",
                 "camp_channel": "1185",
                 "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/3ddf53d0aed28fd888025c942878006a_7147213263568712794.png",
@@ -196,6 +210,10 @@
             "id": "Stars of Lyra",
             "name": "天琴座"
         },
+        "SpookShack": {
+            "id": "Spook Shack",
+            "name": "怪啖屋"
+        },
         "YunkuiSummit": {
             "id": "Yunkui Summit",
             "name": "云岿山"
@@ -240,9 +258,25 @@
     "CHAR": [
         [
             {
+                "char_name": "爱丽丝·泰姆菲尔德",
+                "char_color": "#407ebf",
+                "char_line": "「这…这种程度的挑战，泰姆菲尔德家族的后人才不会退缩！」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/e79decbb89496962d5e43d12c8acfb9c_3624411308298773994.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/b565995a902912b33d0642db43c77d1b_4071595144312336504.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "浮波柚叶",
+                "char_color": "#f96c6b",
+                "char_line": "「觉得自己霉运缠身吗，那不妨问问…狸猫的建议吧？」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/43ae40a750b7e6a0affc58e191757916_1980741451904466813.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/d199623f93344770295bb5fe5bdbf59f_8139974073628632189.png",
+                "char_chan_id": "1191"
+            },
+            {
                 "char_name": "橘福福",
                 "char_color": "#ffce6d",
-                "char_line": "「草木尚知食尘饮露，修炼术法断不可饿着肚子呀。」",
+                "char_line": "「云岿山上有猛虎，仗义行侠好威风！」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/4a9b2cf4fe774bab5b4c120bbe3ee182_5096951012147369687.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/dbbf26de8101c4e37e36eeaac7eacca8_9026544933917816900.png",
                 "char_chan_id": "1185"
@@ -530,9 +564,25 @@
         ],
         [
             {
+                "char_name": "Alice Thymefield",
+                "char_color": "#407ebf",
+                "char_line": "\"T—This... A Thymefield descendant would never back down from a challenge of this level!\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/e79decbb89496962d5e43d12c8acfb9c_3624411308298773994.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/b565995a902912b33d0642db43c77d1b_4071595144312336504.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "Ukinami Yuzuha",
+                "char_color": "#f96c6b",
+                "char_line": "\"Feeling down on your luck? Why not... ask the tanuki for some advice?\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/43ae40a750b7e6a0affc58e191757916_1980741451904466813.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/d199623f93344770295bb5fe5bdbf59f_8139974073628632189.png",
+                "char_chan_id": "1191"
+            },
+            {
                 "char_name": "Ju Fufu",
                 "char_color": "#ffce6d",
-                "char_line": "\"Even plants know to feed from the soil and drink dew — there's no way we can practice on an empty stomach!\"",
+                "char_line": "\"Fierce tigers prowl Yunkui Summit, where righteous heroes display their might!\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/4a9b2cf4fe774bab5b4c120bbe3ee182_5096951012147369687.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/dbbf26de8101c4e37e36eeaac7eacca8_9026544933917816900.png",
                 "char_chan_id": "1185"
@@ -820,6 +870,30 @@
         ]
     ],
     "JS_CHAR": {
+        "alice_thymefield": {
+            "key": "Alice Thymefield",
+            "id": "alice_thymefield",
+            "name": "爱丽丝·泰姆菲尔德",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「这…这种程度的挑战，泰姆菲尔德家族的后人才不会退缩！」",
+            "camp": "SpookShack",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "ukinami_yuzuha": {
+            "key": "Ukinami Yuzuha",
+            "id": "ukinami_yuzuha",
+            "name": "浮波柚叶",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「觉得自己霉运缠身吗，那不妨问问…狸猫的建议吧？」",
+            "camp": "SpookShack",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
         "ju_fufu": {
             "key": "Ju Fufu",
             "id": "ju_fufu",
@@ -827,7 +901,7 @@
             "prefix": "",
             "star": 5,
             "event_exclusive": true,
-            "intro": "「草木尚知食尘饮露，修炼术法断不可饿着肚子呀。」",
+            "intro": "「云岿山上有猛虎，仗义行侠好威风！」",
             "camp": "YunkuiSummit",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
