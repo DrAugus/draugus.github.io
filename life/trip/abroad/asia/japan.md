@@ -279,10 +279,30 @@ Visit Japan Web 是指，提供办理入境手续的、“入境审查”、“�
 
 ### 交通
 
-游客 PASS 通票
+游客 PASS 通票(<Badge type="tip" text="日本人提醒" />车票的话 几日票那种适合旅游 如果移动不多 不买也行 差不了多少)
 
-JR-CENTRAL, JR-WEST: <https://touristpass.jp/zh-tw/>  
-JR: <https://japanrailpass.net/zh/>
+JR-CENTRAL, JR-WEST: <a href="https://touristpass.jp/" target="blank"><Badge type="tip" text="官网↗" /></a>  
+JR: <a href="https://japanrailpass.net/" target="blank"><Badge type="tip" text="官网↗" /></a>  
+
+### 住宿
+
+:::tip 日本人推荐
+[jalan](https://www.jalan.net/), booking, airbnb  
+度假区/高级的 一般去 [jal](https://www.jal.co.jp/) 的推荐手册上找  
+然后看酒店官网套餐活动  
+如果决定了去的城市 可以去当地的政府官网看看推荐  
+:::
+
+三井ガーデンホテル(Mitsui Garden Hotel)(三井花园饭店): <a href="https://www.gardenhotels.co.jp/" target="blank"><Badge type="tip" text="官网↗" /></a>  
+東横INN(Toyoko Inn): <a href="https://www.toyoko-inn.com/" target="blank"><Badge type="tip" text="官网↗" /></a>  
+相鉄ホテルズ(SOTETSU HOTELS): <a href="https://sotetsu-hotels.com/" target="blank"><Badge type="tip" text="官网↗" /></a>  
+:::details 相鉄旗下
+相鉄フレッサイン(相铁 FRESA INN)(SOTETSU FRESA INN)  
+相鉄グランドフレッサ(相铁 GRAND FRESA)(SOTETSU GRAND FRESA)  
+相鉄ホテルズ ザ・スプラジール(相铁酒店・喜普乐吉)(SOTETSU HOTELS THE SPLAISIR)  
+ザ・ポケットホテル(THE POCKET HOTEL)(THE POCKET HOTEL)  
+ホテルサンルート(灿路都大饭店)(HOTEL SUNROUTE)  
+:::
 
 ### 天气
 

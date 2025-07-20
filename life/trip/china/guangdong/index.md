@@ -126,6 +126,8 @@
 
 ## 佛山
 
+<Food :foods="foodFS" />
+
 :::tip 王刚美食推荐  
 志兴旺美食  
 有记餐厅  
@@ -244,6 +246,7 @@
 <script setup>
 import { foodMZ } from "../../../.vitepress/data/trip/food";
 import { foodHY } from "../../../.vitepress/data/trip/food";
+import { foodFS } from "../../../.vitepress/data/trip/food";
 import Food from "../../../.vitepress/components/trip/Food.vue";
 import LinkTravelogue from "../../../.vitepress/components/trip/LinkTravelogue.vue";
 </script>

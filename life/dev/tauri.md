@@ -157,6 +157,10 @@ missing project.yml file in the Xcode project directory: Operation not permitted
 Permission updater:default not found, expected one of...
 
 **SQL**: 看是否是平台对应的 [capabilities](https://v2.tauri.app/security/capabilities/) 漏掉了，有三种 `default`, `desktop`, `mobile`
+
+5. 版本过低，无法推送至 app connect
+
+**SQL**: 推送版本必须高于已经分发的版本
 :::
 
 ## Pipelines(Github Action)

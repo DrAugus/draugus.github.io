@@ -23,3 +23,12 @@
 `Ctrl+G`
 
 compare 代码，首先选择第一个文件，右键“**Select for Compare**”，再选择第二个文件，右键“**Compare with Selected**”，即可对比代码
+
+大小写转换
+
+使用命令面板
+
+1. 选中文本。
+2. 按 Ctrl + Shift + P 打开命令面板。
+3. 搜索 Uppercase 或 Lowercase。
+4. 点击相应选项即可完成转换。

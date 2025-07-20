@@ -415,6 +415,30 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 45,
         restaurantType: "江西菜",
         recommendation: true,
+    }, {
+        name: "孔岳冒菜",
+        city: "杭州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 43,
+        restaurantType: "冒菜",
+        recommendation: true,
+    }, {
+        name: "酱爆啫啫煲",
+        city: "佛山",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 48,
+        restaurantType: "粤菜",
+        recommendation: true,
+    }, {
+        name: "有记餐厅",
+        city: "佛山",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 64,
+        restaurantType: "粤菜",
+        recommendation: true,
     },
 ]
 
@@ -427,3 +451,4 @@ export const foodMZ = filterFoodByCity("梅州");
 export const foodJH = filterFoodByCity("金华");
 export const foodQZ = filterFoodByCity("衢州");
 export const foodNC = filterFoodByCity("南昌");
+export const foodFS = filterFoodByCity("佛山");
