@@ -60,3 +60,13 @@ App Store Connect：上线到苹果商店时用到
 :::
 
 将上述操作生成的证书（Certificate）、描述文件（Profile）下载放到一起放到附件中，发送给相关开发人员
+
+## 开发流程
+
+新建 Xcode 项目，开发好代码。在 Assets 里配置好 AppIcon，1024x1024px 的格式即可。  
+配置 PROJECT 点击左侧项目，PROJECT - Info，配置 Localizations，设置为中文。  
+配置 TARGETS ，这里需要配置的比较多
+
+1. **General**: Minimum Deployments 选择对应的最低支持版本，Identity 按需填写，App Icons 按需填写
+2. **Signing & Capabilities**： 点选自动签名
+3. **Info**: Custom macOS Application Target Properties 里面增加一个 `App Uses Non-Exempt Encryption` set **NO**（无需在 AppStore Connect 官网为下一构建版本提供出口合规证明信息（[参考](https://help.apple.com/xcode/mac/current/#/dev0dc15d044)））

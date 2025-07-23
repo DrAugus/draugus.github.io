@@ -4,6 +4,10 @@ icon: simple-icons:xcode
 
 # Xcode
 
+## hot keys
+
+control + shift + I: format file
+
 ## download version
 
 [link](https://developer.apple.com/download/all/?q=Xcode)
