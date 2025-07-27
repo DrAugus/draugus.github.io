@@ -2,6 +2,24 @@
     "title": "",
     "items": [
         {
+            "title": "Xcode",
+            "desc": "Xcode hot keys control + shift + I: format file d",
+            "link": "/code/dev-env/xcode",
+            "date": "2025-07-23"
+        },
+        {
+            "title": "App Store",
+            "desc": "App Store 苹果开发账户 下载 Developer App 注册，年费 $99。等待注册成",
+            "link": "/dev/app-store",
+            "date": "2025-06-23"
+        },
+        {
+            "title": "Privacy Policy",
+            "desc": "Privacy Policy Last updated: June 24, 2025 This P",
+            "link": "/policy/cs",
+            "date": "2025-07-23"
+        },
+        {
             "title": "VS Code",
             "desc": "VS Code tips 文本自动换行 文本超出显示时，需要拖动下面的滑块才能看到超出的部分， -",
             "link": "/code/dev-env/vscode",
@@ -102,24 +120,6 @@
             "desc": "湖北 武汉 details 攻略 by gpt 1. 东湖风景区：东湖是武汉市中心区内最大的内陆湖",
             "link": "/trip/china/hubei/index",
             "date": "2024-05-28"
-        },
-        {
-            "title": "湖南",
-            "desc": "湖南 长沙 橘子洲小火车 小火车不要坐车头，巨抖无比 游玩 - 杜甫江阁 - 橘子洲 美食 - 吃",
-            "link": "/trip/china/hunan/index",
-            "date": "2024-05-28"
-        },
-        {
-            "title": "江苏",
-            "desc": "江苏 南京 游玩推荐 这次基本都是博物馆，陵园，商场。 基本都需要预约，选好路线，预约。可以直接微",
-            "link": "/trip/china/jiangsu/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "吉林",
-            "desc": "吉林 长春 - 伪满皇宫博物院 - 长春电影制片厂 - 一汽 - 长影世纪城 ¥69 16:00停",
-            "link": "/trip/china/jilin/index",
-            "date": "2025-07-14"
         }
     ]
 }

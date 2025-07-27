@@ -1,4 +1,16 @@
 {
+    "life/code/dev-env/xcode.md": {
+        "title": "Xcode",
+        "date": 1753235381.0
+    },
+    "life/dev/app-store.md": {
+        "title": "App Store",
+        "date": 1750640666.0
+    },
+    "life/policy/cs.md": {
+        "title": "Privacy Policy",
+        "date": 1753235381.0
+    },
     "life/code/dev-env/vscode.md": {
         "title": "VS Code",
         "date": 1721963864.0
@@ -214,10 +226,6 @@
     "life/code/os/windows/tips.md": {
         "title": "使用提示",
         "date": 1722099577.0
-    },
-    "life/dev/app-store.md": {
-        "title": "App Store",
-        "date": 1750640666.0
     },
     "life/code/os/linux/sys_base_info.md": {
         "title": "查看Linux的基本信息",
