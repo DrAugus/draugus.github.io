@@ -15,7 +15,7 @@
     "@mdit-vue/shared": "^2.0.0",
     "@vite-pwa/vitepress": "^1.0.0",
     "dayjs": "1.11.13",
-    "echarts": "^5.4.3",
+    "echarts": "^6.0.0",
     "element-plus": "^2.9.6",
     "markdown-it-mathjax3": "^4.3.2",
     "sass": "^1.70.0",
