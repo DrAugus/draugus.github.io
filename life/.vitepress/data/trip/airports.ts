@@ -391,6 +391,15 @@ export const AIRPORTS: Airport[] = [
         region: '日本',
         longitude: 135.244167,
         latitude: 34.4347222
+    },  {
+        code: 'NGO',
+        name: 'Chubu Centrair International Airport',
+        nameLocal: '中部国際空港',
+        abbrZH: '名古屋中部',
+        city: '常滑',
+        region: '日本',
+        longitude: 136.924444,
+        latitude: 35.255
     }, {
         code: 'YIW',
         name: 'Yiwu Airport',

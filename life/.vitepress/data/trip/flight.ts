@@ -1936,5 +1936,59 @@ export const FLIGHT_DATA: Flight[] = [
             airportConstructionFee: 50,
             fuelSurcharge: 10,
         }
+    }, {
+        date: new Date('2025-07-28'),
+        number: 'MF8701',
+        airplane: {
+            model: '波音737-85C(WL)',
+            number: 'B5750'
+        },
+        airlineCode: 'MF',
+        seatClass: 'G',
+        distance: 1618,
+        departure: {
+            plannedTime: new Date('2025-07-28T16:50:00+08:00'),
+            actualTime: new Date('2025-07-28T17:02:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 4,
+        },
+        arrival: {
+            plannedTime: new Date('2025-07-28T21:00:00+09:00'),
+            actualTime: new Date('2025-07-28T20:22:00+09:00'),
+            airport: "名古屋中部",
+            terminal: 1,
+        },
+        price: {
+            ticketPrice: 290,
+            airportConstructionFee: 148,
+            fuelSurcharge: 329,
+        }
+    }, {
+        date: new Date('2025-08-01'),
+        number: 'MF8702',
+        airplane: {
+            model: '波音737-85C(WL)',
+            number: 'B5688'
+        },
+        airlineCode: 'MF',
+        seatClass: 'Z',
+        distance: 1617,
+        departure: {
+            plannedTime: new Date('2025-08-01T22:00:00+09:00'),
+            actualTime: new Date('2025-08-01T22:18:00+09:00'),
+            airport: "名古屋中部",
+            terminal: 1,
+        },
+        arrival: {
+            plannedTime: new Date('2025-08-01T23:40:00+08:00'),
+            actualTime: new Date('2025-08-01T23:41:00+08:00'),
+            airport: "杭州萧山",
+            terminal: 4,
+        },
+        price: {
+            ticketPrice: 290,
+            airportConstructionFee: 148,
+            fuelSurcharge: 329,
+        }
     },
 ];
