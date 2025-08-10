@@ -2,6 +2,12 @@
     "title": "",
     "items": [
         {
+            "title": "日本 ",
+            "desc": "日本import CityLink from '../../.vitepress/componen",
+            "link": "/trip/travelogue/20250728",
+            "date": "2025-08-04"
+        },
+        {
             "title": "Xcode",
             "desc": "Xcode hot keys control + shift + I: format file d",
             "link": "/code/dev-env/xcode",
@@ -114,12 +120,6 @@
             "desc": "香港 旅游局 香港旅游事务署推荐 地方推荐 - 香港艺术馆 - 香港太空馆 - 星光大道 - 九龙",
             "link": "/trip/china/hongkong",
             "date": "2024-06-14"
-        },
-        {
-            "title": "湖北",
-            "desc": "湖北 武汉 details 攻略 by gpt 1. 东湖风景区：东湖是武汉市中心区内最大的内陆湖",
-            "link": "/trip/china/hubei/index",
-            "date": "2024-05-28"
         }
     ]
 }
