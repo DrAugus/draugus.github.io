@@ -12,7 +12,7 @@ importers:
     devDependencies:
       '@mdit-vue/shared':
         specifier: ^3.0.0
-        version: 3.0.0
+        version: 3.0.2
       '@types/leaflet':
         specifier: 1.9.20
         version: 1.9.20
@@ -57,7 +57,7 @@ importers:
         version: 1.7.4(vue@3.5.18)
       '@mdit-vue/shared':
         specifier: ^3.0.0
-        version: 3.0.0
+        version: 3.0.2
       '@vite-pwa/vitepress':
         specifier: ^1.0.0
         version: 1.0.0(vite-plugin-pwa@1.0.2(vite@7.1.2(sass@1.90.0)(terser@5.43.1))(workbox-build@7.3.0)(workbox-window@7.3.0))
@@ -1071,12 +1071,12 @@ packages:
   '@kjgl77/datav-vue3@1.7.4':
     resolution: {integrity: sha512-zYVTVKkklUxwtiNKS1qPBilm4rTW+WItfp0zVpaRAI8wgXkLSPbDR9xPq2+UcU/Jft7/DVdMfBp709E2ResuPQ==}
 
-  '@mdit-vue/shared@3.0.0':
-    resolution: {integrity: sha512-3GPwO4wBk4lR4BSDjjJk54OtuGoGeCK8iqLH+8wPiz5684oeZrBsrvNTjBhNGBoaPMjXNk/Y+zAI4K3GLytrUg==}
+  '@mdit-vue/shared@3.0.2':
+    resolution: {integrity: sha512-anFGls154h0iVzUt5O43EaqYvPwzfUxQ34QpNQsUQML7pbEJMhcgkRNvYw9hZBspab+/TP45agdPw5joh6/BBA==}
     engines: {node: '>=20.0.0'}
 
-  '@mdit-vue/types@3.0.0':
-    resolution: {integrity: sha512-9j5fpTpMdyD9swZwbJZJHPyAS58WzTYpIUUFYzfBJViDL6drQTj7jnMbfGPtApSoKrsV5VJ4ClVctJnm+0TpkQ==}
+  '@mdit-vue/types@3.0.2':
+    resolution: {integrity: sha512-00aAZ0F0NLik6I6Yba2emGbHLxv+QYrPH00qQ5dFKXlAo1Ll2RHDXwY7nN2WAfrx2pP+WrvSRFTGFCNGdzBDHw==}
     engines: {node: '>=20.0.0'}
 
   '@parcel/watcher-android-arm64@2.5.1':
@@ -3992,13 +3992,13 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@mdit-vue/shared@3.0.0':
+  '@mdit-vue/shared@3.0.2':
     dependencies:
-      '@mdit-vue/types': 3.0.0
+      '@mdit-vue/types': 3.0.2
       '@types/markdown-it': 14.1.2
       markdown-it: 14.1.0
 
-  '@mdit-vue/types@3.0.0': {}
+  '@mdit-vue/types@3.0.2': {}
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
