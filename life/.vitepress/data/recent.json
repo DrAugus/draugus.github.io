@@ -2,6 +2,18 @@
     "title": "",
     "items": [
         {
+            "title": "日用价格参考",
+            "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
+            "link": "/daily/goods-price",
+            "date": "2024-05-23"
+        },
+        {
+            "title": "Privacy Policy",
+            "desc": "Privacy Policy Last updated: June 24, 2025 This P",
+            "link": "/policy/augus",
+            "date": "2025-08-12"
+        },
+        {
             "title": "日本 ",
             "desc": "日本import CityLink from '../../.vitepress/componen",
             "link": "/trip/travelogue/20250728",
@@ -108,18 +120,6 @@
             "desc": "贵州 贵阳 推荐 - 花果园湿地公园 - 黔灵山公园 - 南明河畔的甲秀楼 - 黄果树瀑布（其实也",
             "link": "/trip/china/guizhou/index",
             "date": "2024-05-27"
-        },
-        {
-            "title": "海南",
-            "desc": "海南 海口 推荐 - 海南省博物馆 - 骑楼老街 - 钟楼 - 人民公园 - 观海台 - 假日海滩",
-            "link": "/trip/china/hainan/index",
-            "date": "2024-05-27"
-        },
-        {
-            "title": "香港",
-            "desc": "香港 旅游局 香港旅游事务署推荐 地方推荐 - 香港艺术馆 - 香港太空馆 - 星光大道 - 九龙",
-            "link": "/trip/china/hongkong",
-            "date": "2024-06-14"
         }
     ]
 }
