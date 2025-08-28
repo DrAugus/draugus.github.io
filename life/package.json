@@ -14,7 +14,7 @@
     "@kjgl77/datav-vue3": "^1.7.4",
     "@mdit-vue/shared": "^3.0.0",
     "@vite-pwa/vitepress": "^1.0.0",
-    "dayjs": "1.11.14",
+    "dayjs": "1.11.15",
     "echarts": "^6.0.0",
     "element-plus": "^2.9.6",
     "markdown-it-mathjax3": "^4.3.2",
