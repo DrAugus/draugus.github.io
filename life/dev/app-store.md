@@ -1,5 +1,16 @@
 # App Store
 
+## QA
+
+### 操作失败，未能打开文件，因为你没有查看它的权限
+
+```swift
+// 确保我们可以访问文件
+guard url.startAccessingSecurityScopedResource() else {
+    return
+}
+```
+
 ## 苹果开发账户
 
 下载 Developer App 注册，年费 **$99**。等待注册成功邮件，如下：

@@ -312,6 +312,7 @@ export interface AppleSubscribe {
   name: string,
   price: number,
   start: Date,
+  duration?: 'monthly' | 'yearly',
   end?: Date,
   info?: string,
 }

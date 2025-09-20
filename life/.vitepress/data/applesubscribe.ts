@@ -30,5 +30,10 @@ export const APPLE_SUBSCRIBE: AppleSubscribe[] = [
         name: "iCloud 2T",
         price: 68,
         start: new Date('2021/08/17'),
+    }, {
+        name: "Apple Developer Program",
+        price: 688,
+        duration: 'yearly',
+        start: new Date('2025/06/19'),
     },
 ]

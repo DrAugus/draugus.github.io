@@ -140,10 +140,17 @@ onMounted(async () => {
     sortByDate();
 })
 
-function calSubscribeTotal(appleSubs: AppleSubscribe) {
-    let durMonth = appleSubs.end ? durationMonth(appleSubs.start, appleSubs.end) : monthsFromX2Today(appleSubs.start);
+function calSubscribeTotal(appleSub: AppleSubscribe) {
+    if (appleSub.duration && appleSub.duration === 'yearly') {
+        // 按年计算
+        const durMonth = appleSub.end ? durationMonth(appleSub.start, appleSub.end) : monthsFromX2Today(appleSub.start);
+        const years = Math.ceil(durMonth / 12);
+        return years * appleSub.price;
+    }
+    // 默认计算月循环
+    let durMonth = appleSub.end ? durationMonth(appleSub.start, appleSub.end) : monthsFromX2Today(appleSub.start);
     // console.log(durMonth);
-    return durMonth * appleSubs.price;
+    return durMonth * appleSub.price;
 }
 
 function modifiedSubscribe(appleSubs: AppleSubscribe) {

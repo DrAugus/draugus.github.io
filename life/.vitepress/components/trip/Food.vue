@@ -8,7 +8,7 @@
     </div>
     <ul>
         <li v-for="(v, i) in sortedFoods">
-            <span v-if="v.closed">
+            <span v-if="v.closed" class="closed">
                 <del> {{ v.name }}</del> (已倒闭)
             </span>
             <span v-else> {{ v.name }}</span>
@@ -83,3 +83,9 @@ const filterTag = (tag?: string) => {
     });
 }
 </script>
+
+<style scoped>
+.closed {
+    color: gray;
+}
+</style>

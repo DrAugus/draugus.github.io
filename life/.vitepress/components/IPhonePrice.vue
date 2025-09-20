@@ -23,7 +23,7 @@
         <el-table-column prop="model" sortable label="iPhone 型号" width="120" fixed show-overflow-tooltip
             :tooltip-formatter="({ row }) => `iPhone ${row.model}`" />
         <el-table-column prop="year" sortable label="年份" show-overflow-tooltip width="80" />
-        <el-table-column v-for="(v, i) in capacityName" :key="i" :prop="v" :label="v" sortable show-overflow-tooltip />
+        <el-table-column v-for="(v, i) in capacityName" :key="i" :prop="v" :label="v" sortable />
     </el-table>
 
     <details class="details custom-block">
@@ -43,7 +43,7 @@ import TitleFormat from './TitleFormat.vue';
 import iPhoneObj from '../data/iPhone.json';
 import { ColorScheme, getColorScheme, isStringNumeric, modifyDate } from "../utils";
 
-const iPhoneCapacity = iPhoneObj.capacity;
+const iPhoneCapacity = iPhoneObj.capacity.reverse();
 const year = iPhoneObj.year;
 
 let iPhoneModel: string[] = [];
@@ -77,10 +77,10 @@ const getCapacityName = (num: number) => {
     const exponent = Math.log2(num) + 1;
     let unitIndex = Math.floor(exponent / 10);
 
-
     let result = 2 ** num;
-    if (result === 1024) {
-        result = 1;
+    let gbMulti = result / 1024;
+    if (result % 1024 === 0) {
+        result = gbMulti;
         unitIndex++;
     }
     const unit = powers[unitIndex];
@@ -348,6 +348,7 @@ function hasCapacity(arr) {
     });
 
     uniqueKeys.push(...keysSet);
+    uniqueKeys.sort((a, b) => b - a);
     return uniqueKeys;
 }
 
@@ -375,8 +376,9 @@ const filterModel = (model: string) => {
     capacity.value = indexCapacity;
     iPhonePriceRef.value = filterPrice;
     iPhoneModelRef.value = extractedValues(iPhoneModel, indexModels);
-    // console.log("iPhoneModelRef", iPhoneModelRef);
-    // console.log("iPhonePriceRef", iPhonePriceRef);
+    // console.log("capacity", capacity.value);
+    // console.log("iPhoneModelRef", iPhoneModelRef.value);
+    // console.log("iPhonePriceRef", iPhonePriceRef.value);
 
     const result = {};
     for (const key in iPhonePriceByModel) {
