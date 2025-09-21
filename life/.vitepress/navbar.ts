@@ -4,7 +4,7 @@ export const navbar = [
   { text: '游戏', link: 'https://draugus.github.io/' },
   // { text: '最近更新', link: '/recent' },
   {
-    text: '旅行',
+    text: '🛫旅行',
     items: [
       { text: '介绍', link: '/trip/' },
       {
@@ -21,7 +21,7 @@ export const navbar = [
     activeMatch: '^/trip',
   },
   {
-    text: '日常', items: [
+    text: '📦日常', items: [
       { text: '介绍', link: '/daily/' },
       {
         text: '',
@@ -33,9 +33,9 @@ export const navbar = [
     ], activeMatch: '^/daily'
   },
   // { text: '吃点儿', link: '/eat/', activeMatch: '^/eat' },
-  { text: '课程', link: '/course/', activeMatch: '^/course' },
+  { text: '🧠课程', link: '/course/', activeMatch: '^/course' },
   {
-    text: '编程',
+    text: '💻编程',
     items: [
       {
         text: '工具',
@@ -57,7 +57,7 @@ export const navbar = [
     activeMatch: '^/code',
   },
   {
-    text: '待定',
+    text: '💬思绪',
     items: [
       { text: '散记', link: '/random-notes/', activeMatch: '/random-notes/' },
       { text: '开发', link: '/dev/', activeMatch: '/dev/' },

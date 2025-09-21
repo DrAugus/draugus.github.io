@@ -1,15 +1,21 @@
 :root {
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #f97a7a 30%, #41d1ff);
-    --vp-home-hero-image-background-image: linear-gradient(-45deg, #f97a7ab1 50%, #47eaffb1 50%);
+    /* --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #f97a7a 30%, #41d1ff);
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #f97a7ab1 50%, #47eaffb1 50%); */
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-next));
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-1) 50%, var(--vp-c-brand-next) 50%);
     --vp-home-hero-image-filter: blur(40px);
-    --vp-c-brand: #ff64b9;
+    /* --vp-c-brand: #ff64b9;
     --vp-c-brand-light: #ff74d5;
     --vp-c-brand-lighter: #ff94dd;
     --vp-c-brand-lightest: #ffbce4;
     --vp-c-brand-dark: #f253c2;
     --vp-c-brand-darker: #e1458b;
-    --vp-c-brand-dimm: rgba(100, 108, 255, .08);
+    --vp-c-brand-dimm: rgba(100, 108, 255, .08); */
+
+    --vp-c-brand-lightest: var(--vp-c-brand-1);
+
+    --vp-layout-max-width: 100%;
 }
 
 /* .vp-doc tr {
@@ -24,4 +30,47 @@
 
 .mt-4 {
     margin-top: 1rem;
+}
+
+.content-container,
+.content {
+    max-width: 100% !important;
+}
+
+:root {
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-next));
+}
+
+/* 在 rainbow.scss 中进一步关联品牌色与彩虹变量 */
+:root {
+    --vp-c-brand-1: var(--rainbow-prev);
+    --vp-c-brand-next: var(--rainbow-next);
+    animation: rainbow 40s linear infinite;
+    /* 应用动画 */
+}
+
+/* ===== 目标标题高亮组件自定义颜色 ===== */
+:root {
+    /* 明亮主题下的高亮颜色 - 使用彩虹渐变 */
+    --vp-nolebase-highlight-targeted-heading-color: var(--rainbow-prev);
+    --vp-nolebase-highlight-targeted-heading-bg: color-mix(in srgb, var(--rainbow-prev), transparent 85%);
+}
+
+html.dark {
+    /* 暗色主题下的高亮颜色 - 使用彩虹渐变 */
+    --vp-nolebase-highlight-targeted-heading-color: var(--rainbow-next);
+    --vp-nolebase-highlight-targeted-heading-bg: color-mix(in srgb, var(--rainbow-next), transparent 80%);
+}
+
+
+:root {
+    /* --vp-button-brand-border: var(--vp-c-brand-light); */
+    --vp-button-brand-text: var(--vp-c-white);
+    --vp-button-brand-bg: var(--vp-c-brand-1);
+    --vp-button-brand-hover-border: var(--vp-c-brand-light);
+    --vp-button-brand-hover-text: var(--vp-c-white);
+    --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+    --vp-button-brand-active-border: var(--vp-c-brand-light);
+    --vp-button-brand-active-text: var(--vp-c-white);
+    --vp-button-brand-active-bg: var(--vp-button-brand-bg);
 }

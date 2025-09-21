@@ -1,5 +1,6 @@
 ---
-outline: [2, 4]
+aside: false
+outline: false
 ---
 
 # 规划指南

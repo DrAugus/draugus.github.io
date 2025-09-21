@@ -1,3 +1,8 @@
+---
+aside: false
+outline: false
+---
+
 # 出门检查
 
 旅程啊旅程

@@ -1,3 +1,8 @@
+---
+aside: false
+outline: false
+---
+
 # 高铁票价
 
 杭州始发
