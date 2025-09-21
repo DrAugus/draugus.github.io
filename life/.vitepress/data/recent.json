@@ -2,6 +2,48 @@
     "title": "",
     "items": [
         {
+            "title": "出门检查",
+            "desc": "出门检查 旅程啊旅程 出行需要带的东西，夏季篇 - 短裤一周内一条即可；短袖，袜子，内裤都是游玩天",
+            "link": "/trip/check",
+            "date": "2025-09-20"
+        },
+        {
+            "title": "高铁票价",
+            "desc": "高铁票价 杭州始发 终点站时长区间票价区间最早最晚 :::::---: 义乌27m-49m33.5",
+            "link": "/trip/high-speed-rail-fare",
+            "date": "2025-09-20"
+        },
+        {
+            "title": "酒店",
+            "desc": "酒店",
+            "link": "/trip/hotel",
+            "date": "2025-09-20"
+        },
+        {
+            "title": "规划指南",
+            "desc": "规划指南 两岸青山相对出 孤帆一片日边来 走过(探索)，看过，记过(游记)。未来就在前方(去哪儿呢",
+            "link": "/trip/index",
+            "date": "2024-05-27"
+        },
+        {
+            "title": "公共交通",
+            "desc": "公共交通",
+            "link": "/trip/public-transport",
+            "date": "2025-04-24"
+        },
+        {
+            "title": "App Store",
+            "desc": "App Store QA 操作失败，未能打开文件，因为你没有查看它的权限 苹果开发账户 下载 De",
+            "link": "/dev/app-store",
+            "date": "2025-06-23"
+        },
+        {
+            "title": "韩国",
+            "desc": "韩国 旅游局 韩国旅游发展局 签证 推荐5年/10年签证（单次签证价格差不多，建议一步到位） 推荐",
+            "link": "/trip/abroad/asia/korean",
+            "date": "2024-06-14"
+        },
+        {
             "title": "日用价格参考",
             "desc": "日用价格参考 店家诡计多端 一定要看清楚商品规格，多少箱，多少盒，最小单位多少克多少毫升，看清楚了",
             "link": "/daily/goods-price",
@@ -24,12 +66,6 @@
             "desc": "Xcode hot keys control + shift + I: format file d",
             "link": "/code/dev-env/xcode",
             "date": "2025-07-23"
-        },
-        {
-            "title": "App Store",
-            "desc": "App Store 苹果开发账户 下载 Developer App 注册，年费 $99。等待注册成",
-            "link": "/dev/app-store",
-            "date": "2025-06-23"
         },
         {
             "title": "Privacy Policy",
@@ -84,42 +120,6 @@
             "desc": "梅州河源 import CityLink from '../../.vitepress/compo",
             "link": "/trip/travelogue/20250620",
             "date": "2025-07-01"
-        },
-        {
-            "title": "金华衢州南昌",
-            "desc": "金华衢州南昌 import CityLink from '../../.vitepress/com",
-            "link": "/trip/travelogue/20250711",
-            "date": "2025-07-17"
-        },
-        {
-            "title": "日本的行政区划",
-            "desc": "日本的行政区划 日本的行政区划划分清晰，主要可以分为两级。 1. 一级行政区划： - 都（と）：全",
-            "link": "/random-notes/divisions-jp",
-            "date": "2024-06-21"
-        },
-        {
-            "title": "河南",
-            "desc": "河南 开封 - 清明上河图实景公园：大相国寺 - 开封夜市 - 夜游大宋御河 - 龙庭公园 - 开",
-            "link": "/trip/china/henan/index",
-            "date": "2025-07-14"
-        },
-        {
-            "title": "重庆",
-            "desc": "重庆 游玩 - 重庆大足石刻景区， - 重庆巫山小三峡—小小三峡， - 武隆喀斯特旅游区（天生三桥",
-            "link": "/trip/china/chongqing",
-            "date": "2025-07-14"
-        },
-        {
-            "title": "广西",
-            "desc": "广西 南宁 柳州 晚上窑埠古镇，五星街，柳江喷泉（晚上8点or9点有） 白天鱼峰山公园，龙潭公园，",
-            "link": "/trip/china/guangxi/index",
-            "date": "2024-05-28"
-        },
-        {
-            "title": "贵州",
-            "desc": "贵州 贵阳 推荐 - 花果园湿地公园 - 黔灵山公园 - 南明河畔的甲秀楼 - 黄果树瀑布（其实也",
-            "link": "/trip/china/guizhou/index",
-            "date": "2024-05-27"
         }
     ]
 }
