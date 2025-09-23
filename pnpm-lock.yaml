@@ -18,7 +18,7 @@ importers:
         version: 1.9.20
       '@vite-pwa/vitepress':
         specifier: ^1.0.0
-        version: 1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
+        version: 1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
       '@vue-leaflet/vue-leaflet':
         specifier: 0.10.1
         version: 0.10.1(@types/leaflet@1.9.20)(leaflet@1.9.4)
@@ -30,19 +30,19 @@ importers:
         version: 1.9.4
       sass:
         specifier: ^1.70.0
-        version: 1.93.0
+        version: 1.93.1
       typed.js:
         specifier: 2.1.0
         version: 2.1.0
       vite:
         specifier: ^7.0.0
-        version: 7.1.7(sass@1.93.0)(terser@5.44.0)
+        version: 7.1.7(sass@1.93.1)(terser@5.44.0)
       vite-plugin-pwa:
         specifier: ^1.0.0
-        version: 1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vitepress:
         specifier: ^1.6.3
-        version: 1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.0)(search-insights@2.17.3)(terser@5.44.0)
+        version: 1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.1)(search-insights@2.17.3)(terser@5.44.0)
       vue:
         specifier: ^3.4.15
         version: 3.5.21
@@ -60,7 +60,7 @@ importers:
         version: 3.0.2
       '@vite-pwa/vitepress':
         specifier: ^1.0.0
-        version: 1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
+        version: 1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
       dayjs:
         specifier: 1.11.18
         version: 1.11.18
@@ -75,7 +75,7 @@ importers:
         version: 4.3.2
       sass:
         specifier: ^1.70.0
-        version: 1.93.0
+        version: 1.93.1
       typed.js:
         specifier: 2.1.0
         version: 2.1.0
@@ -84,13 +84,13 @@ importers:
         version: 0.10.0
       vite:
         specifier: ^7.0.0
-        version: 7.1.7(sass@1.93.0)(terser@5.44.0)
+        version: 7.1.7(sass@1.93.1)(terser@5.44.0)
       vite-plugin-pwa:
         specifier: ^1.0.0
-        version: 1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+        version: 1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
       vitepress:
         specifier: 1.6.4
-        version: 1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.0)(search-insights@2.17.3)(terser@5.44.0)
+        version: 1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.1)(search-insights@2.17.3)(terser@5.44.0)
       vue:
         specifier: ^3.4.21
         version: 3.5.21
@@ -102,7 +102,7 @@ importers:
     devDependencies:
       vitepress:
         specifier: ^1.0.0-rc.39
-        version: 1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.0)(search-insights@2.17.3)(terser@5.44.0)
+        version: 1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.1)(search-insights@2.17.3)(terser@5.44.0)
       vue:
         specifier: ^3.4.15
         version: 3.5.21
@@ -2139,11 +2139,6 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  jsesc@3.0.2:
-    resolution: {integrity: sha512-xKqzzWXDttJuOcawBt4KnKHHIf5oQ/Cxax+0PWFG+DFDgHNAdi+TXECADI+RYiFUMmx8792xsMbbgXj4CwnP4g==}
-    engines: {node: '>=6'}
-    hasBin: true
-
   jsesc@3.1.0:
     resolution: {integrity: sha512-/sM3dO2FOzXjKQhJuo0Q173wf2KOo8t4I8vHy6lF9poUp7bKT0/NHE8fPX23PwfhnykfqnC2xRxOnVw5XuGIaA==}
     engines: {node: '>=6'}
@@ -2424,15 +2419,15 @@ packages:
     resolution: {integrity: sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==}
     engines: {node: '>= 0.4'}
 
-  regexpu-core@6.3.1:
-    resolution: {integrity: sha512-DzcswPr252wEr7Qz8AyAVbfyBDKLoYp6eRA1We2Fa9qirRFSdtkP5sHr3yglDKy2BbA0fd2T+j/CUSKes3FeVQ==}
+  regexpu-core@6.4.0:
+    resolution: {integrity: sha512-0ghuzq67LI9bLXpOX/ISfve/Mq33a4aFRzoQYhnnok1JOFpmE/A2TBGkNVenOGEeSBCjIiWcc6MVOG5HEQv0sA==}
     engines: {node: '>=4'}
 
   regjsgen@0.8.0:
     resolution: {integrity: sha512-RvwtGe3d7LvWiDQXeQw8p5asZUmfU1G/l6WbUXeHta7Y2PEIvBTwH6E2EfmYUK8pxcxEdEmaomqyp0vZZ7C+3Q==}
 
-  regjsparser@0.12.0:
-    resolution: {integrity: sha512-cnE+y8bz4NhMjISKbgeVJtqNbtf5QpjZP+Bslo+UqkIt9QPnX9q095eiRRASJG1/tz6dlNr6Z5NsBiWYokp6EQ==}
+  regjsparser@0.13.0:
+    resolution: {integrity: sha512-NZQZdC5wOE/H3UT28fVGL+ikOZcEzfMGk/c3iN9UGxzWHMa1op7274oyiUVrAG4B2EuFhus8SvkaYnhvW92p9Q==}
     hasBin: true
 
   require-from-string@2.0.2:
@@ -2475,8 +2470,8 @@ packages:
     resolution: {integrity: sha512-x/+Cz4YrimQxQccJf5mKEbIa1NzeCRNI5Ecl/ekmlYaampdNLPalVyIcCZNNH3MvmqBugV5TMYZXv0ljslUlaw==}
     engines: {node: '>= 0.4'}
 
-  sass@1.93.0:
-    resolution: {integrity: sha512-CQi5/AzCwiubU3dSqRDJ93RfOfg/hhpW1l6wCIvolmehfwgCI35R/0QDs1+R+Ygrl8jFawwwIojE2w47/mf94A==}
+  sass@1.93.1:
+    resolution: {integrity: sha512-wLAeLB7IksO2u+cCfhHqcy7/2ZUMPp/X2oV6+LjmweTqgjhOKrkaE/Q1wljxtco5EcOcupZ4c981X0gpk5Tiag==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3162,7 +3157,7 @@ snapshots:
     dependencies:
       '@babel/core': 7.28.4
       '@babel/helper-annotate-as-pure': 7.27.3
-      regexpu-core: 6.3.1
+      regexpu-core: 6.4.0
       semver: 6.3.1
 
   '@babel/helper-define-polyfill-provider@0.6.5(@babel/core@7.28.4)':
@@ -4280,13 +4275,13 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vite-pwa/vitepress@1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))':
+  '@vite-pwa/vitepress@1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))':
     dependencies:
-      vite-plugin-pwa: 1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
+      vite-plugin-pwa: 1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
 
-  '@vitejs/plugin-vue@5.2.4(vite@5.4.20(sass@1.93.0)(terser@5.44.0))(vue@3.5.21)':
+  '@vitejs/plugin-vue@5.2.4(vite@5.4.20(sass@1.93.1)(terser@5.44.0))(vue@3.5.21)':
     dependencies:
-      vite: 5.4.20(sass@1.93.0)(terser@5.44.0)
+      vite: 5.4.20(sass@1.93.1)(terser@5.44.0)
       vue: 3.5.21
 
   '@vue-leaflet/vue-leaflet@0.10.1(@types/leaflet@1.9.20)(leaflet@1.9.4)':
@@ -5197,8 +5192,6 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  jsesc@3.0.2: {}
-
   jsesc@3.1.0: {}
 
   json-schema-traverse@1.0.0: {}
@@ -5475,20 +5468,20 @@ snapshots:
       gopd: 1.2.0
       set-function-name: 2.0.2
 
-  regexpu-core@6.3.1:
+  regexpu-core@6.4.0:
     dependencies:
       regenerate: 1.4.2
       regenerate-unicode-properties: 10.2.2
       regjsgen: 0.8.0
-      regjsparser: 0.12.0
+      regjsparser: 0.13.0
       unicode-match-property-ecmascript: 2.0.0
       unicode-match-property-value-ecmascript: 2.2.1
 
   regjsgen@0.8.0: {}
 
-  regjsparser@0.12.0:
+  regjsparser@0.13.0:
     dependencies:
-      jsesc: 3.0.2
+      jsesc: 3.1.0
 
   require-from-string@2.0.2: {}
 
@@ -5555,7 +5548,7 @@ snapshots:
       es-errors: 1.3.0
       is-regex: 1.2.1
 
-  sass@1.93.0:
+  sass@1.93.1:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.3
@@ -5889,28 +5882,28 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.0)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
+  vite-plugin-pwa@1.0.3(vite@7.1.7(sass@1.93.1)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0):
     dependencies:
       debug: 4.4.3
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.15
-      vite: 7.1.7(sass@1.93.0)(terser@5.44.0)
+      vite: 7.1.7(sass@1.93.1)(terser@5.44.0)
       workbox-build: 7.3.0
       workbox-window: 7.3.0
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.20(sass@1.93.0)(terser@5.44.0):
+  vite@5.4.20(sass@1.93.1)(terser@5.44.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.6
       rollup: 4.52.0
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.93.0
+      sass: 1.93.1
       terser: 5.44.0
 
-  vite@7.1.7(sass@1.93.0)(terser@5.44.0):
+  vite@7.1.7(sass@1.93.1)(terser@5.44.0):
     dependencies:
       esbuild: 0.25.10
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5920,10 +5913,10 @@ snapshots:
       tinyglobby: 0.2.15
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.93.0
+      sass: 1.93.1
       terser: 5.44.0
 
-  vitepress@1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.0)(search-insights@2.17.3)(terser@5.44.0):
+  vitepress@1.6.4(@algolia/client-search@5.37.0)(async-validator@4.2.5)(markdown-it-mathjax3@4.3.2)(postcss@8.5.6)(sass@1.93.1)(search-insights@2.17.3)(terser@5.44.0):
     dependencies:
       '@docsearch/css': 3.8.2
       '@docsearch/js': 3.8.2(@algolia/client-search@5.37.0)(search-insights@2.17.3)
@@ -5932,7 +5925,7 @@ snapshots:
       '@shikijs/transformers': 2.5.0
       '@shikijs/types': 2.5.0
       '@types/markdown-it': 14.1.2
-      '@vitejs/plugin-vue': 5.2.4(vite@5.4.20(sass@1.93.0)(terser@5.44.0))(vue@3.5.21)
+      '@vitejs/plugin-vue': 5.2.4(vite@5.4.20(sass@1.93.1)(terser@5.44.0))(vue@3.5.21)
       '@vue/devtools-api': 7.7.7
       '@vue/shared': 3.5.21
       '@vueuse/core': 12.8.2
@@ -5941,7 +5934,7 @@ snapshots:
       mark.js: 8.11.1
       minisearch: 7.2.0
       shiki: 2.5.0
-      vite: 5.4.20(sass@1.93.0)(terser@5.44.0)
+      vite: 5.4.20(sass@1.93.1)(terser@5.44.0)
       vue: 3.5.21
     optionalDependencies:
       markdown-it-mathjax3: 4.3.2
