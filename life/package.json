@@ -17,7 +17,7 @@
     "dayjs": "1.11.18",
     "echarts": "^6.0.0",
     "element-plus": "^2.9.6",
-    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-mathjax3": "^5.0.0",
     "sass": "^1.70.0",
     "typed.js": "2.1.0",
     "unplugin-element-plus": "^0.10.0",
