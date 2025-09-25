@@ -38,7 +38,7 @@ jobs:
         working-directory: ./script
     steps:
       - name: Checkout repository content
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         # https://github.com/actions/checkout?tab=readme-ov-file#fetch-all-history-for-all-tags-and-branches
         # Fetch all history for all tags and branches
         # for py script
