@@ -21,9 +21,9 @@ on:
   #     - "!life/*"
   #     - ".github/workflows/life-recent-update.yml"
   #     - "script/requirements.txt"
-  schedule:
-    # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m. Only Sunday
-    - cron: "0 16 * * 0"
+  # schedule:
+  #   # This is run at UTC 16:00 p.m., aka UTC+8 0:00 a.m. Only Sunday
+  #   - cron: "0 16 * * 0"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -84,8 +84,8 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.DEPLOY_GH }}
-          # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008 
-          # head_ref / ref_name  
+          # https://github.com/orgs/community/discussions/150767#discussioncomment-12072008
+          # head_ref / ref_name
           # branch: ${{ github.ref_name }}
 
       # - name: Create Pull Request

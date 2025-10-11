@@ -1,8 +1,10 @@
-# 每个月1号自动部署，以及 master 分支有更新时部署，减小自动部署对主站影响
-name: Deploy life
+# 只在 PR 时部署到 life 不部署到主网站
+
+name: Deploy life Only PR
 
 on:
-  push:
+  pull_request:
+    types: [opened, synchronize]
     branches:
       - master
     paths:
@@ -10,23 +12,12 @@ on:
       - ".github/workflows/deploy-life.yml"
       - "**/package.json"
       - "**/pnpm-lock.yaml"
-  schedule:
-    # This is run at UTC 17:00 p.m., aka UTC+8 1:00 a.m. Only Every Month 1st
-    - cron: "0 17 1 * *"
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+
 permissions:
   contents: write
 jobs:
-  deploy-life:
-    strategy:
-      matrix:
-        os: [ubuntu-latest] # macos-latest, windows-latest
-        deploy-dir: [life/.vitepress/dist]
-        deploy-user: [augusmeow]
-        deploy-repo: [life, augusmeow.github.io]
-
-    runs-on: ${{ matrix.os }}
+  deploy-life-pr:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -51,7 +42,6 @@ jobs:
 
       - name: Change config
         run: mv ./life/.vitepress/config.ts.replace ./life/.vitepress/config.ts
-        if: ${{ matrix.deploy-repo == 'life' }}
 
       # 运行构建脚本
       - name: Build VitePress site
@@ -60,17 +50,12 @@ jobs:
           VITE_AMAP_KEY: ${{ secrets.VITE_AMAP_KEY }}
         run: pnpm life:build
 
-      - name: Add google
-        run: |
-          echo "google-site-verification: googlea936c3462e7f8864.html" >> ./life/.vitepress/dist/googlea936c3462e7f8864.html
-        if: ${{ matrix.deploy-repo == 'augusmeow.github.io' }}
-
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.2.0
         with:
-          repo: ${{ matrix.deploy-user }}/${{ matrix.deploy-repo }}
+          repo: augusmeow/life
           target_branch: gh-pages
-          build_dir: ${{ matrix.deploy-dir }}
+          build_dir: life/.vitepress/dist
           jekyll: false
         env:
           GH_PAT: ${{ secrets.DEPLOY_GH }}
