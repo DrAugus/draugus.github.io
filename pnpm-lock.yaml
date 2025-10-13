@@ -18,7 +18,7 @@ importers:
         version: 1.9.21
       '@vite-pwa/vitepress':
         specifier: ^1.0.0
-        version: 1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
+        version: 1.0.1(vite-plugin-pwa@1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
       '@vue-leaflet/vue-leaflet':
         specifier: 0.10.1
         version: 0.10.1(@types/leaflet@1.9.21)(leaflet@1.9.4)
@@ -60,7 +60,7 @@ importers:
         version: 3.0.2
       '@vite-pwa/vitepress':
         specifier: ^1.0.0
-        version: 1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
+        version: 1.0.1(vite-plugin-pwa@1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))
       dayjs:
         specifier: 1.11.18
         version: 1.11.18
@@ -1452,11 +1452,11 @@ packages:
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
 
-  '@vite-pwa/vitepress@1.0.0':
-    resolution: {integrity: sha512-i5RFah4urA6tZycYlGyBslVx8cVzbZBcARJLDg5rWMfAkRmyLtpRU6usGfVOwyN9kjJ2Bkm+gBHXF1hhr7HptQ==}
+  '@vite-pwa/vitepress@1.0.1':
+    resolution: {integrity: sha512-INBxiNLZpef349KSmQ6zHWB4uqIgZgvJnwzH3bedW/7d/Ej0lK5HP95fiBdIc2wHUtmR3Znnegmt3zLESVWrpA==}
     peerDependencies:
       '@vite-pwa/assets-generator': ^1.0.0
-      vite-plugin-pwa: ^1.0.0
+      vite-plugin-pwa: ^1.1.0
     peerDependenciesMeta:
       '@vite-pwa/assets-generator':
         optional: true
@@ -4217,7 +4217,7 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vite-pwa/vitepress@1.0.0(vite-plugin-pwa@1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))':
+  '@vite-pwa/vitepress@1.0.1(vite-plugin-pwa@1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0))':
     dependencies:
       vite-plugin-pwa: 1.0.3(vite@7.1.9(sass@1.93.2)(terser@5.44.0))(workbox-build@7.3.0)(workbox-window@7.3.0)
 
