@@ -37,13 +37,9 @@ pull_request_rules:
           - files=pnpm-lock.yaml
           # py
           - files~=^script/
-      # deploy life
-      - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-      - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-      - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      # deploy life, only success merge, pr already has been split
+      - check-success=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+      - check-success=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
       # deploy game
       - -check-failure=deploy-game (ubuntu-latest, game/.vitepress/dist, augusmeow, game)
       - -check-neutral=deploy-game (ubuntu-latest, game/.vitepress/dist, augusmeow, game)
@@ -60,20 +56,20 @@ pull_request_rules:
       merge:
         method: merge
 
-  - name: automatic merge for python script latest life
-    conditions:
-      - author=DrAugus
-      - "title=docs: life latest"
-      # deploy life
-      - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-      - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-      - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
-    actions:
-      merge:
-        method: merge
+  # - name: automatic merge for python script latest life
+  #   conditions:
+  #     - author=DrAugus
+  #     - "title=docs: life latest"
+  #     # deploy life
+  #     - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+  #     - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+  #     - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+  #     - -check-failure=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+  #     - -check-neutral=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+  #     - -check-pending=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+  #   actions:
+  #     merge:
+  #       method: merge
 
   # - name: automatic merge for auto get mhy wish
   #   conditions:
