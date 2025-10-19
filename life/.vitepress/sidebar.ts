@@ -247,7 +247,6 @@ const sidebarCodeOS = [
     {
         text: 'MacOS', collapsed: false, items: [
             { text: '使用提示', link: '/code/os/macos/tips' },
-            { text: 'Xcode', link: '/code/os/macos/xcode' },
         ]
     },
     {
@@ -531,6 +530,7 @@ const sidebarCodeML = [
     { text: 'BERT', link: '/code/protocol/bert' }
 ];
 const sidebarDevEnv = [
+    { text: 'VS', link: '/code/dev-env/vs' },
     { text: 'VSCode', link: '/code/dev-env/vscode' },
     { text: 'Xcode', link: '/code/dev-env/xcode' },
     { text: 'JetBrains', link: '/code/dev-env/jetbrains' },

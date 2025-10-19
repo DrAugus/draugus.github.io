@@ -18,25 +18,28 @@
         <el-radio-button value="auto">auto</el-radio-button>
     </el-radio-group>
 
-    <el-table :data="filterPurchasedDataRef" :table-layout="tableLayout" empty-text="-" stripe border
-        style="width: 100%">
-        <el-table-column sortable fixed show-overflow-tooltip width="200" prop="device" label="设备" />
-        <el-table-column sortable label="类型" prop="deviceType">
-            <template #default="scope">
-                <el-tag :type="tagDisplay(scope.row)" disable-transitions>{{ deviceTypeDisplay(scope.row) }}</el-tag>
-            </template>
-        </el-table-column>
-        <el-table-column prop="priceSale" label="官网" />
-        <el-table-column sortable prop="pricePurchase" label="购买价" />
-        <el-table-column label="优惠幅度" :formatter="discount" />
-        <el-table-column show-overflow-tooltip prop="platform" label="购买平台">
-            <template #default="scope">
-                <el-tag :type="platformDisplay(scope.row)" disable-transitions>{{ scope.row.platform }}</el-tag>
-            </template>
-        </el-table-column>
-        <el-table-column sortable :sort-by="row => new Date(row.date).toISOString()" label="购买日期"
-            :formatter="purchaseDateDisplay" />
-    </el-table>
+    <div class="custom-table">
+        <el-table :data="filterPurchasedDataRef" :table-layout="tableLayout" empty-text="-" stripe border
+            style="width: 100%">
+            <el-table-column sortable fixed show-overflow-tooltip width="200" prop="device" label="设备" />
+            <el-table-column sortable label="类型" prop="deviceType">
+                <template #default="scope">
+                    <el-tag :type="tagDisplay(scope.row)" disable-transitions>{{ deviceTypeDisplay(scope.row)
+                        }}</el-tag>
+                </template>
+            </el-table-column>
+            <el-table-column prop="priceSale" label="官网" />
+            <el-table-column sortable prop="pricePurchase" label="购买价" />
+            <el-table-column label="优惠幅度" :formatter="discount" />
+            <el-table-column show-overflow-tooltip prop="platform" label="购买平台">
+                <template #default="scope">
+                    <el-tag :type="platformDisplay(scope.row)" disable-transitions>{{ scope.row.platform }}</el-tag>
+                </template>
+            </el-table-column>
+            <el-table-column sortable :sort-by="row => new Date(row.date).toISOString()" label="购买日期"
+                :formatter="purchaseDateDisplay" />
+        </el-table>
+    </div>
 
 </template>
 
@@ -175,5 +178,10 @@ function allSubscribe() {
     border-collapse: unset;
     margin: unset;
     overflow-x: unset;
+}
+
+.custom-table {
+    /* 重置可能冲突的样式 */
+    overflow: visible !important;
 }
 </style>

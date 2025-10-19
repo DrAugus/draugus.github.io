@@ -239,5 +239,12 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         pricePurchase: 645.88,
         platform: "京东",
         date: new Date('2025/05/29'),
+    }, {
+        device: "iPhone 14 Pro Max 512G 暗紫色 亚洲版",
+        deviceType: "iPhone",
+        priceSale: 11699,
+        pricePurchase: 4518,
+        platform: "转转",
+        date: new Date('2025/10/11'),
     },
 ];

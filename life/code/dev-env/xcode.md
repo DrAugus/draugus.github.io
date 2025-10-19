@@ -1,12 +1,43 @@
----
-icon: simple-icons:xcode
----
-
 # Xcode
+
+## history version
+
+参考
+
+- [macOS 版本对应的 Xcode 版本，以及 Xcode 历史版本下载](https://uovol.com/macos-xcode-version)
+- [Xcode Releases](https://xcodereleases.com)
+- [苹果系统之家](https://macoshome.com/app/developertools/11427.html)
 
 ## hot keys
 
 control + shift + I: format file
+
+代码操作  
+
+| 快捷键             | 功能                 |
+| --------------- | ------------------ |
+| Cmd + B         | 编译项目               |
+| Cmd + R         | 运行项目               |
+| Cmd + .         | 停止运行               |
+| Ctrl + Cmd + ↑  | 切换.h/.m文件          |
+| Cmd + Shift + O | 快速打开（Open Quickly） |
+  
+**调试**  
+
+| 快捷键             | 功能       |
+| --------------- | -------- |
+| Cmd + \\        | 切换断点     |
+| F6              | 步过       |
+| F7              | 步入       |
+| Cmd + Shift + Y | 显示/隐藏调试区 |
+  
+**界面管理**  
+
+| 快捷键             | 功能        |
+| --------------- | --------- |
+| Cmd + 0         | 显示/隐藏导航器  |
+| Cmd + Alt + 0   | 显示/隐藏检查器  |
+| Cmd + Shift + Y | 显示/隐藏调试区域 |
 
 ## download version
 
