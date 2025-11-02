@@ -4,6 +4,8 @@ visual studio
 
 ## 热键
 
+快速定位到指定行数的常用快捷键：Ctrl + G
+
 打开文件快捷键 `Ctrl + ,`  
 Alt + Shift + F 搜索比 Ctrl + Shift + F 更好看  
 

@@ -1,5 +1,25 @@
 # Vitepress
 
+## 本地跑起来
+
+```bash
+#!/bin/bash
+# preview-gh-pages.sh
+
+REPO_URL="https://github.com/username/repo-name.git"
+TEMP_DIR="preview-temp"
+
+echo "正在克隆 gh-pages 分支..."
+git clone -b gh-pages --single-branch $REPO_URL $TEMP_DIR
+
+cd $TEMP_DIR
+
+echo "启动本地服务器在 http://localhost:8080"
+echo "按 Ctrl+C 停止服务器"
+
+python -m http.server 8080
+```
+
 ## 常用的，默认主题组件
 
 ### Frontmatter Config

@@ -10,7 +10,8 @@
 
 ## hot keys
 
-control + shift + I: format file
+control + shift + I: format file  
+cmd + L: 快速定位到指定行数  
 
 代码操作  
 

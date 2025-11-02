@@ -24,7 +24,7 @@ vscode 设置 - followSymlinks - 设置为false， 即可解决！
 ## 低版本操作系统
 
 - 原装 App 版本过低，无法安装；可以去[苹果系统之家](https://macoshome.com)搜索原装 app，低版本操作系统不受支持后，自带软件，诸如 Pages、Numbers 等都无法在 App Store 下载安装。  
-- **Xcode** 可以参考[历史版本](./xcode#history-version)，下载对应操作系统支持的版本。  
+- **Xcode** 可以参考[历史版本](../../dev-env/xcode#history-version)，下载对应操作系统支持的版本。  
 - **VSCode** 可以参考对应 Xcode 的历史版本发布时间，找到最近的 release 时间（vscode [github releases](https://github.com/microsoft/vscode/releases)）。比如 MacOS Catalina，最后发布时间是 2020年9月23日，对应版本  10.15.7，而下一代 Big Sur 首发在 2020年11月12日，版本号对应 11.0.1。找这两个时间最近的即可。在 tags 找到附近日期的 tag 版本，如在 [1.54.1](https://github.com/microsoft/vscode/tags?after=1.54.1) 附近，就是`tags?after=1.54.1`，可以看到 `1.51.1` 版本是最近的，`on Nov 11, 2020`。
 
 ## 快捷键

@@ -77,7 +77,7 @@ brew install zsh-syntax-highlighting
 echo "source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 ```
 
-xcode [history version](../code/os/macos/xcode#history-version)
+xcode [history version](../code/dev-env/xcode#history-version)
 
 ## Windows
 

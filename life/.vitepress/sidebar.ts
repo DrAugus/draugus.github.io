@@ -557,13 +557,16 @@ const sidebarRandomNotes = [
     { text: '什么是 xx', link: '/random-notes/what-is' },
     { text: '一言', link: '/random-notes/one-word' },
     { text: '散篇', link: '/random-notes/temp2' },
+    { text: '五年规划', link: '/random-notes/the-five-year-plan' },
     { text: '电网', link: '/random-notes/state-grid' },
     { text: '锻炼', link: '/random-notes/exercise' },
     { text: '梅桃樱', link: '/random-notes/flower' },
     { text: '学位服', link: '/random-notes/academic-dress' },
     { text: '中国有14亿人 而我还是单身', link: '/random-notes/bachelor' },
     { text: '身份证', link: '/random-notes/id-card' },
+    { text: '七曜日', link: '/random-notes/the-7-luminaries' },
     { text: '日本行政区划', link: '/random-notes/divisions-jp' },
+    { text: '日韩废汉字', link: '/random-notes/jp-kr-abolish-cn-chars' },
     { text: '中国面', link: '/random-notes/chinese-noodles' },
 ];
 const sidebarCareer = [
