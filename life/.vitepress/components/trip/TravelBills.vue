@@ -33,38 +33,41 @@
             <div :class="getBadge(vv.sum / infoSum[i] * 100, 1)" class="custom-block"
                 :style="{ backgroundColor: getBlockBgColor(ii) }">
 
-                <span class="italic">{{ modifyDate(vv.start) + ' ~ ' + modifyDate(vv.end) }}</span><br />
+                <p class="custom-block-title">
+                    <span class="italic">{{ modifyDate(vv.start) + ' ~ ' + modifyDate(vv.end) }}</span><br />
+                </p>
+                <p>
+                    <span v-if="vv.city">
+                        <b>城市：{{ vv.city }}</b>
+                        <br />
+                    </span>
 
-                <span v-if="vv.city">
-                    <b>城市：{{ vv.city }}</b>
+                    <span><b>总计{{ ' ￥' + vv.sum }}</b>
+                        <Badge :text="(vv.sum / infoSum[i] * 100).toFixed(2) + '%'"
+                            :type="getBadge(vv.sum / infoSum[i] * 100, 1)">
+                        </Badge>
+                    </span>
                     <br />
-                </span>
+                    <span v-if="vv.intro.tips">
+                        <b>温馨提示：</b><span v-html="vv.intro.tips"></span> <br />
+                    </span>
 
-                <span><b>总计{{ ' ￥' + vv.sum }}</b>
-                    <Badge :text="(vv.sum / infoSum[i] * 100).toFixed(2) + '%'"
-                        :type="getBadge(vv.sum / infoSum[i] * 100, 1)">
-                    </Badge>
-                </span>
-                <br />
-                <span v-if="vv.intro.tips">
-                    <b>温馨提示：</b><span v-html="vv.intro.tips"></span> <br />
-                </span>
-
-                <span v-if="vv.intro.hotels">
-                    <b>酒店：</b><span v-html="vv.intro.hotels"></span> <br />
-                </span>
-                <span v-if="vv.intro.transportation">
-                    <b>出行：</b><span v-html="vv.intro.transportation"></span> <br />
-                </span>
-                <span v-if="vv.intro.dining">
-                    <b>吃喝：</b><span v-html="vv.intro.dining"></span> <br />
-                </span>
-                <span v-if="vv.intro.entertainment">
-                    <b>玩乐：</b><span v-html="vv.intro.entertainment"></span> <br />
-                </span>
-                <span v-if="vv.intro.others">
-                    <b>其他：</b><span v-html="vv.intro.others"></span> <br />
-                </span>
+                    <span v-if="vv.intro.hotels">
+                        <b>酒店：</b><span v-html="vv.intro.hotels"></span> <br />
+                    </span>
+                    <span v-if="vv.intro.transportation">
+                        <b>出行：</b><span v-html="vv.intro.transportation"></span> <br />
+                    </span>
+                    <span v-if="vv.intro.dining">
+                        <b>吃喝：</b><span v-html="vv.intro.dining"></span> <br />
+                    </span>
+                    <span v-if="vv.intro.entertainment">
+                        <b>玩乐：</b><span v-html="vv.intro.entertainment"></span> <br />
+                    </span>
+                    <span v-if="vv.intro.others">
+                        <b>其他：</b><span v-html="vv.intro.others"></span> <br />
+                    </span>
+                </p>
             </div>
         </div>
 

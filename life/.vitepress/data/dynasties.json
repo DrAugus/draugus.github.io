@@ -1,0 +1,640 @@
+{
+    "metadata": {
+        "title": "中國歷代紀年表",
+        "version": "1.0",
+        "description": "中國歷代朝代時間跨度記錄",
+        "last_updated": "2024-01-01",
+        "data_source": "https://dict.revised.moe.edu.tw/appendix.jsp?ver=0&ID=1"
+    },
+    "dynasties": [
+        {
+            "dynasty_id": "shanggu",
+            "era": "上古",
+            "dynasty_name": "黃帝軒轅氏",
+            "start_year": -2697,
+            "end_year": -2599,
+            "duration": 98,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "shanggu_shaohao",
+            "era": "上古",
+            "dynasty_name": "少昊金天氏",
+            "start_year": -2598,
+            "end_year": -2515,
+            "duration": 83,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "shanggu_zhuanxu",
+            "era": "上古",
+            "dynasty_name": "顓頊高陽氏",
+            "start_year": -2514,
+            "end_year": -2437,
+            "duration": 77,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "shanggu_diku",
+            "era": "上古",
+            "dynasty_name": "帝嚳高辛氏",
+            "start_year": -2436,
+            "end_year": -2367,
+            "duration": 69,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "shanggu_dizhi",
+            "era": "上古",
+            "dynasty_name": "帝摯高辛氏",
+            "start_year": -2366,
+            "end_year": -2358,
+            "duration": 8,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "shanggu_tangyao",
+            "era": "上古",
+            "dynasty_name": "唐堯",
+            "start_year": -2357,
+            "end_year": -2258,
+            "duration": 99,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "shanggu_yushun",
+            "era": "上古",
+            "dynasty_name": "虞舜",
+            "start_year": -2257,
+            "end_year": -2208,
+            "duration": 49,
+            "time_period": "傳說時代"
+        },
+        {
+            "dynasty_id": "xia",
+            "era": "夏",
+            "dynasty_name": "夏",
+            "start_year": -2207,
+            "end_year": -1766,
+            "duration": 441,
+            "time_period": "三代時期"
+        },
+        {
+            "dynasty_id": "shang",
+            "era": "商",
+            "dynasty_name": "商",
+            "start_year": -1765,
+            "end_year": -1122,
+            "duration": 643,
+            "time_period": "三代時期"
+        },
+        {
+            "dynasty_id": "zhou",
+            "era": "周",
+            "dynasty_name": "周",
+            "start_year": -1121,
+            "end_year": -249,
+            "duration": 872,
+            "time_period": "周代",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "zhou_xi",
+                    "sub_dynasty_name": "西周",
+                    "start_year": -1121,
+                    "end_year": -771,
+                    "duration": 350
+                },
+                {
+                    "sub_dynasty_id": "zhou_dong",
+                    "sub_dynasty_name": "東周",
+                    "start_year": -770,
+                    "end_year": -249,
+                    "duration": 521
+                }
+            ]
+        },
+        {
+            "dynasty_id": "qin",
+            "era": "秦",
+            "dynasty_name": "秦",
+            "start_year": -248,
+            "end_year": -207,
+            "duration": 41,
+            "time_period": "秦代"
+        },
+        {
+            "dynasty_id": "han",
+            "era": "漢",
+            "dynasty_name": "漢",
+            "start_year": -206,
+            "end_year": 220,
+            "duration": 426,
+            "time_period": "漢代",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "han_xi",
+                    "sub_dynasty_name": "西漢",
+                    "start_year": -206,
+                    "end_year": 8,
+                    "duration": 214
+                },
+                {
+                    "sub_dynasty_id": "han_xinmang",
+                    "sub_dynasty_name": "新莽",
+                    "start_year": 9,
+                    "end_year": 23,
+                    "duration": 14
+                },
+                {
+                    "sub_dynasty_id": "han_gengshidi",
+                    "sub_dynasty_name": "更始帝",
+                    "start_year": 23,
+                    "end_year": 25,
+                    "duration": 2
+                },
+                {
+                    "sub_dynasty_id": "han_dong",
+                    "sub_dynasty_name": "東漢",
+                    "start_year": 25,
+                    "end_year": 220,
+                    "duration": 195,
+                    "note": "西元25年，光武帝建年號。"
+                }
+            ]
+        },
+        {
+            "dynasty_id": "sanguo",
+            "era": "三國",
+            "dynasty_name": "三國",
+            "start_year": 220,
+            "end_year": 280,
+            "duration": 60,
+            "time_period": "三國時期",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "sanguo_wei",
+                    "sub_dynasty_name": "魏",
+                    "start_year": 220,
+                    "end_year": 265,
+                    "duration": 45
+                },
+                {
+                    "sub_dynasty_id": "sanguo_shu",
+                    "sub_dynasty_name": "蜀",
+                    "start_year": 221,
+                    "end_year": 263,
+                    "duration": 42
+                },
+                {
+                    "sub_dynasty_id": "sanguo_wu",
+                    "sub_dynasty_name": "吳",
+                    "start_year": 222,
+                    "end_year": 280,
+                    "duration": 58
+                }
+            ]
+        },
+        {
+            "dynasty_id": "jin",
+            "era": "晉",
+            "dynasty_name": "晉",
+            "start_year": 265,
+            "end_year": 420,
+            "duration": 155,
+            "time_period": "晉代",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "jin_xi",
+                    "sub_dynasty_name": "西晉",
+                    "start_year": 265,
+                    "end_year": 316,
+                    "duration": 51
+                },
+                {
+                    "sub_dynasty_id": "jin_dong",
+                    "sub_dynasty_name": "東晉",
+                    "start_year": 317,
+                    "end_year": 420,
+                    "duration": 103
+                }
+            ]
+        },
+        {
+            "dynasty_id": "wuhu_shiliuguo",
+            "era": "五胡十六國",
+            "dynasty_name": "五胡十六國",
+            "start_year": 304,
+            "end_year": 439,
+            "duration": 135,
+            "time_period": "十六國時期",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "wuhu_qianzhao",
+                    "sub_dynasty_name": "前趙",
+                    "start_year": 304,
+                    "end_year": 329,
+                    "duration": 25,
+                    "note": "劉淵國號漢，劉曜改為趙，史稱前趙。"
+                },
+                {
+                    "sub_dynasty_id": "wuhu_cheng",
+                    "sub_dynasty_name": "成（漢）",
+                    "start_year": 304,
+                    "end_year": 347,
+                    "duration": 43,
+                    "note": "即前蜀。"
+                },
+                {
+                    "sub_dynasty_id": "wuhu_houzhao",
+                    "sub_dynasty_name": "後趙",
+                    "start_year": 319,
+                    "end_year": 350,
+                    "duration": 31
+                },
+                {
+                    "sub_dynasty_id": "wuhu_qianliang",
+                    "sub_dynasty_name": "前涼",
+                    "start_year": 324,
+                    "end_year": 376,
+                    "duration": 52
+                },
+                {
+                    "sub_dynasty_id": "wuhu_qianyan",
+                    "sub_dynasty_name": "前燕",
+                    "start_year": 337,
+                    "end_year": 370,
+                    "duration": 33
+                },
+                {
+                    "sub_dynasty_id": "wuhu_qianqin",
+                    "sub_dynasty_name": "前秦",
+                    "start_year": 351,
+                    "end_year": 394,
+                    "duration": 43
+                },
+                {
+                    "sub_dynasty_id": "wuhu_houqin",
+                    "sub_dynasty_name": "後秦",
+                    "start_year": 384,
+                    "end_year": 417,
+                    "duration": 33
+                },
+                {
+                    "sub_dynasty_id": "wuhu_houyan",
+                    "sub_dynasty_name": "後燕",
+                    "start_year": 384,
+                    "end_year": 409,
+                    "duration": 25
+                },
+                {
+                    "sub_dynasty_id": "wuhu_xiqin",
+                    "sub_dynasty_name": "西秦",
+                    "start_year": 385,
+                    "end_year": 431,
+                    "duration": 46
+                },
+                {
+                    "sub_dynasty_id": "wuhu_houliang",
+                    "sub_dynasty_name": "後涼",
+                    "start_year": 386,
+                    "end_year": 403,
+                    "duration": 17
+                },
+                {
+                    "sub_dynasty_id": "wuhu_nanliang",
+                    "sub_dynasty_name": "南涼",
+                    "start_year": 397,
+                    "end_year": 414,
+                    "duration": 17
+                },
+                {
+                    "sub_dynasty_id": "wuhu_nanyan",
+                    "sub_dynasty_name": "南燕",
+                    "start_year": 398,
+                    "end_year": 410,
+                    "duration": 12
+                },
+                {
+                    "sub_dynasty_id": "wuhu_xiliang",
+                    "sub_dynasty_name": "西涼",
+                    "start_year": 400,
+                    "end_year": 420,
+                    "duration": 20
+                },
+                {
+                    "sub_dynasty_id": "wuhu_beiliang",
+                    "sub_dynasty_name": "北涼",
+                    "start_year": 401,
+                    "end_year": 439,
+                    "duration": 38
+                },
+                {
+                    "sub_dynasty_id": "wuhu_xia",
+                    "sub_dynasty_name": "夏",
+                    "start_year": 407,
+                    "end_year": 431,
+                    "duration": 24
+                },
+                {
+                    "sub_dynasty_id": "wuhu_beiyan",
+                    "sub_dynasty_name": "北燕",
+                    "start_year": 409,
+                    "end_year": 436,
+                    "duration": 27
+                }
+            ]
+        },
+        {
+            "dynasty_id": "nanbeichao",
+            "era": "南北朝",
+            "dynasty_name": "南北朝",
+            "start_year": 420,
+            "end_year": 589,
+            "duration": 169,
+            "time_period": "南北朝時期",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "nanbeichao_song",
+                    "sub_dynasty_name": "宋",
+                    "start_year": 420,
+                    "end_year": 479,
+                    "duration": 59
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_qi",
+                    "sub_dynasty_name": "齊",
+                    "start_year": 479,
+                    "end_year": 502,
+                    "duration": 23
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_liang",
+                    "sub_dynasty_name": "梁",
+                    "start_year": 502,
+                    "end_year": 557,
+                    "duration": 55
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_chen",
+                    "sub_dynasty_name": "陳",
+                    "start_year": 557,
+                    "end_year": 589,
+                    "duration": 32
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_beiwei",
+                    "sub_dynasty_name": "北魏",
+                    "start_year": 386,
+                    "end_year": 534,
+                    "duration": 148
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_dongwei",
+                    "sub_dynasty_name": "東魏",
+                    "start_year": 534,
+                    "end_year": 550,
+                    "duration": 16
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_xiwei",
+                    "sub_dynasty_name": "西魏",
+                    "start_year": 535,
+                    "end_year": 556,
+                    "duration": 21
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_beizhou",
+                    "sub_dynasty_name": "北周",
+                    "start_year": 557,
+                    "end_year": 581,
+                    "duration": 24
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_beiqi",
+                    "sub_dynasty_name": "北齊",
+                    "start_year": 550,
+                    "end_year": 577,
+                    "duration": 27
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_sui",
+                    "sub_dynasty_name": "隋",
+                    "start_year": 581,
+                    "end_year": 618,
+                    "duration": 37
+                },
+                {
+                    "sub_dynasty_id": "nanbeichao_tang",
+                    "sub_dynasty_name": "唐",
+                    "start_year": 618,
+                    "end_year": 907,
+                    "duration": 289
+                }
+            ]
+        },
+        {
+            "dynasty_id": "wudai",
+            "era": "五代",
+            "dynasty_name": "五代",
+            "start_year": 907,
+            "end_year": 960,
+            "duration": 53,
+            "time_period": "五代時期",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "wudai_houliang",
+                    "sub_dynasty_name": "後梁",
+                    "start_year": 907,
+                    "end_year": 923,
+                    "duration": 16
+                },
+                {
+                    "sub_dynasty_id": "wudai_houtang",
+                    "sub_dynasty_name": "後唐",
+                    "start_year": 923,
+                    "end_year": 936,
+                    "duration": 13
+                },
+                {
+                    "sub_dynasty_id": "wudai_houjin",
+                    "sub_dynasty_name": "後晉",
+                    "start_year": 936,
+                    "end_year": 946,
+                    "duration": 10
+                },
+                {
+                    "sub_dynasty_id": "wudai_houhan",
+                    "sub_dynasty_name": "後漢",
+                    "start_year": 947,
+                    "end_year": 950,
+                    "duration": 3
+                },
+                {
+                    "sub_dynasty_id": "wudai_houzhou",
+                    "sub_dynasty_name": "後周",
+                    "start_year": 951,
+                    "end_year": 960,
+                    "duration": 9
+                }
+            ]
+        },
+        {
+            "dynasty_id": "shiguo",
+            "era": "十國",
+            "dynasty_name": "十國",
+            "start_year": 902,
+            "end_year": 979,
+            "duration": 77,
+            "time_period": "十國時期",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "shiguo_wu",
+                    "sub_dynasty_name": "吳",
+                    "start_year": 902,
+                    "end_year": 937,
+                    "duration": 35
+                },
+                {
+                    "sub_dynasty_id": "shiguo_qianshu",
+                    "sub_dynasty_name": "前蜀",
+                    "start_year": 907,
+                    "end_year": 925,
+                    "duration": 18
+                },
+                {
+                    "sub_dynasty_id": "shiguo_wuyue",
+                    "sub_dynasty_name": "吳越",
+                    "start_year": 907,
+                    "end_year": 978,
+                    "duration": 71
+                },
+                {
+                    "sub_dynasty_id": "shiguo_chu",
+                    "sub_dynasty_name": "楚",
+                    "start_year": 907,
+                    "end_year": 951,
+                    "duration": 44
+                },
+                {
+                    "sub_dynasty_id": "shiguo_nanhan",
+                    "sub_dynasty_name": "南漢",
+                    "start_year": 907,
+                    "end_year": 971,
+                    "duration": 64
+                },
+                {
+                    "sub_dynasty_id": "shiguo_min",
+                    "sub_dynasty_name": "閩",
+                    "start_year": 909,
+                    "end_year": 945,
+                    "duration": 36
+                },
+                {
+                    "sub_dynasty_id": "shiguo_nanping",
+                    "sub_dynasty_name": "南平（荊南）",
+                    "start_year": 924,
+                    "end_year": 960,
+                    "duration": 36
+                },
+                {
+                    "sub_dynasty_id": "shiguo_houshu",
+                    "sub_dynasty_name": "後蜀",
+                    "start_year": 934,
+                    "end_year": 965,
+                    "duration": 31
+                },
+                {
+                    "sub_dynasty_id": "shiguo_nantang",
+                    "sub_dynasty_name": "南唐",
+                    "start_year": 937,
+                    "end_year": 975,
+                    "duration": 38
+                },
+                {
+                    "sub_dynasty_id": "shiguo_beihan",
+                    "sub_dynasty_name": "北漢",
+                    "start_year": 951,
+                    "end_year": 979,
+                    "duration": 28
+                }
+            ]
+        },
+        {
+            "dynasty_id": "song",
+            "era": "宋",
+            "dynasty_name": "宋",
+            "start_year": 960,
+            "end_year": 1279,
+            "duration": 319,
+            "time_period": "宋代",
+            "sub_periods": [
+                {
+                    "sub_dynasty_id": "song_bei",
+                    "sub_dynasty_name": "北宋",
+                    "start_year": 960,
+                    "end_year": 1127,
+                    "duration": 167
+                },
+                {
+                    "sub_dynasty_id": "song_nan",
+                    "sub_dynasty_name": "南宋",
+                    "start_year": 1127,
+                    "end_year": 1279,
+                    "duration": 152
+                },
+                {
+                    "sub_dynasty_id": "song_liao",
+                    "sub_dynasty_name": "遼",
+                    "start_year": 907,
+                    "end_year": 1125,
+                    "duration": 218,
+                    "note": "遼建國於西元907年，國號契丹，916年始建年號，937年改國號為遼，983年復稱契丹，1066年仍稱遼。"
+                },
+                {
+                    "sub_dynasty_id": "song_xixia",
+                    "sub_dynasty_name": "西夏",
+                    "start_year": 1032,
+                    "end_year": 1227,
+                    "duration": 195
+                },
+                {
+                    "sub_dynasty_id": "song_jin",
+                    "sub_dynasty_name": "金",
+                    "start_year": 1115,
+                    "end_year": 1234,
+                    "duration": 119
+                }
+            ]
+        },
+        {
+            "dynasty_id": "yuan",
+            "era": "元",
+            "dynasty_name": "元",
+            "start_year": 1206,
+            "end_year": 1367,
+            "duration": 161,
+            "time_period": "元代",
+            "note": "蒙古鐵木真於西元1206年建國，1271年忽必烈定國號為大元，1279年滅南宋。"
+        },
+        {
+            "dynasty_id": "ming",
+            "era": "明",
+            "dynasty_name": "明",
+            "start_year": 1368,
+            "end_year": 1644,
+            "duration": 276,
+            "time_period": "明代",
+            "note": "西元1644年桂王被殺。"
+        },
+        {
+            "dynasty_id": "qing",
+            "era": "清",
+            "dynasty_name": "清",
+            "start_year": 1616,
+            "end_year": 1911,
+            "duration": 295,
+            "time_period": "清代",
+            "note": "清建國於西元1616年，初稱後金，1636年始改國號為清，1644年入關。"
+        }
+    ]
+}
