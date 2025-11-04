@@ -371,6 +371,8 @@ def get_yaml_config(yaml_path):
 
 # 仅移除简单的
 def rm_simple_html_tag(txt: str):
+    if txt is None or len(txt) == 0:
+        return ""
     return be(txt, "lxml").p.text.strip()
 
 
