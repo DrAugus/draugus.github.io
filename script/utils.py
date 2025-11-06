@@ -373,7 +373,12 @@ def get_yaml_config(yaml_path):
 def rm_simple_html_tag(txt: str):
     if txt is None or len(txt) == 0:
         return ""
-    return be(txt, "lxml").p.text.strip()
+    soup = be(txt, "lxml")
+    p_tag = soup.p
+    if p_tag is None or p_tag.text is None:
+        print(txt)
+        return txt.strip()
+    return p_tag.strip()
 
 
 def get_all_text_from_html(html_text):
