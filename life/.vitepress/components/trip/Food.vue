@@ -3,11 +3,16 @@
         <el-button type="success" @click="sortFood">人均排序</el-button>
     </div>
     <div class="mb-4">
-        <el-button text type="success" @click="filterTag()">全部</el-button>
-        <el-button @click="filterTag(v)" text v-for="(v, i) in tags">{{ v }}</el-button>
+        <el-button text type="success" @click="resetFilter">全部</el-button>
+        <el-button @click="toggleTag(v)" text v-for="(v, i) in tags" :key="i"
+            :type="selectedTags.includes(v) ? 'primary' : ''">
+            {{ v }} {{ selectedTags.includes(v) ? '✓' : '' }}
+        </el-button>
+        <el-button text @click="invertSelection">反选</el-button>
+        <el-button text @click="clearSelection">清空</el-button>
     </div>
     <ul>
-        <li v-for="(v, i) in sortedFoods">
+        <li v-for="(v, i) in sortedFoods" :key="i">
             <span v-if="v.closed" class="closed">
                 <del> {{ v.name }}</del> (已倒闭)
             </span>
@@ -22,7 +27,7 @@
                 <Badge type="tip" :text="v.restaurantType" />
             </span>
             <span v-else>
-                <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :text="vv" />
+                <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :key="ii" :text="vv" />
             </span>
             {{ v.location }}
         </li>
@@ -31,7 +36,7 @@
 
 <script setup lang="ts">
 import { ElButton, ElTooltip } from 'element-plus';
-import { ref } from 'vue';
+import { ref, computed, watch } from 'vue';
 
 import { FoodRecord } from '../../type';
 
@@ -41,6 +46,7 @@ const props = defineProps<{
 
 const key = ref(0);
 const sortedFoods = ref(props.foods);
+const selectedTags = ref<string[]>([]);
 
 const tags = Array.from(
     new Set(
@@ -51,7 +57,6 @@ const tags = Array.from(
 );
 
 const isChain = (food: FoodRecord) => food.headquartersCity ? food.headquartersCity != food.city : false;
-
 
 const sortFood = () => {
     key.value = key.value + 1;
@@ -69,23 +74,62 @@ const sortFood = () => {
     }
 }
 
-const filterTag = (tag?: string) => {
+// 切换标签选择状态
+const toggleTag = (tag: string) => {
+    const index = selectedTags.value.indexOf(tag);
+    if (index > -1) {
+        selectedTags.value.splice(index, 1);
+    } else {
+        selectedTags.value.push(tag);
+    }
+}
+
+// 反选所有标签
+const invertSelection = () => {
+    selectedTags.value = tags.filter(tag => !selectedTags.value.includes(tag));
+}
+
+// 清空选择
+const clearSelection = () => {
+    selectedTags.value = [];
+}
+
+// 重置过滤器
+const resetFilter = () => {
+    selectedTags.value = [];
     sortedFoods.value = props.foods;
-    if (tag === undefined) {
+}
+
+// 监听标签选择变化，自动过滤
+watch(selectedTags, (newTags) => {
+    if (newTags.length === 0) {
+        sortedFoods.value = props.foods;
         return;
     }
-    sortedFoods.value = sortedFoods.value.filter((item: FoodRecord) => {
-        if (Array.isArray(item.restaurantType)) {
-            return item.restaurantType.includes(tag);
-        } else {
-            return item.restaurantType === tag;
-        }
+
+    sortedFoods.value = props.foods.filter((item: FoodRecord) => {
+        const itemTags = Array.isArray(item.restaurantType)
+            ? item.restaurantType
+            : [item.restaurantType];
+
+        // 多选逻辑：只要包含任意一个选中的标签就显示
+        return newTags.some(tag => itemTags.includes(tag));
     });
-}
+}, { deep: true });
 </script>
 
 <style scoped>
 .closed {
     color: gray;
+}
+
+.el-button {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.el-button[type="primary"] {
+    background-color: #409eff;
+    color: white;
 }
 </style>

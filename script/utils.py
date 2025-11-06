@@ -374,11 +374,14 @@ def rm_simple_html_tag(txt: str):
     if txt is None or len(txt) == 0:
         return ""
     soup = be(txt, "lxml")
+
     p_tag = soup.p
-    if p_tag is None or p_tag.text is None:
-        print(txt)
+    if p_tag:
+        # 如果存在p标签，返回其文本内容（自动处理None情况）
+        return p_tag.get_text(strip=True)
+    else:
+        # 如果没有p标签，返回原文本去除首尾空白
         return txt.strip()
-    return p_tag.strip()
 
 
 def get_all_text_from_html(html_text):
