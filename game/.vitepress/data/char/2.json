@@ -1098,5 +1098,60 @@
         "city": "Natlan",
         "ele": "pyro",
         "weapon": "catalyst"
+    },
+    "nefer": {
+        "id": "nefer",
+        "name": "奈芙尔",
+        "prefix": "",
+        "star": 5,
+        "event_exclusive": true,
+        "intro": "神通广大的「秘闻馆」的老板。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "flins": {
+        "id": "flins",
+        "name": "爱诺",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "挪德卡莱的天才机械发明家，生活在叮铃哐啷蛋卷工坊，与机械家人们一起过着充满蛋卷香气的每一天。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "aino": {
+        "id": "aino",
+        "name": "菲林斯",
+        "prefix": "",
+        "star": 5,
+        "event_exclusive": true,
+        "intro": "克里洛·楚德米洛维奇·菲林斯，挪德卡莱「执灯士」的一员——他喜欢这样介绍自己。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "lauma": {
+        "id": "lauma",
+        "name": "菈乌玛",
+        "prefix": "",
+        "star": 5,
+        "event_exclusive": true,
+        "intro": "「霜月之子」的咏月使，亦有人称她为「苍林的圣女」。对月光与动物有着非同寻常的亲和力。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "ineffa": {
+        "id": "ineffa",
+        "name": "伊涅芙",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "来自挪德卡莱的机器人，机体集成了来自世界各地的机关部件，由「叮铃哐啷蛋卷工坊」设计制造。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }
