@@ -13,8 +13,8 @@ const ogUrl = 'https://augusmeow.github.io'
 export default withPwa(defineConfig(<ExtendedUserConfig>{
     // These are app level configs.
     lang: 'zh-CN',
-    title: 'Augusの享楽',
-    description: '吃什么 去哪玩',
+    title: 'Augus',
+    description: '乐享人生',
     base: "/",
     lastUpdated: true,
     cleanUrls: true,

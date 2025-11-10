@@ -13,8 +13,8 @@ const dataTravelogue: TravelogueInfo[] = [
     { title: '长春', date: new Date('2023/05/27'), city: '长春' },
     { title: '南宁', date: new Date('2023/06/10'), city: '南宁' },
     { title: '深港珠柳州', date: new Date('2023/06/28'), city: ['深圳', '香港', '珠海', '柳州'] },
-    { title: '日本', date: new Date('2023/07/20'), city: ['Tokyo', 'Kyoto', 'Osaka'] },
-    { title: '青岛淄博济宁', date: new Date('2023/08/03'), city: ['青岛', '淄博', '济宁'] },
+    { title: '东京大阪京都', date: new Date('2023/07/20'), city: ['Tokyo', 'Kyoto', 'Osaka'] },
+    { title: '山东', date: new Date('2023/08/03'), city: ['青岛', '淄博', '济宁'] },
     { title: '南京', date: new Date('2023/08/09'), city: '南京' },
     { title: '桂林', date: new Date('2023/09/02'), city: '桂林' },
     { title: '潮汕地区', date: new Date('2024/04/04'), city: ['香港', '深圳', '广州', '汕头', '潮州'] },
@@ -27,7 +27,8 @@ const dataTravelogue: TravelogueInfo[] = [
     { title: '景德镇', date: new Date('2025/05/03'), city: '景德镇' },
     { title: '梅州河源', date: new Date('2025/06/20'), city: ['梅州', '河源'] },
     { title: '金华衢州南昌', date: new Date('2025/07/11'), city: ['金华', '衢州', '南昌'] },
-    { title: '日本', date: new Date('2025/07/28'), city: ['Aichi', 'Ishikawa', 'Toyama'] },
+    { title: '爱知富山石川', date: new Date('2025/07/28'), city: ['Aichi', 'Ishikawa', 'Toyama'] },
+    { title: '厦门大阪京都', date: new Date('2025/10/02'), city: ['厦门', 'Kyoto', 'Osaka'] },
 ];
 
 const linkPrefix = '/trip/travelogue/';

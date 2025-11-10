@@ -11,6 +11,7 @@ export const navbar = [
         text: '',
         items: [
           { text: '去哪', link: '/trip/where/' },
+          { text: '吃啥', link: '/trip/eat' },
           { text: '飞行', link: '/trip/flying/' },
           { text: '游记', link: '/trip/travelogue/' },
           { text: '赶路', link: '/trip/journey/' },

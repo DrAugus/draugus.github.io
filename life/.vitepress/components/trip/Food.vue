@@ -42,6 +42,7 @@ import { FoodRecord } from '../../type';
 
 const props = defineProps<{
     foods: FoodRecord[],
+    all?: boolean,
 }>();
 
 const key = ref(0);
@@ -61,14 +62,20 @@ const isChain = (food: FoodRecord) => food.headquartersCity ? food.headquartersC
 const sortFood = () => {
     key.value = key.value + 1;
     if (key.value > 2) key.value = 0;
+
+    let foodSource = props.foods;
+    if (selectedTags.value.length != 0) {
+        foodSource = sortedFoods.value;
+    }
+
     if (key.value === 0) {
-        sortedFoods.value = props.foods;
+        sortedFoods.value = foodSource;
     } else if (key.value === 1) {
-        sortedFoods.value = [...props.foods].sort((a, b) => {
+        sortedFoods.value = [...foodSource].sort((a, b) => {
             return b.pricePerPerson - a.pricePerPerson;
         });
     } else if (key.value === 2) {
-        sortedFoods.value = [...props.foods].sort((a, b) => {
+        sortedFoods.value = [...foodSource].sort((a, b) => {
             return a.pricePerPerson - b.pricePerPerson;
         });
     }

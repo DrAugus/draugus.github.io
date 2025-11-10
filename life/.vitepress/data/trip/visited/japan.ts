@@ -9,6 +9,12 @@ export const VISITED_JAPAN: ExploreRecord[] = [
                     end: new Date('2023/07/26'),
                 },
                 intro: "游玩"
+            }, {
+                date: {
+                    start: new Date('2025/10/03'),
+                    end: new Date('2025/10/05'),
+                },
+                intro: "游玩"
             },
         ]
     }, {
@@ -27,6 +33,12 @@ export const VISITED_JAPAN: ExploreRecord[] = [
                 date: {
                     start: new Date('2023/07/23'),
                     end: new Date('2023/07/25'),
+                },
+                intro: "游玩"
+            }, {
+                date: {
+                    start: new Date('2025/10/05'),
+                    end: new Date('2025/10/06'),
                 },
                 intro: "游玩"
             },

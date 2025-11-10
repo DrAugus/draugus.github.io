@@ -492,6 +492,8 @@ const foodRecords: FoodRecord[] = [
 
 export const filterFoodByCity = (city: string) => foodRecords.filter((record) => record.city === city);
 
+export const foodAll = foodRecords;
+
 export const foodSH = filterFoodByCity("上海");
 export const foodHZ = filterFoodByCity("杭州");
 export const foodHY = filterFoodByCity("河源");
