@@ -11,7 +11,7 @@ on:
       - "**/package.json"
       - "**/pnpm-lock.yaml"
   schedule:
-    # This is run at UTC 17:00 p.m., aka UTC+8 1:00 a.m. Only Every Month 1st
+    # This is run at UTC 17:00 p.m., aka UTC+8 1:00 a.m. Only Every Month 2st
     - cron: "0 17 1 * *"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

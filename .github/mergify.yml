@@ -37,9 +37,13 @@ pull_request_rules:
           - files=pnpm-lock.yaml
           # py
           - files~=^script/
-      # deploy life, only success merge, pr already has been split
-      - check-success=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
-      - check-success=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      # # deploy life, only success merge, pr already has been split
+      # - check-success=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, life)
+      # - check-success=deploy-life (ubuntu-latest, life/.vitepress/dist, augusmeow, augusmeow.github.io)
+      # deploy-life-pr
+      - -check-failure=deploy-life-pr
+      - -check-neutral=deploy-life-pr
+      - -check-pending=deploy-life-pr
       # deploy game
       - -check-failure=deploy-game (ubuntu-latest, game/.vitepress/dist, augusmeow, game)
       - -check-neutral=deploy-game (ubuntu-latest, game/.vitepress/dist, augusmeow, game)
