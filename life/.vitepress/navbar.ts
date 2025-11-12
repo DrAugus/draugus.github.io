@@ -28,6 +28,7 @@ export const navbar = [
         text: '',
         items: [
           { text: '小猫', link: '/daily/cat' },
+          { text: '日历', link: '/daily/calendar' },
           { text: '日用价格', link: '/daily/goods-price' },
           { text: '苹果购买记录', link: '/daily/apple/price' },],
       },
