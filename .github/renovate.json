@@ -4,7 +4,7 @@
     "config:recommended"
   ],
   "schedule": [
-    "0 17 1 * *"
+    "* 17 1 * *"
   ],
   "lockFileMaintenance": {
     "enabled": true
