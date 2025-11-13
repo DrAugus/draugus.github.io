@@ -236,10 +236,19 @@ def combine_wish_info(wish_info_zh, wish_info_en):
         wish_name_en = rm_epitome(per_wish['wish_name'])
         wish_name_en_lower = [utils.replace_characters(
             name) for name in wish_name_en if name]
-        wish_start = per_wish['wish_duration'][0]['start_time']
-        wish_end = per_wish['wish_duration'][0]['end_time']
-        wish_version = per_wish['version'][0]
+        # wish_start = per_wish['wish_duration'][0]['start_time']
+        # wish_end = per_wish['wish_duration'][0]['end_time']
+        # wish_version = per_wish['version'][0]
 
+        # 使用 walrus 运算符和 get 方法的安全访问
+        wish_duration_list = per_wish.get('wish_duration', []) if per_wish else []
+        first_duration = wish_duration_list[0] if wish_duration_list else {}
+        wish_start = first_duration.get('start_time')
+        wish_end = first_duration.get('end_time')
+
+        version_list = per_wish.get('version', []) if per_wish else []
+        wish_version = version_list[0] if version_list else None
+        
         wish5star = []
         wish4star = []
         short_name = []
