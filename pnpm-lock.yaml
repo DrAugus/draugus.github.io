@@ -72,7 +72,7 @@ importers:
         version: 6.0.0
       element-plus:
         specifier: ^2.9.6
-        version: 2.11.5(vue@3.5.22)
+        version: 2.11.7(vue@3.5.22)
       markdown-it-mathjax3:
         specifier: ^5.0.0
         version: 5.2.0
@@ -1807,8 +1807,8 @@ packages:
   electron-to-chromium@1.5.250:
     resolution: {integrity: sha512-/5UMj9IiGDMOFBnN4i7/Ry5onJrAGSbOGo3s9FEKmwobGq6xw832ccET0CE3CkkMBZ8GJSlUIesZofpyurqDXw==}
 
-  element-plus@2.11.5:
-    resolution: {integrity: sha512-O+bIVHQCjUDm4GiIznDXRoS8ar2TpWLwfOGnN/Aam0VXf5kbuc4SxdKKJdovWNxmxeqbcwjsSZPKgtXNcqys4A==}
+  element-plus@2.11.7:
+    resolution: {integrity: sha512-Bh47wuzsqaNBNDkbtlOlZER1cGcOB8GsXp/+C9b95MOrk0wvoHUV4NKKK7xMkfYNFYdYysQ752oMhnExgAL6+g==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -4626,7 +4626,7 @@ snapshots:
 
   electron-to-chromium@1.5.250: {}
 
-  element-plus@2.11.5(vue@3.5.22):
+  element-plus@2.11.7(vue@3.5.22):
     dependencies:
       '@ctrl/tinycolor': 3.6.1
       '@element-plus/icons-vue': 2.3.2(vue@3.5.22)
