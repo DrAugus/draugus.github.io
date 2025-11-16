@@ -1,10 +1,11 @@
 ---
-navbar: false
 aside: false
 editLink: false
 outline: false
 lastUpdated: false
 sidebar: false
+prev: false
+next: false
 ---
 
 # 日历
