@@ -2,17 +2,10 @@
     "CAMP": [
         [
             {
-                "camp_name": "卡吕冬之子",
-                "camp_channel": "889",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/c5a5f68fb80b7614b57630c9fe5e37d0_6003424360315141035.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/76dfdd30792027a9a4c9884406523f53_6008693205615282082.png",
-                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/517f4336e4a3819dee6f9ec4d18fb94c_3292181308204717228.png"
-            },
-            {
-                "camp_name": "天琴座",
-                "camp_channel": "998",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/a0b3b74abf582e1aa5802ae5261181e4_6066447601371220264.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/94da254b54e82d80d2ffb9a4401009e2_122767175258594807.png",
+                "camp_name": "坎卜斯黑枝",
+                "camp_channel": "1290",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/160116/c6b6037a28dec404e661296ea4f82588_934572459889784451.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/160116/3ce38b6bc4f519d52f3515216aa90d01_8451230628828738225.png",
                 "camp_kv": ""
             },
             {
@@ -25,8 +18,8 @@
             {
                 "camp_name": "云岿山",
                 "camp_channel": "1185",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/3ddf53d0aed28fd888025c942878006a_7147213263568712794.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/270915b297f037a3c88b28279c2a1d5d_8179247253379370022.png",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/3ddf53d0aed28fd888025c942878006a_6055716417722727036.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/270915b297f037a3c88b28279c2a1d5d_6201919263716476381.png",
                 "camp_kv": ""
             },
             {
@@ -44,25 +37,11 @@
                 "camp_kv": ""
             },
             {
-                "camp_name": "阵营不明",
-                "camp_channel": "926",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/129796/fb8e50f12b6c4623b6b65d9edffd76dd_512658389550731406.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/129796/623c2c8db94de38d8fde92fa8dd7f1cb_388487604477912211.png",
+                "camp_name": "天琴座",
+                "camp_channel": "998",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/a0b3b74abf582e1aa5802ae5261181e4_6066447601371220264.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/94da254b54e82d80d2ffb9a4401009e2_122767175258594807.png",
                 "camp_kv": ""
-            },
-            {
-                "camp_name": "阵营不明",
-                "camp_channel": "926",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/dd63201667e09c9f3b468b5fb244297d_6120558112943159334.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/0e6cd7d3984de5f2ff6261e51af9c51e_6512899852675462495.png",
-                "camp_kv": ""
-            },
-            {
-                "camp_name": "刑侦特勤组",
-                "camp_channel": "782",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/5e2833934e34b266dde548849040d433_3077251731928402711.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/9ba182a0025ec69d4fc1a543d8d795cb_8725052673224252476.png",
-                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/7591436c19ac37f129cb82555497b003_6070941015026539220.png"
             },
             {
                 "camp_name": "对空六课",
@@ -72,11 +51,25 @@
                 "camp_kv": "https://webstatic.hoyoverse.com/upload/op-public/2022/11/03/6dd6b9394bf095f234bd956fcc358d99_1073768873096826149.png"
             },
             {
-                "camp_name": "白祇重工",
-                "camp_channel": "311",
-                "camp_icon": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/2cc0dd2628c722e73004a19b84ab1f99_2283002001929482879.png",
-                "camp_shade": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_1937704424541135334.png",
-                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/102707/4f33f8d9643641e5eaf9a32098a3052e_7130409311570105392.png"
+                "camp_name": "卡吕冬之子",
+                "camp_channel": "889",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/c5a5f68fb80b7614b57630c9fe5e37d0_6003424360315141035.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/76dfdd30792027a9a4c9884406523f53_6008693205615282082.png",
+                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/517f4336e4a3819dee6f9ec4d18fb94c_3292181308204717228.png"
+            },
+            {
+                "camp_name": "刑侦特勤组",
+                "camp_channel": "782",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/5e2833934e34b266dde548849040d433_3077251731928402711.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/9ba182a0025ec69d4fc1a543d8d795cb_8725052673224252476.png",
+                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/7591436c19ac37f129cb82555497b003_6070941015026539220.png"
+            },
+            {
+                "camp_name": "奥波勒斯小队",
+                "camp_channel": "299",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/66c54388250c187ba84617b2002c1452_222276993151138744.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/5cf3c77dd10dbc87adfff8d0204b695b_7727602646943080895.png",
+                "camp_kv": ""
             },
             {
                 "camp_name": "维多利亚家政",
@@ -86,11 +79,11 @@
                 "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/102476/3aacb552be7ed7960153458cbcda1a78_3658625827003322299.png"
             },
             {
-                "camp_name": "奥波勒斯小队",
-                "camp_channel": "299",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/66c54388250c187ba84617b2002c1452_222276993151138744.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/5cf3c77dd10dbc87adfff8d0204b695b_7727602646943080895.png",
-                "camp_kv": ""
+                "camp_name": "白祇重工",
+                "camp_channel": "311",
+                "camp_icon": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/2cc0dd2628c722e73004a19b84ab1f99_2283002001929482879.png",
+                "camp_shade": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_1937704424541135334.png",
+                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/102707/4f33f8d9643641e5eaf9a32098a3052e_7130409311570105392.png"
             },
             {
                 "camp_name": "狡兔屋",
@@ -102,17 +95,10 @@
         ],
         [
             {
-                "camp_name": "Sons of Calydon",
-                "camp_channel": "889",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/c5a5f68fb80b7614b57630c9fe5e37d0_6003424360315141035.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/76dfdd30792027a9a4c9884406523f53_6008693205615282082.png",
-                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/517f4336e4a3819dee6f9ec4d18fb94c_3292181308204717228.png"
-            },
-            {
-                "camp_name": "Stars of Lyra",
-                "camp_channel": "998",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/a0b3b74abf582e1aa5802ae5261181e4_6066447601371220264.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/94da254b54e82d80d2ffb9a4401009e2_122767175258594807.png",
+                "camp_name": "Krampus Compliance Authority",
+                "camp_channel": "1290",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/160116/a304f24eb74832c95dfdbcbf85877a70_5537642538966067152.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/160116/653cff862889ce357e2299d7f382253e_3904111980764729979.png",
                 "camp_kv": ""
             },
             {
@@ -125,8 +111,8 @@
             {
                 "camp_name": "Yunkui Summit",
                 "camp_channel": "1185",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/3ddf53d0aed28fd888025c942878006a_7147213263568712794.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/270915b297f037a3c88b28279c2a1d5d_8179247253379370022.png",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/3ddf53d0aed28fd888025c942878006a_6055716417722727036.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/155656/270915b297f037a3c88b28279c2a1d5d_6201919263716476381.png",
                 "camp_kv": ""
             },
             {
@@ -144,25 +130,11 @@
                 "camp_kv": ""
             },
             {
-                "camp_name": "Faction Unknown",
-                "camp_channel": "926",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/129796/fb8e50f12b6c4623b6b65d9edffd76dd_512658389550731406.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/129796/623c2c8db94de38d8fde92fa8dd7f1cb_388487604477912211.png",
+                "camp_name": "Stars of Lyra",
+                "camp_channel": "998",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/a0b3b74abf582e1aa5802ae5261181e4_6066447601371220264.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/127385/94da254b54e82d80d2ffb9a4401009e2_122767175258594807.png",
                 "camp_kv": ""
-            },
-            {
-                "camp_name": "Faction Unknown",
-                "camp_channel": "926",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/dd63201667e09c9f3b468b5fb244297d_6120558112943159334.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124676/0e6cd7d3984de5f2ff6261e51af9c51e_6512899852675462495.png",
-                "camp_kv": ""
-            },
-            {
-                "camp_name": "Criminal Investigation Special Response Team",
-                "camp_channel": "782",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/5e2833934e34b266dde548849040d433_3077251731928402711.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/9ba182a0025ec69d4fc1a543d8d795cb_8725052673224252476.png",
-                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/7591436c19ac37f129cb82555497b003_6070941015026539220.png"
             },
             {
                 "camp_name": "Section 6",
@@ -172,11 +144,25 @@
                 "camp_kv": "https://webstatic.hoyoverse.com/upload/op-public/2022/11/03/6dd6b9394bf095f234bd956fcc358d99_5893242132204298040.png"
             },
             {
-                "camp_name": "Belobog Heavy Industries",
-                "camp_channel": "311",
-                "camp_icon": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/2cc0dd2628c722e73004a19b84ab1f99_8621132843841490515.png",
-                "camp_shade": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_3451028739953883641.png",
-                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/102707/4f33f8d9643641e5eaf9a32098a3052e_946067716106464400.png"
+                "camp_name": "Sons of Calydon",
+                "camp_channel": "889",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/c5a5f68fb80b7614b57630c9fe5e37d0_6003424360315141035.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/76dfdd30792027a9a4c9884406523f53_6008693205615282082.png",
+                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/124305/517f4336e4a3819dee6f9ec4d18fb94c_3292181308204717228.png"
+            },
+            {
+                "camp_name": "Criminal Investigation Special Response Team",
+                "camp_channel": "782",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/5e2833934e34b266dde548849040d433_3077251731928402711.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/9ba182a0025ec69d4fc1a543d8d795cb_8725052673224252476.png",
+                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/122783/7591436c19ac37f129cb82555497b003_6070941015026539220.png"
+            },
+            {
+                "camp_name": "Obol Squad",
+                "camp_channel": "299",
+                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/66c54388250c187ba84617b2002c1452_222276993151138744.png",
+                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/5cf3c77dd10dbc87adfff8d0204b695b_7727602646943080895.png",
+                "camp_kv": ""
             },
             {
                 "camp_name": "Victoria Housekeeping Co.",
@@ -186,11 +172,11 @@
                 "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/102476/3aacb552be7ed7960153458cbcda1a78_4100195032342551535.png"
             },
             {
-                "camp_name": "Obol Squad",
-                "camp_channel": "299",
-                "camp_icon": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/66c54388250c187ba84617b2002c1452_222276993151138744.png",
-                "camp_shade": "https://fastcdn.hoyoverse.com/content-v2/nap/102291/5cf3c77dd10dbc87adfff8d0204b695b_7727602646943080895.png",
-                "camp_kv": ""
+                "camp_name": "Belobog Heavy Industries",
+                "camp_channel": "311",
+                "camp_icon": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/2cc0dd2628c722e73004a19b84ab1f99_8621132843841490515.png",
+                "camp_shade": "https://webstatic.hoyoverse.com/upload/op-public/2023/03/08/148e92d277d30473b7a53e0af1d8bae6_3451028739953883641.png",
+                "camp_kv": "https://fastcdn.hoyoverse.com/content-v2/nap/102707/4f33f8d9643641e5eaf9a32098a3052e_946067716106464400.png"
             },
             {
                 "camp_name": "Cunning Hares AKA Gentle House",
@@ -202,13 +188,9 @@
         ]
     ],
     "JS_CAMP": {
-        "SonsofCalydon": {
-            "id": "Sons of Calydon",
-            "name": "卡吕冬之子"
-        },
-        "StarsofLyra": {
-            "id": "Stars of Lyra",
-            "name": "天琴座"
+        "KrampusComplianceAuthority": {
+            "id": "Krampus Compliance Authority",
+            "name": "坎卜斯黑枝"
         },
         "SpookShack": {
             "id": "Spook Shack",
@@ -226,29 +208,33 @@
             "id": "Defense Force - Silver Squad",
             "name": "防卫军·白银小队"
         },
-        "FactionUnknown": {
-            "id": "Faction Unknown",
-            "name": "阵营不明"
-        },
-        "CriminalInvestigationSpecialResponseTeam": {
-            "id": "Criminal Investigation Special Response Team",
-            "name": "刑侦特勤组"
+        "StarsofLyra": {
+            "id": "Stars of Lyra",
+            "name": "天琴座"
         },
         "Section6": {
             "id": "Section 6",
             "name": "对空六课"
         },
-        "BelobogHeavyIndustries": {
-            "id": "Belobog Heavy Industries",
-            "name": "白祇重工"
+        "SonsofCalydon": {
+            "id": "Sons of Calydon",
+            "name": "卡吕冬之子"
+        },
+        "CriminalInvestigationSpecialResponseTeam": {
+            "id": "Criminal Investigation Special Response Team",
+            "name": "刑侦特勤组"
+        },
+        "ObolSquad": {
+            "id": "Obol Squad",
+            "name": "奥波勒斯小队"
         },
         "VictoriaHousekeepingCo": {
             "id": "Victoria Housekeeping Co.",
             "name": "维多利亚家政"
         },
-        "ObolSquad": {
-            "id": "Obol Squad",
-            "name": "奥波勒斯小队"
+        "BelobogHeavyIndustries": {
+            "id": "Belobog Heavy Industries",
+            "name": "白祇重工"
         },
         "CunningHaresAKAGentleHouse": {
             "id": "Cunning Hares AKA Gentle House",
@@ -258,16 +244,88 @@
     "CHAR": [
         [
             {
+                "char_name": "叶瞬光",
+                "char_color": "#db3c2f",
+                "char_line": "「我愿执剑，碎尽万般因果。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160762/fb43a27e44bf84aa26e44d36c40bb65a_5140436400508991659.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160762/10ea46188c13f32ec74632f544a01065_8689182190502564087.png",
+                "char_chan_id": "1185"
+            },
+            {
+                "char_name": "照",
+                "char_color": "#fdb9b7",
+                "char_line": "「既然来了，不妨和我做个交易？」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160758/e00785d194cb0ea13b2483033f0ef14f_2021520199534046289.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160758/3e0e563629bb0e6094c5f0282a4113c7_5323169878011018906.png",
+                "char_chan_id": "1290"
+            },
+            {
+                "char_name": "般岳",
+                "char_color": "#f9c762",
+                "char_line": "「我所护佑之地，岂容尔等邪祟踏足！」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160168/ec770a6fcdec8286a46b3485da196bb5_6797383086035984496.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160168/d95bad5eb7be3804e90bca5e74e8e633_5251715198427319778.png",
+                "char_chan_id": "1290"
+            },
+            {
+                "char_name": "琉音",
+                "char_color": "#61bbab",
+                "char_line": "「投诉？别生气呀～」「考虑到您气色不好，刚才那是特地为您准备的『红温』服务呢~」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160142/75bd51f7024230b601a5d3487a3eebce_7850167840696619911.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160142/b7808860e5bf066a6cb3acf54d6c1bc9_6943893117321509348.png",
+                "char_chan_id": "1290"
+            },
+            {
+                "char_name": "伊德海莉",
+                "char_color": "#9b6eaf",
+                "char_line": "「真希望所有的故事都没有结局，那样我就有了不停翻页的勇气。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/158997/18361ff08208de65d06a24a6a954888a_2273414852719877551.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/158997/08f75c27c495115214021d3f1490b290_1933730787365727837.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "狛野真斗",
+                "char_color": "#c14528",
+                "char_line": "「万一有什么麻烦，就站到我身后吧。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/158996/efef9ce9a894a05b3043dd228c65750c_2093312368196196811.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/158996/da2df60f3301effcdb2cce40a1bb8908_438327025888226462.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "卢西娅",
+                "char_color": "#539098",
+                "char_line": "「想听以骸的故事吗？听一个吧~听了我们就是朋友，听两个就是好朋友！」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/158985/866b2bad3181f9b3ea15e9ff37cdb59c_2766200632643828853.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/158985/014903bb6d6083bc8975aa90e20d936a_1685281744271008302.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "奥菲丝&「鬼火」",
+                "char_color": "#ee6e41",
+                "char_line": "「战术对策：歼灭-四！」「是！『鬼火』队长！」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/157833/227b72ab338a1edf2d38ceaaf0087b9f_1216424621304982068.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/157833/4753ac41fd39f1bfc4d498d95dd9413f_6108784185593480685.png",
+                "char_chan_id": "299"
+            },
+            {
+                "char_name": "「席德」",
+                "char_color": "#aee2ef",
+                "char_line": "「绳匠…是『同类』呢。就像四叶草和油菜花。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/157829/7d748a5d77c3ef4675c8f2875998c12d_4576469805434837269.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/157829/d516676e8f25ce417d31039bab96b094_7390865208671714447.png",
+                "char_chan_id": "299"
+            },
+            {
                 "char_name": "爱丽丝·泰姆菲尔德",
-                "char_color": "#407ebf",
+                "char_color": "#ffb0a3",
                 "char_line": "「这…这种程度的挑战，泰姆菲尔德家族的后人才不会退缩！」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/e79decbb89496962d5e43d12c8acfb9c_3624411308298773994.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/b565995a902912b33d0642db43c77d1b_4071595144312336504.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/89dc2b52ab90b5e3553ba108ffef6ce2_4689086059267506444.png",
                 "char_chan_id": "1191"
             },
             {
                 "char_name": "浮波柚叶",
-                "char_color": "#f96c6b",
+                "char_color": "#ed545a",
                 "char_line": "「觉得自己霉运缠身吗，那不妨问问…狸猫的建议吧？」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/43ae40a750b7e6a0affc58e191757916_1980741451904466813.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/d199623f93344770295bb5fe5bdbf59f_8139974073628632189.png",
@@ -275,7 +333,7 @@
             },
             {
                 "char_name": "橘福福",
-                "char_color": "#ffce6d",
+                "char_color": "#eeab4c",
                 "char_line": "「云岿山上有猛虎，仗义行侠好威风！」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/4a9b2cf4fe774bab5b4c120bbe3ee182_5096951012147369687.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/dbbf26de8101c4e37e36eeaac7eacca8_9026544933917816900.png",
@@ -283,7 +341,7 @@
             },
             {
                 "char_name": "潘引壶",
-                "char_color": "#c74d4d",
+                "char_color": "#de982e",
                 "char_line": "「草木尚知食尘饮露，修炼术法断不可饿着肚子呀。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155657/1234ad9c4ea58535d5cf6cc617d4b238_3797870450782464145.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155657/9addb3fb69ed17ec48fed8a65cd7abfa_5452709093081238020.png",
@@ -291,7 +349,7 @@
             },
             {
                 "char_name": "仪玄",
-                "char_color": "#f2982f",
+                "char_color": "#ffc149",
                 "char_line": "「既入山门，那些俗务繁礼便留在山下吧。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155654/b4e4547e15b58b9f0f21034e54fe460a_5712876540649974168.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155654/72d22b01e56074b0c69b86f952e64a19_6008130904669615474.png",
@@ -299,7 +357,7 @@
             },
             {
                 "char_name": "雨果",
-                "char_color": "#667ad9",
+                "char_color": "#6770e7",
                 "char_line": "「亲爱的朋友，我必如雪崩再来。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/f187608aaeac692b4c6202aea992df20_3648921785296803268.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/931ae0d821ace45a375a4332bf3e038e_8061430778645257430.png",
@@ -307,15 +365,15 @@
             },
             {
                 "char_name": "薇薇安",
-                "char_color": "#cdbcf3",
+                "char_color": "#cabcf2",
                 "char_line": "「不要关上窗，飞鸟会衔来爱意，衔走死亡。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/6aa9864333ed958f50eccfa0bd2f1e3a_5371935286784919823.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/f6b7a0a29487f8153da57fe124f048a9_4437497753091967697.png",
                 "char_chan_id": "1149"
             },
             {
-                "char_name": "扳机",
-                "char_color": "#e3b348",
+                "char_name": "「扳机」",
+                "char_color": "#ead75a",
                 "char_line": "「我，看到你了。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129638/c404967b14044b58e05bed2679213dbd_8283889538082286267.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129638/ab70d69803b35b1bd5cccaa75aff3369_3736306923345949000.png",
@@ -323,7 +381,7 @@
             },
             {
                 "char_name": "波可娜·费雷尼",
-                "char_color": "#eac987",
+                "char_color": "#e5c28b",
                 "char_line": "「我只对赢家忠诚，而赢家，永远是我。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129637/22caaaf3999fd9b413c2ce7d1667cdd9_8037228699291393591.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129637/edaf4a7434676ec37a3e474d64ea94ca_5377396782143850826.png",
@@ -331,7 +389,7 @@
             },
             {
                 "char_name": "零号·安比",
-                "char_color": "#ffc34e",
+                "char_color": "#eca03e",
                 "char_line": "「大战前重新整装待发。嗯，是很经典的电影桥段。」",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/b0b79acc2242d0a05c338ea187b95ab5_8269376756759669834.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/d173d2ea2b2304b6a907ea74022df992_6892899806043106478.png",
@@ -339,15 +397,15 @@
             },
             {
                 "char_name": "伊芙琳·舒瓦利耶",
-                "char_color": "#784adb",
-                "char_line": "现在是小姐的私人时间，不接受任何形式的采访。",
-                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/e5e4b7e2cb35a8257fd5e787f67a2b6a_2825040355461309369.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/02dec006a297051d8566a4cd01b1b4bd_4474979868418126210.png",
+                "char_color": "#8e6dca",
+                "char_line": "「现在是小姐的私人时间，不接受任何形式的采访。」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/d91382cdacb9815b89fb4ff72233e81f_869264891784825520.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/3378105dfec7ed696aa1979d40fb7144_2381850327065183137.png",
                 "char_chan_id": "998"
             },
             {
                 "char_name": "耀嘉音",
-                "char_color": "#c5222b",
+                "char_color": "#c4232f",
                 "char_line": "接下来的歌，献给这个世界！",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/127387/2c6ff3109152efaead1c83ad7044f288_1404588502722576778.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/127387/d03a4e46d5e3ae386907b1ef95f5a333_8651111707701327465.png",
@@ -355,7 +413,7 @@
             },
             {
                 "char_name": "浅羽悠真",
-                "char_color": "#5d8ec5",
+                "char_color": "#facf4e",
                 "char_line": "很高兴认识你，除非你是来叫我加班的。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126693/433de1a76a546193bd4ca03c76f4f021_4012042077257332343.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126693/6745b3d4425e0cc3616e6ea7f36a0c4b_8670525464082279852.png",
@@ -363,7 +421,7 @@
             },
             {
                 "char_name": "莱特",
-                "char_color": "#d96059",
+                "char_color": "#8c2e2c",
                 "char_line": "有人想要挑战一下常胜冠军吗？",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/5dbe769445d8664de826afa830e63d8b_815126013622097545.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/4fcbe0b3d97cf0bd90ee5f79181809fc_3361821456713249015.png",
@@ -371,7 +429,7 @@
             },
             {
                 "char_name": "月城柳",
-                "char_color": "#fbd8d2",
+                "char_color": "#ffb8b5",
                 "char_line": "对空六课副课长月城柳，向您问好。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/79e4b1e0f1025aebdefddb3be13df67c_6291222720087711466.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/909e27d4a1f840fff6d1856068be06f2_2839084200021298822.png",
@@ -379,15 +437,15 @@
             },
             {
                 "char_name": "柏妮思",
-                "char_color": "#cfb684",
-                "char_line": "你看起来不太热烈呢，<br/>要「燃」一下吗~",
-                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/c2e0087b8deafead3f0e39b62861db7d_5879050859176790791.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/1917005b1490693a16de2e6223c986e8_1028584946517791466.png",
+                "char_color": "#d63700",
+                "char_line": "「你看起来不太热烈呢，要『燃』一下吗~」",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/0bde4a096a6346a001295b85a2c74a0b_5743883974273711922.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/9d07876772aef5e590055c0b2c8a68b3_749308113487134841.png",
                 "char_chan_id": "889"
             },
             {
                 "char_name": "凯撒·金",
-                "char_color": "#d14e45",
+                "char_color": "#cfb685",
                 "char_line": "我就是凯撒，卡吕冬之子的老大。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/125210/05377cce77f7978d5896a1626a91d443_6362377634631686641.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/125210/814b42bde05eb41997c32b94705a0a5e_5531594070469280608.png",
@@ -395,7 +453,7 @@
             },
             {
                 "char_name": "赛斯·洛威尔",
-                "char_color": "#5d82b0",
+                "char_color": "#3db297",
                 "char_line": "队长，逮捕犯人就交给我吧！",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124700/c246552f6672e8877bccca2f8ece87c1_8614327593741193610.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124700/14988767fd0916d0063fc0097f656a42_4566522091989166627.png",
@@ -403,15 +461,15 @@
             },
             {
                 "char_name": "简·杜",
-                "char_color": "#83a09e",
+                "char_color": "#a50c2b",
                 "char_line": "哎呀，上次是上次嘛！这次我说的是真的哦，相信我吧~",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124675/57844dcbca0ae06307d16d92e4430ad4_4400410995056383301.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124675/e0bf1cb7547cbc89b67226ec9bfc9acd_4070184306411436761.png",
-                "char_chan_id": "926"
+                "char_chan_id": "782"
             },
             {
                 "char_name": "青衣",
-                "char_color": "#6b8571",
+                "char_color": "#3db297",
                 "char_line": "邂逅相遇，适我愿兮。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124660/230f4b74d788a87eac29456c9bd55523_407710037607077575.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124660/394f0f4e60787ba0669ebfe2ae572d98_3503317420990646059.png",
@@ -419,7 +477,7 @@
             },
             {
                 "char_name": "派派·韦尔",
-                "char_color": "#d5c798",
+                "char_color": "#f7b63f",
                 "char_line": "要载你一程吗？记得系好安全带哦。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124310/741d43186463f04c762ec3db5c324b22_1708213659253107053.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124310/168da80aafe64cb42bbbd12575208329_1629537670400613754.png",
@@ -427,7 +485,7 @@
             },
             {
                 "char_name": "露西",
-                "char_color": "#c6a97a",
+                "char_color": "#f2d5a1",
                 "char_line": "有贵客登门，就让本小姐来招待吧！",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124308/6463d738d4fa2dfcbff9d0ec221fd9d3_3901891948525993416.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124308/aaecc6959db75ce722d409a16795e5de_1126366155690144326.png",
@@ -435,7 +493,7 @@
             },
             {
                 "char_name": "朱鸢",
-                "char_color": "#5b93ce",
+                "char_color": "#1473c7",
                 "char_line": "都市秩序部刑侦组下属分队长朱鸢，随时待命。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/122782/f1104e9b26d696fa6063d46593286af9_397548901361650057.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/122782/dc80a0bf1d57d4343c03110f84ae2fcc_1306406606714622129.png",
@@ -443,7 +501,7 @@
             },
             {
                 "char_name": "艾莲·乔",
-                "char_color": "#bebfd2",
+                "char_color": "#ea6780",
                 "char_line": "啊，又是麻烦的委托…果然该换个班表。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/113671/832139c2f105cae385009f4ec150ce6f_3692851514341761853.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/113671/ac73015ad575dd0093228a46eebd79d9_8977863346370075623.png",
@@ -451,7 +509,7 @@
             },
             {
                 "char_name": "亚历山德丽娜",
-                "char_color": "#c4c1b1",
+                "char_color": "#cfc9ba",
                 "char_line": "您就是这次的主人吗？<br/>维多利亚家政丽娜，为您服务。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/113612/1017d77a8f98ad151de5d152d4f5372d_7514167879033239625.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/113612/aba218021520e66e0dcfac1114df4a71_8151821799162446072.png",
@@ -459,7 +517,7 @@
             },
             {
                 "char_name": "格莉丝·霍华德",
-                "char_color": "#ed6646",
+                "char_color": "#e54f48",
                 "char_line": "这冷峻硬朗的线条，真美啊……<br>忍不住想拆开来看看呢。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/113532/84d585cf9fe066af620be0047ad176ff_5638403101394275027.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/113532/0e4a2f50886d5d9dfffcc6029adc6b5e_2458752736676745374.png",
@@ -467,7 +525,7 @@
             },
             {
                 "char_name": "星见雅",
-                "char_color": "#4ba3ad",
+                "char_color": "#20c6ce",
                 "char_line": "秩序，不可破。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/103379/75d69cb6606fbe9a577a0517fb8ba2c5_3402451335932360471.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/103379/0196c30d294f6e1cfa33e9223bdbd724_156109339266453416.png",
@@ -475,7 +533,7 @@
             },
             {
                 "char_name": "苍角",
-                "char_color": "#6ea0d9",
+                "char_color": "#8bc3dc",
                 "char_line": "只要能一直吃饱肚子，<br>苍角就已经很幸福啦~",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/11/03/beafe6de25b5a7597a834081dfb5769e_4530593817636422661.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/3c8921632652bafb5e27b0765dc20541_8641936950124923398.png",
@@ -483,7 +541,7 @@
             },
             {
                 "char_name": "本·比格",
-                "char_color": "#a68d73",
+                "char_color": "#9a8776",
                 "char_line": "我喜欢算术，但这不妨碍我一巴掌拍碎歹徒。",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/09/13/add2d18de9de70a8742461335a7f5184_9083986488092290309.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/65dd458a093d161ffd30ece5054ad68a_8072386834829421211.png",
@@ -491,7 +549,7 @@
             },
             {
                 "char_name": "安东·伊万诺夫",
-                "char_color": "#d7be71",
+                "char_color": "#e67a45",
                 "char_line": "有搞不定的活儿？让我来！ ",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/08/30/c4b6bf4e9214175a08d8ddd401a8720f_5572483592508810877.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2022/08/30/e7d89bcf7b4bddf3814b69c71c4432b7_8210526894800624759.png",
@@ -499,7 +557,7 @@
             },
             {
                 "char_name": "珂蕾妲·贝洛伯格",
-                "char_color": "#e94f13",
+                "char_color": "#e45a38",
                 "char_line": "我就是白祇重工的社长，珂蕾妲。",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/102708/a7c2caba53262c8b36b1e97dd4a28045_7481629679718021345.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102708/c6586d89e3561e3b30859c14861bd51a_906120803982789425.png",
@@ -507,7 +565,7 @@
             },
             {
                 "char_name": "冯·莱卡恩",
-                "char_color": "#d0d3e0",
+                "char_color": "#cbd2f3",
                 "char_line": "执事莱卡恩，感谢您的指名。",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/21/dda254b8c179338463ae9dcfbc0cc2e1_2053525689951876225.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/21/be629e986380c894d4104435fda2d348_4617848246597868290.png",
@@ -515,7 +573,7 @@
             },
             {
                 "char_name": "可琳·威克斯",
-                "char_color": "#c8d7bd",
+                "char_color": "#a5bb9b",
                 "char_line": "我、我这样的人……真的可以吗？",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/13/030cc4746c6ab2b75027a2c367caa8b9_1734879417695865991.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/5913f027102b6c6850e398ce8bc49ea2_7354356136345697622.png",
@@ -523,7 +581,7 @@
             },
             {
                 "char_name": "猫宫又奈",
-                "char_color": "#c84f30",
+                "char_color": "#c9442a",
                 "char_line": "最好吃的青花鱼，<br>永远是还没吃到的那一条~",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/07/8464e6f94fc174395a5d7d86cc6ddb48_4975354210448367286.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102427/14e9dbcd1e22c15efee2f6521755c4f0_7894770830201738163.png",
@@ -531,7 +589,7 @@
             },
             {
                 "char_name": "11号",
-                "char_color": "#ffbb2a",
+                "char_color": "#fbc839",
                 "char_line": "我不关心你去了哪里，但无论如何，请给我留下命令。",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/06/10/cb8cf61f821b236b3da5d3211da753a9_3875929208286602235.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102292/679983102dba5b485de849c08dc15751_9000842772761452425.png",
@@ -539,7 +597,7 @@
             },
             {
                 "char_name": "比利·奇德",
-                "char_color": " #cf443f",
+                "char_color": "#d74441",
                 "char_line": "星徽骑士可是不会输的<br>哈——哈哈哈！",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/19/eea067cdceeda7b8cf45fd776f74e13a_4226709793790517741.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/26/fb9112e3a564f716e9ca2c364031a9c4_3251784621082537522.png",
@@ -547,7 +605,7 @@
             },
             {
                 "char_name": "妮可·德玛拉",
-                "char_color": "#f7bfbb",
+                "char_color": "#ffa9b3",
                 "char_line": "明智之选！<br/>不过提前说好，我出场费可不低哦！",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/19/1a82a5a83749ca6b128c81381fe94063_1074261892080967189.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102183/62512dd00e05045759ec3521dddbdef5_6237140226188483622.png",
@@ -555,7 +613,7 @@
             },
             {
                 "char_name": "安比·德玛拉",
-                "char_color": "#d1e875",
+                "char_color": "#b4c966",
                 "char_line": "目标确认，开始行动。",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/18/ba3e92bf0ea390a702969b204ae562f3_3515216936997121656.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102103/eecdce796ddabd20b80ab942dc49b754_2983546474985668407.png",
@@ -564,16 +622,88 @@
         ],
         [
             {
+                "char_name": "Ye Shunguang",
+                "char_color": "#db3c2f",
+                "char_line": "\"I shall wield my blade and shatter every thread of fate.\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160762/72decac9f08ade9215c5c0b86001748a_5295978420826325988.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160762/10ea46188c13f32ec74632f544a01065_120350314203937228.png",
+                "char_chan_id": "1185"
+            },
+            {
+                "char_name": "Zhao",
+                "char_color": "#fdb9b7",
+                "char_line": "\"Since you're here, how about we cut a deal?\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160758/e00785d194cb0ea13b2483033f0ef14f_500773984414255740.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160758/3e0e563629bb0e6094c5f0282a4113c7_7620601704276556671.png",
+                "char_chan_id": "1290"
+            },
+            {
+                "char_name": "Banyue",
+                "char_color": "#f9c762",
+                "char_line": "\"How dare you vile creatures tread upon the lands under my protection!\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160168/ec770a6fcdec8286a46b3485da196bb5_4564360847242418857.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160168/d95bad5eb7be3804e90bca5e74e8e633_8139137867747449710.png",
+                "char_chan_id": "1290"
+            },
+            {
+                "char_name": "Dialyn",
+                "char_color": "#61bbab",
+                "char_line": "\"A complaint? Hey, don't get too worked up~\" \"Considering you looked a bit pale, that was a special service to get some color back in your face~\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/160142/75bd51f7024230b601a5d3487a3eebce_145796271966977572.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/160142/b7808860e5bf066a6cb3acf54d6c1bc9_7232633668858881918.png",
+                "char_chan_id": "1290"
+            },
+            {
+                "char_name": "Yidhari",
+                "char_color": "#9b6eaf",
+                "char_line": "\"I wish stories never end — then I'd have the courage to keep turning pages forever.\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/158997/18361ff08208de65d06a24a6a954888a_217488038964988889.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/158997/08f75c27c495115214021d3f1490b290_1154558186402909553.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "Komano Manato",
+                "char_color": "#c14528",
+                "char_line": "\"If any trouble comes up, just get behind me.\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/158996/efef9ce9a894a05b3043dd228c65750c_5921155371898421236.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/158996/da2df60f3301effcdb2cce40a1bb8908_3101741179189331034.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "Lucia",
+                "char_color": "#539098",
+                "char_line": "\"Wanna hear a story about Ethereals? If you listen, we'll be friends! Listen to one more, and we'll be best friends!\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/158985/866b2bad3181f9b3ea15e9ff37cdb59c_553818798300571377.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/158985/014903bb6d6083bc8975aa90e20d936a_353306176932018676.png",
+                "char_chan_id": "1191"
+            },
+            {
+                "char_name": "Orphie & Magus",
+                "char_color": "#ee6e41",
+                "char_line": "\"Tactical strategy: Annihilation-Delta!\"\"Yes, Captain Magus!\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/157833/227b72ab338a1edf2d38ceaaf0087b9f_9097590178697960741.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/157833/4753ac41fd39f1bfc4d498d95dd9413f_8227006151760936870.png",
+                "char_chan_id": "299"
+            },
+            {
+                "char_name": "Seed",
+                "char_color": "#aee2ef",
+                "char_line": "\"Proxies are like... our 'kindred spirits.' Just like four-leaf clovers and canola flowers.\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/157829/7d748a5d77c3ef4675c8f2875998c12d_570234150096090284.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/157829/d516676e8f25ce417d31039bab96b094_1840268703818138952.png",
+                "char_chan_id": "299"
+            },
+            {
                 "char_name": "Alice Thymefield",
-                "char_color": "#407ebf",
+                "char_color": "#ffb0a3",
                 "char_line": "\"T—This... A Thymefield descendant would never back down from a challenge of this level!\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/e79decbb89496962d5e43d12c8acfb9c_3624411308298773994.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/b565995a902912b33d0642db43c77d1b_4071595144312336504.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156728/89dc2b52ab90b5e3553ba108ffef6ce2_8803795598436442350.png",
                 "char_chan_id": "1191"
             },
             {
                 "char_name": "Ukinami Yuzuha",
-                "char_color": "#f96c6b",
+                "char_color": "#ed545a",
                 "char_line": "\"Feeling down on your luck? Why not... ask the tanuki for some advice?\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/43ae40a750b7e6a0affc58e191757916_1980741451904466813.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/156729/d199623f93344770295bb5fe5bdbf59f_8139974073628632189.png",
@@ -581,7 +711,7 @@
             },
             {
                 "char_name": "Ju Fufu",
-                "char_color": "#ffce6d",
+                "char_color": "#eeab4c",
                 "char_line": "\"Fierce tigers prowl Yunkui Summit, where righteous heroes display their might!\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/4a9b2cf4fe774bab5b4c120bbe3ee182_5096951012147369687.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155659/dbbf26de8101c4e37e36eeaac7eacca8_9026544933917816900.png",
@@ -589,7 +719,7 @@
             },
             {
                 "char_name": "Pan Yinhu",
-                "char_color": "#c74d4d",
+                "char_color": "#de982e",
                 "char_line": "\"Even plants know to feed from the soil and drink dew — there's no way we can practice on an empty stomach!\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155657/1234ad9c4ea58535d5cf6cc617d4b238_3797870450782464145.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155657/9addb3fb69ed17ec48fed8a65cd7abfa_5452709093081238020.png",
@@ -597,7 +727,7 @@
             },
             {
                 "char_name": "Yixuan",
-                "char_color": "#f2982f",
+                "char_color": "#ffc149",
                 "char_line": "\"Once you enter these gates, leave your worldly concerns and formalities at the foot of the mountain.\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/155654/b4e4547e15b58b9f0f21034e54fe460a_5712876540649974168.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/155654/72d22b01e56074b0c69b86f952e64a19_6008130904669615474.png",
@@ -605,7 +735,7 @@
             },
             {
                 "char_name": "Hugo",
-                "char_color": "#667ad9",
+                "char_color": "#6770e7",
                 "char_line": "\"My dear friend, I'll be back, like an avalanche.\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/f187608aaeac692b4c6202aea992df20_3648921785296803268.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154609/931ae0d821ace45a375a4332bf3e038e_8061430778645257430.png",
@@ -613,7 +743,7 @@
             },
             {
                 "char_name": "Vivian",
-                "char_color": "#cdbcf3",
+                "char_color": "#cabcf2",
                 "char_line": "\"Do not close the window, for the birds will bring love and carry away death.\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/6aa9864333ed958f50eccfa0bd2f1e3a_5371935286784919823.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/154605/f6b7a0a29487f8153da57fe124f048a9_4437497753091967697.png",
@@ -621,7 +751,7 @@
             },
             {
                 "char_name": "Trigger",
-                "char_color": "#e3b348",
+                "char_color": "#ead75a",
                 "char_line": "\"I see you.\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129638/c404967b14044b58e05bed2679213dbd_8283889538082286267.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129638/ab70d69803b35b1bd5cccaa75aff3369_3736306923345949000.png",
@@ -629,7 +759,7 @@
             },
             {
                 "char_name": "Pulchra Fellini",
-                "char_color": "#eac987",
+                "char_color": "#e5c28b",
                 "char_line": "\"My loyalty lies with the winner. And the winner? That's always me.\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129637/22caaaf3999fd9b413c2ce7d1667cdd9_8037228699291393591.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129637/edaf4a7434676ec37a3e474d64ea94ca_5377396782143850826.png",
@@ -637,7 +767,7 @@
             },
             {
                 "char_name": "Soldier 0 - Anby",
-                "char_color": "#ffc34e",
+                "char_color": "#eca03e",
                 "char_line": "\"Suiting up before the big battle. Hmm, a classic movie trope.\"",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/b0b79acc2242d0a05c338ea187b95ab5_8269376756759669834.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/129632/d173d2ea2b2304b6a907ea74022df992_6892899806043106478.png",
@@ -645,15 +775,15 @@
             },
             {
                 "char_name": "Evelyn Chevalier",
-                "char_color": "#784adb",
-                "char_line": "Miss Yao is currently enjoying her private time and will not be taking any interviews.\"",
-                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/e5e4b7e2cb35a8257fd5e787f67a2b6a_2825040355461309369.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/02dec006a297051d8566a4cd01b1b4bd_4474979868418126210.png",
+                "char_color": "#8e6dca",
+                "char_line": "\"Miss Yao is currently enjoying her private time and will not be taking any interviews.\"\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/d91382cdacb9815b89fb4ff72233e81f_6805343412071585739.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/127403/3378105dfec7ed696aa1979d40fb7144_8196301255857819366.png",
                 "char_chan_id": "998"
             },
             {
                 "char_name": "Astra Yao",
-                "char_color": "#c5222b",
+                "char_color": "#c4232f",
                 "char_line": "This next song is<br/>dedicated to the world!",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/127387/2c6ff3109152efaead1c83ad7044f288_1404588502722576778.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/127387/d03a4e46d5e3ae386907b1ef95f5a333_8651111707701327465.png",
@@ -661,7 +791,7 @@
             },
             {
                 "char_name": "Asaba Harumasa",
-                "char_color": "#5d8ec5",
+                "char_color": "#facf4e",
                 "char_line": "Nice to meet you, unless you're here to make me work overtime.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126693/433de1a76a546193bd4ca03c76f4f021_4012042077257332343.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126693/6745b3d4425e0cc3616e6ea7f36a0c4b_8670525464082279852.png",
@@ -669,7 +799,7 @@
             },
             {
                 "char_name": "Lighter",
-                "char_color": "#d96059",
+                "char_color": "#8c2e2c",
                 "char_line": "Is anyone up for challenging the<br/>undefeated Champion?",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/5dbe769445d8664de826afa830e63d8b_815126013622097545.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126060/4fcbe0b3d97cf0bd90ee5f79181809fc_3361821456713249015.png",
@@ -677,7 +807,7 @@
             },
             {
                 "char_name": "Tsukishiro Yanagi",
-                "char_color": "#fbd8d2",
+                "char_color": "#ffb8b5",
                 "char_line": "Hello, I'm Tsukishiro Yanagi, Deputy Chief of Section 6.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/79e4b1e0f1025aebdefddb3be13df67c_6291222720087711466.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/126040/909e27d4a1f840fff6d1856068be06f2_2839084200021298822.png",
@@ -685,15 +815,15 @@
             },
             {
                 "char_name": "Burnice",
-                "char_color": "#cfb684",
-                "char_line": "You don't seem too fired up. Need a little spark~?",
-                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/c2e0087b8deafead3f0e39b62861db7d_5879050859176790791.png",
-                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/1917005b1490693a16de2e6223c986e8_1028584946517791466.png",
+                "char_color": "#d63700",
+                "char_line": "\"You don't seem too fired up. Need a little spark~?\"",
+                "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/0bde4a096a6346a001295b85a2c74a0b_4512569625185568506.png",
+                "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/125214/9d07876772aef5e590055c0b2c8a68b3_2562919024918177716.png",
                 "char_chan_id": "889"
             },
             {
                 "char_name": "Caesar King",
-                "char_color": "#d14e45",
+                "char_color": "#cfb685",
                 "char_line": "I'm Caesar herself, the leader of Sons of Calydon.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/125210/05377cce77f7978d5896a1626a91d443_6362377634631686641.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/125210/814b42bde05eb41997c32b94705a0a5e_5531594070469280608.png",
@@ -701,7 +831,7 @@
             },
             {
                 "char_name": "Seth Lowell",
-                "char_color": "#5d82b0",
+                "char_color": "#3db297",
                 "char_line": "Captain, I'll apprehend the perp!",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124700/c246552f6672e8877bccca2f8ece87c1_8614327593741193610.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124700/14988767fd0916d0063fc0097f656a42_4566522091989166627.png",
@@ -709,15 +839,15 @@
             },
             {
                 "char_name": "Jane Doe",
-                "char_color": "#83a09e",
+                "char_color": "#a50c2b",
                 "char_line": "Well, last time was last time! This time, I'm telling the truth. Trust me~",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124675/57844dcbca0ae06307d16d92e4430ad4_4400410995056383301.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124675/e0bf1cb7547cbc89b67226ec9bfc9acd_4070184306411436761.png",
-                "char_chan_id": "926"
+                "char_chan_id": "782"
             },
             {
                 "char_name": "Qingyi",
-                "char_color": "#6b8571",
+                "char_color": "#3db297",
                 "char_line": "A chance encounter, just as I had hoped.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124660/230f4b74d788a87eac29456c9bd55523_407710037607077575.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124660/394f0f4e60787ba0669ebfe2ae572d98_3503317420990646059.png",
@@ -725,7 +855,7 @@
             },
             {
                 "char_name": "Piper Wheel",
-                "char_color": "#d5c798",
+                "char_color": "#f7b63f",
                 "char_line": "Need a lift? Don't forget to buckle up.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124310/741d43186463f04c762ec3db5c324b22_1708213659253107053.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124310/168da80aafe64cb42bbbd12575208329_1629537670400613754.png",
@@ -733,7 +863,7 @@
             },
             {
                 "char_name": "Lucy",
-                "char_color": "#c6a97a",
+                "char_color": "#f2d5a1",
                 "char_line": "An honored guest just arrived. Allow me, Lady Lucy, to entertain you!",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/124308/6463d738d4fa2dfcbff9d0ec221fd9d3_3901891948525993416.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/124308/aaecc6959db75ce722d409a16795e5de_1126366155690144326.png",
@@ -741,7 +871,7 @@
             },
             {
                 "char_name": "Zhu Yuan",
-                "char_color": "#5b93ce",
+                "char_color": "#1473c7",
                 "char_line": "Leader of Public Security's Criminal Investigation team, Zhu Yuan, standing by.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/122782/f1104e9b26d696fa6063d46593286af9_397548901361650057.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/122782/dc80a0bf1d57d4343c03110f84ae2fcc_1306406606714622129.png",
@@ -749,7 +879,7 @@
             },
             {
                 "char_name": "Ellen Joe",
-                "char_color": "#bebfd2",
+                "char_color": "#ea6780",
                 "char_line": "Ah, another annoying commission... I should've taken a different shift.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/113671/832139c2f105cae385009f4ec150ce6f_4543671535087768944.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/113671/ac73015ad575dd0093228a46eebd79d9_547530297226335776.png",
@@ -757,7 +887,7 @@
             },
             {
                 "char_name": "Alexandrina",
-                "char_color": "#c4c1b1",
+                "char_color": "#cfc9ba",
                 "char_line": "Are you the new master?<br/>Rina from Victoria<br/>Housekeeping, at your service.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/113612/1017d77a8f98ad151de5d152d4f5372d_8942850386923771729.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/113612/aba218021520e66e0dcfac1114df4a71_8151821799162446072.png",
@@ -765,7 +895,7 @@
             },
             {
                 "char_name": "Grace Howard",
-                "char_color": "#ed6646",
+                "char_color": "#e54f48",
                 "char_line": "Such sharp and strong lines, truly beautiful...<br/>I can't help but want to open it up and<br/>take a look.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/113532/84d585cf9fe066af620be0047ad176ff_1039081027002124181.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/113532/0e4a2f50886d5d9dfffcc6029adc6b5e_3148086777393213482.png",
@@ -773,7 +903,7 @@
             },
             {
                 "char_name": "Hoshimi Miyabi",
-                "char_color": "#4ba3ad",
+                "char_color": "#20c6ce",
                 "char_line": "Order cannot be<br>broken.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/103379/75d69cb6606fbe9a577a0517fb8ba2c5_3402451335932360471.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/103379/0196c30d294f6e1cfa33e9223bdbd724_156109339266453416.png",
@@ -781,7 +911,7 @@
             },
             {
                 "char_name": "Soukaku",
-                "char_color": "#6ea0d9",
+                "char_color": "#8bc3dc",
                 "char_line": "<span style=\"font-size:0.22rem\">I'm happy as long as<br>I can always eat my fill~</span>",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/11/03/beafe6de25b5a7597a834081dfb5769e_8683135620539831777.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/3c8921632652bafb5e27b0765dc20541_8641936950124923398.png",
@@ -789,7 +919,7 @@
             },
             {
                 "char_name": "Ben Bigger",
-                "char_color": "#a68d73",
+                "char_color": "#9a8776",
                 "char_line": "I'm kind of a math nerd, but that doesn't<br>stop me from beating on some thugs.",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/09/13/add2d18de9de70a8742461335a7f5184_1548989574811540014.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/65dd458a093d161ffd30ece5054ad68a_8883234495641630672.png",
@@ -797,7 +927,7 @@
             },
             {
                 "char_name": "Anton Ivanov",
-                "char_color": "#d7be71",
+                "char_color": "#e67a45",
                 "char_line": "Tough job? I got this!",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/08/30/c4b6bf4e9214175a08d8ddd401a8720f_7222311897393750191.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2022/08/30/e7d89bcf7b4bddf3814b69c71c4432b7_4611223815002098932.png",
@@ -805,7 +935,7 @@
             },
             {
                 "char_name": "Koleda Belobog",
-                "char_color": "#e94f13",
+                "char_color": "#e45a38",
                 "char_line": "I'm Belobog Heavy Industries'<br>president, Koleda.",
                 "char_avatar": "https://fastcdn.hoyoverse.com/content-v2/nap/102708/a7c2caba53262c8b36b1e97dd4a28045_98406163945789696.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102708/c6586d89e3561e3b30859c14861bd51a_3017239837686670841.png",
@@ -813,7 +943,7 @@
             },
             {
                 "char_name": "Von Lycaon",
-                "char_color": "#d0d3e0",
+                "char_color": "#cbd2f3",
                 "char_line": "Your personal attendant Lycaon,<br>at your service.",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/21/dda254b8c179338463ae9dcfbc0cc2e1_5782801359758832877.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/21/be629e986380c894d4104435fda2d348_1594083901627482773.png",
@@ -821,7 +951,7 @@
             },
             {
                 "char_name": "Corin Wickes",
-                "char_color": "#c8d7bd",
+                "char_color": "#a5bb9b",
                 "char_line": "Can someone like me really manage?",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/13/030cc4746c6ab2b75027a2c367caa8b9_7268529475331555221.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2023/07/05/5913f027102b6c6850e398ce8bc49ea2_6310089607880958765.png",
@@ -829,7 +959,7 @@
             },
             {
                 "char_name": "Nekomiya Mana",
-                "char_color": "#c84f30",
+                "char_color": "#c9442a",
                 "char_line": "<span style=\"font-size:0.24rem; line-height: 1; display: inline-block\">The best mackerel is always<br>the one you haven't eaten yet~</span>",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/07/07/8464e6f94fc174395a5d7d86cc6ddb48_3325708175968788803.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102427/14e9dbcd1e22c15efee2f6521755c4f0_7307048369581571181.png",
@@ -837,7 +967,7 @@
             },
             {
                 "char_name": "Soldier 11",
-                "char_color": "#ffbb2a",
+                "char_color": "#fbc839",
                 "char_line": "I don't care where you've been, but whatever the case, I await my orders.",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/06/10/cb8cf61f821b236b3da5d3211da753a9_7173330069742745254.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102292/679983102dba5b485de849c08dc15751_2322216831523889855.png",
@@ -845,7 +975,7 @@
             },
             {
                 "char_name": "Billy Kid",
-                "char_color": "#cf443f",
+                "char_color": "#d74441",
                 "char_line": "The Starlight Knights never lose<br>Hahaha!",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/19/eea067cdceeda7b8cf45fd776f74e13a_4226709793790517741.png",
                 "char_cover_home": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/26/fb9112e3a564f716e9ca2c364031a9c4_3592744405964626365.png",
@@ -853,7 +983,7 @@
             },
             {
                 "char_name": "Nicole Demara",
-                "char_color": "#f7bfbb",
+                "char_color": "#ffa9b3",
                 "char_line": "A wise choice!<br>But I should warn you,<br>my services don't come cheap!",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/19/1a82a5a83749ca6b128c81381fe94063_1074261892080967189.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102183/62512dd00e05045759ec3521dddbdef5_5511547019585119339.png",
@@ -861,7 +991,7 @@
             },
             {
                 "char_name": "Anby Demara",
-                "char_color": "#d1e875",
+                "char_color": "#b4c966",
                 "char_line": "Target confirmed. Commencing the operation.",
                 "char_avatar": "https://webstatic.hoyoverse.com/upload/op-public/2022/05/18/ba3e92bf0ea390a702969b204ae562f3_3515216936997121656.png",
                 "char_cover_home": "https://fastcdn.hoyoverse.com/content-v2/nap/102103/eecdce796ddabd20b80ab942dc49b754_2983546474985668407.png",
@@ -870,6 +1000,114 @@
         ]
     ],
     "JS_CHAR": {
+        "ye_shunguang": {
+            "key": "Ye Shunguang",
+            "id": "ye_shunguang",
+            "name": "叶瞬光",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「我愿执剑，碎尽万般因果。」",
+            "camp": "YunkuiSummit",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "zhao": {
+            "key": "Zhao",
+            "id": "zhao",
+            "name": "照",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「既然来了，不妨和我做个交易？」",
+            "camp": "KrampusComplianceAuthority",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "banyue": {
+            "key": "Banyue",
+            "id": "banyue",
+            "name": "般岳",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「我所护佑之地，岂容尔等邪祟踏足！」",
+            "camp": "KrampusComplianceAuthority",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "dialyn": {
+            "key": "Dialyn",
+            "id": "dialyn",
+            "name": "琉音",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「投诉？别生气呀～」「考虑到您气色不好，刚才那是特地为您准备的『红温』服务呢~」",
+            "camp": "KrampusComplianceAuthority",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "yidhari": {
+            "key": "Yidhari",
+            "id": "yidhari",
+            "name": "伊德海莉",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「真希望所有的故事都没有结局，那样我就有了不停翻页的勇气。」",
+            "camp": "SpookShack",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "komano_manato": {
+            "key": "Komano Manato",
+            "id": "komano_manato",
+            "name": "狛野真斗",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「万一有什么麻烦，就站到我身后吧。」",
+            "camp": "SpookShack",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "lucia": {
+            "key": "Lucia",
+            "id": "lucia",
+            "name": "卢西娅",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「想听以骸的故事吗？听一个吧~听了我们就是朋友，听两个就是好朋友！」",
+            "camp": "SpookShack",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "orphie_magus": {
+            "key": "Orphie & Magus",
+            "id": "orphie_magus",
+            "name": "奥菲丝&「鬼火」",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「战术对策：歼灭-四！」「是！『鬼火』队长！」",
+            "camp": "ObolSquad",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
+        "seed": {
+            "key": "Seed",
+            "id": "seed",
+            "name": "「席德」",
+            "prefix": "",
+            "star": 5,
+            "event_exclusive": true,
+            "intro": "「绳匠…是『同类』呢。就像四叶草和油菜花。」",
+            "camp": "ObolSquad",
+            "ele": "Element.ether",
+            "weapon": "Weapon.anomaly"
+        },
         "alice_thymefield": {
             "key": "Alice Thymefield",
             "id": "alice_thymefield",
@@ -957,7 +1195,7 @@
         "trigger": {
             "key": "Trigger",
             "id": "trigger",
-            "name": "扳机",
+            "name": "「扳机」",
             "prefix": "",
             "star": 5,
             "event_exclusive": true,
@@ -997,7 +1235,7 @@
             "prefix": "",
             "star": 5,
             "event_exclusive": true,
-            "intro": "现在是小姐的私人时间，不接受任何形式的采访。",
+            "intro": "「现在是小姐的私人时间，不接受任何形式的采访。」",
             "camp": "StarsofLyra",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
@@ -1057,7 +1295,7 @@
             "prefix": "",
             "star": 5,
             "event_exclusive": true,
-            "intro": "你看起来不太热烈呢，<br/>要「燃」一下吗~",
+            "intro": "「你看起来不太热烈呢，要『燃』一下吗~」",
             "camp": "SonsofCalydon",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
@@ -1094,7 +1332,7 @@
             "star": 5,
             "event_exclusive": true,
             "intro": "哎呀，上次是上次嘛！这次我说的是真的哦，相信我吧~",
-            "camp": "FactionUnknown",
+            "camp": "CriminalInvestigationSpecialResponseTeam",
             "ele": "Element.ether",
             "weapon": "Weapon.anomaly"
         },
