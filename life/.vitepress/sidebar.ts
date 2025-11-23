@@ -7,7 +7,6 @@ const prefixArticle = '/article';
 const prefixHistory = '/history';
 const prefixLang = '/language';
 const prefixXiwen = '/xiwen';
-const prefixDiseaseRecord = '/disease/record';
 const prefixCommandTools = '/tools/cmd-line-tools';
 const sidebarEat = [
     { text: '吃饭了', link: '/eat/' },
@@ -572,7 +571,6 @@ const sidebarRandomNotes = [
 const sidebarCareer = [
     { text: '简历', link: '/career/cv' },
     { text: '年度报税', link: '/career/tax' },
-    { text: '互联网工作记录', link: '/career/record-net-work' },
     { text: '小小互联网震撼', link: '/career/net' },
     { text: '养老金', link: '/career/pension' },
     { text: '社保', link: '/career/social-security' },
@@ -632,14 +630,6 @@ const sidebarThought = [
         ]
     },
 ];
-
-const sidebarGrumbling = [
-    // { text: '牢骚', link: '/grumbling/' },
-    { text: '一次淘宝经历', link: '/grumbling/1' },
-    { text: '喷子', link: '/grumbling/2' },
-];
-
-
 const sidebarAccident = [
     // { text: '事故', link: '/accident/' },
     { text: '2018年重庆万州公交车坠江事故', link: '/accident/2018-Chongqing-bus-crash' },
@@ -654,35 +644,6 @@ const sidebarFunny = [
     { text: '三年疫情创造的246个名词', link: '/funny/covid-in-cn' },
     { text: '调休', link: '/funny/tiaoxiu' },
     { text: '充电宝', link: '/funny/charger' },
-];
-
-
-const sidebarDisease = [
-    { text: '病痛', link: '/disease/' },
-    { text: '胃镜', link: '/disease/gastroscopy' },
-    { text: '眼睛变化', link: '/disease/eyes' },
-    { text: '痤疮', link: '/disease/acne-vulgaris' },
-    { text: '牙', link: '/disease/tooth' },
-    { text: '过敏症状', link: '/disease/igg' },
-    {
-        text: '记录-自己的', collapsed: false, items: [
-            { text: '2025/06/25 颈椎', link: `${prefixDiseaseRecord}/self/20250625` },
-            { text: '2025/04/07 感冒', link: `${prefixDiseaseRecord}/self/20250407` },
-            { text: '2025/01/28 感冒', link: `${prefixDiseaseRecord}/self/20250128` },
-            { text: '2024/10/24 感冒', link: `${prefixDiseaseRecord}/self/20241024` },
-            { text: '2024/02/23 发烧', link: `${prefixDiseaseRecord}/self/20240223` },
-            { text: '2024/01/25 感冒', link: `${prefixDiseaseRecord}/self/20240125` },
-            { text: '2023/07/10 头痛', link: `${prefixDiseaseRecord}/self/20230710` },
-            { text: '2022/12/21 发烧', link: `${prefixDiseaseRecord}/self/20221221` },
-            { text: '2022/11/28 感冒', link: `${prefixDiseaseRecord}/self/20221128` },
-            { text: '2022/06/14 中暑', link: `${prefixDiseaseRecord}/self/20220614` },
-        ]
-    }, {
-        text: '记录-别人的', collapsed: true, items: [
-            { text: '2022/12/22 发烧', link: `${prefixDiseaseRecord}/others/20221222` },
-            { text: '2022/06/24 扁桃体炎', link: `${prefixDiseaseRecord}/others/20220624` },
-        ]
-    },
 ];
 
 
@@ -739,10 +700,8 @@ export const sidebar = {
     '/dev/': sidebarDev,
     '/exam/': sidebarExam,
     '/thought/': sidebarThought,
-    '/grumbling/': sidebarGrumbling,
     // 待定
     '/accident/': sidebarAccident,
     '/funny/': sidebarFunny,
-    '/disease/': sidebarDisease,
 
 };

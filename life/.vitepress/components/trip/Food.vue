@@ -11,26 +11,57 @@
         <el-button text @click="invertSelection">反选</el-button>
         <el-button text @click="clearSelection">清空</el-button>
     </div>
+    推荐餐厅列表：
     <ul>
-        <li v-for="(v, i) in sortedFoods" :key="i">
-            <span v-if="v.closed" class="closed">
-                <del> {{ v.name }}</del> (已倒闭)
-            </span>
-            <span v-else> {{ v.name }}</span>
-            <span v-if="isChain(v)">
-                <el-tooltip class="box-item" effect="dark" :content="`总部：${v.headquartersCity}`" placement="top">
-                    <Badge type="danger" :text="`连锁`" />
-                </el-tooltip>
-            </span>
-            <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
-            <span v-if="!Array.isArray(v.restaurantType)">
-                <Badge type="tip" :text="v.restaurantType" />
-            </span>
-            <span v-else>
-                <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :key="ii" :text="vv" />
-            </span>
-            {{ v.location }}
-        </li>
+        <template v-for="(v, i) in sortedFoods" :key="i">
+            <li v-if="v.recommendation">
+                <span v-if="v.closed" class="closed">
+                    <del> {{ v.name }}</del> (已倒闭)
+                </span>
+                <span v-else> {{ v.name }}</span>
+                <span v-if="isChain(v)">
+                    <el-tooltip class="box-item" effect="dark" :content="`总部：${v.headquartersCity}`" placement="top">
+                        <Badge type="danger" :text="`连锁`" />
+                    </el-tooltip>
+                </span>
+                <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
+                <span v-if="!Array.isArray(v.restaurantType)">
+                    <Badge type="tip" :text="v.restaurantType" />
+                </span>
+                <span v-else>
+                    <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :key="ii" :text="vv" />
+                </span>
+                {{ v.location }}
+            </li>
+        </template>
+    </ul>
+    不推荐餐厅列表：
+    <ul>
+        <template v-for="(v, i) in foodSource" :key="i">
+            <li v-if="!v.recommendation">
+                <span v-if="v.closed" class="closed">
+                    <del> {{ v.name }}</del> (已倒闭)
+                </span>
+                <span v-else-if="!v.recommendation" class="closed">
+                    <del> {{ v.name }}</del>
+                    <span>{{ `（${v.description}）` }}</span>
+                </span>
+                <span v-else> {{ v.name }}</span>
+                <span v-if="isChain(v)">
+                    <el-tooltip class="box-item" effect="dark" :content="`总部：${v.headquartersCity}`" placement="top">
+                        <Badge type="danger" :text="`连锁`" />
+                    </el-tooltip>
+                </span>
+                <Badge type="warning" :text="`人均 ¥${v.pricePerPerson}`" />
+                <span v-if="!Array.isArray(v.restaurantType)">
+                    <Badge type="tip" :text="v.restaurantType" />
+                </span>
+                <span v-else>
+                    <Badge type="tip" v-for="(vv, ii) in v.restaurantType" :key="ii" :text="vv" />
+                </span>
+                {{ v.location }}
+            </li>
+        </template>
     </ul>
 </template>
 
@@ -43,15 +74,27 @@ import { FoodRecord } from '../../type';
 const props = defineProps<{
     foods: FoodRecord[],
     all?: boolean,
+    filterTags?: string | string[],
 }>();
 
+// const foodSource = computed(() => props.foods.filter(food => props.filterTags
+//     ? Array.isArray(props.filterTags)
+//         ? props.filterTags.some(tag => Array.isArray(food.restaurantType)
+//             ? !food.restaurantType.includes(tag)
+//             : food.restaurantType != tag)
+//         : Array.isArray(food.restaurantType)
+//             ? !food.restaurantType.includes(props.filterTags)
+//             : food.restaurantType != props.filterTags
+//     : true
+// ));
+const foodSource = computed(() => props.foods);
 const key = ref(0);
-const sortedFoods = ref(props.foods);
+const sortedFoods = ref(foodSource.value);
 const selectedTags = ref<string[]>([]);
 
 const tags = Array.from(
     new Set(
-        props.foods.flatMap(obj =>
+        foodSource.value.flatMap(obj =>
             Array.isArray(obj.restaurantType) ? obj.restaurantType : [obj.restaurantType]
         )
     )
@@ -63,19 +106,14 @@ const sortFood = () => {
     key.value = key.value + 1;
     if (key.value > 2) key.value = 0;
 
-    let foodSource = props.foods;
-    if (selectedTags.value.length != 0) {
-        foodSource = sortedFoods.value;
-    }
-
     if (key.value === 0) {
-        sortedFoods.value = foodSource;
+        sortedFoods.value = foodSource.value;
     } else if (key.value === 1) {
-        sortedFoods.value = [...foodSource].sort((a, b) => {
+        sortedFoods.value = [...foodSource.value].sort((a, b) => {
             return b.pricePerPerson - a.pricePerPerson;
         });
     } else if (key.value === 2) {
-        sortedFoods.value = [...foodSource].sort((a, b) => {
+        sortedFoods.value = [...foodSource.value].sort((a, b) => {
             return a.pricePerPerson - b.pricePerPerson;
         });
     }
@@ -104,17 +142,17 @@ const clearSelection = () => {
 // 重置过滤器
 const resetFilter = () => {
     selectedTags.value = [];
-    sortedFoods.value = props.foods;
+    sortedFoods.value = foodSource.value;
 }
 
 // 监听标签选择变化，自动过滤
 watch(selectedTags, (newTags) => {
     if (newTags.length === 0) {
-        sortedFoods.value = props.foods;
+        sortedFoods.value = foodSource.value;
         return;
     }
 
-    sortedFoods.value = props.foods.filter((item: FoodRecord) => {
+    sortedFoods.value = foodSource.value.filter((item: FoodRecord) => {
         const itemTags = Array.isArray(item.restaurantType)
             ? item.restaurantType
             : [item.restaurantType];

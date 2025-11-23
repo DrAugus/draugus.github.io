@@ -60,7 +60,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 380,
-        restaurantType: ["日料", "烧烤", "肉"],
+        restaurantType: ["日料", "烧烤"],
         recommendation: true,
         closed: true,
     },
@@ -107,7 +107,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 180,
-        restaurantType: "日式烤肉",
+        restaurantType: ["日式烤肉", "日料"],
         recommendation: true,
     },
     {
@@ -116,7 +116,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 170,
-        restaurantType: ["牛肉", "自助"],
+        restaurantType: ["牛肉", "自助", "日料", "寿喜烧"],
         recommendation: true,
         headquartersCity: "上海"
     },
@@ -164,7 +164,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 92,
-        restaurantType: "烤串",
+        restaurantType: ["烤串", "东北菜"],
         recommendation: true,
     },
     {
@@ -289,7 +289,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 118,
-        restaurantType: ["烤全羊", "烧烤", "龙虾", "牛羊肉火锅"],
+        restaurantType: ["烤全羊", "烧烤", "龙虾", "牛肉火锅", "羊肉火锅"],
         recommendation: true,
     }, {
         name: "新白鹿",
@@ -313,7 +313,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 67,
-        restaurantType: ["烤鱼"],
+        restaurantType: ["烤鱼", "杭州限定"],
         recommendation: true,
     },
     {
@@ -330,7 +330,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 114,
-        restaurantType: ["粤菜"],
+        restaurantType: ["粤菜", "顺德菜"],
         recommendation: true,
     },
     {
@@ -341,6 +341,23 @@ const foodRecords: FoodRecord[] = [
         pricePerPerson: 96,
         restaurantType: "川菜",
         recommendation: true,
+    }, {
+        name: "粤顺·顺德菜",
+        city: "杭州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 146,
+        restaurantType: ["粤菜", "顺德菜"],
+        recommendation: true,
+    }, {
+        name: "大陈小院",
+        city: "杭州",
+        location: "",
+        businessHours: "",
+        pricePerPerson: 81,
+        restaurantType: ["融合菜", "杭帮菜"],
+        description: "性价比低,难吃",
+        recommendation: false,
     },
     {
         name: "三分银·辣之源贵州菜",
@@ -381,7 +398,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 10,
-        restaurantType: "面",
+        restaurantType: "面食",
         recommendation: true,
     }, {
         name: "新宜家面馆",
@@ -389,7 +406,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 10,
-        restaurantType: "面",
+        restaurantType: "面食",
         recommendation: true,
     }, {
         name: "金苑酒家",
@@ -413,7 +430,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 12,
-        restaurantType: "面",
+        restaurantType: "面食",
         recommendation: true,
     }, {
         name: "老厉饼",
@@ -421,7 +438,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 5,
-        restaurantType: ["小吃", "饼"],
+        restaurantType: ["小吃", "饼", "面食"],
         recommendation: true,
     }, {
         name: "秋记婺味",
@@ -429,7 +446,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 117,
-        restaurantType: "江浙菜",
+        restaurantType: "浙菜",
         recommendation: true,
     }, {
         name: "老阮杜泽灌肠鸡蛋粿",
@@ -437,7 +454,7 @@ const foodRecords: FoodRecord[] = [
         location: "",
         businessHours: "",
         pricePerPerson: 8,
-        restaurantType: ["小吃", "饼"],
+        restaurantType: ["小吃", "饼", "面食"],
         recommendation: true,
     }, {
         name: "衢小七乌佬果",

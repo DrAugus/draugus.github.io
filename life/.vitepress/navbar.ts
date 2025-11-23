@@ -74,8 +74,6 @@ export const navbar = [
       {
         text: '差不多得了',
         items: [
-          { text: '疾病', link: '/disease/', activeMatch: '/disease/' },
-          { text: '牢骚', link: '/grumbling/', activeMatch: '/grumbling/' },
           { text: '事故', link: '/accident/', activeMatch: '/accident/' },
           { text: '偷乐', link: '/funny/', activeMatch: '/funny/' },
         ],

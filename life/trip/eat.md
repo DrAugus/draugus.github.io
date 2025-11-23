@@ -11,5 +11,5 @@ sidebar: false
 
 <script setup>
 import { foodAll } from "../.vitepress/data/trip/food";
-import Food from "../.vitepress/components/trip/Food.vue";
+import Food from "../.vitepress/components/trip/FoodAll.vue";
 </script>

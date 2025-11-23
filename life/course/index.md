@@ -11,6 +11,8 @@
 哲学(Philosophy)、经济学(Economics)、法学(Law)、教育学(Education)、文学(Literature)、历史学(History)、理学(Science)、工学(Engineering)、农学(Agronomy)、医学(Medicine)、军事学(Military Science)、管理学(Management)、艺术学(Art)
 :::
 
+课程列表收录：[QSCTech/zju-icicles: 浙江大学课程攻略共享计划](https://github.com/QSCTech/zju-icicles)
+
 ## 最近学什么？
 
 :::info 本站近期更新学习笔记
