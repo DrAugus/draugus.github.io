@@ -27,7 +27,17 @@ export const VISITED_CHINA: ExploreRecord[] = [
             }
         ]
     },
-    { id: '重庆' },
+    {
+        id: '重庆', info: [
+            {
+                date: {
+                    start: new Date('2025/12/12'),
+                    end: new Date('2025/12/14'),
+                },
+                intro: "游玩"
+            },
+        ]
+    },
     {
         id: '香港', info: [
             {
@@ -171,6 +181,17 @@ export const VISITED_CHINA: ExploreRecord[] = [
                         },
                         intro: "游玩"
                     },
+                ]
+            },
+            {
+                id: '泉州', info: [
+                    {
+                        date: {
+                            start: new Date('2025/12/25'),
+                            end: new Date('2025/12/28'),
+                        },
+                        intro: "游玩"
+                    }
                 ]
             },
         ]

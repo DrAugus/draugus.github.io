@@ -29,6 +29,8 @@ const dataTravelogue: TravelogueInfo[] = [
     { title: '金华衢州南昌', date: new Date('2025/07/11'), city: ['金华', '衢州', '南昌'] },
     { title: '爱知富山石川', date: new Date('2025/07/28'), city: ['Aichi', 'Ishikawa', 'Toyama'] },
     { title: '厦门大阪京都', date: new Date('2025/10/02'), city: ['厦门', 'Kyoto', 'Osaka'] },
+    { title: '重庆', date: new Date('2025/12/12'), city: '重庆' },
+    { title: '泉州', date: new Date('2025/12/25'), city: '泉州' },
 ];
 
 const linkPrefix = '/trip/travelogue/';
