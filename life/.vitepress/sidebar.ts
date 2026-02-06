@@ -306,6 +306,7 @@ const sidebarTools = [
             { text: 'RBAC', link: '/tools/others/rbac' },
             { text: 'Excel', link: '/tools/others/excel' },
             { text: 'Word', link: '/tools/others/word' },
+            { text: 'Photoshop', link: '/tools/others/ps' },
         ]
     },
     {
@@ -539,6 +540,7 @@ const sidebarDevOps = [
     { text: 'Docker', link: '/code/devops/docker' },
     { text: 'Jenkins', link: '/code/devops/Jenkins' },
     { text: 'Mergify', link: '/code/devops/mergify' },
+    { text: 'Renovate', link: '/code/devops/renovate' },
     { text: 'Vercel', link: '/code/devops/vercel' },
     { text: 'Jira', link: '/code/devops/jira' },
 ];

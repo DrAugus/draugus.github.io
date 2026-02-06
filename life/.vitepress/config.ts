@@ -51,6 +51,12 @@ export default withPwa(defineConfig(<ExtendedUserConfig>{
                 link: 'https://github.com/sponsors/DrAugus'
             },
             { icon: 'github', link: 'https://github.com/DrAugus/draugus.github.io/tree/master/life' },
+            {
+                icon: {
+                    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><!-- Icon from Arcticons by Donnnno - https://creativecommons.org/licenses/by-sa/4.0/ --><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m24 3.5l6.634 13.252L44.5 24l-13.866 7.248L24 44.5l-6.634-13.252L3.5 24l13.866-7.248zM3.5 24h41M24 3.5v41m-6.634-13.252l13.268-14.496m0 14.496L17.366 16.752"/></svg>'
+                },
+                link: 'https://draugus.github.io/'
+            }
         ],
         editLink: {
             pattern: 'https://github.com/DrAugus/draugus.github.io/tree/master/life/:path',
