@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+<defs><style>.cls-1{fill:#4E3764;}.cls-2,.cls-3{fill:#fff;}.cls-2{opacity:0.51;}</style></defs>
+<title>pixian logo</title>
+<rect class="cls-1" width="16" height="16" rx="2" ry="2"/>
+<g class="cls-2">
+	<rect x="2" y="2" width="5" height="5" rx="1" ry="1"/>
+	<rect x="9" y="2" width="5" height="5" rx="1" ry="1"/>
+	<rect x="2" y="9" width="5" height="5" rx="1" ry="1"/>
+</g>
+<g class="cls-3" transform="translate(11.5 11.5) rotate(45)">
+	<rect x="-0.5" y="-3.25" width="1" height="6.5" rx=".5" ry=".5"/>
+	<rect x="-3.25" y="-0.5" width="6.5" height="1" rx=".5" ry=".5"/>
+</g>
+</svg>
