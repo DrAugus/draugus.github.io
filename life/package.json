@@ -20,7 +20,7 @@
     "element-plus": "^2.9.6",
     "markdown-it-mathjax3": "^5.0.0",
     "sass": "^1.70.0",
-    "typed.js": "2.1.0",
+    "typed.js": "3.0.0",
     "unplugin-element-plus": "^0.11.0",
     "vite": "^7.0.0",
     "vite-plugin-pwa": "^1.0.0",
