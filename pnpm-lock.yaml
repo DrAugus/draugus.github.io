@@ -63,7 +63,7 @@ importers:
         version: 1.1.0(vite-plugin-pwa@1.2.0(vite@7.3.1(jiti@2.6.1)(sass@1.97.3)(terser@5.46.0))(workbox-build@7.4.0)(workbox-window@7.4.0))
       chinese-days:
         specifier: ^1.5.4
-        version: 1.5.5
+        version: 1.5.7
       dayjs:
         specifier: 1.11.19
         version: 1.11.19
@@ -1738,8 +1738,8 @@ packages:
   character-entities-legacy@3.0.0:
     resolution: {integrity: sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==}
 
-  chinese-days@1.5.5:
-    resolution: {integrity: sha512-OztQE/ZYEaq4HPNK0i7x4yKkSzdv94Ry8cio/P0zS3ox3x/gyryev7LF6AjREdvkeARM4U8oGJttHMBoFL90Nw==}
+  chinese-days@1.5.7:
+    resolution: {integrity: sha512-8Z/afgDTct5jsoTLQTOZfpDl7w4pJH4jpr3DLxy6HING9U/e0EV7yiNxF/HVXp/c+eQFfFqv+HQZ/QDaIVJ1Vw==}
 
   chokidar@4.0.3:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
@@ -4716,7 +4716,7 @@ snapshots:
 
   character-entities-legacy@3.0.0: {}
 
-  chinese-days@1.5.5: {}
+  chinese-days@1.5.7: {}
 
   chokidar@4.0.3:
     dependencies:
