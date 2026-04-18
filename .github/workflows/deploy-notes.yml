@@ -45,7 +45,7 @@ jobs:
       - name: Change nuxt.config.ts
         run: mv nuxt.config.ts.example nuxt.config.ts
 
-      - uses: pnpm/action-setup@v6.0.0
+      - uses: pnpm/action-setup@v6.0.1
         name: Install pnpm
         id: pnpm-install
         # with: # Install only pnpm with packageManager
