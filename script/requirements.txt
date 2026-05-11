@@ -6,6 +6,6 @@ numpy==2.4.4
 openpyxl==3.1.5
 pandas==3.0.3
 PyYAML==6.0.3
-Requests==2.33.1
+Requests==2.34.0
 selenium==4.43.0
 xlrd==2.0.2
