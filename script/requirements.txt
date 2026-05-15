@@ -2,7 +2,7 @@ beautifulsoup4==4.14.3
 GitPython==3.1.50
 lxml==6.1.0
 matplotlib==3.10.9
-numpy==2.4.4
+numpy==2.4.5
 openpyxl==3.1.5
 pandas==3.0.3
 PyYAML==6.0.3
