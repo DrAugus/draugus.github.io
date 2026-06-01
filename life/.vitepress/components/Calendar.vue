@@ -38,129 +38,54 @@ const monthNames = [
     'December',
 ]
 
-// 找到离 date 最近的周六或周日，是上班的情况
-const findNearestWeekendWorkday = (date: Date) => {
-    const targetDate = new Date(date) // 使用传入的 date 参数
-    const results: Array<{ date: Date; daysDiff: number; direction: 'past' | 'future' }> = []
-    const maxFindDays = 120 // 最多
+// 判断本周周六是否是福报日
+// 规则：上周周末有加班（调休或福报）→ 本周双休；上周周末全休息 → 本周周六福报
+// 例外：本周周日被调休上班 → 本周周六也不能福报
+const getFubao = (date: Date) => {
+    const dayOfWeek = date.getDay()
+    // 找到本周周六
+    const thisSaturday = new Date(date)
+    thisSaturday.setHours(0, 0, 0, 0)
+    const daysToSat = dayOfWeek === 6 ? 0 : (dayOfWeek === 0 ? 6 : 6 - dayOfWeek)
+    thisSaturday.setDate(date.getDate() + daysToSat)
 
-    // 向前查找（过去的周末）
-    for (let i = 1; i <= maxFindDays; i++) { // 最多查找30天
-        const checkDate = new Date(targetDate) // 创建新的日期对象用于检查
-        checkDate.setDate(targetDate.getDate() - i)
-        const dayOfWeek = checkDate.getDay()
+    // 本周周日被调休上班 → 周六不能福报
+    const thisSunday = new Date(thisSaturday)
+    thisSunday.setDate(thisSaturday.getDate() + 1)
+    if (getDayDetail(thisSunday).work) return false
 
-        // 检查是否是周六(6)或周日(0)
-        if (dayOfWeek === 0 || dayOfWeek === 6) {
-            const dayDetail = getDayDetail(checkDate)
-            // 检查是否是工作日（调休）
-            if (dayDetail.work) {
-                results.push({
-                    date: checkDate,
-                    daysDiff: -i,
-                    direction: 'past'
-                })
-                break // 找到最近的过去周末工作日就停止
-            }
-        }
-    }
+    // 上周周六和周日
+    const lastSaturday = new Date(thisSaturday)
+    lastSaturday.setDate(thisSaturday.getDate() - 7)
+    const lastSunday = new Date(thisSaturday)
+    lastSunday.setDate(thisSaturday.getDate() - 6)
 
-    // 向后查找（未来的周末）
-    for (let i = 1; i <= maxFindDays; i++) { // 最多查找30天
-        const checkDate = new Date(targetDate) // 创建新的日期对象用于检查
-        checkDate.setDate(targetDate.getDate() + i)
-        const dayOfWeek = checkDate.getDay()
+    const lastSatDetail = getDayDetail(lastSaturday)
+    const lastSunDetail = getDayDetail(lastSunday)
 
-        // 检查是否是周六(6)或周日(0)
-        if (dayOfWeek === 0 || dayOfWeek === 6) {
-            const dayDetail = getDayDetail(checkDate)
-            // 检查是否是工作日（调休）
-            if (dayDetail.work) {
-                results.push({
-                    date: checkDate,
-                    daysDiff: i,
-                    direction: 'future'
-                })
-                break // 找到最近的未来周末工作日就停止
-            }
-        }
-    }
-    return results
+    // 上周周末有加班（调休加班 或 福报加班）→ 本周双休
+    // 上周周末全休息 → 本周周六福报
+    const lastWeekendHadWork = lastSatDetail.work || lastSunDetail.work || isFubaoDay(lastSaturday)
+
+    return !lastWeekendHadWork // true = 本周周六是福报日
 }
 
-// 根据 findNearestWeekendWorkday 的结果，计算周六是否上班
-// 如果某周有周末上班，那么下一个周末是双休，下下个周末是单休（周六上班），以此类推
-const getFubao = (date: Date) => {
-    const nearestWeekendWorkdays = findNearestWeekendWorkday(date)
-    const pastWeekendWorkday = nearestWeekendWorkdays.find(item => item.direction === 'past')
-
-    if (!pastWeekendWorkday) {
-        // 如果没有找到过去的周末工作日，返回默认状态
-        return {
-            hasPattern: false,
-            message: '未找到最近的周末调休工作日',
-            currentWeek: { saturdayWork: false, sundayWork: false },
-            nextWeeks: [] as Array<{ weekNumber: number; saturdayWork: boolean; sundayWork: boolean; startDate: Date }>
-        }
-    }
-
-    const pastWorkdayDate = pastWeekendWorkday.date
-
-    // 获取周末工作日所在周的开始日期（周一）
-    const workdayWeekStart = new Date(pastWorkdayDate)
-    const workdayDayOfWeek = pastWorkdayDate.getDay()
-    const daysToMonday = workdayDayOfWeek === 0 ? 6 : workdayDayOfWeek - 1
-    workdayWeekStart.setDate(pastWorkdayDate.getDate() - daysToMonday)
-    workdayWeekStart.setHours(0, 0, 0, 0)
-
-    // 获取当前周的开始日期（周一）
-    const currentWeekStart = new Date(date)
-    const currentDayOfWeek = date.getDay()
-    const daysToMondayCurrent = currentDayOfWeek === 0 ? 6 : currentDayOfWeek - 1
-    currentWeekStart.setDate(date.getDate() - daysToMondayCurrent)
-    currentWeekStart.setHours(0, 0, 0, 0)
-
-    // 计算当前周相对于周末工作日所在周的周数差
-    const weeksDiff = Math.floor((currentWeekStart.getTime() - workdayWeekStart.getTime()) / (7 * 24 * 60 * 60 * 1000))
-
-    // 生成未来8周的休息/工作模式
-    const nextWeeks: Array<{ weekNumber: number; saturdayWork: boolean; sundayWork: boolean; startDate: Date }> = []
-
-    for (let i = 0; i < 8; i++) {
-        const weekStart = new Date(currentWeekStart)
-        weekStart.setDate(currentWeekStart.getDate() + (i * 7))
-
-        // 计算这一周相对于周末工作日所在周的周数
-        const weekIndex = weeksDiff + i
-
-        // 正确的模式：周末工作日所在周之后的第1周（weekIndex = 1）双休，第2周（weekIndex = 2）单休（周六上班），以此类推
-        // 即：weekIndex 为正数时，奇数周双休，偶数周单休（周六上班）
-        const shouldSaturdayWork = weekIndex > 0 && weekIndex % 2 === 0
-
-        nextWeeks.push({
-            weekNumber: i + 1,
-            saturdayWork: shouldSaturdayWork,
-            sundayWork: false, // 周日永远休息
-            startDate: weekStart
-        })
-    }
-
-    // 当前周的状态
-    const currentWeekStatus = {
-        saturdayWork: weeksDiff > 0 && weeksDiff % 2 === 0,
-        sundayWork: false
-    }
-
-    const ret = {
-        hasPattern: true,
-        pastWorkdayDate,
-        weeksDiff,
-        currentWeek: currentWeekStatus,
-        nextWeeks,
-        message: `基于 ${pastWorkdayDate.toLocaleDateString()} 的周末调休，当前周${currentWeekStatus.saturdayWork ? '周六上班' : '双休'}`
-    }
-
-    return ret
+// 判断某天是否是福报日（递归向上追溯，仅用于判断上周周六是否福报）
+const isFubaoDay = (date: Date) => {
+    const dayOfWeek = date.getDay()
+    if (dayOfWeek !== 6) return false
+    const dayDetail = getDayDetail(date)
+    if (dayDetail.work) return false
+    if (dayDetail.name.split(',')[1]) return false
+    // 看上上周周末状态
+    const prevSaturday = new Date(date)
+    prevSaturday.setDate(date.getDate() - 7)
+    const prevSunday = new Date(date)
+    prevSunday.setDate(date.getDate() - 6)
+    const prevSatDetail = getDayDetail(prevSaturday)
+    const prevSunDetail = getDayDetail(prevSunday)
+    // 上上周周末有加班 → 上周双休（不是福报）；上上周全休息 → 上周周六福报
+    return !(prevSatDetail.work || prevSunDetail.work || isFubaoDay(prevSaturday))
 }
 
 const daysInMonth = computed(() => {
@@ -245,15 +170,7 @@ function getDayInfo(date: Date) {
             return false
         }
 
-        // 获取福报模式
-        const fubaoPattern = getFubao(date)
-
-        if (!fubaoPattern.hasPattern) {
-            return false
-        }
-
-        return fubaoPattern.currentWeek.saturdayWork
-
+        return getFubao(date)
     }
 
     return {
@@ -347,14 +264,14 @@ const daysInfo = computed(() => daysInMonth.value.map((date: Date) => getDayInfo
                 <span v-if="day.isToday" class="today-dot">{{ lang === 'en' ? 'Today' : '今' }}</span>
                 <span v-if="day.holidayName" class="holiday-dot">{{
                     day.work ? '班' : day.isInLieu ? '调' : '休'
-                    }}</span>
+                }}</span>
                 <span v-if="day.isFubao" class="fubao-dot">{{
                     day.isFubao ? '福' : ''
-                    }}</span>
+                }}</span>
                 <span class="day">{{ day.date.getDate() }}</span>
                 <span class="desc">{{
                     day.solarTerm?.index === 1 ? day.solarTerm?.name : day.holidayName || day.lunarDayCN
-                    }}</span>
+                }}</span>
             </div>
         </div>
     </div>

@@ -378,7 +378,7 @@ export const NAV_DATA: CardData[] = [
     ]
   },
   {
-    title: '撰写文档の框架',
+    title: '文档框架',
     items: [
       {
         icon: 'https://vitepress.dev/vitepress-logo-mini.svg',
