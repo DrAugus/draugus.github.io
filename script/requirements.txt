@@ -1,4 +1,4 @@
-beautifulsoup4==4.14.3
+beautifulsoup4==4.15.0
 GitPython==3.1.50
 lxml==6.1.1
 matplotlib==3.10.9
