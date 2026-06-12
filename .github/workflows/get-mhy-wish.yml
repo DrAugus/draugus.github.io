@@ -67,7 +67,7 @@ jobs:
       #     branch: ${{ github.head_ref }}
       - name: Create Pull Request
         if: steps.commit.outputs.has_changes == 'true' && github.event_name != 'pull_request'
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.DEPLOY_GH }}
           title: "feat: auto get mhy wish(new)"
