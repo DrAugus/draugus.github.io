@@ -15,6 +15,12 @@ export const APPLE_SUBSCRIBE: AppleSubscribe[] = [
         name: "Apple Music",
         price: 17,
         start: new Date('2024/01/18'),
+        end: new Date('2026/08/18'),
+        info: "价格上调"
+    }, {
+        name: "Apple Music",
+        price: 20,
+        start: new Date('2026/08/18'),
         info: "价格上调"
     }, {
         name: "iCloud 50G",

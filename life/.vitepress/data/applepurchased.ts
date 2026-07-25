@@ -246,5 +246,26 @@ export const APPLE_PURCHASED: ApplePurchased[] = [
         pricePurchase: 4518,
         platform: "转转",
         date: new Date('2025/10/11'),
+    }, {
+        device: "HomePod mini 白色",
+        deviceType: "TV & Home",
+        priceSale: 749,
+        pricePurchase: 749,
+        platform: "线下官方店",
+        date: new Date('2026/04/30'),
+    }, {
+        device: "HomePod mini 橙色",
+        deviceType: "TV & Home",
+        priceSale: 749,
+        pricePurchase: 749,
+        platform: "线下官方店",
+        date: new Date('2026/04/30'),
+    }, {
+        device: "HomePod mini 白色",
+        deviceType: "TV & Home",
+        priceSale: 749,
+        pricePurchase: 438,
+        platform: "转转",
+        date: new Date('2026/07/18'),
     },
 ];

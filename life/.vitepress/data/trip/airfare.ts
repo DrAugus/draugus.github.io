@@ -176,6 +176,48 @@ export const AIRFARE_DATA: AirfareInfo[] = [
         costAbove800km: 20,
         taxAirport: 50,
         details: "2025年7月5日（出票日期）起，下调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取20元燃油附加费，800公里(含)以下航线每位旅客收取10元燃油附加费。"
+    }, {
+        date: new Date('2025/12/05'),
+        dateModify: '起',
+        costBelow800km: 20,
+        costAbove800km: 40,
+        taxAirport: 50,
+        details: "2025年12月5日（出票日期）起，上调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取40元燃油附加费，800公里(含)以下航线每位旅客收取20元燃油附加费。"
+    }, {
+        date: new Date('2026/01/05'),
+        dateModify: '起',
+        costBelow800km: 10,
+        costAbove800km: 20,
+        taxAirport: 50,
+        details: "2026年1月5日（出票日期）起，下调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取20元燃油附加费，800公里(含)以下航线每位旅客收取10元燃油附加费。"
+    }, {
+        date: new Date('2026/04/05'),
+        dateModify: '起',
+        costBelow800km: 60,
+        costAbove800km: 120,
+        taxAirport: 50,
+        details: "2026年4月5日（出票日期）起，上调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取120元燃油附加费，800公里(含)以下航线每位旅客收取60元燃油附加费。"
+    }, {
+        date: new Date('2026/05/16'),
+        dateModify: '起',
+        costBelow800km: 90,
+        costAbove800km: 170,
+        taxAirport: 50,
+        details: "2026年5月16日（出票日期）起，上调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取170元燃油附加费，800公里(含)以下航线每位旅客收取90元燃油附加费。"
+    }, {
+        date: new Date('2026/06/05'),
+        dateModify: '起',
+        costBelow800km: 80,
+        costAbove800km: 150,
+        taxAirport: 50,
+        details: "2026年6月5日（出票日期）起，下调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取150元燃油附加费，800公里(含)以下航线每位旅客收取80元燃油附加费。"
+    }, {
+        date: new Date('2026/07/05'),
+        dateModify: '起',
+        costBelow800km: 50,
+        costAbove800km: 100,
+        taxAirport: 50,
+        details: "2026年7月5日（出票日期）起，下调国内航线燃油附加费，其中成人旅客：800公里以上航线每位旅客收取100元燃油附加费，800公里(含)以下航线每位旅客收取50元燃油附加费。"
     },
 ]
 
