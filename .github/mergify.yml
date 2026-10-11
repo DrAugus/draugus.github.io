@@ -131,9 +131,3 @@ pull_request_rules:
   #       method: merge
 
   # https://docs.mergify.com/workflow/delete-head-branches/#prevent-deletion-for-dependent-branches
-  - name: delete head branch after merge but not if other PRs depend on it
-    conditions:
-      - merged
-    actions:
-      delete_head_branch:
-        force: false
