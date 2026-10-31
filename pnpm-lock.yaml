@@ -17,8 +17,8 @@ importers:
         specifier: 1.9.22
         version: 1.9.22
       '@vite-pwa/vitepress':
-        specifier: ^1.0.0
-        version: 1.1.0(vite-plugin-pwa@2.0.0(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(workbox-build@7.4.1)(workbox-window@7.4.1))
+        specifier: ^2.0.0
+        version: 2.0.1(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(vitepress@1.6.4(@algolia/client-search@5.60.0)(async-validator@4.2.5)(lightningcss@1.33.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.31)(sass@1.107.1)(search-insights@2.17.3)(terser@5.51.2))
       '@vue-leaflet/vue-leaflet':
         specifier: 0.10.1
         version: 0.10.1(@types/leaflet@1.9.22)(leaflet@1.9.4)
@@ -59,8 +59,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.2
       '@vite-pwa/vitepress':
-        specifier: ^1.0.0
-        version: 1.1.0(vite-plugin-pwa@2.0.0(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(workbox-build@7.4.1)(workbox-window@7.4.1))
+        specifier: ^2.0.0
+        version: 2.0.1(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(vitepress@1.6.4(@algolia/client-search@5.60.0)(async-validator@4.2.5)(lightningcss@1.33.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.31)(sass@1.107.1)(search-insights@2.17.3)(terser@5.51.2))
       chinese-days:
         specifier: ^1.5.4
         version: 1.5.9
@@ -84,7 +84,7 @@ importers:
         version: 3.0.0
       unplugin-element-plus:
         specifier: ^0.11.0
-        version: 0.11.2(magic-string@0.30.21)(rolldown@1.2.15)
+        version: 0.11.2(magic-string@1.4.5)(rolldown@1.2.15)
       vite:
         specifier: ^8.0.0
         version: 8.3.5(sass@1.107.1)(terser@5.51.2)
@@ -1626,14 +1626,85 @@ packages:
   '@ungap/structured-clone@1.4.0':
     resolution: {integrity: sha512-1mEZtMKPM09vDmQt5y7YvmN2+DFTP7Tg0EWXdic8/C6VRnpb33e4ghisCIE3WZjsE2N8mf+QV1Zqh7ZFYLWInQ==}
 
-  '@vite-pwa/vitepress@1.1.0':
-    resolution: {integrity: sha512-enif5C2JmepS69Ak7PSr6K3Eimsg7VyryZo1Z6NiIPNDnjXFlOqxwBYaq8R/d0M7akArJsjos7KmQnEfNFf5nA==}
+  '@unplugin-pwa/core@0.0.2':
+    resolution: {integrity: sha512-Uuq2R0k9dAs48MepqIklmfmeewagpy4c7OnEjN5IJQKCYIei6QGPFDKJrmwBf5wM2vyZN6Ljsffenq2iKlQNqg==}
+    engines: {node: '>=22.14.0'}
     peerDependencies:
-      '@vite-pwa/assets-generator': ^1.0.0
-      vite-plugin-pwa: ^1.2.0
+      '@vite-pwa/assets-generator': ^1.0.0 || ^2.0.0
+      rolldown: ^1.0.0-0
+      vite: ^3.1.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
     peerDependenciesMeta:
       '@vite-pwa/assets-generator':
         optional: true
+      rolldown:
+        optional: true
+      vite:
+        optional: true
+
+  '@unplugin-pwa/inspector@0.0.2':
+    resolution: {integrity: sha512-vdBlr8JVvkiz3KhRK3rAJWYAqF3vP8PzF6wntgoC4279J7mOZah08S/AVg3IiFTAoR1GASO3JKb8SmoJdxNigQ==}
+    engines: {node: '>=22.14.0'}
+
+  '@unplugin-pwa/vite@0.0.2':
+    resolution: {integrity: sha512-mZmI5dpbfLDusuqqA/KcPsqntACB7j/mrcbm4Z4MVhcMKTGXJ7/DGw40BB3LwvAFPLoYqGgQA6Reb0Dzn/hSiQ==}
+    engines: {node: '>=22.14.0'}
+    peerDependencies:
+      '@vite-pwa/assets-generator': ^1.0.0 || ^2.0.0
+      magicast: ^0.5.0
+      rolldown: ^1.0.0-0
+      vite: ^3.1.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+    peerDependenciesMeta:
+      '@vite-pwa/assets-generator':
+        optional: true
+      magicast:
+        optional: true
+      rolldown:
+        optional: true
+      vite:
+        optional: true
+
+  '@vite-pwa/vitepress@2.0.1':
+    resolution: {integrity: sha512-S/tpIFx3WR7FUTZs9CkjWsoRnp/tvc/rWxYEFt12j+Kg/a4iWyWSpKTGUi2EGOXVc+nO0qJFPYkR7KHrnpTbjQ==}
+    engines: {node: '>=22.14.0'}
+    peerDependencies:
+      '@vite-pwa/assets-generator': ^1.0.0 || ^2.0.0
+      magicast: ^0.5.0
+      rolldown: ^1.0.0-0
+      vitepress: ^1.0.0 || ^2.0.0-0
+    peerDependenciesMeta:
+      '@vite-pwa/assets-generator':
+        optional: true
+      magicast:
+        optional: true
+      rolldown:
+        optional: true
+
+  '@vite-pwa/workbox-build@8.0.13':
+    resolution: {integrity: sha512-4MF4p1hc+nVfcETXFo0HGVosmRaLZgIdhxhfPbLY51gG5YZFt/sEfznwSZdnjztDSLuTWJJryuMhBXh77RsGcw==}
+    engines: {node: '>=22.14.0'}
+    peerDependencies:
+      '@rspack/core': ^1.0.0 || ^2.0.0
+      magicast: ^0.5.0
+      rolldown: ^1.0.0-0
+      vite: ^3.1.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
+      webpack: ^5.91.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      magicast:
+        optional: true
+      rolldown:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+
+  '@vite-pwa/workbox-swkit@8.0.13':
+    resolution: {integrity: sha512-MH9KKR/XNIbjCRvgy8yCGv3AHc+dHAmG+GdA6jGo+jKZsK62cdoa/MhXhwxp893Tn6NuNzUH1QJZmNIt1cmjNQ==}
+
+  '@vite-pwa/workbox-window@8.0.13':
+    resolution: {integrity: sha512-jb74txMXdS/laitdtIpsj/p+ersyTkHKg2dRpOv2HCB5fFoy96QKZnKQcI64Oh33Sr/kjyQNOgQ1pY/XZvD3NQ==}
 
   '@vitejs/plugin-vue@5.2.4':
     resolution: {integrity: sha512-7Yx/SXSOcQq5HiiV3orevHUFn+pmMB4cgbEkDYgnkUWb0WfeQ/wa2yFv6D5ICiCQOVpjA7vYDXrC7AGO8yjDHA==}
@@ -2183,11 +2254,17 @@ packages:
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
+  hookable@6.1.2:
+    resolution: {integrity: sha512-+abwxtiEA52GCVIsQqut3S/uKTbUwYIp4Pe/vv+6py5XiXBCqMZHg6pA6Y5qhgLSEys0/cYuPbO0z1QFj5ZCmg==}
+
   html-void-elements@3.0.0:
     resolution: {integrity: sha512-bEqo66MRXsUGxWHV5IP0PUiAWwoEjba4VCzg0LjFJBpchPaTfyfCKTG6bc5F8ucKec3q5y6qOdGyYTSBEvhCrg==}
 
   idb@7.1.1:
     resolution: {integrity: sha512-gchesWBzyvGHRO9W8tzUWFDycow5gwjvFKfyV9FF32Y7F50yZMp7mP+T2mJIWFx49zicqyC4uefHM17o6xKIVQ==}
+
+  idb@8.0.4:
+    resolution: {integrity: sha512-jd0ITCrN+Zah4J7R/Z2jnR3W7A4BXDAjmo62MwWuSjxCiueUAf7X5rbodEdidWzeknwXHmLpdZkoiiCppNi30Q==}
 
   ignore@7.0.14:
     resolution: {integrity: sha512-wCBiZ77u1tuWde6G/nfOtLaCTYcFDU5yCzARzK10y+rLhzYoL7a7yEemcopcc2Mzow7gZOIjnV2ym1NYmdiJOQ==}
@@ -2467,6 +2544,9 @@ packages:
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
 
+  magic-string@1.4.5:
+    resolution: {integrity: sha512-oLLC2+YvQUfAa+vxoufE/yc1icb87M9iXIRqAoR/2EhE/8cb3SF/+Gi0c2By1B+5Vz2e2vQtUvHiu1+63Znh+w==}
+
   mark.js@8.11.1:
     resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
 
@@ -2622,6 +2702,10 @@ packages:
   pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
+
+  proper-tags@2.0.2:
+    resolution: {integrity: sha512-rpgQb3JC9uWAogm9J3G6heeg7n/Gq82GZKaFt080JPVbydKvGW6ECj9Ui1a6taTFv9Oa+dq9GMhHeOJyxxaURA==}
+    engines: {node: '>=12.0.0'}
 
   property-information@7.2.0:
     resolution: {integrity: sha512-IAtzIB6sUiWaJYrX9smp3V46pBGbBeLFRGdh25kg1334VcBlD8HzhPeNIWQH9zhGmo2itIe25EHt9dQP7G5hmg==}
@@ -2982,6 +3066,14 @@ packages:
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
+
+  valibot@1.5.0:
+    resolution: {integrity: sha512-nil6AkP2TChWL43Z5uJ6GTxX01CUA+g8LWUM+N/rB9NBbkUMaUsi9PUNzlUPgoKASgmx9f7eGOYpJ04/fSa6FQ==}
+    peerDependencies:
+      typescript: '>=5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   verkit@0.5.0:
     resolution: {integrity: sha512-u4J1hr6Y+C/hit34GwL3eIcUf3wngT8TlYUjK7tk0jxydKLAq3sYvifjdTDA6U3KCKRcQCQDGf/srjxfZF3l7g==}
@@ -4176,7 +4268,7 @@ snapshots:
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
     optional: true
 
-  '@nuxt/kit@4.6.2(magic-string@0.30.21)(rolldown@1.2.15)(unplugin@2.3.11)':
+  '@nuxt/kit@4.6.2(magic-string@1.4.5)(rolldown@1.2.15)(unplugin@2.3.11)':
     dependencies:
       consola: 3.4.2
       defu: 6.1.7
@@ -4194,7 +4286,7 @@ snapshots:
       std-env: 4.3.0
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      unctx: 3.0.1(magic-string@0.30.21)(rolldown@1.2.15)(unplugin@2.3.11)
+      unctx: 3.0.1(magic-string@1.4.5)(rolldown@1.2.15)(unplugin@2.3.11)
       verkit: 0.5.0
     optionalDependencies:
       rolldown: 1.2.15
@@ -4635,9 +4727,78 @@ snapshots:
 
   '@ungap/structured-clone@1.4.0': {}
 
-  '@vite-pwa/vitepress@1.1.0(vite-plugin-pwa@2.0.0(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(workbox-build@7.4.1)(workbox-window@7.4.1))':
+  '@unplugin-pwa/core@0.0.2(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))':
     dependencies:
-      vite-plugin-pwa: 2.0.0(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(workbox-build@7.4.1)(workbox-window@7.4.1)
+      '@vite-pwa/workbox-build': 8.0.13(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))
+      hookable: 6.1.2
+    optionalDependencies:
+      rolldown: 1.2.15
+      vite: 8.3.5(sass@1.107.1)(terser@5.51.2)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - magicast
+      - typescript
+      - webpack
+
+  '@unplugin-pwa/inspector@0.0.2': {}
+
+  '@unplugin-pwa/vite@0.0.2(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))':
+    dependencies:
+      '@rolldown/pluginutils': 1.0.1
+      '@unplugin-pwa/core': 0.0.2(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))
+      '@unplugin-pwa/inspector': 0.0.2
+      '@vite-pwa/workbox-build': 8.0.13(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))
+      '@vite-pwa/workbox-swkit': 8.0.13
+      '@vite-pwa/workbox-window': 8.0.13
+    optionalDependencies:
+      rolldown: 1.2.15
+      vite: 8.3.5(sass@1.107.1)(terser@5.51.2)
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - typescript
+      - webpack
+
+  '@vite-pwa/vitepress@2.0.1(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))(vitepress@1.6.4(@algolia/client-search@5.60.0)(async-validator@4.2.5)(lightningcss@1.33.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.31)(sass@1.107.1)(search-insights@2.17.3)(terser@5.51.2))':
+    dependencies:
+      '@unplugin-pwa/core': 0.0.2(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))
+      '@unplugin-pwa/inspector': 0.0.2
+      '@unplugin-pwa/vite': 0.0.2(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))
+      '@vite-pwa/workbox-build': 8.0.13(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))
+      '@vite-pwa/workbox-swkit': 8.0.13
+      '@vite-pwa/workbox-window': 8.0.13
+      vitepress: 1.6.4(@algolia/client-search@5.60.0)(async-validator@4.2.5)(lightningcss@1.33.0)(markdown-it-mathjax3@5.2.0)(postcss@8.5.31)(sass@1.107.1)(search-insights@2.17.3)(terser@5.51.2)
+    optionalDependencies:
+      rolldown: 1.2.15
+    transitivePeerDependencies:
+      - '@rspack/core'
+      - typescript
+      - vite
+      - webpack
+
+  '@vite-pwa/workbox-build@8.0.13(rolldown@1.2.15)(vite@8.3.5(sass@1.107.1)(terser@5.51.2))':
+    dependencies:
+      '@jridgewell/remapping': 2.3.5
+      '@vite-pwa/workbox-swkit': 8.0.13
+      '@vite-pwa/workbox-window': 8.0.13
+      magic-string: 1.4.5
+      proper-tags: 2.0.2
+      serialize-javascript: 7.1.4
+      tinyglobby: 0.2.17
+      valibot: 1.5.0
+      verkit: 0.5.0
+    optionalDependencies:
+      rolldown: 1.2.15
+      vite: 8.3.5(sass@1.107.1)(terser@5.51.2)
+    transitivePeerDependencies:
+      - typescript
+
+  '@vite-pwa/workbox-swkit@8.0.13':
+    dependencies:
+      idb: 8.0.4
+
+  '@vite-pwa/workbox-window@8.0.13':
+    dependencies:
+      '@types/trusted-types': 2.0.7
 
   '@vitejs/plugin-vue@5.2.4(vite@5.4.21(lightningcss@1.33.0)(sass@1.107.1)(terser@5.51.2))(vue@3.5.44)':
     dependencies:
@@ -5310,9 +5471,13 @@ snapshots:
 
   hookable@5.5.3: {}
 
+  hookable@6.1.2: {}
+
   html-void-elements@3.0.0: {}
 
   idb@7.1.1: {}
+
+  idb@8.0.4: {}
 
   ignore@7.0.14: {}
 
@@ -5555,6 +5720,10 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.6.0
 
+  magic-string@1.4.5:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.6.0
+
   mark.js@8.11.1: {}
 
   markdown-it-mathjax3@5.2.0:
@@ -5697,6 +5866,8 @@ snapshots:
   pretty-bytes@5.6.0: {}
 
   pretty-bytes@6.1.1: {}
+
+  proper-tags@2.0.2: {}
 
   property-information@7.2.0: {}
 
@@ -6124,9 +6295,9 @@ snapshots:
       has-symbols: 1.1.0
       which-boxed-primitive: 1.1.1
 
-  unctx@3.0.1(magic-string@0.30.21)(rolldown@1.2.15)(unplugin@2.3.11):
+  unctx@3.0.1(magic-string@1.4.5)(rolldown@1.2.15)(unplugin@2.3.11):
     optionalDependencies:
-      magic-string: 0.30.21
+      magic-string: 1.4.5
       rolldown: 1.2.15
       unplugin: 2.3.11
 
@@ -6170,9 +6341,9 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-element-plus@0.11.2(magic-string@0.30.21)(rolldown@1.2.15):
+  unplugin-element-plus@0.11.2(magic-string@1.4.5)(rolldown@1.2.15):
     dependencies:
-      '@nuxt/kit': 4.6.2(magic-string@0.30.21)(rolldown@1.2.15)(unplugin@2.3.11)
+      '@nuxt/kit': 4.6.2(magic-string@1.4.5)(rolldown@1.2.15)(unplugin@2.3.11)
       es-module-lexer: 2.3.2
       escape-string-regexp: 5.0.0
       rolldown-string: 0.2.1
@@ -6202,6 +6373,8 @@ snapshots:
       browserslist: 4.29.5
       escalade: 3.2.0
       picocolors: 1.1.1
+
+  valibot@1.5.0: {}
 
   verkit@0.5.0: {}
 
