@@ -1153,5 +1153,192 @@
         "city": "Invalid",
         "ele": "pyro",
         "weapon": "catalyst"
+    },
+    "valeriy": {
+        "id": "valeriy",
+        "name": "瓦列里",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "第一近卫掷弹兵团「特殊任务营」的指挥官，履历优异。在保护要员与准时推进计划两大领域，他始终扮演着坚实的盾牌。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "mitya": {
+        "id": "mitya",
+        "name": "米提亚",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "「皇家能源协会」的能源研究专家，肩负重要且机密的研究任务。天才往往不是省油的灯，他也不例外。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "vodyanitsa": {
+        "id": "vodyanitsa",
+        "name": "沃雅妮莎",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "科洛列夫茨基剧团的首席女高音，离群的水妖。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "vesna": {
+        "id": "vesna",
+        "name": "薇斯纳",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "冬契军总司令，高贵优雅的风仙。明艳热烈，活力洋溢，钟爱一切美丽而有趣的事物。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "alyosha": {
+        "id": "alyosha",
+        "name": "阿罗夏",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "纵横于至冬雪原的「职业猎手」。其冷静的外表下，似乎隐藏着别样炙热的「理想」。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "odette": {
+        "id": "odette",
+        "name": "奥黛塔",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "科洛列夫茨基剧团的首席芭蕾舞者，如寒冰般剔透坚硬。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "sandrone": {
+        "id": "sandrone",
+        "name": "桑多涅",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "愚人众执行官第七席，「木偶」。以数理解析事象之人，茶会上永不缺席的优雅淑女。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "lohen": {
+        "id": "lohen",
+        "name": "洛恩",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "西风骑士团第五小队副队长，以身代箭，以枪为镞，活跃于最前线的年轻骑士。",
+        "city": "Mondstadt",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "prune": {
+        "id": "prune",
+        "name": "布伦妮",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "小小的「魔女猎人」，四处追寻着「邪恶魔女」的踪迹，这其中似乎有着不为人知的恩怨纠葛。",
+        "city": "Mondstadt",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "nicole": {
+        "id": "nicole",
+        "name": "尼可",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "魔女N，尼可·莱恩。总而言之——就是「世界线的观测者」。",
+        "city": "Mondstadt",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "linnea": {
+        "id": "linnea",
+        "name": "莉奈娅",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "冒险家协会的顾问，作为妖精的孩子在人类中长大的换生灵。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "varka": {
+        "id": "varka",
+        "name": "法尔伽",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "西风骑士团的大团长，守护蒙德的北风骑士。这名号比北风的怒号更加响亮，这传奇比剑锋的铮鸣更加悠远。",
+        "city": "Mondstadt",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "illuga": {
+        "id": "illuga",
+        "name": "叶洛亚",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "执灯人调查分队「魇夜之莺」的成员，其人如手中提灯，既作指引，亦行关怀。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "zibai": {
+        "id": "zibai",
+        "name": "兹白",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "璃月传说中的白马仙人，其名为兹白，是璃月仙话中最神秘的一位。",
+        "city": "Liyue",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "columbina_hyposelenia": {
+        "id": "columbina_hyposelenia",
+        "name": "哥伦比娅",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "挪德卡莱的月神「库塔尔」、前愚人众执行官第三席「少女」。但朋友们都这么称呼她——哥伦比娅·希珀塞莱尼娅。她更喜欢这个名字。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "jahoda": {
+        "id": "jahoda",
+        "name": "雅珂达",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "无所不能（自称）的「秘闻馆」员工。",
+        "city": "Invalid",
+        "ele": "pyro",
+        "weapon": "catalyst"
+    },
+    "durin": {
+        "id": "durin",
+        "name": "杜林",
+        "prefix": "",
+        "star": 4,
+        "event_exclusive": false,
+        "intro": "原本是一条生活在童话故事中的龙，现在正在努力学习如何作为一名人类生活下去。",
+        "city": "Mondstadt",
+        "ele": "pyro",
+        "weapon": "catalyst"
     }
 }
